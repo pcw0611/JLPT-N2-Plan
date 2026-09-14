@@ -335,6 +335,79 @@ PAIRS = [
     }
 ]
 
+CSS_BLOCK = """<style>
+.vt-wrap { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; line-height: 1.6; text-align: left; max-width: 520px; margin: 0 auto; box-sizing: border-box; }
+.vt-center { text-align: center; }
+.vt-title { font-size: 28px; font-weight: 700; margin: 14px 0; color: #f8fafc; }
+.vt-sub { font-size: 16px; color: #cbd5e1; }
+.vt-badge-vi { display: inline-block; font-size: 13px; font-weight: 700; color: #34d399; background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(52, 211, 153, 0.45); border-radius: 14px; padding: 4px 12px; margin-bottom: 8px; }
+.vt-badge-vt { display: inline-block; font-size: 13px; font-weight: 700; color: #60a5fa; background: rgba(59, 130, 246, 0.18); border: 1px solid rgba(96, 165, 250, 0.45); border-radius: 14px; padding: 4px 12px; margin-bottom: 8px; }
+.vt-badge-quiz { display: inline-block; font-size: 13px; font-weight: 700; color: #fbbf24; background: rgba(245, 158, 11, 0.18); border: 1px solid rgba(251, 191, 36, 0.45); border-radius: 14px; padding: 4px 12px; margin-bottom: 8px; }
+.vt-highlight-vi { color: #34d399; font-weight: 700; }
+.vt-highlight-vt { color: #60a5fa; font-weight: 700; }
+.vt-sec-vi { border-left: 4px solid #10b981; background: rgba(16, 185, 129, 0.08); border-radius: 0 8px 8px 0; padding: 12px 14px; margin-bottom: 14px; }
+.vt-sec-vt { border-left: 4px solid #3b82f6; background: rgba(59, 130, 246, 0.08); border-radius: 0 8px 8px 0; padding: 12px 14px; margin-bottom: 14px; }
+.vt-verb-vi { font-size: 23px; font-weight: 700; color: #34d399; }
+.vt-verb-vt { font-size: 23px; font-weight: 700; color: #60a5fa; }
+.vt-label-vi { font-size: 12px; font-weight: 700; color: #34d399; letter-spacing: 0.5px; margin-bottom: 2px; }
+.vt-label-vt { font-size: 12px; font-weight: 700; color: #60a5fa; letter-spacing: 0.5px; margin-bottom: 2px; }
+.vt-meaning { font-size: 16px; font-weight: 600; color: #f1f5f9; margin: 4px 0 8px; }
+.vt-pill-vi { font-size: 12px; font-weight: 700; color: #34d399; background: rgba(16, 185, 129, 0.25); border-radius: 4px; padding: 2px 7px; margin-left: 6px; }
+.vt-pill-vt { font-size: 12px; font-weight: 700; color: #60a5fa; background: rgba(59, 130, 246, 0.25); border-radius: 4px; padding: 2px 7px; margin-left: 6px; }
+.vt-ex-ja { font-size: 15px; color: #f8fafc; margin-top: 6px; }
+.vt-ex-ko { font-size: 13.5px; color: #94a3b8; margin-top: 2px; }
+.vt-ex-tag { color: #64748b; font-weight: 700; }
+.vt-box { background: #27272a; border: 1px solid #3f3f46; border-radius: 8px; padding: 12px 14px; }
+.vt-box-title { font-weight: 700; font-size: 14.5px; color: #f8fafc; margin-bottom: 4px; }
+.vt-box-tip { font-size: 12.5px; color: #cbd5e1; margin-top: 4px; }
+.vt-box-sub { color: #71717a; font-size: 11.5px; }
+.vt-quiz-q { font-size: 22px; font-weight: 700; margin: 16px 0; color: #f8fafc; line-height: 1.5; }
+.vt-blank { border-bottom: 2px solid #60a5fa; padding: 0 8px; color: #60a5fa; font-weight: 700; }
+.vt-btn-wrap { display: inline-flex; gap: 16px; font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+.vt-btn { padding: 7px 22px; border: 1px solid #52525b; border-radius: 8px; background: #27272a; color: #f1f5f9; }
+.vt-guide { font-size: 13.5px; color: #94a3b8; }
+.vt-ans-header { font-size: 21px; font-weight: 700; text-align: center; margin-bottom: 14px; }
+.vt-ans-box { border-radius: 8px; padding: 12px 14px; margin-bottom: 14px; }
+.vt-ans-box-ga { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(52, 211, 153, 0.4); }
+.vt-ans-box-o { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(96, 165, 250, 0.4); }
+.vt-ans-full { font-size: 18px; font-weight: 700; color: #f8fafc; margin-bottom: 4px; }
+.vt-ans-ko { font-size: 14.5px; color: #cbd5e1; }
+.vt-opp { font-size: 13.5px; color: #94a3b8; border-top: 1px dashed #3f3f46; padding-top: 8px; margin-top: 8px; }
+
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-title { color: #111827; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-sub { color: #4b5563; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-badge-vi { color: #059669; background: #ecfdf5; border-color: #a7f3d0; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-badge-vt { color: #2563eb; background: #eff6ff; border-color: #bfdbfe; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-badge-quiz { color: #b45309; background: #fffbeb; border-color: #fde68a; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-highlight-vi { color: #059669; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-highlight-vt { color: #2563eb; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-sec-vi { background: #f0fdf4; border-left-color: #059669; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-sec-vt { background: #eff6ff; border-left-color: #2563eb; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-verb-vi { color: #059669; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-verb-vt { color: #2563eb; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-label-vi { color: #059669; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-label-vt { color: #2563eb; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-meaning { color: #1f2937; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-pill-vi { color: #059669; background: #d1fae5; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-pill-vt { color: #2563eb; background: #dbeafe; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ex-ja { color: #1f2937; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ex-ko { color: #64748b; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ex-tag { color: #475569; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-box { background: #f8fafc; border-color: #e2e8f0; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-box-title { color: #0f172a; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-box-tip { color: #475569; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-box-sub { color: #94a3b8; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-quiz-q { color: #111827; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-blank { border-bottom-color: #2563eb; color: #2563eb; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-btn { background: #f8fafc; border-color: #cbd5e1; color: #1e293b; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-guide { color: #64748b; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ans-box-ga { background: #ecfdf5; border-color: #a7f3d0; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ans-box-o { background: #eff6ff; border-color: #bfdbfe; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ans-full { color: #111827; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-ans-ko { color: #4b5563; }
+html:not(.nightMode):not(.night_mode) body:not(.nightMode):not(.night_mode) .vt-opp { color: #475569; border-top-color: #cbd5e1; }
+</style>"""
+
 def make_card1(p):
     """자동사 -> 타동사 맞히기"""
     num = f"{p['id']:03d}"
@@ -342,34 +415,34 @@ def make_card1(p):
     vt = p["vt"]
     
     front = (
-        f'<div style="text-align:center; padding:12px 8px; font-family:\'Helvetica Neue\', Arial, sans-serif;">'
-        f'<span style="display:inline-block; font-size:12px; font-weight:700; color:#059669; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:12px; padding:3px 10px; margin-bottom:12px;">'
-        f'자동사 ➔ 타동사 맞히기 #{num}</span>'
-        f'<div style="font-size:26px; font-weight:700; margin-bottom:12px; color:#111827;">{vi["collo"]}</div>'
-        f'<div style="font-size:15px; color:#4b5563;">「<b style="color:#059669;">{vi["verb"]}</b>」의 뜻과 대응하는 <b style="color:#2563eb;">타동사</b>는?</div>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap vt-center">'
+        f'<span class="vt-badge-vi">자동사 ➔ 타동사 맞히기 #{num}</span>'
+        f'<div class="vt-title">{vi["collo"]}</div>'
+        f'<div class="vt-sub">「<b class="vt-highlight-vi">{vi["verb"]}</b>」의 뜻과 대응하는 <b class="vt-highlight-vt">타동사</b>는?</div>'
         f'</div>'
     )
     
     back = (
-        f'<div style="padding:14px 10px; font-family:\'Helvetica Neue\', Arial, sans-serif; line-height:1.6;">'
-        f'<div style="border-left:4px solid #059669; padding-left:12px; margin-bottom:16px;">'
-        f'<div style="font-size:22px; font-weight:700; color:#059669;">{vi["verb"]}（{vi["reading"]}）</div>'
-        f'<div style="font-size:15px; color:#374151; font-weight:600; margin:2px 0;">＝ {vi["meaning"]} <span style="font-size:12px; color:#059669; background:#ecfdf5; border-radius:4px; padding:1px 6px; margin-left:6px;">자동사</span></div>'
-        f'<div style="font-size:14px; color:#1f2937; margin-top:6px;"><b>예문:</b> {vi["ex"]}</div>'
-        f'<div style="font-size:13px; color:#6b7280;">{vi["ex_ko"]}</div>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap">'
+        f'<div class="vt-sec-vi">'
+        f'<div class="vt-verb-vi">{vi["verb"]}（{vi["reading"]}）</div>'
+        f'<div class="vt-meaning">＝ {vi["meaning"]} <span class="vt-pill-vi">자동사</span></div>'
+        f'<div class="vt-ex-ja"><span class="vt-ex-tag">예문:</span> {vi["ex"]}</div>'
+        f'<div class="vt-ex-ko">{vi["ex_ko"]}</div>'
         f'</div>'
-        f'<div style="border-left:4px solid #2563eb; padding-left:12px; margin-bottom:16px;">'
-        f'<div style="font-size:12px; font-weight:700; color:#2563eb; letter-spacing:0.5px;">대응 타동사</div>'
-        f'<div style="font-size:22px; font-weight:700; color:#2563eb;">{vt["verb"]}（{vt["reading"]}）</div>'
-        f'<div style="font-size:15px; color:#374151; font-weight:600; margin:2px 0;">＝ {vt["meaning"]} <span style="font-size:12px; color:#2563eb; background:#eff6ff; border-radius:4px; padding:1px 6px; margin-left:6px;">타동사</span></div>'
-        f'<div style="font-size:14px; color:#1f2937; margin-top:6px;"><b>예문:</b> {vt["ex"]}</div>'
-        f'<div style="font-size:13px; color:#6b7280;">{vt["ex_ko"]}</div>'
+        f'<div class="vt-sec-vt">'
+        f'<div class="vt-label-vt">대응 타동사</div>'
+        f'<div class="vt-verb-vt">{vt["verb"]}（{vt["reading"]}）</div>'
+        f'<div class="vt-meaning">＝ {vt["meaning"]} <span class="vt-pill-vt">타동사</span></div>'
+        f'<div class="vt-ex-ja"><span class="vt-ex-tag">예문:</span> {vt["ex"]}</div>'
+        f'<div class="vt-ex-ko">{vt["ex_ko"]}</div>'
         f'</div>'
-        f'<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">'
-        f'<div style="font-weight:700; font-size:14px; color:#0f172a; margin-bottom:4px;">'
-        f'📌 핵심: <span style="color:#059669;">が {vi["verb"]}</span> ↔ <span style="color:#2563eb;">を {vt["verb"]}</span></div>'
-        f'<div style="font-size:12px; color:#64748b; margin-top:4px;">💡 <b>패턴:</b> {p["pattern_tip"]}<br>'
-        f'<span style="color:#94a3b8; font-size:11px;">(※ 언어 형성의 경향성이므로 참고용으로 활용하세요.)</span></div>'
+        f'<div class="vt-box">'
+        f'<div class="vt-box-title">📌 핵심: <span class="vt-highlight-vi">が {vi["verb"]}</span> ↔ <span class="vt-highlight-vt">を {vt["verb"]}</span></div>'
+        f'<div class="vt-box-tip">💡 <b>패턴:</b> {p["pattern_tip"]}<br>'
+        f'<span class="vt-box-sub">(※ 언어 형성의 경향성이므로 참고용으로 활용하세요.)</span></div>'
         f'</div>'
         f'</div>'
     )
@@ -383,34 +456,34 @@ def make_card2(p):
     vt = p["vt"]
     
     front = (
-        f'<div style="text-align:center; padding:12px 8px; font-family:\'Helvetica Neue\', Arial, sans-serif;">'
-        f'<span style="display:inline-block; font-size:12px; font-weight:700; color:#2563eb; background:#eff6ff; border:1px solid #bfdbfe; border-radius:12px; padding:3px 10px; margin-bottom:12px;">'
-        f'타동사 ➔ 자동사 맞히기 #{num}</span>'
-        f'<div style="font-size:26px; font-weight:700; margin-bottom:12px; color:#111827;">{vt["collo"]}</div>'
-        f'<div style="font-size:15px; color:#4b5563;">「<b style="color:#2563eb;">{vt["verb"]}</b>」의 뜻과 대응하는 <b style="color:#059669;">자동사</b>는?</div>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap vt-center">'
+        f'<span class="vt-badge-vt">타동사 ➔ 자동사 맞히기 #{num}</span>'
+        f'<div class="vt-title">{vt["collo"]}</div>'
+        f'<div class="vt-sub">「<b class="vt-highlight-vt">{vt["verb"]}</b>」의 뜻과 대응하는 <b class="vt-highlight-vi">자동사</b>는?</div>'
         f'</div>'
     )
     
     back = (
-        f'<div style="padding:14px 10px; font-family:\'Helvetica Neue\', Arial, sans-serif; line-height:1.6;">'
-        f'<div style="border-left:4px solid #2563eb; padding-left:12px; margin-bottom:16px;">'
-        f'<div style="font-size:22px; font-weight:700; color:#2563eb;">{vt["verb"]}（{vt["reading"]}）</div>'
-        f'<div style="font-size:15px; color:#374151; font-weight:600; margin:2px 0;">＝ {vt["meaning"]} <span style="font-size:12px; color:#2563eb; background:#eff6ff; border-radius:4px; padding:1px 6px; margin-left:6px;">타동사</span></div>'
-        f'<div style="font-size:14px; color:#1f2937; margin-top:6px;"><b>예문:</b> {vt["ex"]}</div>'
-        f'<div style="font-size:13px; color:#6b7280;">{vt["ex_ko"]}</div>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap">'
+        f'<div class="vt-sec-vt">'
+        f'<div class="vt-verb-vt">{vt["verb"]}（{vt["reading"]}）</div>'
+        f'<div class="vt-meaning">＝ {vt["meaning"]} <span class="vt-pill-vt">타동사</span></div>'
+        f'<div class="vt-ex-ja"><span class="vt-ex-tag">예문:</span> {vt["ex"]}</div>'
+        f'<div class="vt-ex-ko">{vt["ex_ko"]}</div>'
         f'</div>'
-        f'<div style="border-left:4px solid #059669; padding-left:12px; margin-bottom:16px;">'
-        f'<div style="font-size:12px; font-weight:700; color:#059669; letter-spacing:0.5px;">대응 자동사</div>'
-        f'<div style="font-size:22px; font-weight:700; color:#059669;">{vi["verb"]}（{vi["reading"]}）</div>'
-        f'<div style="font-size:15px; color:#374151; font-weight:600; margin:2px 0;">＝ {vi["meaning"]} <span style="font-size:12px; color:#059669; background:#ecfdf5; border-radius:4px; padding:1px 6px; margin-left:6px;">자동사</span></div>'
-        f'<div style="font-size:14px; color:#1f2937; margin-top:6px;"><b>예문:</b> {vi["ex"]}</div>'
-        f'<div style="font-size:13px; color:#6b7280;">{vi["ex_ko"]}</div>'
+        f'<div class="vt-sec-vi">'
+        f'<div class="vt-label-vi">대응 자동사</div>'
+        f'<div class="vt-verb-vi">{vi["verb"]}（{vi["reading"]}）</div>'
+        f'<div class="vt-meaning">＝ {vi["meaning"]} <span class="vt-pill-vi">자동사</span></div>'
+        f'<div class="vt-ex-ja"><span class="vt-ex-tag">예문:</span> {vi["ex"]}</div>'
+        f'<div class="vt-ex-ko">{vi["ex_ko"]}</div>'
         f'</div>'
-        f'<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">'
-        f'<div style="font-weight:700; font-size:14px; color:#0f172a; margin-bottom:4px;">'
-        f'📌 핵심: <span style="color:#2563eb;">を {vt["verb"]}</span> ↔ <span style="color:#059669;">が {vi["verb"]}</span></div>'
-        f'<div style="font-size:12px; color:#64748b; margin-top:4px;">💡 <b>패턴:</b> {p["pattern_tip"]}<br>'
-        f'<span style="color:#94a3b8; font-size:11px;">(※ 언어 형성의 경향성이므로 참고용으로 활용하세요.)</span></div>'
+        f'<div class="vt-box">'
+        f'<div class="vt-box-title">📌 핵심: <span class="vt-highlight-vt">を {vt["verb"]}</span> ↔ <span class="vt-highlight-vi">が {vi["verb"]}</span></div>'
+        f'<div class="vt-box-tip">💡 <b>패턴:</b> {p["pattern_tip"]}<br>'
+        f'<span class="vt-box-sub">(※ 언어 형성의 경향성이므로 참고용으로 활용하세요.)</span></div>'
         f'</div>'
         f'</div>'
     )
@@ -423,41 +496,38 @@ def make_card3(p):
     q = p["quiz"]
     
     correct_num = "① が" if q["ans"] == "が" else "② を"
-    sentence_blank = q["sentence"].replace("＿", "<span style=\"border-bottom:2px solid #2563eb; padding:0 8px; color:#2563eb; font-weight:700;\">＿</span>")
+    sentence_blank = q["sentence"].replace("＿", "<span class=\"vt-blank\">＿</span>")
     
     front = (
-        f'<div style="text-align:center; padding:14px 8px; font-family:\'Helvetica Neue\', Arial, sans-serif;">'
-        f'<span style="display:inline-block; font-size:12px; font-weight:700; color:#b45309; background:#fffbeb; border:1px solid #fde68a; border-radius:12px; padding:3px 10px; margin-bottom:14px;">'
-        f'조사 선택 퀴즈 (が / を) #{num}</span>'
-        f'<div style="font-size:22px; font-weight:700; margin-bottom:16px; color:#111827; line-height:1.4;">{sentence_blank}</div>'
-        f'<div style="display:inline-flex; gap:16px; font-size:16px; font-weight:700; margin-bottom:12px;">'
-        f'<span style="padding:6px 18px; border:1px solid #cbd5e1; border-radius:8px; background:#f8fafc; color:#1e293b;">① が</span>'
-        f'<span style="padding:6px 18px; border:1px solid #cbd5e1; border-radius:8px; background:#f8fafc; color:#1e293b;">② を</span>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap vt-center">'
+        f'<span class="vt-badge-quiz">조사 선택 퀴즈 (が / を) #{num}</span>'
+        f'<div class="vt-quiz-q">{sentence_blank}</div>'
+        f'<div class="vt-btn-wrap">'
+        f'<span class="vt-btn">① が</span>'
+        f'<span class="vt-btn">② を</span>'
         f'</div>'
-        f'<div style="font-size:13px; color:#64748b;">빈칸에 들어갈 알맞은 조사를 선택하세요.</div>'
+        f'<div class="vt-guide">빈칸에 들어갈 알맞은 조사를 선택하세요.</div>'
         f'</div>'
     )
     
-    color = "#059669" if q["ans"] == "が" else "#2563eb"
-    bg = "#ecfdf5" if q["ans"] == "が" else "#eff6ff"
-    bd = "#a7f3d0" if q["ans"] == "が" else "#bfdbfe"
-    
-    full_highlight = q["full"].replace(q["ans"], f'<span style="color:{color}; font-weight:700; text-decoration:underline;">{q["ans"]}</span>', 1)
+    color_cls = "vt-highlight-vi" if q["ans"] == "が" else "vt-highlight-vt"
+    box_cls = "vt-ans-box-ga" if q["ans"] == "が" else "vt-ans-box-o"
+    full_highlight = q["full"].replace(q["ans"], f'<span class="{color_cls}" style="text-decoration:underline;">{q["ans"]}</span>', 1)
     
     back = (
-        f'<div style="padding:14px 10px; font-family:\'Helvetica Neue\', Arial, sans-serif; line-height:1.6;">'
-        f'<div style="font-size:20px; font-weight:700; color:{color}; margin-bottom:12px; text-align:center;">'
-        f'정답: {correct_num}</div>'
-        f'<div style="background:{bg}; border:1px solid {bd}; border-radius:8px; padding:12px; margin-bottom:14px;">'
-        f'<div style="font-size:18px; font-weight:700; color:#111827; margin-bottom:4px;">{full_highlight}</div>'
-        f'<div style="font-size:14px; color:#4b5563;">{q["full_ko"]}</div>'
+        f'{CSS_BLOCK}'
+        f'<div class="vt-wrap">'
+        f'<div class="vt-ans-header {color_cls}">정답: {correct_num}</div>'
+        f'<div class="vt-ans-box {box_cls}">'
+        f'<div class="vt-ans-full">{full_highlight}</div>'
+        f'<div class="vt-ans-ko">{q["full_ko"]}</div>'
         f'</div>'
-        f'<div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:12px;">'
-        f'<div style="font-size:14px; color:#1e293b; margin-bottom:8px;"><b>해설:</b> {q["reason"]}</div>'
-        f'<div style="font-size:13px; color:#475569; border-top:1px dashed #cbd5e1; padding-top:8px; margin-top:8px;">'
-        f'<b>반대 표현:</b><br>{q["opp"]}</div>'
-        f'<div style="font-size:12px; color:#64748b; margin-top:8px;">'
-        f'📌 공식: [자연 추이·상태 변화] <b>が</b> + 자동사 ↔ [인위적 목적어] <b>を</b> + 타동사</div>'
+        f'<div class="vt-box">'
+        f'<div style="font-size:14.5px; color:#f1f5f9; margin-bottom:8px;"><b>해설:</b> {q["reason"]}</div>'
+        f'<div class="vt-opp"><b>반대 표현:</b><br>{q["opp"]}</div>'
+        f'<div style="font-size:12.5px; color:#cbd5e1; margin-top:8px;">'
+        f'📌 공식: [자연 추이·상태 변화] <b class="vt-highlight-vi">が</b> + 자동사 ↔ [인위적 목적어] <b class="vt-highlight-vt">を</b> + 타동사</div>'
         f'</div>'
         f'</div>'
     )
@@ -480,19 +550,19 @@ def main():
         f1, b1, t1 = make_card1(p)
         f1_c = f1.replace("\t", " ").replace("\n", "")
         b1_c = b1.replace("\t", " ").replace("\n", "")
-        rows.append(f'"{f1_c}"\t"{b1_c}"\t{t1}')
+        rows.append(f"{f1_c}\t{b1_c}\t{t1}")
         c1 += 1
         
         f2, b2, t2 = make_card2(p)
         f2_c = f2.replace("\t", " ").replace("\n", "")
         b2_c = b2.replace("\t", " ").replace("\n", "")
-        rows.append(f'"{f2_c}"\t"{b2_c}"\t{t2}')
+        rows.append(f"{f2_c}\t{b2_c}\t{t2}")
         c2 += 1
         
         f3, b3, t3 = make_card3(p)
         f3_c = f3.replace("\t", " ").replace("\n", "")
         b3_c = b3.replace("\t", " ").replace("\n", "")
-        rows.append(f'"{f3_c}"\t"{b3_c}"\t{t3}')
+        rows.append(f"{f3_c}\t{b3_c}\t{t3}")
         c3 += 1
         
     total = c1 + c2 + c3
@@ -502,3 +572,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
