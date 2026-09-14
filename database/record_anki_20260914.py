@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Record Anki study stats and study session for 2026-09-14."""
+"""Record updated Anki study stats and study session for 2026-09-14 (290.84 min / 2,507 reviews)."""
 
 import sqlite3
 import json
@@ -34,23 +34,23 @@ learn_rem = queue_counts.get(1, 0) + queue_counts.get(3, 0)
 rev_rem = queue_counts.get(2, 0)
 con_anki.close()
 
-WHOLE_MINUTES = 285  # 285분 7.53초 (17,107.53초 / 4시간 45분 7.53초)
+WHOLE_MINUTES = 290  # 290분 50.25초 (17,450.25초 / 4시간 50분 50.25초, 290.84분)
 
 SUMMARY_PAYLOAD = {
     'schema': 'daily_summary_v1',
     'scope': 'all_decks',
     'scopeLabel': '전체 덱',
-    'answeredCards': 2470,
-    'studyMinutes': 285.13,
-    'secondsPerCard': 6.93,
-    'againCount': 1919,
-    'againPct': 77.69,
-    'learningReviews': 2092,
-    'reviewsDone': 378,
+    'answeredCards': 2507,
+    'studyMinutes': 290.84,
+    'secondsPerCard': 6.96,
+    'againCount': 1920,
+    'againPct': 76.59,
+    'learningReviews': 2097,
+    'reviewsDone': 410,
     'ratings': {
-        'again': 1919,
-        'hard': 47,
-        'good': 121,
+        'again': 1920,
+        'hard': 80,
+        'good': 124,
         'easy': 383
     },
     'cardsRemaining': {
@@ -60,24 +60,24 @@ SUMMARY_PAYLOAD = {
     },
     'studyDay': '2026-09-14',
     'ankiResourceStudyDayRaw': '2026-09-14',
-    'sourceNote': 'Anki revlog 2026-09-14 실측치 (총 2,470회, 285분 7.53초 / 4시간 45분 7초). 옵션 A 9일차 완수: N2 신규 66장 100% 완수(394->328, 누적 72.0%), N3 신규 20장(59->39, 누적 92.4%), N2 보완 덱 12개 체계 구축 및 신규 카드 학습 개시, 당일 총 105개 신규 카드 노출.',
+    'sourceNote': 'Anki revlog 2026-09-14 실측치 (총 2,507회, 290분 50.25초 / 4시간 50분 50초 / 290.84분). 옵션 A 9일차 완수: N2 신규 66장 100% 완수(394->328, 누적 72.0%), N3 신규 20장(59->39, 누적 92.4%), N2 문법 001-150 예문 복습 36회(5분 42초, 31장 복습), N2 보완 덱 12개 체계 구축 및 신규 카드 학습 개시, 당일 총 105개 신규 카드 노출.',
     'inventory': {
         'n3_unseen': 39,
         'n2_unseen': 328,
         'n2_new_today': 66,
         'n3_new_today': 20,
         'grammar_new_today': 0,
-        'grammar_reviewed_today': 2,
+        'grammar_reviewed_today': 36,
         'grammar_unseen': 0,
         'new_cards_exposed_today': 105
     }
 }
 
 SESSION_SUMMARY = (
-    '[2026-09-14] Anki 단어·문법 세션 2,470회(285분 7초, 4시간 45분 7초). '
+    '[2026-09-14] Anki 단어·문법 세션 2,507회(290분 50초, 4시간 50분 50초 / 290.84분). '
     '옵션 A 9일차 완수: N2 신규 66장 100% 달성(394->328, 누적 72.0%), N3 신규 20장 100% 달성(59->39, 누적 92.4%) + '
-    'N2 12개 보완 덱 체계 구축 및 신규 서브덱 학습 개시, 당일 신규 노출 총 105장. '
-    '잔여 7.53초 보존.'
+    'N2 문법 001-150 예문 복습 36회(5분 42초, 고유 31장), N2 12개 보완 덱 체계 구축 및 신규 서브덱 학습 개시, 당일 신규 노출 총 105장. '
+    '잔여 50.25초 보존.'
 )
 
 con = sqlite3.connect(DB)
@@ -113,10 +113,8 @@ with con:
     assert con.execute('PRAGMA integrity_check').fetchone()[0] == 'ok'
     assert not con.execute('PRAGMA foreign_key_check').fetchall()
 
-print('Successfully recorded 2026-09-14 stats to DB!')
+print('Successfully updated 2026-09-14 stats (290.84 min, 2507 reviews) to DB!')
 cur = con.cursor()
 cur.execute('SELECT * FROM study_sessions WHERE session_date=?', (DATE,))
 print('study_sessions:', cur.fetchall())
-cur.execute('SELECT snapshot_date, scope_label FROM anki_daily_stats WHERE snapshot_date=?', (DATE,))
-print('anki_daily_stats:', cur.fetchall())
 con.close()
