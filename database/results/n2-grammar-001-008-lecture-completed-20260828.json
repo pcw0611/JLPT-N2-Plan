@@ -1,0 +1,17 @@
+{
+  "activity_id": "n2-grammar-001-008-lecture-completed-20260828",
+  "activity_date": "2026-08-28",
+  "activity_type": "lecture",
+  "title": "다락원 N2 문법001~008",
+  "pages": "194~197",
+  "status": "completed",
+  "duration_seconds": 1260,
+  "duration_source": "user_reported_21_minutes",
+  "session_base_seconds": 14705,
+  "session_total_seconds": 15965,
+  "session_integer_minutes": 266,
+  "session_remainder_seconds": 5,
+  "started_at": null,
+  "ended_at": null,
+  "quiz_completed": false
+}

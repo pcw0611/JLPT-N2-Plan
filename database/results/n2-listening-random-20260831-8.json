@@ -1,0 +1,103 @@
+{
+  "testId": "n2-listening-random-20260831-8",
+  "date": "2026-08-31",
+  "sourceClass": "self_made_tts",
+  "total": 8,
+  "correct": 5,
+  "wrong": 3,
+  "unknown": 0,
+  "unanswered": 0,
+  "elapsedSeconds": 247,
+  "firstHalf": {
+    "correct": 2,
+    "total": 4,
+    "seconds": 103
+  },
+  "secondHalf": {
+    "correct": 3,
+    "total": 4,
+    "seconds": 144
+  },
+  "responses": [
+    {
+      "itemNo": 1,
+      "questionId": 2,
+      "responseState": "correct",
+      "selectedText": "市役所",
+      "correctText": "市役所",
+      "responseSeconds": 19,
+      "playCount": 1,
+      "category": "청해 → 課題理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 2,
+      "questionId": 1,
+      "responseState": "correct",
+      "selectedText": "机を並べる",
+      "correctText": "机を並べる",
+      "responseSeconds": 28.3,
+      "playCount": 1,
+      "category": "청해 → 課題理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 3,
+      "questionId": 3,
+      "responseState": "wrong",
+      "selectedText": "印刷する",
+      "correctText": "参考文献を確認する",
+      "responseSeconds": 36.5,
+      "playCount": 1,
+      "category": "청해 → 課題理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 4,
+      "questionId": 4,
+      "responseState": "wrong",
+      "selectedText": "八部",
+      "correctText": "二十部",
+      "responseSeconds": 19.5,
+      "playCount": 1,
+      "category": "청해 → ポイント理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 5,
+      "questionId": 5,
+      "responseState": "correct",
+      "selectedText": "千二百円",
+      "correctText": "千二百円",
+      "responseSeconds": 28.9,
+      "playCount": 1,
+      "category": "청해 → ポイント理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 6,
+      "questionId": 6,
+      "responseState": "wrong",
+      "selectedText": "大学の授業料の説明",
+      "correctText": "地域の祭りの日程変更",
+      "responseSeconds": 48.9,
+      "playCount": 1,
+      "category": "청해 → 概要理解 → N2 랜덤"
+    },
+    {
+      "itemNo": 7,
+      "questionId": 8,
+      "responseState": "correct",
+      "selectedText": "三時からの予定です。",
+      "correctText": "三時からの予定です。",
+      "responseSeconds": 41,
+      "playCount": 1,
+      "category": "청해 → 即時応答 → N2 랜덤"
+    },
+    {
+      "itemNo": 8,
+      "questionId": 7,
+      "responseState": "correct",
+      "selectedText": "ええ、この道をまっすぐです。",
+      "correctText": "ええ、この道をまっすぐです。",
+      "responseSeconds": 25.3,
+      "playCount": 1,
+      "category": "청해 → 即時応答 → N2 랜덤"
+    }
+  ]
+}

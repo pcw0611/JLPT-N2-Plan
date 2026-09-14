@@ -1,0 +1,238 @@
+{
+  "test_id": "n2-grammar-009-015-check-20260830",
+  "test_date": "2026-08-30",
+  "title": "N2 문법 009~015 확인시험",
+  "source_class": "자체 제작",
+  "target_level": "N2",
+  "memory_timing": "강의 후 익일 확인",
+  "total_items": 10,
+  "correct_items": 0,
+  "wrong_items": 9,
+  "unknown_items": 1,
+  "unanswered_items": 0,
+  "elapsed_seconds": 425,
+  "time_limit_seconds": 600,
+  "timed_out": false,
+  "groups": {
+    "文の文法1": {
+      "correct": 0,
+      "total": 8
+    },
+    "文の文法2": {
+      "correct": 0,
+      "total": 1
+    },
+    "文章の文法": {
+      "correct": 0,
+      "total": 1
+    }
+  },
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "n2-009-1",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 직후 발생",
+      "pattern": "〜か〜ないかのうちに",
+      "state": "wrong",
+      "question": "授業終了のベルが（　）、学生たちは教室を飛び出していった。",
+      "choices": [
+        "鳴るか鳴らないかのうちに",
+        "鳴ったかぎり",
+        "鳴りかけのうちに",
+        "鳴ったかというと"
+      ],
+      "selected_text": "鳴ったかぎり",
+      "correct_text": "鳴るか鳴らないかのうちに",
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "question_id": "n2-010-2",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 노력의 보람",
+      "pattern": "〜かいがある",
+      "state": "wrong",
+      "question": "毎日発音を練習した（　）、以前より自然に話せるようになった。",
+      "choices": [
+        "かいがあって",
+        "かぎりで",
+        "がちで",
+        "かけで"
+      ],
+      "selected_text": "かけで",
+      "correct_text": "かいがあって",
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "question_id": "n2-011-3",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 범위·조건 유지",
+      "pattern": "〜かぎり",
+      "state": "wrong",
+      "question": "体が元気な（　）、この仕事を続けたいと思っている。",
+      "choices": [
+        "かいがある",
+        "かけで",
+        "かぎり",
+        "がたい"
+      ],
+      "selected_text": "かけで",
+      "correct_text": "かぎり",
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "question_id": "n2-011-4",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 필수 전제 조건",
+      "pattern": "〜ないかぎり",
+      "state": "wrong",
+      "question": "本人が同意しない（　）、この計画を進めることはできない。",
+      "choices": [
+        "かぎり",
+        "かぎりで",
+        "かいがなく",
+        "かというと"
+      ],
+      "selected_text": "かというと",
+      "correct_text": "かぎり",
+      "visited": true
+    },
+    {
+      "item_no": 5,
+      "question_id": "n2-012-5",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 미완료 상태",
+      "pattern": "〜かけの",
+      "state": "wrong",
+      "question": "机の上に（　）本が置いてある。",
+      "choices": [
+        "読みがたい",
+        "読みがちの",
+        "読みかけの",
+        "読むかぎりの"
+      ],
+      "selected_text": "読むかぎりの",
+      "correct_text": "読みかけの",
+      "visited": true
+    },
+    {
+      "item_no": 6,
+      "question_id": "n2-013-6",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 심리적으로 하기 어려움",
+      "pattern": "〜がたい",
+      "state": "wrong",
+      "question": "長年支えてくれた友人の親切は、私にとって（　）。",
+      "choices": [
+        "忘れがたい",
+        "忘れかけだ",
+        "忘れがちだ",
+        "忘れないかぎりだ"
+      ],
+      "selected_text": "忘れないかぎりだ",
+      "correct_text": "忘れがたい",
+      "visited": true
+    },
+    {
+      "item_no": 7,
+      "question_id": "n2-014-7",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 좋지 않은 경향",
+      "pattern": "〜がち",
+      "state": "wrong",
+      "question": "最近は忙しくて、朝食を（　）。",
+      "choices": [
+        "抜きがたい",
+        "抜きかけている",
+        "抜きがちだ",
+        "抜くかいがある"
+      ],
+      "selected_text": "抜きかけている",
+      "correct_text": "抜きがちだ",
+      "visited": true
+    },
+    {
+      "item_no": 8,
+      "question_id": "n2-015-8",
+      "item_type_id": "grammar_form",
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 부분 부정·화제 판단",
+      "pattern": "〜かというと",
+      "state": "wrong",
+      "question": "私は甘い物が嫌い（　）、そういうわけではない。ただ、毎日は食べないだけだ。",
+      "choices": [
+        "かぎりでは",
+        "かというと",
+        "かけると",
+        "がたいと"
+      ],
+      "selected_text": "かけると",
+      "correct_text": "かというと",
+      "visited": true
+    },
+    {
+      "item_no": 9,
+      "question_id": "n2-012-9",
+      "item_type_id": "sentence_composition",
+      "type": "文の文法2",
+      "category": "문법 → 문장 배열 → 미완료 동작과 역접",
+      "pattern": "〜かける",
+      "state": "wrong",
+      "question": "彼は　＿＿＿　＿＿＿　★　＿＿＿、黙ってしまった。",
+      "choices": [
+        "言い",
+        "何かを",
+        "が",
+        "かけた"
+      ],
+      "selected_text": "言い",
+      "correct_text": "かけた",
+      "visited": true
+    },
+    {
+      "item_no": 10,
+      "question_id": "n2-015-10",
+      "item_type_id": "text_grammar",
+      "type": "文章の文法",
+      "category": "문법 → 글의 흐름 → 판단 제시와 보충",
+      "pattern": "〜かといえば",
+      "state": "unknown",
+      "question": "新しい制度で手続きは便利になった。しかし、問題がすべてなくなった（　）、そうではない。利用者への説明はまだ十分とは言えないからだ。",
+      "choices": [
+        "かいがあるので",
+        "かといえば",
+        "かけなので",
+        "がちなので"
+      ],
+      "selected_text": "分からない",
+      "correct_text": "かといえば",
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-02"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-06"
+    }
+  ],
+  "practice_note": "강의 후 자체 제작 확인시험. JLPT식 문법 형식이지만 공식 기출·공식 모의고사가 아니며 합격 확률로 직접 환산하지 않음.",
+  "timing_note": "開始する부터 제출까지 타이머만 기록. 해설 읽기와 다른 학습시간은 포함하지 않음."
+}

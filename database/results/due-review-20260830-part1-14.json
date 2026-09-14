@@ -1,0 +1,361 @@
+{
+  "test_id": "due-review-20260830-part1-14",
+  "test_date": "2026-08-30",
+  "due_date": "2026-08-30",
+  "title": "만기 복습 1차 — 문법·형용사·어휘·단문 14문항",
+  "source_class": "자체 제작",
+  "target_level": "N3 기반·N2 입문",
+  "memory_timing": "D+1 11문항·D+3 3문항 변형 재시험",
+  "total_items": 14,
+  "correct_items": 9,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "elapsed_seconds": 595,
+  "time_limit_seconds": 900,
+  "timed_out": false,
+  "started_at": "2026-08-30T04:15:40.282Z",
+  "groups": {
+    "文の文法1": {
+      "correct": 8,
+      "total": 11
+    },
+    "言い換え類義": {
+      "correct": 0,
+      "total": 1
+    },
+    "文脈規定": {
+      "correct": 0,
+      "total": 1
+    },
+    "短文内容理解": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "attempts": [
+    {
+      "item_no": 1,
+      "review_queue_id": 160,
+      "source_attempt_id": 166,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 前に·사전형 접속",
+      "state": "correct",
+      "question": "旅行に（　）前に、ホテルを予約しました。",
+      "choices": [
+        "行く",
+        "行った",
+        "行き",
+        "行って"
+      ],
+      "selected_text": "行く",
+      "correct_text": "行く",
+      "response_seconds": 4,
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "review_queue_id": 163,
+      "source_attempt_id": 167,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → ところ·진행 중",
+      "state": "wrong",
+      "question": "今、報告書を（　）ところです。",
+      "choices": [
+        "書く",
+        "書いている",
+        "書いた",
+        "書き"
+      ],
+      "selected_text": "書いた",
+      "correct_text": "書いている",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "review_queue_id": 166,
+      "source_attempt_id": 168,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 最中·한창",
+      "state": "correct",
+      "question": "会議の（　）に、宅配便が届きました。",
+      "choices": [
+        "最中",
+        "うえ",
+        "かぎり",
+        "ところ"
+      ],
+      "selected_text": "最中",
+      "correct_text": "最中",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "review_queue_id": 169,
+      "source_attempt_id": 169,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → にくい·행동의 어려움",
+      "state": "correct",
+      "question": "このペンは字が細すぎて、少し（　）。",
+      "choices": [
+        "書きにくいです",
+        "書くにくいです",
+        "書いてにくいです",
+        "書かないにくいです"
+      ],
+      "selected_text": "書きにくいです",
+      "correct_text": "書きにくいです",
+      "response_seconds": 2,
+      "visited": true
+    },
+    {
+      "item_no": 5,
+      "review_queue_id": 172,
+      "source_attempt_id": 173,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 사역형",
+      "state": "correct",
+      "question": "母は子どもに野菜を（　）。",
+      "choices": [
+        "食べさせました",
+        "食べられました",
+        "食べさせられました",
+        "食べました"
+      ],
+      "selected_text": "食べさせました",
+      "correct_text": "食べさせました",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 6,
+      "review_queue_id": 175,
+      "source_attempt_id": 174,
+      "due_interval": "D+1",
+      "item_type_id": "adjective_conjugation",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → な형용사 과거 명사 수식",
+      "state": "correct",
+      "question": "以前は（　）公園も、今は多くの人でにぎやかです。",
+      "choices": [
+        "静かな",
+        "静かでした",
+        "静かだった",
+        "静かかった"
+      ],
+      "selected_text": "静かだった",
+      "correct_text": "静かだった",
+      "response_seconds": 8,
+      "visited": true
+    },
+    {
+      "item_no": 7,
+      "review_queue_id": 178,
+      "source_attempt_id": 176,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 겸양어·방문",
+      "state": "correct",
+      "question": "明日、私が社長の事務所へ（　）。",
+      "choices": [
+        "伺います",
+        "いらっしゃいます",
+        "おっしゃいます",
+        "ご覧になります"
+      ],
+      "selected_text": "伺います",
+      "correct_text": "伺います",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 8,
+      "review_queue_id": 181,
+      "source_attempt_id": 177,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 정중어·일반 현상",
+      "state": "wrong",
+      "question": "天気予報では、明日は雪が（　）。",
+      "choices": [
+        "降ります",
+        "お降りになります",
+        "いたします",
+        "召し上がります"
+      ],
+      "selected_text": "お降りになります",
+      "correct_text": "降ります",
+      "response_seconds": 14,
+      "visited": true
+    },
+    {
+      "item_no": 9,
+      "review_queue_id": 184,
+      "source_attempt_id": 181,
+      "due_interval": "D+1",
+      "item_type_id": "paraphrase",
+      "is_official_type": true,
+      "type": "言い換え類義",
+      "category": "어휘 → 유의표현 → 適した",
+      "state": "wrong",
+      "question": "この仕事に適した人を探しています。\n「適した」と意味が最も近いものはどれですか。",
+      "choices": [
+        "条件や目的に合っている",
+        "準備に時間がかからない",
+        "経験がまったくない",
+        "費用が最も高い"
+      ],
+      "selected_text": "準備に時間がかからない",
+      "correct_text": "条件や目的に合っている",
+      "response_seconds": 3,
+      "visited": true
+    },
+    {
+      "item_no": 10,
+      "review_queue_id": 187,
+      "source_attempt_id": 186,
+      "due_interval": "D+1",
+      "item_type_id": "context_vocabulary",
+      "is_official_type": true,
+      "type": "文脈規定",
+      "category": "어휘 → 문맥규정 → 改善",
+      "state": "wrong",
+      "question": "利用者の意見を聞き、会社はサービスの（　）を進めています。",
+      "choices": [
+        "改善",
+        "延期",
+        "観察",
+        "到着"
+      ],
+      "selected_text": "延期",
+      "correct_text": "改善",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 11,
+      "review_queue_id": 190,
+      "source_attempt_id": 188,
+      "due_interval": "D+1",
+      "item_type_id": "short_content",
+      "is_official_type": true,
+      "type": "短文内容理解",
+      "category": "독해 → 단문 → 과거 상태",
+      "state": "correct",
+      "question": "五年前、この駅前には小さな店が一軒あるだけで、夜になると歩く人もほとんどいませんでした。今は大きな店が増え、夜遅くまで多くの人が利用しています。\n\n五年前の駅前について最もよいものはどれですか。",
+      "choices": [
+        "人が少なく、静かだった",
+        "今よりにぎやかだった",
+        "大きな店が多かった",
+        "夜遅くまで人が多かった"
+      ],
+      "selected_text": "人が少なく、静かだった",
+      "correct_text": "人が少なく、静かだった",
+      "response_seconds": 1,
+      "visited": true
+    },
+    {
+      "item_no": 12,
+      "review_queue_id": 50,
+      "source_attempt_id": 48,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → な형용사 명사 수식",
+      "state": "correct",
+      "question": "田中さんは、とても（　）人です。\n「親切だ」を使ってください。",
+      "choices": [
+        "親切な",
+        "親切の",
+        "親切く",
+        "親切い"
+      ],
+      "selected_text": "親切な",
+      "correct_text": "親切な",
+      "response_seconds": 2,
+      "visited": true
+    },
+    {
+      "item_no": 13,
+      "review_queue_id": 61,
+      "source_attempt_id": 69,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → な형용사 과거 부정",
+      "state": "correct",
+      "question": "先週泊まったホテルは、あまり便利（　）。",
+      "choices": [
+        "ではありませんでした",
+        "くありませんでした",
+        "ではありません",
+        "かったです"
+      ],
+      "selected_text": "ではありませんでした",
+      "correct_text": "ではありませんでした",
+      "response_seconds": 12,
+      "visited": true
+    },
+    {
+      "item_no": 14,
+      "review_queue_id": 72,
+      "source_attempt_id": 75,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → な형용사 과거 긍정",
+      "state": "wrong",
+      "question": "昨日の祭りは、人が多くてとても（　）。\n「にぎやかだ」を使ってください。",
+      "choices": [
+        "にぎやかでした",
+        "にぎやかかったです",
+        "にぎやかなでした",
+        "にぎやかくでした"
+      ],
+      "selected_text": "にぎやかかったです",
+      "correct_text": "にぎやかでした",
+      "response_seconds": 2,
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-02"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-06"
+    }
+  ],
+  "mapping_note": "2026-08-30 만기 queue 중 비청해 1차 14건을 source_attempt_id·due_interval과 1대1 연결. D+1 11건·D+3 3건.",
+  "timing_note": "開始する부터 제출까지 타이머. 문항 시간은 화면 체류시간이며 순수 사고시간이 아님. 미응답·중단은 만기 완료 처리하지 않음."
+}

@@ -1,0 +1,93 @@
+{
+  "test_id": "n2-grammar-009-015-correction-20260830",
+  "test_date": "2026-08-30",
+  "title": "N2 문법 009~015 선택형 교정",
+  "source_class": "자체 제작 학습용",
+  "memory_timing": "오답 해설 직후 교정",
+  "total_items": 7,
+  "correct_items": 6,
+  "unknown_items": 0,
+  "wrong_items": 1,
+  "elapsed_seconds": 69,
+  "started_at": "2026-08-30T04:01:21.799Z",
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "correction-013",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "wrong",
+      "prompt": "その説明には理解し（　）点がある。",
+      "choices": ["がたい", "がち", "かける", "ないかぎり"],
+      "selected_text": "ないかぎり",
+      "correct_text": "がたい"
+    },
+    {
+      "item_no": 2,
+      "question_id": "correction-009",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "ベルが鳴る（　）、学生たちは教室を飛び出した。",
+      "choices": ["か〜ないかのうちに", "かぎり", "かける", "がち"],
+      "selected_text": "か〜ないかのうちに",
+      "correct_text": "か〜ないかのうちに"
+    },
+    {
+      "item_no": 3,
+      "question_id": "correction-010",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "毎日練習した（　）、自然に話せるようになった。",
+      "choices": ["かいがある", "かける", "がたい", "かというと"],
+      "selected_text": "かいがある",
+      "correct_text": "かいがある"
+    },
+    {
+      "item_no": 4,
+      "question_id": "correction-011",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "本人が同意し（　）、計画を進めることはできない。",
+      "choices": ["ないかぎり", "かいがある", "がち", "かといえば"],
+      "selected_text": "ないかぎり",
+      "correct_text": "ないかぎり"
+    },
+    {
+      "item_no": 5,
+      "question_id": "correction-012",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "机の上に読み（　）の本が置いてある。",
+      "choices": ["かける", "がたい", "かぎり", "かいがある"],
+      "selected_text": "かける",
+      "correct_text": "かける"
+    },
+    {
+      "item_no": 6,
+      "question_id": "correction-014",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "忙しいと、朝食を抜き（　）だ。",
+      "choices": ["がち", "がたい", "かいがある", "かというと"],
+      "selected_text": "がち",
+      "correct_text": "がち"
+    },
+    {
+      "item_no": 7,
+      "question_id": "correction-015",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "state": "correct",
+      "prompt": "この仕事が簡単（　）、決してそうではない。",
+      "choices": ["かというと", "かける", "かぎり", "がち"],
+      "selected_text": "かというと",
+      "correct_text": "かというと"
+    }
+  ],
+  "practice_note": "오답 해설 직후 자체 제작 선택형 교정. 공식 JLPT 문제 유형 템플릿을 사용하지만 공식 기출·독립 진단·D+1 유지율과 분리."
+}

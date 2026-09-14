@@ -1,0 +1,11 @@
+{
+  "model": "JLPT 한권으로 끝내기 단어장",
+  "deck_query": "deck:\"日本語::JLPT 한끝 Voca\"",
+  "note_count": 2734,
+  "corpus_rows": 150341,
+  "matched": 2734,
+  "unmatched": 0,
+  "coverage_percent": 100.0,
+  "corpus_file": "examples_pd-2008-10-10-tabbed-ck.zip",
+  "corpus_sha256": "e5d4fb34e8e146307c03246e08cccaf7d34ea606d80541adcea9480daba30055"
+}

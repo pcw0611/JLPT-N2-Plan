@@ -1,0 +1,15 @@
+{
+  "id": "anki-live-time-sync-20260901-549",
+  "date": "2026-09-01",
+  "scope": "all_decks",
+  "answered_cards": 549,
+  "study_seconds": 8842.2,
+  "study_time": "147분 22.2초",
+  "again_count": 164,
+  "ratings": {"again": 164, "hard": 168, "good": 138, "easy": 79},
+  "learning_reviews": 259,
+  "reviews_done": 175,
+  "cards_remaining": {"new": 0, "learning": 15, "review": 0},
+  "source": "Anki MCP anki://stats/today",
+  "day_boundary": "2026-09-01 04:00 KST"
+}

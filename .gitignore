@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.vinext/
+.wrangler/
+dist/
+tmp/
+*.tgz
+*.tar.gz
+.env
+.env.*
+.sync-secret
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

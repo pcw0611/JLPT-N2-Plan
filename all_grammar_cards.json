@@ -1,0 +1,772 @@
+[
+  {
+    "nid": 1788154669208,
+    "num": "001",
+    "pat": "〜あげく",
+    "ex1_ja": "何度も話し合ったあげく、計画は中止になった。",
+    "ex1_ko": "여러 번 의논한 끝에 계획은 중지되었다.",
+    "ex2_ja": "長い間迷ったあげく、その会社への応募をやめた。",
+    "ex2_ko": "오랫동안 고민한 끝에 그 회사 지원을 그만두었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 끝에</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋あげく／Nの＋あげく</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">오랜 과정 끝에 대체로 좋지 않거나 기대와 다른 결과에 이름.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">何度も話し合ったあげく、計画は中止になった。<br><span style='color:#6b7280'>여러 번 의논한 끝에 계획은 중지되었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">長い間迷ったあげく、その会社への応募をやめた。<br><span style='color:#6b7280'>오랫동안 고민한 끝에 그 회사 지원을 그만두었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜末に도 긴 과정 뒤의 결과지만 좋은 결과에도 널리 쓴다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">긴 과정 → 마지막 결과의 순서를 확인한다.</div>"
+  },
+  {
+    "nid": 1788154669209,
+    "num": "002",
+    "pat": "〜あまり",
+    "ex1_ja": "緊張のあまり、自分の名前さえ言えなかった。",
+    "ex1_ko": "너무 긴장한 나머지 자기 이름조차 말하지 못했다.",
+    "ex2_ja": "子どものことを心配するあまり、一晩中眠れなかった。",
+    "ex2_ko": "아이를 지나치게 걱정한 나머지 밤새 잠들지 못했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 나머지</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V普通形＋あまり／Nの＋あまり／ナAな＋あまり</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">감정이나 정도가 지나쳐 예상 밖의 결과가 생김.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">緊張のあまり、自分の名前さえ言えなかった。<br><span style='color:#6b7280'>너무 긴장한 나머지 자기 이름조차 말하지 못했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">子どものことを心配するあまり、一晩中眠れなかった。<br><span style='color:#6b7280'>아이를 지나치게 걱정한 나머지 밤새 잠들지 못했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">단순한 이유가 아니라 정도가 지나쳤다는 느낌이 있다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">앞부분이 강한 감정·과도한 정도인지 본다.</div>"
+  },
+  {
+    "nid": 1788154669210,
+    "num": "003",
+    "pat": "〜一方だ",
+    "ex1_ja": "この町の人口は減る一方だ。",
+    "ex1_ko": "이 마을의 인구는 계속 줄어들기만 한다.",
+    "ex2_ja": "対策をしなければ、状況は悪くなる一方だ。",
+    "ex2_ko": "대책을 세우지 않으면 상황은 계속 나빠질 뿐이다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">계속 ~하기만 하다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形＋一方だ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">변화가 한 방향으로 계속 진행됨.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">この町の人口は減る一方だ。<br><span style='color:#6b7280'>이 마을의 인구는 계속 줄어들기만 한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">対策をしなければ、状況は悪くなる一方だ。<br><span style='color:#6b7280'>대책을 세우지 않으면 상황은 계속 나빠질 뿐이다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ばかりだ와 비슷하지만 변화의 지속 방향을 특히 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">増える・減る・悪くなる 같은 변화 동사를 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669211,
+    "num": "004",
+    "pat": "〜うえで",
+    "ex1_ja": "契約内容を確認したうえで、署名してください。",
+    "ex1_ko": "계약 내용을 확인한 뒤 서명해 주세요.",
+    "ex2_ja": "家族と相談したうえで、返事をします。",
+    "ex2_ko": "가족과 상의한 뒤 답변하겠습니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 뒤에</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋うえで／Nの＋うえで</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A를 충분히 한 뒤 그것을 바탕으로 B함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">契約内容を確認したうえで、署名してください。<br><span style='color:#6b7280'>계약 내용을 확인한 뒤 서명해 주세요.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">家族と相談したうえで、返事をします。<br><span style='color:#6b7280'>가족과 상의한 뒤 답변하겠습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">단순한 시간 순서보다 사전 확인·준비를 거친다는 느낌이 강하다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">A가 B를 위한 준비·판단 근거인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788154669212,
+    "num": "005",
+    "pat": "〜うえに",
+    "ex1_ja": "この店は安いうえに、駅からも近い。",
+    "ex1_ko": "이 가게는 저렴한 데다가 역에서도 가깝다.",
+    "ex2_ja": "彼は親切なうえに、説明も分かりやすい。",
+    "ex2_ko": "그는 친절한 데다가 설명도 이해하기 쉽다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~인 데다가</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V普通形／イA普通形／ナAな／Nである＋うえに</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A라는 성질이나 사정에 B까지 더해짐.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">この店は安いうえに、駅からも近い。<br><span style='color:#6b7280'>이 가게는 저렴한 데다가 역에서도 가깝다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">彼は親切なうえに、説明も分かりやすい。<br><span style='color:#6b7280'>그는 친절한 데다가 설명도 이해하기 쉽다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">조건이나 시간 순서가 아니라 같은 방향의 정보 추가이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">‘A이고, 게다가 B’로 자연스러운지 본다.</div>"
+  },
+  {
+    "nid": 1788154669213,
+    "num": "006",
+    "pat": "〜うえは",
+    "ex1_ja": "自分で引き受けたうえは、最後までやり通す。",
+    "ex1_ko": "스스로 맡은 이상 끝까지 해낸다.",
+    "ex2_ja": "約束したうえは、必ず守らなければならない。",
+    "ex2_ko": "약속한 이상 반드시 지켜야 한다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 이상</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V普通形＋うえは</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">이미 A한 이상 책임·각오를 가지고 B함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">自分で引き受けたうえは、最後までやり通す。<br><span style='color:#6b7280'>스스로 맡은 이상 끝까지 해낸다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">約束したうえは、必ず守らなければならない。<br><span style='color:#6b7280'>약속한 이상 반드시 지켜야 한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜からには와 거의 같으며 뒤에 의지·의무·책임이 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒤 문장에 つもりだ・べきだ・なければならない가 있는지 본다.</div>"
+  },
+  {
+    "nid": 1788154669214,
+    "num": "007",
+    "pat": "〜うちに／〜ないうちに",
+    "ex1_ja": "忘れないうちに、重要な点をメモしておこう。",
+    "ex1_ko": "잊기 전에 중요한 점을 메모해 두자.",
+    "ex2_ja": "日本にいるうちに、いろいろな地方を旅行したい。",
+    "ex2_ko": "일본에 있는 동안 여러 지방을 여행하고 싶다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하는 동안 · ~하기 전에</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形・Vている・Vない／イA／ナAな／Nの＋うちに</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">상태가 유지되는 동안 또는 상태가 바뀌기 전에 행동함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">忘れないうちに、重要な点をメモしておこう。<br><span style='color:#6b7280'>잊기 전에 중요한 점을 메모해 두자.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">日本にいるうちに、いろいろな地方を旅行したい。<br><span style='color:#6b7280'>일본에 있는 동안 여러 지방을 여행하고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜間은 기간 전체의 지속을, 〜うちに는 그 기간 중 기회·변화를 자주 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">‘상태가 바뀌기 전’이라는 시간 제한을 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669215,
+    "num": "008",
+    "pat": "〜おきに",
+    "ex1_ja": "このバスは二十分おきに出発する。",
+    "ex1_ko": "이 버스는 20분 간격으로 출발한다.",
+    "ex2_ja": "道路に五メートルおきに木が植えてある。",
+    "ex2_ko": "도로에 5미터 간격으로 나무가 심겨 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~간격으로</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">数量＋おきに</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">일정한 시간·거리·수량의 간격마다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">このバスは二十分おきに出発する。<br><span style='color:#6b7280'>이 버스는 20분 간격으로 출발한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">道路に五メートルおきに木が植えてある。<br><span style='color:#6b7280'>도로에 5미터 간격으로 나무가 심겨 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">시간 표현에서는 해당 간격이 지날 때마다 반복된다고 이해한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">숫자와 반복되는 사건을 함께 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669216,
+    "num": "009",
+    "pat": "〜か〜ないかのうちに",
+    "ex1_ja": "ベルが鳴るか鳴らないかのうちに、学生が教室を出た。",
+    "ex1_ko": "종이 울렸는지 아닌지 할 사이에 학생들이 교실을 나갔다.",
+    "ex2_ja": "席に座るか座らないかのうちに、電車が動き出した。",
+    "ex2_ko": "자리에 앉자마자 전철이 움직이기 시작했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하자마자</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形＋か＋Vない形＋かのうちに</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A가 끝났는지도 모를 정도로 거의 동시에 B가 일어남.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">ベルが鳴るか鳴らないかのうちに、学生が教室を出た。<br><span style='color:#6b7280'>종이 울렸는지 아닌지 할 사이에 학생들이 교실을 나갔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">席に座るか座らないかのうちに、電車が動き出した。<br><span style='color:#6b7280'>자리에 앉자마자 전철이 움직이기 시작했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜たとたん과 비슷하지만 A와 B가 거의 겹치는 속도를 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">같은 동사의 긍정형과 부정형이 반복되는지 본다.</div>"
+  },
+  {
+    "nid": 1788154669217,
+    "num": "010",
+    "pat": "〜かいがある",
+    "ex1_ja": "毎日練習したかいがあって、試合に勝つことができた。",
+    "ex1_ko": "매일 연습한 보람이 있어 시합에서 이길 수 있었다.",
+    "ex2_ja": "遠くまで来たかいがある美しい景色だ。",
+    "ex2_ko": "멀리까지 온 보람이 있는 아름다운 경치다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 보람이 있다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋かいがある／Nの＋かいがある</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">노력이나 수고에 보람·효과가 있음.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">毎日練習したかいがあって、試合に勝つことができた。<br><span style='color:#6b7280'>매일 연습한 보람이 있어 시합에서 이길 수 있었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">遠くまで来たかいがある美しい景色だ。<br><span style='color:#6b7280'>멀리까지 온 보람이 있는 아름다운 경치다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">결과가 없으면 〜かいがない, 보람 있었다면 〜かいがあった.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">노력 → 좋은 성과의 인과관계를 확인한다.</div>"
+  },
+  {
+    "nid": 1788154669218,
+    "num": "011",
+    "pat": "〜かぎり／〜ないかぎり",
+    "ex1_ja": "体が元気なかぎり、この仕事を続けたい。",
+    "ex1_ko": "몸이 건강한 한 이 일을 계속하고 싶다.",
+    "ex2_ja": "本人が同意しないかぎり、計画は進められない。",
+    "ex2_ko": "본인이 동의하지 않는 한 계획을 진행할 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하는 한 · ~하지 않는 한</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V普通形／ナAな／Nである＋かぎり</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A 상태가 유지되는 동안, 또는 A하지 않는 한 B가 성립하지 않음.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">体が元気なかぎり、この仕事を続けたい。<br><span style='color:#6b7280'>몸이 건강한 한 이 일을 계속하고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">本人が同意しないかぎり、計画は進められない。<br><span style='color:#6b7280'>본인이 동의하지 않는 한 계획을 진행할 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ないかぎり 뒤에는 できない처럼 제한·불가능이 자주 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">‘A가 필수 조건인가?’를 먼저 판단한다.</div>"
+  },
+  {
+    "nid": 1788154669219,
+    "num": "012",
+    "pat": "〜かけ／〜かける",
+    "ex1_ja": "机の上に読みかけの本が置いてある。",
+    "ex1_ko": "책상 위에 읽다 만 책이 놓여 있다.",
+    "ex2_ja": "彼は何かを言いかけたが、黙ってしまった。",
+    "ex2_ko": "그는 무언가 말하려다가 입을 다물었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하다 만</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋かける／かけのN／かけだ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">동작을 시작했지만 아직 끝나지 않은 미완료 상태.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">机の上に読みかけの本が置いてある。<br><span style='color:#6b7280'>책상 위에 읽다 만 책이 놓여 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">彼は何かを言いかけたが、黙ってしまった。<br><span style='color:#6b7280'>그는 무언가 말하려다가 입을 다물었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">반복 습관인 〜がち와 달리 한 동작의 중간·중단을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">이미 시작했는가, 아직 끝나지 않았는가를 본다.</div>"
+  },
+  {
+    "nid": 1788154669220,
+    "num": "013",
+    "pat": "〜がたい",
+    "ex1_ja": "長年の友人の親切は忘れがたい。",
+    "ex1_ko": "오랜 친구의 친절은 잊기 어렵다.",
+    "ex2_ja": "その説明は私には理解しがたい。",
+    "ex2_ko": "그 설명은 나로서는 이해하기 어렵다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하기 어렵다 (심리·본질)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋がたい</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">능력보다 심리·본질상 받아들이거나 실행하기 어려움.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">長年の友人の親切は忘れがたい。<br><span style='color:#6b7280'>오랜 친구의 친절은 잊기 어렵다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">その説明は私には理解しがたい。<br><span style='color:#6b7280'>그 설명은 나로서는 이해하기 어렵다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">물리적 난이도의 にくい보다 인정·이해·용서 같은 추상 동사와 잘 결합한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">忘れる・信じる・理解する처럼 심리적 판단인지 본다.</div>"
+  },
+  {
+    "nid": 1788154669221,
+    "num": "014",
+    "pat": "〜がち",
+    "ex1_ja": "忙しいと、朝食を抜きがちだ。",
+    "ex1_ko": "바쁘면 아침을 거르기 쉽다.",
+    "ex2_ja": "雨の日は家に閉じこもりがちになる。",
+    "ex2_ko": "비 오는 날에는 집에 틀어박혀 있기 쉽다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">자주 ~하는 경향</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋がち／N＋がち</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">자주 그렇게 되는 바람직하지 않은 경향.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">忙しいと、朝食を抜きがちだ。<br><span style='color:#6b7280'>바쁘면 아침을 거르기 쉽다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">雨の日は家に閉じこもりがちになる。<br><span style='color:#6b7280'>비 오는 날에는 집에 틀어박혀 있기 쉽다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜気味는 현재 약간 그런 상태, 〜がちは 반복되는 경향이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">最近・よく・いつも 같은 반복 신호를 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669222,
+    "num": "015",
+    "pat": "〜かというと／〜かといえば",
+    "ex1_ja": "甘い物が嫌いかというと、そういうわけではない。",
+    "ex1_ko": "단것을 싫어하느냐 하면 꼭 그런 것은 아니다.",
+    "ex2_ja": "新制度で問題がなくなったかといえば、そうではない。",
+    "ex2_ko": "새 제도로 문제가 없어졌느냐 하면 그렇지는 않다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~인가 하면 꼭 그렇지는 않다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">문장＋かというと／かといえば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 판단을 화제로 제시한 뒤 ‘꼭 그렇지는 않다’고 답함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">甘い物が嫌いかというと、そういうわけではない。<br><span style='color:#6b7280'>단것을 싫어하느냐 하면 꼭 그런 것은 아니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">新制度で問題がなくなったかといえば、そうではない。<br><span style='color:#6b7280'>새 제도로 문제가 없어졌느냐 하면 그렇지는 않다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜とは限らない은 일반적 예외, 이 문형은 질문처럼 판단을 제시하고 직접 답한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒤의 そうではない・必ずしも〜ない를 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669223,
+    "num": "016",
+    "pat": "〜かねない",
+    "ex1_ja": "確認を怠ると、大きな事故を起こしかねない。",
+    "ex1_ko": "확인을 소홀히 하면 큰 사고를 일으킬 수도 있다.",
+    "ex2_ja": "このままでは、計画そのものが中止になりかねない。",
+    "ex2_ko": "이대로라면 계획 자체가 중지될 수도 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~할 우려가 있다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋かねない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">좋지 않은 일이 일어날 가능성이 있음.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">確認を怠ると、大きな事故を起こしかねない。<br><span style='color:#6b7280'>확인을 소홀히 하면 큰 사고를 일으킬 수도 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">このままでは、計画そのものが中止になりかねない。<br><span style='color:#6b7280'>이대로라면 계획 자체가 중지될 수도 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜かねる는 거절, 〜かねない는 부정적 가능성이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">위험·경고 문맥이면 かねない를 고른다.</div>"
+  },
+  {
+    "nid": 1788154669224,
+    "num": "017",
+    "pat": "〜かねる",
+    "ex1_ja": "個人情報に関する質問にはお答えしかねます。",
+    "ex1_ko": "개인정보에 관한 질문에는 답변드리기 어렵습니다.",
+    "ex2_ja": "そのご提案には賛成しかねます。",
+    "ex2_ko": "그 제안에는 찬성하기 어렵습니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하기 어렵다 (정중한 거절)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋かねる</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">입장이나 사정상 하기 어렵다는 정중한 거절.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">個人情報に関する質問にはお答えしかねます。<br><span style='color:#6b7280'>개인정보에 관한 질문에는 답변드리기 어렵습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">そのご提案には賛成しかねます。<br><span style='color:#6b7280'>그 제안에는 찬성하기 어렵습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">かねる 자체에 ‘할 수 없다’가 들어 있으므로 お答えしかねます가 맞다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">회사·창구의 정중한 거절이면 かねる를 고른다.</div>"
+  },
+  {
+    "nid": 1788154669225,
+    "num": "018",
+    "pat": "〜から〜にかけて",
+    "ex1_ja": "今夜から明日の朝にかけて、雪が降るでしょう。",
+    "ex1_ko": "오늘 밤부터 내일 아침에 걸쳐 눈이 내리겠습니다.",
+    "ex2_ja": "関東から東北にかけて、強い風が吹いた。",
+    "ex2_ko": "간토에서 도호쿠에 걸쳐 강한 바람이 불었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~부터 ~에 걸쳐</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N1＋から＋N2＋にかけて</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">시간이나 장소의 시작점부터 끝점까지의 대략적인 범위.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">今夜から明日の朝にかけて、雪が降るでしょう。<br><span style='color:#6b7280'>오늘 밤부터 내일 아침에 걸쳐 눈이 내리겠습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">関東から東北にかけて、強い風が吹いた。<br><span style='color:#6b7280'>간토에서 도호쿠에 걸쳐 강한 바람이 불었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜から〜まで보다 경계가 흐리고 범위 전체에 걸친 현상을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">시간·지역 두 끝점과 광범위한 현상을 찾는다.</div>"
+  },
+  {
+    "nid": 1788154669226,
+    "num": "019",
+    "pat": "〜からいうと",
+    "ex1_ja": "費用の面からいうと、A案のほうが現実的だ。",
+    "ex1_ko": "비용 측면에서 보면 A안이 더 현실적이다.",
+    "ex2_ja": "環境保護の観点からいうと、この計画には問題がある。",
+    "ex2_ko": "환경보호 관점에서 보면 이 계획에는 문제가 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~의 관점에서 보면</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋からいうと／からいえば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">특정 관점·측면을 기준으로 평가함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">費用の面からいうと、A案のほうが現実的だ。<br><span style='color:#6b7280'>비용 측면에서 보면 A안이 더 현실적이다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">環境保護の観点からいうと、この計画には問題がある。<br><span style='color:#6b7280'>환경보호 관점에서 보면 이 계획에는 문제가 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜からすると는 관찰된 근거에서 추측할 때 자주 쓴다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">観点・立場・面이 나오면 이 문형을 우선 검토한다.</div>"
+  },
+  {
+    "nid": 1788154669227,
+    "num": "020",
+    "pat": "〜からして",
+    "ex1_ja": "あの店は入り口の飾りからして、普通の店とは違う。",
+    "ex1_ko": "저 가게는 입구 장식부터가 보통 가게와 다르다.",
+    "ex2_ja": "彼の話し方からして、かなり自信がありそうだ。",
+    "ex2_ko": "그의 말투부터 보아 상당히 자신이 있어 보인다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~부터가 이미</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋からして</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">대표적인 한 사례부터 이미 전체의 특징이 드러남.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">あの店は入り口の飾りからして、普通の店とは違う。<br><span style='color:#6b7280'>저 가게는 입구 장식부터가 보통 가게와 다르다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">彼の話し方からして、かなり自信がありそうだ。<br><span style='color:#6b7280'>그의 말투부터 보아 상당히 자신이 있어 보인다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">‘다른 것은 말할 것도 없이 이것부터’라는 강조가 있다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">가장 눈에 띄는 첫 사례를 집어 전체를 평가하는지 본다.</div>"
+  },
+  {
+    "nid": 1788154669228,
+    "num": "021",
+    "pat": "〜からすると",
+    "ex1_ja": "窓が全部閉まっていることからすると、今日は誰もいないようだ。",
+    "ex1_ko": "창문이 모두 닫혀 있는 것으로 보아 오늘은 아무도 없는 듯하다.",
+    "ex2_ja": "足跡の大きさからすると、大きな動物らしい。",
+    "ex2_ko": "발자국 크기로 보아 큰 동물인 듯하다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~로 보아</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋からすると／からすれば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">관찰된 사실을 근거로 판단·추측함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">窓が全部閉まっていることからすると、今日は誰もいないようだ。<br><span style='color:#6b7280'>창문이 모두 닫혀 있는 것으로 보아 오늘은 아무도 없는 듯하다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">足跡の大きさからすると、大きな動物らしい。<br><span style='color:#6b7280'>발자국 크기로 보아 큰 동물인 듯하다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜からいうと가 관점이라면 〜からすると는 증거 → 추측이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒤에 ようだ・らしい 같은 추측 표현이 있는지 본다.</div>"
+  },
+  {
+    "nid": 1788154669229,
+    "num": "022",
+    "pat": "〜からといって",
+    "ex1_ja": "安いからといって、必要のない物まで買うべきではない。",
+    "ex1_ko": "싸다고 해서 필요 없는 물건까지 사서는 안 된다.",
+    "ex2_ja": "有名だからといって、品質がいいとは限らない。",
+    "ex2_ko": "유명하다고 해서 품질이 좋은 것은 아니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~라고 해서</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形＋からといって／N・ナA＋だからといって</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A라는 이유만으로 B라고 단정하거나 행동해서는 안 됨.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">安いからといって、必要のない物まで買うべきではない。<br><span style='color:#6b7280'>싸다고 해서 필요 없는 물건까지 사서는 안 된다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">有名だからといって、品質がいいとは限らない。<br><span style='color:#6b7280'>유명하다고 해서 품질이 좋은 것은 아니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">뒤에는 とは限らない・わけではない・べきではない가 자주 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">‘A라고 해서 반드시 B인가?’라는 단정 부정인지 본다.</div>"
+  },
+  {
+    "nid": 1788154669230,
+    "num": "023",
+    "pat": "〜からには",
+    "ex1_ja": "自分で引き受けたからには、最後まで責任を持つ。",
+    "ex1_ko": "스스로 맡은 이상 끝까지 책임진다.",
+    "ex2_ja": "試験を受けるからには、合格を目指したい。",
+    "ex2_ko": "시험을 치르는 이상 합격을 목표로 하고 싶다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 이상</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V普通形＋からには／N・ナA＋であるからには</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">이미 A한 이상 의무·책임·결의를 가지고 B함.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">自分で引き受けたからには、最後まで責任を持つ。<br><span style='color:#6b7280'>스스로 맡은 이상 끝까지 책임진다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">試験を受けるからには、合格を目指したい。<br><span style='color:#6b7280'>시험을 치르는 이상 합격을 목표로 하고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">이유의 반박인 〜からといって와 달리 뒤에 강한 의지·의무가 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">‘이미 결정했으니 끝까지’라는 흐름인지 본다.</div>"
+  },
+  {
+    "nid": 1788154669231,
+    "num": "024",
+    "pat": "〜気味",
+    "ex1_ja": "最近、少し疲れ気味なので、早く寝ることにした。",
+    "ex1_ko": "요즘 조금 피곤한 기색이라 일찍 자기로 했다.",
+    "ex2_ja": "風邪気味で、のどが少し痛い。",
+    "ex2_ko": "감기 기운이 있어서 목이 조금 아프다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">조금 ~한 기미</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋気味／N＋気味</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">최근 또는 현재 약간 좋지 않은 상태나 경향.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">最近、少し疲れ気味なので、早く寝ることにした。<br><span style='color:#6b7280'>요즘 조금 피곤한 기색이라 일찍 자기로 했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">風邪気味で、のどが少し痛い。<br><span style='color:#6b7280'>감기 기운이 있어서 목이 조금 아프다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜が치는 반복 습관, 〜気味는 현재 느껴지는 약한 상태이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">少し・最近과 현재 몸 상태가 나오면 気味를 본다.</div>"
+  },
+  {
+    "nid": 1788154669232,
+    "num": "025",
+    "pat": "〜きり",
+    "ex1_ja": "兄は朝早く家を出たきり、まだ帰ってこない。",
+    "ex1_ko": "형은 아침 일찍 집을 나간 뒤 아직 돌아오지 않았다.",
+    "ex2_ja": "彼とは去年会ったきり、一度も連絡していない。",
+    "ex2_ko": "그와는 작년에 만난 뒤 한 번도 연락하지 않았다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 뒤로 계속</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋きり（＋後続の否定）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">A한 뒤 다음 변화나 행동이 일어나지 않은 상태가 계속됨.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">兄は朝早く家を出たきり、まだ帰ってこない。<br><span style='color:#6b7280'>형은 아침 일찍 집을 나간 뒤 아직 돌아오지 않았다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">彼とは去年会ったきり、一度も連絡していない。<br><span style='color:#6b7280'>그와는 작년에 만난 뒤 한 번도 연락하지 않았다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">단순한 직후가 아니라 A 이후 오랫동안 상태가 끊겨 있음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒤의 まだ〜ない・一度も〜ない를 확인한다.</div>"
+  },
+  {
+    "nid": 1788177172760,
+    "num": "026",
+    "pat": "〜きる／〜きれない",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">끝까지 완전히 해내다 / 다 하지 못하다</div>\n<div style=\"margin-top:15px\"><b>접속</b>　Vます語幹＋きる／きれない</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　最後まで・全部라는 완결 신호와 잘 결합한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">長い小説だったが、一晩で読みきった。</div><div style=\"color:#5f6368\">긴 소설이었지만 하룻밤에 다 읽었다.</div>\n<div style=\"font-size:20px;margin-top:14px\">料理が多すぎて、一人では食べきれない。</div><div style=\"color:#5f6368\">음식이 너무 많아 혼자서는 다 먹을 수 없다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜終わる는 단순 종료, 〜きる는 남김없이 완수함을 강조한다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　全部・最後まで와 완전한 완료 여부를 본다.</div>"
+  },
+  {
+    "nid": 1788177172761,
+    "num": "027",
+    "pat": "〜くせに",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~인 주제에, ~이면서도</div>\n<div style=\"margin-top:15px\"><b>접속</b>　普通形＋くせに／Nの＋くせに／ナAな＋くせに</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　예상에 어긋난 행동을 비난·불만의 감정과 함께 나타낸다.</div>\n<div style=\"font-size:20px;margin-top:16px\">彼は知っているくせに、何も教えてくれなかった。</div><div style=\"color:#5f6368\">그는 알고 있으면서도 아무것도 알려주지 않았다.</div>\n<div style=\"font-size:20px;margin-top:14px\">子どものくせに、大人のような話し方をする。</div><div style=\"color:#5f6368\">아이인 주제에 어른 같은 말투를 쓴다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜のに보다 화자의 비난·불만이 강하므로 공손한 상대에게 주의한다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　단순 역접인가, 상대를 탓하는 감정까지 있는가?</div>"
+  },
+  {
+    "nid": 1788177172762,
+    "num": "028",
+    "pat": "〜こそ／〜からこそ",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">바로 ~야말로 / 바로 ~이기 때문에</div>\n<div style=\"margin-top:15px\"><b>접속</b>　N＋こそ／普通形＋からこそ</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　다른 것이 아니라 해당 대상·이유를 강하게 한정하고 강조한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">今度こそ、試験に合格したい。</div><div style=\"color:#5f6368\">이번에야말로 시험에 합격하고 싶다.</div>\n<div style=\"font-size:20px;margin-top:14px\">苦しい時だからこそ、互いに助け合うべきだ。</div><div style=\"color:#5f6368\">힘든 때이기 때문에야말로 서로 도와야 한다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜から는 보통 이유, 〜からこそ는 그 이유만을 특별히 강조한다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　강조하려는 것이 대상인가, 이유인가?</div>"
+  },
+  {
+    "nid": 1788177172763,
+    "num": "029",
+    "pat": "〜ことか",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">얼마나 ~했는가, 얼마나 ~인지</div>\n<div style=\"margin-top:15px\"><b>접속</b>　疑問語＋普通形＋ことか</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　수량 질문이 아니라 감정의 정도가 매우 크다는 감탄을 나타낸다.</div>\n<div style=\"font-size:20px;margin-top:16px\">合格の知らせを聞いて、どんなにうれしかったことか。</div><div style=\"color:#5f6368\">합격 소식을 듣고 얼마나 기뻤는지 모른다.</div>\n<div style=\"font-size:20px;margin-top:14px\">あなたの帰りを何度待ったことか。</div><div style=\"color:#5f6368\">당신이 돌아오기를 몇 번이나 기다렸는지 모른다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　실제 답을 요구하는 의문문이 아니라 どんなに・どれほど・何度와 감정을 강조한다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　질문인가, 강한 감탄인가?</div>"
+  },
+  {
+    "nid": 1788177172764,
+    "num": "030",
+    "pat": "〜ことから／〜ところから",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~라는 사실로부터, ~라는 점 때문에</div>\n<div style=\"margin-top:15px\"><b>접속</b>　普通形＋ことから／ところから</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　관찰 가능한 사실을 근거로 판단하거나 이름·유래의 이유를 설명한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">窓が開いていることから、誰かが中にいると分かった。</div><div style=\"color:#5f6368\">창문이 열려 있는 것으로 보아 누군가 안에 있음을 알았다.</div>\n<div style=\"font-size:20px;margin-top:14px\">形が星に似ているところから、この名前が付けられた。</div><div style=\"color:#5f6368\">모양이 별과 닮은 점에서 이 이름이 붙었다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜からすると는 근거에서 추측, 〜ことから는 근거가 되는 사실 자체를 제시한다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　뒤가 판단·명칭의 유래인가?</div>"
+  },
+  {
+    "nid": 1788177172765,
+    "num": "031",
+    "pat": "〜ことだから",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~인 사람이니까 분명</div>\n<div style=\"margin-top:15px\"><b>접속</b>　Nの＋ことだから</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　잘 아는 사람의 성격·평소 모습을 근거로 그 사람의 행동을 추측한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">責任感の強い田中さんのことだから、最後までやるだろう。</div><div style=\"color:#5f6368\">책임감이 강한 다나카 씨니까 끝까지 할 것이다.</div>\n<div style=\"font-size:20px;margin-top:14px\">彼女のことだから、もう準備を終えているに違いない。</div><div style=\"color:#5f6368\">그녀니까 이미 준비를 끝냈을 것이다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　일반 사물의 원인보다 사람의 성격·습관에 근거한 추측에 쓴다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　앞의 인물을 평소부터 잘 안다는 전제가 있는가?</div>"
+  },
+  {
+    "nid": 1788177172766,
+    "num": "032",
+    "pat": "〜ことなく",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~하지 않고, ~하는 일 없이</div>\n<div style=\"margin-top:15px\"><b>접속</b>　V辞書形＋ことなく</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　어떤 행동을 전혀 하지 않은 채 뒤 행동이나 상태가 이어짐을 격식 있게 나타낸다.</div>\n<div style=\"font-size:20px;margin-top:16px\">彼は一度も休むことなく、最後まで走り続けた。</div><div style=\"color:#5f6368\">그는 한 번도 쉬지 않고 끝까지 계속 달렸다.</div>\n<div style=\"font-size:20px;margin-top:14px\">困難に負けることなく、研究を続けた。</div><div style=\"color:#5f6368\">어려움에 지지 않고 연구를 계속했다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜ないで보다 문어적·격식적이며 一度も 같은 완전 부정 신호와 잘 맞는다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　하지 않은 행동과 계속된 행동을 나눠 본다.</div>"
+  },
+  {
+    "nid": 1788177172767,
+    "num": "033",
+    "pat": "〜ことに",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~하게도, ~한 것은</div>\n<div style=\"margin-top:15px\"><b>접속</b>　Vた形／イAい／ナAな＋ことに</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　뒤 사실에 대한 화자의 놀람·기쁨·유감 같은 평가를 문두에서 제시한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">驚いたことに、彼は一人で問題を解決した。</div><div style=\"color:#5f6368\">놀랍게도 그는 혼자 문제를 해결했다.</div>\n<div style=\"font-size:20px;margin-top:14px\">残念なことに、試合は中止になった。</div><div style=\"color:#5f6368\">유감스럽게도 시합은 중지되었다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜ことか는 감정의 정도를 감탄하고, 〜ことに는 뒤 사실에 대한 평가를 먼저 붙인다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　놀랍게도·다행히·유감스럽게도로 바꿀 수 있는가?</div>"
+  },
+  {
+    "nid": 1788177172768,
+    "num": "034",
+    "pat": "〜ことになる／〜ことにはならない／〜ことにする",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">외부 결정·귀결 / 그런 결과는 아님 / 스스로 결정</div>\n<div style=\"margin-top:15px\"><b>접속</b>　V辞書形・Vない形＋各文型</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　ことになる는 규칙·상황의 결정, ことにする는 화자의 의지적 결정이다.</div>\n<div style=\"font-size:20px;margin-top:16px\">来月から大阪へ転勤することになった。</div><div style=\"color:#5f6368\">다음 달부터 오사카로 전근하게 되었다.</div>\n<div style=\"font-size:20px;margin-top:14px\">毎日運動することにした。<br>少し手伝っただけでは、全部終えたことにはならない。</div><div style=\"color:#5f6368\">매일 운동하기로 했다.<br>조금 도왔을 뿐이면 전부 끝낸 셈은 되지 않는다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　ことになる=외부 결정, ことにする=스스로 결정, ことにはならない=그 결과로 인정되지 않음.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　누가 결정했는지와 앞 행동만으로 뒤 결과가 성립하는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788177172769,
+    "num": "035",
+    "pat": "〜ことはない",
+    "ex1_ja": "",
+    "ex1_ko": "",
+    "ex2_ja": "",
+    "ex2_ko": "",
+    "f1": "<div style=\"font-size:21px;font-weight:700;color:#52606d\">~할 필요는 없다</div>\n<div style=\"margin-top:15px\"><b>접속</b>　V辞書形＋ことはない</div>\n<div style=\"margin-top:9px\"><b>핵심 의미</b>　상대의 걱정을 덜거나 불필요한 행동을 하지 않아도 된다고 조언한다.</div>\n<div style=\"font-size:20px;margin-top:16px\">まだ時間はあるから、そんなに急ぐことはない。</div><div style=\"color:#5f6368\">아직 시간이 있으니 그렇게 서두를 필요는 없다.</div>\n<div style=\"font-size:20px;margin-top:14px\">一度失敗しただけで、あきらめることはない。</div><div style=\"color:#5f6368\">한 번 실패했을 뿐이라고 포기할 필요는 없다.</div>\n<div style=\"margin-top:15px\"><b>구별</b>　〜ないことはない는 불가능하지는 않다는 부분 긍정으로 뜻이 다르다.</div>\n<div style=\"margin-top:13px;padding:10px 12px;background:#e8f3ec;border-left:4px solid #2f6f50\"><b>시험 신호</b>　조언·안심 문맥에서 ‘할 필요 없다’인가?</div>"
+  },
+  {
+    "nid": 1788252492101,
+    "num": "036",
+    "pat": "〜最中（だ／に）",
+    "ex1_ja": "会議をしている最中に、地震が起きた。",
+    "ex1_ko": "회의를 한창 하던 중에 지진이 났다.",
+    "ex2_ja": "今は試験の最中だから、静かにしてください。",
+    "ex2_ko": "지금은 시험 중이므로 조용히 해 주세요.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">한창 ~하는 중이다 / 한창 ~할 때</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vている／Nの＋最中（だ／に）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">행동이나 사건이 한창 진행되는 바로 그 도중을 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">会議をしている最中に、地震が起きた。<br><span style='color:#6b7280'>회의를 한창 하던 중에 지진이 났다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">今は試験の最中だから、静かにしてください。<br><span style='color:#6b7280'>지금은 시험 중이므로 조용히 해 주세요.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜間に보다 진행의 한가운데라는 느낌이 강하다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">진행 중인 행동을 방해한 사건인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492102,
+    "num": "037",
+    "pat": "〜さえ／〜すら",
+    "ex1_ja": "この問題は<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">先生でさえ</span>答えられなかった。",
+    "ex1_ko": "이 문제는 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">선생님조차</span> 답하지 못했다.",
+    "ex2_ja": "彼は自分の<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">名前すら</span>書けなかった。",
+    "ex2_ko": "그는 자기 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">이름조차</span> 쓰지 못했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~조차, ~마저</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋さえ／すら（でさえ・にさえ 등）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">극단적인 한 예를 들어 다른 것은 더 말할 필요도 없음을 나타낸다. すら는 더 문어적이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">この問題は<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">先生でさえ</span>答えられなかった。<br><span style=\"color:#6b7280\">이 문제는 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">선생님조차</span> 답하지 못했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">彼は自分の<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">名前すら</span>書けなかった。<br><span style=\"color:#6b7280\">그는 자기 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">이름조차</span> 쓰지 못했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">すら는 さえ보다 문어적이고 딱딱한 느낌이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">극단적인 예 하나로 범위를 강조하는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492103,
+    "num": "038",
+    "pat": "〜さえ〜ば",
+    "ex1_ja": "時間さえあれば、最後まで仕上げられる。",
+    "ex1_ko": "시간만 있으면 끝까지 완성할 수 있다.",
+    "ex2_ja": "健康でさえあれば、ほかには何も望まない。",
+    "ex2_ko": "건강하기만 하면 다른 것은 아무것도 바라지 않는다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~만 ~하면</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Nさえ＋条件形／Vます語幹＋さえすれば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">필요한 최소 조건 하나만 충족되면 결과가 성립함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">時間さえあれば、最後まで仕上げられる。<br><span style='color:#6b7280'>시간만 있으면 끝까지 완성할 수 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">健康でさえあれば、ほかには何も望まない。<br><span style='color:#6b7280'>건강하기만 하면 다른 것은 아무것도 바라지 않는다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜だけで는 단순 한정, 〜さえ〜ば는 최소 조건을 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒤에 조건형이 있고 ‘이것만 충족되면’인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492104,
+    "num": "039",
+    "pat": "〜ざるを得ない",
+    "ex1_ja": "電車が止まったので、タクシーを使わざるを得なかった。",
+    "ex1_ko": "전철이 멈춰서 택시를 이용하지 않을 수 없었다.",
+    "ex2_ja": "これが事実なら、失敗を認めざるを得ない。",
+    "ex2_ko": "이것이 사실이라면 실패를 인정하지 않을 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하지 않을 수 없다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vない形のないを取る＋ざるを得ない（する→せざるを得ない）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">원하지 않더라도 상황상 다른 선택이 없어 행동함을 나타내는 격식 표현이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">電車が止まったので、タクシーを使わざるを得なかった。<br><span style='color:#6b7280'>전철이 멈춰서 택시를 이용하지 않을 수 없었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">これが事実なら、失敗を認めざるを得ない。<br><span style='color:#6b7280'>이것이 사실이라면 실패를 인정하지 않을 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜しかない보다 마지못함·불가피함이 강하고 격식 있다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">부정형 어간과 する→せざる를 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492105,
+    "num": "040",
+    "pat": "〜しかない",
+    "ex1_ja": "終電がないので、歩いて帰るしかない。",
+    "ex1_ko": "막차가 없어서 걸어서 돌아갈 수밖에 없다.",
+    "ex2_ja": "修理を頼めないなら、自分で直すしかない。",
+    "ex2_ko": "수리를 맡길 수 없다면 스스로 고칠 수밖에 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~할 수밖에 없다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形＋しかない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">다른 방법이나 선택지가 없어 그 행동을 선택함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">終電がないので、歩いて帰るしかない。<br><span style='color:#6b7280'>막차가 없어서 걸어서 돌아갈 수밖에 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">修理を頼めないなら、自分で直すしかない。<br><span style='color:#6b7280'>수리를 맡길 수 없다면 스스로 고칠 수밖에 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ざるを得ない는 마지못함이 더 강하고 문어적이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">다른 선택지가 없다는 문맥인지 본다.</div>"
+  },
+  {
+    "nid": 1788252492106,
+    "num": "041",
+    "pat": "〜次第",
+    "ex1_ja": "結果が分かり次第、ご連絡いたします。",
+    "ex1_ko": "결과를 아는 대로 연락드리겠습니다.",
+    "ex2_ja": "準備ができ次第、出発しましょう。",
+    "ex2_ko": "준비되는 대로 출발합시다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하는 대로 바로</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋次第</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">앞일이 완료되는 즉시 뒤의 의지적 행동을 하겠다는 격식 표현이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">結果が分かり次第、ご連絡いたします。<br><span style='color:#6b7280'>결과를 아는 대로 연락드리겠습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">準備ができ次第、出発しましょう。<br><span style='color:#6b7280'>준비되는 대로 출발합시다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">과거의 연속 사건에는 쓰지 않고 예정·의지 행동과 잘 결합한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">ます어간 뒤이며 완료 즉시 할 행동인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492107,
+    "num": "042",
+    "pat": "〜次第で（は）／〜次第だ",
+    "ex1_ja": "合格できるかどうかは、これからの努力次第だ。",
+    "ex1_ko": "합격할 수 있을지는 앞으로의 노력에 달려 있다.",
+    "ex2_ja": "天候次第では、試合が中止になることもある。",
+    "ex2_ko": "날씨에 따라서는 경기가 중지될 수도 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~에 따라 / ~에 달려 있다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋次第で（は）／次第だ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">앞의 조건이나 선택에 따라 뒤의 결과가 달라짐을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">合格できるかどうかは、これからの努力次第だ。<br><span style='color:#6b7280'>합격할 수 있을지는 앞으로의 노력에 달려 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">天候次第では、試合が中止になることもある。<br><span style='color:#6b7280'>날씨에 따라서는 경기가 중지될 수도 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋次第는 ‘~하는 대로 즉시’로 뜻이 다르다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">명사 뒤에서 결과의 의존 조건을 말하는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492108,
+    "num": "043",
+    "pat": "〜末（に）",
+    "ex1_ja": "何度も話し合った末、計画を延期することにした。",
+    "ex1_ko": "몇 번이나 논의한 끝에 계획을 연기하기로 했다.",
+    "ex2_ja": "長い努力の末に、ようやく合格した。",
+    "ex2_ko": "오랜 노력 끝에 마침내 합격했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">오랜 ~ 끝에</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形／Nの＋末（に）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">긴 고민·논의·노력 같은 과정을 거친 뒤 최종 결과에 이르렀음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">何度も話し合った末、計画を延期することにした。<br><span style='color:#6b7280'>몇 번이나 논의한 끝에 계획을 연기하기로 했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">長い努力の末に、ようやく合格した。<br><span style='color:#6b7280'>오랜 노력 끝에 마침내 합격했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜あげく는 좋지 않은 결과에 치우치지만 〜末는 긍정·부정 모두 가능하다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">긴 과정과 최종 결과가 함께 있는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492109,
+    "num": "044",
+    "pat": "〜ずに",
+    "ex1_ja": "朝ご飯を食べずに、学校へ行った。",
+    "ex1_ko": "아침밥을 먹지 않고 학교에 갔다.",
+    "ex2_ja": "誰にも相談せずに、一人で決めてしまった。",
+    "ex2_ko": "아무에게도 상담하지 않고 혼자 결정해 버렸다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하지 않고</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vない形のないを取る＋ずに（する→せずに）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">앞의 행동을 하지 않은 상태로 뒤의 행동을 함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">朝ご飯を食べずに、学校へ行った。<br><span style='color:#6b7280'>아침밥을 먹지 않고 학교에 갔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">誰にも相談せずに、一人で決めてしまった。<br><span style='color:#6b7280'>아무에게도 상담하지 않고 혼자 결정해 버렸다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ないで와 비슷하지만 〜ずに가 더 문어적이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">두 행동 중 앞의 행동을 하지 않았는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492110,
+    "num": "045",
+    "pat": "〜ずに済む／〜ないで済む／〜なくて（も）済む",
+    "ex1_ja": "早く連絡したので、謝りに行かずに済んだ。",
+    "ex1_ko": "일찍 연락해서 사과하러 가지 않고 해결되었다.",
+    "ex2_ja": "保険があったので、高い修理代を払わなくて済んだ。",
+    "ex2_ko": "보험이 있어서 비싼 수리비를 내지 않아도 되었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하지 않고 해결되다 / ~하지 않아도 되다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vない形＋ずに済む・ないで済む・なくて（も）済む（する→せずに済む）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">걱정했던 행동이나 부담을 하지 않은 채 일이 해결되었음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">早く連絡したので、謝りに行かずに済んだ。<br><span style='color:#6b7280'>일찍 연락해서 사과하러 가지 않고 해결되었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">保険があったので、高い修理代を払わなくて済んだ。<br><span style='color:#6b7280'>보험이 있어서 비싼 수리비를 내지 않아도 되었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜なくてもいい는 단순한 불필요, 〜ずに済む는 결과적으로 피했음을 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">예상한 부담이나 나쁜 일을 피하고 끝났는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492111,
+    "num": "046",
+    "pat": "〜ずにはいられない",
+    "ex1_ja": "その話を聞いて、笑わずにはいられなかった。",
+    "ex1_ko": "그 이야기를 듣고 웃지 않고는 못 배겼다.",
+    "ex2_ja": "困っている人を見ると、助けずにはいられない。",
+    "ex2_ko": "곤란한 사람을 보면 돕지 않고는 못 배긴다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하지 않고는 못 배기다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vない形のないを取る＋ずにはいられない（する→せずにはいられない）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">감정이나 충동 때문에 의지로 억제하기 어려운 행동을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">その話を聞いて、笑わずにはいられなかった。<br><span style='color:#6b7280'>그 이야기를 듣고 웃지 않고는 못 배겼다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">困っている人を見ると、助けずにはいられない。<br><span style='color:#6b7280'>곤란한 사람을 보면 돕지 않고는 못 배긴다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ざるを得ない는 외부 상황의 강제, 이것은 내적 감정·충동이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">외부 의무가 아니라 감정상 참을 수 없는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492112,
+    "num": "047",
+    "pat": "〜そうにない",
+    "ex1_ja": "雨はしばらくやみそうにない。",
+    "ex1_ko": "비는 당분간 그칠 것 같지 않다.",
+    "ex2_ja": "この計画は予定どおり進みそうにない。",
+    "ex2_ko": "이 계획은 예정대로 진행될 것 같지 않다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~할 것 같지 않다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋そうにない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">현재의 모습이나 상황으로 보아 어떤 일이 일어날 가능성이 낮다고 판단한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">雨はしばらくやみそうにない。<br><span style='color:#6b7280'>비는 당분간 그칠 것 같지 않다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">この計画は予定どおり進みそうにない。<br><span style='color:#6b7280'>이 계획은 예정대로 진행될 것 같지 않다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜そうもない・〜そうにもない도 가능성이 매우 낮다는 뜻으로 쓰인다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">현재 정황에 근거한 부정적 전망인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788252492113,
+    "num": "048",
+    "pat": "〜そうになる",
+    "ex1_ja": "階段で転びそうになった。",
+    "ex1_ko": "계단에서 넘어질 뻔했다.",
+    "ex2_ja": "電車の中で財布を落としそうになった。",
+    "ex2_ko": "전철 안에서 지갑을 떨어뜨릴 뻔했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">하마터면 ~할 뻔하다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋そうになる</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 행동이나 변화가 실제로 일어나기 직전까지 갔지만 결국 일어나지 않았음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">階段で転びそうになった。<br><span style='color:#6b7280'>계단에서 넘어질 뻔했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">電車の中で財布を落としそうになった。<br><span style='color:#6b7280'>전철 안에서 지갑을 떨어뜨릴 뻔했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜ところだった와 비슷하며 눈앞의 징후·직전 상태를 강조한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">결과는 일어나지 않았지만 거의 직전까지 갔는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492114,
+    "num": "049",
+    "pat": "それなりの〜",
+    "ex1_ja": "経験が少なくても、それなりの方法で工夫できる。",
+    "ex1_ko": "경험이 적어도 그 나름의 방법으로 궁리할 수 있다.",
+    "ex2_ja": "小さい会社にも、それなりの良さがある。",
+    "ex2_ko": "작은 회사에도 그 나름의 장점이 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">그 나름의 ~ / 그에 걸맞은 ~</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">それなりの＋N（부사형: それなりに）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">수준이나 상황이 완벽하지 않아도 그것에 알맞은 정도·가치가 있음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">経験が少なくても、それなりの方法で工夫できる。<br><span style='color:#6b7280'>경험이 적어도 그 나름의 방법으로 궁리할 수 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">小さい会社にも、それなりの良さがある。<br><span style='color:#6b7280'>작은 회사에도 그 나름의 장점이 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">それ相応の는 기준에 걸맞음을 더 객관적·격식 있게 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">앞의 수준이나 조건에 알맞은 정도를 말하는지 본다.</div>"
+  },
+  {
+    "nid": 1788252492115,
+    "num": "050",
+    "pat": "〜た以上（は）",
+    "ex1_ja": "約束した以上は、最後まで責任を持つべきだ。",
+    "ex1_ko": "약속한 이상 끝까지 책임을 져야 한다.",
+    "ex2_ja": "仕事を引き受けた以上、途中で投げ出せない。",
+    "ex2_ko": "일을 맡은 이상 도중에 내팽개칠 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 이상(에는)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋以上（は）（N・ナA는 である以上）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">이미 성립한 사실을 전제로 그에 따른 책임·각오·필연적인 판단을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">約束した以上は、最後まで責任を持つべきだ。<br><span style='color:#6b7280'>약속한 이상 끝까지 책임을 져야 한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">仕事を引き受けた以上、途中で投げ出せない。<br><span style='color:#6b7280'>일을 맡은 이상 도중에 내팽개칠 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜からには와 비슷하며 강한 책임·각오와 자주 결합한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">이미 한 사실을 근거로 의무나 각오를 말하는지 본다.</div>"
+  },
+  {
+    "nid": 1788611936047,
+    "num": "051",
+    "pat": "〜だけあって・〜だけに／〜だけのことはある",
+    "ex1_ja": "さすがに一流の料理人が作っただけあって、味も見た目も素晴らしい。",
+    "ex1_ko": "과연 일류 요리사가 만든 만큼 맛도 모양도 훌륭하다.",
+    "ex2_ja": "期待が大きかっただけに、不合格の知らせを聞いたときのショックは大きかった。",
+    "ex2_ko": "기대가 컸던 만큼 불합격 소식을 들었을 때의 충격은 컸다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">과연 ~인 만큼 / ~인 만큼 더욱 / ~한 보람이 있다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形（ナAな／である・Nである）＋だけあって／だけに<br>V・A・N＋だけのことはある</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">1) だけあって: 자격·조건에 걸맞게 훌륭하다는 칭찬<br>2) だけに: 그 이유 때문에 한층 더 (기대/아쉬움 등 감정 고조)<br>3) だけ의ことはある: 노력이나 가치에 알맞은 결과가 나옴을 칭찬</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">さすがに一流の料理人が作っただけあって、味も見た目も素晴らしい。<br><span style=\"color:#6b7280\">과연 일류 요리사가 만든 만큼 맛도 모양도 훌륭하다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">期待が大きかっただけに、不合格の知らせを聞いたときのショックは大きかった。<br><span style=\"color:#6b7280\">기대가 컸던 만큼 불합격 소식을 들었을 때의 충격은 컸다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">だけあって는 칭찬·플러스 평가에 주로 쓰이고, だけに는 마이너스 결과나 심리적 아쉬움에도 쓰인다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">さすが・やはり 등 칭찬 부사가 보이면 だけあって, 기대/걱정 뒤 감정 고조는 だけに를 확인한다.</div>"
+  },
+  {
+    "nid": 1788611936049,
+    "num": "052",
+    "pat": "〜たところ",
+    "ex1_ja": "先生にお願いしてみたところ、快く引き受けてくださった。",
+    "ex1_ko": "선생님께 부탁드렸더니 흔쾌히 수락해 주셨다.",
+    "ex2_ja": "駅の案内所で道を尋ねたところ、親切に地図をくれた。",
+    "ex2_ko": "역 안내소에서 길을 물었더니 친절하게 지도를 주었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~했더니 (그 결과 ~를 알게 되었다)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋ところ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 동작을 시도해 보았더니, 그 결과 새로운 사실을 발견하거나 상황을 알게 됨을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">先生にお願いしてみたところ、快く引き受けてくださった。<br><span style=\"color:#6b7280\">선생님께 부탁드렸더니 흔쾌히 수락해 주셨다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">駅の案内所で道を尋ねたところ、親切に地図をくれた。<br><span style=\"color:#6b7280\">역 안내소에서 길을 물었더니 친절하게 지도를 주었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜たら와 비슷하지만, 뒤 절에 화자의 의지·명령·희망(〜たい, 〜てください)이 올 수 없다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">앞의 확인·조사·시도 동작 뒤에 뜻밖의 사실을 알게 된 문맥인지 확인한다.</div>"
+  },
+  {
+    "nid": 1788611936050,
+    "num": "053",
+    "pat": "〜たとたん（に）",
+    "ex1_ja": "窓を開けたとたんに、冷たい風が吹き込んできた。",
+    "ex1_ko": "창문을 열자마자 차가운 바람이 불어 들어왔다.",
+    "ex2_ja": "犯人は警察の姿を見たとたん、逃げ出した。",
+    "ex2_ko": "범인은 경찰의 모습을 보자마자 달아났다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하자마자 (바로 그 순간)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋とたん（に）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 동작이나 변화가 일어난 바로 그 순간, 예상치 못한 다음 사건이 돌발적으로 발생함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">窓を開けたとたんに、冷たい風が吹き込んできた。<br><span style=\"color:#6b7280\">창문을 열자마자 차가운 바람이 불어 들어왔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">犯人は警察の姿を見たとたん、逃げ出した。<br><span style=\"color:#6b7280\">범인은 경찰의 모습을 보자마자 달아났다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">돌발적인 사건의 발생을 나타내므로 뒤 절에 화자의 의지·계획·요청은 올 수 없다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">앞의 계기 직후 순식간에 일어난 우연적·돌발적 사건인지 본다.</div>"
+  },
+  {
+    "nid": 1788611936051,
+    "num": "054",
+    "pat": "〜たばかり",
+    "ex1_ja": "さっき昼ご飯を食べたばかりなのに、もうお腹が空いた。",
+    "ex1_ko": "조금 전에 점심을 막 먹었을 뿐인데 벌써 배가 고프다.",
+    "ex2_ja": "このカメラは先週買ったばかりで、まだ使い方がよく分からない。",
+    "ex2_ko": "이 카메라는 지난주에 막 산 것이라 아직 사용법을 잘 모른다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">막 ~함 / ~한 지 얼마 안 됨</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた形＋ばかり</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 동작이 끝난 뒤 시간이 얼마 지나지 않았다고 화자가 주관적으로 인식함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">さっき昼ご飯を食べたばかりなのに、もうお腹が空いた。<br><span style=\"color:#6b7280\">조금 전에 점심을 막 먹었을 뿐인데 벌써 배가 고프다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">このカメラは先週買ったばかりで、まだ使い方がよく分からない。<br><span style=\"color:#6b7280\">이 카메라는 지난주에 막 산 것이라 아직 사용법을 잘 모른다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜たところ는 객관적으로 바로 직후(방금), 〜たばかり는 화자의 주관에 따라 몇 달 전 일에도 쓸 수 있다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">시간이 다소 흘렀더라도 화자의 심리상 '얼마 안 됨'을 강조하는지 본다.</div>"
+  },
+  {
+    "nid": 1788611936052,
+    "num": "055",
+    "pat": "〜たび（に）",
+    "ex1_ja": "この写真を見るたびに、故郷の家族を思い出す。",
+    "ex1_ko": "이 사진을 볼 때마다 고향 가족이 생각난다.",
+    "ex2_ja": "出張のたびに、各地のおいしい名物を食べるのを楽しみにしている。",
+    "ex2_ko": "출장을 갈 때마다 각지의 맛있는 명물을 먹는 것을 기대하고 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~할 때마다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形＋たび（に）／Nの＋たび（に）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 일을 할 때마다 매번 예외 없이 같은 일이나 감정이 반복해서 일어남을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">この写真を見るたびに、故郷の家族を思い出す。<br><span style=\"color:#6b7280\">이 사진을 볼 때마다 고향 가족이 생각난다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">出張のたびに、各地のおいしい名物を食べるのを楽しみにしている。<br><span style=\"color:#6b7280\">출장을 갈 때마다 각지의 맛있는 명물을 먹는 것을 기대하고 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">자연현상이나 일상 필수 습관(아침에 일어날 때 등)에는 쓰지 않고 특별한 계기에 쓴다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">앞의 행동이 일어날 때마다 뒤의 생각·반응이 항상 따라붙는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788611936053,
+    "num": "056",
+    "pat": "〜だらけ",
+    "ex1_ja": "彼の部屋は掃除をしていなくて、<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">ゴミだらけ</span>だった。",
+    "ex1_ko": "그의 방은 청소를 하지 않아서 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">쓰레기투성이</span>였다.",
+    "ex2_ja": "急いで書いたレポートを読み直したら、<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">間違いだらけ</span>だった。",
+    "ex2_ko": "급하게 쓴 보고서를 다시 읽어 보았더니 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">틀린 것투성이</span>였다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">온통 ~투성이 (보기 싫은 것 가득)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N＋だらけ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">사물의 표면이나 공간 전체에 보기 싫고 바람직하지 못한 것이 어지럽게 널려 있음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">彼の部屋は掃除をしていなくて、<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">ゴミだらけ</span>だった。<br><span style=\"color:#6b7280\">그의 방은 청소를 하지 않아서 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">쓰레기투성이</span>였다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">急いで書いたレポートを読み直したら、<span style=\"background: rgba(250, 204, 21, 0.25); color: #fef08a; font-weight: 700; padding: 1px 5px; border-radius: 4px; border-bottom: 2px solid #facc15;\">間違いだらけ</span>だった。<br><span style=\"color:#6b7280\">급하게 쓴 보고서를 다시 읽어 보았더니 <span style=\"background: rgba(250, 204, 21, 0.18); color: #fde047; font-weight: 700; padding: 1px 4px; border-radius: 3px;\">틀린 것투성이</span>였다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜まみれ는 피·땀·진흙 등 액체/가루가 묻은 더러움, 〜だらけ는 흠집, 실수, 쓰레기 등 대상물이 많은 상태.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">ゴミ, 泥, 傷, 間違い, 借金 등 부정적인 명사와 결합하는지 본다.</div>"
+  },
+  {
+    "nid": 1788611936054,
+    "num": "057",
+    "pat": "〜ついでに・〜がてら・〜をかねて",
+    "ex1_ja": "郵便局へ行くついでに、コンビニで公共料金を払ってきた。",
+    "ex1_ko": "우체국에 가는 김에 편의점에서 공과금을 내고 왔다.",
+    "ex2_ja": "散歩がてら、近くの本屋に寄って雑誌を買った。",
+    "ex2_ko": "산책도 할 겸 근처 서점에 들러 잡지를 샀다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하는 김에 / ~를 겸해서</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V辞書形・Vた形＋ついでに／Nの＋ついでに<br>Vます語幹＋がてら／N＋がてら<br>N＋をかねて</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">1) ついでに: 주된 행동을 하는 기회에 곁들여 다른 일도 함<br>2) がてら: 하나의 이동 동작을 하면서 다른 목적도 아울러 겸함<br>3) をかねて: 두 가지 대등한 목적을 동시에 가지고 행동함</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">郵便局へ行くついでに、コンビニで公共料金を払ってきた。<br><span style=\"color:#6b7280\">우체국에 가는 김에 편의점에서 공과금을 내고 왔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">散歩がてら、近くの本屋に寄って雑誌を買った。<br><span style=\"color:#6b7280\">산책도 할 겸 근처 서점에 들러 잡지를 샀다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">ついでに는 주(본래 일)+부(곁가지 일), がてら/かねて는 이동을 수반하며 두 목적을 겸함. 접속(散歩がてら) 주의.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">이동 중에 가볍게 처리하는 일인지, 주된 행동에 덤으로 하는지 접속 형태를 함께 본다.</div>"
+  },
+  {
+    "nid": 1788611936055,
+    "num": "058",
+    "pat": "〜っけ",
+    "ex1_ja": "明日の会議は何時からだっけ？",
+    "ex1_ko": "내일 회의가 몇 시부터였더라?",
+    "ex2_ja": "田中さんって、前にもこのプロジェクトに参加したっけ？",
+    "ex2_ko": "다나카 씨는 전에도 이 프로젝트에 참가했었던가?",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~였던가? ~였지? (회상·재확인)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形過去形＋っけ（〜だっけ／〜だったっけ／〜たっけ）</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">과거의 기억이 불확실하여 혼잣말로 떠올리거나 상대방에게 가볍게 확인할 때 쓰는 구어 표현.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">明日の会議は何時からだっけ？<br><span style=\"color:#6b7280\">내일 회의가 몇 시부터였더라?</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">田中さんって、前にもこのプロジェクトに参加したっけ？<br><span style=\"color:#6b7280\">다나카 씨는 전에도 이 프로젝트에 참가했었던가?</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">반말 구어체이며 이미 알았지만 기억이 가물가물할 때 쓴다. 격식 있는 자리에서는 쓰지 않는다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">과거형 だ／た 뒤에 가볍게 되묻는 구어 대화문에서 자주 출제된다.</div>"
+  },
+  {
+    "nid": 1788611936056,
+    "num": "059",
+    "pat": "〜っこない",
+    "ex1_ja": "こんなに難しい問題、子どもに解けっこない。",
+    "ex1_ko": "이렇게 어려운 문제, 아이가 풀 수 있을 리 없다.",
+    "ex2_ja": "あと5分で駅まで歩いて行きっこないよ。",
+    "ex2_ko": "앞으로 5분 만에 역까지 걸어갈 수 있을 리가 없어.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">절대로 ~할 리 없다 / ~할 턱이 없다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋っこない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">화자의 강한 확신을 담아 '그런 일은 절대 불가능하다'고 단정하여 부정하는 구어적 표현.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">こんなに難しい問題、子どもに解けっこない。<br><span style=\"color:#6b7280\">이렇게 어려운 문제, 아이가 풀 수 있을 리 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">あと5分で駅まで歩いて行きっこないよ。<br><span style=\"color:#6b7280\">앞으로 5분 만에 역까지 걸어갈 수 있을 리가 없어.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜わけがない・〜はずがない보다 화자의 주관적 확신과 단정이 강한 구어체.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">가능형 ます어간(解けっこない, 間に合いっこない)과 결합하여 절대 불가능을 나타내는지 본다.</div>"
+  },
+  {
+    "nid": 1788616131463,
+    "num": "060",
+    "pat": "〜つつ(も)・〜ながら(も) / 〜つつある",
+    "ex1_ja": "体に悪いと知りつつも、夜遅くにラーメンを食べてしまう。",
+    "ex1_ko": "몸에 나쁘다는 것을 알면서도 밤늦게 라면을 먹고 만다.",
+    "ex2_ja": "景気は少しずつ回復しつつある。",
+    "ex2_ko": "경기는 조금씩 회복되어 가고 있다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하면서도, ~하지만 / 점차 ~해 가고 있다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vます語幹＋つつ(も)／つつある</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">1) つつ(も): 상반·모순되는 두 행동이나 심리의 공존 (~하면서도)<br>2) つつある: 점진적인 변화가 진행 중임 (~해 가고 있다)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">体に悪いと知りつつも、夜遅くにラーメンを食べてしまう。<br><span style=\"color:#6b7280\">몸에 나쁘다는 것을 알면서도 밤늦게 라면을 먹고 만다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">景気は少しずつ回復しつつある。<br><span style=\"color:#6b7280\">경기는 조금씩 회복되어 가고 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜つつ(도)는 문어적 역접, 〜つつある는 점진적 변화 동사(回復する, 温暖化が進む)에 결합한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">知りつつ, 思いつつ처럼 인지 동사는 역접, 少しずつ, 次第に와 결합하면 つつある를 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131465,
+    "num": "061",
+    "pat": "〜つもり(で)",
+    "ex1_ja": "死んだつもりで必死に勉強すれば、きっと合格できる。",
+    "ex1_ko": "죽은 셈치고 필사적으로 공부하면 분명 합격할 수 있다.",
+    "ex2_ja": "旅行に行ったつもりで、そのお金を貯金することにした。",
+    "ex2_ko": "여행을 다녀온 셈치고 그 돈을 저축하기로 했다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 셈치고 (실제로는 아니지만 마음속으로 그렇게 간주함)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vた／Vている／い形／な形な／Nの ＋ つもり(で)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">실제 사실은 그렇지 않지만, 심리적으로 그렇다고 가정하거나 다짐하고 어떤 행동을 함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">死んだつもりで必死に勉強すれば、きっと合格できる。<br><span style=\"color:#6b7280\">죽은 셈치고 필사적으로 공부하면 분명 합격할 수 있다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">旅行に行ったつもりで、そのお金を貯金することにした。<br><span style=\"color:#6b7280\">여행을 다녀온 셈치고 그 돈을 저축하기로 했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">의지 표현(〜するつもりだ: ~할 생각이다)과 구분. 여기서는 '마음속으로 가정한 셈침'이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">死んだつもりで, 旅行に行ったつもりで 등 '대리 가정/다짐' 문맥을 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131466,
+    "num": "062",
+    "pat": "〜(の)であれば",
+    "ex1_ja": "ご都合がよろしいのであれば、明日伺いたいと存じます。",
+    "ex1_ko": "형편이 괜찮으시다면 내일 찾아뵙고자 합니다.",
+    "ex2_ja": "返品をご希望であれば、購入時のレシートをご提示ください。",
+    "ex2_ko": "반품을 원하신다면 구매 시 영수증을 제시해 주십시오.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~라면, ~인 경우라면</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形（な形・Nなら／であるなら）＋ (の)であれば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">격식 있고 정중한 조건 표현으로, 비즈니스나 공적인 자리에서 가정 조건을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">ご都合がよろしいのであれば、明日伺いたいと存じます。<br><span style=\"color:#6b7280\">형편이 괜찮으시다면 내일 찾아뵙고자 합니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">返品をご希望であれば、購入時のレシートをご提示ください。<br><span style=\"color:#6b7280\">반품을 원하신다면 구매 시 영수증을 제시해 주십시오.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜なら의 딱딱하고 공손한 격식체 표현. 비즈니스 경어와 자주 호응한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">ご都合, ご希望, よろしい 등 정중/공식 표현과 함께 제시되는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131467,
+    "num": "063",
+    "pat": "〜て以来",
+    "ex1_ja": "大学を卒業して以来、彼とは一度も会っていない。",
+    "ex1_ko": "대학을 졸업한 이래 그와는 한 번도 만나지 않았다.",
+    "ex2_ja": "日本に来て以来、毎朝納豆を食べる習慣がついた。",
+    "ex2_ko": "일본에 온 이래 매일 아침 낫토를 먹는 습관이 생겼다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 이래, ~한 이후로 쭉</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて形＋以来</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 일이 발생한 시점 이후로 지금까지 계속해서 그 상태가 지속되고 있음을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">大学を卒業して以来、彼とは一度も会っていない。<br><span style=\"color:#6b7280\">대학을 졸업한 이래 그와는 한 번도 만나지 않았다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">日本に来て以来、毎朝納豆を食べる習慣がついた。<br><span style=\"color:#6b7280\">일본에 온 이래 매일 아침 낫토를 먹는 습관이 생겼다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">뒷문장에 계속 상태(〜ている, 〜ていない)가 와야 하며, 1회성 과거 완료 동작은 올 수 없다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">〜以来 뒤에 부정 지속(一度も〜ない)이나 계속 진행 상태(ずっと〜ている)가 호응하는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131468,
+    "num": "064",
+    "pat": "〜てからでないと",
+    "ex1_ja": "上司の許可をもらってからでないと、契約書にサインはできません。",
+    "ex1_ko": "상사의 허가를 받고 나서가 아니면 계약서에 사인은 할 수 없습니다.",
+    "ex2_ja": "実際に使ってみてからでないと、本当に良い商品かは分からない。",
+    "ex2_ko": "실제로 써보고 나서가 아니면 정말 좋은 상품인지는 알 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하고 나서가 아니면 (~할 수 없다)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて形＋からでないと／からでなければ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">앞의 행동이 선행 완료되지 않으면 뒤의 일을 실현할 수 없다는 필수 전제 조건을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">上司の許可をもらってからでないと、契約書にサインはできません。<br><span style=\"color:#6b7280\">상사의 허가를 받고 나서가 아니면 계약서에 사인은 할 수 없습니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">実際に使ってみてからでないと、本当に良い商品かは分からない。<br><span style=\"color:#6b7280\">실제로 써보고 나서가 아니면 정말 좋은 상품인지는 알 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">뒷문장에는 반드시 부정·불가 표현(〜できない, 〜無理だ, 〜分からない)이 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">뒷문장의 〜できない, 〜わけにはいかない, 〜かねる 등 부정문과 세트 결합하는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131469,
+    "num": "065",
+    "pat": "〜てたまらない・〜てしょうがない",
+    "ex1_ja": "朝から何も食べていないので、お腹が空いてたまらない。",
+    "ex1_ko": "아침부터 아무것도 먹지 않아서 배가 고파 견딜 수 없다.",
+    "ex2_ja": "一人暮らしを始めたばかりで、寂しくてしょうがない。",
+    "ex2_ko": "혼자 살기를 막 시작해서 외로워 견딜 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">너무 ~해서 견딜 수 없다 / 참을 수 없다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて／い形くて／な形・Nで ＋ たまらない／しょうがない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">주로 화자의 신체적 감각, 생리적 욕구, 강한 주관적 감정이 억누를 수 없을 만큼 강함을 표현한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">朝から何も食べていないので、お腹が空いてたまらない。<br><span style=\"color:#6b7280\">아침부터 아무것도 먹지 않아서 배가 고파 견딜 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">一人暮らしを始めたばかりで、寂しくてしょうがない。<br><span style=\"color:#6b7280\">혼자 살기를 막 시작해서 외로워 견딜 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">てたまらない는 생리적 욕구(졸림, 배고픔), 감각(아픔)에 매우 빈출된다. 3인칭은 〜がっている.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">お腹が空いて, 痛くて, 眠くて, 喉が渇いて 등 신체 감각 뒤 결합하는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131470,
+    "num": "066",
+    "pat": "〜てでも",
+    "ex1_ja": "借金をしてでも、自分の店を持ちたい。",
+    "ex1_ko": "빚을 져서라도 자신의 가게를 갖고 싶다.",
+    "ex2_ja": "どんなに頼み込んででも、このチャンスを手に入れたい。",
+    "ex2_ko": "아무리 간청해서라도 이 기회를 손에 넣고 싶다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~해서라도 (무리나 희생을 치르고서라도)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて形＋でも</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">일반적이지 않은 수단이나 무리를 해서라도 반드시 어떤 목적을 달성하겠다는 강한 의지이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">借金をしてでも、自分の店を持ちたい。<br><span style=\"color:#6b7280\">빚을 져서라도 자신의 가게를 갖고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">どんなに頼み込んででも、このチャンスを手に入れたい。<br><span style=\"color:#6b7280\">아무리 간청해서라도 이 기회를 손에 넣고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">뒷문장에는 화자의 강한 희망(〜たい), 의지(〜つもりだ, 〜てみせる)가 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">借金をして, 徹夜をして, 頭を下げて 등 무리·부담 표현과 〜たい의 호응을 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131471,
+    "num": "067",
+    "pat": "〜てならない",
+    "ex1_ja": "一人で海外へ行く娘のことが、心配でならない。",
+    "ex1_ko": "혼자서 해외로 가는 딸의 일이 걱정되어 견딜 수가 없다.",
+    "ex2_ja": "今回の事故には、何か裏があるような気がしてならない。",
+    "ex2_ko": "이번 사고에는 뭔가 내막이 있는 듯한 느낌이 들어 견딜 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">어쩐지 너무나 ~하게 느껴진다, 억누를 수 없이 ~하다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて／い形くて／な形・Nで ＋ ならない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">이유를 알 수 없거나 억누를 수 없이 마음속에서 저절로 솟아오르는 감정·직관·우려를 표현한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">一人で海外へ行く娘のことが、心配でならない。<br><span style=\"color:#6b7280\">혼자서 해외로 가는 딸의 일이 걱정되어 견딜 수가 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">今回の事故には、何か裏があるような気がしてならない。<br><span style=\"color:#6b7280\">이번 사고에는 뭔가 내막이 있는 듯한 느낌이 들어 견딜 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">てたまらない가 생리적 욕구/직접적 감정이라면, てならない는 자연발생 감정(心配, 不安, 気がして)에 국한된다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">気がしてならない, 思えてならない, 心配でならない, 不安でならない 고정 관용 결합을 확인한다.</div>"
+  },
+  {
+    "nid": 1788616131472,
+    "num": "068",
+    "pat": "〜てはじめて",
+    "ex1_ja": "病気になってはじめて、健康のありがたさが分かった。",
+    "ex1_ko": "병에 걸리고 나서야 비로소 건강의 소중함을 알았다.",
+    "ex2_ja": "親元を離れてはじめて、親の苦労が身に染みて理解できた。",
+    "ex2_ko": "부모 곁을 떠나고 나서야 비로소 부모의 노고가 뼈에 사무치게 이해되었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하고 나서야 비로소</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vて形＋はじめて</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 계기나 경험을 겪고 나서야 비로소 이전에는 깨닫지 못했던 소중함이나 사실을 실감함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">病気になってはじめて、健康のありがたさが分かった。<br><span style=\"color:#6b7280\">병에 걸리고 나서야 비로소 건강의 소중함을 알았다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">親元を離れてはじめて、親の苦労が身に染みて理解できた。<br><span style=\"color:#6b7280\">부모 곁을 떠나고 나서야 비로소 부모의 노고가 뼈에 사무치게 이해되었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">단순한 시작(처음으로)이 아니라 '그 일을 겪고 나서야 비로소 깨달음/실감'의 뉘앙스이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">健康のありがたさ, 親の苦労, 大切さ 등 '소중함/깨달음'을 나타내는 어휘와 호응하는지 확인한다.</div>"
+  },
+  {
+    "nid": 1788618653383,
+    "num": "076",
+    "pat": "〜(よ)うと思う",
+    "ex1_ja": "大学を卒業したら、留学しようと思います。",
+    "ex1_ko": "대학을 졸업하면 유학하려고 생각합니다.",
+    "ex2_ja": "今年こそはタバコをやめようと思う。",
+    "ex2_ko": "올해야말로 담배를 끊으려고 생각한다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하려고 생각하다, ~하겠다 (화자의 의지/의향)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">V의지형(よう形) ＋ と思う</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">화자의 주관적인 의지나 계획을 나타내며, 제3자의 의지는 〜と思っている를 쓴다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">大学を卒業したら、留学しようと思います。<br><span style=\"color:#6b7280\">대학을 졸업하면 유학하려고 생각합니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">今年こそはタバコをやめようと思う。<br><span style=\"color:#6b7280\">올해야말로 담배를 끊으려고 생각한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">사전형+と思う(단순 추측: 갈 것이라 생각한다) vs 의지형+と思う(화자의 의지).</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">1인칭 주어의 결심, 제3자 주어 시 〜と思っている.</div>"
+  },
+  {
+    "nid": 1788618653384,
+    "num": "077",
+    "pat": "〜どころではない",
+    "ex1_ja": "仕事が山積みで、旅行どころではない。",
+    "ex1_ko": "일이 산더미처럼 쌓여서 여행 갈 형편이 아니다.",
+    "ex2_ja": "風邪で熱が高くて、勉強どころではなかった。",
+    "ex2_ko": "감기로 열이 높아서 공부할 상황이 아니었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~할 상황(형편)이 아니다 / ~는커녕</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vる・N ＋ どころではない</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">돈, 시간, 정신적 여유가 없어서 어떤 일을 할 수 있는 상황이 전혀 아님을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">仕事が山積みで、旅行どころではない。<br><span style=\"color:#6b7280\">일이 산더미처럼 쌓여서 여행 갈 형편이 아니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">風邪で熱が高くて、勉強どころではなかった。<br><span style=\"color:#6b7280\">감기로 열이 높아서 공부할 상황이 아니었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">〜どころか(상태의 극단적 대조: ~는커녕) vs 〜どころではない(여유/형편이 전혀 안 됨).</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">忙しい, お金がない, 熱がある 등 사정/부담 제시 뒤 여유 없음.</div>"
+  },
+  {
+    "nid": 1788618653385,
+    "num": "078",
+    "pat": "〜ところだ",
+    "ex1_ja": "今から食事に出かけるところです。",
+    "ex1_ko": "지금부터 식사하러 나가려던 참입니다.",
+    "ex2_ja": "たった今、空港に着いたところです。",
+    "ex2_ko": "방금 공항에 도착한 참입니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">막 ~하려는 참이다 / 한창 ~하고 있는 중이다 / 막 ~한 참이다</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vる／Vている／Vた ＋ ところだ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">동작의 국면(aspect)을 3단계로 구분한다: 직전(Vる), 진행(Vている), 완료 직후(Vた).</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">今から食事に出かけるところです。<br><span style=\"color:#6b7280\">지금부터 식사하러 나가려던 참입니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">たった今、空港に着いたところです。<br><span style=\"color:#6b7280\">방금 공항에 도착한 참입니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">시간 부사와 완벽 호응: 今から(Vる), 今(Vている), たった今(Vた).</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">今から〜るところ, たった今〜たところ.</div>"
+  },
+  {
+    "nid": 1788618653386,
+    "num": "079",
+    "pat": "〜ところに／〜ところへ",
+    "ex1_ja": "寝ようとしたところに、友達から電話がかかってきた。",
+    "ex1_ko": "자려고 하던 참에 친구에게서 전화가 걸려 왔다.",
+    "ex2_ja": "困っているところへ、救いの手が差し伸べられた。",
+    "ex2_ko": "곤란을 겪고 있던 참에 구원의 손길이 내밀어졌다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~하는 참에 / ~하는 도중에 (돌발 사건 개입)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vる／Vている／Vた ＋ ところに／ところへ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 동작이나 국면이 진행되는 바로 그 타이밍에 다른 사태나 인물이 끼어듦을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">寝ようとしたところに、友達から電話がかかってきた。<br><span style=\"color:#6b7280\">자려고 하던 참에 친구에게서 전화가 걸려 왔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">困っているところへ、救いの手が差し伸べられた。<br><span style=\"color:#6b7280\">곤란을 겪고 있던 참에 구원의 손길이 내밀어졌다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">뒤에 주로 돌발적인 새로운 사건, 방해, 구원 등이 온다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">〜ところに〜電話がかかる／〜が訪ねてくる 등 돌발 행동 호응.</div>"
+  },
+  {
+    "nid": 1788618653387,
+    "num": "080",
+    "pat": "〜ところを",
+    "ex1_ja": "お忙しいところをお時間をいただき、ありがとうございます。",
+    "ex1_ko": "바쁘신 와중에 시간을 내어 주셔서 감사합니다.",
+    "ex2_ja": "お休みのところをお電話してしまい、大変申し訳ありません。",
+    "ex2_ko": "쉬시는 중에 전화를 드려 대단히 죄송합니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~한 상황인데도 / ~한 와중에 (비즈니스 인사 및 감사/사죄)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">Vる／Vている／ナAな／Nの ＋ ところを</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">상대방의 불편한 상황(바쁨, 휴식 중)을 배려하며 양해를 구하거나 감사/사과할 때 주로 쓴다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">お忙しいところをお時間をいただき、ありがとうございます。<br><span style=\"color:#6b7280\">바쁘신 와중에 시간을 내어 주셔서 감사합니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">お休みのところをお電話してしまい、大変申し訳ありません。<br><span style=\"color:#6b7280\">쉬시는 중에 전화를 드려 대단히 죄송합니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">비즈니스 관용구(お忙しいところを, お休みのところを)에 조사 を가 결합하는 것이 핵심.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">お忙しいところを, お休みのところを + 恐れ入ります/申し訳ありません.</div>"
+  },
+  {
+    "nid": 1788618653388,
+    "num": "081",
+    "pat": "〜としたら／〜とすれば",
+    "ex1_ja": "生まれ変われるとしたら、鳥になって空を飛びたい。",
+    "ex1_ko": "다시 태어날 수 있다면 새가 되어 하늘을 날고 싶다.",
+    "ex2_ja": "それが事実だとすれば、見過ごすわけにはいかない。",
+    "ex2_ko": "그것이 사실이라고 한다면 그냥 지나칠 수는 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">만약 ~라고 한다면 / ~라고 가정하면</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形 ＋ としたら／とすれば</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">실현 가능성이 낮거나 가상의 상황을 전제로 삼아 그 경우의 판단이나 결과를 말한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">生まれ変われるとしたら、鳥になって空を飛びたい。<br><span style=\"color:#6b7280\">다시 태어날 수 있다면 새가 되어 하늘을 날고 싶다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">それが事実だとすれば、見過ごすわけにはいかない。<br><span style=\"color:#6b7280\">그것이 사실이라고 한다면 그냥 지나칠 수는 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">순수 가상 조건(만약 ~라면)으로 뒤에 화자의 희망, 판단, 의지문이 자주 이어진다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">もし, 仮に(가령) 등의 부사와 강하게 호응.</div>"
+  },
+  {
+    "nid": 1788618653389,
+    "num": "082",
+    "pat": "〜として",
+    "ex1_ja": "彼は留学生として日本へやって来た。",
+    "ex1_ko": "그는 유학생으로서 일본에 왔다.",
+    "ex2_ja": "趣味として始めた写真だが、今ではプロになった。",
+    "ex2_ko": "취미로서 시작한 사진이지만 지금은 프로가 되었다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~로서 (자격·신분·명목·입장)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">N ＋ として</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">어떤 자격, 입장, 명목, 역할의 범주에서 어떤 행위를 함을 나타낸다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">彼は留学生として日本へやって来た。<br><span style=\"color:#6b7280\">그는 유학생으로서 일본에 왔다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">趣味として始めた写真だが、今ではプロになった。<br><span style=\"color:#6b7280\">취미로서 시작한 사진이지만 지금은 프로가 되었다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">명사에 조사 없이 바로 붙으며(Nとして), 뒤에 수식형은 NとしてのN 형태가 된다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">대표(代表), 자격(資格), 취미(趣味), 역할(役割) 등의 명사 결합.</div>"
+  },
+  {
+    "nid": 1788618653390,
+    "num": "083",
+    "pat": "〜とのことだ",
+    "ex1_ja": "天気予報によると、明日は大雪になるとのことだ。",
+    "ex1_ko": "일기예보에 따르면 내일은 대설이 내릴 것이라고 한다.",
+    "ex2_ja": "部長は明日出張されるとのことです。",
+    "ex2_ko": "부장님은 내일 출장 가신다고 합니다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~라고 한다 (전언, 격식 보고)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形 ＋ とのことだ</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">〜そうだ보다 정중하고 격식을 차린 서면·비즈니스 보고 표현으로 다른 곳의 정보를 전달한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">天気予報によると、明日は大雪になるとのことだ。<br><span style=\"color:#6b7280\">일기예보에 따르면 내일은 대설이 내릴 것이라고 한다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">部長は明日出張されるとのことです。<br><span style=\"color:#6b7280\">부장님은 내일 출장 가신다고 합니다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">정보 출처(〜によると, 〜の話では)와 호응하는 비즈니스 격식 전언이다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">〜によると〜とのことだ.</div>"
+  },
+  {
+    "nid": 1788618653391,
+    "num": "084",
+    "pat": "〜とは",
+    "ex1_ja": "昔はおとなしかった彼が、世界的なピアニストになるとは夢にも思わなかった。",
+    "ex1_ko": "옛날에는 얌전했던 그가 세계적인 피아니스트가 될 줄은 꿈에도 생각지 못했다.",
+    "ex2_ja": "まさか彼が犯人だったとは、信じられない。",
+    "ex2_ko": "설마 그가 범인이었을 줄이야, 믿을 수 없다.",
+    "f1": "<div style=\"font-size:20px;font-weight:700;margin:0 0 14px;color:#52606d\">~라니! (놀람·감탄·어이없음) / ~라는 것은 (정의)</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">접속</div><div style=\"line-height:1.55;margin-top:4px\">普通形・N ＋ とは</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">핵심 의미</div><div style=\"line-height:1.55;margin-top:4px\">1) 예상 밖의 사실에 대한 강한 놀람, 감탄, 어이없음.<br>2) 사물의 본질이나 정의를 설명.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 1</div><div style=\"line-height:1.55;margin-top:4px\">昔はおとなしかった彼が、世界的なピアニストになるとは夢にも思わなかった。<br><span style=\"color:#6b7280\">옛날에는 얌전했던 그가 세계적인 피아니스트가 될 줄은 꿈에도 생각지 못했다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">예문 2</div><div style=\"line-height:1.55;margin-top:4px\">まさか彼が犯人だったとは、信じられない。<br><span style=\"color:#6b7280\">설마 그가 범인이었을 줄이야, 믿을 수 없다.</span></div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">구별 포인트</div><div style=\"line-height:1.55;margin-top:4px\">놀람의 문맥에서는 夢にも思わなかった, 信じられない, 驚きだ와 짝꿍 결합한다.</div><div style=\"color:#52606d;font-size:13px;font-weight:700;margin-top:14px\">시험 신호</div><div style=\"line-height:1.55;margin-top:4px\">まさか〜とは, 〜とは夢にも思わなかった.</div>"
+  }
+]

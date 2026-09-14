@@ -1,0 +1,27 @@
+{
+  "testId": "n2-grammar-026-035-check-20260831",
+  "date": "2026-08-31",
+  "sourceClass": "self_made_immediate_recognition",
+  "total": 12,
+  "correct": 10,
+  "wrong": 2,
+  "unknown": 0,
+  "unanswered": 0,
+  "elapsedSeconds": 334,
+  "firstHalf": {"correct": 4, "total": 6, "seconds": 186},
+  "secondHalf": {"correct": 6, "total": 6, "seconds": 148},
+  "responses": [
+    {"itemNo":1,"patternNumber":29,"responseState":"correct","selectedText":"ことか","correctText":"ことか","responseSeconds":10.3,"category":"문법 → 文の文法1 → 문법 029"},
+    {"itemNo":2,"patternNumber":30,"responseState":"correct","selectedText":"ことから","correctText":"ことから","responseSeconds":31.7,"category":"문법 → 文の文法1 → 문법 030"},
+    {"itemNo":3,"patternNumber":32,"responseState":"wrong","selectedText":"ことに","correctText":"ことなく","responseSeconds":62.2,"category":"문법 → 文の文法1 → 문법 032"},
+    {"itemNo":4,"patternNumber":35,"responseState":"wrong","selectedText":"ことではない","correctText":"ことはない","responseSeconds":26.5,"category":"문법 → 文の文法1 → 문법 035"},
+    {"itemNo":5,"patternNumber":26,"responseState":"correct","selectedText":"きれない","correctText":"きれない","responseSeconds":23.1,"category":"문법 → 文の文法1 → 문법 026"},
+    {"itemNo":6,"patternNumber":27,"responseState":"correct","selectedText":"くせに","correctText":"くせに","responseSeconds":32.5,"category":"문법 → 文の文法1 → 문법 027"},
+    {"itemNo":7,"patternNumber":34,"responseState":"correct","selectedText":"ことになった","correctText":"ことになった","responseSeconds":12.9,"category":"문법 → 文の文法1 → 문법 034"},
+    {"itemNo":8,"patternNumber":33,"responseState":"correct","selectedText":"うれしいことに","correctText":"うれしいことに","responseSeconds":32.8,"category":"문법 → 文の文法1 → 문법 033"},
+    {"itemNo":9,"patternNumber":31,"responseState":"correct","selectedText":"ことだから","correctText":"ことだから","responseSeconds":17.7,"category":"문법 → 文の文法1 → 문법 031"},
+    {"itemNo":10,"patternNumber":28,"responseState":"correct","selectedText":"だからこそ","correctText":"だからこそ","responseSeconds":25.8,"category":"문법 → 文の文法1 → 문법 028"},
+    {"itemNo":11,"patternNumber":26,"responseState":"correct","selectedText":"読み","correctText":"読み","responseSeconds":43.2,"category":"문법 → 文の文法2 → 문법 026"},
+    {"itemNo":12,"patternNumber":31,"responseState":"correct","selectedText":"ことだから","correctText":"ことだから","responseSeconds":15.5,"category":"문법 → 文章の文法 → 문법 031"}
+  ]
+}

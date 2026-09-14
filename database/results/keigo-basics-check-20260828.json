@@ -1,0 +1,267 @@
+{
+  "test_id": "keigo-basics-check-20260828",
+  "test_date": "2026-08-28",
+  "title": "경어 기초 선택형 확인 8문항",
+  "source_class": "self_made",
+  "target_level": "N3 기반·경어 입문",
+  "memory_timing": "same_day_recognition",
+  "total_items": 8,
+  "correct_items": 4,
+  "unknown_items": 1,
+  "unanswered_items": 0,
+  "elapsed_seconds": 199,
+  "time_limit_seconds": 600,
+  "timed_out": false,
+  "groups": {
+    "존경어": {
+      "correct": 1,
+      "total": 3
+    },
+    "겸양어": {
+      "correct": 2,
+      "total": 3
+    },
+    "정중어": {
+      "correct": 0,
+      "total": 1
+    },
+    "존경·겸양 구별": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "wrong": [
+    1,
+    4,
+    7
+  ],
+  "unknown": [
+    6
+  ],
+  "unanswered": [],
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "keigo-01",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "존경어",
+        "상대의 말하기"
+      ],
+      "question": "先生は「明日は休みです」と（　）。",
+      "context": "学生が、先生の発言について話しています。",
+      "choices": [
+        "申しました",
+        "拝見しました",
+        "おっしゃいました",
+        "いただきました"
+      ],
+      "selected_index": 0,
+      "selected_text": "申しました",
+      "correct_index": 2,
+      "correct_text": "おっしゃいました",
+      "response_state": "wrong",
+      "response_seconds": 31
+    },
+    {
+      "item_no": 2,
+      "question_id": "keigo-02",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "겸양어",
+        "내가 상대 자료 보기"
+      ],
+      "question": "先生、送ってくださった資料を（　）。",
+      "context": "あなたが、先生から送られた資料を見て、先生に報告します。",
+      "choices": [
+        "拝見しました",
+        "ご覧になりました",
+        "召し上がりました",
+        "おっしゃいました"
+      ],
+      "selected_index": 0,
+      "selected_text": "拝見しました",
+      "correct_index": 0,
+      "correct_text": "拝見しました",
+      "response_state": "correct",
+      "response_seconds": 23
+    },
+    {
+      "item_no": 3,
+      "question_id": "keigo-03",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "존경어",
+        "상대의 먹기"
+      ],
+      "question": "先生は昼ご飯にお寿司を（　）。",
+      "context": "先生の食事について、尊敬語を使って話します。",
+      "choices": [
+        "いただきました",
+        "拝見しました",
+        "申しました",
+        "召し上がりました"
+      ],
+      "selected_index": 3,
+      "selected_text": "召し上がりました",
+      "correct_index": 3,
+      "correct_text": "召し上がりました",
+      "response_state": "correct",
+      "response_seconds": 50
+    },
+    {
+      "item_no": 4,
+      "question_id": "keigo-04",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "겸양어",
+        "내가 상대 방문하기"
+      ],
+      "question": "明日の午後三時に、私が御社へ（　）。",
+      "context": "あなたが、取引先の会社を訪問する予定を相手に伝えます。",
+      "choices": [
+        "いらっしゃいます",
+        "伺います",
+        "おっしゃいます",
+        "ご覧になります"
+      ],
+      "selected_index": 3,
+      "selected_text": "ご覧になります",
+      "correct_index": 1,
+      "correct_text": "伺います",
+      "response_state": "wrong",
+      "response_seconds": 22
+    },
+    {
+      "item_no": 5,
+      "question_id": "keigo-05",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "겸양어",
+        "자기소개·이름 말하기"
+      ],
+      "question": "初めまして。私は山田と（　）。",
+      "context": "あなたが、初対面の取引先の人に自己紹介します。",
+      "choices": [
+        "申します",
+        "おっしゃいます",
+        "ご覧になります",
+        "召し上がります"
+      ],
+      "selected_index": 0,
+      "selected_text": "申します",
+      "correct_index": 0,
+      "correct_text": "申します",
+      "response_state": "correct",
+      "response_seconds": 7
+    },
+    {
+      "item_no": 6,
+      "question_id": "keigo-06",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "정중어",
+        "높임의 기능 구별"
+      ],
+      "question": "尊敬語や謙譲語の特別な動詞を使わず、丁寧語だけで表した文はどれですか。",
+      "context": "「です・ます」を使って、聞き手に丁寧に話す表現を選んでください。",
+      "choices": [
+        "先生がおっしゃいました。",
+        "私が資料を拝見しました。",
+        "私は明日、図書館へ行きます。",
+        "先生が召し上がりました。"
+      ],
+      "selected_index": null,
+      "selected_text": "分からない",
+      "correct_index": 2,
+      "correct_text": "私は明日、図書館へ行きます。",
+      "response_state": "unknown",
+      "response_seconds": 22
+    },
+    {
+      "item_no": 7,
+      "question_id": "keigo-07",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "존경어",
+        "상대의 행동·する"
+      ],
+      "question": "先生は健康のために、毎朝運動を（　）。",
+      "context": "先生の習慣について、尊敬語を使って話します。",
+      "choices": [
+        "申します",
+        "いたします",
+        "拝見します",
+        "なさいます"
+      ],
+      "selected_index": 1,
+      "selected_text": "いたします",
+      "correct_index": 3,
+      "correct_text": "なさいます",
+      "response_state": "wrong",
+      "response_seconds": 13
+    },
+    {
+      "item_no": 8,
+      "question_id": "keigo-08",
+      "item_type_id": "grammar_form",
+      "category": [
+        "문법",
+        "문법형식 판단",
+        "경어",
+        "존경·겸양 구별",
+        "같은 동사·다른 주체"
+      ],
+      "question": "先生は私の写真を（A）。私は先生の写真を（B）。",
+      "context": "先生の行動には尊敬語、自分の行動には謙譲語を使います。AとBに入る組み合わせを選んでください。",
+      "choices": [
+        "A 拝見しました ／ B ご覧になりました",
+        "A ご覧になりました ／ B 拝見しました",
+        "A ご覧になりました ／ B ご覧になりました",
+        "A 拝見しました ／ B 拝見しました"
+      ],
+      "selected_index": 1,
+      "selected_text": "A ご覧になりました ／ B 拝見しました",
+      "correct_index": 1,
+      "correct_text": "A ご覧になりました ／ B 拝見しました",
+      "response_state": "correct",
+      "response_seconds": 30
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-29"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-04"
+    }
+  ],
+  "timing_note": "시작 버튼부터 제출까지 경과시간. 문항별 시간은 해당 문항 화면 체류시간을 재방문 포함 합산한 값으로 순수 사고시간이 아님. 반올림 때문에 합계가 전체 시간과 다를 수 있음."
+}

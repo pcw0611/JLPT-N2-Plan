@@ -1,0 +1,1856 @@
+{
+  "source": {
+    "path": "C:\\Users\\pcw06\\바탕 화면\\모든 덱.apkg",
+    "sha256": "7593c0ab2b46bbe405a6a037a57d377e24ba549a580beb88c2dabec1a851ecb1",
+    "read_only": true
+  },
+  "collection": {
+    "notes": 2810,
+    "cards": 2810,
+    "review_events": 3128,
+    "decks": 10
+  },
+  "today": {
+    "events": 293,
+    "unique_cards": 209,
+    "ratings": {
+      "1": 5,
+      "2": 135,
+      "3": 53,
+      "4": 100
+    },
+    "again_events": 5,
+    "pass_events": 288,
+    "event_pass_rate": 98.3,
+    "answer_time_seconds": 2987.8,
+    "answer_time_minutes": 49.8,
+    "median_seconds": 4.8,
+    "mean_seconds": 10.2,
+    "last_rating_per_card": {
+      "2": 73,
+      "3": 36,
+      "4": 100
+    },
+    "cards_with_any_again": 4,
+    "cards_with_any_hard": 95,
+    "cards_ending_again": 0,
+    "cards_ending_hard": 73
+  },
+  "by_level": [
+    {
+      "level": "N5",
+      "cards": 480,
+      "introduced": 205,
+      "unseen": 275,
+      "mature_ivl_ge_21d": 0,
+      "cards_with_lapses": 16,
+      "total_lapses": 18,
+      "today": {
+        "events": 42,
+        "unique_cards": 42,
+        "ratings": {
+          "2": 5,
+          "3": 5,
+          "4": 32
+        },
+        "again_events": 0,
+        "pass_events": 42,
+        "event_pass_rate": 100.0,
+        "answer_time_seconds": 485.1,
+        "answer_time_minutes": 8.1,
+        "median_seconds": 2.6,
+        "mean_seconds": 11.6
+      },
+      "all_time": {
+        "events": 780,
+        "unique_cards": 205,
+        "ratings": {
+          "1": 74,
+          "2": 208,
+          "3": 208,
+          "4": 290
+        },
+        "again_events": 74,
+        "pass_events": 706,
+        "event_pass_rate": 90.5,
+        "answer_time_seconds": 7095.6,
+        "answer_time_minutes": 118.3,
+        "median_seconds": 4.9,
+        "mean_seconds": 9.1
+      }
+    },
+    {
+      "level": "N4",
+      "cards": 573,
+      "introduced": 147,
+      "unseen": 426,
+      "mature_ivl_ge_21d": 0,
+      "cards_with_lapses": 4,
+      "total_lapses": 6,
+      "today": {
+        "events": 50,
+        "unique_cards": 50,
+        "ratings": {
+          "2": 17,
+          "3": 7,
+          "4": 26
+        },
+        "again_events": 0,
+        "pass_events": 50,
+        "event_pass_rate": 100.0,
+        "answer_time_seconds": 347.8,
+        "answer_time_minutes": 5.8,
+        "median_seconds": 3.1,
+        "mean_seconds": 7.0
+      },
+      "all_time": {
+        "events": 589,
+        "unique_cards": 147,
+        "ratings": {
+          "1": 143,
+          "2": 133,
+          "3": 136,
+          "4": 177
+        },
+        "again_events": 143,
+        "pass_events": 446,
+        "event_pass_rate": 75.7,
+        "answer_time_seconds": 4025.0,
+        "answer_time_minutes": 67.1,
+        "median_seconds": 4.0,
+        "mean_seconds": 6.8
+      }
+    },
+    {
+      "level": "N3",
+      "cards": 512,
+      "introduced": 145,
+      "unseen": 367,
+      "mature_ivl_ge_21d": 0,
+      "cards_with_lapses": 12,
+      "total_lapses": 14,
+      "today": {
+        "events": 115,
+        "unique_cards": 54,
+        "ratings": {
+          "1": 4,
+          "2": 64,
+          "3": 25,
+          "4": 22
+        },
+        "again_events": 4,
+        "pass_events": 111,
+        "event_pass_rate": 96.5,
+        "answer_time_seconds": 1227.7,
+        "answer_time_minutes": 20.5,
+        "median_seconds": 5.5,
+        "mean_seconds": 10.7
+      },
+      "all_time": {
+        "events": 783,
+        "unique_cards": 145,
+        "ratings": {
+          "1": 85,
+          "2": 387,
+          "3": 191,
+          "4": 120
+        },
+        "again_events": 85,
+        "pass_events": 698,
+        "event_pass_rate": 89.1,
+        "answer_time_seconds": 8485.7,
+        "answer_time_minutes": 141.4,
+        "median_seconds": 5.9,
+        "mean_seconds": 10.8
+      }
+    },
+    {
+      "level": "N2",
+      "cards": 1169,
+      "introduced": 90,
+      "unseen": 1079,
+      "mature_ivl_ge_21d": 0,
+      "cards_with_lapses": 18,
+      "total_lapses": 20,
+      "today": {
+        "events": 53,
+        "unique_cards": 31,
+        "ratings": {
+          "2": 30,
+          "3": 13,
+          "4": 10
+        },
+        "again_events": 0,
+        "pass_events": 53,
+        "event_pass_rate": 100.0,
+        "answer_time_seconds": 619.1,
+        "answer_time_minutes": 10.3,
+        "median_seconds": 5.4,
+        "mean_seconds": 11.7
+      },
+      "all_time": {
+        "events": 575,
+        "unique_cards": 90,
+        "ratings": {
+          "1": 82,
+          "2": 254,
+          "3": 154,
+          "4": 85
+        },
+        "again_events": 82,
+        "pass_events": 493,
+        "event_pass_rate": 85.7,
+        "answer_time_seconds": 5446.0,
+        "answer_time_minutes": 90.8,
+        "median_seconds": 5.5,
+        "mean_seconds": 9.5
+      }
+    },
+    {
+      "level": "기타",
+      "cards": 76,
+      "introduced": 76,
+      "unseen": 0,
+      "mature_ivl_ge_21d": 0,
+      "cards_with_lapses": 3,
+      "total_lapses": 3,
+      "today": {
+        "events": 33,
+        "unique_cards": 32,
+        "ratings": {
+          "1": 1,
+          "2": 19,
+          "3": 3,
+          "4": 10
+        },
+        "again_events": 1,
+        "pass_events": 32,
+        "event_pass_rate": 97.0,
+        "answer_time_seconds": 308.0,
+        "answer_time_minutes": 5.1,
+        "median_seconds": 4.5,
+        "mean_seconds": 9.3
+      },
+      "all_time": {
+        "events": 401,
+        "unique_cards": 76,
+        "ratings": {
+          "1": 3,
+          "2": 84,
+          "3": 256,
+          "4": 58
+        },
+        "again_events": 3,
+        "pass_events": 398,
+        "event_pass_rate": 99.3,
+        "answer_time_seconds": 5673.3,
+        "answer_time_minutes": 94.6,
+        "median_seconds": 8.4,
+        "mean_seconds": 14.1
+      }
+    }
+  ],
+  "difficult_today": [
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "あらう",
+      "reading": "あらう",
+      "meaning": "씻다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 17.3,
+      "reps": 14,
+      "lapses": 3,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "疑う",
+      "reading": "うたがう",
+      "meaning": "의심하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 5.2,
+      "reps": 10,
+      "lapses": 2,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "かざる",
+      "reading": "かざる",
+      "meaning": "장식하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.1,
+      "reps": 39,
+      "lapses": 2,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "あいにく",
+      "reading": "あいにく",
+      "meaning": "공교롭게도",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.5,
+      "reps": 10,
+      "lapses": 1,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "予め",
+      "reading": "あらかじめ",
+      "meaning": "미리, 사전에",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.6,
+      "reps": 9,
+      "lapses": 1,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "争う",
+      "reading": "あらそう",
+      "meaning": "다투다, 경쟁하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.3,
+      "reps": 10,
+      "lapses": 1,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "怪しい",
+      "reading": "あやしい",
+      "meaning": "수상하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 11.7,
+      "reps": 28,
+      "lapses": 1,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "荒い",
+      "reading": "あらい",
+      "meaning": "거칠다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.8,
+      "reps": 28,
+      "lapses": 1,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "辺り",
+      "reading": "あたり",
+      "meaning": "주변, 주위",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.2,
+      "reps": 7,
+      "lapses": 1,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "以降",
+      "reading": "いこう",
+      "meaning": "이후",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.2,
+      "reps": 10,
+      "lapses": 1,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "編む",
+      "reading": "あむ",
+      "meaning": "엮다, 뜨다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 23.8,
+      "reps": 20,
+      "lapses": 1,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "〜一色",
+      "reading": "〜いっしょく",
+      "meaning": "~일색",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "一日おきに",
+      "reading": "いちにちおきに",
+      "meaning": "하루걸러",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 8.1,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "圧勝",
+      "reading": "あっしょう",
+      "meaning": "압승",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 10.2,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 8
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "抱く",
+      "reading": "いだく",
+      "meaning": "품다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 7.6,
+      "reps": 11,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "溢れる",
+      "reading": "あふれる",
+      "meaning": "넘치다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.8,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 7
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "著しい",
+      "reading": "いちじるしい",
+      "meaning": "현저하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 19.1,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "足元",
+      "reading": "あしもと",
+      "meaning": "발밑",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.3,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 7
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "うわさ",
+      "reading": "うわさ",
+      "meaning": "소문",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.8,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "おしい",
+      "reading": "おしい",
+      "meaning": "아깝다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.3,
+      "reps": 11,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "お祝い",
+      "reading": "おいわい",
+      "meaning": "축하, 축하선물",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 13.5,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "かわく",
+      "reading": "かわく",
+      "meaning": "마르다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.1,
+      "reps": 10,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "がっかり",
+      "reading": "がっかり",
+      "meaning": "실망하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.8,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "がらがら",
+      "reading": "がらがら",
+      "meaning": "텅 빈 모양",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.1,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "仮定",
+      "reading": "かてい",
+      "meaning": "가정",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 5.8,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "応援",
+      "reading": "おうえん",
+      "meaning": "응원",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 9.8,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "扱う",
+      "reading": "あつかう",
+      "meaning": "취급하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 8.0,
+      "reps": 24,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "折れる",
+      "reading": "おれる",
+      "meaning": "부러지다, 꺾이다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 9.3,
+      "reps": 11,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "暗記",
+      "reading": "あんき",
+      "meaning": "암기",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.6,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "現れる",
+      "reading": "あらわれる",
+      "meaning": "나타나다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 39.3,
+      "reps": 20,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "観客",
+      "reading": "かんきゃく",
+      "meaning": "관객",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 12.2,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "観察",
+      "reading": "かんさつ",
+      "meaning": "관찰",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 8.0,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "遅れる",
+      "reading": "おくれる",
+      "meaning": "늦다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.8,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "香り",
+      "reading": "かおり",
+      "meaning": "향기",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.1,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "あさい",
+      "reading": "あさい",
+      "meaning": "얕다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 38.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 8
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "あやまる",
+      "reading": "あやまる",
+      "meaning": "사과하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 7.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "いっけん",
+      "reading": "いっけん",
+      "meaning": "한 채",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.6,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "うえる",
+      "reading": "うえる",
+      "meaning": "심다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.5,
+      "reps": 16,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "うつ",
+      "reading": "うつ",
+      "meaning": "치다, 부딪치다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.4,
+      "reps": 10,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "おつり",
+      "reading": "おつり",
+      "meaning": "거스름돈",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.8,
+      "reps": 15,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "おどろく",
+      "reading": "おどろく",
+      "meaning": "놀라다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.8,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "おみまい",
+      "reading": "おみまい",
+      "meaning": "병문안",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.6,
+      "reps": 15,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "おれい",
+      "reading": "おれい",
+      "meaning": "사례, 감사 인사",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.8,
+      "reps": 11,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "会場",
+      "reading": "かいじょう",
+      "meaning": "회장",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 60.0,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "営業",
+      "reading": "えいぎょう",
+      "meaning": "영업",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 60.0,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "家族",
+      "reading": "かぞく",
+      "meaning": "가족",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.0,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "帰り",
+      "reading": "かえり",
+      "meaning": "귀갓길",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.5,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "帰る",
+      "reading": "かえる",
+      "meaning": "돌아가다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.9,
+      "reps": 2,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "空く",
+      "reading": "あく",
+      "meaning": "비다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.1,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "返す",
+      "reading": "かえす",
+      "meaning": "반환하다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.1,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "きたない",
+      "reading": "きたない",
+      "meaning": "더럽다",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.2,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 7
+    },
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "北",
+      "reading": "きた",
+      "meaning": "북쪽",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.9,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "果物",
+      "reading": "くだもの",
+      "meaning": "과일",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 56.1,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 8
+    },
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "砂糖",
+      "reading": "さとう",
+      "meaning": "설탕",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 18.2,
+      "reps": 9,
+      "lapses": 0,
+      "current_interval_days": 7
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "うるうる",
+      "reading": "うるうる눈물이 그렁그렁; 눈이 촉촉하게 빛나는 모양눈의 촉촉함·눈물目がうるうるしている。눈에 눈물이 그렁그렁하다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.4,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "うろうろ",
+      "reading": "うろうろ목적 없이 이리저리 돌아다니다갈피를 못 잡고 이동함道に迷って、駅の周りをうろうろした。길을 잃어서 역 주변을 이리저리 돌아다녔다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.5,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "おろおろ",
+      "reading": "おろおろ당황하여 어쩔 줄 모르다걱정·당황으로 판단하지 못함突然の質問におろおろした。갑작스러운 질문에 당황해 어쩔 줄 몰랐다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 7.4,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "かぶる",
+      "reading": "かぶる / 쓰다 (모자 등) / / 帽子をかぶります。 / ぼうしを かぶります。 / 모자를 씁니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.5,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "ぐっすり",
+      "reading": "ぐっすり푹; 깊이깊게 잠든 상태昨夜はぐっすり眠れた。어젯밤에는 푹 잘 수 있었다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 5.9,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "ぐったり",
+      "reading": "ぐったり녹초가 되어; 축 늘어져기운이 완전히 빠진 상태仕事の後、ぐったりして動けなかった。일이 끝난 뒤 녹초가 되어 움직일 수 없었다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.5,
+      "reps": 9,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "とうとう",
+      "reading": "とうとう마침내; 결국오랫동안 이어진 일의 예상·우려된 결과とうとう雨が降り出した。결국 비가 내리기 시작했다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.9,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "はっきり",
+      "reading": "はっきり분명히; 뚜렷하게말·모양·기억이 명확함自分の意見をはっきり言ってください。자신의 의견을 분명히 말해 주세요.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 9.1,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의성어, 의태어",
+      "word": "ようやく",
+      "reading": "ようやく겨우; 간신히; 비로소やっと보다 다소 문어적·차분함ようやく春らしくなってきた。비로소 봄다워지기 시작했다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 2.3,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "コート",
+      "reading": "コート / 코트 / / 外に出る前にコートを着ます。 / そとに でる まえに コートを きます。 / 밖에 나가기 전에 코트를 입습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 5.5,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "下着",
+      "reading": "したぎ / 속옷 / / 旅行用の下着を準備します。 / りょこうようの したぎを じゅんびします。 / 여행용 속옷을 준비합니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 14.8,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "制服",
+      "reading": "せいふく / 제복, 교복 / / 学校では制服を着ます。 / がっこうでは せいふくを きます。 / 학교에서는 교복을 입습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 7.5,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::청해 복습 (8/27)",
+      "word": "印刷する",
+      "reading": "いんさつする / 인쇄하다 / / 資料を十部印刷してください。 / 자료를 10부 인쇄해 주세요.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "和服",
+      "reading": "わふく / 일본 전통 의상 / / 祭りで和服を着ました。 / まつりで わふくを きました。 / 축제에서 일본 전통 의상을 입었습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.1,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "履く",
+      "reading": "はく / 신다 / 바지·치마를 입다 / / 靴を履きます。 / くつを はきます。 / 신발을 신습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.8,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::청해 복습 (8/27)",
+      "word": "明日の昼",
+      "reading": "あしたのひる / 내일 점심때 / / 明日の昼、一緒に行きませんか。 / 내일 점심에 함께 가지 않을래요?",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 4.4,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "着替える",
+      "reading": "きがえる / 갈아입다 / / 家に帰って服を着替えます。 / いえに かえって ふくを きがえます。 / 집에 돌아가 옷을 갈아입습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 6.9,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::청해 복습 (8/27)",
+      "word": "資料",
+      "reading": "しりょう / 자료 / / 会議の資料を準備します。 / 회의 자료를 준비합니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 8.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "靴",
+      "reading": "くつ / 신발 / / 玄関で靴を履きます。 / げんかんで くつを はきます。 / 현관에서 신발을 신습니다.",
+      "meaning": "",
+      "ratings_today": [
+        2
+      ],
+      "final_rating_today": 2,
+      "answer_seconds_today": 3.8,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "기타",
+      "deck": "日本語::의상",
+      "word": "はめる",
+      "reading": "はめる / 끼다 (장갑·반지 등) / / 手袋をはめます。 / てぶくろを はめます。 / 장갑을 낍니다.",
+      "meaning": "",
+      "ratings_today": [
+        1,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 96.7,
+      "reps": 6,
+      "lapses": 1,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "一層",
+      "reading": "いっそう",
+      "meaning": "한층 더",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        2,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 34.8,
+      "reps": 7,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "一転",
+      "reading": "いってん",
+      "meaning": "완전히 바뀜",
+      "ratings_today": [
+        2,
+        2,
+        3,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 39.2,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "緯度",
+      "reading": "いど",
+      "meaning": "위도",
+      "ratings_today": [
+        3,
+        2,
+        2,
+        2,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 191.1,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "きつい",
+      "reading": "きつい",
+      "meaning": "꽉 끼다",
+      "ratings_today": [
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 41.6,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "乾燥",
+      "reading": "かんそう",
+      "meaning": "건조",
+      "ratings_today": [
+        2,
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 40.1,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "傷",
+      "reading": "きず",
+      "meaning": "상처, 흠",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 83.3,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "帰宅",
+      "reading": "きたく",
+      "meaning": "귀가",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 124.2,
+      "reps": 8,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "疑問",
+      "reading": "ぎもん",
+      "meaning": "의문",
+      "ratings_today": [
+        2,
+        2,
+        3,
+        2,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 51.3,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "規則",
+      "reading": "きそく",
+      "meaning": "규칙",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        3,
+        3
+      ],
+      "final_rating_today": 3,
+      "answer_seconds_today": 88.1,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 1
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "折る",
+      "reading": "おる",
+      "meaning": "접다",
+      "ratings_today": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 87.4,
+      "reps": 16,
+      "lapses": 1,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "相手",
+      "reading": "あいて",
+      "meaning": "상대",
+      "ratings_today": [
+        1,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 18.7,
+      "reps": 6,
+      "lapses": 1,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "今に",
+      "reading": "いまに",
+      "meaning": "머지않아",
+      "ratings_today": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 11.7,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "異文化",
+      "reading": "いぶんか",
+      "meaning": "이문화",
+      "ratings_today": [
+        2,
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 30.9,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 5
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "祈る",
+      "reading": "いのる",
+      "meaning": "기도하다",
+      "ratings_today": [
+        2,
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 26.0,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "違反",
+      "reading": "いはん",
+      "meaning": "위반",
+      "ratings_today": [
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 28.5,
+      "reps": 3,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "期待",
+      "reading": "きたい",
+      "meaning": "기대",
+      "ratings_today": [
+        2,
+        3,
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 80.8,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "期限",
+      "reading": "きげん",
+      "meaning": "기한",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 64.9,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "機械",
+      "reading": "きかい",
+      "meaning": "기계",
+      "ratings_today": [
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 63.1,
+      "reps": 2,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "気づく",
+      "reading": "きづく",
+      "meaning": "알아차리다, 깨닫다",
+      "ratings_today": [
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 14.4,
+      "reps": 4,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "気温",
+      "reading": "きおん",
+      "meaning": "기온",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 64.9,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "汚い",
+      "reading": "きたない",
+      "meaning": "더럽다",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 50.0,
+      "reps": 6,
+      "lapses": 0,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "逆",
+      "reading": "ぎゃく",
+      "meaning": "반대, 거꾸로",
+      "ratings_today": [
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 27.3,
+      "reps": 5,
+      "lapses": 0,
+      "current_interval_days": 4
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "関心",
+      "reading": "かんしん",
+      "meaning": "관심",
+      "ratings_today": [
+        2,
+        4
+      ],
+      "final_rating_today": 4,
+      "answer_seconds_today": 8.3,
+      "reps": 2,
+      "lapses": 0,
+      "current_interval_days": 5
+    }
+  ],
+  "repeated_lapses_2plus": [
+    {
+      "level": "N2",
+      "deck": "日本語::JLPT 한끝 Voca::4-N2",
+      "word": "誤り",
+      "reading": "あやまり",
+      "meaning": "잘못, 실수",
+      "reps": 16,
+      "lapses": 3,
+      "current_interval_days": 6
+    },
+    {
+      "level": "N5",
+      "deck": "日本語::JLPT 한끝 Voca::1-N5",
+      "word": "あらう",
+      "reading": "あらう",
+      "meaning": "씻다",
+      "reps": 14,
+      "lapses": 3,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "かざる",
+      "reading": "かざる",
+      "meaning": "장식하다",
+      "reps": 39,
+      "lapses": 2,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N4",
+      "deck": "日本語::JLPT 한끝 Voca::2-N4",
+      "word": "おいわい",
+      "reading": "おいわい",
+      "meaning": "축하 선물",
+      "reps": 14,
+      "lapses": 2,
+      "current_interval_days": 3
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "疑う",
+      "reading": "うたがう",
+      "meaning": "의심하다",
+      "reps": 10,
+      "lapses": 2,
+      "current_interval_days": 2
+    },
+    {
+      "level": "N3",
+      "deck": "日本語::JLPT 한끝 Voca::3-N3",
+      "word": "うっかり",
+      "reading": "うっかり",
+      "meaning": "무심코, 깜박",
+      "reps": 9,
+      "lapses": 2,
+      "current_interval_days": 5
+    }
+  ]
+}

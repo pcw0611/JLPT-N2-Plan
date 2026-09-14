@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>8月30日 期限復習 第2回</title>
+  <style>
+    :root{font-family:"Yu Gothic UI","Meiryo",sans-serif;color:#182034;background:#eef2f8;font-size:18px}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh}.wrap{width:min(980px,calc(100% - 32px));margin:28px auto 64px}
+    .panel{background:#fff;border:1px solid #d8deea;border-radius:18px;padding:32px;box-shadow:0 10px 30px #26334d14}
+    h1{font-size:2rem;margin:0 0 12px}h2{font-size:1.55rem;margin:0}h3{font-size:1.28rem;line-height:1.65;white-space:pre-wrap}
+    p{line-height:1.7}.muted{color:#63708a}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.badge{background:#e8edff;color:#334b9e;border-radius:999px;padding:7px 13px;font-weight:700}
+    button{font:inherit;cursor:pointer;border-radius:12px;border:1px solid #cbd3e3;background:#fff;color:#182034;padding:14px 18px}
+    button:hover{border-color:#4766d8;background:#f5f7ff}button:focus-visible{outline:4px solid #aac0ff;outline-offset:2px}
+    .primary{background:#3557d6;color:#fff;border-color:#3557d6;font-weight:800}.primary:hover{background:#2949bf}.block{width:100%;font-size:1.12rem}
+    .options{display:grid;gap:12px;margin:24px 0}.option{text-align:left;min-height:58px;font-size:1.08rem}.option.selected{background:#e7edff;border:3px solid #3557d6;padding:12px 16px}
+    .nav{display:flex;gap:12px;justify-content:space-between;margin-top:20px}.nav button{min-width:150px}.timer{font-size:1.45rem;font-weight:800;font-variant-numeric:tabular-nums}
+    .progress{height:10px;border-radius:99px;background:#dfe4ee;overflow:hidden;margin:14px 0 28px}.bar{height:100%;background:#3557d6;width:0;transition:width .2s}
+    .listen{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0}.listen button{font-weight:800}.error{color:#b42318;font-weight:700}
+    .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}.stat{background:#f3f5f9;border-radius:14px;padding:18px}.stat strong{display:block;font-size:1.6rem;margin-top:5px}
+    .review{border-top:1px solid #dfe4ee;padding:24px 0}.review.wrong h3{color:#a3261d}.answer{font-weight:800}.script{background:#f4f6fa;border-radius:12px;padding:14px;white-space:pre-wrap}
+    [hidden]{display:none!important}@media(max-width:620px){:root{font-size:17px}.wrap{width:min(100% - 18px,980px);margin-top:12px}.panel{padding:20px}.top{align-items:flex-start}.result-grid{grid-template-columns:1fr}.nav button{min-width:0;flex:1}}
+  </style>
+</head>
+<body>
+<main class="wrap">
+  <section id="start" class="panel">
+    <p class="muted">2026年8月30日 · 期限復習</p>
+    <h1>第2回　13問</h1>
+    <p>聴解・形容詞・文法</p>
+    <div class="badges"><span class="badge">D+3　12問</span><span class="badge">D+1　1問</span><span class="badge">18分</span></div>
+    <p class="muted">聴解は再生が終わってから答えてください。音声は2回まで再生できます。</p>
+    <button id="startBtn" class="primary block">開始する</button>
+  </section>
+
+  <section id="quiz" class="panel" hidden>
+    <div class="top"><div><p id="meta" class="muted"></p><h2 id="count"></h2></div><div id="timer" class="timer">00:00</div></div>
+    <div class="progress" role="progressbar" aria-label="進捗" aria-valuemin="0" aria-valuemax="13"><div id="bar" class="bar"></div></div>
+    <h3 id="question"></h3>
+    <div id="listen" class="listen" hidden><button id="playBtn">▶ 音声を再生</button><span id="playInfo" class="muted"></span></div>
+    <div id="options" class="options"></div>
+    <p id="validation" class="error" hidden>答えか「分からない」を選んでください。</p>
+    <div class="nav"><button id="prevBtn">前へ</button><button id="nextBtn" class="primary">次へ</button></div>
+  </section>
+
+  <section id="results" class="panel" hidden>
+    <h1>結果</h1>
+    <div class="result-grid"><div class="stat">正解<strong id="score"></strong></div><div class="stat">時間<strong id="elapsed"></strong></div><div class="stat">要復習<strong id="needs"></strong></div></div>
+    <div id="reviews"></div>
+    <button id="copyBtn" class="primary block">結果をコピーする</button>
+    <p id="copyStatus" class="muted" aria-live="polite"></p>
+  </section>
+</main>
+<script>
+const items=[
+ {no:1,queue:53,source:60,interval:'D+3',itemType:'listening_task',type:'課題理解',category:'청해 → 과제이해(課題理解) → 반납 절차·첫 행동',question:'女の人は、この後まず何をしますか。',choices:['本を返す','新しい本を借りる','図書館に電話する','返却日を調べる'],correct:'本を返す',audio:'女：すみません、この本を返してから、新しい本を借りたいんですが。男：では、まず返却カウンターで本を返してください。そのあと、二階で新しい本を選べます。女：分かりました。',translation:'여자는 먼저 무엇을 합니까?',rule:'먼저 해야 하는 행동을 묻습니다. 〜てから 앞의 행동이 선행합니다.',trap:'마지막에 언급된 새 책을 고르는 행동은 그다음입니다.',similar:'まず／先に와 そのあと／〜てから의 순서를 구별합니다.',example:'まず本を返して、そのあと新しい本を借ります。',originalUnavailable:true},
+ {no:2,queue:56,source:61,interval:'D+3',itemType:'listening_task',type:'課題理解',category:'청해 → 과제이해(課題理解) → 준비물·첫 행동',question:'男の人は、この後まず何をしますか。',choices:['受付で用紙をもらう','三階の教室へ行く','参加費を払う','友達に電話する'],correct:'受付で用紙をもらう',audio:'女：料理教室に参加するなら、三階へ行く前に受付でこの用紙をもらってください。男：参加費はどこで払いますか。女：用紙に名前を書いたあと、三階で払います。男：分かりました。',translation:'남자는 먼저 무엇을 합니까?',rule:'三階へ行く前に 앞에서 안내받은 행동이 첫 단계입니다.',trap:'대화 마지막의 지불 장소를 첫 행동으로 고르면 안 됩니다.',similar:'〜前に는 뒤 행동보다 앞서 이루어집니다.',example:'教室へ行く前に、受付で用紙をもらいます。',originalUnavailable:true},
+ {no:3,queue:62,source:72,interval:'D+3',itemType:'listening_point',type:'ポイント理解',category:'청해 → 포인트이해(ポイント理解) → 총량·추가 수량',question:'男の人は、あと何部印刷しますか。',choices:['五部','十部','十五部','二十五部'],correct:'十部',audio:'女：会議の資料、全部で二十五部必要ですよね。男：はい。もう十五部印刷しました。女：では、残りをお願いします。男：分かりました。',translation:'남자는 앞으로 몇 부를 더 인쇄합니까?',rule:'필요한 전체 25부에서 이미 인쇄한 15부를 뺍니다.',trap:'전체량이나 이미 완료한 수량을 답으로 고르지 않습니다.',similar:'全部で는 총량, もう는 이미 완료, あとは 잔여량입니다.',example:'二十五部必要で、十五部あるので、あと十部です。'},
+ {no:4,queue:63,source:73,interval:'D+3',itemType:'listening_task',type:'課題理解',category:'청해 → 과제이해(課題理解) → 일정 변경·최종 시각',question:'男の人は、いつ事務所へ行きますか。',choices:['今日の十二時','明日の十二時','明日の一時','明日の二時'],correct:'明日の一時',audio:'女：明日の打ち合わせですが、十二時から会議が入ったので、一時に変更してもいいですか。男：はい。一時ごろ事務所へ伺います。女：お願いします。',translation:'남자는 언제 사무실에 갑니까?',rule:'처음 시각이 변경되면 변경 후 확정된 시각을 답합니다.',trap:'처음 제시된 12시는 회의 시각이며 방문 시각은 1시로 변경됐습니다.',similar:'〜に変更する／〜になった 뒤의 시각이 최종 일정입니다.',example:'十二時ではなく、一時に行きます。'},
+ {no:5,queue:73,source:76,interval:'D+3',itemType:'adjective_conjugation',type:'文の文法1',category:'문법 → 문법형식 판단 → い형용사 과거 부정',question:'昨日の試験は、思ったほど（　）。',choices:['難しいではありませんでした','難しくありませんでした','難しくありません','難しかったではありません'],correct:'難しくありませんでした',translation:'어제 시험은 생각만큼 어렵지 않았습니다.',rule:'い형용사 과거 부정은 〜くありませんでした입니다.',trap:'ではありません은 な형용사·명사 계열이며, 과거에는 でした가 필요합니다.',similar:'현재 부정 難しくありません / 과거 긍정 難しかったです.',example:'昨日はあまり寒くありませんでした。'},
+ {no:6,queue:74,source:77,interval:'D+3',itemType:'adjective_conjugation',type:'文の文法1',category:'문법 → 문법형식 판단 → な형용사 현재 부정',question:'この道は夜になると、あまり安全（　）。',choices:['くありません','ではありません','ではありませんでした','かったです'],correct:'ではありません',translation:'이 길은 밤이 되면 별로 안전하지 않습니다.',rule:'な형용사 현재 부정은 어간＋ではありません입니다.',trap:'くありません은 い형용사 활용이고, ではありませんでした는 과거입니다.',similar:'安全でした / 安全ではありませんでした와 시제를 비교합니다.',example:'この場所は静かではありません。'},
+ {no:7,queue:75,source:79,interval:'D+3',itemType:'adjective_conjugation',type:'文の文法1',category:'문법 → 문법형식 판단 → きれい·な형용사 과거 부정',question:'掃除する前、この部屋はきれい（　）。',choices:['くありませんでした','ではありませんでした','ではありません','かったです'],correct:'ではありませんでした',translation:'청소하기 전 이 방은 깨끗하지 않았습니다.',rule:'きれい는 い로 끝나지만 な형용사이므로 과거 부정은 ではありませんでした입니다.',trap:'끝 글자 い만 보고 い형용사로 처리하지 않습니다.',similar:'嫌い・有名・便利도 な형용사입니다.',example:'昨日の部屋はきれいではありませんでした。'},
+ {no:8,queue:76,source:82,interval:'D+3',itemType:'adjective_conjugation',type:'文の文法1',category:'문법 → 문법형식 판단 → な형용사 과거 명사 수식',question:'昔は（　）町も、今は観光客でにぎやかです。',choices:['静かな','静かだった','静かでした','静かかった'],correct:'静かだった',translation:'옛날에는 조용했던 마을도 지금은 관광객으로 붐빕니다.',rule:'な형용사의 보통형 과거로 명사를 수식할 때 だった＋명사입니다.',trap:'な는 현재 수식, でした는 정중 종결, かった는 い형용사입니다.',similar:'静かな町(현재) / 静かだった町(과거).',example:'以前は有名だった店が閉店しました。'},
+ {no:9,queue:86,source:84,interval:'D+3',itemType:'grammar_form',type:'文の文法1',category:'문법 → 문법형식 판단 → 間·지속 기간',question:'母が料理をしている（　）、私はずっと台所を掃除していました。',choices:['間','間に','までに','たびに'],correct:'間',translation:'어머니가 요리하는 동안 나는 계속 부엌을 청소했습니다.',rule:'두 동작이 같은 기간 계속되면 間를 씁니다.',trap:'間に는 그 기간 중 한 시점에 한 번 일어나는 동작입니다.',similar:'寝ている間に電話が鳴った는 한 시점의 사건입니다.',example:'夏休みの間、毎日日本語を勉強しました。'},
+ {no:10,queue:87,source:88,interval:'D+3',itemType:'grammar_form',type:'文の文法1',category:'문법 → 문법형식 판단 → 결정·습관 변화',question:'健康のため、毎朝三十分歩く（　）。',choices:['ことにしました','ことになりました','ようになりました','はずでした'],correct:'ことにしました／ようになりました',accepted:['ことにしました','ようになりました'],translation:'건강을 위해 매일 아침 30분 걷기로 했습니다／걷게 되었습니다.',rule:'ことにしました는 화자의 결정, ようになりました는 새로 생긴 습관·상태 변화를 나타냅니다. 이 문장만으로는 둘 다 가능합니다.',trap:'결정인지 습관 변화인지 확정하는 추가 문맥이 없어 두 답을 구별할 수 없습니다.',similar:'来月転勤することになりました는 외부 결정입니다.',example:'毎日、漢字を十個覚えることにしました。／最近、毎朝歩くようになりました。'},
+ {no:11,queue:88,source:89,interval:'D+3',itemType:'grammar_form',type:'文の文法1',category:'문법 → 문법형식 판단 → ずに·하지 않은 채',question:'朝ご飯を食べ（　）、学校へ行きました。',choices:['ずに','なくて','ないでから','なかったら'],correct:'ずに',translation:'아침을 먹지 않고 학교에 갔습니다.',rule:'Vない형의 ない를 빼고 ずに. する는 せずに입니다.',trap:'なくて는 원인·이유를 나타내는 경우가 많으며 여기서는 하지 않은 채 다음 행동을 했습니다.',similar:'食べないで도 가능하지만 선택지의 핵심 문형은 食べずに입니다.',example:'辞書を使わずに読みました。'},
+ {no:12,queue:89,source:92,interval:'D+3',itemType:'grammar_form',type:'文の文法1',category:'문법 → 문법형식 판단 → てある·의도적 결과 상태',question:'会議の資料は、机の上に並べて（　）。',choices:['あります','います','おきます','しまいます'],correct:'あります',translation:'회의 자료는 책상 위에 정렬해 놓여 있습니다.',rule:'타동사 Vて＋ある는 누군가 의도적으로 해 둔 결과 상태입니다.',trap:'ている는 진행·일반 상태, ておく는 앞으로를 위해 해 두는 행동 자체에 초점이 있습니다.',similar:'資料を並べておきます(해 두겠습니다) / 資料が並べてあります(놓여 있습니다).',example:'壁に予定が書いてあります。'},
+ {no:13,queue:193,source:191,interval:'D+1',itemType:'listening_point',type:'ポイント理解',category:'청해 → 포인트이해(ポイント理解) → 가격·할인 계산',question:'二人は、合わせていくら払いますか。',choices:['千二百円','千四百円','千六百円','千八百円'],correct:'千四百円',audio:'男：入場料は大人千二百円、学生六百円ですね。女：今日は割引の日で、大人は二百円引き、学生は学生証を見せると二百円引きです。男：じゃあ、大人一人と学生一人でお願いします。',translation:'두 사람은 합계 얼마를 냅니까?',rule:'성인 1200−200=1000엔, 학생 600−200=400엔, 합계 1400엔입니다.',trap:'학생 할인 200엔을 빼지 않으면 1600엔이 됩니다.',similar:'각 사람에게 적용되는 할인을 따로 계산한 뒤 합칩니다.',example:'千円と四百円で、合わせて千四百円です。'}
+];
+const $=id=>document.getElementById(id);let index=0,startedAt=null,elapsed=0,tick=null,currentStart=0;
+const responses=items.map(()=>({selected:null,seconds:0,visited:false,playCount:0,audioError:false}));
+function fmt(sec){return `${String(Math.floor(sec/60)).padStart(2,'0')}:${String(sec%60).padStart(2,'0')}`}
+function saveTime(){if(currentStart)responses[index].seconds+=Math.max(0,Math.round((Date.now()-currentStart)/1000));currentStart=0}
+function select(value){responses[index].selected=value;responses[index].visited=true;render()}
+function render(){const x=items[index],r=responses[index];$('meta').textContent=`${x.type} · ${x.interval}`;$('count').textContent=`問題 ${index+1} / ${items.length}`;$('question').textContent=x.question;$('bar').style.width=`${(index+1)/items.length*100}%`;$('bar').parentElement.setAttribute('aria-valuenow',index+1);$('listen').hidden=!x.audio;$('playInfo').textContent=x.audio?`再生 ${r.playCount} / 2`:'';$('playBtn').disabled=!x.audio||r.playCount>=2;$('options').innerHTML=[...x.choices,'分からない'].map((v,i)=>`<button class="option ${r.selected===v?'selected':''}" aria-pressed="${r.selected===v}" data-i="${i}">${i<4?i+1:'?'}　${v}</button>`).join('');[...$('options').children].forEach((b,i)=>b.onclick=()=>select(i<4?x.choices[i]:'分からない'));$('prevBtn').disabled=index===0;$('nextBtn').textContent=index===items.length-1?'提出する':'次へ';$('validation').hidden=true;currentStart=Date.now()}
+function play(){const x=items[index],r=responses[index];if(!x.audio||r.playCount>=2)return;speechSynthesis.cancel();const lines=[...x.audio.matchAll(/(男|女)：([\s\S]*?)(?=(?:男|女)：|$)/g)].map(m=>({speaker:m[1],text:m[2].trim()}));const voices=speechSynthesis.getVoices().filter(v=>v.lang.toLowerCase().startsWith('ja'));let n=0;r.playCount++;$('playInfo').textContent=`再生 ${r.playCount} / 2`;function speakNext(){if(n>=lines.length)return;const line=lines[n++],u=new SpeechSynthesisUtterance(line.text);u.lang='ja-JP';u.rate=.9;if(voices.length)u.voice=voices[line.speaker==='男'?0:Math.min(1,voices.length-1)];u.onend=speakNext;u.onerror=()=>{r.audioError=true;$('playInfo').textContent='音声エラー'};speechSynthesis.speak(u)}speakNext();$('playBtn').disabled=r.playCount>=2}
+function start(){startedAt=new Date().toISOString();$('start').hidden=true;$('quiz').hidden=false;tick=setInterval(()=>{$('timer').textContent=fmt(++elapsed);if(elapsed>=1080)submit()},1000);render()}
+function move(delta){if(!$('validation').hidden)return;if(delta>0&&!responses[index].selected){$('validation').hidden=false;return}saveTime();if(index===items.length-1&&delta>0){submit();return}index=Math.max(0,Math.min(items.length-1,index+delta));render()}
+function submit(){if(!$('results').hidden)return;saveTime();clearInterval(tick);speechSynthesis.cancel();$('quiz').hidden=true;$('results').hidden=false;const attempts=items.map((x,i)=>{const r=responses[i];const accepted=x.accepted||[x.correct];const state=x.audio&&r.audioError?'audio_error':!r.selected?'unanswered':r.selected==='分からない'?'unknown':accepted.includes(r.selected)?'correct':'wrong';return {...x,...r,state}});const valid=attempts.filter(x=>x.state!=='audio_error'&&x.state!=='unanswered'),correct=valid.filter(x=>x.state==='correct').length,needs=attempts.filter(x=>x.state==='wrong'||x.state==='unknown').length;$('score').textContent=`${correct} / ${valid.length}`;$('elapsed').textContent=fmt(elapsed);$('needs').textContent=`${needs}問`;const order={wrong:0,unknown:1,audio_error:2,unanswered:3,correct:4};$('reviews').innerHTML=attempts.sort((a,b)=>order[a.state]-order[b.state]).map(x=>`<article class="review ${x.state}"><p class="muted">${x.state==='correct'?'正解':x.state==='wrong'?'오답':x.state==='unknown'?'모름':x.state==='audio_error'?'음성 오류':'미응답'} · ${x.category}</p><h3>${x.question}</h3><p class="answer">${x.selected||'미응답'} → ${x.correct}</p>${x.audio?`<p class="script"><strong>대본</strong>\n${x.audio}</p>`:''}<p><strong>번역</strong> ${x.translation}</p><p><strong>접속·의미</strong> ${x.rule}</p><p><strong>함정</strong> ${x.trap}</p><p><strong>유사 문형·표현</strong> ${x.similar}</p><p><strong>예문</strong> ${x.example}</p><p><strong>다음 복습일</strong> D+1 2026-08-31 · D+3 2026-09-02 · D+7 2026-09-06</p></article>`).join('');const groups={};attempts.forEach(x=>{groups[x.type]??={correct:0,total:0,excluded:0};groups[x.type].total++;if(x.state==='correct')groups[x.type].correct++;if(x.state==='audio_error'||x.state==='unanswered')groups[x.type].excluded++});window.resultPayload={test_id:'due-review-20260830-part2-13',test_date:'2026-08-30',due_date:'2026-08-30',title:'만기 복습 2차 — 청해·형용사·문법 13문항',source_class:'자체 제작',target_level:'N3 기반',memory_timing:'D+3 12문항·D+1 1문항 변형 재시험',total_items:13,correct_items:attempts.filter(x=>x.state==='correct').length,unknown_items:attempts.filter(x=>x.state==='unknown').length,unanswered_items:attempts.filter(x=>x.state==='unanswered').length,valid_items:valid.length,valid_correct_items:correct,excluded_items:attempts.filter(x=>x.state==='audio_error'||x.state==='unanswered').map(x=>x.no),elapsed_seconds:elapsed,time_limit_seconds:1080,timed_out:elapsed>=1080,started_at:startedAt,groups,attempts:attempts.map(x=>({item_no:x.no,review_queue_id:x.queue,source_attempt_id:x.source,due_interval:x.interval,item_type_id:x.itemType,is_official_type:true,type:x.type,category:x.category,state:x.state,question:x.question,choices:x.choices,selected_text:x.selected,correct_text:x.correct,response_seconds:x.seconds,audio_seconds:null,decision_seconds:null,play_count:x.audio?x.playCount:null,audio_error:x.audio?x.audioError:false,visited:x.visited,original_unavailable:x.originalUnavailable||false})),review_dates:[{interval:'D+1',date:'2026-08-31'},{interval:'D+3',date:'2026-09-02'},{interval:'D+7',date:'2026-09-06'}],mapping_note:'2026-08-30 남은 만기 queue 13건과 source_attempt_id·due_interval을 1대1 연결한 변형 문제. D+3 12건·D+1 1건. 원문이 없는 청해 1·2번은 동일 유형의 새 변형 문항이며 동일 원문 재시험이 아님. 10번은 문맥상 ことにしました와 ようになりました가 모두 가능하여 둘 다 정답 인정.',timing_note:'開始する부터 제출까지 타이머. 문항 시간은 화면 체류시간이며 순수 사고시간이 아님. 음성 오류·미응답·중단은 만기 완료 판정에서 제외.'}}
+$('startBtn').onclick=start;$('playBtn').onclick=play;$('prevBtn').onclick=()=>{saveTime();index=Math.max(0,index-1);render()};$('nextBtn').onclick=()=>move(1);$('copyBtn').onclick=async()=>{const text=`다음 만기 복습 2차의 실제 결과를 DB·학습 로그·오답노트에 중복 없이 기록해줘. review_queue_id·source_attempt_id·due_interval을 대조하고 정상 제출 항목만 완료 처리해줘. 미응답·음성 오류·중단은 완료 처리하지 말고, 오답과 分からない만 새 D+1·D+3·D+7로 등록하며 기존 일정·점수는 보존해줘. D+3 12문항과 D+1 1문항을 분리 집계하고 공식 시험과 분리해줘. 원문이 없는 청해 1·2번은 동일 유형 변형 문항임을 명시해줘. 타이머만 가산하고 오답과 모름부터 원문·번역·정답·접속·함정·유사 문형·예문·복습일·풀이 절차를 설명해줘.\n${JSON.stringify(window.resultPayload,null,2)}`;await navigator.clipboard.writeText(text);$('copyStatus').textContent='결과를 복사했습니다. 채팅에 붙여 넣어 주세요.'};
+</script>
+</body>
+</html>

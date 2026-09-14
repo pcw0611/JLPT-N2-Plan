@@ -1,0 +1,20 @@
+{
+  "domains": [
+    {"key":"vocabulary","label":"漢字・語彙"},
+    {"key":"grammar","label":"文法・活用"},
+    {"key":"reading","label":"読解"},
+    {"key":"listening","label":"聴解"}
+  ],
+  "types": [
+    {"key":"kanji_reading","domain":"vocabulary","label":"漢字読み"},
+    {"key":"paraphrase","domain":"vocabulary","label":"言い換え類義"},
+    {"key":"context_vocabulary","domain":"vocabulary","label":"文脈語彙"},
+    {"key":"adjective_conjugation","domain":"grammar","label":"形容詞の活用"},
+    {"key":"verb_conjugation","domain":"grammar","label":"動詞の活用"},
+    {"key":"grammar_form","domain":"grammar","label":"文法形式の判断"},
+    {"key":"short_content","domain":"reading","label":"短文内容理解"},
+    {"key":"short_claim","domain":"reading","label":"短文主張理解"},
+    {"key":"listening_task","domain":"listening","label":"課題理解"},
+    {"key":"listening_point","domain":"listening","label":"ポイント理解"}
+  ]
+}

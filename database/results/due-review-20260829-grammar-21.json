@@ -1,0 +1,547 @@
+{
+  "test_id": "due-review-20260829-grammar-21",
+  "test_date": "2026-08-29",
+  "due_date": "2026-08-29",
+  "title": "만기 복습 1차 — 문법·형용사·경어 21문항",
+  "source_class": "자체 제작",
+  "target_level": "N3 기반·N2 입문",
+  "memory_timing": "D+3 7문항·D+1 14문항 변형 재시험",
+  "total_items": 21,
+  "correct_items": 13,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "elapsed_seconds": 894,
+  "time_limit_seconds": 1500,
+  "timed_out": false,
+  "groups": {
+    "形容詞": {
+      "correct": 6,
+      "total": 7
+    },
+    "文法": {
+      "correct": 3,
+      "total": 8
+    },
+    "敬語": {
+      "correct": 2,
+      "total": 4
+    },
+    "N2文法": {
+      "correct": 2,
+      "total": 2
+    }
+  },
+  "wrong": [
+    7,
+    8,
+    9,
+    10,
+    14,
+    15,
+    17,
+    18
+  ],
+  "unknown": [],
+  "unanswered": [],
+  "attempts": [
+    {
+      "item_no": 1,
+      "review_queue_id": 41,
+      "source_attempt_id": 35,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·い형용사 과거 긍정",
+      "subtype": "い形容詞・過去肯定",
+      "practice_type": "形容詞",
+      "pattern": "い形容詞の過去肯定",
+      "state": "correct",
+      "question": "昨日見た映画は、とても（　）。",
+      "choices": [
+        "面白いでした",
+        "面白かったです",
+        "面白くでした",
+        "面白ではありました"
+      ],
+      "selected_text": "面白かったです",
+      "correct_text": "面白かったです",
+      "response_seconds": 38,
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "review_queue_id": 44,
+      "source_attempt_id": 38,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·な형용사 과거 긍정",
+      "subtype": "な形容詞・過去肯定",
+      "practice_type": "形容詞",
+      "pattern": "な形容詞の過去肯定",
+      "state": "correct",
+      "question": "先週の図書館は、とても（　）。",
+      "choices": [
+        "静かかったです",
+        "静かでした",
+        "静かいでした",
+        "静かなでした"
+      ],
+      "selected_text": "静かでした",
+      "correct_text": "静かでした",
+      "response_seconds": 144,
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "review_queue_id": 23,
+      "source_attempt_id": 17,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·い형용사 과거 부정",
+      "subtype": "い形容詞・過去否定",
+      "practice_type": "形容詞",
+      "pattern": "い形容詞の過去否定",
+      "state": "correct",
+      "question": "先月の家賃は、今月ほど（　）。",
+      "choices": [
+        "高いではありませんでした",
+        "高くありません",
+        "高くありませんでした",
+        "高かったではありません"
+      ],
+      "selected_text": "高くありませんでした",
+      "correct_text": "高くありませんでした",
+      "response_seconds": 49,
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "review_queue_id": 26,
+      "source_attempt_id": 19,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·な형용사 현재 부정",
+      "subtype": "な形容詞・現在否定",
+      "practice_type": "形容詞",
+      "pattern": "な形容詞の現在否定",
+      "state": "correct",
+      "question": "この部屋は駅に近いですが、あまり静か（　）。",
+      "choices": [
+        "くありません",
+        "ではありません",
+        "ではありませんでした",
+        "ないですでした"
+      ],
+      "selected_text": "ではありません",
+      "correct_text": "ではありません",
+      "response_seconds": 24,
+      "visited": true
+    },
+    {
+      "item_no": 5,
+      "review_queue_id": 29,
+      "source_attempt_id": 20,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·な형용사 과거 긍정",
+      "subtype": "な形容詞・過去肯定",
+      "practice_type": "形容詞",
+      "pattern": "な形容詞の過去肯定",
+      "state": "correct",
+      "question": "子どものころ、この町はもっと（　）。",
+      "choices": [
+        "にぎやかでした",
+        "にぎやかかったです",
+        "にぎやかなでした",
+        "にぎやかくでした"
+      ],
+      "selected_text": "にぎやかでした",
+      "correct_text": "にぎやかでした",
+      "response_seconds": 62,
+      "visited": true
+    },
+    {
+      "item_no": 6,
+      "review_queue_id": 8,
+      "source_attempt_id": 3,
+      "due_interval": "D+3",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·い형용사 과거 부정",
+      "subtype": "い形容詞・過去否定",
+      "practice_type": "形容詞",
+      "pattern": "い形容詞の過去否定",
+      "state": "correct",
+      "question": "昨日食べたケーキは、あまり（　）。",
+      "choices": [
+        "おいしいではありませんでした",
+        "おいしくありませんでした",
+        "おいしくないでした",
+        "おいしかったではありません"
+      ],
+      "selected_text": "おいしくありませんでした",
+      "correct_text": "おいしくありませんでした",
+      "response_seconds": 135,
+      "visited": true
+    },
+    {
+      "item_no": 7,
+      "review_queue_id": 9,
+      "source_attempt_id": 5,
+      "due_interval": "D+3",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 前に·동작 전의 사전형 접속",
+      "subtype": "前に・사전형 접속",
+      "practice_type": "文法",
+      "pattern": "Vる＋前に",
+      "state": "wrong",
+      "question": "日本へ（　）前に、日本語を少し勉強しました。",
+      "choices": [
+        "行って",
+        "行った",
+        "行く",
+        "行き"
+      ],
+      "selected_text": "行き",
+      "correct_text": "行く",
+      "response_seconds": 28,
+      "visited": true
+    },
+    {
+      "item_no": 8,
+      "review_queue_id": 94,
+      "source_attempt_id": 103,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → ところ·동작 진행 시점",
+      "subtype": "ところ・진행 중",
+      "practice_type": "文法",
+      "pattern": "Vている＋ところ",
+      "state": "wrong",
+      "question": "今、昼ご飯を（　）ところです。後で電話します。",
+      "choices": [
+        "食べる",
+        "食べている",
+        "食べた",
+        "食べない"
+      ],
+      "selected_text": "食べる",
+      "correct_text": "食べている",
+      "response_seconds": 23,
+      "visited": true
+    },
+    {
+      "item_no": 9,
+      "review_queue_id": 97,
+      "source_attempt_id": 106,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 最中·한창 진행 중",
+      "subtype": "最中・한창",
+      "practice_type": "文法",
+      "pattern": "Nの／Vている＋最中",
+      "state": "wrong",
+      "question": "会議の（　）に、携帯電話が鳴ってしまった。",
+      "choices": [
+        "一方",
+        "最中",
+        "ところで",
+        "うえ"
+      ],
+      "selected_text": "うえ",
+      "correct_text": "最中",
+      "response_seconds": 33,
+      "visited": true
+    },
+    {
+      "item_no": 10,
+      "review_queue_id": 100,
+      "source_attempt_id": 108,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → にくい·행동의 어려움",
+      "subtype": "にくい・하기 어렵다",
+      "practice_type": "文法",
+      "pattern": "Vます語幹＋にくい",
+      "state": "wrong",
+      "question": "この説明は言葉が難しくて、少し（　）。",
+      "choices": [
+        "分かるにくいです",
+        "分かりにくいです",
+        "分かってにくいです",
+        "分からないにくいです"
+      ],
+      "selected_text": "分かってにくいです",
+      "correct_text": "分かりにくいです",
+      "response_seconds": 41,
+      "visited": true
+    },
+    {
+      "item_no": 11,
+      "review_queue_id": 103,
+      "source_attempt_id": 109,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → にしたがって·동조 변화",
+      "subtype": "にしたがって・동조 변화",
+      "practice_type": "文法",
+      "pattern": "N／Vる＋にしたがって",
+      "state": "correct",
+      "question": "気温が上がる（　）、アイスの売り上げも増えている。",
+      "choices": [
+        "に対して",
+        "にとって",
+        "にしたがって",
+        "について"
+      ],
+      "selected_text": "にしたがって",
+      "correct_text": "にしたがって",
+      "response_seconds": 42,
+      "visited": true
+    },
+    {
+      "item_no": 12,
+      "review_queue_id": 106,
+      "source_attempt_id": 110,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → に対して·행동과 태도의 대상",
+      "subtype": "に対して・행동 대상",
+      "practice_type": "文法",
+      "pattern": "N＋に対して",
+      "state": "correct",
+      "question": "店員は客（　）、丁寧に説明しました。",
+      "choices": [
+        "にとって",
+        "に対して",
+        "にしたがって",
+        "のおかげで"
+      ],
+      "selected_text": "に対して",
+      "correct_text": "に対して",
+      "response_seconds": 23,
+      "visited": true
+    },
+    {
+      "item_no": 13,
+      "review_queue_id": 109,
+      "source_attempt_id": 112,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → はずがない·근거상 불가능",
+      "subtype": "はずがない・근거상 불가능",
+      "practice_type": "文法",
+      "pattern": "普通形＋はずがない",
+      "state": "correct",
+      "question": "田中さんは今、海外にいる。ここに（　）。",
+      "choices": [
+        "いるはずです",
+        "いるはずがありません",
+        "いたところです",
+        "いる一方です"
+      ],
+      "selected_text": "いるはずがありません",
+      "correct_text": "いるはずがありません",
+      "response_seconds": 39,
+      "visited": true
+    },
+    {
+      "item_no": 14,
+      "review_queue_id": 112,
+      "source_attempt_id": 115,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 사역형·시키다",
+      "subtype": "사역형",
+      "practice_type": "文法",
+      "pattern": "Vさせる",
+      "state": "wrong",
+      "question": "先生は学生に作文を（　）。",
+      "choices": [
+        "書かれました",
+        "書かせました",
+        "書かせられました",
+        "書きました"
+      ],
+      "selected_text": "書かせられました",
+      "correct_text": "書かせました",
+      "response_seconds": 18,
+      "visited": true
+    },
+    {
+      "item_no": 15,
+      "review_queue_id": 139,
+      "source_attempt_id": 140,
+      "due_interval": "D+1",
+      "item_type_id": "adjective_conjugation",
+      "category": "문법 → 문법형식 판단 → 형용사 활용·な형용사 과거 명사 수식",
+      "subtype": "な形容詞・과거 명사 수식",
+      "practice_type": "形容詞",
+      "pattern": "な形容詞普通形過去＋名詞",
+      "state": "wrong",
+      "question": "以前は（　）駅前も、今は店が増えてにぎやかです。",
+      "choices": [
+        "静かな",
+        "静かでした",
+        "静かだった",
+        "静かかった"
+      ],
+      "selected_text": "静かかった",
+      "correct_text": "静かだった",
+      "response_seconds": 31,
+      "visited": true
+    },
+    {
+      "item_no": 16,
+      "review_queue_id": 127,
+      "source_attempt_id": 126,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 경어·존경어·상대의 말하기",
+      "subtype": "존경어·말하다",
+      "practice_type": "敬語",
+      "pattern": "言う→おっしゃる",
+      "state": "correct",
+      "question": "部長は会議が中止になったと（　）。",
+      "choices": [
+        "申しました",
+        "おっしゃいました",
+        "拝見しました",
+        "伺いました"
+      ],
+      "selected_text": "おっしゃいました",
+      "correct_text": "おっしゃいました",
+      "response_seconds": 13,
+      "visited": true
+    },
+    {
+      "item_no": 17,
+      "review_queue_id": 130,
+      "source_attempt_id": 129,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 경어·겸양어·상대 방문하기",
+      "subtype": "겸양어·방문하다",
+      "practice_type": "敬語",
+      "pattern": "行く・訪ねる→伺う",
+      "state": "wrong",
+      "question": "来週、私が先生の研究室へ（　）。",
+      "choices": [
+        "いらっしゃいます",
+        "ご覧になります",
+        "伺います",
+        "おっしゃいます"
+      ],
+      "selected_text": "いらっしゃいます",
+      "correct_text": "伺います",
+      "response_seconds": 21,
+      "visited": true
+    },
+    {
+      "item_no": 18,
+      "review_queue_id": 133,
+      "source_attempt_id": 131,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 경어·정중어의 기능 구별",
+      "subtype": "정중어만 구별",
+      "practice_type": "敬語",
+      "pattern": "丁寧語だけ",
+      "state": "wrong",
+      "question": "尊敬語や謙譲語の特別な動詞を使わず、丁寧語だけの文はどれですか。",
+      "choices": [
+        "先生がお帰りになります。",
+        "私は資料を拝見します。",
+        "明日は雨が降ります。",
+        "社長が召し上がります。"
+      ],
+      "selected_text": "先生がお帰りになります。",
+      "correct_text": "明日は雨が降ります。",
+      "response_seconds": 66,
+      "visited": true
+    },
+    {
+      "item_no": 19,
+      "review_queue_id": 136,
+      "source_attempt_id": 132,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 경어·존경어·상대의 행동",
+      "subtype": "존경어·하다",
+      "practice_type": "敬語",
+      "pattern": "する→なさる",
+      "state": "correct",
+      "question": "先生は午後、研究の発表を（　）。",
+      "choices": [
+        "いたします",
+        "なさいます",
+        "申します",
+        "拝見します"
+      ],
+      "selected_text": "なさいます",
+      "correct_text": "なさいます",
+      "response_seconds": 21,
+      "visited": true
+    },
+    {
+      "item_no": 20,
+      "review_queue_id": 154,
+      "source_attempt_id": 149,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → あげく·과정 끝의 결과",
+      "subtype": "あげく·과정 끝 결과",
+      "practice_type": "N2文法",
+      "pattern": "Vた／Nの＋あげく",
+      "state": "correct",
+      "question": "何度も店を回ったあげく、結局何も買わなかった。意味に最も近いものはどれですか。",
+      "choices": [
+        "何も買わずに、これから店を回る。",
+        "何度も店を回った末に、何も買わなかった。",
+        "最初の店ですぐ商品を買った。",
+        "何かを買ってから店を回った。"
+      ],
+      "selected_text": "何度も店を回った末に、何も買わなかった。",
+      "correct_text": "何度も店を回った末に、何も買わなかった。",
+      "response_seconds": 30,
+      "visited": true
+    },
+    {
+      "item_no": 21,
+      "review_queue_id": 157,
+      "source_attempt_id": 153,
+      "due_interval": "D+1",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → うえに·성질의 추가",
+      "subtype": "うえに·성질 추가",
+      "practice_type": "N2文法",
+      "pattern": "普通形＋うえに",
+      "state": "correct",
+      "question": "このホテルは駅に近い（　）、部屋も広い。",
+      "choices": [
+        "うえに",
+        "うえで",
+        "うえは",
+        "あげく"
+      ],
+      "selected_text": "うえに",
+      "correct_text": "うえに",
+      "response_seconds": 11,
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-30"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-01"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-05"
+    }
+  ],
+  "mapping_note": "2026-08-29 만기 review_queue 21건과 source_attempt_id를 1대1 대조한 변형 문제. D+3 7건과 D+1 14건을 포함. 공식 시험과 분리.",
+  "timing_note": "開始する부터 제출까지의 타이머만 기록. 문항 시간은 화면 체류시간이며 순수 사고시간 아님. 미응답·중단 항목은 만기 완료 처리하지 않음."
+}

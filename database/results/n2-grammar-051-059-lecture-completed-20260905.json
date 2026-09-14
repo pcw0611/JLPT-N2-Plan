@@ -1,0 +1,28 @@
+{
+  "id": "n2-grammar-051-059-lecture-completed-20260905",
+  "date": "2026-09-05",
+  "status": "completed_user_confirmed",
+  "title": "다락원 N2 문법 051~059 강의 (16강)",
+  "ranges": [
+    {
+      "range": "051~059",
+      "pages": "p.236~240"
+    }
+  ],
+  "elapsed_seconds": 1304,
+  "anki_cards_added": 9,
+  "grammar_patterns": [
+    "051 〜だけあって・〜だけに／〜だけのことはある",
+    "052 〜たところ",
+    "053 〜たとたん（に）",
+    "054 〜たばかり",
+    "055 〜たび（に）",
+    "056 〜だらけ",
+    "057 〜ついでに・〜がてら・〜をかねて",
+    "058 〜っけ",
+    "059 〜っこない"
+  ],
+  "anki_verified_against_classroom": true,
+  "source": "https://www.darakwon.co.kr/planner/jlpt/grammar.asp",
+  "elapsed_text": "21분 44초"
+}

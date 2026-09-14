@@ -1,0 +1,53 @@
+{
+  "id": "n2-grammar-026-035-lecture-completed-20260831",
+  "date": "2026-08-31",
+  "title": "다락원 N2 문법 026~035 강의",
+  "status": "completed_user_confirmed",
+  "elapsed_seconds": 1909,
+  "elapsed_text": "31분 49초",
+  "pages": "p.214~219",
+  "patterns": [
+    {
+      "number": "026",
+      "pattern": "〜きる／〜きれない"
+    },
+    {
+      "number": "027",
+      "pattern": "〜くせに"
+    },
+    {
+      "number": "028",
+      "pattern": "〜こそ／〜からこそ"
+    },
+    {
+      "number": "029",
+      "pattern": "〜ことか"
+    },
+    {
+      "number": "030",
+      "pattern": "〜ことから／〜ところから"
+    },
+    {
+      "number": "031",
+      "pattern": "〜ことだから"
+    },
+    {
+      "number": "032",
+      "pattern": "〜ことなく"
+    },
+    {
+      "number": "033",
+      "pattern": "〜ことに"
+    },
+    {
+      "number": "034",
+      "pattern": "〜ことになる／〜ことにはならない／〜ことにする"
+    },
+    {
+      "number": "035",
+      "pattern": "〜ことはない"
+    }
+  ],
+  "source": "https://www.darakwon.co.kr/planner/jlpt/grammar.asp?ver=2602&pkg_id=12556&pkg=n2&p_id=8568&ls_id=2463&lsi_id=52251",
+  "source_note": "사용자가 연 내부 강의 화면의 026~035 목록을 직접 확인. 다른 다락원 교재의 공개 목차는 사용하지 않음."
+}

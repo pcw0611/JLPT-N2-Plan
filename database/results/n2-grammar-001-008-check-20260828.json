@@ -1,0 +1,209 @@
+{
+  "test_id": "n2-grammar-001-008-check-20260828",
+  "test_date": "2026-08-28",
+  "title": "N2 문법 001~008 강의 후 확인 8문항",
+  "source_class": "자체 제작",
+  "target_level": "N2 입문",
+  "memory_timing": "강의 직후 선택형 재인",
+  "total_items": 8,
+  "correct_items": 6,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "elapsed_seconds": 350,
+  "time_limit_seconds": 480,
+  "timed_out": false,
+  "groups": {
+    "意味確認": {
+      "correct": 3,
+      "total": 5
+    },
+    "文法形式": {
+      "correct": 3,
+      "total": 3
+    }
+  },
+  "wrong": [
+    1,
+    5
+  ],
+  "unknown": [],
+  "unanswered": [],
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "n2-001-ageku",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → あげく·과정 끝의 결과(의미 확인)",
+      "practice_type": "意味確認",
+      "pattern": "〜あげく",
+      "state": "wrong",
+      "question": "「何日も悩んだあげく、結局、旅行をあきらめた。」\nこの文の意味に最も近いものはどれですか。",
+      "choices": [
+        "旅行をあきらめてから、何日も悩んだ。",
+        "悩んでいる途中で、旅行に出かけた。",
+        "全く悩まずに、すぐ旅行を決めた。",
+        "長い間悩んだ末に、旅行をやめることにした。"
+      ],
+      "selected_text": "旅行をあきらめてから、何日も悩んだ。",
+      "correct_text": "長い間悩んだ末に、旅行をやめることにした。",
+      "response_seconds": 61,
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "question_id": "n2-002-amari",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → あまり·감정의 과도함과 결과",
+      "practice_type": "文法形式",
+      "pattern": "〜あまり",
+      "state": "correct",
+      "question": "子どものことが心配でたまらなかった。心配の（　）、一晩中眠れなかった。",
+      "choices": [
+        "あまり",
+        "一方だ",
+        "おきに",
+        "うえは"
+      ],
+      "selected_text": "あまり",
+      "correct_text": "あまり",
+      "response_seconds": 44,
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "question_id": "n2-003-ippouda",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → 一方だ·한 방향으로 계속되는 변화",
+      "practice_type": "文法形式",
+      "pattern": "〜一方だ",
+      "state": "correct",
+      "question": "この町では、若い人が毎年減っている。何も対策をしなければ、これからも減る（　）。",
+      "choices": [
+        "あげく",
+        "おきに",
+        "一方だ",
+        "うえは"
+      ],
+      "selected_text": "一方だ",
+      "correct_text": "一方だ",
+      "response_seconds": 14,
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "question_id": "n2-004-uede",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → たうえで·선행 확인 후 행동",
+      "practice_type": "意味確認",
+      "pattern": "〜うえで",
+      "state": "correct",
+      "question": "「契約の内容をよく確認したうえで、署名してください。」\nこの文で求められている順番はどれですか。",
+      "choices": [
+        "署名する → 内容を確認する",
+        "内容を確認する → 署名する",
+        "内容を確認せずに署名する",
+        "署名した後で、確認するかどうか決める"
+      ],
+      "selected_text": "内容を確認する → 署名する",
+      "correct_text": "内容を確認する → 署名する",
+      "response_seconds": 84,
+      "visited": true
+    },
+    {
+      "item_no": 5,
+      "question_id": "n2-005-ueni",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → うえに·성질의 추가",
+      "practice_type": "意味確認",
+      "pattern": "〜うえに",
+      "state": "wrong",
+      "question": "「この先生は親切なうえに、説明も分かりやすい。」\nこの文の意味に最も近いものはどれですか。",
+      "choices": [
+        "親切だが、説明は分かりにくい。",
+        "親切なら、説明が分かりやすくなる。",
+        "親切で、それに説明も分かりやすい。",
+        "説明した後で、親切になった。"
+      ],
+      "selected_text": "親切なら、説明が分かりやすくなる。",
+      "correct_text": "親切で、それに説明も分かりやすい。",
+      "response_seconds": 42,
+      "visited": true
+    },
+    {
+      "item_no": 6,
+      "question_id": "n2-006-uewa",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → うえは·책임과 결의",
+      "practice_type": "意味確認",
+      "pattern": "〜うえは",
+      "state": "correct",
+      "question": "「自分でこの仕事を引き受けたうえは、最後まで責任を持ってやります。」\n話している人の考えに最も近いものはどれですか。",
+      "choices": [
+        "まだ仕事を引き受けるかどうか決めていない。",
+        "仕事を引き受けた後、もう全部終わらせた。",
+        "仕事が難しければ、すぐにやめたい。",
+        "引き受けたからには、最後までやり通すつもりだ。"
+      ],
+      "selected_text": "引き受けたからには、最後までやり通すつもりだ。",
+      "correct_text": "引き受けたからには、最後までやり通すつもりだ。",
+      "response_seconds": 57,
+      "visited": true
+    },
+    {
+      "item_no": 7,
+      "question_id": "n2-007-uchini",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → ないうちに·상태가 바뀌기 전",
+      "practice_type": "文法形式",
+      "pattern": "〜うちに／〜ないうちに",
+      "state": "correct",
+      "question": "まだ授業の内容を覚えている。忘れない（　）、大切な点をノートに書いておこう。",
+      "choices": [
+        "うちに",
+        "うえは",
+        "一方だ",
+        "あげく"
+      ],
+      "selected_text": "うちに",
+      "correct_text": "うちに",
+      "response_seconds": 19,
+      "visited": true
+    },
+    {
+      "item_no": 8,
+      "question_id": "n2-008-okini",
+      "item_type_id": "grammar_form",
+      "category": "문법 → 문법형식 판단 → おきに·시간 간격",
+      "practice_type": "意味確認",
+      "pattern": "〜おきに",
+      "state": "correct",
+      "question": "この時計は3時間おきに音が鳴ります。午前9時に鳴りました。次に鳴るのは何時ですか。",
+      "choices": [
+        "午前10時",
+        "正午（12時）",
+        "午前11時",
+        "午後1時"
+      ],
+      "selected_text": "正午（12時）",
+      "correct_text": "正午（12時）",
+      "response_seconds": 29,
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-29"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-04"
+    }
+  ],
+  "source_note": "기록된 강의 문형 001~008을 대상으로 만든 자체 제작 확인 문제. 교재 원문·강의 문제를 복제한 시험이나 공식 N2 진단 아님. 文法形式/意味確認은 이번 연습의 하위 구분으로 모두 grammar_form에 연결.",
+  "timing_note": "開始する부터 제출까지. 문항 시간은 화면 체류시간이며 순수 사고시간 아님. 미방문 문항은 null. 강의 시청시간은 이 타이머에 포함되지 않으며 별도 사용자 확인 없이는 추정하지 않음."
+}

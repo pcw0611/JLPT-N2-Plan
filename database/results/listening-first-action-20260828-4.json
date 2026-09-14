@@ -1,0 +1,149 @@
+{
+  "test_id": "listening-first-action-20260828-4",
+  "test_date": "2026-08-28",
+  "title": "청해 표현 인식·첫 행동 교정 4문항",
+  "source_class": "자체 제작 TTS",
+  "target_level": "N3 기반·기초 교정",
+  "memory_timing": "설명 직후 교정 연습",
+  "total_items": 4,
+  "correct_items": 3,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "valid_items": 4,
+  "valid_correct_items": 3,
+  "excluded_items": [],
+  "elapsed_seconds": 209,
+  "time_limit_seconds": 360,
+  "timed_out": false,
+  "groups": {
+    "表現の聞き取り": {
+      "correct": 1,
+      "total": 2,
+      "excluded": 0
+    },
+    "課題理解": {
+      "correct": 2,
+      "total": 2,
+      "excluded": 0
+    }
+  },
+  "wrong": [
+    1
+  ],
+  "unknown": [],
+  "unanswered": [],
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "phrase-wipe",
+      "item_type_id": "listening_phrase_recognition",
+      "is_official_type": false,
+      "type": "表現の聞き取り",
+      "category": "청해 → 표현 듣기(학습용) → 동작 어휘·음성 대응",
+      "state": "wrong",
+      "question": "聞こえた動作を選んでください。",
+      "choices": [
+        "机を運ぶ",
+        "机を並べる",
+        "机を拭く",
+        "机を買う"
+      ],
+      "selected_text": "机を並べる",
+      "correct_text": "机を拭く",
+      "response_seconds": 77,
+      "audio_seconds": 5,
+      "decision_seconds": 8,
+      "play_count": 2,
+      "audio_error": false,
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "question_id": "phrase-after-receiving",
+      "item_type_id": "listening_phrase_recognition",
+      "is_official_type": false,
+      "type": "表現の聞き取り",
+      "category": "청해 → 표현 듣기(학습용) → 受け取る·〜てから",
+      "state": "correct",
+      "question": "聞こえた順番と同じものを選んでください。",
+      "choices": [
+        "カードを受け取る → 部屋に入る",
+        "部屋に入る → カードを受け取る",
+        "カードを返す → 部屋に入る",
+        "部屋に入る → カードを返す"
+      ],
+      "selected_text": "カードを受け取る → 部屋に入る",
+      "correct_text": "カードを受け取る → 部屋に入る",
+      "response_seconds": 18,
+      "audio_seconds": 4,
+      "decision_seconds": 5,
+      "play_count": 1,
+      "audio_error": false,
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "question_id": "dialogue-before-next",
+      "item_type_id": "listening_task",
+      "is_official_type": true,
+      "type": "課題理解",
+      "category": "청해 → 과제이해(課題理解) → 완료된 일·먼저·다음 행동",
+      "state": "correct",
+      "question": "男の人は、この後まず何をしますか。",
+      "choices": [
+        "プリントを配る",
+        "机の上を片づける",
+        "窓を開ける",
+        "窓を閉める"
+      ],
+      "selected_text": "窓を閉める",
+      "correct_text": "窓を閉める",
+      "response_seconds": 56,
+      "audio_seconds": 47,
+      "decision_seconds": 0,
+      "play_count": 2,
+      "audio_error": false,
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "question_id": "dialogue-revised-first",
+      "item_type_id": "listening_task",
+      "is_official_type": true,
+      "type": "課題理解",
+      "category": "청해 → 과제이해(課題理解) → 지시 수정·최종 첫 행동",
+      "state": "correct",
+      "question": "男の人は、この後まず何をしますか。",
+      "choices": [
+        "椅子を並べる",
+        "床を拭く",
+        "窓を閉める",
+        "机を運ぶ"
+      ],
+      "selected_text": "床を拭く",
+      "correct_text": "床を拭く",
+      "response_seconds": 58,
+      "audio_seconds": 43,
+      "decision_seconds": 1,
+      "play_count": 2,
+      "audio_error": false,
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-29"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-04"
+    }
+  ],
+  "practice_note": "설명 직후 표현 인식 2문항과 짧은 과제이해 2문항. 처음 2개는 공식 JLPT 문제 유형이 아닌 학습용 표현 듣기이며 과제이해 성적에 합치지 않음. 이전 만기 복습과 별개의 새 교정 연습. 이전 복습 queue를 완료하거나 원래 오답을 정답으로 변경하지 않음. 이미 설명한 표현을 포함하므로 독립 진단이나 지연 유지율로 해석하지 않음.",
+  "timing_note": "시작부터 제출까지. 문항 시간은 화면 체류시간, 결정시간은 마지막 재생 종료부터 최종 선택까지. TTS rate 0.9, 최대2회. 음성 오류와 중단은 유효 성적에서 제외. 해설 읽기 시간은 포함하지 않음."
+}

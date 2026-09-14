@@ -1,0 +1,73 @@
+{
+  "date": "2026-08-31",
+  "method": "official-compatible self-made item aggregation; uncalibrated readiness heuristic",
+  "excluded_tests": [
+    "listening-first-action-20260828-4",
+    "listening-wrap-up-20260828-3",
+    "n2-grammar-009-015-correction-20260830"
+  ],
+  "previous_evidence_recomputed": {
+    "grammar": {
+      "correct": 105,
+      "total": 164,
+      "pct": 64.0
+    },
+    "vocabulary": {
+      "correct": 16,
+      "total": 23,
+      "pct": 69.6
+    },
+    "reading": {
+      "correct": 9,
+      "total": 12,
+      "pct": 75.0
+    },
+    "listening": {
+      "correct": 22,
+      "total": 38,
+      "pct": 57.9
+    }
+  },
+  "current_evidence": {
+    "grammar": {
+      "correct": 125,
+      "total": 197,
+      "pct": 63.5
+    },
+    "vocabulary": {
+      "correct": 18,
+      "total": 25,
+      "pct": 72.0
+    },
+    "reading": {
+      "correct": 9,
+      "total": 12,
+      "pct": 75.0
+    },
+    "listening": {
+      "correct": 27,
+      "total": 46,
+      "pct": 58.7
+    }
+  },
+  "previous_weighted_pct": 65.5,
+  "current_weighted_pct": 66.1,
+  "weighted_change_pp": 0.6,
+  "estimates": {
+    "N3": {
+      "low": 30.0,
+      "high": 46.0,
+      "projected": 80.0,
+      "daily_change": 0.5
+    },
+    "N2": {
+      "low": 5.0,
+      "high": 15.0,
+      "projected": 42.0,
+      "daily_change": 0.5
+    }
+  },
+  "confidence": "low",
+  "reason": "[recalculated-20260831-v1] 공식형 호환 자체 문항 누적 재집계: 문법 125/197=63.5%, 어휘 18/25=72.0%, 독해 9/12=75.0%, 청해 27/46=58.7%, 가중 관측 65.5%→66.1%(+0.6%p). 문장 배열·글의 문법은 문법에 포함하고 비공식 표현 듣기는 제외. 즉시 교정·같은 학습 사슬 후속 연습은 독립 표본에서 제외. 8/31 만기 44문항 28/44, D+1·D+3 각각14/22. 어휘·청해는 소폭 개선, 문법은 소폭 하락, 후반 정확도 18.2%p 하락은 유형 구성 차이로 피로 단독 귀속 불가. 공식 종합 모의고사와 충분한 N2 범위 표본이 없어 현재 범위 상단만 1%p 확대하고 시험일까지 전망은 유지. 통계적으로 보정된 확률이 아니며 신뢰도 낮음.",
+  "inserted": false
+}

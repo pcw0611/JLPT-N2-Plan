@@ -1,0 +1,299 @@
+{
+  "test_id": "n2-grammar-016-025-check-20260830",
+  "test_date": "2026-08-30",
+  "title": "N2 문법 016~025 강의 후 확인 12문항",
+  "source_class": "자체 제작",
+  "target_level": "N2 입문",
+  "memory_timing": "강의 직후 선택형 재인",
+  "total_items": 12,
+  "correct_items": 9,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "elapsed_seconds": 443,
+  "time_limit_seconds": 720,
+  "timed_out": false,
+  "groups": {
+    "文の文法1": {
+      "correct": 8,
+      "total": 10
+    },
+    "文の文法2": {
+      "correct": 0,
+      "total": 1
+    },
+    "文章の文法": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "attempts": [
+    {
+      "item_no": 1,
+      "question_id": "n2-016-kanenai",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 부정적 가능성",
+      "pattern": "〜かねない",
+      "state": "correct",
+      "question": "安全確認を怠ると、大きな事故を（　）。",
+      "choices": [
+        "起こしかねない",
+        "起こしかねる",
+        "起こしたきりだ",
+        "起こし気味だ"
+      ],
+      "selected_text": "起こしかねない",
+      "correct_text": "起こしかねない",
+      "response_seconds": 33,
+      "visited": true
+    },
+    {
+      "item_no": 2,
+      "question_id": "n2-017-kaneru",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 정중한 거절·곤란",
+      "pattern": "〜かねる",
+      "state": "wrong",
+      "question": "個人情報に関するご質問には、こちらでは（　）。",
+      "choices": [
+        "お答えしかねます",
+        "お答えしかねません",
+        "お答えしたきりです",
+        "お答え気味です"
+      ],
+      "selected_text": "お答えしかねません",
+      "correct_text": "お答えしかねます",
+      "response_seconds": 52,
+      "visited": true
+    },
+    {
+      "item_no": 3,
+      "question_id": "n2-018-karanikakete",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 시간·장소의 대략적 범위",
+      "pattern": "〜から〜にかけて",
+      "state": "correct",
+      "question": "今夜（　）明日の朝にかけて、広い範囲で雪が降るでしょう。",
+      "choices": [
+        "から",
+        "からして",
+        "からには",
+        "からといって"
+      ],
+      "selected_text": "から",
+      "correct_text": "から",
+      "response_seconds": 23,
+      "visited": true
+    },
+    {
+      "item_no": 4,
+      "question_id": "n2-019-karaiuto",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 관점에서의 평가",
+      "pattern": "〜からいうと",
+      "state": "wrong",
+      "question": "環境保護の観点（　）、この計画にはまだ改善の余地がある。",
+      "choices": [
+        "からいうと",
+        "からといって",
+        "からには",
+        "にかけて"
+      ],
+      "selected_text": "からといって",
+      "correct_text": "からいうと",
+      "response_seconds": 40,
+      "visited": true
+    },
+    {
+      "item_no": 5,
+      "question_id": "n2-020-karashite",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 한 사례부터 두드러짐",
+      "pattern": "〜からして",
+      "state": "correct",
+      "question": "あの店は、入り口の飾り（　）普通の店とは違っている。",
+      "choices": [
+        "からして",
+        "からには",
+        "からといって",
+        "にかけて"
+      ],
+      "selected_text": "からして",
+      "correct_text": "からして",
+      "response_seconds": 47,
+      "visited": true
+    },
+    {
+      "item_no": 6,
+      "question_id": "n2-021-karasuruto",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 근거로부터의 추측",
+      "pattern": "〜からすると",
+      "state": "correct",
+      "question": "窓が全部閉まっていること（　）、今日は誰も来ていないようだ。",
+      "choices": [
+        "からすると",
+        "からといって",
+        "からには",
+        "にかけて"
+      ],
+      "selected_text": "からすると",
+      "correct_text": "からすると",
+      "response_seconds": 43,
+      "visited": true
+    },
+    {
+      "item_no": 7,
+      "question_id": "n2-022-karatoitte",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 이유만으로 성립하지 않음",
+      "pattern": "〜からといって",
+      "state": "correct",
+      "question": "値段が安い（　）、必要でない物まで買うべきではない。",
+      "choices": [
+        "からといって",
+        "からには",
+        "からして",
+        "からすると"
+      ],
+      "selected_text": "からといって",
+      "correct_text": "からといって",
+      "response_seconds": 19,
+      "visited": true
+    },
+    {
+      "item_no": 8,
+      "question_id": "n2-023-karaniwa",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 결의·책임",
+      "pattern": "〜からには",
+      "state": "correct",
+      "question": "自分で引き受けた（　）、最後まで責任を持ってやるつもりだ。",
+      "choices": [
+        "からには",
+        "からといって",
+        "からして",
+        "からすると"
+      ],
+      "selected_text": "からには",
+      "correct_text": "からには",
+      "response_seconds": 28,
+      "visited": true
+    },
+    {
+      "item_no": 9,
+      "question_id": "n2-024-gimi",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 약간의 좋지 않은 상태",
+      "pattern": "〜気味",
+      "state": "correct",
+      "question": "最近、少し疲れ（　）なので、今日は早く休むことにした。",
+      "choices": [
+        "気味",
+        "きり",
+        "かねる",
+        "からして"
+      ],
+      "selected_text": "気味",
+      "correct_text": "気味",
+      "response_seconds": 14,
+      "visited": true
+    },
+    {
+      "item_no": 10,
+      "question_id": "n2-025-kiri",
+      "item_type_id": "grammar_form",
+      "is_official_type": true,
+      "type": "文の文法1",
+      "category": "문법 → 문법형식 판단 → 이후 상태가 계속됨",
+      "pattern": "〜きり",
+      "state": "correct",
+      "question": "兄は朝早く家を出た（　）、まだ帰ってこない。",
+      "choices": [
+        "きり",
+        "気味で",
+        "からには",
+        "かねて"
+      ],
+      "selected_text": "きり",
+      "correct_text": "きり",
+      "response_seconds": 38,
+      "visited": true
+    },
+    {
+      "item_no": 11,
+      "question_id": "n2-022-order",
+      "item_type_id": "sentence_composition",
+      "is_official_type": true,
+      "type": "文の文法2",
+      "category": "문법 → 문장 배열 → 이유에 따른 단정 부정",
+      "pattern": "〜からといって",
+      "state": "wrong",
+      "question": "便利だからといって、　＿＿＿　＿＿＿　★　＿＿＿。",
+      "choices": [
+        "使うのが",
+        "正しいとは",
+        "いつでも",
+        "限らない"
+      ],
+      "selected_text": "使うのが",
+      "correct_text": "正しいとは",
+      "response_seconds": 79,
+      "visited": true
+    },
+    {
+      "item_no": 12,
+      "question_id": "n2-016-text",
+      "item_type_id": "text_grammar",
+      "is_official_type": true,
+      "type": "文章の文法",
+      "category": "문법 → 글의 흐름 → 위험 가능성 경고",
+      "pattern": "〜かねない",
+      "state": "correct",
+      "question": "最近、工場で小さなミスが続いている。今は大きな問題になっていないが、この状態を放置すると、重大な事故につながり（　）。そのため、会社は確認方法を見直すことにした。",
+      "choices": [
+        "かねない",
+        "かねる",
+        "気味だ",
+        "きりだ"
+      ],
+      "selected_text": "かねない",
+      "correct_text": "かねない",
+      "response_seconds": 26,
+      "visited": true
+    }
+  ],
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-08-31"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-02"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-06"
+    }
+  ],
+  "practice_note": "문법 016~025 강의 직후 자체 제작 선택형 확인. 실제 JLPT식 문법 템플릿을 사용하지만 공식 기출·공식 모의고사·D+1 유지율과 분리하며 합격 확률로 직접 환산하지 않음.",
+  "timing_note": "開始する부터 제출까지의 타이머와 화면 체류시간만 기록. 강의 26분은 별도 사용자 확인 시간이며 이 시험 타이머에 포함하지 않음. 해설 읽기 시간은 포함하지 않음."
+}

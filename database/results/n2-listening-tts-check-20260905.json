@@ -1,0 +1,33 @@
+{
+  "test_id": "n2-listening-tts-check-20260905",
+  "test_date": "2026-09-05",
+  "title": "N2 청해 실전 미니테스트 (TTS 4문항)",
+  "score": "2/4",
+  "percentage": 50.0,
+  "elapsed_seconds": 471,
+  "elapsed_text": "7분 51초",
+  "correct_count": 2,
+  "wrong_count": 2,
+  "unknown_count": 0,
+  "unanswered_count": 0,
+  "wrong_items": [
+    1,
+    2
+  ],
+  "unknown_items": [],
+  "new_reviews_created": 6,
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-09-06"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-08"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-12"
+    }
+  ]
+}

@@ -1,0 +1,480 @@
+{
+  "testId": "due-review-20260831-all-44",
+  "date": "2026-08-31",
+  "sourceClass": "self_made_due_review",
+  "total": 44,
+  "correct": 28,
+  "wrong": 14,
+  "unknown": 2,
+  "unanswered": 0,
+  "elapsedSeconds": 1696,
+  "firstHalf": {
+    "correct": 16,
+    "total": 22,
+    "seconds": 954
+  },
+  "secondHalf": {
+    "correct": 12,
+    "total": 22,
+    "seconds": 743
+  },
+  "responses": [
+    {
+      "itemNo": 1,
+      "reviewQueueId": 235,
+      "responseState": "correct",
+      "selectedText": "条件や目的に合っている",
+      "correctText": "条件や目的に合っている",
+      "responseSeconds": 59.9,
+      "playCount": 0,
+      "category": "어휘 → 언어지식 → 유의표현"
+    },
+    {
+      "itemNo": 2,
+      "reviewQueueId": 238,
+      "responseState": "correct",
+      "selectedText": "改善",
+      "correctText": "改善",
+      "responseSeconds": 62.3,
+      "playCount": 0,
+      "category": "어휘 → 언어지식 → 문맥 규정"
+    },
+    {
+      "itemNo": 3,
+      "reviewQueueId": 211,
+      "responseState": "correct",
+      "selectedText": "忘れがたい",
+      "correctText": "忘れがたい",
+      "responseSeconds": 42.4,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 심리적 난이도"
+    },
+    {
+      "itemNo": 4,
+      "reviewQueueId": 158,
+      "responseState": "wrong",
+      "selectedText": "うえで",
+      "correctText": "うえに",
+      "responseSeconds": 60,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 정보 추가"
+    },
+    {
+      "itemNo": 5,
+      "reviewQueueId": 229,
+      "responseState": "wrong",
+      "selectedText": "書いた",
+      "correctText": "書いている",
+      "responseSeconds": 35.9,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 동작 시점"
+    },
+    {
+      "itemNo": 6,
+      "reviewQueueId": 205,
+      "responseState": "correct",
+      "selectedText": "かぎり",
+      "correctText": "かぎり",
+      "responseSeconds": 24.9,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 필수 조건"
+    },
+    {
+      "itemNo": 7,
+      "reviewQueueId": 110,
+      "responseState": "unknown",
+      "selectedText": "分からない",
+      "correctText": "いるはずがありません",
+      "responseSeconds": 49.8,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 근거상 불가능"
+    },
+    {
+      "itemNo": 8,
+      "reviewQueueId": 247,
+      "responseState": "wrong",
+      "selectedText": "ではありませんでした",
+      "correctText": "ではありません",
+      "responseSeconds": 62.8,
+      "playCount": 0,
+      "category": "문법 → 활용 → な형용사 현재 부정"
+    },
+    {
+      "itemNo": 9,
+      "reviewQueueId": 95,
+      "responseState": "correct",
+      "selectedText": "食べている",
+      "correctText": "食べている",
+      "responseSeconds": 28,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 동작 시점"
+    },
+    {
+      "itemNo": 10,
+      "reviewQueueId": 104,
+      "responseState": "correct",
+      "selectedText": "にしたがって",
+      "correctText": "にしたがって",
+      "responseSeconds": 34.5,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 동반 변화"
+    },
+    {
+      "itemNo": 11,
+      "reviewQueueId": 241,
+      "responseState": "correct",
+      "selectedText": "にぎやかでした",
+      "correctText": "にぎやかでした",
+      "responseSeconds": 45.3,
+      "playCount": 0,
+      "category": "문법 → 활용 → な형용사 과거"
+    },
+    {
+      "itemNo": 12,
+      "reviewQueueId": 98,
+      "responseState": "correct",
+      "selectedText": "最中",
+      "correctText": "最中",
+      "responseSeconds": 41.5,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 진행 중 강조"
+    },
+    {
+      "itemNo": 13,
+      "reviewQueueId": 137,
+      "responseState": "correct",
+      "selectedText": "なさいます",
+      "correctText": "なさいます",
+      "responseSeconds": 40.7,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 존경어"
+    },
+    {
+      "itemNo": 14,
+      "reviewQueueId": 101,
+      "responseState": "correct",
+      "selectedText": "読みにくい",
+      "correctText": "読みにくい",
+      "responseSeconds": 26.7,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 난이도"
+    },
+    {
+      "itemNo": 15,
+      "reviewQueueId": 256,
+      "responseState": "wrong",
+      "selectedText": "からには",
+      "correctText": "からいうと",
+      "responseSeconds": 63.6,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 관점 평가"
+    },
+    {
+      "itemNo": 16,
+      "reviewQueueId": 134,
+      "responseState": "correct",
+      "selectedText": "私は明日、図書館へ行きます。",
+      "correctText": "私は明日、図書館へ行きます。",
+      "responseSeconds": 54,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 정중어"
+    },
+    {
+      "itemNo": 17,
+      "reviewQueueId": 140,
+      "responseState": "wrong",
+      "selectedText": "静かかった",
+      "correctText": "静かだった",
+      "responseSeconds": 76,
+      "playCount": 0,
+      "category": "문법 → 활용 → な형용사 과거"
+    },
+    {
+      "itemNo": 18,
+      "reviewQueueId": 202,
+      "responseState": "correct",
+      "selectedText": "かぎり",
+      "correctText": "かぎり",
+      "responseSeconds": 19.7,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 상태 유지 조건"
+    },
+    {
+      "itemNo": 19,
+      "reviewQueueId": 113,
+      "responseState": "correct",
+      "selectedText": "書かせました",
+      "correctText": "書かせました",
+      "responseSeconds": 24.9,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 사역"
+    },
+    {
+      "itemNo": 20,
+      "reviewQueueId": 196,
+      "responseState": "correct",
+      "selectedText": "開くか開かないかのうちに",
+      "correctText": "開くか開かないかのうちに",
+      "responseSeconds": 29.4,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 거의 동시"
+    },
+    {
+      "itemNo": 21,
+      "reviewQueueId": 250,
+      "responseState": "correct",
+      "selectedText": "間",
+      "correctText": "間",
+      "responseSeconds": 32.3,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 기간 지속"
+    },
+    {
+      "itemNo": 22,
+      "reviewQueueId": 199,
+      "responseState": "correct",
+      "selectedText": "かいがあって",
+      "correctText": "かいがあって",
+      "responseSeconds": 39,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 노력의 성과"
+    },
+    {
+      "itemNo": 23,
+      "reviewQueueId": 214,
+      "responseState": "wrong",
+      "selectedText": "かけ",
+      "correctText": "がち",
+      "responseSeconds": 62.7,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 반복 경향"
+    },
+    {
+      "itemNo": 24,
+      "reviewQueueId": 155,
+      "responseState": "wrong",
+      "selectedText": "うえに",
+      "correctText": "あげく",
+      "responseSeconds": 33.3,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 과정의 결과"
+    },
+    {
+      "itemNo": 25,
+      "reviewQueueId": 217,
+      "responseState": "correct",
+      "selectedText": "かというと",
+      "correctText": "かというと",
+      "responseSeconds": 31.5,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 판단 제시"
+    },
+    {
+      "itemNo": 26,
+      "reviewQueueId": 131,
+      "responseState": "wrong",
+      "selectedText": "いらっしゃいます",
+      "correctText": "伺います",
+      "responseSeconds": 23.6,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 겸양어"
+    },
+    {
+      "itemNo": 27,
+      "reviewQueueId": 253,
+      "responseState": "correct",
+      "selectedText": "しかねます",
+      "correctText": "しかねます",
+      "responseSeconds": 29.8,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 정중한 거절"
+    },
+    {
+      "itemNo": 28,
+      "reviewQueueId": 208,
+      "responseState": "correct",
+      "selectedText": "読みかけの",
+      "correctText": "読みかけの",
+      "responseSeconds": 23.5,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 미완료"
+    },
+    {
+      "itemNo": 29,
+      "reviewQueueId": 232,
+      "responseState": "wrong",
+      "selectedText": "降らせる",
+      "correctText": "降る",
+      "responseSeconds": 66.5,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 자연현상"
+    },
+    {
+      "itemNo": 30,
+      "reviewQueueId": 226,
+      "responseState": "unknown",
+      "selectedText": "分からない",
+      "correctText": "がたい",
+      "responseSeconds": 23.9,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 심리적 난이도"
+    },
+    {
+      "itemNo": 31,
+      "reviewQueueId": 107,
+      "responseState": "correct",
+      "selectedText": "に対して",
+      "correctText": "に対して",
+      "responseSeconds": 23.1,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 대상"
+    },
+    {
+      "itemNo": 32,
+      "reviewQueueId": 128,
+      "responseState": "wrong",
+      "selectedText": "いたしました",
+      "correctText": "おっしゃいました",
+      "responseSeconds": 25.2,
+      "playCount": 0,
+      "category": "문법 → 문법형식 판단 → 존경어"
+    },
+    {
+      "itemNo": 33,
+      "reviewQueueId": 259,
+      "responseState": "correct",
+      "selectedText": "正しいとは",
+      "correctText": "正しいとは",
+      "responseSeconds": 41.9,
+      "playCount": 0,
+      "category": "문법 → 문장 배열 → 부분 부정"
+    },
+    {
+      "itemNo": 34,
+      "reviewQueueId": 220,
+      "responseState": "wrong",
+      "selectedText": "言い",
+      "correctText": "かけた",
+      "responseSeconds": 32.1,
+      "playCount": 0,
+      "category": "문법 → 문장 배열 → 미완료"
+    },
+    {
+      "itemNo": 35,
+      "reviewQueueId": 223,
+      "responseState": "correct",
+      "selectedText": "かといえば",
+      "correctText": "かといえば",
+      "responseSeconds": 15.1,
+      "playCount": 0,
+      "category": "문법 → 글의 문법 → 판단의 부분 부정"
+    },
+    {
+      "itemNo": 36,
+      "reviewQueueId": 119,
+      "responseState": "correct",
+      "selectedText": "申込書に名前を書く",
+      "correctText": "申込書に名前を書く",
+      "responseSeconds": 32.9,
+      "playCount": 1,
+      "category": "청해 → 과제이해(課題理解) → 신청 절차"
+    },
+    {
+      "itemNo": 37,
+      "reviewQueueId": 116,
+      "responseState": "correct",
+      "selectedText": "レジのお金を確認する",
+      "correctText": "レジのお金を確認する",
+      "responseSeconds": 49.2,
+      "playCount": 1,
+      "category": "청해 → 과제이해(課題理解) → 영업 준비 순서"
+    },
+    {
+      "itemNo": 38,
+      "reviewQueueId": 146,
+      "responseState": "wrong",
+      "selectedText": "二階の窓口へ行く",
+      "correctText": "番号札を取る",
+      "responseSeconds": 48,
+      "playCount": 1,
+      "category": "청해 → 과제이해(課題理解) → 절차 순서"
+    },
+    {
+      "itemNo": 39,
+      "reviewQueueId": 244,
+      "responseState": "wrong",
+      "selectedText": "名前を呼ばれる",
+      "correctText": "受付で用紙をもらう",
+      "responseSeconds": 19.8,
+      "playCount": 1,
+      "category": "청해 → 과제이해(課題理解) → 접수 절차"
+    },
+    {
+      "itemNo": 40,
+      "reviewQueueId": 143,
+      "responseState": "wrong",
+      "selectedText": "テーブルを拭く",
+      "correctText": "窓を開ける",
+      "responseSeconds": 29.4,
+      "playCount": 1,
+      "category": "청해 → 과제이해(課題理解) → 첫 행동"
+    },
+    {
+      "itemNo": 41,
+      "reviewQueueId": 122,
+      "responseState": "correct",
+      "selectedText": "千七百円",
+      "correctText": "千七百円",
+      "responseSeconds": 26.5,
+      "playCount": 1,
+      "category": "청해 → 포인트이해(ポイント理解) → 할인 계산"
+    },
+    {
+      "itemNo": 42,
+      "reviewQueueId": 149,
+      "responseState": "correct",
+      "selectedText": "六部",
+      "correctText": "六部",
+      "responseSeconds": 27.4,
+      "playCount": 1,
+      "category": "청해 → 포인트이해(ポイント理解) → 남은 수량"
+    },
+    {
+      "itemNo": 43,
+      "reviewQueueId": 125,
+      "responseState": "correct",
+      "selectedText": "来週の火曜日の午後六時",
+      "correctText": "来週の火曜日の午後六時",
+      "responseSeconds": 46.2,
+      "playCount": 1,
+      "category": "청해 → 포인트이해(ポイント理解) → 기한"
+    },
+    {
+      "itemNo": 44,
+      "reviewQueueId": 152,
+      "responseState": "correct",
+      "selectedText": "机を拭く",
+      "correctText": "机を拭く",
+      "responseSeconds": 31.3,
+      "playCount": 1,
+      "category": "청해 → 표현 듣기(학습용) → 동작·어휘 인식"
+    }
+  ],
+  "resultClass": "submitted_normal",
+  "questionSource": "quiz_sites/due-review-20260831-44/app/questions.ts",
+  "questionSourceSha256": "968b2903562d8d0f6f6134693c9bcb645d4d4370afef4ac240c8b52d54a6a563",
+  "reviewDatesForWeakItems": [
+    {
+      "interval": "D+1",
+      "date": "2026-09-01"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-03"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-07"
+    }
+  ]
+}

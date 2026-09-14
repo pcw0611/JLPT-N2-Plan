@@ -1,0 +1,14 @@
+{
+  "notes": 2734,
+  "unique_sentences": 1912,
+  "translated_unique_sentences": 1912,
+  "flagged_notes": 0,
+  "flag_counts": {
+    "empty": 0,
+    "no_hangul": 0,
+    "japanese_remaining": 0,
+    "very_short": 0,
+    "very_long": 0,
+    "token_artifact": 0
+  }
+}

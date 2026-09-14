@@ -1,0 +1,37 @@
+{
+  "id": "n2-grammar-036-050-lecture-completed-20260901",
+  "date": "2026-09-01",
+  "status": "completed_user_confirmed",
+  "title": "다락원 N2 문법 036~050 강의 2개",
+  "ranges": [
+    {
+      "range": "036~043",
+      "pages": "p.219~223"
+    },
+    {
+      "range": "044~050",
+      "pages": "p.224~227"
+    }
+  ],
+  "elapsed_seconds": 3600,
+  "anki_cards_added": 15,
+  "grammar_patterns": [
+    "036 〜最中",
+    "037 〜さえ・〜すら",
+    "038 〜さえ〜ば",
+    "039 〜ざるを得ない",
+    "040 〜しかない",
+    "041 〜次第",
+    "042 〜次第で（は）・〜次第だ",
+    "043 〜末（に）",
+    "044 〜ずに",
+    "045 〜ずに済む・〜ないで済む・〜なくて（も）済む",
+    "046 〜ずにはいられない",
+    "047 〜そうにない",
+    "048 〜そうになる",
+    "049 それなりの〜",
+    "050 〜た以上（は）"
+  ],
+  "anki_verified_against_classroom": true,
+  "source": "https://www.darakwon.co.kr/planner/jlpt/package.asp?ver=2602&pkg=n2&pkg_id=12556"
+}

@@ -1,0 +1,35 @@
+{
+  "test_id": "n2-grammar-051-059-check-20260905",
+  "test_date": "2026-09-05",
+  "title": "N2 문법 051~059 강의 직후 확인시험 (10문항)",
+  "score": "7/10",
+  "percentage": 70.0,
+  "elapsed_seconds": 578,
+  "elapsed_text": "9분 38초",
+  "correct_count": 7,
+  "wrong_count": 2,
+  "unknown_count": 1,
+  "unanswered_count": 0,
+  "wrong_items": [
+    6,
+    7
+  ],
+  "unknown_items": [
+    2
+  ],
+  "new_reviews_created": 9,
+  "review_dates": [
+    {
+      "interval": "D+1",
+      "date": "2026-09-06"
+    },
+    {
+      "interval": "D+3",
+      "date": "2026-09-08"
+    },
+    {
+      "interval": "D+7",
+      "date": "2026-09-12"
+    }
+  ]
+}

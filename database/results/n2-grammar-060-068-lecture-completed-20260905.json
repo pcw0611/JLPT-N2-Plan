@@ -1,0 +1,29 @@
+{
+  "id": "n2-grammar-060-068-lecture-completed-20260905",
+  "date": "2026-09-05",
+  "status": "completed_user_confirmed",
+  "title": "다락원 N2 문법 060~068 강의 (17강)",
+  "ranges": [
+    {
+      "range": "060~068",
+      "pages": "p.241~245"
+    }
+  ],
+  "elapsed_seconds": 1518,
+  "elapsed_text": "25분 18초",
+  "anki_cards_added": 9,
+  "grammar_patterns": [
+    "060 〜つつ(も)・〜ながら(も) / 〜つつある",
+    "061 〜つもり(で)",
+    "062 〜(の)であれば",
+    "063 〜て以来",
+    "064 〜てからでないと",
+    "065 〜てたまらない・〜てしょうがない",
+    "066 〜てでも",
+    "067 〜てならない",
+    "068 〜てはじめて"
+  ],
+  "anki_verified_against_classroom": true,
+  "source": "https://www.darakwon.co.kr/planner/jlpt/package.asp?ver=2602&pkg=n2&pkg_id=12556",
+  "total_confirmed_minutes_after": "196분 02초"
+}

@@ -1,0 +1,77 @@
+<div id="n3-speed-57-111">
+  <style>
+    #n3-speed-57-111 { color:var(--foreground); }
+    #n3-speed-57-111 .head { display:flex; align-items:flex-start; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:16px; }
+    #n3-speed-57-111 .head-meta { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+    #n3-speed-57-111 .q { padding:18px 0; border-bottom:1px solid var(--border); }
+    #n3-speed-57-111 .q h3 { margin:0 0 10px; }
+    #n3-speed-57-111 .choices { display:grid; gap:6px; }
+    #n3-speed-57-111 .form-check { padding:8px 0; }
+    #n3-speed-57-111 .actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:18px; }
+    #n3-speed-57-111 .explain { margin-top:12px; padding-left:12px; border-left:3px solid var(--border); }
+    #n3-speed-57-111 .ok { color:var(--green); }
+    #n3-speed-57-111 .no { color:var(--red); }
+    #n3-speed-57-111 .hidden { display:none; }
+    #n3-speed-57-111 .result { margin-top:20px; }
+  </style>
+  <div class="head">
+    <div><p class="text-muted">N3 SPEED GRAMMAR 57–111</p><h2>当日確認テスト</h2><p class="text-muted">全16問・選択式・分からない可</p></div>
+    <div class="head-meta"><span class="viz-badge">目標 80%</span><strong id="clock" class="tabular-nums">18:00</strong></div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="解答進捗" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><div id="prog" class="progress-bar" style="width:0%"></div></div>
+  <form id="questions"></form>
+  <div class="actions"><button type="button" id="start" class="btn btn-primary">開始する</button><button type="button" id="grade" class="btn btn-primary hidden">採点する</button></div>
+  <section id="result" class="result hidden" aria-live="polite"></section>
+</div>
+<script>
+(() => {
+  const root=document.getElementById('n3-speed-57-111');
+  const data=[
+    {t:'伝聞・〜そうだ',q:'天気予報によると、明日は雪が（　）。',c:['降りそうです','降るそうです','降るところです','降るはずがないです'],a:1,ko:'「〜によると」가 정보 출처를 제시하므로 전문(전해 들음)의 보통형＋そうだ가 맞습니다.'},
+    {t:'動作の時点・〜ところ',q:'今、ちょうど昼ご飯を（　）ところです。',c:['食べる','食べている','食べた','食べよう'],a:1,ko:'지금 한창 진행 중인 동작은 「〜ているところだ」로 나타냅니다.'},
+    {t:'仮定・〜としたら',q:'もし一億円あった（　）、何に使いますか。',c:['として','としたら','に対して','にとって'],a:1,ko:'가정한 조건을 세울 때 「〜としたら」를 사용합니다.'},
+    {t:'立場・〜として',q:'田中さんは通訳（　）国際会議に参加しました。',c:['として','としても','にとって','によって'],a:0,ko:'역할·자격을 나타낼 때 「명사＋として」를 씁니다.'},
+    {t:'最中',q:'会議の（　）に、携帯電話が鳴ってしまいました。',c:['うち','最中','ほど','ため'],a:1,ko:'어떤 행동이 한창 진행 중임을 강조할 때 「最中に」를 사용합니다.'},
+    {t:'同時動作・〜ながら',q:'音楽を（　）、宿題をしました。',c:['聞いたら','聞きながら','聞くほど','聞くとして'],a:1,ko:'같은 주어가 두 행동을 동시에 할 때 동사 ます형 어간＋ながら를 씁니다.'},
+    {t:'難易・〜にくい',q:'この説明は専門用語が多くて、（　）。',c:['分かりにくいです','分かるべきです','分かるはずです','分かりながらです'],a:0,ko:'하기 어렵다는 뜻은 동사 ます형 어간＋にくい입니다.'},
+    {t:'変化・〜にしたがって',q:'気温が上がる（　）、アイスクリームの売り上げも増えます。',c:['に対して','にとって','にしたがって','について'],a:2,ko:'한쪽 변화에 따라 다른 쪽도 변할 때 「〜にしたがって」를 사용합니다.'},
+    {t:'対象・〜に対して',q:'この会社では、お客様（　）丁寧な言葉を使います。',c:['によって','に対して','にとって','について'],a:1,ko:'행동이나 태도가 향하는 대상을 나타낼 때 「〜に対して」를 씁니다.'},
+    {t:'評価・〜にとって',q:'外国語を学ぶことは、私（　）大きな楽しみです。',c:['について','に対して','によって','にとって'],a:3,ko:'특정 사람의 입장이나 관점에서 평가할 때 「〜にとって」를 씁니다.'},
+    {t:'否定推量・〜はずがない',q:'田中さんは今海外にいるので、ここに（　）。',c:['いるはずです','いるはずがありません','いるべきです','いるところです'],a:1,ko:'근거상 가능성이 없다고 강하게 판단하므로 「〜はずがない」가 맞습니다.'},
+    {t:'比例・〜ば〜ほど',q:'日本語は勉強すれば（　）、おもしろくなります。',c:['するまで','するほど','したところ','したばかり'],a:1,ko:'정도가 커질수록 결과도 변한다는 비례는 「〜ば〜ほど」입니다.'},
+    {t:'習慣化・〜ようにする',q:'健康のために、毎日野菜を食べる（　）います。',c:['ことにして','ようにして','ようになって','はずになって'],a:1,ko:'의식적으로 계속 실천하는 습관은 「〜ようにしている」로 나타냅니다.'},
+    {t:'使役',q:'先生は学生に作文を（　）。',c:['書かれました','書かせました','書かせられました','書いてもらいました'],a:1,ko:'선생님이 학생에게 쓰게 했으므로 사역형 「書かせました」가 맞습니다.'},
+    {t:'受身',q:'私は電車の中で、知らない人に足を（　）。',c:['踏ませました','踏んであげました','踏まれました','踏ませられました'],a:2,ko:'남에게 발을 밟혀 피해를 본 상황이므로 수동형 「踏まれました」입니다.'},
+    {t:'授受・〜てくれる',q:'友達が私の引っ越しを手伝って（　）。',c:['あげました','くれました','もらいました','やりました'],a:1,ko:'상대가 나를 위해 행동해 준 것이므로 「〜てくれる」를 사용합니다.'}
+  ];
+  const form=root.querySelector('#questions');
+  data.forEach((x,i)=>{
+    const s=document.createElement('section');s.className='q';
+    s.innerHTML=`<h3>${i+1}. ${x.q}</h3><div class="choices">${x.c.map((v,j)=>`<label class="form-check"><input class="form-check-input" type="radio" name="q${i}" value="${j}"><span class="form-check-label">${j+1}. ${v}</span></label>`).join('')}<label class="form-check"><input class="form-check-input" type="radio" name="q${i}" value="u"><span class="form-check-label">分からない</span></label></div><div id="e${i}" class="explain hidden"></div>`;
+    form.appendChild(s);
+  });
+  root.querySelectorAll('input').forEach((input)=>input.disabled=true);
+  form.addEventListener('change',()=>{const n=root.querySelectorAll('input:checked').length;root.querySelector('#prog').style.width=`${n/16*100}%`;root.querySelector('.progress').setAttribute('aria-valuenow',n);});
+  let left=1080,done=false,started=false,timer=null;const clock=root.querySelector('#clock');
+  root.querySelector('#start').addEventListener('click',()=>{
+    if(started)return;started=true;
+    root.querySelectorAll('input').forEach((input)=>input.disabled=false);
+    root.querySelector('#start').classList.add('hidden');
+    root.querySelector('#grade').classList.remove('hidden');
+    timer=setInterval(()=>{if(done)return;left--;clock.textContent=`${String(Math.floor(left/60)).padStart(2,'0')}:${String(left%60).padStart(2,'0')}`;if(left<=0){clearInterval(timer);finish();}},1000);
+  });
+  function finish(){
+    if(done||!started)return;done=true;if(timer)clearInterval(timer);
+    let score=0,wrong=[],unknown=[],unanswered=[],groups={};
+    data.forEach((x,i)=>{const el=root.querySelector(`input[name=q${i}]:checked`),v=el?.value;groups[x.t]||=[0,0];groups[x.t][1]++;
+      if(v===String(x.a)){score++;groups[x.t][0]++;}else if(v==='u')unknown.push(i+1);else if(v==null)unanswered.push(i+1);else wrong.push(i+1);
+      root.querySelectorAll(`input[name=q${i}]`).forEach(n=>n.disabled=true);const e=root.querySelector(`#e${i}`);e.classList.remove('hidden');e.innerHTML=`<strong class="${v===String(x.a)?'ok':'no'}">${v===String(x.a)?'正解':'不正解'}</strong><br>正解：${x.c[x.a]}<br><span lang="ko">${x.ko}</span>`;});
+    const used=1080-left,pct=Math.round(score/16*100),res=root.querySelector('#result');res.classList.remove('hidden');
+    res.innerHTML=`<div class="viz-grid"><div class="card viz-stat"><div class="text-muted">得点</div><div class="viz-stat-value">${score}/16</div></div><div class="card viz-stat"><div class="text-muted">正答率</div><div class="viz-stat-value">${pct}%</div></div><div class="card viz-stat"><div class="text-muted">時間</div><div class="viz-stat-value tabular-nums">${String(Math.floor(used/60)).padStart(2,'0')}:${String(used%60).padStart(2,'0')}</div></div></div><h3>形式別</h3><div class="table-responsive"><table class="table table-sm"><tbody>${Object.entries(groups).map(([k,v])=>`<tr><th>${k}</th><td class="text-end">${v[0]}/${v[1]}</td></tr>`).join('')}</tbody></table></div><p>誤答：${wrong.length?wrong.join(', '):'なし'}　分からない：${unknown.length?unknown.join(', '):'なし'}　未回答：${unanswered.length?unanswered.join(', '):'なし'}</p><button type="button" id="record" class="btn btn-primary">結果を記録する</button>`;
+    root.querySelector('#grade').disabled=true;
+    root.querySelector('#record').addEventListener('click',async()=>{const prompt=`8월 28일 N3 스피드 문법 57~111 당일 선택형 확인시험 결과를 학습 기록과 오답노트에 반영하고 분석해줘. 총점 ${score}/16, 정답률 ${pct}%, 소요시간 ${String(Math.floor(used/60)).padStart(2,'0')}:${String(used%60).padStart(2,'0')}, 오답 번호 ${wrong.length?wrong.join(', '):'없음'}, 모름 번호 ${unknown.length?unknown.join(', '):'없음'}, 미응답 번호 ${unanswered.length?unanswered.join(', '):'없음'}. 유형별 ${Object.entries(groups).map(([k,v])=>`${k} ${v[0]}/${v[1]}`).join(', ')}. 다락원 N3 스피드 문법 57~111에 기반한 자체 제작 당일 선택형 확인시험이므로 공식 진단과 구분해줘.`;await window.openai.sendFollowUpMessage({prompt,title:'当日確認結果を記録'});});
+    res.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  root.querySelector('#grade').addEventListener('click',finish);
+})();
+</script>

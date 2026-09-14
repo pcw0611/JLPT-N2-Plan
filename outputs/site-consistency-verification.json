@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2026-08-26",
+    "schema": 2,
+    "types": 10,
+    "correct": 43,
+    "total": 58,
+    "unclassified": 12,
+    "matched": true
+  },
+  {
+    "date": "2026-08-27",
+    "schema": 2,
+    "types": 10,
+    "correct": 32,
+    "total": 47,
+    "unclassified": 0,
+    "matched": true
+  },
+  {
+    "date": "2026-08-28",
+    "schema": 2,
+    "types": 10,
+    "correct": 20,
+    "total": 32,
+    "unclassified": 0,
+    "matched": true
+  }
+]

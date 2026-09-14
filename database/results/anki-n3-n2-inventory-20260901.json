@@ -1,0 +1,29 @@
+{
+  "scope": "N3+N2",
+  "scopeLabel": "N3·N2 새 카드 재고",
+  "capturedDate": "2026-09-01",
+  "source": "Anki MCP cards_stats after successful AnkiWeb sync",
+  "n3Vocabulary": {
+    "total": 512,
+    "unseen": 277,
+    "seen": 235
+  },
+  "n2Vocabulary": {
+    "total": 1169,
+    "unseen": 1009,
+    "seen": 160
+  },
+  "n2GrammarAndError": {
+    "total": 83,
+    "unseen": 15,
+    "seen": 68
+  },
+  "unseenNow": 1301,
+  "futureGrammarCardsThrough150": 100,
+  "totalFirstExposuresDueBy20260919": 1401,
+  "excludedDecks": [
+    "N4",
+    "N5"
+  ],
+  "note": "학습시간·당일 답변 횟수 통계가 아니라 동기화 직후 카드 스케줄 재고다."
+}
