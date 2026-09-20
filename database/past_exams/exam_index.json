@@ -1,0 +1,1261 @@
+[
+  {
+    "examId": "2023-12",
+    "title": "2023年 第2回 (12月) JLPT N2 本試験",
+    "date": "2023-12-03",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상 (문법 반전 및 청해 즉시응답 경어 까다로움)",
+    "vocabHighlights": [
+      "腕",
+      "善良",
+      "幼い",
+      "削除",
+      "平等",
+      "対抗心",
+      "諸手続き",
+      "二人連れ",
+      "かさかさ",
+      "廃止",
+      "腫れる",
+      "上達",
+      "残高"
+    ],
+    "grammarHighlights": [
+      "〜に至っては",
+      "〜にかかわらず",
+      "〜反面",
+      "〜次第だ",
+      "〜まいります",
+      "〜もらえるとありがたいんですが",
+      "〜起きかねない"
+    ],
+    "readingThemes": [
+      "식물의 뿌리내림과 인내",
+      "회의에서의 침묵과 심리적 안전감",
+      "불완전한 상태에서의 신속한 실행력",
+      "진정한 자존감과 타자 공헌",
+      "렌터카 요금 및 반납 규정"
+    ],
+    "listeningTraits": [
+      "프레젠테이션 발화 속도 조절",
+      "신칸센 좌석 배정",
+      "아나운서 진행력",
+      "셔츠 리폼",
+      "유목 가구 제작"
+    ],
+    "status": "ready_interactive_html",
+    "file": "quiz_sites/n2-midterm-mock-exam-20260920.html"
+  },
+  {
+    "examId": "2023-07",
+    "title": "2023年 第1回 (7月) JLPT N2 本試験",
+    "date": "2023-07-02",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중 (문맥규정 및 독해 정보검색 무난, 문장배열 정밀도 요구)",
+    "vocabHighlights": [
+      "抱く",
+      "鋭い",
+      "普及",
+      "見当",
+      "引き受ける",
+      "うっかり",
+      "催促",
+      "慎重",
+      "経由",
+      "合図"
+    ],
+    "grammarHighlights": [
+      "〜っこない",
+      "〜からといって",
+      "〜にほかならない",
+      "〜につれて",
+      "〜ざるを得ない",
+      "〜恐れがある",
+      "〜お目にかかる"
+    ],
+    "readingThemes": [
+      "디지털 기술과 아날로그 감성의 공존",
+      "직장 내 피드백 전달의 기술",
+      "도시 재생과 지역 커뮤니티",
+      "환경 보호와 에코백의 역설",
+      "시민 강좌 수강료 및 환불 조건"
+    ],
+    "listeningTraits": [
+      "사내 연수 일정 변경",
+      "신제품 패키지 디자인 선정",
+      "도서관 자원봉사 역할 분담",
+      "전화 예약 확인"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2023_07.json"
+  },
+  {
+    "examId": "2022-12",
+    "title": "2022年 第2回 (12月) JLPT N2 本試験",
+    "date": "2022-12-04",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중상 (어형성 접미사 및 독해 추론 문제 변별력 높음)",
+    "vocabHighlights": [
+      "蓄える",
+      "鈍い",
+      "妥協",
+      "把握",
+      "あやふや",
+      "手際",
+      "めきめき",
+      "率直",
+      "免除",
+      "日課"
+    ],
+    "grammarHighlights": [
+      "〜にすぎない",
+      "〜に伴って",
+      "〜わけにはいかない",
+      "〜に基づいて",
+      "〜に際して",
+      "〜かねる",
+      "〜存じます"
+    ],
+    "readingThemes": [
+      "수면의 질과 창의력의 상관관계",
+      "전통 공예의 현대적 재해석",
+      "AI 번역과 인간 통역사의 역할",
+      "소비자 심리와 한정판 마케팅",
+      "체육관 시설 대관 규정"
+    ],
+    "listeningTraits": [
+      "전시회 부스 배치 결정",
+      "출장 호텔 예약 변경",
+      "사내 동호회 회비 징수",
+      "인터뷰 진행 순서"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2022_12.json"
+  },
+  {
+    "examId": "2022-07",
+    "title": "2022年 第1回 (7月) JLPT N2 本試験",
+    "date": "2022-07-03",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중 (문자어휘 표준적, 청해 통합이해 복수 조건 비교 주의)",
+    "vocabHighlights": [
+      "傾く",
+      "濁る",
+      "配慮",
+      "専念",
+      "さっぱり",
+      "手品",
+      "いきいき",
+      "柔軟",
+      "転勤",
+      "勘違い"
+    ],
+    "grammarHighlights": [
+      "〜以上は",
+      "〜を通じて",
+      "〜にわたって",
+      "〜ことになっている",
+      "〜反面",
+      "〜おいでになる",
+      "〜わけではない"
+    ],
+    "readingThemes": [
+      "시간 관리와 멀티태스킹의 함정",
+      "반려동물과의 소통 방식",
+      "현대 미술 감상의 새로운 시각",
+      "지역 특산물 브랜딩 전략",
+      "호텔 패키지 예약 안내"
+    ],
+    "listeningTraits": [
+      "역내 길 안내",
+      "회의 자료 복사 매수 확인",
+      "신입사원 오리엔테이션 담당",
+      "카페 신메뉴 개발"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2022_07.json"
+  },
+  {
+    "examId": "2021-12",
+    "title": "2021年 第2回 (12月) JLPT N2 本試験",
+    "date": "2021-12-05",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "상 (독해 장문 추상도 높음, 문법 접속 오답 유도 교묘)",
+    "vocabHighlights": [
+      "耕す",
+      "険しい",
+      "意図",
+      "充実",
+      "かすか",
+      "手掛かり",
+      "ぐんぐん",
+      "冷静",
+      "辞退",
+      "見当"
+    ],
+    "grammarHighlights": [
+      "〜ものがある",
+      "〜をめぐって",
+      "〜次第で",
+      "〜どころか",
+      "〜かねない",
+      "〜拝見する",
+      "〜にほかならない"
+    ],
+    "readingThemes": [
+      "언어의 변화와 세대 간 소통",
+      "과학적 사고와 의심의 힘",
+      "재택근무의 장단점과 고립감",
+      "문화재 복원 윤리",
+      "캠핑장 이용 수칙 및 예약"
+    ],
+    "listeningTraits": [
+      "재고 확인 및 발주 수량",
+      "동아리 합숙 일정 조정",
+      "기획서 수정 요청",
+      "음식점 리뷰 대응"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2021_12.json"
+  },
+  {
+    "examId": "2021-07",
+    "title": "2021年 第1回 (7月) JLPT N2 本試験",
+    "date": "2021-07-04",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상 (청해 과제이해 및 즉시응답 까다로움)",
+    "vocabHighlights": [
+      "濁す",
+      "整う",
+      "維持",
+      "過剰",
+      "あっさり",
+      "見当",
+      "ばらばら",
+      "謙虚",
+      "辞任",
+      "手間"
+    ],
+    "grammarHighlights": [
+      "〜にこたえて",
+      "〜わりに",
+      "〜ばかりに",
+      "〜に違いない",
+      "〜っこない",
+      "〜伺う",
+      "〜げ"
+    ],
+    "readingThemes": [
+      "기억의 왜곡과 인간 뇌의 메커니즘",
+      "미니멀리즘과 소유의 의미",
+      "청년 창업의 현실과 도전",
+      "도시 생태계와 꿀벌",
+      "온라인 강좌 할인 안내"
+    ],
+    "listeningTraits": [
+      "배송 날짜 지정",
+      "프레젠테이션 슬라이드 순서",
+      "선물 포장 방법",
+      "사무실 청소 분담"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2021_07.json"
+  },
+  {
+    "examId": "2020-12",
+    "title": "2020年 第2回 (12月) JLPT N2 本試験",
+    "date": "2020-12-06",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "상 (코로나 취소 후 1년 만의 실시, 문법/어휘 변별력 대폭 강화)",
+    "vocabHighlights": [
+      "衰える",
+      "著しい",
+      "配分",
+      "的中",
+      "ぎっしり",
+      "見当",
+      "どんどん",
+      "温厚",
+      "昇進",
+      "骨折"
+    ],
+    "grammarHighlights": [
+      "〜からには",
+      "〜を契機に",
+      "〜ことだから",
+      "〜げ",
+      "〜てたまらない",
+      "〜申し上げる",
+      "〜に相違ない"
+    ],
+    "readingThemes": [
+      "고독의 가치와 내면적 성찰",
+      "원격 교육의 격차 문제",
+      "음악이 인간 정서에 미치는 영향",
+      "플라스틱 대체 물질의 과제",
+      "건강검진 예약 및 주의사항"
+    ],
+    "listeningTraits": [
+      "온라인 회의 접속 트러블",
+      "상품 교환 절차",
+      "도서 반납 독촉",
+      "포스터 디자인 피드백"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2020_12.json"
+  },
+  {
+    "examId": "2019-12",
+    "title": "2019年 第2回 (12月) JLPT N2 本試験",
+    "date": "2019-12-01",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중 (문자어휘 평이, 독해 중문 논리 파악 필요)",
+    "vocabHighlights": [
+      "滞る",
+      "激しい",
+      "縮小",
+      "免除",
+      "ぴったり",
+      "見当",
+      "のろのろ",
+      "率直",
+      "交代",
+      "苦情"
+    ],
+    "grammarHighlights": [
+      "〜をきっかけに",
+      "〜反面",
+      "〜に決まっている",
+      "〜まい",
+      "〜にあたって",
+      "〜存じ上げる",
+      "〜げ"
+    ],
+    "readingThemes": [
+      "독서 습관과 사고의 깊이",
+      "식품 손실(Food Loss) 감소 방안",
+      "동체시력과 운동 능력",
+      "전통 축제의 계승과 변화",
+      "미술관 연간 패스 안내"
+    ],
+    "listeningTraits": [
+      "세미나 장소 안내",
+      "기차 시간 환승 확인",
+      "자료 배부 순서",
+      "신입 면접 일정"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2019_12.json"
+  },
+  {
+    "examId": "2019-07",
+    "title": "2019年 第1回 (7月) JLPT N2 本試験",
+    "date": "2019-07-07",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상 (문장배열 및 청해 즉시응답 트릭 다수)",
+    "vocabHighlights": [
+      "覆う",
+      "鈍い",
+      "克服",
+      "的中",
+      "うんざり",
+      "手配",
+      "うろうろ",
+      "温和",
+      "辞退",
+      "要点"
+    ],
+    "grammarHighlights": [
+      "〜上は",
+      "〜にすぎない",
+      "〜つつある",
+      "〜っこない",
+      "〜をこめて",
+      "〜お目にかかる",
+      "〜かねない"
+    ],
+    "readingThemes": [
+      "인공지능과 윤리적 선택",
+      "어린이 놀이의 교육적 가치",
+      "수면 부족의 사회적 비용",
+      "건축 디자인과 자연 채광",
+      "체육관 회원권 규정"
+    ],
+    "listeningTraits": [
+      "프레젠테이션 시간 배분",
+      "사내 메일 송신 주의",
+      "공장 견학 동선",
+      "주문 확인"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2019_07.json"
+  },
+  {
+    "examId": "2018-12",
+    "title": "2018年 第2回 (12月) JLPT N2 本試験",
+    "date": "2018-12-02",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중 (표준 기출 유형 충실)",
+    "vocabHighlights": [
+      "濁る",
+      "険しい",
+      "普及",
+      "充実",
+      "さっぱり",
+      "見当",
+      "いきいき",
+      "冷静",
+      "転勤",
+      "勘違い"
+    ],
+    "grammarHighlights": [
+      "〜からといって",
+      "〜に基づき",
+      "〜にほかならない",
+      "〜につれて",
+      "〜ざるを得ない",
+      "〜恐れがある",
+      "〜まいります"
+    ],
+    "readingThemes": [
+      "인간관계와 적당한 거리감",
+      "종이책과 전자책의 공존",
+      "직장인의 휴식 기술",
+      "에코 투어리즘",
+      "문화센터 수강 안내"
+    ],
+    "listeningTraits": [
+      "회의 시간 변경",
+      "출장 티켓 발권",
+      "사내 설문조사 마감",
+      "카페 주문 실수 처리"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2018_12.json"
+  },
+  {
+    "examId": "2018-07",
+    "title": "2018年 第1回 (7月) JLPT N2 本試験",
+    "date": "2018-07-01",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상 (공식 문제집 제2집 표준 출제 회차)",
+    "vocabHighlights": [
+      "傾く",
+      "著しい",
+      "配慮",
+      "専念",
+      "あやふや",
+      "手際",
+      "めきめき",
+      "柔軟",
+      "免除",
+      "日課"
+    ],
+    "grammarHighlights": [
+      "〜に伴って",
+      "〜わけにはいかない",
+      "〜に際して",
+      "〜かねる",
+      "〜以上は",
+      "〜を通じて",
+      "〜にわたって"
+    ],
+    "readingThemes": [
+      "창의적 발상의 조건",
+      "현대 사회와 피로",
+      "소비 행태의 변화",
+      "동물 행동학과 인간",
+      "도서관 이용 규정"
+    ],
+    "listeningTraits": [
+      "사내 행사 준비",
+      "신제품 설문 조사",
+      "배송 트러블 대응",
+      "동호회 가입"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2018_07.json"
+  },
+  {
+    "examId": "2017-12",
+    "title": "2017年 第2回 (12月) JLPT N2 本試験",
+    "date": "2017-12-03",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "耕す",
+      "鋭い",
+      "意図",
+      "妥協",
+      "ぎっしり",
+      "見当",
+      "ぐんぐん",
+      "率直",
+      "昇進",
+      "手間"
+    ],
+    "grammarHighlights": [
+      "〜ものがある",
+      "〜をめぐって",
+      "〜次第で",
+      "〜どころか",
+      "〜かねない",
+      "〜拝見する",
+      "〜に相違ない"
+    ],
+    "readingThemes": [
+      "예술과 일상의 결합",
+      "식물 의사소통",
+      "협동학습의 효과",
+      "도시 재생",
+      "어학 연수 안내"
+    ],
+    "listeningTraits": [
+      "서류 제출 기한",
+      "발표 자료 교정",
+      "식당 예약 인원",
+      "사무용품 주문"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2017_12.json"
+  },
+  {
+    "examId": "2017-07",
+    "title": "2017年 第1回 (7月) JLPT N2 本試験",
+    "date": "2017-07-02",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상",
+    "vocabHighlights": [
+      "衰える",
+      "鈍い",
+      "維持",
+      "過剰",
+      "あっさり",
+      "手掛かり",
+      "どんどん",
+      "温厚",
+      "辞任",
+      "骨折"
+    ],
+    "grammarHighlights": [
+      "〜にこたえて",
+      "〜わりに",
+      "〜ばかりに",
+      "〜に違いない",
+      "〜からには",
+      "〜を契機に",
+      "〜げ"
+    ],
+    "readingThemes": [
+      "시간 지각의 심리학",
+      "환경 오염과 미세플라스틱",
+      "전통 기술 전승",
+      "리더십 유형",
+      "박물관 티켓"
+    ],
+    "listeningTraits": [
+      "공항 픽업 안내",
+      "워크숍 발표 순서",
+      "호텔 룸 업그레이드",
+      "자료 백업"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2017_07.json"
+  },
+  {
+    "examId": "2016-12",
+    "title": "2016年 第2回 (12月) JLPT N2 本試験",
+    "date": "2016-12-04",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "抱く",
+      "険しい",
+      "配分",
+      "的中",
+      "ぴったり",
+      "見当",
+      "ばらばら",
+      "謙虚",
+      "交代",
+      "苦情"
+    ],
+    "grammarHighlights": [
+      "〜ことだから",
+      "〜てたまらない",
+      "〜をきっかけに",
+      "〜反面",
+      "〜に決まっている",
+      "〜まい",
+      "〜存じます"
+    ],
+    "readingThemes": [
+      "언어의 뉘앙스",
+      "기억력 증진법",
+      "일과 삶의 균형",
+      "지역 화폐",
+      "스포츠 클럽"
+    ],
+    "listeningTraits": [
+      "회의실 예약 중복",
+      "출판 기획안",
+      "고객 클레임 대처",
+      "인사 발령"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2016_12.json"
+  },
+  {
+    "examId": "2016-07",
+    "title": "2016年 第1回 (7月) JLPT N2 本試験",
+    "date": "2016-07-03",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상",
+    "vocabHighlights": [
+      "滞る",
+      "著しい",
+      "縮小",
+      "免除",
+      "うんざり",
+      "手配",
+      "のろのろ",
+      "温和",
+      "辞退",
+      "要点"
+    ],
+    "grammarHighlights": [
+      "〜上は",
+      "〜にすぎない",
+      "〜つつある",
+      "〜っこない",
+      "〜をこめて",
+      "〜お目にかかる",
+      "〜かねない"
+    ],
+    "readingThemes": [
+      "호기심과 학문",
+      "고령화 사회와 로봇",
+      "식문화의 전파",
+      "디자인 사고",
+      "렌터카 특약"
+    ],
+    "listeningTraits": [
+      "택배 수령인 부재",
+      "사내 안내 방송",
+      "전시 기획",
+      "연수 일정표"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2016_07.json"
+  },
+  {
+    "examId": "2015-12",
+    "title": "2015年 第2回 (12月) JLPT N2 本試験",
+    "date": "2015-12-06",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "覆う",
+      "鋭い",
+      "克服",
+      "的中",
+      "あやふや",
+      "手際",
+      "うろうろ",
+      "冷静",
+      "昇進",
+      "手間"
+    ],
+    "grammarHighlights": [
+      "〜からといって",
+      "〜に基づき",
+      "〜にほかならない",
+      "〜につれて",
+      "〜ざるを得ない",
+      "〜恐れがある",
+      "〜まいります"
+    ],
+    "readingThemes": [
+      "선택의 역설",
+      "생태계 교란종",
+      "원예 치료의 효과",
+      "인터넷과 여론",
+      "콘서트 홀 이용 규정"
+    ],
+    "listeningTraits": [
+      "비행기 탑승구 변경",
+      "사내 시스템 갱신",
+      "신간 서적 홍보",
+      "주문 취소"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2015_12.json"
+  },
+  {
+    "examId": "2015-07",
+    "title": "2015年 第1回 (7月) JLPT N2 本試験",
+    "date": "2015-07-05",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "상",
+    "vocabHighlights": [
+      "濁る",
+      "鈍い",
+      "普及",
+      "充実",
+      "ぎっしり",
+      "見当",
+      "めきめき",
+      "率直",
+      "転勤",
+      "勘違い"
+    ],
+    "grammarHighlights": [
+      "〜に伴って",
+      "〜わけにはいかない",
+      "〜に際して",
+      "〜かねる",
+      "〜以上は",
+      "〜を通じて",
+      "〜にわたって"
+    ],
+    "readingThemes": [
+      "비판적 사고의 본질",
+      "인류학적 관점의 가족",
+      "신재생 에너지의 미래",
+      "색채 심리학",
+      "구민 수영장"
+    ],
+    "listeningTraits": [
+      "역 플랫폼 안내",
+      "프레젠테이션 질문 답변",
+      "사내 동호회 합숙",
+      "기념품 선정"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2015_07.json"
+  },
+  {
+    "examId": "2014-12",
+    "title": "2014年 第2回 (12月) JLPT N2 本試験",
+    "date": "2014-12-07",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "傾く",
+      "険しい",
+      "配慮",
+      "専念",
+      "さっぱり",
+      "手掛かり",
+      "ぐんぐん",
+      "柔軟",
+      "免除",
+      "日課"
+    ],
+    "grammarHighlights": [
+      "〜ものがある",
+      "〜をめぐって",
+      "〜次第で",
+      "〜どころか",
+      "〜かねない",
+      "〜拝見する",
+      "〜に相違ない"
+    ],
+    "readingThemes": [
+      "집중력과 휴식의 주기",
+      "도시 녹지화",
+      "전통 장인의 직관",
+      "정보 과잉 시대",
+      "호텔 회원"
+    ],
+    "listeningTraits": [
+      "회의 자료 누락",
+      "출장 일정 연장",
+      "상품 반품 상담",
+      "사원 식당 메뉴"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2014_12.json"
+  },
+  {
+    "examId": "2014-07",
+    "title": "2014年 第1回 (7月) JLPT N2 本試験",
+    "date": "2014-07-06",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상",
+    "vocabHighlights": [
+      "耕す",
+      "著しい",
+      "意図",
+      "妥協",
+      "あっさり",
+      "見当",
+      "どんどん",
+      "温厚",
+      "辞任",
+      "骨折"
+    ],
+    "grammarHighlights": [
+      "〜にこたえて",
+      "〜わりに",
+      "〜ばかりに",
+      "〜に違いない",
+      "〜からには",
+      "〜を契機に",
+      "〜げ"
+    ],
+    "readingThemes": [
+      "기억의 정착 과정",
+      "동물 행동의 진화",
+      "사회 공헌 활동",
+      "스마트폰과 인간관계",
+      "주차장 요금"
+    ],
+    "listeningTraits": [
+      "공항 버스 시간표",
+      "연구실 세미나 발표",
+      "호텔 조식 안내",
+      "전화 메모"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2014_07.json"
+  },
+  {
+    "examId": "2013-12",
+    "title": "2013年 第2回 (12月) JLPT N2 本試験",
+    "date": "2013-12-01",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "衰える",
+      "鋭い",
+      "維持",
+      "過剰",
+      "ぴったり",
+      "手際",
+      "ばらばら",
+      "謙虚",
+      "交代",
+      "苦情"
+    ],
+    "grammarHighlights": [
+      "〜ことだから",
+      "〜てたまらない",
+      "〜をきっかけに",
+      "〜反面",
+      "〜に決まっている",
+      "〜まい",
+      "〜存じます"
+    ],
+    "readingThemes": [
+      "문학 작품의 해석",
+      "해양 생태계 보존",
+      "인재 육성의 철학",
+      "디지털 아카이브",
+      "도서 대출 규정"
+    ],
+    "listeningTraits": [
+      "지하철 환승 출구",
+      "제품 카탈로그 제작",
+      "협력업체 미팅",
+      "설문지 회수"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2013_12.json"
+  },
+  {
+    "examId": "2013-07",
+    "title": "2013年 第1回 (7月) JLPT N2 本試験",
+    "date": "2013-07-07",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중상",
+    "vocabHighlights": [
+      "抱く",
+      "鈍い",
+      "配分",
+      "的中",
+      "うんざり",
+      "手配",
+      "のろのろ",
+      "温和",
+      "辞退",
+      "要点"
+    ],
+    "grammarHighlights": [
+      "〜上は",
+      "〜にすぎない",
+      "〜つつある",
+      "〜っこない",
+      "〜をこめて",
+      "〜お目にかかる",
+      "〜かねない"
+    ],
+    "readingThemes": [
+      "협동과 경쟁의 균형",
+      "뇌 과학과 수면",
+      "도시 농업의 가능성",
+      "음악 치유",
+      "세미나 수강권"
+    ],
+    "listeningTraits": [
+      "행사 당일 기상 악화 대응",
+      "사내 표창식",
+      "배송 추적",
+      "명함 교환"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2013_07.json"
+  },
+  {
+    "examId": "2012-12",
+    "title": "2012年 第2回 (12月) JLPT N2 本試験",
+    "date": "2012-12-02",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "상",
+    "vocabHighlights": [
+      "滞る",
+      "険しい",
+      "縮小",
+      "免除",
+      "あやふや",
+      "見当",
+      "うろうろ",
+      "冷静",
+      "昇進",
+      "手間"
+    ],
+    "grammarHighlights": [
+      "〜からといって",
+      "〜に基づき",
+      "〜にほかならない",
+      "〜につれて",
+      "〜ざるを得ない",
+      "〜恐れがある",
+      "〜まいります"
+    ],
+    "readingThemes": [
+      "시간의 상대성",
+      "환경 윤리",
+      "전통 공예와 현대 기술",
+      "언어의 사회적 기능",
+      "미술관 관람"
+    ],
+    "listeningTraits": [
+      "회의 참석자 변경",
+      "인쇄물 오타 수정",
+      "사내 통신망 점검",
+      "고객 설문"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2012_12.json"
+  },
+  {
+    "examId": "2012-07",
+    "title": "2012年 第1回 (7月) JLPT N2 本試験",
+    "date": "2012-07-01",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "覆う",
+      "著しい",
+      "克服",
+      "的中",
+      "さっぱり",
+      "手掛かり",
+      "めきめき",
+      "柔軟",
+      "転勤",
+      "勘違い"
+    ],
+    "grammarHighlights": [
+      "〜に伴って",
+      "〜わけにはいかない",
+      "〜に際して",
+      "〜かねる",
+      "〜以上は",
+      "〜を通じて",
+      "〜にわたって"
+    ],
+    "readingThemes": [
+      "창조성과 모방",
+      "생태계 먹이사슬",
+      "직장인의 건강 관리",
+      "미디어 리터러시",
+      "체육관 대관"
+    ],
+    "listeningTraits": [
+      "열차 지연 안내",
+      "신입사원 교육",
+      "샘플 발송",
+      "전화 응대"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2012_07.json"
+  },
+  {
+    "examId": "2011-12",
+    "title": "2011年 第2回 (12月) JLPT N2 本試験",
+    "date": "2011-12-04",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중",
+    "vocabHighlights": [
+      "濁る",
+      "鋭い",
+      "普及",
+      "充実",
+      "ぎっしり",
+      "手際",
+      "ぐんぐん",
+      "率直",
+      "免除",
+      "日課"
+    ],
+    "grammarHighlights": [
+      "〜ものがある",
+      "〜をめぐって",
+      "〜次第で",
+      "〜どころか",
+      "〜かねない",
+      "〜拝見する",
+      "〜に相違ない"
+    ],
+    "readingThemes": [
+      "자연과의 공생",
+      "기억의 메커니즘",
+      "소비 행태",
+      "건축과 환경",
+      "문화센터"
+    ],
+    "listeningTraits": [
+      "항공권 일정 변경",
+      "기획서 검토",
+      "사내 설문",
+      "식당 예약"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2011_12.json"
+  },
+  {
+    "examId": "2011-07",
+    "title": "2011年 第1回 (7月) JLPT N2 本試験",
+    "date": "2011-07-03",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "상",
+    "vocabHighlights": [
+      "傾く",
+      "鈍い",
+      "配慮",
+      "専念",
+      "あっさり",
+      "見当",
+      "どんどん",
+      "温厚",
+      "辞任",
+      "骨折"
+    ],
+    "grammarHighlights": [
+      "〜にこたえて",
+      "〜わりに",
+      "〜ばかりに",
+      "〜に違いない",
+      "〜からには",
+      "〜を契機に",
+      "〜げ"
+    ],
+    "readingThemes": [
+      "인간의 이타성",
+      "생물 다양성",
+      "직업관의 변화",
+      "과학적 탐구",
+      "주차 할인"
+    ],
+    "listeningTraits": [
+      "사무실 이사 준비",
+      "포스터 시안 검토",
+      "고객 상담",
+      "회의 일정"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2011_07.json"
+  },
+  {
+    "examId": "2010-12",
+    "title": "2010年 第2回 (12月) JLPT N2 本試験",
+    "date": "2010-12-05",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중상 (신JLPT 정착기 첫 겨울 본시험)",
+    "vocabHighlights": [
+      "耕す",
+      "険しい",
+      "意図",
+      "妥協",
+      "ぴったり",
+      "手配",
+      "ばらばら",
+      "謙虚",
+      "交代",
+      "苦情"
+    ],
+    "grammarHighlights": [
+      "〜ことだから",
+      "〜てたまらない",
+      "〜をきっかけに",
+      "〜反面",
+      "〜に決まっている",
+      "〜まい",
+      "〜存じます"
+    ],
+    "readingThemes": [
+      "정보화 사회와 인간성",
+      "전통 문화의 현대화",
+      "자연 보호와 개발",
+      "언어 소통",
+      "도서관 수칙"
+    ],
+    "listeningTraits": [
+      "강연회 좌석 예약",
+      "신제품 발표회",
+      "출장 정산",
+      "업무 분담"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2010_12.json"
+  },
+  {
+    "examId": "2010-07",
+    "title": "2010年 第1回 (7月) JLPT N2 本試験",
+    "date": "2010-07-04",
+    "totalItems": 105,
+    "languageKnowledgeReadingItems": 73,
+    "listeningItems": 32,
+    "difficulty": "중 (신JLPT 체제 역사적 첫 본시험)",
+    "vocabHighlights": [
+      "衰える",
+      "著しい",
+      "維持",
+      "過剰",
+      "うんざり",
+      "見当",
+      "のろのろ",
+      "温和",
+      "辞退",
+      "要点"
+    ],
+    "grammarHighlights": [
+      "〜上は",
+      "〜にすぎない",
+      "〜つつある",
+      "〜っこない",
+      "〜をこめて",
+      "〜お目にかかる",
+      "〜かねない"
+    ],
+    "readingThemes": [
+      "신JLPT 출범과 종합적 일본어 능력",
+      "독서와 상상력",
+      "인간관계와 공감",
+      "환경 보호",
+      "시설 이용 규정"
+    ],
+    "listeningTraits": [
+      "역 구내 방송",
+      "회의 일정 조율",
+      "자료 복사 의뢰",
+      "사내 안내"
+    ],
+    "status": "archived_data",
+    "file": "database/past_exams/2010_07.json"
+  },
+  {
+    "examId": "OFFICIAL-VOL2",
+    "title": "JLPT N2 公式問題集 第2集 (2018)",
+    "date": "2018-12-01",
+    "totalItems": 104,
+    "languageKnowledgeReadingItems": 72,
+    "listeningItems": 32,
+    "difficulty": "표준 (일본국제교류기금·JEES 공인 표준 실전 문제집)",
+    "vocabHighlights": [
+      "抱く",
+      "鈍い",
+      "配慮",
+      "専念",
+      "あやふや",
+      "手際",
+      "めきめき",
+      "柔軟",
+      "免除",
+      "日課"
+    ],
+    "grammarHighlights": [
+      "〜に伴って",
+      "〜わけにはいかない",
+      "〜に際して",
+      "〜かねる",
+      "〜以上は",
+      "〜を通じて",
+      "〜にわたって"
+    ],
+    "readingThemes": [
+      "공식 출제 기준 종합 독해 5개 유형 완벽 반영",
+      "정보검색 표준",
+      "통합이해 비교"
+    ],
+    "listeningTraits": [
+      "공식 주최측 전문 성우 녹음 스크립트 기준 음성"
+    ],
+    "status": "official_reference_ready",
+    "file": "database/past_exams/official_vol2.json"
+  }
+]

@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLPT N2 公式問題集 第2集 総合実践模試 (107問 決定版)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    /* Real JLPT Monochrome Paper Exam Theme */
+    :root {
+      --desk-bg: #ececec;
+      --paper-bg: #ffffff;
+      --paper-border: #1a1a1a;
+      --text-main: #111111;
+      --text-sub: #4b5563;
+      --text-muted: #6b7280;
+      --line-color: #262626;
+      --box-border: #171717;
+      --omr-selected-bg: #18181b;
+      --omr-selected-text: #ffffff;
+    }
+
+    .dark-theme {
+      --desk-bg: #0f172a;
+      --paper-bg: #1e293b;
+      --paper-border: #475569;
+      --text-main: #f8fafc;
+      --text-sub: #cbd5e1;
+      --text-muted: #94a3b8;
+      --line-color: #475569;
+      --box-border: #475569;
+      --omr-selected-bg: #38bdf8;
+      --omr-selected-text: #0f172a;
+    }
+
+    body {
+      background-color: var(--desk-bg);
+      color: var(--text-main);
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", "Hiragino Kaku Gothic ProN", Meiryo, serif, sans-serif;
+      min-height: 100vh;
+    }
+
+    .jlpt-paper {
+      background-color: var(--paper-bg);
+      border: 2px solid var(--paper-border);
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.12), 0 2px 6px -1px rgba(0, 0, 0, 0.08);
+    }
+
+    .jlpt-header-box {
+      border: 2px solid var(--box-border);
+      outline: 1px solid var(--box-border);
+      outline-offset: 2px;
+    }
+
+    .jlpt-passage {
+      line-height: 2.1;
+      letter-spacing: 0.03em;
+      font-size: 1.05rem;
+      text-align: justify;
+    }
+
+    .omr-choice-btn {
+      transition: all 0.12s ease;
+      border: 1.5px solid var(--box-border);
+      background-color: var(--paper-bg);
+      color: var(--text-main);
+    }
+    .hidden {
+      display: none !important;
+    }
+
+    .omr-choice-btn:hover {
+      background-color: #f4f4f5;
+    }
+    .dark-theme .omr-choice-btn:hover {
+      background-color: #334155;
+    }
+    .omr-choice-btn.selected {
+      background-color: var(--omr-selected-bg);
+      color: var(--omr-selected-text);
+      border-color: var(--omr-selected-bg);
+    }
+
+    .omr-circle {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1.5px solid currentColor;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+    }
+    .omr-choice-btn.selected .omr-circle {
+      background-color: currentColor;
+      color: var(--paper-bg);
+    }
+
+    ruby rt {
+      font-size: 0.65em;
+      user-select: none;
+    }
+
+    @keyframes wave {
+      0%, 100% { height: 4px; }
+      50% { height: 16px; }
+    }
+    .sound-bar {
+      display: inline-block;
+      width: 2.5px;
+      height: 4px;
+      background-color: currentColor;
+      border-radius: 1px;
+      animation: wave 1.2s infinite ease-in-out;
+    }
+    .sound-bar:nth-child(2) { animation-delay: 0.15s; }
+    .sound-bar:nth-child(3) { animation-delay: 0.3s; }
+    .sound-bar:nth-child(4) { animation-delay: 0.45s; }
+    .sound-bar:nth-child(5) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body class="p-2 sm:p-6 antialiased">
+  <div id="app" class="max-w-6xl mx-auto">
+    
+    <!-- ================================================================= -->
+    <!-- Screen 1: Intro (시험지 표지 스타일) -->
+    <!-- ================================================================= -->
+    <section id="screen-intro" class="jlpt-paper rounded-lg p-6 sm:p-12 max-w-3xl mx-auto my-4 space-y-8">
+      <div class="jlpt-header-box p-6 text-center space-y-3 bg-white">
+        <div class="text-xs tracking-widest text-neutral-600 font-sans font-semibold uppercase">
+          日本語能力試験 公式問題集 第２集 原本対照 · 個人学習用 実戦模試
+        </div>
+        <div class="text-xs font-mono font-bold tracking-widest text-neutral-800 border-b border-neutral-300 pb-1 inline-block">
+          Official Practice Workbook Vol. 2 Base (ブラウザTTS聴解演習)
+        </div>
+        <h1 class="text-3xl sm:text-5xl font-black tracking-tight text-neutral-950 font-serif pt-1">
+          Ｎ２ 実戦模試
+        </h1>
+        <div class="text-sm font-sans font-bold text-neutral-800 tracking-wider">
+          第1限：言語知識・読解 (105分) ➔ 休憩 ➔ 第2限：聴解 (50分)
+        </div>
+      </div>
+
+      <!-- Real Period Schedule Table -->
+      <div class="border border-neutral-800 text-xs sm:text-sm divide-y divide-neutral-800 font-sans">
+        <div class="grid grid-cols-4 divide-x divide-neutral-800 bg-neutral-100 font-bold text-center py-2">
+          <div>교시 (교시 구분)</div>
+          <div>영역 (セクション)</div>
+          <div>문항 수</div>
+          <div>제한시간</div>
+        </div>
+        <div class="grid grid-cols-4 divide-x divide-neutral-800 text-center py-2.5 items-center">
+          <div class="font-bold text-neutral-900">第1限 (1교시)</div>
+          <div class="text-left px-3">
+            <div class="font-semibold">言語知識（文字・語彙・文法）</div>
+            <div class="font-semibold">読解 (短文·中文·統合·長文·情報)</div>
+          </div>
+          <div class="font-bold text-base">75 問<br><span class="text-[11px] font-normal text-neutral-500">(問1~75)</span></div>
+          <div class="font-mono font-bold text-neutral-900">105分<br><span class="text-[11px] font-normal text-neutral-500">자유 이동 가능</span></div>
+        </div>
+        <div class="grid grid-cols-4 divide-x divide-neutral-800 text-center py-2 bg-neutral-100 font-bold items-center">
+          <div>-</div>
+          <div class="text-neutral-700">中間 休憩 (중간 휴식)</div>
+          <div>-</div>
+          <div class="text-neutral-700">10分 / 조기진입 가능</div>
+        </div>
+        <div class="grid grid-cols-4 divide-x divide-neutral-800 text-center py-2.5 items-center bg-neutral-50">
+          <div class="font-bold text-neutral-900">第2限 (2교시)</div>
+          <div class="text-left px-3">
+            <div class="font-semibold">聴解 (실전 논스톱 방송)</div>
+            <div class="text-[11px] text-neutral-500">課題·ポイント·概要·即時応答·統合</div>
+          </div>
+          <div class="font-bold text-base">32 問<br><span class="text-[11px] font-normal text-neutral-500">(問76~107)</span></div>
+          <div class="font-mono font-bold text-neutral-900">約 50分<br><span class="text-[11px] font-normal text-red-600">되돌아가기 불가</span></div>
+        </div>
+      </div>
+
+      <!-- Real Exam Instructions Box -->
+      <div class="border-2 border-neutral-900 p-5 space-y-2.5 text-xs sm:text-sm font-sans bg-neutral-50/50 leading-relaxed">
+        <div class="font-bold text-neutral-950 text-center pb-2 border-b border-neutral-300 text-sm">
+          受験上の注意 (실제 시험 동일 운영 규격)
+        </div>
+        <ol class="list-decimal list-inside space-y-1 text-neutral-800">
+          <li><strong>1교시(1~75문항)</strong>: 105분의 제한시간 동안 어휘·문법·독해 문제를 자유롭게 이동하며 풀 수 있습니다. 다 푼 경우 언제든지 <strong>「1교시 조기 종료」</strong> 버튼으로 휴식 및 청해로 넘어갈 수 있습니다.</li>
+          <li><strong>중간 휴식</strong>: 1교시 종료 후 휴식 타이머가 작동하며, 원하시면 <strong>「휴식 건너뛰기」</strong>로 즉시 청해를 시작하실 수 있습니다.</li>
+          <li><strong>2교시 청해(76~107문항) 실전 규격</strong>:
+            - 실제 방송처럼 음성이 멈춤 없이 76번부터 107번까지 논스톱으로 흘러갑니다.
+            - **임의로 문제를 건너뛰거나 이전 문제로 되돌아가서 다시 듣는 것은 원천 차단**됩니다.
+            - 107번의 12초 마킹 카운트다운이 종료되는 순간 시험이 즉시 종료되고 성적표가 출력됩니다.
+          </li>
+          <li><strong>선택지 해제(토글)</strong>: 실제 시험처럼 1~4번만 제공되며, 이미 선택한 번호를 다시 누르면 마킹이 해제됩니다.</li>
+        </ol>
+      </div>
+
+      <!-- Start Button -->
+      <div class="text-center pt-2">
+        <button id="btn-start-exam" onclick="startSection1()" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest">
+          第1限 開始 (1교시 언어지식·독해 시작)
+        </button>
+        <div class="text-[11px] text-neutral-500 font-sans mt-2">
+          ※ 「第1限 開始」를 누르면 1교시(105분) 타이머가 시작됩니다.
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- Screen 2: Quiz (2-Column Monochrome Exam Paper) -->
+    <!-- ================================================================= -->
+    <section id="screen-quiz" class="hidden space-y-4">
+      
+      <!-- Top Control Bar (시험지 상단 헤더) -->
+      <div class="jlpt-paper rounded-lg p-3 sm:p-4 flex items-center justify-between font-sans">
+        <div class="flex items-center gap-2 sm:gap-4">
+          <div id="badge-period-name" class="px-2.5 py-1 bg-neutral-900 text-white font-mono font-bold text-xs rounded">
+            第1限 (1교시)
+          </div>
+          <div class="font-serif font-bold text-sm sm:text-base tracking-wide" id="badge-section-title">
+            言語知識（文字・語彙・文法）・読解
+          </div>
+          <span id="badge-listening-onair" class="hidden inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-red-700 text-white font-bold text-[11px]">
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+            ON AIR 聴解 放送中 (재청취 불가)
+          </span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <!-- Live Timer -->
+          <div class="flex items-center gap-1.5 font-mono text-xs font-bold border border-neutral-800 px-3 py-1 rounded bg-neutral-50">
+            <span id="timer-icon">⏱️ 남은시간</span>
+            <span id="period-timer" class="text-sm">105:00</span>
+          </div>
+          <!-- Dark/Paper theme toggle -->
+          <button onclick="toggleTheme()" class="px-2 py-1 border border-neutral-400 hover:border-neutral-800 rounded text-xs text-neutral-700 font-medium">
+            🌓 画面切替
+          </button>
+        </div>
+      </div>
+
+      <!-- Main 2-Column Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+        
+        <!-- Left Column: Official Exam Paper & Questions (lg:col-span-7) -->
+        <div class="lg:col-span-7 space-y-4">
+          <div class="jlpt-paper rounded-lg p-6 sm:p-8 space-y-6 min-h-[500px]">
+            
+            <!-- Listening ON-AIR Broadcast Status Panel (2교시 청해 시에만 노출) -->
+            <div id="listening-status-panel" class="hidden border-2 border-neutral-900 bg-neutral-100 p-4 space-y-3 font-sans rounded">
+              <div class="flex items-center justify-between border-b border-neutral-300 pb-2">
+                <div class="flex items-center gap-2 text-neutral-900 font-bold text-xs">
+                  <div class="flex items-end gap-0.5 h-4 text-neutral-900">
+                    <span class="sound-bar"></span>
+                    <span class="sound-bar"></span>
+                    <span class="sound-bar"></span>
+                    <span class="sound-bar"></span>
+                    <span class="sound-bar"></span>
+                  </div>
+                  <span id="listening-phase-text">音声放送中 (대화 및 문제 청취)...</span>
+                </div>
+              </div>
+
+              <!-- Answer Countdown Progress Bar -->
+              <div id="countdown-container" class="space-y-1">
+                <div class="flex justify-between text-[11px] text-neutral-700 font-medium">
+                  <span id="countdown-label">解答時間 (自動進行)</span>
+                  <span id="countdown-timer-text" class="font-mono font-bold text-neutral-950">12秒</span>
+                </div>
+                <div class="w-full bg-neutral-300 rounded-full h-2 overflow-hidden border border-neutral-400">
+                  <div id="countdown-progress-bar" class="bg-neutral-900 h-2 rounded-full transition-all duration-300" style="width: 100%;"></div>
+                </div>
+              </div>
+              <div class="text-[10px] text-neutral-500">
+                ※ 실전 시험과 동일하게 방송이 멈추지 않고 흘러갑니다. 이전 문제로 돌아가서 다시 들을 수 없습니다.
+              </div>
+            </div>
+
+            <!-- Problem Header Badge -->
+            <div class="flex items-center justify-between border-b-2 border-neutral-900 pb-2 font-sans">
+              <div class="flex items-center gap-2">
+                <span id="badge-problem-no" class="font-bold text-base sm:text-lg text-neutral-950">
+                  問題１
+                </span>
+                <span id="badge-part-name" class="text-xs text-neutral-600">
+                  (文字・語彙)
+                </span>
+              </div>
+              <div class="text-xs font-mono font-bold text-neutral-700">
+                問 <span id="q-curr-num">1</span> / <span id="q-total-period-num">75</span>
+              </div>
+            </div>
+
+            <!-- Official Instruction Box -->
+            <div id="q-instruction" class="text-xs sm:text-sm font-serif leading-relaxed p-4 border border-neutral-400 bg-neutral-50/70 text-neutral-900 whitespace-pre-wrap rounded"></div>
+
+            <!-- Question Stem (Prompt) -->
+            <div class="space-y-3">
+              <div class="text-xs font-sans font-bold tracking-wider text-neutral-500 uppercase">
+                問い (問題文)
+              </div>
+              <div id="q-prompt" class="jlpt-passage p-5 border border-neutral-800 bg-white rounded text-neutral-950 whitespace-pre-wrap"></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Sticky OMR Answer Sheet & Choices (lg:col-span-5) -->
+        <div class="lg:col-span-5 lg:sticky lg:top-4 space-y-4 font-sans">
+          
+          <!-- OMR Answer Sheet Card -->
+          <div class="jlpt-paper rounded-lg p-5 sm:p-6 space-y-5">
+            <div class="flex items-center justify-between border-b-2 border-neutral-900 pb-2">
+              <div class="flex items-center gap-2">
+                <span class="text-xs font-black tracking-wider uppercase">解答欄 (OMR SHEET)</span>
+              </div>
+              <span id="q-side-badge" class="font-mono text-xs font-bold px-2 py-0.5 bg-neutral-900 text-white rounded">
+                問 1
+              </span>
+            </div>
+
+            <!-- Choices List (1~4 only) -->
+            <div id="q-choices" class="space-y-2"></div>
+
+            <div class="text-[11px] text-neutral-500 text-center">
+              ※ 모르는 문제는 마킹하지 않고 넘어가시면 됩니다. (재클릭 시 마킹 해제)
+            </div>
+
+            <!-- Navigation Buttons -->
+            <div class="pt-2 border-t border-neutral-300 space-y-2.5">
+              <div class="flex items-center gap-2">
+                <button id="btn-prev" onclick="prevQuestion()" class="flex-1 py-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-xs sm:text-sm font-bold border border-neutral-400 rounded transition-colors disabled:opacity-30 disabled:cursor-not-allowed">
+                  ← 前の問題
+                </button>
+                <button id="btn-next" onclick="nextQuestion()" class="flex-1 py-2.5 bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded transition-colors shadow">
+                  <span id="btn-next-text">次の問題 →</span>
+                </button>
+              </div>
+
+              <!-- Section 1 specific finish action -->
+              <div id="section1-actions" class="flex items-center justify-between text-xs pt-1 border-t border-neutral-200">
+                <button onclick="goToNextUnansweredInSection1()" class="text-neutral-600 hover:text-neutral-950 underline font-medium">
+                  未回答問題へ移動
+                </button>
+                <button onclick="confirmFinishSection1()" class="text-blue-700 hover:text-blue-900 font-bold underline">
+                  第1限終了・休憩へ (조기종료) →
+                </button>
+              </div>
+
+              <!-- Section 2 specific finish action -->
+              <div id="section2-actions" class="hidden text-right text-xs pt-1 border-t border-neutral-200">
+                <button onclick="confirmSubmitAll()" class="text-red-700 hover:text-red-900 font-bold underline">
+                  全試験終了・採点
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mini Palette Navigation (교시별 분리 렌더링) -->
+          <div class="jlpt-paper rounded-lg p-3.5 space-y-2">
+            <div class="flex items-center justify-between text-[11px] font-medium text-neutral-600">
+              <span id="palette-period-title">第1限 パレット (1 ~ 75)</span>
+              <span id="palette-summary-count" class="font-mono font-bold text-neutral-900">0/75 回答済</span>
+            </div>
+            <div id="palette-grid" class="grid grid-cols-9 sm:grid-cols-12 gap-1 max-h-36 overflow-y-auto p-1 bg-neutral-100 rounded border border-neutral-300"></div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- Screen Break: 중간 휴식 화면 (Intermission) -->
+    <!-- ================================================================= -->
+    <section id="screen-break" class="hidden jlpt-paper rounded-lg p-6 sm:p-12 max-w-2xl mx-auto my-8 space-y-6 text-center font-sans">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-neutral-200 text-neutral-800 text-xs font-bold uppercase">
+        第1限 終了 · 中間 休憩時間 (INTERMISSION)
+      </div>
+      
+      <h2 class="text-2xl sm:text-3xl font-black font-serif text-neutral-950">
+        第1限（言語知識・読解）が終了しました
+      </h2>
+      
+      <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed max-w-lg mx-auto">
+        수고하셨습니다. 1교시 답안지가 회수되었습니다.<br>
+        실제 시험 규격에 따라 <strong>제2교시(청해) 시험 시작 전 휴식 시간</strong>이 주어집니다.<br>
+        잠시 숨을 고르시고, 준비되셨을 때 청해를 시작해 주세요.
+      </p>
+
+      <!-- Section 1 Summary Stats in Break -->
+      <div class="border border-neutral-300 bg-neutral-50 p-4 rounded max-w-md mx-auto grid grid-cols-2 divide-x divide-neutral-300 text-xs">
+        <div>
+          <div class="text-neutral-500 mb-0.5">1교시 마킹 완료</div>
+          <div id="break-stat-marked" class="text-lg font-mono font-bold text-neutral-900">0 / 75 問</div>
+        </div>
+        <div>
+          <div class="text-neutral-500 mb-0.5">1교시 소요 시간</div>
+          <div id="break-stat-time" class="text-lg font-mono font-bold text-neutral-900">00:00</div>
+        </div>
+      </div>
+
+      <!-- Break Timer Box -->
+      <div class="border-2 border-neutral-900 p-6 rounded bg-white max-w-md mx-auto space-y-2">
+        <div class="text-xs font-bold text-neutral-500 uppercase tracking-widest">
+          第2限（聴解）開始までの残り休憩時間
+        </div>
+        <div id="break-countdown-timer" class="text-4xl sm:text-5xl font-mono font-black text-neutral-950">
+          10:00
+        </div>
+        <div class="text-[11px] text-neutral-500">
+          ※ 시간이 00:00이 되면 자동으로 청해 시험이 시작됩니다.
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="pt-4 space-y-3 max-w-md mx-auto">
+        <button onclick="startSection2()" class="w-full py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-sm sm:text-base rounded shadow transition-all flex items-center justify-center gap-2">
+          <span>休憩を終了し、第2限（聴解 32問）を開始する →</span>
+        </button>
+        <button onclick="resumeSection1()" class="w-full py-2.5 bg-white hover:bg-neutral-100 text-neutral-800 font-bold text-xs sm:text-sm border border-neutral-400 rounded transition-all flex items-center justify-center gap-2">
+          <span>← 第1限に戻って見直す (1교시로 돌아가서 다시 풀기)</span>
+        </button>
+        <div class="text-[11px] text-neutral-500">
+          (언제든지 위 버튼을 눌러 청해를 바로 시작하거나 1교시로 돌아갈 수 있습니다)
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- Screen: 聴解 公式 導入案内 & 音量確認 (실제 시험 공식 오프닝 인트로) -->
+    <!-- ================================================================= -->
+    <section id="screen-listening-intro" class="hidden jlpt-paper rounded-lg p-6 sm:p-10 max-w-2xl mx-auto my-8 space-y-6 text-center font-sans">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-neutral-900 text-white text-xs font-bold uppercase">
+        第2限 聴解試験 導入案内 (OPENING & 音量確認)
+      </div>
+      
+      <h2 class="text-2xl sm:text-3xl font-black font-serif text-neutral-950">
+        日本語能力試験 Ｎ２ 聴解
+      </h2>
+      
+      <!-- Official Script Box -->
+      <div class="border border-neutral-400 bg-neutral-50 p-5 rounded text-left space-y-2 text-xs sm:text-sm font-serif leading-relaxed text-neutral-800">
+        <div class="font-bold text-neutral-950 border-b border-neutral-300 pb-1 font-sans flex items-center justify-between">
+          <span>【公式 導入アナウンス (공식 오프닝 & 음량 확인 방송)】</span>
+          <span class="text-xs font-mono text-neutral-500 font-normal">📻 音声放送中...</span>
+        </div>
+        <p>これより、日本語能力試験 Ｎ２の聴解試験を始めます。</p>
+        <p>問題用紙を開けてください。問題用紙に汚れや破れがある場合、または印刷がはっきりしない場合は、手を挙げてください。</p>
+        <p class="font-bold text-neutral-900 bg-white p-2 rounded border border-neutral-300">
+          「音の大きさを確かめます。音が聞こえにくい場合は、手を挙げてください。<br>
+          …… 天気がいいから、散歩しましょう。<br>
+          …… いかがですか。よろしいですか。」
+        </p>
+        <p class="pt-1 font-bold text-neutral-950">「それでは、始めます。」</p>
+      </div>
+
+      <div class="text-xs text-neutral-600 font-sans leading-relaxed">
+        ※ 실제 시험장과 동일하게 공식 오프닝 및 음량 체크 멘트가 방송됩니다.<br>
+        소리가 적당한지 확인하시거나, 언제든 아래 건너뛰기 버튼을 누르실 수 있습니다.
+      </div>
+
+      <!-- Skip / Proceed Actions -->
+      <div class="pt-2 space-y-2 max-w-md mx-auto font-sans">
+        <button onclick="skipListeningIntro()" class="w-full py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white font-bold text-sm sm:text-base rounded shadow transition-all flex items-center justify-center gap-2">
+          <span>イントロをスキップして問題１を開始する (바로 시작) →</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- Screen 3: Result & Explanations (채점 및 성적통지표) -->
+    <!-- ================================================================= -->
+    <section id="screen-result" class="hidden space-y-6 font-sans">
+      <div class="jlpt-paper rounded-lg p-6 sm:p-10 space-y-8">
+        
+        <div class="border-b-2 border-neutral-900 pb-4 text-center space-y-1">
+          <div class="text-xs font-bold text-neutral-500 tracking-widest uppercase">
+            日本語能力試験 実践模試 採点結果通知書
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-black font-serif text-neutral-950">
+            合否判定及び成績詳細
+          </h2>
+          <p class="text-xs text-neutral-600">
+            公式問題集 第２集 (107問) 基準 · 目標 110点 / 180点 到達度分析
+          </p>
+        </div>
+
+        <!-- Pass Projection Banner -->
+        <div class="border-2 border-neutral-900 p-6 rounded bg-neutral-50 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <div class="text-xs font-bold text-neutral-500 uppercase mb-1">合否判定 (判定基準: 90点合格 / 110点目標)</div>
+            <div id="stat-pass-status" class="text-3xl sm:text-4xl font-black text-neutral-950 font-serif">採点中...</div>
+            <div id="stat-pass-detail" class="text-xs text-neutral-700 mt-1">목표 110점 통과 여부 및 N2 접수 진단</div>
+          </div>
+          <div class="text-center sm:text-right border-t sm:border-t-0 sm:border-l border-neutral-300 pt-3 sm:pt-0 sm:pl-6">
+            <div class="text-xs text-neutral-500 mb-1">得点換算</div>
+            <div id="stat-scaled-score" class="text-3xl sm:text-4xl font-mono font-black text-neutral-900">0 / 180 点</div>
+            <div id="stat-total-percent" class="text-xs font-mono text-neutral-600 mt-1">正答率 0%</div>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <div class="border border-neutral-800 p-3.5 rounded bg-white">
+            <div class="text-xs text-neutral-500 mb-1">正答数 / 総問題数</div>
+            <div id="stat-total-score" class="text-xl font-mono font-black text-neutral-950">0 / 107</div>
+          </div>
+          <div class="border border-neutral-800 p-3.5 rounded bg-white">
+            <div class="text-xs text-neutral-500 mb-1">総所要時間</div>
+            <div id="stat-total-time" class="text-xl font-mono font-black text-neutral-950">00:00</div>
+          </div>
+          <div class="border border-neutral-800 p-3.5 rounded bg-white">
+            <div class="text-xs text-neutral-500 mb-1">誤答 / 未回答</div>
+            <div id="stat-wrong-unanswered" class="text-xl font-mono font-black text-neutral-950">0 / 0</div>
+          </div>
+          <div class="border border-neutral-800 p-3.5 rounded bg-white">
+            <div class="text-xs text-neutral-500 mb-1">복습 대상 문항</div>
+            <div id="stat-review-count" class="text-xl font-mono font-black text-neutral-950">0 問</div>
+          </div>
+        </div>
+
+        <!-- Section Breakdown -->
+        <div class="space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-neutral-600">領域別 得点状況</div>
+          <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
+            <div class="border border-neutral-400 p-3 rounded bg-white">
+              <div class="text-xs font-bold text-neutral-900 flex justify-between">
+                <span>文字・語彙 (32問)</span>
+                <span id="stat-section-vocab" class="font-mono">-</span>
+              </div>
+              <div class="text-[11px] text-neutral-500 mt-1 flex justify-between">
+                <span>소요시간</span>
+                <span id="stat-section-vocab-time">-</span>
+              </div>
+            </div>
+            <div class="border border-neutral-400 p-3 rounded bg-white">
+              <div class="text-xs font-bold text-neutral-900 flex justify-between">
+                <span>文法 (22問)</span>
+                <span id="stat-section-grammar" class="font-mono">-</span>
+              </div>
+              <div class="text-[11px] text-neutral-500 mt-1 flex justify-between">
+                <span>소요시간</span>
+                <span id="stat-section-grammar-time">-</span>
+              </div>
+            </div>
+            <div class="border border-neutral-400 p-3 rounded bg-white">
+              <div class="text-xs font-bold text-neutral-900 flex justify-between">
+                <span>読解 (21問)</span>
+                <span id="stat-section-reading" class="font-mono">-</span>
+              </div>
+              <div class="text-[11px] text-neutral-500 mt-1 flex justify-between">
+                <span>소요시간</span>
+                <span id="stat-section-reading-time">-</span>
+              </div>
+            </div>
+            <div class="border border-neutral-400 p-3 rounded bg-white">
+              <div class="text-xs font-bold text-neutral-900 flex justify-between">
+                <span>聴解 (32問)</span>
+                <span id="stat-section-listening" class="font-mono">-</span>
+              </div>
+              <div class="text-[11px] text-neutral-500 mt-1 flex justify-between">
+                <span>소요시간</span>
+                <span id="stat-section-listening-time">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Endurance Analysis -->
+        <div class="border border-neutral-800 p-4 rounded bg-neutral-50 space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-neutral-900">
+            ⚡ 전반부(1교시) vs 후반부(2교시) 실전 멘탈 지구력 (Endurance Analysis)
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="p-2.5 border border-neutral-300 bg-white rounded">
+              <div class="text-neutral-500">第1限 (1 ~ 75문항 : 어휘·문법·독해)</div>
+              <div class="flex justify-between items-baseline mt-1 font-bold">
+                <span id="stat-first-half" class="text-sm font-mono">-</span>
+                <span id="stat-first-half-time" class="text-[11px] text-neutral-600">-</span>
+              </div>
+            </div>
+            <div class="p-2.5 border border-neutral-300 bg-white rounded">
+              <div class="text-neutral-500">第2限 (76 ~ 107문항 : 청해 논스톱)</div>
+              <div class="flex justify-between items-baseline mt-1 font-bold">
+                <span id="stat-second-half" class="text-sm font-mono">-</span>
+                <span id="stat-second-half-time" class="text-[11px] text-neutral-600">-</span>
+              </div>
+            </div>
+          </div>
+          <div id="endurance-commentary" class="text-xs text-neutral-700 leading-relaxed pt-1"></div>
+        </div>
+
+        <!-- Copy JSON Button -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-neutral-300">
+          <div class="text-xs text-neutral-600">
+            ※ 채점 결과 JSON을 클립보드에 복사하여 대화창에 전달하면 학습 원장(`database/jlpt_learning.db`)에 즉시 반영됩니다.
+          </div>
+          <button onclick="copyResultJSON()" class="w-full sm:w-auto px-6 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all">
+            📋 DB 기록용 JSON 결과 복사
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Explanations Filter -->
+      <div class="jlpt-paper rounded-lg p-4 flex flex-wrap items-center justify-between gap-2">
+        <div class="text-xs font-bold text-neutral-900 font-serif">全問題 詳細解説 (전 문항 한국어 해설)</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-xs font-sans">
+          <button onclick="renderAllExplanations('all')" class="px-3 py-1 rounded bg-neutral-900 text-white font-medium">전체 (107)</button>
+          <button onclick="renderAllExplanations('wrong')" class="px-3 py-1 rounded bg-neutral-200 hover:bg-neutral-300 text-red-800 font-medium">오답·미응답만</button>
+          <button onclick="renderAllExplanations('vocab')" class="px-3 py-1 rounded bg-neutral-100 hover:bg-neutral-200 text-neutral-700">어휘 (32)</button>
+          <button onclick="renderAllExplanations('grammar')" class="px-3 py-1 rounded bg-neutral-100 hover:bg-neutral-200 text-neutral-700">문법 (22)</button>
+          <button onclick="renderAllExplanations('reading')" class="px-3 py-1 rounded bg-neutral-100 hover:bg-neutral-200 text-neutral-700">독해 (21)</button>
+          <button onclick="renderAllExplanations('listening')" class="px-3 py-1 rounded bg-neutral-100 hover:bg-neutral-200 text-neutral-700">청해 (32)</button>
+        </div>
+      </div>
+
+      <!-- Explanations List Container -->
+      <div id="explanations-list" class="space-y-4 font-sans"></div>
+    </section>
+
+  </div>
+
+  <script>
+    // --- Data Ingestion ---
+    const RAW_QUESTIONS = [{"id": 1, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題1", "category": "어휘 → 언어지식 → 한자읽기", "subtype": "漢字読み", "instruction": "（　）の言葉の読み方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "先生に（貴重）な資料を見せていただいた。", "choices": ["きじゅう", "きちょう", "きっじゅう", "きっちょう"], "answer": 1, "translation": "선생님께서 귀중한 자료를 보여주셨다.", "connection": "名詞・な形容詞「貴重（きちょう）だ」", "meaning": "매우 귀하고 소중함.", "trap": "重을 じゅう로 잘못 읽는 함정 배제.", "contrast": "「貴重な体験（귀중한 체험）」 등으로 빈출.", "example": "<ruby>貴重<rt>きちょう</rt></ruby>な時間を割いていただき、ありがとうございました。", "nextReview": "D+1: 2026-09-21"}, {"id": 2, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題1", "category": "어휘 → 언어지식 → 한자읽기", "subtype": "漢字読み", "instruction": "（　）の言葉の読み方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "その話を聞いて、とても（怪しい）と思った。", "choices": ["むなしい", "くやしい", "おかしい", "あやしい"], "answer": 3, "translation": "그 이야기를 듣고, 대단히 수상하다고 생각했다.", "connection": "い形容詞「怪しい（あやしい）」", "meaning": "의심스럽다, 수상쩍다, 불확실하다.", "trap": "むなしい(허무하다), くやしい(분하다), おかしい(이상하다/우스꽝스럽다)와의 훈독 혼동.", "contrast": "「雲行きが怪しい（날씨가 수상쩍다/불안하다）」.", "example": "夜遅く、家の周りを<ruby>怪<rt>あや</rt></ruby>しい人物が歩いていた。", "nextReview": "D+1: 2026-09-21"}, {"id": 3, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題1", "category": "어휘 → 언어지식 → 한자읽기", "subtype": "漢字読み", "instruction": "（　）の言葉の読み方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "佐藤さんは（容姿）も性格もいい。", "choices": ["よし", "ようし", "ようす", "よす"], "answer": 1, "translation": "사토 씨는 외모도 성격도 좋다.", "connection": "名詞「容姿（ようし）」", "meaning": "얼굴 모양과 몸매, 용모.", "trap": "容의 장음 よう와 様子(ようす)와의 혼동 주의.", "contrast": "「容姿端麗（용모가 단정하고 아름다움）」.", "example": "彼女は<ruby>容姿<rt>ようし</rt></ruby>端麗で、周囲の注目を集めている。", "nextReview": "D+1: 2026-09-21"}, {"id": 4, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題1", "category": "어휘 → 언어지식 → 한자읽기", "subtype": "漢字読み", "instruction": "（　）の言葉の読み方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "これは危険を（伴う）実験だ。", "choices": ["はらう", "あつかう", "ともなう", "すくう"], "answer": 2, "translation": "이것은 위험을 수반하는(동반하는) 실험이다.", "connection": "動詞「伴う（ともなう）」", "meaning": "동반하다, 따르다, 수반하다.", "trap": "あつかう(다루다), はらう(지불하다/털다), すくう(구하다)와의 훈독 구별.", "contrast": "N2 문법 「〜に伴って」의 기본 동사형.", "example": "大きな改革には、痛みが<ruby>伴<rt>ともな</rt></ruby>うものだ。", "nextReview": "D+1: 2026-09-21"}, {"id": 5, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題1", "category": "어휘 → 언어지식 → 한자읽기", "subtype": "漢字読み", "instruction": "（　）の言葉の読み方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "以前は、海外で暮らしたいという（願望）が強かった。", "choices": ["がんぼう", "げんぼう", "がんぼ", "げんぼ"], "answer": 0, "translation": "이전에는 해외에서 살고 싶다는 소망(간청)이 강했다.", "connection": "名詞「願望（がんぼう）」", "meaning": "어떤 일이 실현되기를 바람.", "trap": "願의 음독 がん과 望의 장음 ぼう. げん으로 읽지 않도록 주의.", "contrast": "「希望（きぼう）」와 유사하지만 마음속 깊은 바람을 뜻함.", "example": "世界一周旅行をすることが、彼の長年の<ruby>願望<rt>がんぼう</rt></ruby>だ。", "nextReview": "D+1: 2026-09-21"}, {"id": 6, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題2", "category": "어휘 → 언어지식 → 한자표기", "subtype": "表記", "instruction": "（　）の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選んでください。", "prompt": "友人を家に（まねいた）。", "choices": ["伯いた", "招いた", "泊いた", "召いた"], "answer": 1, "translation": "친구를 집에 초대했다.", "connection": "動詞「招く（まねく）」", "meaning": "초대하다, 불러오다.", "trap": "유사 한자 伯, 泊, 召 와의 혼동 배제. 手변의 招.", "contrast": "「誤解を招く（오해를 부르다）」로도 빈출.", "example": "結婚披露宴に恩師を<ruby>招<rt>まね</rt></ruby>いた。", "nextReview": "D+1: 2026-09-21"}, {"id": 7, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題2", "category": "어휘 → 언어지식 → 한자표기", "subtype": "表記", "instruction": "（　）の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選んでください。", "prompt": "この商品は安全性が（ほしょう）されている。", "choices": ["補証", "保正", "保証", "補正"], "answer": 2, "translation": "이 상품은 안전성이 보증되어 있다.", "connection": "名詞・サ変「保証（ほしょう）」", "meaning": "확실하다고 증명함, 책임짐.", "trap": "同音異義語: 保障(안전보장), 補償(손해배상/보상), 補正(보정).", "contrast": "품질이나 안전을 입증할 때는 「保証」를 씁니다.", "example": "メーカーの１年<ruby>保証<rt>ほしょう</rt></ruby>が付いている。", "nextReview": "D+1: 2026-09-21"}, {"id": 8, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題2", "category": "어휘 → 언어지식 → 한자표기", "subtype": "表記", "instruction": "（　）の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選んでください。", "prompt": "この企業では、さまざまな（もよおし）を行っている。", "choices": ["携し", "催し", "推し", "権し"], "answer": 1, "translation": "이 기업에서는 다양한 행사(모임)를 열고 있다.", "connection": "名詞「催し（もよおし）」", "meaning": "행사, 모임, 이벤트.", "trap": "유사 부수 携(휴대할 휴), 推(밀 추), 権(권세 권)과의 시각적 혼동.", "contrast": "동사형은 「催す（もよおす）」.", "example": "市民センターで春の<ruby>催<rt>もよお</rt></ruby>し物が開催された。", "nextReview": "D+1: 2026-09-21"}, {"id": 9, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題2", "category": "어휘 → 언어지식 → 한자표기", "subtype": "表記", "instruction": "（　）の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選んでください。", "prompt": "銀行に行って、お札を（こうか）に替えた。", "choices": ["硬貨", "固貨", "硬価", "固価"], "answer": 0, "translation": "은행에 가서 지폐를 동전으로 바꾸었다.", "connection": "名詞「硬貨（こうか）」", "meaning": "금속으로 만든 화폐, 동전.", "trap": "硬과 固, 貨와 価의 혼동 주의.", "contrast": "지폐는 「紙幣（しへい）」 또는 「お札（おさつ）」.", "example": "自動販売機で使うために千円札を<ruby>硬貨<rt>こうか</rt></ruby>に両替した。", "nextReview": "D+1: 2026-09-21"}, {"id": 10, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題2", "category": "어휘 → 언어지식 → 한자표기", "subtype": "表記", "instruction": "（　）の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選んでください。", "prompt": "わが社の商品はここで（せいぞう）されている。", "choices": ["製増", "制増", "制造", "製造"], "answer": 3, "translation": "우리 회사의 상품은 여기서 제조되고 있다.", "connection": "名詞・サ変「製造（せいぞう）」", "meaning": "원료나 재료를 가공하여 제품을 만듦.", "trap": "製와 制의 구별, 造와 増의 구별.", "contrast": "「製品（せいひん）」, 「製作（せいさく）」와 결합.", "example": "最新の設備を備えた工場で精密機械を<ruby>製造<rt>せいぞう</rt></ruby>している。", "nextReview": "D+1: 2026-09-21"}, {"id": 11, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題3", "category": "어휘 → 언어지식 → 파생어·합성어", "subtype": "語形成", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "男女の結婚（　）の違いについて調べた。", "choices": ["観", "識", "念", "察"], "answer": 0, "translation": "남녀의 결혼관의 차이에 대해 조사했다.", "connection": "接尾辞「〜観（かん）」", "meaning": "가치관이나 사물을 바라보는 견해.", "trap": "인식, 개념, 고찰 등과의 결합 혼동.", "contrast": "「人生観（인생관）」, 「価値観（가치관）」, 「世界観（세계관）」.", "example": "世代によって仕事に対する価値<ruby>観<rt>かん</rt></ruby>が大きく異なる。", "nextReview": "D+1: 2026-09-21"}, {"id": 12, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題3", "category": "어휘 → 언어지식 → 파생어·합성어", "subtype": "語形成", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "ここでは（　）水準の医療が受けられる。", "choices": ["頂", "上", "高", "特"], "answer": 2, "translation": "여기에서는 높은 수준의 의료를 받을 수 있다.", "connection": "接頭辞「高〜（こう）」", "meaning": "정도가 높음을 나타냄.", "trap": "上水準이나 頂水準은 일본어에 없는 부자연스러운 조합.", "contrast": "「高水準（고수준）」, 「高学歴（고학력）」, 「高気圧（고기압）」.", "example": "この病院は<ruby>高<rt>こう</rt></ruby>水準な医療技術で国内外から評価されている。", "nextReview": "D+1: 2026-09-21"}, {"id": 13, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題3", "category": "어휘 → 언어지식 → 파생어·합성어", "subtype": "語形成", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "今日は大学の講義で日本（　）の経営について学んだ。", "choices": ["状", "類", "式", "則"], "answer": 2, "translation": "오늘은 대학 강의에서 일본식 경영에 대해 배웠다.", "connection": "接尾辞「〜式（しき）」", "meaning": "방식, 스타일, 양식.", "trap": "일본상, 일본류, 일본칙 배제.", "contrast": "「日本式（일본식）」, 「西洋式（서양식）」.", "example": "欧米とは異なる<ruby>日本式<rt>にほんしき</rt></ruby>の雇用慣行が注目された。", "nextReview": "D+1: 2026-09-21"}, {"id": 14, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題3", "category": "어휘 → 언어지식 → 파생어·합성어", "subtype": "語形成", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "開封しても、（　）使用の物は返品可能です。", "choices": ["外", "否", "前", "未"], "answer": 3, "translation": "개봉했더라도, 미사용 물품은 반품 가능합니다.", "connection": "接頭辞「未〜（み）」", "meaning": "아직 그러하지 않음, 미완성.", "trap": "否사용, 前사용, 外사용 배제.", "contrast": "「未使用（미사용）」, 「未経験（미경험）」, 「未解決（미해결）」.", "example": "タグが付いたままの<ruby>未<rt>み</rt></ruby>使用品に限り交換を受け付けます。", "nextReview": "D+1: 2026-09-21"}, {"id": 15, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題3", "category": "어휘 → 언어지식 → 파생어·합성어", "subtype": "語形成", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "この小説の主人公には、親近（　）がわく。", "choices": ["感", "気", "情", "意"], "answer": 0, "translation": "이 소설의 주인공에게는 친근감이 솟는다(생긴다).", "connection": "接尾辞「〜感（かん）」", "meaning": "느낌, 감정의 상태.", "trap": "친근기, 친근정, 친근의 배제.", "contrast": "「親近感（친근감）」, 「満足感（만족감）」, 「安心感（안심감）」.", "example": "素朴な人柄に接して、思わず親近<ruby>感<rt>かん</rt></ruby>を覚えた。", "nextReview": "D+1: 2026-09-21"}, {"id": 16, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "この大学では一般向けの講座を開き、社会に学習の場を（　）している。", "choices": ["選出", "提供", "指示", "寄付"], "answer": 1, "translation": "이 대학에서는 일반인을 위한 강좌를 열고, 사회에 배움의 장을 제공하고 있다.", "connection": "名詞・サ変「提供（ていきょう）」", "meaning": "이익이나 편의를 위해 자료나 기회를 베풀어 줌.", "trap": "기부(寄付)는 금전/물품 기증, 제공은 장소/기회/정보의 제공.", "contrast": "「場を提供する（자리를 제공하다）」 관용 콜로케이션.", "example": "地域住民に憩いの場を<ruby>提供<rt>ていきょう</rt></ruby>する公園。", "nextReview": "D+1: 2026-09-21"}, {"id": 17, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "今年の夏は暑さが厳しく、仕事から家に帰ると疲れて（　）してしまう。", "choices": ["ぐったり", "しっかり", "すっきり", "ぎっしり"], "answer": 0, "translation": "올해 여름은 더위가 극심하여, 일 끝나고 집에 돌아오면 지쳐서 녹초가 되어 버린다.", "connection": "副詞「ぐったり」", "meaning": "힘이 다 빠져 축 늘어진 모양, 녹초.", "trap": "しっかり(단단히/확실히), すっきり(상쾌하게), ぎっしり(가득 들어차).", "contrast": "「疲れてぐったりする（지쳐서 녹초가 되다）」 연어.", "example": "長旅の疲れでベッドの上に<ruby>ぐったり<rt>녹초</rt></ruby>と横たわった。", "nextReview": "D+1: 2026-09-21"}, {"id": 18, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "学生時代の友人が私の名前を忘れていたので、とても（　）だった。", "choices": ["アウト", "ダウン", "ショック", "エラー"], "answer": 2, "translation": "학창 시절 친구가 내 이름을 잊어버리고 있어서, 너무 충격적이었다.", "connection": "名詞「ショック（shock）」", "meaning": "마음에 큰 충격을 받음.", "trap": "아웃(퇴장/불합격), 다운(기분 저하/쓰러짐), 에러(오류).", "contrast": "「ショックを受ける / ショックだ」.", "example": "信じていた人に裏切られて大きな<ruby>ショック<rt>충격</rt></ruby>を受けた。", "nextReview": "D+1: 2026-09-21"}, {"id": 19, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "通路に荷物を置いたら、通る人の（　）になりますよ。", "choices": ["迷惑", "邪魔", "困難", "面倒"], "answer": 1, "translation": "통로에 짐을 두면, 지나가는 사람들의 방해가 돼요.", "connection": "名詞・な形容詞「邪魔（じゃま）」", "meaning": "통행이나 행동을 가로막아 방해됨.", "trap": "迷惑(민폐)는 「人の迷惑になる」로 쓰이지만 물리적 통행 차단은 「邪魔になる」가 자연스러움.", "contrast": "「邪魔になる（방해가 되다）」 관용구.", "example": "仕事の<ruby>邪魔<rt>じゃま</rt></ruby>をして申し訳ありません。", "nextReview": "D+1: 2026-09-21"}, {"id": 20, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "トラブルが起きたときこそ、（　）な判断が求められる。", "choices": ["厳重", "沈黙", "冷静", "明瞭"], "answer": 2, "translation": "트러블이 일어났을 때야말로, 냉정한 판단이 요구된다.", "connection": "な形容詞・名詞「冷静（れいせい）だ」", "meaning": "감정에 휘둘리지 않고 침착함.", "trap": "엄중(厳重), 침묵(沈黙), 명료(明瞭)는 판단의 수식어로 부적합.", "contrast": "「冷静な判断（냉정한 판단）」 연어.", "example": "どんな緊急事態でも<ruby>冷静<rt>れいせい</rt></ruby>に対処することが肝心だ。", "nextReview": "D+1: 2026-09-21"}, {"id": 21, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "今回の新商品は、社員の（　）から生まれたものだ。", "choices": ["アイディア", "マスター", "バランス", "イメージ"], "answer": 0, "translation": "이번 신상품은, 사원의 아이디어에서 태어난 것이다.", "connection": "名詞「アイディア（idea）」", "meaning": "새로운 착상, 고안, 생각.", "trap": "마스터, 밸런스, 이미지는 문맥과 부합하지 않음.", "contrast": "「アイディアが浮かぶ / アイディアから生まれる」.", "example": "斬新な<ruby>アイディア<rt>아이디어</rt></ruby>を出し合って企画を練り上げた。", "nextReview": "D+1: 2026-09-21"}, {"id": 22, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題4", "category": "어휘 → 언어지식 → 문맥규정", "subtype": "文脈規定", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "駅の改札を出たところで、落とした定期券の（　）がついた。", "choices": ["勘", "気", "心", "見当"], "answer": 3, "translation": "역 개찰구를 나갔을 때, 떨어뜨린 정기권이 있을 만한 곳의 짐작이 갔다.", "connection": "名詞「見当（けんとう）」", "meaning": "대강의 방향, 짐작, 어림.", "trap": "「勘(감)」은 육감, 「見当がつく(짐작이 가다)」는 장소/원인의 파악.", "contrast": "「見当がつく（짐작이 가다 / 어림잡히다）」 관용 연어.", "example": "鍵をどこに置き忘れたか、全く<ruby>見当<rt>けんとう</rt></ruby>がつかない。", "nextReview": "D+1: 2026-09-21"}, {"id": 23, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題5", "category": "어휘 → 언어지식 → 유의표현", "subtype": "言い換え類義", "instruction": "（　）の言葉に意味が最も近いものを、1・2・3・4から一つ選んでください。", "prompt": "高橋さんはとても（愉快な）人だ。", "choices": ["面白い", "おしゃれな", "親切な", "かわいい"], "answer": 0, "translation": "다카하시 씨는 매우 유쾌한(재미있는) 사람이다.", "connection": "な形容詞「愉快（ゆかい）だ」", "meaning": "마음이 즐겁고 재미있음.", "trap": "멋쟁이(おしゃれ), 친절함(親切)과의 혼동 배제.", "contrast": "「愉快だ」 ＝ 「面白い（おもしろい）」.", "example": "彼の冗談はいつも周囲を<ruby>愉快<rt>ゆかい</rt></ruby>な気分にさせてくれる。", "nextReview": "D+1: 2026-09-21"}, {"id": 24, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題5", "category": "어휘 → 언어지식 → 유의표현", "subtype": "言い換え類義", "instruction": "（　）の言葉に意味が最も近いものを、1・2・3・4から一つ選んでください。", "prompt": "それは確かに（やむをえない）ことだと思う。", "choices": ["もったいない", "なさけない", "つまらない", "しかたない"], "answer": 3, "translation": "그것은 확실히 어쩔 수 없는 일이라고 생각한다.", "connection": "連語「やむをえない」", "meaning": "다른 도리가 없다, 부득이하다.", "trap": "아깝다(もったいない), 한심하다(なさけない), 시시하다(つまらない).", "contrast": "「やむをえない」 ＝ 「しかたない」.", "example": "悪天候のため中止になったのは、<ruby>やむをえない<rt>어쩔 수 없다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 25, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題5", "category": "어휘 → 언어지식 → 유의표현", "subtype": "言い換え類義", "instruction": "（　）の言葉に意味が最も近いものを、1・2・3・4から一つ選んでください。", "prompt": "少し（息抜きした）ほうがいいよ。", "choices": ["待った", "急いだ", "休んだ", "働いた"], "answer": 2, "translation": "조금 한숨 돌리는(휴식하는) 편이 좋아.", "connection": "名詞・サ変「息抜き（いきぬき）」", "meaning": "긴장을 풀고 잠시 휴식을 취함.", "trap": "기다리다, 서두르다, 일하다 배제.", "contrast": "「息抜きする」 ＝ 「休む（やすむ）」.", "example": "勉強の合間に散歩をして<ruby>息抜<rt>いきぬ</rt></ruby>きをした。", "nextReview": "D+1: 2026-09-21"}, {"id": 26, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題5", "category": "어휘 → 언어지식 → 유의표현", "subtype": "言い換え類義", "instruction": "（　）の言葉に意味が最も近いものを、1・2・3・4から一つ選んでください。", "prompt": "今日はとても（ついていた）。", "choices": ["にぎやかだった", "ひまだった", "疲れていた", "運がよかった"], "answer": 3, "translation": "오늘은 정말 운이 따랐다(운이 좋았다).", "connection": "動詞「つく（運が向く）」", "meaning": "운수가 좋다, 행운이 따르다.", "trap": "번화했다, 한가했다, 피곤했다 배제.", "contrast": "「ついている」 ＝ 「運がよかった」.", "example": "最後の１枚でチケットが買えるなんて、今日は<ruby>ついていた<rt>운이 좋았다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 27, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題5", "category": "어휘 → 언어지식 → 유의표현", "subtype": "言い換え類義", "instruction": "（　）の言葉に意味が最も近いものを、1・2・3・4から一つ選んでください。", "prompt": "もっと（慎重に）計画を立てるべきだ。", "choices": ["自由に", "注意深く", "素直に", "楽しそうに"], "answer": 1, "translation": "좀 더 신중하게(주의 깊게) 계획을 세워야 한다.", "connection": "な形容詞・名詞「慎重（しんちょう）だ」", "meaning": "경솔하지 않고 조심스러움.", "trap": "자유롭게, 솔직하게, 즐겁게 배제.", "contrast": "「慎重に」 ＝ 「注意深く（ちゅういぶかく）」.", "example": "重要な決定を下す前には、<ruby>慎重<rt>しんちょう</rt></ruby>に議論を重ねる必要がある。", "nextReview": "D+1: 2026-09-21"}, {"id": 28, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題6", "category": "어휘 → 언어지식 → 단어용법", "subtype": "用法", "instruction": "次の言葉の使い方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "【延長】", "choices": ["悪天候で列車が運転をやめたため、旅行の出発が三日後に延長された。", "初めの設計では２階建てだったが、３階建ての家に延長することにした。", "予定の時間内に結論が出ず、会議が１時間延長されることになった。", "電車の中で居眠りをして、降りる駅を一駅延長してしまった。"], "answer": 2, "translation": "【연장】 예정된 시간 내에 결론이 나지 않아, 회의가 1시간 연장되게 되었다.", "connection": "名詞・サ変「延長（えんちょう）」", "meaning": "시간, 기간, 노선, 길이 등을 길게 늘림.", "trap": "1번은 연기(延期), 2번은 증축(増築), 4번은 지나침(乗り過ごし).", "contrast": "시간이나 기간을 더 늘릴 때 「延長」를 씁니다.", "example": "試合は同点のまま決着がつかず、<ruby>延長<rt>えんちょう</rt></ruby>戦にもつれ込んだ。", "nextReview": "D+1: 2026-09-21"}, {"id": 29, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題6", "category": "어휘 → 언어지식 → 단어용법", "subtype": "用法", "instruction": "次の言葉の使い方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "【さびる】", "choices": ["暑いところに生ものをずっと置いておいたら、さびて臭くなった。", "お風呂のお湯を抜かずに一晩置いたら、冷たくさびてしまった。", "雨の日に履いた靴を乾かさずに下駄箱に入れたら、さびて汚れた。", "雨ざらしになっていた古い自転車のチェーンが、赤くさびていた。"], "answer": 3, "translation": "【녹슬다】 비를 맞고 방치되어 있던 낡은 자전거 체인이 붉게 녹슬어 있었다.", "connection": "動詞「錆びる（さびる）」", "meaning": "금속이 산화되어 녹이 슬다.", "trap": "1번은 썩다(腐る), 2번은 식다(冷める), 3번은 곰팡이가 피다(かびる).", "contrast": "금속에만 사용하는 동사.", "example": "手入れを怠ったハサミが<ruby>錆<rt>さ</rt></ruby>びて切れなくなった。", "nextReview": "D+1: 2026-09-21"}, {"id": 30, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題6", "category": "어휘 → 언어지식 → 단어용법", "subtype": "用法", "instruction": "次の言葉の使い方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "【再三】", "choices": ["危険な行為はやめるよう再三注意したが、彼は耳を貸さなかった。", "信号が再三変わるのを待ってから、交差点を安全に渡った。", "彼は再三練習を重ねた結果、ついにピアノコンクールで優勝した。", "この薬は再三飲まなければ効果が現れないので、毎日欠かさず飲む。"], "answer": 0, "translation": "【재삼 (거듭/누차)】 위험한 행위는 그만두도록 재삼(누차) 주의를 주었지만, 그는 귀를 기울이지 않았다.", "connection": "副詞「再三（さいさん）」", "meaning": "두 번 세 번, 거듭, 누차 (주로 경고, 주의, 부탁에 쓰임).", "trap": "반복 연습에는 何度も, 복약 횟수에는 1日3回 등을 씀.", "contrast": "「再三注意する / 再三頼む」.", "example": "<ruby>再三<rt>さいさん</rt></ruby>のお願いにもかかわらず、ご回答をいただけず残念です。", "nextReview": "D+1: 2026-09-21"}, {"id": 31, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題6", "category": "어휘 → 언어지식 → 단어용법", "subtype": "用法", "instruction": "次の言葉の使い方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "【みっともない】", "choices": ["こんなにたくさん料理が余ってしまっては、みっともない。", "どんなに探してもパスポートが見つからず、みっともない。", "急な坂道を自転車で登るのは、体力的にとてもみっともない。", "人前で大声を上げて泣くなんて、大人のすることとしてみっともない。"], "answer": 3, "translation": "【보기 흉하다/꼴사납다】 사람들 앞에서 큰 소리를 내며 울다니, 어른이 할 짓으로서 꼴사납다.", "connection": "い形容詞「みっともない」", "meaning": "보기 흉하다, 꼴불견이다, 남부끄럽다.", "trap": "1번은 아깝다(もったいない), 2번은 곤란하다(困る), 3번은 힘들다(きつい).", "contrast": "타인의 눈에 비친 태도나 꼴이 부끄러울 때 사용.", "example": "電車の中で化粧をするのは<ruby>みっともない<rt>보기 흉하다</rt></ruby>からやめなさい。", "nextReview": "D+1: 2026-09-21"}, {"id": 32, "section": 1, "sectionName": "言語知識・読解", "part": "文字・語彙", "problemNo": "問題6", "category": "어휘 → 언어지식 → 단어용법", "subtype": "用法", "instruction": "次の言葉の使い方として最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "【無口】", "choices": ["私の部屋は日当たりが悪く、一日中無口な雰囲気が漂っている。", "父は普段は無口だが、お酒が入ると急によくしゃべるようになる。", "この店は看板も出ておらず、外から見ると無口な佇まいをしている。", "昨日の台風は激しい雨風をもたらし、街中が無口になってしまった。"], "answer": 1, "translation": "【과묵함/말수가 적음】 아버지는 평소에는 과묵하지만, 술이 들어가면 갑자기 말을 많이 하게 된다.", "connection": "名詞・な形容詞「無口（むくち）だ」", "meaning": "말수가 적음, 과묵함 (사람의 성격에 한정).", "trap": "방, 가게, 거리 등 사물이나 풍경에는 절대 쓸 수 없음(어두움, 고요함 등).", "contrast": "사람의 말수 성향을 나타낼 때만 씀.", "example": "彼は<ruby>無口<rt>むくち</rt></ruby>だが、誠実で信頼できる人物だ。", "nextReview": "D+1: 2026-09-21"}, {"id": 33, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 중도 단념/미수", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "卒業論文がなかなか書けなくて、一時は（　）かけたが、何とか今日無事に提出することができた。", "choices": ["あきらめ", "あきらめて", "あきらめる", "あきらめた"], "answer": 0, "translation": "졸업논문이 좀처럼 써지지 않아서 한때는 포기할 뻔했지만, 어떻게든 오늘 무사히 제출할 수 있었다.", "connection": "動詞ます形 ＋ かける", "meaning": "하마터면 ~할 뻔하다, ~하다가 도중에 멈추다.", "trap": "사전형이나 て형 결합 불가. ます형 어간에 결합.", "contrast": "「死にかける（죽을 뻔하다）」, 「言いかける（말하려다 말다）」.", "example": "途中で投げ出し<ruby>かけ<rt>하려다 말다</rt></ruby>た仕事を最後までやり抜いた。", "nextReview": "D+1: 2026-09-21"}, {"id": 34, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 연체수식절 주격조사", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "子どものころ、母（　）作ったハンバーグが大好きで、よく作ってもらった。", "choices": ["の", "との", "によって", "にとって"], "answer": 0, "translation": "어릴 적, 어머니가 만드신 햄버그스테이크를 너무 좋아해서 자주 만들어 달라고 했다.", "connection": "連体修飾節内の主語「〜が」 → 「〜の」", "meaning": "명사를 수식하는 절 안에서 주격 조사 'が' 대신 쓰이는 'の'.", "trap": "수단/원인의 によって나 대상의 にとって 배제.", "contrast": "「母が作った」 ＝ 「母の作った」.", "example": "私<ruby>の<rt>이/가</rt></ruby>住んでいる町は、自然が豊かで静かなところだ。", "nextReview": "D+1: 2026-09-21"}, {"id": 35, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 장소·분야·시대", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "多様な情報があふれる現代社会（　）、大切なのは、膨大な情報の中から、自分に必要な情報を選ぶ力である。", "choices": ["に加えて", "において", "を基にして", "を込めて"], "answer": 1, "translation": "다양한 정보가 넘쳐나는 현대 사회에서, 중요한 것은 방대한 정보 중에서 자신에게 필요한 정보를 선택하는 힘이다.", "connection": "名詞 ＋ において", "meaning": "~에서, ~에 있어서 (격식 있는 장소, 시대, 상황).", "trap": "에 더하여(に加えて), 기초로 하여(を基にして), 담아(を込めて) 배제.", "contrast": "「〜で」의 문어체 격식 표현.", "example": "現代のビジネス<ruby>において<rt>에 있어서</rt></ruby>、スピード感は最大の武器である。", "nextReview": "D+1: 2026-09-21"}, {"id": 36, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 가정·설정", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "人は一生のうちどのくらい寝ているのでしょうか。仮に一日８時間寝て、８０歳まで生きる（　）。すると、睡眠時間は約２３万３６００時間で、約２７年寝ている計算になります。", "choices": ["となると", "とします", "と見られます", "とされています"], "answer": 1, "translation": "사람은 일생 중 얼마나 잠을 잘까요? 가령 하루 8시간 자고 80세까지 산다고 가정합시다. 그러면 수면 시간은 약 23만 3600시간으로, 약 27년 동안 자고 있는 계산이 됩니다.", "connection": "動詞辞書形 ＋ とする", "meaning": "가령 ~라고 가정하다, 전제하다.", "trap": "앞의 「仮に（가령/만약）」와 호응하는 표현은 「〜とする / 〜とします」.", "contrast": "가정의 설정을 나타내는 대표 문형.", "example": "時速100キロで走る車がある<ruby>とします<rt>라고 가정합시다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 37, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 한정 조건", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "夢を語る（　）誰でもできるが、実現させるのは簡単なことではない。", "choices": ["だけなら", "だけでは", "ためしか", "ためには"], "answer": 0, "translation": "꿈을 말하기만 하는 것이라면 누구라도 할 수 있지만, 실현하는 것은 간단한 일이 아니다.", "connection": "動詞辞書形 ＋ だけなら", "meaning": "단지 ~하는 것뿐이라면.", "trap": "だけでは는 뒤에 부정문(못한다)이 오지만, 여기서는 できる가 오므로 だけなら가 정답.", "contrast": "「口で言うだけなら簡単だ（입으로 말하는 것뿐이라면 쉽다）」.", "example": "見る<ruby>だけなら<rt>것뿐이라면</rt></ruby>タダですが、買うとなるとお金がかかります。", "nextReview": "D+1: 2026-09-21"}, {"id": 38, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 선행 조건 확인", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "（説明書で）\nエアコンを掃除するときは、安全上、必ずコンセントを（　）してください。", "choices": ["抜いたことを", "抜いたことが", "抜いてからに", "抜いてからは"], "answer": 2, "translation": "(설명서에서)\n에어컨을 청소할 때는, 안전상 반드시 콘센트를 뽑고 난 뒤에 하십시오.", "connection": "動詞て形 ＋ からにする", "meaning": "반드시 ~하고 난 뒤로 미루어 하다.", "trap": "抜いたこと는 사실 서술, 동작의 순서를 명령/지시할 때는 「〜てからにする」.", "contrast": "선행 조건 완수를 의무화하는 비즈니스/설명서 빈출 표현.", "example": "十分に手を洗っ<ruby>てからに<rt>고 난 뒤에</rt></ruby>、調理を始めてください。", "nextReview": "D+1: 2026-09-21"}, {"id": 39, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 수동 유감", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "私はスピーチが苦手なのに、今度友達の結婚パーティーでスピーチを（　）、とても緊張している。", "choices": ["頼みかけて", "頼まれてしまって", "頼ませてもらって", "頼んでみることにして"], "answer": 1, "translation": "나는 스피치가 서툰데, 이번에 친구의 결혼 파티에서 스피치를 부탁받아 버려서, 몹시 긴장하고 있다.", "connection": "動詞受身形 ＋ てしまう", "meaning": "(원치 않게) 부탁받아 버리다 (피해/부담 수동).", "trap": "부탁하려고 하다(頼みかける), 부탁하도록 허락받다(頼ませてもらう) 배제.", "contrast": "자신의 곤혹스러운 심정과 결합하는 수동태.", "example": "幹事を<ruby>頼まれてしまって<rt>부탁받아 버려서</rt></ruby>、どうしようか悩んでいる。", "nextReview": "D+1: 2026-09-21"}, {"id": 40, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 부응·화답", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "「皆さんのご期待に（　）、今後も精一杯頑張ります。」", "choices": ["かわって", "こたえて", "そって", "めぐって"], "answer": 1, "translation": "\"여러분의 기대에 부응하여, 앞으로도 온 힘을 다해 열심히 하겠습니다.\"", "connection": "名詞「期待/要望」 ＋ にこたえて", "meaning": "~에 부응하여, 화답하여.", "trap": "대신하여(にかわって), 따라서(にそって), 둘러싸고(をめぐって).", "contrast": "기대(期待)나 요청(要望)에는 100% 「こたえて」 호응.", "example": "ファンの声援に<ruby>こたえて<rt>부응하여</rt></ruby>、見事な逆転勝利を収めた。", "nextReview": "D+1: 2026-09-21"}, {"id": 41, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 특별한 계기·시기", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "国際会議に出席する（　）、各国の経済情勢について詳しく調査した。", "choices": ["につけて", "にとって", "に際して", "に向けて"], "answer": 2, "translation": "국제회의에 참석함에 즈음하여(참석하기에 앞서), 각국의 경제 정세에 대해 자세히 조사했다.", "connection": "動詞辞書形 ＋ に際して", "meaning": "~할 때에, ~함에 즈음하여 (공식적·격식적 계기).", "trap": "~할 때마다(につけて), 입장에서(にとって), 향하여(に向けて).", "contrast": "중요한 행사나 결단을 앞두고 준비할 때 쓰는 대표 문형.", "example": "新店舗のオープン<ruby>に際して<rt>에 즈음하여</rt></ruby>、記念セールを開催いたします。", "nextReview": "D+1: 2026-09-21"}, {"id": 42, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 비례적 상관 변화", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "この作家の作品について調べる（　）、彼の独特な世界観に魅了されていった。", "choices": ["にあたって", "に際して", "に反して", "につれて"], "answer": 3, "translation": "이 작가의 작품에 대해 조사해 감에 따라, 그의 독특한 세계관에 매료되어 갔다.", "connection": "動詞辞書形 ＋ につれて", "meaning": "사태의 진전에 따라 뒤이어 다른 사태가 일어남 (~함에 따라).", "trap": "にあたって/に際して(특별한 때를 맞이하여), に反して(~에 반하여)와의 구별. 점진적 동반 변화를 나타내는 「〜につれて」가 유일한 정답.", "contrast": "비례적 심리 변화에는 「〜につれて」가 가장 자연스러움.", "example": "時間が経つ<ruby>につれて<rt>에 따라</rt></ruby>、緊張がほぐれてきた。", "nextReview": "D+1: 2026-09-21"}, {"id": 43, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 주관적 견해", "subtype": "文の文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "私に（　）、今回の失敗は準備不足が原因だ。", "choices": ["言うと", "言ったら", "言わせれば", "言うなら"], "answer": 2, "translation": "내 입장에서 말하자면(내가 한마디 하자면), 이번 실패는 준비 부족이 원인이다.", "connection": "人物 ＋ に言わせれば", "meaning": "~의 입장에서 말하게 한다면, ~의 의견으로는.", "trap": "言うと, 言ったら, 言うなら는 보통 주어가 자신일 때 이 관용구로 쓰이지 않음.", "contrast": "「私に言わせれば（내 생각으로는/내 말로는）」 관용 문형.", "example": "専門家に<ruby>言わせれば<rt>말하게 한다면</rt></ruby>、この絵画は本物に違いない。", "nextReview": "D+1: 2026-09-21"}, {"id": 44, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題7", "category": "문법 → 문법형식 판단 → 유일한 대안", "subtype": "文의 文法1", "instruction": "（　）に入れるのに最もよいものを、1・2・3・4から一つ選んでください。", "prompt": "試験まであと一週間しかない。今は合格を信じて努力する（　）。", "choices": ["にほかならない", "にすぎない", "ほかない", "わけではない"], "answer": 2, "translation": "시험까지 앞으로 일주일밖에 없다. 지금은 합격을 믿고 노력할 수밖에 없다.", "connection": "動詞辞書形 ＋ ほかない", "meaning": "~할 수밖에 없다, 달리 방법이 없다.", "trap": "にほかならない(~임에 틀림없다), にすぎない(~에 불과하다), わけではない(~인 것은 아니다)와의 구별.", "contrast": "공식 정답표 44번: 3번(ほかない).", "example": "バスが止まってしまった以上、歩いて行く<ruby>ほかない<rt>수밖에 없다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 45, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題8", "category": "문법 → 문장 배열 → 양태와 역접 호응", "subtype": "文の文法2", "instruction": "文を正しく並べたとき、★に入るものを、1・2・3・4から一つ選んでください。", "prompt": "彫刻家川村たけるが作る動物の彫刻作品は、形はシンプル 【　】 【　】 【★】 【　】 生命力にあふれている。", "choices": ["動き出し", "そうな", "ながら", "今にも"], "answer": 0, "translation": "조각가 카와무라 타케루가 만드는 동물 조각 작품은, 형태는 단순하면서도 지금이라도 당장 움직일 듯 생명력에 넘쳐나고 있다.", "connection": "「〜ながら（〜이면서도）」 ＋ 「今にも動き出しそうな（지금이라도 움직일 듯한）」", "meaning": "올바른 어순: ながら(3) → 今にも(4) → 動き出し(1★) → そうな(2).", "trap": "3번째 ★ 자리는 1번(動き出し).", "contrast": "ながら(역접/동시) + 今にも〜そうだ(금방이라도 ~할 듯하다).", "example": "シンプル<ruby>ながら<rt>이면서도</rt></ruby>、今にも動き出しそうな迫力がある。", "nextReview": "D+1: 2026-09-21"}, {"id": 46, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題8", "category": "문법 → 문장 배열 → 본질적 소재", "subtype": "文の文法2", "instruction": "文を正しく並べたとき、★に入るものを、1・2・3・4から一つ選んでください。", "prompt": "ビジネスで成功できる人とできない人との違いは、どんなに大変な状況でもあきらめずに 【　】 【　】 【★】 【　】 と思う。", "choices": ["かどうか", "取り組める", "にある", "最後まで"], "answer": 0, "translation": "비즈니스에서 성공할 수 있는 사람과 그렇지 못한 사람의 차이는, 아무리 힘든 상황이라도 포기하지 않고 끝까지 몰두할 수 있는지 어떤지에 있다고 생각한다.", "connection": "最後まで(4) ＋ 取り組める(2) ＋ かどうか(1) ＋ にある(3)", "meaning": "세 번째 별표(★) 위치는 1번 「かどうか」.", "trap": "공식 정답표 46번: 4번(★ 자리에 3번 にある가 들어가는 블록에서 공식 답 4).", "contrast": "AとBの違いは〜にある(차이는 ~에 있다).", "example": "勝敗を分ける鍵は、集中力を維持できるかどうかに<ruby>ある<rt>있다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 47, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題8", "category": "문법 → 문장 배열 → 연어 결합", "subtype": "文の文法2", "instruction": "文を正しく並べたとき、★に入るものを、1・2・3・4から一つ選んでください。", "prompt": "このプロジェクトを成功させるには、メンバー全員が 【　】 【　】 【★】 【　】 不可欠だ。", "choices": ["協力し合って", "目標に向かって", "進んでいくことが", "一つの"], "answer": 0, "translation": "이 프로젝트를 성공시키려면, 멤버 전원이 하나의 목표를 향해 서로 협력하며 나아가는 것이 필수적이다.", "connection": "「一つの目標に向かって」 ＋ 「協力し合って進んでいくことが」", "meaning": "올바른 어순: 一つの(4) → 目標に向かって(2) → 協力し合って(1★) → 進んでいくことが(3).", "trap": "3번째 ★ 자리는 1번(協力し合って). 공식 정답 1.", "contrast": "목적지 지향과 상호 협력의 호응.", "example": "全員が協力し合って<ruby>進んでいく<rt>나아가는 것</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 48, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題8", "category": "문법 → 문장 배열 → 이유 설명", "subtype": "文の文法2", "instruction": "文を正しく並べたとき、★に入るものを、1・2・3・4から一つ選んでください。", "prompt": "彼があれほど多くの人から信頼されているのは、 【　】 【　】 【★】 【　】 からにほかならない。", "choices": ["どんな約束でも", "誠実な人柄", "必ず守るという", "その"], "answer": 3, "translation": "그가 그토록 많은 사람들로부터 신뢰받고 있는 것은, 어떤 약속이라도 반드시 지킨다는 그 성실한 인품 때문임에 틀림없다.", "connection": "どんな約束でも(1) ＋ 必ず守るという(3) ＋ その(4) ＋ 誠実な人柄(2)", "meaning": "세 번째 별표(★) 위치는 4번 「その」.", "trap": "공식 정답표 48번: 2번.", "contrast": "〜からにほかならない(바로 ~때문임에 틀림없다).", "example": "成功したのは、彼のたゆまぬ努力の<ruby>賜物<rt>결실</rt></ruby>にほかならない。", "nextReview": "D+1: 2026-09-21"}, {"id": 49, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題8", "category": "문법 → 문장 배열 → 수수 표현", "subtype": "文の文法2", "instruction": "文を正しく並べたとき、★に入るものを、1・2・3・4から一つ選んでください。", "prompt": "先生、先週お話しした論文のテーマについて、 【　】 【　】 【★】 【　】 ありがたいのですが。", "choices": ["アドバイスを", "少しお時間を", "いただけると", "いただいて"], "answer": 0, "translation": "교수님, 지난주 말씀드린 논문 주제에 대해, 시간을 조금 내어 주셔서 조언을 얻을 수 있다면 감사하겠습니다만.", "connection": "少しお時間を(2) ＋ いただいて(4) ＋ アドバイスを(1) ＋ いただけると(3)", "meaning": "세 번째 별표(★) 위치는 1번 「アドバイスを」.", "trap": "공식 정답표 49번: 3번.", "contrast": "정중한 완곡 의뢰 표현.", "example": "ご意見を<ruby>いただけると<rt>받을 수 있다면</rt></ruby>幸いです。", "nextReview": "D+1: 2026-09-21"}, {"id": 50, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題9", "category": "문법 → 글의 문법 → 독자 질문·주의 환기", "subtype": "文章の文法", "instruction": "次の文章を読んで、文章全体の内容を考えて、50から54の中に入る最もよいものを、1・2・3・4から一つ選びなさい。\n\n【日本発のトイレマーク】\n公衆トイレの入り口に描かれている男女の絵のマーク。そのマークがあれば、文字で「トイレ」と書かれていなくても、そこがトイレであることがわかる。世界のあちこちで使われているこのトイレマークが実は日本で生まれたものだということを（ 50 ）。\nトイレマークが生まれたのは、１９６４年の東京オリンピックがきっかけだ。この東京オリンピックは、アルファベットを使わない国での初めての開催であったため、特に問題になったのが、言葉の壁だった。当時、日本国内の案内板は「お手洗い」などと日本語で書かれているものがほとんどだった。（ 51 ）、それでは世界９０数か国から来日する選手たちに理解してもらえない。かといって、参加国すべての国の言葉で書くわけにもいかない。\nそこで考え出されたのが、文字の代わりに絵を使って情報を伝える方法だった。デザイナーたちが集まり、知恵を出し合って、一目で意味が伝わるマークが次々と生み出された。トイレマークも（ 52 ）一つである。\nこのマークの優れた点は、誰にでも直感的に伝わるわかりやすさだけでなく、社会の共有財産として（ 53 ）ように、デザイナーたちが著作権を放棄したことである。そのおかげで、マークは急速に世界中へと広まっていった。\n現在、私たちが日常的に目にするピクトグラム（絵文字）の原点は、まさにこの東京オリンピックの挑戦に（ 54 ）。", "prompt": "（ 50 ）に入る最もよいものを選んでください。", "choices": ["ご存じなわけだ", "ご存じだろうか", "ご存じのようだ", "ご存じだからだろう"], "answer": 1, "translation": "세계 곳곳에서 쓰이고 있는 이 화장실 마크가 실은 일본에서 태어난 것이라는 사실을 알고 계실까?", "connection": "読者への問いかけ「〜ご存じだろうか」", "meaning": "독자에게 질문을 던지며 화제를 이끌어냄.", "trap": "공식 정답 2번(ご存じだろうか).", "contrast": "도입부에서 주의를 환기하는 상투적 표현.", "example": "この事実を<ruby>ご存じだろうか<rt>알고 계실까</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 51, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題9", "category": "문법 → 글의 문법 → 역접 접속사", "subtype": "文章の文法", "instruction": "次の文章を読んで、文章全体の内容を考えて、50から54の中に入る最もよいものを、1・2・3・4から一つ選びなさい。\n\n【日本発のトイレマーク】\n公衆トイレの入り口に描かれている男女の絵のマーク。そのマークがあれば、文字で「トイレ」と書かれていなくても、そこがトイレであることがわかる。世界のあちこちで使われているこのトイレマークが実は日本で生まれたものだということを（ 50 ）。\nトイレマークが生まれたのは、１９６４年の東京オリンピックがきっかけだ。この東京オリンピックは、アルファベットを使わない国での初めての開催であったため、特に問題になったのが、言葉の壁だった。当時、日本国内の案内板は「お手洗い」などと日本語で書かれているものがほとんどだった。（ 51 ）、それでは世界９０数か国から来日する選手たちに理解してもらえない。かといって、参加国すべての国の言葉で書くわけにもいかない。\nそこで考え出されたのが、文字の代わりに絵を使って情報を伝える方法だった。デザイナーたちが集まり、知恵を出し合って、一目で意味が伝わるマークが次々と生み出された。トイレマークも（ 52 ）一つである。\nこのマークの優れた点は、誰にでも直感的に伝わるわかりやすさだけでなく、社会の共有財産として（ 53 ）ように、デザイナーたちが著作権を放棄したことである。そのおかげで、マークは急速に世界中へと広まっていった。\n現在、私たちが日常的に目にするピクトグラム（絵文字）の原点は、まさにこの東京オリンピックの挑戦に（ 54 ）。", "prompt": "（ 51 ）に入る最もよいものを選んでください。", "choices": ["それに", "しかし", "または", "それどころか"], "answer": 1, "translation": "그러나, 그래서는 세계 90여 개국에서 방일하는 선수들에게 이해받을 수 없다.", "connection": "逆接の接続詞「しかし」", "meaning": "앞선 전제에 대해 정면으로 상반되는 문제점을 제기함.", "trap": "공식 정답 2번(しかし).", "contrast": "일본어 안내판뿐이었지만 그러나 외국 선수들은 이해 불가.", "example": "計画は立てた。<ruby>しかし<rt>그러나</rt></ruby>、実行は難しかった。", "nextReview": "D+1: 2026-09-21"}, {"id": 52, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題9", "category": "문법 → 글의 문법 → 발생 경위 수식", "subtype": "文章の文法", "instruction": "次の文章を読んで、文章全体の内容を考えて、50から54の中に入る最もよいものを、1・2・3・4から一つ選びなさい。\n\n【日本発のトイレマーク】\n公衆トイレの入り口に描かれている男女の絵のマーク。そのマークがあれば、文字で「トイレ」と書かれていなくても、そこがトイレであることがわかる。世界のあちこちで使われているこのトイレマークが実は日本で生まれたものだということを（ 50 ）。\nトイレマークが生まれたのは、１９６４年の東京オリンピックがきっかけだ。この東京オリンピックは、アルファベットを使わない国での初めての開催であったため、特に問題になったのが、言葉の壁だった。当時、日本国内の案内板は「お手洗い」などと日本語で書かれているものがほとんどだった。（ 51 ）、それでは世界９０数か国から来日する選手たちに理解してもらえない。かといって、参加国すべての国の言葉で書くわけにもいかない。\nそこで考え出されたのが、文字の代わりに絵を使って情報を伝える方法だった。デザイナーたちが集まり、知恵を出し合って、一目で意味が伝わるマークが次々と生み出された。トイレマークも（ 52 ）一つである。\nこのマークの優れた点は、誰にでも直感的に伝わるわかりやすさだけでなく、社会の共有財産として（ 53 ）ように、デザイナーたちが著作権を放棄したことである。そのおかげで、マークは急速に世界中へと広まっていった。\n現在、私たちが日常的に目にするピクトグラム（絵文字）の原点は、まさにこの東京オリンピックの挑戦に（ 54 ）。", "prompt": "（ 52 ）に入る最もよいものを選んでください。", "choices": ["作成者が理解したのは", "日本で考えられたのが", "ここに生み出したのは", "こうして生まれたものの"], "answer": 3, "translation": "화장실 마크도 이렇게 해서 탄생한 것 중 하나이다.", "connection": "経緯の帰結「こうして生まれたものの」 ＋ 「一つである」", "meaning": "앞서 서술한 경위와 과정(こうして)을 받아 결론으로 연결.", "trap": "공식 정답 4번(こうして生まれたものの).", "contrast": "배경 서술 직후 결론 연결.", "example": "<ruby>こうして生まれた<rt>이렇게 탄생한</rt></ruby>名作の一つである。", "nextReview": "D+1: 2026-09-21"}, {"id": 53, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題9", "category": "문법 → 글의 문법 → 목적·가능성", "subtype": "文章の文法", "instruction": "次の文章を読んで、文章全体の内容を考えて、50から54の中に入る最もよいものを、1・2・3・4から一つ選びなさい。\n\n【日本発のトイレマーク】\n公衆トイレの入り口に描かれている男女の絵のマーク。そのマークがあれば、文字で「トイレ」と書かれていなくても、そこがトイレであることがわかる。世界のあちこちで使われているこのトイレマークが実は日本で生まれたものだということを（ 50 ）。\nトイレマークが生まれたのは、１９６４年の東京オリンピックがきっかけだ。この東京オリンピックは、アルファベットを使わない国での初めての開催であったため、特に問題になったのが、言葉の壁だった。当時、日本国内の案内板は「お手洗い」などと日本語で書かれているものがほとんどだった。（ 51 ）、それでは世界９０数か国から来日する選手たちに理解してもらえない。かといって、参加国すべての国の言葉で書くわけにもいかない。\nそこで考え出されたのが、文字の代わりに絵を使って情報を伝える方法だった。デザイナーたちが集まり、知恵を出し合って、一目で意味が伝わるマークが次々と生み出された。トイレマークも（ 52 ）一つである。\nこのマークの優れた点は、誰にでも直感的に伝わるわかりやすさだけでなく、社会の共有財産として（ 53 ）ように、デザイナーたちが著作権を放棄したことである。そのおかげで、マークは急速に世界中へと広まっていった。\n現在、私たちが日常的に目にするピクトグラム（絵文字）の原点は、まさにこの東京オリンピックの挑戦に（ 54 ）。", "prompt": "（ 53 ）に入る最もよいものを選んでください。", "choices": ["自由に使ってもらえる", "使用した点だ", "使用していける", "使用したいものだ"], "answer": 0, "translation": "사회의 공유재산으로서 자유롭게 사용할 수 있도록, 디자이너들이 저작권을 포기한 점이다.", "connection": "誰でも使えるように「自由に使ってもらえる」 ＋ 「ように」", "meaning": "다른 사람들이 널리 이용할 수 있도록 배려함.", "trap": "공식 정답 1번.", "contrast": "수수 표현 もらう를 결합한 목적 표현.", "example": "広く<ruby>使ってもらえる<rt>사용받을 수 있도록</rt></ruby>ように工夫した。", "nextReview": "D+1: 2026-09-21"}, {"id": 54, "section": 1, "sectionName": "言語知識・読解", "part": "文法", "problemNo": "問題9", "category": "문법 → 글의 문법 → 접속·결말 표현", "subtype": "文章の文法", "instruction": "次の文章を読んで、文章全体の内容を考えて、50から54の中に入る最もよいものを、1・2・3・4から一つ選びなさい。\n\n【日本発のトイレマーク】\n公衆トイレの入り口に描かれている男女の絵のマーク。そのマークがあれば、文字で「トイレ」と書かれていなくても、そこがトイレであることがわかる。世界のあちこちで使われているこのトイレマークが実は日本で生まれたものだということを（ 50 ）。\nトイレマークが生まれたのは、１９６４年の東京オリンピックがきっかけだ。この東京オリンピックは、アルファベットを使わない国での初めての開催であったため、特に問題になったのが、言葉の壁だった。当時、日本国内の案内板は「お手洗い」などと日本語で書かれているものがほとんどだった。（ 51 ）、それでは世界９０数か国から来日する選手たちに理解してもらえない。かといって、参加国すべての国の言葉で書くわけにもいかない。\nそこで考え出されたのが、文字の代わりに絵を使って情報を伝える方法だった。デザイナーたちが集まり、知恵を出し合って、一目で意味が伝わるマークが次々と生み出された。トイレマークも（ 52 ）一つである。\nこのマークの優れた点は、誰にでも直感的に伝わるわかりやすさだけでなく、社会の共有財産として（ 53 ）ように、デザイナーたちが著作権を放棄したことである。そのおかげで、マークは急速に世界中へと広まっていった。\n現在、私たちが日常的に目にするピクトグラム（絵文字）の原点は、まさにこの東京オリンピックの挑戦に（ 54 ）。", "prompt": "（ 54 ）に入る最もよいものを選んでください。", "choices": ["あったに違いない", "あったばかりだ", "あったと言えるだろう", "あったはずがない"], "answer": 2, "translation": "픽토그램의 원점은, 바로 이 도쿄 올림픽의 도전 속에 있었다고 말할 수 있을 것이다.", "connection": "筆者の総括・推論「〜あったと言えるだろう」", "meaning": "글 전체를 마무리하며 필자의 견해를 조심스럽게 총괄함.", "trap": "공식 정답 3번.", "contrast": "단정 대신 〜と言えるだろう로 격식 있게 완곡 단정.", "example": "大きな転換点に<ruby>あったと言えるだろう<rt>있었다고 말할 수 있을 것이다</rt></ruby>。", "nextReview": "D+1: 2026-09-21"}, {"id": 55, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題10", "category": "독해 → 단문 이해 → 규칙의 존재 이유", "subtype": "短文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n「ルール」はなぜあるのでしょうか？\nスポーツを理解するために最初に確認しておきますが、スポーツは人間が楽しむためのものです。これが出発点です。決して「世の中に無ければならないモノ」でもなければ、生きるためにどうしても「必要なモノ」でもありませんが、楽しむためのモノであり、そのスポーツで楽しむために「ルール」があるのです。\nそして、ルールのもとで勝敗を競いますが、このことによってスポーツはもっと楽しくなります。ルールがなければ、スポーツは単なる混乱になってしまいます。", "prompt": "筆者によると、スポーツの「ルール」は何のためにあるか。", "choices": ["世の中に無ければならないモノだから", "スポーツをより楽しむため", "生きるためにどうしても必要だから", "勝敗を完全に無くすため"], "answer": 1, "translation": "【단문 해설】 1문단에 '스포츠는 즐기기 위한 것이며, 스포츠를 즐기기 위해 룰이 있다'고 명시되어 있습니다.", "connection": "「そのスポーツで楽しむために「ルール」があるのです」", "meaning": "규칙은 스포츠를 더욱 재미있게 즐기기 위해 존재함.", "trap": "살기 위해 필요하다거나 승패를 없앤다는 것은 오답.", "contrast": "스포츠의 본질적 가치.", "example": "ルールを守ることでゲームはより面白くなる。", "nextReview": "D+1: 2026-09-21"}, {"id": 56, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題10", "category": "독해 → 단문 이해 → 사내 문서의 핵심 목적", "subtype": "短文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【社内文書】\n平成２８年１月１２日\n社員各位\n総務課長\n暖房使用についてのお願い\n本格的な冬を迎え、暖房の使用が増加しており、１２月の電気代は前月に比べて約３０％増となりました。節電のため、室内温度は２２度以下に設定するとともに、使用していない場所の暖房を切ること、退社時の切り忘れをなくすことなどを徹底してください。\nまた、服装で調整するなど各自で工夫し、暖房に頼りすぎないようご協力をお願いいたします。", "prompt": "この文書を書いた、一番の目的は何か。", "choices": ["１２月の電気代を社員全員に公開するため", "冬の寒さから社員の健康を守るため", "暖房の使い方を見直して節電に協力してもらうため", "会社の暖房設備をすべて新しいものに取り替えるため"], "answer": 2, "translation": "【단문 해설】 12월 전기세가 30% 증가함에 따라, 온도 설정(22도 이하)과 소등, 복장 조절을 통해 절전에 협력해 달라는 것이 목적입니다.", "connection": "「節電のため〜暖房に頼りすぎないようご協力をお願いいたします」", "meaning": "난방 사용 방식을 재검토하여 절전에 협력하도록 요청함.", "trap": "전기세 공개 자체나 설비 교체가 목적이 아님.", "contrast": "사내 절전 협조 요청 공지문.", "example": "節電へのご協力をお願い申し上げます。", "nextReview": "D+1: 2026-09-21"}, {"id": 57, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題10", "category": "독해 → 단문 이해 → 목표 달성의 실천법", "subtype": "短文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n実は「やりたいことをやる」ためには、シンプルに間近の目標を達成していくだけで十分だと思います。「いつか大きな仕事を成し遂げたい」と思っていても、実際にそれがどんなものかはわかりようがないし、本当に自分が望んでいるものが何なのかもわかりません。\nそれより「目の前のやりたいこと」を見つけ、それに集中できるようなプログラムを組んでいけば、自然に「自分のやっていること」が「自分の望んでいること」に近づいていく可能性が高いような気がします。", "prompt": "筆者が「やりたいことをやる」ために勧めていることは何か。", "choices": ["いつか大きな仕事を成し遂げる計画を綿密に立てること", "自分が本当に望んでいるものが何なのかを深く悩み続けること", "大きな目標を諦めて、他人の指示通りに行動すること", "目の前にある身近な目標を見つけ、それに集中すること"], "answer": 3, "translation": "【단문 해설】 막연한 먼 미래의 큰 목표를 고민하기보다 '눈앞의 하고 싶은 것을 발견하고 거기에 집중하는 프로그램을 짜는 것'을 권하고 있습니다.", "connection": "「目の前のやりたいことを見つけ、それに集中できるようなプログラムを組んでいけば」", "meaning": "가까운 눈앞의 구체적 목표에 집중하여 실천하는 것.", "trap": "먼 훗날의 큰 목표를 세우라는 것은 필자가 비판한 내용.", "contrast": "즉각적 집중과 실천의 중요성.", "example": "目の前の小さな一歩に集中する。", "nextReview": "D+1: 2026-09-21"}, {"id": 58, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題10", "category": "독해 → 단문 이해 → 할인 조건 파악", "subtype": "短文読解", "instruction": "次の案内を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【野田コーヒー 割引フェアのご案内】\nいつも「野田コーヒー」をご愛飲くださいまして、ありがとうございます。\nコーヒー豆を定期購入されているお客様に、お得な割引フェアについてご案内いたします。\n当社ではこの冬、新商品「冬の味わい」を発売します。定期購入をされているお客様には、この商品を１５％割引の特別価格でご提供いたします。購入を希望される場合は、同封のハガキにて１月２０日までにお申し込みください。\n※定期購入されていないお客様は、通常価格での販売となります。", "prompt": "この案内によると、「冬の味わい」を割引価格で購入できるのは誰か。", "choices": ["１月２０日までに初めて野田コーヒーを購入する人", "コーヒー豆を定期購入していて、期日までに申し込んだ人", "野田コーヒーの店舗に直接ハガキを持参した人", "これまでに新商品を購入したことがあるすべての人"], "answer": 1, "translation": "【단문 해설】 커피 원두를 정기 구입하고 있는 고객 중 1월 20일까지 동봉된 엽서로 신청한 사람에게 15% 특별 할인이 제공됩니다.", "connection": "「定期購入をされているお客様には〜ハガキにて１月２０日までにお申し込みください」", "meaning": "정기 구입 고객이 기일(1/20) 내에 신청했을 때 할인 적용.", "trap": "첫 구매자나 방문 지참자는 해당 없음.", "contrast": "조건부 할인 안내문의 전형.", "example": "定期購入者限定の特別割引キャンペーン。", "nextReview": "D+1: 2026-09-21"}, {"id": 59, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題10", "category": "독해 → 단문 이해 → 일기 습관의 효과", "subtype": "短文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n毎日寝る前に、その日あった「よかったこと」を３つ日記に書き留める習慣をつけている。最初は書くことがなかなか見つからず苦労したが、続けていくうちに、日常の些細な出来事の中にある喜びや感謝に敏感に気づけるようになってきた。\n自分にとって何が心地よく、何が幸福をもたらすのかが分かってくると、毎日を主体的に前向きに生きる感覚が育まれていく。日記を書くことは、自分自身の心のあり方を整える最良のトレーニングなのだ。", "prompt": "筆者は、寝る前に日記を書くことによってどのような変化があったと述べているか。", "choices": ["日常の小さな喜びや感謝に気づきやすくなった", "過去の失敗を悔やんで深く反省するようになった", "他人の意見に左右されず、誰とも関わらなくなった", "毎晩ぐっすりと長時間眠れるようになった"], "answer": 0, "translation": "【단문 해설】 일기를 계속 쓰는 동안 일상의 사소한 사건 속의 기쁨과 감사에 민감하게 눈뜰 수 있게 되었다고 설명합니다.", "connection": "「日常の些細な出来事の中にある喜びや感謝に敏感に気づけるようになってきた」", "meaning": "일상 속의 소소한 긍정과 행복을 포착하는 감각의 성장.", "trap": "과거 반성이나 타인과의 단절은 본문과 반대.", "contrast": "자아 성찰적 에세이 독해.", "example": "日々の小さな感謝に気づく習慣。", "nextReview": "D+1: 2026-09-21"}, {"id": 60, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 외관 중심 개성에 대한 위화감", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章1】\n日本ではよく、「若者はもっと個性を発揮すべきだ」とか、「個性を磨くべきだ」などと言われます。けれど私は、そういう言葉にはあまり意味がないと思っています。\nまた、日本では「個性」という言葉が主に人の外観に関して使われることにも、私は違和感を持っています。たとえば、「個性的なファッション、個性的なヘアスタイル」は、「人がアッと驚くような奇抜なスタイル」であることが多いでしょう。奇抜な格好をして目立つことが個性だと誤解されているように感じられます。\nしかし本来、個性とは外見を着飾って人に見せびらかすようなものではなく、内面から自然とにじみ出てくるものです。その人がこれまでに何を考え、どう生きてきたかという経験や価値観の積み重ねこそが、その人ならではの固有の味となるのです。無理に人と違った格好をして自己主張しようとしなくても、日々の仕事や学びに向き合う中で、自然に現れる自分らしさこそを大切にすべきではないでしょうか。", "prompt": "日本で使われる「個性」という言葉について、筆者はどのように感じているか。", "choices": ["外見の奇抜さばかりが強調され、誤解されていると感じている", "若者だけでなく高齢者ももっと奇抜な格好をすべきだと感じている", "日本の若者は欧米の若者に比べて個性が全くないと感じている", "個性を発揮することは法律で禁止すべきだと感じている"], "answer": 0, "translation": "【중문 해설】 2문단에 '외관에 관해 기발한 스타일로 눈에 띄는 것이 개성이라고 오해받고 있는 것에 위화감을 느낀다'고 명시되어 있습니다.", "connection": "「奇抜な格好をして目立つことが個性だと誤解されているように感じられます」", "meaning": "외모의 기발함만 강조되는 세간의 풍조를 비판함.", "trap": "노인도 기발해야 한다거나 법으로 금지하라는 것은 왜곡.", "contrast": "외면적 개성 vs 내면적 개성.", "example": "外見の派手さではなく内面の個性を重視する。", "nextReview": "D+1: 2026-09-21"}, {"id": 61, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 개성의 본질", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章1】\n日本ではよく、「若者はもっと個性を発揮すべきだ」とか、「個性を磨くべきだ」などと言われます。けれど私は、そういう言葉にはあまり意味がないと思っています。\nまた、日本では「個性」という言葉が主に人の外観に関して使われることにも、私は違和感を持っています。たとえば、「個性的なファッション、個性的なヘアスタイル」は、「人がアッと驚くような奇抜なスタイル」であることが多いでしょう。奇抜な格好をして目立つことが個性だと誤解されているように感じられます。\nしかし本来、個性とは外見を着飾って人に見せびらかすようなものではなく、内面から自然とにじみ出てくるものです。その人がこれまでに何を考え、どう生きてきたかという経験や価値観の積み重ねこそが、その人ならではの固有の味となるのです。無理に人と違った格好をして自己主張しようとしなくても、日々の仕事や学びに向き合う中で、自然に現れる自分らしさこそを大切にすべきではないでしょうか。", "prompt": "筆者が考える本来の「個性」とはどのようなものか。", "choices": ["流行の最先端を行くブランド服を身につけること", "他人と常に異なる意見を述べて議論で勝つこと", "その人の経験や価値観の積み重ねから自然ににじみ出るもの", "生まれつき決まっていて、努力しても決して変わらないもの"], "answer": 2, "translation": "【중문 해설】 3문단에 '어떻게 살아왔는가 하는 경험과 가치관의 축적으로부터 자연스럽게 배어 나오는 고유의 맛'이 본래의 개성이라고 설명합니다.", "connection": "「経験や価値観の積み重ねこそが、その人ならではの固有の味となる」", "meaning": "내면적 삶의 궤적에서 우러나오는 고유한 품격.", "trap": "브랜드 옷이나 무조건 반대 의견을 내는 것은 피상적.", "contrast": "내면에서 자연스럽게 우러나오는 삶의 태도.", "example": "生き方がその人の個性を形作る。", "nextReview": "D+1: 2026-09-21"}, {"id": 62, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 필자의 주장", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章1】\n日本ではよく、「若者はもっと個性を発揮すべきだ」とか、「個性を磨くべきだ」などと言われます。けれど私は、そういう言葉にはあまり意味がないと思っています。\nまた、日本では「個性」という言葉が主に人の外観に関して使われることにも、私は違和感を持っています。たとえば、「個性的なファッション、個性的なヘアスタイル」は、「人がアッと驚くような奇抜なスタイル」であることが多いでしょう。奇抜な格好をして目立つことが個性だと誤解されているように感じられます。\nしかし本来、個性とは外見を着飾って人に見せびらかすようなものではなく、内面から自然とにじみ出てくるものです。その人がこれまでに何を考え、どう生きてきたかという経験や価値観の積み重ねこそが、その人ならではの固有の味となるのです。無理に人と違った格好をして自己主張しようとしなくても、日々の仕事や学びに向き合う中で、自然に現れる自分らしさこそを大切にすべきではないでしょうか。", "prompt": "文章全体を通して筆者が最も言いたいことは何か。", "choices": ["無理に外見で差別化を図るより、日々の歩みの中で自然に現れる自分らしさを大切にすべきだ", "個性的なファッションを徹底的に追求して、世界にアピールすべきだ", "若者は全員同じ制服を着て、個性を一切出さないように生きるべきだ", "個性を磨くためには、専門のファッションスクールに通うのが一番だ"], "answer": 0, "translation": "【중문 해설】 억지로 남과 다른 겉모습으로 자기주장을 하기보다, 매일의 일과 배움 속에서 자연스럽게 나타나는 자신다움을 소중히 해야 한다는 것이 결론입니다.", "connection": "「無理に人と違った格好をして自己主張しようとしなくても〜大切にすべきではないでしょうか」", "meaning": "자연스러운 자신다움의 존중.", "trap": "패션 추구나 개성 완전 억압은 본문 취지와 반대.", "contrast": "인위적 과시 지양 및 내실 충실.", "example": "自然体の自分らしさを大切にする生き方。", "nextReview": "D+1: 2026-09-21"}, {"id": 63, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 대면 대화의 특징", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章2】\n私たちが日常で言葉を交わすとき、言葉そのものの意味だけでなく、「どこで、誰と話しているか」という場所や関係性の共有が極めて重要な役割を果たしている。聞き手が目の前にいる対面の対話では、話し手と聞き手は同じ空間の空気、視線、表情、周囲の雑音などをすべて共有している。そのため、「あれ」「それ」といった曖昧な指示語や、途切れた文であっても、問題なく意図が通じ合うのである。\nところが、電子メールやSNSのような文字情報だけのコミュニケーションではどうだろうか。そこではお互いの置かれている物理的な場所も時間も異なり、相手の表情やその場の雰囲気といった共有の手がかりがすっぽりと抜け落ちている。\nこの状況の非対称性に無自覚なまま、対面と同じ感覚で省略の多いメッセージを送ってしまうと、受け手は意図を正しく読み取れず、誤解や不信感が生まれやすくなる。文字だけのやり取りにおいてこそ、言葉の客観的な正確さと丁寧な文脈説明が不可欠となるのだ。", "prompt": "筆者によると、対面の対話で言葉が省略されても通じ合うのはなぜか。", "choices": ["お互いに全く言葉を使わずにテレパシーで伝えているから", "話し手が誰よりも正確な文法で話しているから", "聞き手が常にメモを取って復習しているから", "同じ場所や空気、表情などの状況を共有しているから"], "answer": 3, "translation": "【중문 해설】 1문단: 같은 공간의 공기, 시선, 표정, 분위기 등 상황의 공유가 단서가 되기 때문에 모호한 지시어나 생략된 문장도 통한다고 설명합니다.", "connection": "「同じ空間の空気、視線、表情〜共有している。そのため〜問題なく意図が通じ合う」", "meaning": "상황 및 비언어적 맥락의 공유가 의사소통을 지탱함.", "trap": "텔레파시나 문법적 완벽성은 비현실적 오답.", "contrast": "대면 커뮤니케이션의 맥락 의존성.", "example": "対面では非言語的な情報が大きな役割を果たす。", "nextReview": "D+1: 2026-09-21"}, {"id": 64, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 문자 소통에서 오해가 생기는 원인", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章2】\n私たちが日常で言葉を交わすとき、言葉そのものの意味だけでなく、「どこで、誰と話しているか」という場所や関係性の共有が極めて重要な役割を果たしている。聞き手が目の前にいる対面の対話では、話し手と聞き手は同じ空間の空気、視線、表情、周囲の雑音などをすべて共有している。そのため、「あれ」「それ」といった曖昧な指示語や、途切れた文であっても、問題なく意図が通じ合うのである。\nところが、電子メールやSNSのような文字情報だけのコミュニケーションではどうだろうか。そこではお互いの置かれている物理的な場所も時間も異なり、相手の表情やその場の雰囲気といった共有の手がかりがすっぽりと抜け落ちている。\nこの状況の非対称性に無自覚なまま、対面と同じ感覚で省略の多いメッセージを送ってしまうと、受け手は意図を正しく読み取れず、誤解や不信感が生まれやすくなる。文字だけのやり取りにおいてこそ、言葉の客観的な正確さと丁寧な文脈説明が不可欠となるのだ。", "prompt": "電子メールやSNSなどの文字のやり取りで誤解が生じやすい原因は何か。", "choices": ["相手の表情やその場の雰囲気といった共有の手がかりがないから", "スマートフォンやパソコンの画面が小さすぎて読めないから", "現代人が全員日本語の漢字を読めなくなってしまったから", "文字を送るスピードが会話よりも速すぎるから"], "answer": 0, "translation": "【중문 해설】 2문단과 3문단: 서로 처해 있는 장소와 시간이 다르고, 표정이나 현장의 분위기 등 공유된 맥락의 단서가 빠져 있기 때문입니다.", "connection": "「相手の表情やその場の雰囲気といった共有の手がかりがすっぽりと抜け落ちている」", "meaning": "비언어적 단서의 부재로 인한 맥락 비대칭.", "trap": "화면 크기나 한자 문맹 등은 본문과 무관한 억측.", "contrast": "텍스트 기반 소통의 한계.", "example": "文字だけでは感情やニュアンスが伝わりにくい。", "nextReview": "D+1: 2026-09-21"}, {"id": 65, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 필자의 제언", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章2】\n私たちが日常で言葉を交わすとき、言葉そのものの意味だけでなく、「どこで、誰と話しているか」という場所や関係性の共有が極めて重要な役割を果たしている。聞き手が目の前にいる対面の対話では、話し手と聞き手は同じ空間の空気、視線、表情、周囲の雑音などをすべて共有している。そのため、「あれ」「それ」といった曖昧な指示語や、途切れた文であっても、問題なく意図が通じ合うのである。\nところが、電子メールやSNSのような文字情報だけのコミュニケーションではどうだろうか。そこではお互いの置かれている物理的な場所も時間も異なり、相手の表情やその場の雰囲気といった共有の手がかりがすっぽりと抜け落ちている。\nこの状況の非対称性に無自覚なまま、対面と同じ感覚で省略の多いメッセージを送ってしまうと、受け手は意図を正しく読み取れず、誤解や不信感が生まれやすくなる。文字だけのやり取りにおいてこそ、言葉の客観的な正確さと丁寧な文脈説明が不可欠となるのだ。", "prompt": "文字によるコミュニケーションを円滑にするために、筆者が重要だと述べていることは何か。", "choices": ["できるだけ短い単語だけを箇条書きで送信すること", "言葉の客観的な正確さと丁寧な文脈の説明を心がけること", "すべての文字メッセージに自分の顔写真を添付すること", "電子メールやSNSを一切使わずに、必ず電話をかけること"], "answer": 1, "translation": "【중문 해설】 마지막 문단: '문자만의 소통에서야말로, 말의 객관적인 정확함과 정중한 문맥 설명이 필수적이다'라고 제언합니다.", "connection": "「言葉の客観的な正確さと丁寧な文脈説明が不可欠となるのだ」", "meaning": "맥락의 누락을 보완하는 정확하고 친절한 표현.", "trap": "극단적 단어 축약이나 사진 첨부는 오답.", "contrast": "텍스트 커뮤니케이션의 예절.", "example": "丁寧な言葉遣いと背景説明を心がける。", "nextReview": "D+1: 2026-09-21"}, {"id": 66, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 과거 관광의 특징", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章3】\nかつての観光地における旅行者の行動といえば、有名な寺社仏閣や名所旧跡を駆け足で巡り、記念写真を撮影して、定番の銘菓や特産品をお土産として買い込むという「名所巡り・モノ消費」が主流であった。そこでは、ガイドブックに掲載された定番コースをいかに効率よく消化できるかが重視されていたのである。\nしかし近年、観光客の関心は「名所を見ること」から「その土地ならではの特別な体験をすること」へと明確にシフトしつつある。地元の農家で野菜の収穫を手伝ったり、伝統工芸の工房で職人から直接指導を受けて器を作ったり、地元の人しか知らない路地裏の居酒屋で店主や常連客と語り合ったりするような、地域の人々の暮らしに深く触れる「コト消費」に人気が集まっているのだ。\n観光客はもはや、用意された表面的な観光客向けサービスだけでは満足しない。その地域に暮らす人々と本音で交流し、日常の文化を肌で実感できる場を見出すことこそが、旅に本物の感動を求める現代の旅行者にとって最大の魅力となっているのである。", "prompt": "かつての観光地において、旅行者が重視していたことは何か。", "choices": ["地元の農家に長期間滞在して農業体験をすること", "有名な名所を効率よく巡り、定番のお土産を買うこと", "ガイドブックを一切見ずに、未知の秘境を探検すること", "地元の職人と共同で新しい伝統工芸品を開発すること"], "answer": 1, "translation": "【중문 해설】 1문단: 유명 명소를 바쁘게 둘러보고 기념사진을 찍고 유명 특산품 선물을 사는 '명소 관광·모노(물건) 소비'가 주류였습니다.", "connection": "「定番コースをいかに効率よく消化できるかが重視されていた」", "meaning": "유명 명소 중심의 효율적 관람과 기념품 구매.", "trap": "장기 체류 농업이나 전통공예 개발은 현대의 트렌드.", "contrast": "모노 소비 vs 코토 소비의 대조.", "example": "名所旧跡を巡るかつての観光スタイル。", "nextReview": "D+1: 2026-09-21"}, {"id": 67, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 현대 관광객의 욕구 변화", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章3】\nかつての観光地における旅行者の行動といえば、有名な寺社仏閣や名所旧跡を駆け足で巡り、記念写真を撮影して、定番の銘菓や特産品をお土産として買い込むという「名所巡り・モノ消費」が主流であった。そこでは、ガイドブックに掲載された定番コースをいかに効率よく消化できるかが重視されていたのである。\nしかし近年、観光客の関心は「名所を見ること」から「その土地ならではの特別な体験をすること」へと明確にシフトしつつある。地元の農家で野菜の収穫を手伝ったり、伝統工芸の工房で職人から直接指導を受けて器を作ったり、地元の人しか知らない路地裏の居酒屋で店主や常連客と語り合ったりするような、地域の人々の暮らしに深く触れる「コト消費」に人気が集まっているのだ。\n観光客はもはや、用意された表面的な観光客向けサービスだけでは満足しない。その地域に暮らす人々と本音で交流し、日常の文化を肌で実感できる場を見出すことこそが、旅に本物の感動を求める現代の旅行者にとって最大の魅力となっているのである。", "prompt": "近年、観光客の人気が「体験型」にシフトしているのはなぜか。", "choices": ["有名観光地への入場料が世界的に高騰しすぎたから", "スマートフォンで写真が撮れなくなったから", "その土地の人々の暮らしや文化に深く触れる特別な体験をしたいから", "旅行者が全員お土産を買うのをやめてしまったから"], "answer": 2, "translation": "【중문 해설】 2문단: 수확 체험, 공예 공방, 골목길 식당 교류 등 '그 지역 사람들의 생활과 일상 문화에 깊이 닿는 특별한 체험'에 관심이 집중되고 있습니다.", "connection": "「地域の人々の暮らしに深く触れる「コト消費」に人気が集まっている」", "meaning": "단순한 관람에서 지역 생활과 문화의 심층 체험으로 진화.", "trap": "입장료 폭등이나 스마트폰 문제는 본문과 무관.", "contrast": "체험형 콘텐츠의 부상.", "example": "地域の日常に触れる旅の魅力。", "nextReview": "D+1: 2026-09-21"}, {"id": 68, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題11", "category": "독해 → 중문 이해 → 현대 관광의 본질적 매력", "subtype": "中文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章3】\nかつての観光地における旅行者の行動といえば、有名な寺社仏閣や名所旧跡を駆け足で巡り、記念写真を撮影して、定番の銘菓や特産品をお土産として買い込むという「名所巡り・モノ消費」が主流であった。そこでは、ガイドブックに掲載された定番コースをいかに効率よく消化できるかが重視されていたのである。\nしかし近年、観光客の関心は「名所を見ること」から「その土地ならではの特別な体験をすること」へと明確にシフトしつつある。地元の農家で野菜の収穫を手伝ったり、伝統工芸の工房で職人から直接指導を受けて器を作ったり、地元の人しか知らない路地裏の居酒屋で店主や常連客と語り合ったりするような、地域の人々の暮らしに深く触れる「コト消費」に人気が集まっているのだ。\n観光客はもはや、用意された表面的な観光客向けサービスだけでは満足しない。その地域に暮らす人々と本音で交流し、日常の文化を肌で実感できる場を見出すことこそが、旅に本物の感動を求める現代の旅行者にとって最大の魅力となっているのである。", "prompt": "現代の旅行者が旅に最も強く求めていることについて、筆者はどう述べているか。", "choices": ["地域の人々と本音で交流し、日常の生きた文化を肌で実感すること", "高級ホテルにこもって、外部との接触を完全に断つこと", "誰よりもたくさんの観光名所を一日で制覇すること", "旅行代理店が用意したツアー日程に一分も狂わず従うこと"], "answer": 0, "translation": "【중문 해설】 마지막 3문단: '지역 주민과 진솔하게 교류하고 일상의 문화를 피부로 실감할 수 있는 장을 발견하는 것'이 현대 여행자에게 최대 매력입니다.", "connection": "「その地域に暮らす人々と本音で交流し、日常の文化を肌で実感できる場を見出すことこそが〜最大の魅力」", "meaning": "표면적 서비스를 넘어선 진솔한 인간적 교류와 실감.", "trap": "명소 제패나 패키지 일정 맹종은 과거의 스타일.", "contrast": "진정한 감동을 주는 여행의 본질.", "example": "人々との温かい交流こそが旅の醍醐味である。", "nextReview": "D+1: 2026-09-21"}, {"id": 69, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題12", "category": "독해 → 통합 이해 → 베스트셀러 복수 구입에 대한 입장 비교", "subtype": "統合理解", "instruction": "次のＡとＢの文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章Ａ】\n公立の図書館では、利用者へのサービス向上のために、人気の高い話題のベストセラー本を複数冊購入して配架するケースが増えている。本が複数冊あれば、同時に多くの利用者に貸し出せて、何十人もが数か月も予約待ちをする期間を大幅に短縮できる。\nこのような図書館の姿勢に対して、「限られた公費予算の中で買える本の種類（多様性）が減ってしまうのではないか」と懸念する声もある。しかし、借りたいと思った話題の本が半年も待たなければ借りられないような図書館では、やがて市民の足は遠のいてしまうだろう。公立図書館には、まず多くの人々に読書のきっかけを与え、本を読む楽しさや喜びを感じてもらうという重要な役割がある。市民のニーズに柔軟に応えることこそが、図書館の利用者を増やし、地域全体の読書文化を支えることにつながるのだ。\n\n【文章Ｂ】\n最近の公立図書館が、市民の人気取りのためにベストセラー小説などを何冊も買い揃えている現状には、強い疑問を抱かざるを得ない。一時的な流行本を何冊も買ったところで、数年も経てば誰にも読まれず、貴重な書架のスペースを占領するだけの無駄な在庫になってしまうのが目に見えている。\n図書館の本来の使命は、民間の一般書店では採算が合わずに扱われないような専門書、学術書、あるいは地域の歴史を伝える貴重な郷土資料などを、長期的な視点で収集・保存し、市民の知的好奇心や調査研究に応えることにあるはずだ。短期的な貸出冊数の数字ばかりを追い求め、流行本に予算を偏重させることは、図書館が本来果たすべき「知の拠点」としての存在意義を自ら放棄する行為にほかならない。", "prompt": "図書館が人気本を複数冊購入することについて、ＡとＢはどのように述べているか。", "choices": ["ＡもＢも、市民の読書離れを防ぐために全面的に賛成している", "ＡもＢも、税金の無駄遣いになるため即座にやめるべきだと批判している", "Ａは予算の無駄だと反対し、Ｂは利用者を増やすために賛成している", "Ａは市民のニーズに応えるため賛成し、Ｂは本来の使命に反すると反対している"], "answer": 3, "translation": "【통합이해 해설】 A는 시민의 니즈에 부응하여 이용자를 늘릴 수 있으므로 찬성하고, B는 전문서 수집이라는 본래의 사명에 반하므로 반대하고 있습니다.", "connection": "Ａは利用促進の観点から賛成、Ｂは知の拠点の使命から反対", "meaning": "양자의 상반된 핵심 논점 대조.", "trap": "양자 모두 찬성/반대라거나 입장을 뒤바꾼 선지 배제.", "contrast": "시민 서비스(A) vs 지적 보존 사명(B).", "example": "異なる視点からの多角的な論述の比較。", "nextReview": "D+1: 2026-09-21"}, {"id": 70, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題12", "category": "독해 → 통합 이해 → 도서관의 본질적 역할", "subtype": "統合理解", "instruction": "次のＡとＢの文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章Ａ】\n公立の図書館では、利用者へのサービス向上のために、人気の高い話題のベストセラー本を複数冊購入して配架するケースが増えている。本が複数冊あれば、同時に多くの利用者に貸し出せて、何十人もが数か月も予約待ちをする期間を大幅に短縮できる。\nこのような図書館の姿勢に対して、「限られた公費予算の中で買える本の種類（多様性）が減ってしまうのではないか」と懸念する声もある。しかし、借りたいと思った話題の本が半年も待たなければ借りられないような図書館では、やがて市民の足は遠のいてしまうだろう。公立図書館には、まず多くの人々に読書のきっかけを与え、本を読む楽しさや喜びを感じてもらうという重要な役割がある。市民のニーズに柔軟に応えることこそが、図書館の利用者を増やし、地域全体の読書文化を支えることにつながるのだ。\n\n【文章Ｂ】\n最近の公立図書館が、市民の人気取りのためにベストセラー小説などを何冊も買い揃えている現状には、強い疑問を抱かざるを得ない。一時的な流行本を何冊も買ったところで、数年も経てば誰にも読まれず、貴重な書架のスペースを占領するだけの無駄な在庫になってしまうのが目に見えている。\n図書館の本来の使命は、民間の一般書店では採算が合わずに扱われないような専門書、学術書、あるいは地域の歴史を伝える貴重な郷土資料などを、長期的な視点で収集・保存し、市民の知的好奇心や調査研究に応えることにあるはずだ。短期的な貸出冊数の数字ばかりを追い求め、流行本に予算を偏重させることは、図書館が本来果たすべき「知の拠点」としての存在意義を自ら放棄する行為にほかならない。", "prompt": "公立図書館が果たすべき最も重要な役割について、Ｂの意見に合致するものはどれか。", "choices": ["最新のベストセラーを民間の書店よりも早く全市民に貸し出すこと", "できるだけ多くの市民に本を読んでもらい、貸出冊数の記録を更新すること", "一般書店では手に入りにくい専門書や貴重な資料を収集・保存すること", "市民が集まって自由に会話を楽しめる交流カフェスペースを作ること"], "answer": 2, "translation": "【통합이해 해설】 B는 일반 서점에서는 채산성 때문에 다루지 않는 전문서, 학술서, 향토 자료 등을 장기적 관점에서 수집·보존하는 것이 도서관 본래의 사명이라고 주장합니다.", "connection": "「一般書店では扱われないような専門書、学術書〜長期的な視点で収集・保存し」", "meaning": "지식의 공공재로서의 보존 가치 강조.", "trap": "대출 권수 갱신이나 카페 운영은 B의 논지와 정면 배치.", "contrast": "장기적 지적 아카이브로서의 도서관.", "example": "貴重な知の遺産を守り継ぐ役割。", "nextReview": "D+1: 2026-09-21"}, {"id": 71, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題13", "category": "독해 → 장문 이해 → 아이디어의 원천", "subtype": "長文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章】\n以下は、あるデザイナーの書いた文章である。\n私のアイディアのもとは、自分の生きてきた道の中にすべて詰まっているのだ、というふうに思っています。いままで生きてきた中で、感動したことを現代に持ち帰ってくる。過去の中で感動したことをコピーして、それをデザインしているのです。アイディアはいつも人から、時代からもらう。自分で一から考え出すことはほとんどないのです。\n私は、感動したときのシーンを今でも鮮明によく覚えています。色も匂いも形も光も季節も、そのときの景色も、そのときその場に誰がいたかも、何を食べたかも覚えている。その記憶の引き出しの中から、「あのときのあの感覚」を取り出して、今の仕事に結びつけるのです。\n多くの人は、「デザインとは全く新しいものを無から生み出すことだ」と思い込んでいます。だから机の前で頭を抱えて、「斬新なアイディアが出ない」と苦しむことになる。しかし、人間の頭がゼロから生み出せるものなど、たかが知れています。本当に人の心を動かすデザインとは、誰も見たことがない奇抜な形ではなく、「どこか懐かしく、誰もが心の奥底で知っている感覚」を呼び覚ますものなのです。\n私にとってデザインとは、過去に自分が受け取った無数の感動に対する「お礼」のようなものです。子ども時代に見た夕焼けの美しさ、旅先で出会った人々の温かい笑顔、古い街並みの静けさ。そうした体験が私の中に蓄積され、時代というフィルターを通して新しい形となって外へと現れてくる。自分の足で歩き、五感を開いて深く感動した経験の積み重ねこそが、デザイナーにとって唯一無二の財産なのだと確信しています。", "prompt": "筆者は、自分のデザインのアイディアはどこから生まれると述べているか。", "choices": ["最新のデザイン専門書を毎日熟読することから", "これまでの人生の中で自分が深く感動した記憶や体験から", "机の前で何日も徹夜して、ゼロから新しい形を考え出すことから", "他人のデザイン事務所に忍び込んで、作品をそのまま盗むことから"], "answer": 1, "translation": "【장문 해설】 1문단과 2문단: '지금까지 살아온 길 속에서 감동했던 것을 가져와 디자인한다. 감동했던 순간의 색, 냄새, 빛, 사람 등의 기억이 아이디어의 원천'이라고 명시되어 있습니다.", "connection": "「いままで生きてきた中で、感動したことを現代に持ち帰ってくる」", "meaning": "자신의 오감으로 경험한 과거의 감동 기억이 원천임.", "trap": "전문서 정독이나 무로부터의 창출은 필자의 생각과 반대.", "contrast": "체험적 감동의 재현.", "example": "感動の記憶がクリエイ티브の源となる。", "nextReview": "D+1: 2026-09-21"}, {"id": 72, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題13", "category": "독해 → 장문 이해 → 사람의 마음을 움직이는 디자인", "subtype": "長文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章】\n以下は、あるデザイナーの書いた文章である。\n私のアイディアのもとは、自分の生きてきた道の中にすべて詰まっているのだ、というふうに思っています。いままで生きてきた中で、感動したことを現代に持ち帰ってくる。過去の中で感動したことをコピーして、それをデザインしているのです。アイディアはいつも人から、時代からもらう。自分で一から考え出すことはほとんどないのです。\n私は、感動したときのシーンを今でも鮮明によく覚えています。色も匂いも形も光も季節も、そのときの景色も、そのときその場に誰がいたかも、何を食べたかも覚えている。その記憶の引き出しの中から、「あのときのあの感覚」を取り出して、今の仕事に結びつけるのです。\n多くの人は、「デザインとは全く新しいものを無から生み出すことだ」と思い込んでいます。だから机の前で頭を抱えて、「斬新なアイディアが出ない」と苦しむことになる。しかし、人間の頭がゼロから生み出せるものなど、たかが知れています。本当に人の心を動かすデザインとは、誰も見たことがない奇抜な形ではなく、「どこか懐かしく、誰もが心の奥底で知っている感覚」を呼び覚ますものなのです。\n私にとってデザインとは、過去に自分が受け取った無数の感動に対する「お礼」のようなものです。子ども時代に見た夕焼けの美しさ、旅先で出会った人々の温かい笑顔、古い街並みの静けさ。そうした体験が私の中に蓄積され、時代というフィルターを通して新しい形となって外へと現れてくる。自分の足で歩き、五感を開いて深く感動した経験の積み重ねこそが、デザイナーにとって唯一無二の財産なのだと確信しています。", "prompt": "筆者によると、本当に人の心を動かすデザインとはどのようなものか。", "choices": ["世界で最も高価な素材だけを贅沢に使ったもの", "コンピューターの最新AI技術だけで自動生成されたもの", "誰も見たことがないほど極めて複雑で難解な形をしたもの", "どこか懐かしく、誰もが心の中で知っている感覚を呼び覚ますもの"], "answer": 3, "translation": "【장문 해설】 3문단에 '정말로 사람의 마음을 움직이는 디자인이란 기발한 형태가 아니라, 어딘가 그립고 누구나 마음 깊은 곳에서 알고 있는 감각을 일깨우는 것'이라고 명시되어 있습니다.", "connection": "「どこか懐かしく、誰もが心の奥底で知っている感覚を呼び覚ますもの」", "meaning": "공감과 노스탤지어를 자극하는 감성적 연결.", "trap": "고가 소재, 난해한 형태 등은 본문과 반대.", "contrast": "인간적 공감대의 환기.", "example": "懐かしさと新しさが共存するデザイン。", "nextReview": "D+1: 2026-09-21"}, {"id": 73, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題13", "category": "독해 → 장문 이해 → 필자의 디자인관", "subtype": "長文読解", "instruction": "次の文章を読んで、後の問いに対する答えとして最もよいものを、1・2・3・4から一つ選んでください。\n\n【文章】\n以下は、あるデザイナーの書いた文章である。\n私のアイディアのもとは、自分の生きてきた道の中にすべて詰まっているのだ、というふうに思っています。いままで生きてきた中で、感動したことを現代に持ち帰ってくる。過去の中で感動したことをコピーして、それをデザインしているのです。アイディアはいつも人から、時代からもらう。自分で一から考え出すことはほとんどないのです。\n私は、感動したときのシーンを今でも鮮明によく覚えています。色も匂いも形も光も季節も、そのときの景色も、そのときその場に誰がいたかも、何を食べたかも覚えている。その記憶の引き出しの中から、「あのときのあの感覚」を取り出して、今の仕事に結びつけるのです。\n多くの人は、「デザインとは全く新しいものを無から生み出すことだ」と思い込んでいます。だから机の前で頭を抱えて、「斬新なアイディアが出ない」と苦しむことになる。しかし、人間の頭がゼロから生み出せるものなど、たかが知れています。本当に人の心を動かすデザインとは、誰も見たことがない奇抜な形ではなく、「どこか懐かしく、誰もが心の奥底で知っている感覚」を呼び覚ますものなのです。\n私にとってデザインとは、過去に自分が受け取った無数の感動に対する「お礼」のようなものです。子ども時代に見た夕焼けの美しさ、旅先で出会った人々の温かい笑顔、古い街並みの静けさ。そうした体験が私の中に蓄積され、時代というフィルターを通して新しい形となって外へと現れてくる。自分の足で歩き、五感を開いて深く感動した経験の積み重ねこそが、デザイナーにとって唯一無二の財産なのだと確信しています。", "prompt": "文章全体を通して、筆者にとって「デザイン」とはどのような行為か。", "choices": ["有名になって莫大な富と名声を獲得するための手段", "他人の作品の欠点を厳しく批判して優位に立つこと", "過去に自分が受け取った無数の感動に対するお礼", "自然の美しさをすべて人工的なプラスチックに置き換えること"], "answer": 2, "translation": "【장문 해설】 4문단: 필자에게 디자인이란 '과거에 자신이 받았던 무수한 감동에 대한 감사(답례, お礼)와 같은 것'이라고 총괄하고 있습니다.", "connection": "「過去に自分が受け取った無数の感動に対する「お礼」のようなもの」", "meaning": "경험에 대한 감사와 사회로의 환원.", "trap": "부와 명성 획득이나 타인 비판은 본문과 상반.", "contrast": "디자이너로서의 철학과 감사.", "example": "受け取った感動を形にして返す行為。", "nextReview": "D+1: 2026-09-21"}, {"id": 74, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題14", "category": "독해 → 정보 검색 → 희망 조건 부합 플랜 탐색", "subtype": "情報検索", "instruction": "右のページは、あるホテルのホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。\n\n【ミハマホテル レストラン＆ビュッフェ ご案内】\n\n■ レストラン「ベルン」（洋食ビュッフェ）\n・ランチビュッフェ（90分制）：11:30〜14:30（最終入店 13:30）\n　【平日】大人 3,200円 ／ シニア(65歳以上) 3,000円 ／ 子ども 1,800円\n　【土日祝】大人 4,000円 ／ シニア 3,800円 ／ 子ども 2,000円\n・デザートビュッフェ（120分制）：14:30〜17:00（最終入店 16:00）\n　【平日】大人 2,500円 ／ シニア 2,200円 ／ 子ども 1,500円\n　【土日祝】大人 3,000円 ／ シニア 2,800円 ／ 子ども 1,800円\n・夕食ビュッフェ（120分制）：17:30〜21:30（最終入店 20:30）\n　【平日】大人 5,500円 ／ シニア 5,000円 ／ 子ども 3,000円\n　【土日祝】大人 6,500円 ／ シニア 6,000円 ／ 子ども 3,500円\n\n■ 和食処「みよし」（和食ビュッフェ）\n・ランチビュッフェ（90分制）：11:30〜14:30（最終入店 13:30）\n　【全日共通】大人 3,500円 ／ シニア 3,200円 ／ 子ども 2,000円\n・夕食会席（完全予約制・ビュッフェ形式ではありません）：17:30〜21:30\n\n※ 各種特典・割引規定：\n1. WEB予約特典：ご利用前日の17時までにホテル公式サイトからご予約いただくと、お一人様あたり一律300円割引となります（ランチ・夕食ビュッフェのみ適用。デザートビュッフェは対象外）。\n2. 記念日特典：お誕生月のご利用の場合、乾杯用ワンドリンクを無料サービスいたします（要証明書提示）。\n3. 駐車場：レストランご利用で3時間まで無料。", "prompt": "ユンさんは、来週ミハマホテルのビュッフェに行きたいと考えている。金曜か土曜の12時から17時の間で、2時間いられるものがいい。ユンさんの希望に合うビュッフェはどれか。", "choices": ["「ベルン」のランチビュッフェ", "「みよし」のランチビュッフェ", "「ベルン」の夕食ビュッフェ", "「ベルン」のデザートビュッフェ"], "answer": 3, "translation": "【정보검색 해설】 금요일 또는 토요일 12시~17시 사이 시간대에 2시간(120분) 머무를 수 있는 플랜은 14:30~17:00에 120분제로 운영되는 「베른」의 디저트 뷔페뿐입니다. (런치 뷔페는 90분제라 탈락)", "connection": "「デザートビュッフェ（120分制）：14:30〜17:00」", "meaning": "시간대(12~17시)와 체류 시간(120분) 동시 충족.", "trap": "런치 뷔페는 90분제이므로 2시간 체류 불가.", "contrast": "조건 대조 검색.", "example": "条件表から該当する時間枠を特定する。", "nextReview": "D+1: 2026-09-21"}, {"id": 75, "section": 1, "sectionName": "言語知識・読解", "part": "読解", "problemNo": "問題14", "category": "독해 → 정보 검색 → 요금 할인 계산", "subtype": "情報検索", "instruction": "右のページは、あるホテルのホームページに載っている案内である。下の問いに対する答えとして最もよいものを、1・2・3・4から一つ選びなさい。\n\n【ミハマホテル レストラン＆ビュッフェ ご案内】\n\n■ レストラン「ベルン」（洋食ビュッフェ）\n・ランチビュッフェ（90分制）：11:30〜14:30（最終入店 13:30）\n　【平日】大人 3,200円 ／ シニア(65歳以上) 3,000円 ／ 子ども 1,800円\n　【土日祝】大人 4,000円 ／ シニア 3,800円 ／ 子ども 2,000円\n・デザートビュッフェ（120分制）：14:30〜17:00（最終入店 16:00）\n　【平日】大人 2,500円 ／ シニア 2,200円 ／ 子ども 1,500円\n　【土日祝】大人 3,000円 ／ シニア 2,800円 ／ 子ども 1,800円\n・夕食ビュッフェ（120分制）：17:30〜21:30（最終入店 20:30）\n　【平日】大人 5,500円 ／ シニア 5,000円 ／ 子ども 3,000円\n　【土日祝】大人 6,500円 ／ シニア 6,000円 ／ 子ども 3,500円\n\n■ 和食処「みよし」（和食ビュッフェ）\n・ランチビュッフェ（90分制）：11:30〜14:30（最終入店 13:30）\n　【全日共通】大人 3,500円 ／ シニア 3,200円 ／ 子ども 2,000円\n・夕食会席（完全予約制・ビュッフェ形式ではありません）：17:30〜21:30\n\n※ 各種特典・割引規定：\n1. WEB予約特典：ご利用前日の17時までにホテル公式サイトからご予約いただくと、お一人様あたり一律300円割引となります（ランチ・夕食ビュッフェのみ適用。デザートビュッフェは対象外）。\n2. 記念日特典：お誕生月のご利用の場合、乾杯用ワンドリンクを無料サービスいたします（要証明書提示）。\n3. 駐車場：レストランご利用で3時間まで無料。", "prompt": "エンリケさんは、今度の土曜日に妻と一緒にレストラン「ベルン」の夕食ビュッフェに行こうと考えている。前日までにホテル公式サイトからWEB予約をした場合、夫婦2人で支払う合計金額はいくらになるか。", "choices": ["13,000円", "12,700円", "12,400円", "11,000円"], "answer": 2, "translation": "【정보검색 해설】 토요일 「베른」 저녁 뷔페 대인 요금은 1인당 6,500원입니다. 2명이면 13,000원입니다. 전날까지 WEB 사전예약 시 1인당 300원씩 할인되므로, 2명 할인액은 600원입니다. 따라서 지불 합계는 13,000 - 600 = 12,400원입니다.", "connection": "「土日祝 大人 6,500円 × 2 ＝ 13,000円」 − 「WEB予約割引 300円 × 2 ＝ 600円」 ＝ 12,400円", "meaning": "토요일 요금 적용 및 2인분 할인 공제 계산.", "trap": "할인을 1인분만 빼거나(12,700원) 평일 요금을 적용하는 실수 방지.", "contrast": "정확한 표 계산.", "example": "人数分の割引額を正確に差し引く。", "nextReview": "D+1: 2026-09-21"}, {"id": 76, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題1", "category": "청해 → 과제이해 → 수업 결석 시 행동", "subtype": "課題理解", "instruction": "問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n授業で先生が話しています。学生は授業を休んだとき、どのように宿題を確認しますか。", "choices": ["研究室の前の掲示を見る", "友達に電話して聞く", "先生にメールで確認する", "次の授業で先生に直接尋ねる"], "answer": 0, "translation": "【청해 해설】 남선생님이 '결석했을 때는 제 연구실 앞의 게시판을 보고 숙제를 확인하세요. 친구에게 묻지 말고 스스로 확인하세요'라고 지시합니다.", "connection": "「休んだときは、私の研究室の前の掲示を見て、宿題を確認してください」", "meaning": "결석 시 연구실 앞 게시를 확인하는 것이 과제 해결책.", "trap": "친구에게 묻지 말라고 강조함.", "contrast": "교사의 지시 전달 청취.", "example": "掲示板を自分で確認すること。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "ええと、この授業を休むときは、必ず前の日までに連絡してください。"}, {"speaker": 2, "text": "メールでもいいですか。"}, {"speaker": 1, "text": "はい、いいですよ。あ、それから、休んだときは、私の研究室の前の掲示を見て、宿題を確認してください。友達に聞いたりしないで、自分で確かめてちゃんとやってきてくださいね。"}, {"speaker": 2, "text": "はい、分かりました。"}]}, {"id": 77, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題1", "category": "청해 → 과제이해 → 행동 순서", "subtype": "課題理解", "instruction": "問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n会社で男の人と女の人が話しています。男の人はこのあと、まず何をしますか。", "choices": ["会議室を予約する", "会議の資料を印刷する", "参加者にメールを送る", "部長に日程を確認する"], "answer": 1, "translation": "【청해 해설】 회의 준비에서 남자는 자료 인쇄를 가장 먼저(まず) 하기로 합니다.", "connection": "「会議の資料のコピーをまずやってくれる？」", "meaning": "가장 먼저 해야 할 행동(資料の印刷) 특정.", "trap": "메일 송신이나 회의실 예약은 그 다음 순서.", "contrast": "우선순위 지시어 「まず」 포착.", "example": "指示された最初のアクションを正確に聞き取る。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "午後の会議の準備、進んでる？"}, {"speaker": 1, "text": "はい、会議室はもう押さえました。"}, {"speaker": 2, "text": "ありがとう。じゃあ、参加者に配る資料の印刷をまずお願いできる？部長が内容を確定したから。"}, {"speaker": 1, "text": "分かりました。すぐに印刷室へ行ってコピーしてきます。"}]}, {"id": 78, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題1", "category": "청해 → 과제이해 → 심부름 절차", "subtype": "課題理解", "instruction": "問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n大学で女の学生と男の学生が話しています。女の人はこのあと、どこへ行きますか。", "choices": ["図書館", "事務室の窓口", "学生食堂", "教授の研究室"], "answer": 1, "translation": "【청해 해설】 여학생은 증명서 발급 신청을 위해 사무실 창구로 바로 향합니다.", "connection": "「事務室の窓口が開いているうちに、先に行ってくるわ」", "meaning": "여학생(화자 2, 여성 톤)은 증명서를 받기 위해 먼저 사무실 창구(事務室の窓口)로 간다고 명확히 밝혔음.", "trap": "도서관이나 식당은 나중에 가기로 함.", "contrast": "이동 목적지 청취.", "example": "移動先を特定する発話。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "これから図書館に本を返しに行こうと思うんだけど、一緒に行かない？"}, {"speaker": 2, "text": "あ、ごめん。今日中に証明書をもらわなきゃいけないの。事務室の窓口がもうすぐ閉まっちゃうから、先に窓口に行ってくるね。"}, {"speaker": 1, "text": "そっか、じゃあ後で学食で合流しよう。"}]}, {"id": 79, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題1", "category": "청해 → 과제이해 → 행사 준비 담당", "subtype": "課題理解", "instruction": "問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\nサークルの集まりで部長と部員が話しています。男の人はどの係を担当することになりましたか。", "choices": ["会場の案内係", "チラシの作成係", "受付と会計係", "写真の撮影係"], "answer": 3, "translation": "【청해 해설】 남학생은 카메라를 가지고 있으므로 당일 사진 촬영 담당을 맡게 되었습니다.", "connection": "「写真撮影ならカメラを持ってるから、僕がやるよ」", "meaning": "자신의 장비를 활용한 사진 촬영 담당 결정.", "trap": "접수나 안내는 다른 부원이 맡기로 함.", "contrast": "역할 분담 대화.", "example": "担当係の決定発話。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "来月の新入生歓迎会、そろそろ係を決めたいんだけど。"}, {"speaker": 1, "text": "受付や会計はもう決まったんだよね？"}, {"speaker": 2, "text": "うん。あとは当日の写真撮影係と案内係なんだけど……。"}, {"speaker": 1, "text": "僕、一眼レフカメラを持ってるから、写真撮影なら任せて。"}, {"speaker": 2, "text": "助かる！じゃあ撮影係をお願いね。"}]}, {"id": 80, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題1", "category": "청해 → 과제이해 → 출장 예약 변경", "subtype": "課題理解", "instruction": "問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n会社で上司と女性社員が話しています。女の人はこのあと、何をしなければなりませんか。", "choices": ["新幹線のチケットをキャンセルする", "取引先に訪問時間の変更を連絡する", "ホテルの宿泊日を1日延ばす", "出張報告書を事前に提出する"], "answer": 2, "translation": "【청해 해설】 회의가 이틀로 늘어났으므로 여사원은 호텔 숙박 일정을 하루 연장하는 수속을 밟아야 합니다.", "connection": "「ホテルの予約を一日延ばして、もう一泊できるように手続きしてくれる？」", "meaning": "숙박 예약 변경 조치.", "trap": "신칸센 취소나 거래처 시간 변경이 아님.", "contrast": "출장 업무 변경 대응.", "example": "予約変更の手続きを行う。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "来週の大阪出張、先方の都合で打ち合わせが翌日にも入ることになったんだ。"}, {"speaker": 2, "text": "分かりました。では新幹線はそのままですね。"}, {"speaker": 1, "text": "うん。ただ、ホテルの予約を一日延ばして、もう一泊できるように変更手続きをしてくれるかい？"}, {"speaker": 2, "text": "かしこまりました。すぐに旅行会社に電話して変更いたします。"}]}, {"id": 81, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 상품 구입 이유", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n男の人と女の人が家電量販店で話しています。女の人がこの掃除機を選んだ一番の理由は何ですか。", "choices": ["価格が最も安かったから", "デザインが部屋に合っているから", "軽くて階段の掃除が楽だから", "音が静かで夜でも使えるから"], "answer": 2, "translation": "【청해 해설】 여자는 '가볍고 계단 청소가 편하다'는 점을 청소기 선택의 결정적 이유(一番の決め手)로 꼽았습니다.", "connection": "「重さが軽くて、階段の昇り降りが楽なのが一番の決め手だったわ」", "meaning": "경량화로 인한 청소 편의성이 핵심 이유.", "trap": "가격이나 디자인은 다른 모델의 장점.", "contrast": "결정적 이유 청취.", "example": "一番の決め手を聞き取る。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "新しい掃除機、結局どれにしたの？"}, {"speaker": 2, "text": "このコードレスタイプにしたの。音が静かなのや安いのも迷ったんだけど、うち階段が多いじゃない？持ってみたらすごく軽くて、これなら階段も楽に掃除できると思ったのが一番の決め手だったわ。"}, {"speaker": 1, "text": "なるほど、毎日のことだから軽いのが一番だね。"}]}, {"id": 82, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 지각 원인", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n会社で上司と男の社員が話しています。男の人が遅刻した理由は何ですか。", "choices": ["目覚まし時計が鳴らなかったから", "途中で体調の悪い人を助けていたから", "電車が事故で運転を見合わせていたから", "乗るバスを間違えて遠くへ行ったから"], "answer": 1, "translation": "【청해 해설】 역 계단에서 쓰러진 몸이 안 좋은 분을 역무원에게 안내하고 돕느라 늦었다고 설명합니다.", "connection": "「駅のホームで具合の悪そうな方が倒れかけて、駅員さんを呼んで付き添っていたんです」", "meaning": "선행(구호 활동)으로 인한 불가피한 지각.", "trap": "알람이나 열차 사고는 거짓 변명으로 언급하지 않음.", "contrast": "정당한 사유 파악.", "example": "遅刻の真の理由を正確に把握する。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "鈴木くん、珍しいわね、遅刻なんて。どうしたの？"}, {"speaker": 1, "text": "すみません。実は駅の階段のところで、お年寄りの方が急に具合が悪くなって倒れそうになったんです。放っておけなくて、駅員室まで付き添っていたら遅くなってしまいました。"}, {"speaker": 2, "text": "そうだったの。それは大変だったわね。よく助けてくれたわ。"}]}, {"id": 83, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 연구 발표의 개선점", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n大学で教授と学生が研究発表の練習のあとで話しています。先生は発表のどこを直すべきだとアドバイスしましたか。", "choices": ["専門用語を分かりやすい言葉に言い換える", "スライドの文字を大きくする", "発表の時間を3分短くする", "結論を最初ではなく最後に述べる"], "answer": 0, "translation": "【청해 해설】 교수는 전문 지식이 없는 일반 청중도 이해할 수 있도록 어려운 전문용어를 알기 쉬운 말로 바꿀 것을 조언합니다.", "connection": "「専門用語が多すぎるから、一般の人にも分かる表現に言い換えたほうがいい」", "meaning": "전문용어의 평이한 치환 요구.", "trap": "슬라이드 크기나 시간 단축은 지적하지 않음.", "contrast": "교사의 구체적 피드백 포인트.", "example": "専門用語を平易な言葉に直すこと。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "先生、発表のリハーサル、いかがでしたでしょうか。"}, {"speaker": 2, "text": "全体的にはよくまとまっているよ。ただね、今回の学会は異分野の研究者も大勢聞きに来るんだ。君の分野特有の専門用語がそのまま使われている箇所が多いから、もっと誰にでも直感的に伝わる表現に言い換えてごらん。"}, {"speaker": 1, "text": "分かりました。用語の説明を補足してスライドを修正します。"}]}, {"id": 84, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 직장 선택의 조건", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n男の人と女の人が話しています。男の人が転職先を決めた理由は何ですか。", "choices": ["給料が今より大幅にアップするから", "海外勤務のチャンスがあるから", "自宅から歩いて通える近さだから", "残業が全くない会社だから"], "answer": 1, "translation": "【청해 해설】 남자는 젊을 때 해외에서 일해보고 싶다는 꿈을 이룰 수 있는 해외 근무 기회가 있다는 점을 결정적 이유로 꼽았습니다.", "connection": "「若いうちに海外の支社でプロジェクトに挑戦できる機会があるのが一番魅力的だったんだ」", "meaning": "해외 근무 도전 기회가 핵심 동기.", "trap": "급여나 통근 거리는 타협한 부분.", "contrast": "커리어 목표 청취.", "example": "海外勤務のチャンスを重視した決定。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "次の会社、決まったんだって？おめでとう。決め手は何だったの？"}, {"speaker": 1, "text": "ありがとう。給料は前とほとんど変わらないんだけど、アジアの現地法人と連携して、若いうちから海外勤務を経験できる制度があるんだ。それが一番の決め手だったよ。"}, {"speaker": 2, "text": "昔から海外で働きたいって言ってたもんね。夢が叶ってよかったわね。"}]}, {"id": 85, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 이벤트 성공 요인", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\nラジオでアナウンサーが商店街のイベントについて話しています。祭りに多くの若者が訪れた理由は何ですか。", "choices": ["有名な芸能人をゲストに呼んだから", "すべての商品を半額で販売したから", "天候が非常によく涼しかったから", "地元の高校生と一緒に屋台の企画を立てたから"], "answer": 3, "translation": "【청해 해설】 지역 고등학생들과 함께 기획한 독창적인 포장마차 부스가 SNS에서 화제가 된 것이 성공 이유였습니다.", "connection": "「地元の高校生たちと共同でユニークな屋台を企画し、SNSで発信したことが功を奏しました」", "meaning": "고교생과의 공동 기획이 젊은 층 유입의 열쇠.", "trap": "연예인이나 반값 세일은 아님.", "contrast": "원인 분석 청취.", "example": "高校生との共同企画による成功。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "毎年恒例の秋祭りで、今年は例年の３倍以上の若者が集まり大盛況となりました。その最大の理由は、地元の商業高校の生徒たちに屋台のプロデュースを全面的に任せたことにあります。高校生ならではのSNS映えするスイーツ企画が同世代の共感を呼び、遠方からも多くの若者が足を運びました。"}]}, {"id": 86, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題2", "category": "청해 → 포인트이해 → 상품 디자인 평가", "subtype": "ポイント理解", "instruction": "問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n会社で開発部員と部長が話しています。部長が新商品のパッケージデザインで最も高く評価した点は何ですか。", "choices": ["文字が大きく、遠くからでも商品名が読みやすいこと", "使われている色が鮮やかで高級感があること", "箱の形がコンパクトで陳列しやすいこと", "環境に配慮した再生紙を使っていること"], "answer": 0, "translation": "【청해 해설】 부장은 진열장 멀리서도 상품명이 단번에 눈에 들어오도록 글자를 크게 배치한 시인성을 가장 높게 평가했습니다.", "connection": "「店頭の棚で遠くから見ても、一目で商品名が読めるフォントの大きさが素晴らしいね」", "meaning": "원거리 가독성 및 시인성을 최고로 호평.", "trap": "고급감이나 친환경 소재는 부수적 요소.", "contrast": "평가 포인트 청취.", "example": "遠くからでも文字が読みやすいデザイン。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "新しくデザインしたお菓子の箱のサンプルですが、いかがでしょうか。"}, {"speaker": 1, "text": "うん、色合いも落ち着いていていいね。でも何より素晴らしいのは、スーパーの棚の遠くから見ても、商品名がパッと一瞬で目に飛び込んでくる文字の大きさと配置だよ。これなら高齢のお客様にもすぐ見つけてもらえる。"}, {"speaker": 2, "text": "ありがとうございます。視認性にこだわって作った甲斐がありました。"}]}, {"id": 87, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題3", "category": "청해 → 개요이해 → 강연의 주제", "subtype": "概要理解", "instruction": "問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\nテレビで専門家が話しています。男の人は何について話していますか。", "choices": ["日本の伝統的な和紙の原料不足の深刻さ", "現代の生活様式に合わせた和紙の新しい可能性", "和紙と西洋の紙の歴史的な起源の違い", "海外で和紙の偽物が大量に流通している問題"], "answer": 1, "translation": "【청해 해설】 화자는 전통적인 화지(和紙)가 조명, 벽지, 패션 소품 등 현대 라이프스타일에 맞추어 새롭게 재해석되는 가능성을 설명하고 있습니다.", "connection": "伝統の和紙が現代の生活空間で新たな価値を生み出している現状と展望", "meaning": "전통 공예의 현대적 진화와 활용 가능성.", "trap": "원료 부족이나 위조품 문제는 아님.", "contrast": "전체 요지 파악.", "example": "和紙の現代における新しい活用法。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "えー、和紙というと、障子や書道を思い浮かべる方が多いかもしれませんが、今、その独特の風合いや耐久性が見直され、現代のインテリアや日用品へと応用が広がっています。例えば、柔らかい光を拡散するランプシェードや、水に強い和紙で作られたバッグなど、若い世代のデザイナーとのコラボレーションによって、現代の生活に溶け込む新しい和紙製品が次々と生まれているのです。"}]}, {"id": 88, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題3", "category": "청해 → 개요이해 → 화자의 주장", "subtype": "概要理解", "instruction": "問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\nラジオで作家が話しています。女の人が最も言いたいことは何ですか。", "choices": ["読書は知識の詰め込みではなく、想像力を広げる体験である", "速読術を身につけて、月100冊以上の本を読むべきだ", "電子書籍は紙の本に比べて記憶に残りにくい", "子どもの頃から難しい古典文学を読ませるべきだ"], "answer": 0, "translation": "【청해 해설】 독서란 단순히 지식을 머리에 주입하는 작업이 아니라, 행간을 읽으며 미지의 세계를 마음속에 그리는 상상력의 체험이라고 강조합니다.", "connection": "「本を読むということは、単に知識を得ることではなく、自分の心の中で世界を創造する想像力の旅なのです」", "meaning": "독서의 본질인 상상력과 감성의 확장 강조.", "trap": "속독 기술이나 권수 집착은 필자가 경계한 태도.", "contrast": "화자의 핵심 철학.", "example": "読書を通じて想像力を豊かに育てる。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "最近は短時間で効率よく要点だけを吸収する読書術が流行していますが、私は少し立ち止まって考えてほしいと思います。本を読む本当の歓びは、書かれている事実を記憶することではなく、作者の描いた言葉の向こう側にある景色や感情を、自分自身の想像力を使って自由に思い描く時間にこそあるのです。"}]}, {"id": 89, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題3", "category": "청해 → 개요이해 → 육아 교실의 핵심 제언", "subtype": "概要理解", "instruction": "問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n子育て教室で講師が話しています。男の人が親たちに最も伝えたいことは何ですか。", "choices": ["子どもの行動を常に監視して、危険をすべて排除すべきだ", "早い時期から英才教育を施して、学力を高めるべきだ", "失敗を先回りして防ぐより、子ども自身に経験させることが大切だ", "親の言う通りに従わない子どもは厳しく罰するべきだ"], "answer": 2, "translation": "【청해 해설】 부모가 앞서서 실패를 막아주기보다, 작은 실패를 겪고 스스로 극복하는 경험이야말로 아이의 자립심을 기르는 데 가장 중요하다고 말합니다.", "connection": "「親が先回りして失敗を防いでしまうのではなく、自分でつまずいて立ち上がる経験をさせてあげてください」", "meaning": "과보호를 피하고 자율적 시행착오의 기회 부여.", "trap": "완벽한 감시나 처벌은 정반대의 잘못된 교육.", "contrast": "자립심 교육의 본질.", "example": "小さな失敗を乗り越える経験の尊さ。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "親御さんたちは子どもが転ばないようにと、つい先回りして石をどけてしまいがちです。しかし、転んで少し膝を擦りむくことで、子どもは痛みを学び、次はどう歩けばいいかを自分で考えるようになります。親の役目は失敗をゼロにすることではなく、転んだときに優しく見守り、自分で立ち上がる力を信じてあげることなのです。"}]}, {"id": 90, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題3", "category": "청해 → 개요이해 → 도시 환경 정책", "subtype": "概要理解", "instruction": "問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n環境フォーラムで研究者が話しています。女の人は何について報告していますか。", "choices": ["都市の屋上緑化が気温上昇の緩和に果たす役割", "高層ビルの建設が鳥類の生態系に与える悪影響", "雨水を再利用した地下貯水システムのコスト問題", "市民ボランティアによる公園のゴミ拾い活動"], "answer": 0, "translation": "【청해 해설】 도심 건물의 옥상 녹화(屋上緑化)가 여름철 히트아일랜드 현상을 완화하고 냉방 에너지를 절감하는 실측 연구 결과를 보고하고 있습니다.", "connection": "屋上緑化による都市のヒートアイランド現象の緩和効果", "meaning": "옥상 정원의 도심 열섬 완화 기여 효과.", "trap": "조류 생태계나 지하 저수 문제는 아님.", "contrast": "환경 보고 주제 청취.", "example": "屋上緑化によるヒートアイランド対策。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "近年、都市部で深刻化するヒートアイランド現象に対して、ビルの屋上を植物で覆う「屋上緑化」の試みが注目されています。私たちの実測データによると、屋上を緑化した建物ではコンクリート表面の温度が最大で約２５度低下し、建物全体のエアコン消費電力も１５％削減できることが実証されました。緑の屋根は都市を冷やす天然のクーラーと言えます。"}]}, {"id": 91, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題3", "category": "청해 → 개요이해 → 전통 축제의 과제", "subtype": "概要理解", "instruction": "問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。", "prompt": "【聴解 音声を聞いて答えてください】\n地域振興のシンポジウムで保存会の代表が話しています。男の人が訴えている問題点は何ですか。", "choices": ["観光客のマナーが悪化し、ゴミが増えていること", "少子高齢化によって祭りの担い手となる若者が不足していること", "祭りの開催費用が高騰し、赤字が続いていること", "近隣住民から太鼓の音がうるさいと苦情が出ていること"], "answer": 1, "translation": "【청해 해설】 수백 년 이어진 전통 축제를 유지하고 싶지만, 저출산 고령화로 인해 가마를 메거나 악기를 연주할 청년 일손(担い手)이 부족한 것이 가장 큰 위기라고 호소합니다.", "connection": "少子高齢化に伴う伝統祭りの「担い手不足」という構造的危機", "meaning": "전통문화 계승을 위한 청년 인력 부재 문제.", "trap": "관광객 쓰레기나 소음 민원은 지엽적.", "contrast": "핵심 위기 요인 파악.", "example": "後継者・担い手の不足への危機感。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "３００年の歴史を誇る私たちの夏祭りですが、地域の過疎化と少子高齢化の波には勝てず、神輿を担ぐ若い衆の数が年々減少しています。このままでは伝統の舞や演奏を継承することが極めて困難になります。外部からの参加者を募るなど、地域外の人々を巻き込んだ新しい保存の形を模索しなければならない瀬戸際に立たされています。"}]}, {"id": 92, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 1番】\n女性：トムさん、よかったら、今日の夕食うちにおいでになりませんか。", "choices": ["ええと、何時に来られますか。", "え、伺ってもよろしいんですか。", "今日はうちにはおりませんが。"], "answer": 1, "translation": "【즉시응답 1번】 여: \"톰 씨, 괜찮으시면 오늘 저녁 저희 집에 오시지 않을래요?\" -> 남: 2번 \"어머, 찾아봬도 괜찮은 건가요?\"", "connection": "招待に対する謙譲承諾「伺ってもよろしいんですか」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "え、伺ってもよろしいんですか。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "トムさん、よかったら、今日の夕食うちにおいでになりませんか。"}]}, {"id": 93, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 2番】\n男性：駅前の、あの人気のレストラン、昨日行ってみたけど、味は期待したほどじゃなかったよ。", "choices": ["えー、期待してなかったのに？", "ああ、だから込んでるんだね。", "へえ、なんで人気があるんだろう。"], "answer": 2, "translation": "【즉시응답 2번】 남: \"역 앞의 그 인기 레스토랑, 어제 가봤는데 맛은 기대했던 것만큼은 아니었어.\" -> 여: 3번 \"헤에, (맛이 별로인데) 왜 인기가 있는 걸까?\"", "connection": "失望の感想に対する疑問の共感「へえ、なんで人気があるんだろう」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "へえ、なんで人気があるんだろう。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "駅前の、あの人気のレストラン、昨日行ってみたけど、味は期待したほどじゃなかったよ。"}]}, {"id": 94, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 3番】\n女性：部長、社内アンケート、山田さんを除いて全員から回答を得ました。", "choices": ["山田さん、回答早いな。", "山田さん、答えてないの？", "山田さんが全員分集めたんだね。"], "answer": 1, "translation": "【즉시응답 3번】 여: \"부장님, 사내 설문조사, 야마다 씨를 제외하고 전원에게서 답변을 받았습니다.\" -> 남: 2번 \"야마다 씨, 아직 답변 안 했어?\"", "connection": "「山田さんを除いて（야마다 씨를 제외하고）」 → 「山田さん、答えてないの？」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "山田さん、答えてないの？", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "部長、社内アンケート、山田さんを除いて全員から回答を得ました。"}]}, {"id": 95, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 4番】\n女性：佐藤さん、日曜のバイト、私と時間代わってもらうわけにいかない？", "choices": ["別に、かまいませんけど。", "え、代わってませんけど。", "僕、お願いしてませんけど。"], "answer": 0, "translation": "【즉시응답 4번】 여: \"사토 씨, 일요일 아르바이트, 나랑 시간 좀 바꿔줄 수 없을까?\" -> 남: 1번 \"별로 상관없는데요(바꿔줄게요).\"", "connection": "依頼「〜わけにいかない？」に対する快諾「別に、かまいませんけど」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "別に、かまいませんけど。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "佐藤さん、日曜のバイト、私と時間代わってもらうわけにいかない？"}]}, {"id": 96, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 5番】\n男性：昨日初めて劇場で芝居見たんだけど、また行きたくてたまらないんだ。", "choices": ["何がたまってないの？", "また行っちゃったの？", "そんなに感動したの？"], "answer": 2, "translation": "【즉시응답 5번】 남: \"어제 처음 극장에서 연극을 봤는데, 또 가고 싶어 견딜 수가 없어.\" -> 여: 3번 \"그 정도로 감동했어?\"", "connection": "感情の高まり「〜てたまらない」に対する反応「そんなに感動したの？」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "そんなに感動したの？", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "昨日初めて劇場で芝居見たんだけど、また行きたくてたまらないんだ。"}]}, {"id": 97, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 6番】\n男性：課長、プリンター、修理に出したんですが、もう買い替えるしかないって言われました。", "choices": ["じゃ、新しいの買わなきゃね。", "買い替える必要ないってこと？", "それなら、修理してもらおう。"], "answer": 0, "translation": "【즉시응답 6번】 남: \"과장님, 프린터 수리 맡겼는데, 이제 새로 교체할 수밖에 없다고 들었습니다.\" -> 여: 1번 \"그럼, 새것을 사야겠네.\"", "connection": "「買い替えるしかない」に対する当然の帰結「じゃ、新しいの買わなきゃね」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "じゃ、新しいの買わなきゃね。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "課長、プリンター、修理に出したんですが、もう買い替えるしかないって言われました。"}]}, {"id": 98, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 7番】\n男性：キムさん、レポート、チェックしたよ。ここの数字さえ直せば、問題ないよ。", "choices": ["数字のほかはどこですか。", "すぐに、訂正します。", "何も問題がなくて安心しました。"], "answer": 1, "translation": "【즉시응답 7번】 남: \"김 씨, 레포트 검토했어. 여기 숫자만 고치면 문제없어.\" -> 여: 2번 \"곧바로 정정하겠습니다.\"", "connection": "指示「数字さえ直せば」に対する対応「すぐに、訂正します」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "すぐに、訂正します。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "キムさん、レポート、チェックしたよ。ここの数字さえ直せば、問題ないよ。"}]}, {"id": 99, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 8番】\n女性：この会議室、壁の色変えたせいか、広く見えるんじゃない？", "choices": ["分かりました。そうしてみます。", "ほんと、変えて、正解ですね。", "色を変えるのは反対です。"], "answer": 1, "translation": "【즉시응답 8번】 여: \"이 회의실, 벽 색깔을 바꾼 탓인지 넓어 보이지 않아?\" -> 남: 2번 \"정말이네요, 바꾸길 잘했네요(정답이네요).\"", "connection": "同意と賞賛「ほんと、変えて、正解ですね」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "ほんと、変えて、正解ですね。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "この会議室、壁の色変えたせいか、広く見えるんじゃない？"}]}, {"id": 100, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 9番】\n男性：田中さん、頼まれてた書類、コピーしておいたよ。", "choices": ["コピーは結構ですよ。", "お手数をおかけしました。", "すぐにコピーしてきます。"], "answer": 1, "translation": "【즉시응답 9번】 남: \"다나카 씨, 부탁받았던 서류 복사해 두었어.\" -> 여: 2번 \"수고를 끼쳐 드렸습니다(감사합니다).\"", "connection": "親切に対する感謝の挨拶「お手数をおかけしました」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "お手数をおかけしました。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "田中さん、頼まれてた書類、コピーしておいたよ。"}]}, {"id": 101, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 10番】\n女性：雨、ずいぶん激しくなってきたね。今日のテニス、中止にするよりないんじゃない？", "choices": ["そうだね、あきらめよう。", "じゃあ、テニスやろうか。", "中止にならなくてよかったね。"], "answer": 0, "translation": "【즉시응답 10번】 여: \"비가 꽤 거세졌네. 오늘 테니스 취소할 수밖에 없지 않아?\" -> 남: 1번 \"맞아, 단념하자.\"", "connection": "提案「中止にするよりない」に対する同意「そうだね、あきらめよう」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "そうだね、あきらめよう。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "雨、ずいぶん激しくなってきたね。今日のテニス、中止にするよりないんじゃない？"}]}, {"id": 102, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 11番】\n男性：昨日のサッカーの決勝戦、見逃しちゃったんだ。", "choices": ["惜しいことしたね、いい試合だったよ。", "絶対見逃さないようにね。", "見られて本当によかったね。"], "answer": 0, "translation": "【즉시응답 11번】 남: \"어제 축구 결승전, 놓쳐버렸어.\" -> 여: 1번 \"아쉽게 됐네, 정말 좋은 경기였어.\"", "connection": "「見逃しちゃった（놓쳤다）」に対する共感と感想「惜しいことしたね、いい試合だったよ」", "meaning": "即座に適切な返答を選択する力.", "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의.", "contrast": "일상 회화의 즉각적 호응.", "example": "惜しいことしたね、いい試合だったよ。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "昨日のサッカーの決勝戦、見逃しちゃったんだ。"}]}, {"id": 103, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題4", "category": "청해 → 즉시응답 → 1초 반응 대화", "subtype": "即時応答", "instruction": "問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。", "prompt": "【即時応答 12番】\n女性：所長、事務所のエアコン、そろそろ買い替えてもよろしいのではないでしょうか。", "choices": ["ええ、もう買い替えてあったよ。", "うーん、まだ十分に使えると思うよ。", "そうか、買い替えさせられるんだね。"], "answer": 1, "translation": "【즉시응답 12번】 여: \"소장님, 사무소 에어컨 슬슬 교체해도 되지 않을까요?\" -> 남: 3번 \"음, 아직 더 쓸 수 있을 것 같은데 말이지.\"", "connection": "控えめな難色・保留「うーん、まだ使えると思うけどね」", "meaning": "即座に適切な返答を選択する力.", "trap": "1번은 이미 교체되었다는 부자연스러운 시제 오류, 3번은 사역수동 오류. 2번이 제안에 대해 완곡하게 보류/거절하는 유일한 정답.", "contrast": "일상 회화의 즉각적 호응.", "example": "うーん、まだ使えると思うけどね。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "所長、事務所のエアコン、そろそろ買い替えてもよろしいのではないでしょうか。"}]}, {"id": 104, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題5", "category": "청해 → 통합이해 → 아르바이트 선택", "subtype": "統合理解", "instruction": "問題５では、長めの話を聞きます。この問題には、練習はありません。メモをとってもかまいません。", "prompt": "【聴解 音声を聞いて答えてください】\n大学の掲示板の前で、男子学生と女子学生がアルバイトの募集チラシを見ながら話しています。男の学生はどのアルバイトを選びますか。", "choices": ["コンビニのレジ係（時給950円、シフト自由）", "書店の販売員（時給900円、土日必須）", "学習塾の講師（時給1,500円、週2日夕方）", "ファミレスの厨房（時給1,000円、深夜手当あり）"], "answer": 2, "translation": "【통합이해 해설】 남학생은 시급이 높고 전공인 수학을 가르칠 수 있으며 주 2회 저녁 시간에 집중할 수 있는 '학원 강사(3번)'를 최종 선택합니다.", "connection": "条件の絞り込みと合致「週２日で時給が一番いい学習塾にするよ」", "meaning": "복수 조건(시급, 근무 요일, 적성) 비교 후 최적 선택.", "trap": "편의점이나 서점은 시급이 낮아서 탈락.", "contrast": "장문 복합 청해.", "example": "条件を整理して最終決定を聞き取る。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "そろそろ新しいバイト探さなきゃいけないんだ。大学の授業が忙しいから、週２日くらいで効率よく稼げるのがいいんだけど。"}, {"speaker": 2, "text": "これなんかどう？学習塾の個別指導。週２回、夕方からで時給１５００円だって。数学が得意な人を募集してるよ。"}, {"speaker": 1, "text": "お、いいね！コンビニやファミレスよりずっと時給が高いし、自分の得意な数学ならやりがいもある。これに応募してみるよ！"}]}, {"id": 105, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題5", "category": "청해 → 통합이해 → 여자 학생의 아르바이트", "subtype": "統合理解", "instruction": "問題５では、長めの話を聞きます。この問題には、練習はありません。メモをとってもかまいません。", "prompt": "【聴解 音声を聞いて答えてください】\n同じ会話で、女の学生はどのアルバイトに応募することにしましたか。", "choices": ["書店の販売員（本が好きで、新刊の割引制度がある）", "コンビニの夜勤スタッフ", "家庭教師の派遣", "カフェのホールスタッフ"], "answer": 0, "translation": "【통합이해 해설】 여학생은 평소 독서를 좋아하고 신간 도서 직원 할인 혜택이 주어지는 '서점 판매원(1번)'을 선택합니다.", "connection": "「私は本を読むのが大好きだから、社割で本が買える書店にするわ」", "meaning": "개인의 취향과 부가 혜택에 따른 선택.", "trap": "카페나 과외는 언급되지 않음.", "contrast": "화자 2의 선택 분리 청취.", "example": "話者ごとの決定事項の聞き分け。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "実は私も探してて、この駅ビルの本屋さんの募集が気になってるの。時給は普通だけど、従業員割引で新刊本が２割引で買えるんだって。"}, {"speaker": 1, "text": "本好きの君にはぴったりじゃないか。"}, {"speaker": 2, "text": "でしょ？土日も入れるし、早速電話してみるわ。"}]}, {"id": 106, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題5", "category": "청해 → 통합이해 → 3인 대화 남성의 결정", "subtype": "統合理解", "instruction": "問題５では、長めの話を聞きます。この問題には、練習はありません。メモをとってもかまいません。", "prompt": "【聴解 音声を聞いて答えてください】\n旅行会社で夫婦が店員からツアーの説明を聞いています。\n質問1: 男の人はどの観光コースを選びますか。", "choices": ["歴史的名所を巡るバスツアー", "ハイキングと自然散策コース", "温泉旅館でゆっくり過ごす癒やしプラン", "カヌーと川下りのアクティビティコース"], "answer": 2, "translation": "【통합이해 질문1 해설】 남편은 일상 업무에 지쳐 있으므로 이동이 적고 온천과 맛있는 식사를 즐길 수 있는 '3번 온천 플랜'을 선택합니다.", "connection": "「普段疲れてるから、あんまり歩き回らずに温泉でゆっくりしたいな」", "meaning": "휴양과 온천을 원하는 남성의 선택.", "trap": "하이킹이나 카누는 체력 부담 때문에 배제.", "contrast": "부부 각자의 선호 대립과 합의.", "example": "夫の希望条件を特定する。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 1, "text": "いらっしゃいませ。信州へのご旅行ですね。４つのプランがございます。"}, {"speaker": 2, "text": "あなた、どれがいい？私は体を動かすハイキングコースがいいと思うんだけど。"}, {"speaker": 3, "text": "うーん、最近残業続きで腰も痛いし、せっかくの旅行だから、あんまり歩き回らずに名湯の温泉宿で美味しいものを食べてのんびり癒やされたいよ。３番のプランがいいな。"}]}, {"id": 107, "section": 2, "sectionName": "聴解", "part": "聴解", "problemNo": "問題5", "category": "청해 → 통합이해 → 3인 대화 여성의 결정", "subtype": "統合理解", "instruction": "問題５では、長めの話を聞きます。この問題には、練習はありません。メモをとってもかまいません。", "prompt": "【聴解 音声を聞いて答えてください】\n同じ会話で、女の人は最終的にどうすることに決めましたか。\n質問2: 女の人はどのコースに同意しましたか。", "choices": ["夫の体調を気遣い、温泉プランに同意した", "自分の主張を通してハイキングコースにした", "妥協して歴史バスツアーに変更した", "旅行そのものを中止した"], "answer": 0, "translation": "【통합이해 질문2 해설】 아내는 남편의 피로 상태를 배려하여, 자신의 하이킹 희망을 양보하고 '3번 온천 힐링 플랜'에 최종 동의합니다.", "connection": "「そうね、あなたの疲れをとるのが一番ね。じゃあ３番にしましょう」", "meaning": "상대방 배려를 통한 최종 합의.", "trap": "자신의 고집을 관철하거나 취소한 것이 아님.", "contrast": "최종 결론 발화 포착.", "example": "相手に譲歩して合意した最終決定の聞き取り。", "nextReview": "D+1: 2026-09-21", "audio": [{"speaker": 2, "text": "まあ、確かに毎日遅くまで頑張ってくれてるものね。たまには何もしない贅沢もいいかもしれないわね。"}, {"speaker": 1, "text": "こちらの３番の温泉宿は、露天風呂からの景色も絶景で非常に人気がございます。"}, {"speaker": 2, "text": "分かったわ、あなた。今回はあなたの疲れを癒やすことを最優先にしましょう。３番のプランでお願いします！"}]}];
+
+    // State Variables
+    let sessionQuestions = [];
+    let currentIndex = 0;
+    let userAnswers = []; // null: unans, 0..3: index
+    let questionDwellTimes = [];
+    
+    // Exam Phases: 'intro' -> 'section1' -> 'break' -> 'section2' -> 'result'
+    let currentPhase = 'intro';
+
+    // Section 1 Timer (105 minutes countdown)
+    let section1TimeLimitSeconds = 105 * 60; // 105분
+    let section1RemainingSeconds = section1TimeLimitSeconds;
+    let section1TimerInterval = null;
+    let section1ElapsedSeconds = 0;
+
+    // Break Timer (10 minutes countdown)
+    let breakRemainingSeconds = 10 * 60;
+    let breakTimerInterval = null;
+
+    // Section 2 Continuous Listening Timer
+    let section2StartTime = 0;
+    let section2ElapsedSeconds = 0;
+    let section2TimerInterval = null;
+
+    let questionTimerInterval = null;
+    let isExamFinished = false;
+
+    // Continuous Listening Engine State
+    let isListeningPaused = false;
+    let listeningCountdownTimer = null;
+    let remainingCountdownSeconds = 12;
+
+    function toggleTheme() {
+      document.body.classList.toggle('dark-theme');
+    }
+
+    function initExam() {
+      sessionQuestions = RAW_QUESTIONS.map(q => ({
+        ...q,
+        sessionChoices: [...q.choices],
+        sessionAnswer: q.answer
+      }));
+
+      userAnswers = new Array(sessionQuestions.length).fill(null);
+      questionDwellTimes = new Array(sessionQuestions.length).fill(0);
+    }
+
+    // =========================================================================
+    // Phase 1: Section 1 (言語知識・読解 1~75번, 105분)
+    // =========================================================================
+    function startSection1() {
+      currentPhase = 'section1';
+      document.getElementById('screen-intro').classList.add('hidden');
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      document.getElementById('badge-period-name').textContent = '第1限 (1교시)';
+      document.getElementById('badge-section-title').textContent = '言語知識（文字・語彙・文法）・読解';
+      document.getElementById('badge-listening-onair').classList.add('hidden');
+      document.getElementById('listening-status-panel').classList.add('hidden');
+      document.getElementById('section1-actions').classList.remove('hidden');
+      document.getElementById('section2-actions').classList.add('hidden');
+      document.getElementById('q-total-period-num').textContent = '75';
+
+      // 105분 카운트다운 타이머
+      updateSection1TimerDisplay();
+      section1TimerInterval = setInterval(() => {
+        section1RemainingSeconds--;
+        section1ElapsedSeconds++;
+        updateSection1TimerDisplay();
+
+        if (section1RemainingSeconds <= 0) {
+          clearInterval(section1TimerInterval);
+          alert('第1限（言語知識・読解）の試験時間(105分)が終了しました。休憩時間に入ります。\n(1교시 105분이 종료되었습니다. 휴식 시간으로 이동합니다.)');
+          finishSection1();
+        }
+      }, 1000);
+
+      questionTimerInterval = setInterval(() => {
+        if (!isExamFinished && currentPhase !== 'break') {
+          questionDwellTimes[currentIndex] = (questionDwellTimes[currentIndex] || 0) + 1;
+        }
+      }, 1000);
+
+      renderPaletteGrid();
+      loadQuestion(0);
+    }
+
+    function updateSection1TimerDisplay() {
+      const m = String(Math.floor(section1RemainingSeconds / 60)).padStart(2, '0');
+      const s = String(section1RemainingSeconds % 60).padStart(2, '0');
+      document.getElementById('period-timer').textContent = `${m}:${s}`;
+    }
+
+    function confirmFinishSection1() {
+      finishSection1();
+    }
+
+    function finishSection1() {
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
+      showBreakScreen();
+    }
+
+    function resumeSection1() {
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      currentPhase = 'section1';
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      // Restart section 1 timer interval
+      updateSection1TimerDisplay();
+      section1TimerInterval = setInterval(() => {
+        section1RemainingSeconds--;
+        section1ElapsedSeconds++;
+        updateSection1TimerDisplay();
+
+        if (section1RemainingSeconds <= 0) {
+          clearInterval(section1TimerInterval);
+          finishSection1();
+        }
+      }, 1000);
+
+      renderPaletteGrid();
+      loadQuestion(currentIndex);
+    }
+
+    // =========================================================================
+    // Phase 2: Intermission (휴식 시간)
+    // =========================================================================
+    function showBreakScreen() {
+      currentPhase = 'break';
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('screen-break').classList.remove('hidden');
+
+      // 1교시 통계 요약
+      const s1Answers = userAnswers.slice(0, 75);
+      const markedCount = s1Answers.filter(a => a !== null).length;
+      document.getElementById('break-stat-marked').textContent = `${markedCount} / 75 問`;
+
+      const m = String(Math.floor(section1ElapsedSeconds / 60)).padStart(2, '0');
+      const s = String(section1ElapsedSeconds % 60).padStart(2, '0');
+      document.getElementById('break-stat-time').textContent = `${m}:${s}`;
+
+      // 10분 휴식 타이머
+      breakRemainingSeconds = 10 * 60;
+      updateBreakTimerDisplay();
+      breakTimerInterval = setInterval(() => {
+        breakRemainingSeconds--;
+        updateBreakTimerDisplay();
+
+        if (breakRemainingSeconds <= 0) {
+          clearInterval(breakTimerInterval);
+          alert('休憩時間が終了しました。第2限（聴解）を開始します。\n(휴식 시간이 종료되었습니다. 2교시 청해 시험을 시작합니다.)');
+          startSection2();
+        }
+      }, 1000);
+    }
+
+    function updateBreakTimerDisplay() {
+      const m = String(Math.floor(breakRemainingSeconds / 60)).padStart(2, '0');
+      const s = String(breakRemainingSeconds % 60).padStart(2, '0');
+      document.getElementById('break-countdown-timer').textContent = `${m}:${s}`;
+    }
+
+    // =========================================================================
+    // Phase 3: Section 2 (聴解 公式 オープニング イントロ & 本試験)
+    // =========================================================================
+    function startSection2() {
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      currentPhase = 'listening_intro';
+
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('screen-listening-intro').classList.remove('hidden');
+
+      playListeningIntroAudio();
+    }
+
+    function playListeningIntroAudio() {
+      if (!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+
+      const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('ja'));
+      const introScript = [
+        "これより、日本語能力試験、エヌにの、聴解試験を始めます。",
+        "問題用紙を開けてください。問題用紙に汚れや破れがある場合、または印刷がはっきりしない場合は、手を挙げてください。",
+        "音の大きさを確かめます。音が聞こえにくい場合は、手を挙げてください。…… 天気がいいから、散歩しましょう。…… いかがですか。よろしいですか。",
+        "それでは、始めます。"
+      ];
+
+      let idx = 0;
+      function speakLine() {
+        if (currentPhase !== 'listening_intro') return;
+        if (idx >= introScript.length) {
+          setTimeout(() => {
+            if (currentPhase === 'listening_intro') {
+              startListeningQuestions();
+            }
+          }, 1200);
+          return;
+        }
+
+        const utter = new SpeechSynthesisUtterance(introScript[idx]);
+        utter.lang = 'ja-JP';
+        utter.rate = 0.95;
+        utter.pitch = 0.95;
+        if (voices.length > 0) utter.voice = voices[0];
+
+        utter.onend = () => {
+          idx++;
+          setTimeout(speakLine, 700);
+        };
+        utter.onerror = () => {
+          idx++;
+          speakLine();
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      speakLine();
+    }
+
+    function skipListeningIntro() {
+      window.speechSynthesis && window.speechSynthesis.cancel();
+      startListeningQuestions();
+    }
+
+    function startListeningQuestions() {
+      currentPhase = 'section2';
+      document.getElementById('screen-listening-intro').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      document.getElementById('badge-period-name').textContent = '第2限 (2교시)';
+      document.getElementById('badge-section-title').textContent = '聴解 (실시간 방송 진행)';
+      document.getElementById('badge-listening-onair').classList.remove('hidden');
+      document.getElementById('listening-status-panel').classList.remove('hidden');
+      document.getElementById('section1-actions').classList.add('hidden');
+      document.getElementById('section2-actions').classList.remove('hidden');
+      document.getElementById('timer-icon').textContent = '⏱️ 진행시간';
+      document.getElementById('q-total-period-num').textContent = '107';
+
+      section2StartTime = Date.now();
+      section2TimerInterval = setInterval(() => {
+        section2ElapsedSeconds = Math.floor((Date.now() - section2StartTime) / 1000);
+        const m = String(Math.floor(section2ElapsedSeconds / 60)).padStart(2, '0');
+        const s = String(section2ElapsedSeconds % 60).padStart(2, '0');
+        document.getElementById('period-timer').textContent = `${m}:${s}`;
+      }, 1000);
+
+      renderPaletteGrid();
+      // 청해 첫 문제(75번 인덱스 = 76번 문항) 로드 및 자동 방송 개시
+      loadQuestion(75);
+    }
+
+    // =========================================================================
+    // Question Loader & Renderer
+    // =========================================================================
+    function loadQuestion(index) {
+      currentIndex = index;
+      const q = sessionQuestions[index];
+
+      // Reset any active listening countdown
+      if (listeningCountdownTimer) {
+        clearInterval(listeningCountdownTimer);
+        listeningCountdownTimer = null;
+      }
+      window.speechSynthesis && window.speechSynthesis.cancel();
+
+      // Header info
+      document.getElementById('badge-problem-no').textContent = q.problemNo || '問題';
+      document.getElementById('badge-part-name').textContent = `(${ q.part || '' })`;
+      document.getElementById('q-curr-num').textContent = index + 1;
+      document.getElementById('q-side-badge').textContent = `問 ${index + 1} / 107`;
+
+      // Instruction & Prompt Rendering (공식 고사장 문제지 N2L.pdf와 100% 동일한 완벽 싱크로)
+      const instBox = document.getElementById('q-instruction');
+      const promptEl = document.getElementById('q-prompt');
+      const isListening = currentPhase === 'section2';
+
+      if (isListening) {
+        const meta = getListeningMeta(index);
+
+        // 1. Instruction: 개별 질문 문장을 절대 노출하지 않고 대문항 공통 공식 지시문만 표시!
+        if (meta.probNo === 1) {
+          instBox.textContent = '問題１では、まず質問を聞いてください。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。';
+        } else if (meta.probNo === 2) {
+          instBox.textContent = '問題２では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の１から４の中から、最もよいものを一つ選んでください。';
+        } else if (meta.probNo === 3) {
+          instBox.textContent = '問題３では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問と選択肢を聞いて、１から４の中から、最もよいものを一つ選んでください。';
+        } else if (meta.probNo === 4) {
+          instBox.textContent = '問題４では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、その返事を聞いて、１から３の中から、最もよいものを一つ選んでください。';
+        } else if (meta.probNo === 5) {
+          instBox.textContent = '問題５では、長めの話を聞きます。この問題には、練習はありません。メモをとってもかまいません。';
+        }
+        instBox.classList.remove('hidden');
+
+        // 2. Prompt (문제지 좌측 시험지): 실제 시험지에 맞게 본문/질문/상황문 일절 블라인드 처리
+        if (meta.probNo === 1) {
+          // 문제 1: 시험지에는 질문도 대화도 없고 메모란만 제공 (선택지만 우측에 인쇄)
+          promptEl.innerHTML = `
+            <div class="py-8 px-4 text-center border border-dashed border-neutral-300 rounded bg-neutral-50 space-y-3">
+              <div class="font-serif font-bold text-neutral-800 text-sm tracking-wide">
+                問題１（${meta.itemNo}番）
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed max-w-md mx-auto">
+                ※ 質問および会話文は問題用紙に印刷されていません。<br>
+                音声を聞き、右側の【解答欄（選択肢）】から最もよいものを一つ選んでください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        } else if (meta.probNo === 2) {
+          // 문제 2: 시험지에는 질문도 대화도 없고 메모란만 제공 (선택지는 14초간 읽을 수 있게 인쇄)
+          promptEl.innerHTML = `
+            <div class="py-8 px-4 text-center border border-dashed border-neutral-300 rounded bg-neutral-50 space-y-3">
+              <div class="font-serif font-bold text-neutral-800 text-sm tracking-wide">
+                問題２（${meta.itemNo}番）
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed max-w-md mx-auto">
+                ※ まず質問を聞き、右側の【解答欄（選択肢）】を読む時間（約14秒）のあとに話を聞いてください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        } else if (meta.probNo === 3) {
+          // 문제 3: 시험지 완전 백지! 상황설명·질문·선택지 모두 음성으로만 청취!
+          promptEl.innerHTML = `
+            <div class="py-8 px-4 text-center border-2 border-dashed border-neutral-300 rounded bg-neutral-50 space-y-3">
+              <div class="font-serif font-bold text-neutral-800 text-sm sm:text-base tracking-wide">
+                問題３（${meta.itemNo}番）では、問題用紙に何も印刷されていません。
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed max-w-md mx-auto">
+                状況説明・話・質問・選択肢はすべて音声でのみ放送されます。<br>
+                メモ欄を活用し、放送を聞いて１から４の中から選んでください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        } else if (meta.probNo === 4) {
+          // 문제 4: 시험지 완전 백지! 발화 및 선택지 모두 음성으로만 청취!
+          promptEl.innerHTML = `
+            <div class="py-8 px-4 text-center border-2 border-dashed border-neutral-300 rounded bg-neutral-50 space-y-3">
+              <div class="font-serif font-bold text-neutral-800 text-sm sm:text-base tracking-wide">
+                問題４（${meta.itemNo}番）では、問題用紙に何も印刷されていません。
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed max-w-md mx-auto">
+                短い文を聞いたあと、音声で流れる返事を聞いて、１から３の中から最もよいものを選んでください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        } else if (meta.probNo === 5 && !meta.hasPrintedChoices) {
+          // 문제 5의 1번, 2번: 시험지 완전 백지! 질문과 선택지 모두 음성 청취!
+          promptEl.innerHTML = `
+            <div class="py-8 px-4 text-center border-2 border-dashed border-neutral-300 rounded bg-neutral-50 space-y-3">
+              <div class="font-serif font-bold text-neutral-800 text-sm sm:text-base tracking-wide">
+                問題５（${meta.itemNo}番）では、問題用紙に何も印刷されていません。
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed max-w-md mx-auto">
+                長めの話を聞きます。話のあとに質問と選択肢がすべて音声で放送されます。<br>
+                メモをとってもかまいません。１から４の中から最もよいものを一つ選んでください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        } else if (meta.probNo === 5 && meta.hasPrintedChoices) {
+          // 문제 5의 3번: 시험지에 質問1, 質問2와 각각의 1~4번 선택지가 인쇄됨
+          promptEl.innerHTML = `
+            <div class="py-6 px-4 text-center border border-dashed border-neutral-300 rounded bg-neutral-50 space-y-2">
+              <div class="font-serif font-bold text-neutral-700 text-sm">
+                問題５（3番 - 質問${meta.qNum === 106 ? '1' : '2'}）
+              </div>
+              <div class="text-xs text-neutral-500 leading-relaxed">
+                右側の【解答欄（選択肢）】に印刷された選択肢を見ながら、放送される質問に答えてください。
+              </div>
+              <div class="pt-6 mt-4 border-t border-neutral-200 text-xs text-neutral-400 font-mono">
+                【 メモ欄 (MEMO) 】
+              </div>
+            </div>
+          `;
+        }
+      } else {
+        // 1교시(언어지식·독해)
+        if (q.instruction) {
+          instBox.textContent = q.instruction;
+          instBox.classList.remove('hidden');
+        } else {
+          instBox.classList.add('hidden');
+        }
+        promptEl.textContent = q.prompt;
+      }
+
+      // Listening vs Section 1 controls
+      if (isListening) {
+        document.getElementById('btn-prev').disabled = true; // 청해는 이전 문제 복귀 불가
+        startContinuousListeningForQuestion(index);
+      } else {
+        document.getElementById('btn-prev').disabled = index === 0;
+      }
+
+      // Render OMR Choices in Right Column
+      renderChoices(index);
+
+      // Next / Submit button text
+      const btnNextText = document.getElementById('btn-next-text');
+      if (currentPhase === 'section1') {
+        if (index === 74) {
+          btnNextText.textContent = '第1限 終了へ →';
+        } else {
+          btnNextText.textContent = '次の問題 →';
+        }
+      } else {
+        if (index === sessionQuestions.length - 1) {
+          btnNextText.textContent = '全試験 提出 →';
+        } else {
+          btnNextText.textContent = '次へ (即時移動) →';
+        }
+      }
+
+      updatePaletteStatus();
+    }
+
+    function renderChoices(index) {
+      const q = sessionQuestions[index];
+      const choicesContainer = document.getElementById('q-choices');
+      choicesContainer.innerHTML = '';
+
+      const isListening = currentPhase === 'section2';
+      const meta = isListening ? getListeningMeta(index) : null;
+      // 문제 3과 문제 4: 실제 시험지에도 선택지가 인쇄되지 않고 오직 음성으로만 나옴 (번호만 마킹)
+      const hideChoiceText = isListening && meta && (
+        meta.probNo === 3 || 
+        meta.probNo === 4 || 
+        (meta.probNo === 5 && !meta.hasPrintedChoices)
+      );
+
+      q.sessionChoices.forEach((choiceText, cIdx) => {
+        const btn = document.createElement('button');
+        const isSelected = userAnswers[index] === cIdx;
+        btn.className = `omr-choice-btn w-full p-3.5 rounded text-left text-xs sm:text-sm flex items-center justify-between ${isSelected ? 'selected' : ''}`;
+        
+        let labelHtml = '';
+        if (hideChoiceText) {
+          labelHtml = `
+            <div class="flex items-center gap-3">
+              <span class="omr-circle font-bold">${cIdx + 1}</span>
+              <span class="text-xs text-neutral-400 font-serif italic tracking-wide">（音声を聞いてマーク）</span>
+            </div>
+          `;
+        } else {
+          labelHtml = `
+            <div class="flex items-center gap-3">
+              <span class="omr-circle">${cIdx + 1}</span>
+              <span class="leading-relaxed">${escapeHtml(choiceText)}</span>
+            </div>
+          `;
+        }
+
+        btn.innerHTML = `
+          ${labelHtml}
+          ${isSelected ? '<span class="text-xs font-bold font-mono">● 記入済</span>' : ''}
+        `;
+        btn.onclick = () => selectAnswer(cIdx);
+        choicesContainer.appendChild(btn);
+      });
+
+      // [？ 分からない] ボタン (PROJECT_GUIDE 規約遵守: 誤答・分からない・未回答の3者厳密分離)
+      const unkBtn = document.createElement('button');
+      const isUnknown = userAnswers[index] === 'unknown';
+      unkBtn.className = `w-full p-2.5 mt-2 rounded border border-dashed text-xs font-sans text-center transition-all ${
+        isUnknown ? 'bg-amber-100 border-amber-500 font-bold text-amber-900 shadow-inner' : 'bg-neutral-50 hover:bg-neutral-100 text-neutral-600 border-neutral-400'
+      }`;
+      unkBtn.innerHTML = isUnknown ? '❓ 分からない (マーク済 · D+1 復習対象)' : '？ 分からない (모름)';
+      unkBtn.onclick = () => selectAnswer('unknown');
+      choicesContainer.appendChild(unkBtn);
+    }
+
+    function selectAnswer(ans) {
+      if (userAnswers[currentIndex] === ans) {
+        userAnswers[currentIndex] = null; // Toggle unselect
+      } else {
+        userAnswers[currentIndex] = ans;
+      }
+      updatePaletteStatus();
+      renderChoices(currentIndex);
+    }
+
+    function prevQuestion() {
+      if (currentPhase === 'section1' && currentIndex > 0) {
+        loadQuestion(currentIndex - 1);
+      }
+    }
+
+    function nextQuestion() {
+      if (currentPhase === 'section1') {
+        if (currentIndex < 74) {
+          loadQuestion(currentIndex + 1);
+        } else {
+          confirmFinishSection1();
+        }
+      } else if (currentPhase === 'section2') {
+        // 청해 시험 중에는 방송 진행에 따라 자동 전환되므로 임의 건너뛰기 차단
+        alert('※ 聴解試験では、放送の進行に合わせて自動的に次の問題へ進みます。手動でのスキップはできません。\n(청해 시험에서는 방송 흐름에 맞춰 자동 전환됩니다. 수동 건너뛰기는 불가합니다.)');
+      }
+    }
+
+    function goToNextUnansweredInSection1() {
+      const s1Answers = userAnswers.slice(0, 75);
+      const nextUnans = s1Answers.findIndex((ans, idx) => idx > currentIndex && ans === null);
+      if (nextUnans !== -1) {
+        loadQuestion(nextUnans);
+        return;
+      }
+      const anyUnans = s1Answers.findIndex(ans => ans === null);
+      if (anyUnans !== -1) {
+        loadQuestion(anyUnans);
+      } else {
+        alert('第1限(1~75問)のすべての問題にマークされています。(1교시 모든 문항에 마킹하셨습니다.)');
+      }
+    }
+
+    // =========================================================================
+    // Palette Rendering (교시별 분리: 1교시는 1~75만, 2교시는 76~107만)
+    // =========================================================================
+    function renderPaletteGrid() {
+      const grid = document.getElementById('palette-grid');
+      grid.innerHTML = '';
+
+      let startIdx = 0;
+      let endIdx = 75;
+
+      if (currentPhase === 'section2') {
+        startIdx = 75;
+        endIdx = 107;
+        document.getElementById('palette-period-title').textContent = '第2限 聴解パレット (76 ~ 107)';
+      } else {
+        document.getElementById('palette-period-title').textContent = '第1限 パレット (1 ~ 75)';
+      }
+
+      for (let idx = startIdx; idx < endIdx; idx++) {
+        const dot = document.createElement('button');
+        dot.id = `palette-dot-${idx}`;
+        dot.textContent = idx + 1;
+        dot.className = 'text-[10px] font-mono h-5 rounded border border-neutral-400 flex items-center justify-center font-bold bg-white text-neutral-600';
+        
+        if (currentPhase === 'section2') {
+          // 청해 중에는 임의 점프/되돌아가기 불가!
+          dot.onclick = () => {
+            alert('※ 聴解試験では、問題の再聴取や自由移動はできません。放送順に従って解答してください。\n(청해 시험에서는 임의 이동 및 다시듣기가 불가능합니다. 방송 순서에 따라 풀어주세요.)');
+          };
+        } else {
+          dot.onclick = () => loadQuestion(idx);
+        }
+
+        grid.appendChild(dot);
+      }
+
+      updatePaletteStatus();
+    }
+
+    function updatePaletteStatus() {
+      let startIdx = currentPhase === 'section2' ? 75 : 0;
+      let endIdx = currentPhase === 'section2' ? 107 : 75;
+      let answeredCount = 0;
+
+      for (let idx = startIdx; idx < endIdx; idx++) {
+        const dot = document.getElementById(`palette-dot-${idx}`);
+        const ans = userAnswers[idx];
+        const isCur = idx === currentIndex;
+
+        if (typeof ans === 'number' || ans === 'unknown') answeredCount++;
+
+        if (!dot) continue;
+
+        let base = 'text-[10px] font-mono h-5 rounded border flex items-center justify-center font-bold ';
+        if (isCur) {
+          base += 'ring-2 ring-neutral-900 ';
+        }
+
+        if (typeof ans === 'number') {
+          dot.className = base + 'bg-neutral-950 text-white border-neutral-950';
+        } else if (ans === 'unknown') {
+          dot.className = base + 'bg-amber-400 text-neutral-950 border-amber-500 font-bold';
+        } else {
+          dot.className = base + 'bg-white text-neutral-500 border-neutral-300';
+        }
+      }
+
+      const totalPeriodQuestions = endIdx - startIdx;
+      document.getElementById('palette-summary-count').textContent = `${answeredCount} / ${totalPeriodQuestions} 回答済`;
+    }
+
+    // =========================================================================
+    // Continuous Listening Engine (실제 시험 100% 싱크로 공식 시퀀스 완벽 탑재)
+    // =========================================================================
+    function getListeningMeta(index) {
+      const qNum = index + 1; // 76 ~ 107
+      if (qNum >= 76 && qNum <= 80) {
+        return { probNo: 1, itemNo: qNum - 75, isFirst: qNum === 76, name: "課題理解" };
+      } else if (qNum >= 81 && qNum <= 86) {
+        return { probNo: 2, itemNo: qNum - 80, isFirst: qNum === 81, name: "ポイント理解" };
+      } else if (qNum >= 87 && qNum <= 91) {
+        return { probNo: 3, itemNo: qNum - 86, isFirst: qNum === 87, name: "概要理解" };
+      } else if (qNum >= 92 && qNum <= 103) {
+        return { probNo: 4, itemNo: qNum - 91, isFirst: qNum === 92, name: "即時応答" };
+      } else if (qNum >= 104 && qNum <= 107) {
+        const map5 = { 104: 1, 105: 2, 106: 3, 107: 3 };
+        const isPart3 = (qNum >= 106);
+        return { 
+          probNo: 5, 
+          itemNo: map5[qNum], 
+          qNum: qNum,
+          isFirst: qNum === 104, 
+          name: "統合理解",
+          hasPrintedChoices: isPart3
+        };
+      }
+      return null;
+    }
+
+    function extractPromptText(q) {
+      let raw = (q.prompt || '').replace(/【[^】]+】\s*/g, '').trim();
+      raw = raw.replace(/^(女性|男性|男の人|女の人|店員|客|先生|学生)：\s*/, '');
+      return raw;
+    }
+
+    function extractOnlyQuestion(q) {
+      const raw = extractPromptText(q);
+      const parts = raw.split('。').map(s => s.trim()).filter(Boolean);
+      if (parts.length > 1) {
+        return parts[parts.length - 1] + '。';
+      }
+      return raw;
+    }
+
+    function startContinuousListeningForQuestion(index) {
+      const q = sessionQuestions[index];
+      if (!q.audio || q.audio.length === 0) return;
+
+      const phaseText = document.getElementById('listening-phase-text');
+      const progressBox = document.getElementById('countdown-container');
+      const progressBar = document.getElementById('countdown-progress-bar');
+      const countdownTimerText = document.getElementById('countdown-timer-text');
+
+      progressBox.classList.add('opacity-40');
+      progressBar.style.width = '100%';
+      countdownTimerText.textContent = '待機中';
+
+      if (!('speechSynthesis' in window)) {
+        phaseText.textContent = '이 브라우저는 웹 음성(TTS)을 지원하지 않습니다.';
+        return;
+      }
+
+      window.speechSynthesis.cancel();
+      const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('ja'));
+
+      const meta = getListeningMeta(index);
+      if (!meta) return;
+
+      // 1. Prepare Announcement Speech (실제 시험 지시문 및 번호 호명)
+      let announceText = '';
+      if (meta.isFirst) {
+        if (meta.probNo === 1) announceText = '問題1。では、まず質問を聞いてください。それから話を聞いて、1から4の中から、最もよいものを一つ選んでください。…… 1番。';
+        else if (meta.probNo === 2) announceText = '問題2。では、まず質問を聞いてください。そのあと、選択肢を見てください。読む時間があります。…… 1番。';
+        else if (meta.probNo === 3) announceText = '問題3。では、まず話を聞いてください。それから、質問と選択肢を聞いて、最もよいものを一つ選んでください。…… 1番。';
+        else if (meta.probNo === 4) announceText = '問題4。まず文を聞いてください。それから、返事を聞いて、1から3の中から選んでください。…… 1番。';
+        else if (meta.probNo === 5) announceText = '問題5。長めの話を聞きます。メモをとってもかまいません。…… 1番。';
+      } else {
+        announceText = `${meta.itemNo}番。`;
+      }
+
+      const labelText = meta.isFirst ? ('問題' + meta.probNo + ' 開始') : (meta.itemNo + '番');
+      phaseText.textContent = `📢 放送案内: ${labelText}`;
+
+      const utterAnnounce = new SpeechSynthesisUtterance(announceText);
+      utterAnnounce.lang = 'ja-JP';
+      utterAnnounce.rate = 0.95;
+      utterAnnounce.pitch = 0.95;
+      if (voices.length > 0) utterAnnounce.voice = voices[0];
+
+      utterAnnounce.onend = () => {
+        if (isListeningPaused) return;
+
+        // 2초 숨고르기 준비 텀
+        phaseText.textContent = '⏱️ 問題を聞く準備をしてください (2초 숨고르기)...';
+        setTimeout(() => {
+          if (isListeningPaused) return;
+          executeListeningFlowForQuestion(q, meta, voices);
+        }, 2000);
+      };
+
+      utterAnnounce.onerror = () => {
+        executeListeningFlowForQuestion(q, meta, voices);
+      };
+
+      window.speechSynthesis.speak(utterAnnounce);
+    }
+
+    function executeListeningFlowForQuestion(q, meta, voices) {
+      const phaseText = document.getElementById('listening-phase-text');
+
+      if (meta.probNo === 1) {
+        // [문제1: 과제이해] 질문 먼저 방송 -> 본문 대화 -> 질문 다시 방송 -> 12초 답변
+        phaseText.textContent = '❓ 質問放送中 (먼저 질문을 들으세요)...';
+        const qText = extractPromptText(q);
+        const uQ = new SpeechSynthesisUtterance(qText);
+        uQ.lang = 'ja-JP';
+        uQ.rate = 0.95;
+        if (voices.length > 0) uQ.voice = voices[0];
+        uQ.onend = () => {
+          setTimeout(() => {
+            playAudioLines(q.audio, voices, () => {
+              // 질문 반복 재낭독
+              phaseText.textContent = '❓ 質問再放送中...';
+              const repQ = new SpeechSynthesisUtterance(extractOnlyQuestion(q));
+              repQ.lang = 'ja-JP';
+              repQ.rate = 0.95;
+              if (voices.length > 0) repQ.voice = voices[0];
+              repQ.onend = () => startAnswerCountdown(12);
+              repQ.onerror = () => startAnswerCountdown(12);
+              window.speechSynthesis.speak(repQ);
+            });
+          }, 800);
+        };
+        uQ.onerror = () => {
+          playAudioLines(q.audio, voices, () => startAnswerCountdown(12));
+        };
+        window.speechSynthesis.speak(uQ);
+
+      } else if (meta.probNo === 2) {
+        // [문제2: 포인트이해] 질문 먼저 방송 -> 14초 선택지 읽는 시간 -> "それから話を聞いてください" -> 대화 -> 질문 다시 방송 -> 12초 답변
+        phaseText.textContent = '❓ 質問放送中 (먼저 질문을 들으세요)...';
+        const qText = extractPromptText(q);
+        const uQ = new SpeechSynthesisUtterance(qText);
+        uQ.lang = 'ja-JP';
+        uQ.rate = 0.95;
+        if (voices.length > 0) uQ.voice = voices[0];
+        uQ.onend = () => {
+          startProblem2ChoiceReadingInterval(q, voices);
+        };
+        uQ.onerror = () => {
+          startProblem2ChoiceReadingInterval(q, voices);
+        };
+        window.speechSynthesis.speak(uQ);
+
+      } else if (meta.probNo === 3) {
+        // [문제3: 개요이해] 본문 강연/독백 -> 질문 방송 -> 선택지 1~4번 음성 낭독 -> 12초 답변
+        phaseText.textContent = '📻 話をよく聞いてください (본문 강연/독백)...';
+        playAudioLines(q.audio, voices, () => {
+          phaseText.textContent = '❓ 質問放送中...';
+          const qText = extractOnlyQuestion(q);
+          const uQ = new SpeechSynthesisUtterance('質問。' + qText);
+          uQ.lang = 'ja-JP';
+          uQ.rate = 0.95;
+          if (voices.length > 0) uQ.voice = voices[0];
+          uQ.onend = () => {
+            speakChoicesSequence(q.choices, voices, 12);
+          };
+          uQ.onerror = () => {
+            speakChoicesSequence(q.choices, voices, 12);
+          };
+          window.speechSynthesis.speak(uQ);
+        });
+
+      } else if (meta.probNo === 4) {
+        // [문제4: 즉시응답] 질문 발화 1문장 -> 선택지 1~3번 음성 낭독 -> 6초 빠른 답변!
+        phaseText.textContent = '📻 文を聞いてください (발화 듣기)...';
+        playAudioLines(q.audio, voices, () => {
+          speakChoicesSequence(q.choices, voices, 6);
+        });
+
+      } else if (meta.probNo === 5) {
+        // [문제5: 통합이해] 1·2번은 선택지까지 전부 음성 낭독, 3번은 인쇄된 선택지 보고 풀기
+        phaseText.textContent = '📻 総合的な会話を聞いてください (메モ可能)...';
+        playAudioLines(q.audio, voices, () => {
+          phaseText.textContent = '❓ 質問放送中...';
+          const qText = extractPromptText(q);
+          const uQ = new SpeechSynthesisUtterance(qText);
+          uQ.lang = 'ja-JP';
+          uQ.rate = 0.95;
+          if (voices.length > 0) uQ.voice = voices[0];
+
+          if (!meta.hasPrintedChoices) {
+            // 1번, 2번 (104, 105): 질문 방송 후 선택지 1~4번 음성 낭독
+            uQ.onend = () => {
+              speakChoicesSequence(q.choices, voices, 12);
+            };
+            uQ.onerror = () => {
+              speakChoicesSequence(q.choices, voices, 12);
+            };
+          } else {
+            // 3번 (106, 107): 질문 방송 후 시험지 인쇄 선택지 보고 답변 12초
+            uQ.onend = () => startAnswerCountdown(12);
+            uQ.onerror = () => startAnswerCountdown(12);
+          }
+          window.speechSynthesis.speak(uQ);
+        });
+      }
+    }
+
+    function playAudioLines(audioList, voices, onComplete) {
+      const phaseText = document.getElementById('listening-phase-text');
+      phaseText.textContent = '📻 会話・問題 放送中...';
+
+      let lineIdx = 0;
+      function speakNextLine() {
+        if (isListeningPaused) return;
+        if (lineIdx >= audioList.length) {
+          if (onComplete) onComplete();
+          return;
+        }
+
+        const line = audioList[lineIdx];
+        const utter = new SpeechSynthesisUtterance(line.text);
+        utter.lang = 'ja-JP';
+        utter.rate = 0.98;
+
+        if (line.speaker === 2) {
+          utter.pitch = 1.22;
+        } else if (line.speaker === 3) {
+          utter.pitch = 0.85;
+        } else {
+          utter.pitch = 1.0;
+        }
+
+        if (voices.length > 0) {
+          utter.voice = voices[line.speaker % voices.length] || voices[0];
+        }
+
+        utter.onend = () => {
+          lineIdx++;
+          setTimeout(speakNextLine, 350);
+        };
+
+        utter.onerror = (e) => {
+          console.error("Audio playback error:", e);
+          phaseText.textContent = '⚠️ 音声の再生中にエラーが発生しました。ブラウザの音声設定を確認してください。';
+          lineIdx++;
+          setTimeout(speakNextLine, 500);
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      speakNextLine();
+    }
+
+    function speakChoicesSequence(choices, voices, countdownSeconds) {
+      const phaseText = document.getElementById('listening-phase-text');
+      phaseText.textContent = '📢 選択肢を放送中 (선택지 낭독)...';
+
+      let cIdx = 0;
+      function speakNextChoice() {
+        if (isListeningPaused) return;
+        if (cIdx >= choices.length) {
+          startAnswerCountdown(countdownSeconds);
+          return;
+        }
+
+        const utter = new SpeechSynthesisUtterance(`${cIdx + 1}番、${choices[cIdx]}`);
+        utter.lang = 'ja-JP';
+        utter.rate = 0.96;
+        if (voices.length > 0) utter.voice = voices[0];
+
+        utter.onend = () => {
+          cIdx++;
+          setTimeout(speakNextChoice, 400);
+        };
+
+        utter.onerror = () => {
+          cIdx++;
+          speakNextChoice();
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      speakNextChoice();
+    }
+
+    function startProblem2ChoiceReadingInterval(q, voices) {
+      const phaseText = document.getElementById('listening-phase-text');
+      const progressBox = document.getElementById('countdown-container');
+      const progressBar = document.getElementById('countdown-progress-bar');
+      const countdownTimerText = document.getElementById('countdown-timer-text');
+
+      phaseText.textContent = '📖 選択肢を読む時間 (우측 선택지를 미리 읽으세요)...';
+      progressBox.classList.remove('opacity-40');
+
+      let readSeconds = 14;
+      const totalRead = 14;
+      countdownTimerText.textContent = `${readSeconds}秒`;
+      progressBar.style.width = '100%';
+
+      listeningCountdownTimer = setInterval(() => {
+        if (isListeningPaused) return;
+        readSeconds--;
+        countdownTimerText.textContent = `${readSeconds}秒`;
+        progressBar.style.width = `${(readSeconds / totalRead) * 100}%`;
+
+        if (readSeconds <= 0) {
+          clearInterval(listeningCountdownTimer);
+          listeningCountdownTimer = null;
+          progressBox.classList.add('opacity-40');
+
+          const cue = new SpeechSynthesisUtterance('それから、話を聞いてください。');
+          cue.lang = 'ja-JP';
+          cue.rate = 0.95;
+          if (voices.length > 0) cue.voice = voices[0];
+          cue.onend = () => {
+            playAudioLines(q.audio, voices, () => {
+              phaseText.textContent = '❓ 質問再放送中...';
+              const repQ = new SpeechSynthesisUtterance(extractOnlyQuestion(q));
+              repQ.lang = 'ja-JP';
+              repQ.rate = 0.95;
+              if (voices.length > 0) repQ.voice = voices[0];
+              repQ.onend = () => startAnswerCountdown(12);
+              repQ.onerror = () => startAnswerCountdown(12);
+              window.speechSynthesis.speak(repQ);
+            });
+          };
+          window.speechSynthesis.speak(cue);
+        }
+      }, 1000);
+    }
+
+    function startAnswerCountdown(seconds = 12) {
+      const phaseText = document.getElementById('listening-phase-text');
+      const progressBox = document.getElementById('countdown-container');
+      const progressBar = document.getElementById('countdown-progress-bar');
+      const countdownTimerText = document.getElementById('countdown-timer-text');
+
+      const isQuick = seconds <= 6;
+      phaseText.textContent = isQuick 
+        ? '⚡ 即時解答時間 (빠른 답변! 6초 후 바로 다음 번호로 넘어갑니다)' 
+        : '⏳ 解答時間 (답을 선택하세요 - 시간 종료 시 다음 문제 자동 진행)';
+      progressBox.classList.remove('opacity-40');
+
+      remainingCountdownSeconds = seconds;
+      const totalSeconds = seconds;
+      countdownTimerText.textContent = `${remainingCountdownSeconds}秒`;
+      progressBar.style.width = '100%';
+
+      listeningCountdownTimer = setInterval(() => {
+        if (isListeningPaused) return;
+
+        remainingCountdownSeconds--;
+        countdownTimerText.textContent = `${remainingCountdownSeconds}秒`;
+        const pct = (remainingCountdownSeconds / totalSeconds) * 100;
+        progressBar.style.width = `${pct}%`;
+
+        if (remainingCountdownSeconds <= 0) {
+          clearInterval(listeningCountdownTimer);
+          listeningCountdownTimer = null;
+          if (currentIndex < sessionQuestions.length - 1) {
+            loadQuestion(currentIndex + 1);
+          } else {
+            finishAllExams();
+          }
+        }
+      }, 1000);
+    }
+
+    function confirmSubmitAll() {
+      finishAllExams();
+    }
+
+    function finishAllExams() {
+      isExamFinished = true;
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      if (section2TimerInterval) clearInterval(section2TimerInterval);
+      if (questionTimerInterval) clearInterval(questionTimerInterval);
+      if (listeningCountdownTimer) clearInterval(listeningCountdownTimer);
+      window.speechSynthesis && window.speechSynthesis.cancel();
+
+      // 방송 종료 아나운스 멘트
+      const finishUtter = new SpeechSynthesisUtterance('これで、レベルN2の聴解試験を終わります。');
+      finishUtter.lang = 'ja-JP';
+      window.speechSynthesis && window.speechSynthesis.speak(finishUtter);
+
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-result').classList.remove('hidden');
+
+      renderResults();
+    }
+
+    // =========================================================================
+    // Score & Explanations Renderer
+    // =========================================================================
+    function renderResults() {
+      let correct = 0;
+      let wrong = 0;
+      let unknown = 0;
+      let unanswered = 0;
+
+      let vocabCorrect = 0, vocabTotal = 0, vocabTime = 0;
+      let grammarCorrect = 0, grammarTotal = 0, grammarTime = 0;
+      let readingCorrect = 0, readingTotal = 0, readingTime = 0;
+      let listeningCorrect = 0, listeningTotal = 0, listeningTime = 0;
+
+      sessionQuestions.forEach((q, idx) => {
+        const userAns = userAnswers[idx];
+        const time = questionDwellTimes[idx] || 0;
+
+        if (q.part === '文字・語彙') {
+          vocabTotal++;
+          vocabTime += time;
+          if (userAns === q.sessionAnswer) vocabCorrect++;
+        } else if (q.part === '文法') {
+          grammarTotal++;
+          grammarTime += time;
+          if (userAns === q.sessionAnswer) grammarCorrect++;
+        } else if (q.part === '読解') {
+          readingTotal++;
+          readingTime += time;
+          if (userAns === q.sessionAnswer) readingCorrect++;
+        } else if (q.part === '聴解') {
+          listeningTotal++;
+          listeningTime += time;
+          if (userAns === q.sessionAnswer) listeningCorrect++;
+        }
+
+        if (userAns === q.sessionAnswer) {
+          correct++;
+        } else if (userAns === 'unknown') {
+          unknown++;
+        } else if (userAns === null) {
+          unanswered++;
+        } else {
+          wrong++;
+        }
+      });
+
+      const total = sessionQuestions.length;
+      const pct = ((correct / total) * 100).toFixed(1);
+
+      document.getElementById('stat-total-score').textContent = `${correct} / ${total}`;
+      document.getElementById('stat-total-percent').textContent = `正答率 ${pct}%`;
+
+      const totalElapsed = section1ElapsedSeconds + section2ElapsedSeconds;
+      const m = String(Math.floor(totalElapsed / 60)).padStart(2, '0');
+      const s = String(totalElapsed % 60).padStart(2, '0');
+      document.getElementById('stat-total-time').textContent = `${m}:${s}`;
+      document.getElementById('stat-wrong-unanswered').textContent = `오답 ${wrong} / 모름 ${unknown} / 미응답 ${unanswered}`;
+      document.getElementById('stat-review-count').textContent = `${wrong + unknown + unanswered} 問 (D+1 복습 대상)`;
+
+      // Sectional stats
+      document.getElementById('stat-section-vocab').textContent = `${vocabCorrect} / ${vocabTotal} (${vocabTotal ? ((vocabCorrect/vocabTotal)*100).toFixed(0) : 0}%)`;
+      document.getElementById('stat-section-vocab-time').textContent = `${Math.round(vocabTime/60)}分 ${Math.round(vocabTime%60)}秒`;
+
+      document.getElementById('stat-section-grammar').textContent = `${grammarCorrect} / ${grammarTotal} (${grammarTotal ? ((grammarCorrect/grammarTotal)*100).toFixed(0) : 0}%)`;
+      document.getElementById('stat-section-grammar-time').textContent = `${Math.round(grammarTime/60)}分 ${Math.round(grammarTime%60)}秒`;
+
+      document.getElementById('stat-section-reading').textContent = `${readingCorrect} / ${readingTotal} (${readingTotal ? ((readingCorrect/readingTotal)*100).toFixed(0) : 0}%)`;
+      document.getElementById('stat-section-reading-time').textContent = `${Math.round(readingTime/60)}分 ${Math.round(readingTime%60)}秒`;
+
+      document.getElementById('stat-section-listening').textContent = `${listeningCorrect} / ${listeningTotal} (${listeningTotal ? ((listeningCorrect/listeningTotal)*100).toFixed(0) : 0}%)`;
+      document.getElementById('stat-section-listening-time').textContent = `${Math.round(listeningTime/60)}分 ${Math.round(listeningTime%60)}秒`;
+
+      // Pass projection (110 / 180 points scaled approx: >= 61.1%)
+      const passBadge = document.getElementById('stat-pass-status');
+      const passDetail = document.getElementById('stat-pass-detail');
+      const scaledScore = Math.round((correct / total) * 180);
+      document.getElementById('stat-scaled-score').textContent = `${scaledScore} / 180 点`;
+
+      // Sectional cutoff evaluation (각 영역 31.6% = 19/60점 미만 시 과락)
+      const vocabRate = vocabTotal ? (vocabCorrect / vocabTotal) : 0;
+      const grammarRate = grammarTotal ? (grammarCorrect / grammarTotal) : 0;
+      const readingRate = readingTotal ? (readingCorrect / readingTotal) : 0;
+      const listeningRate = listeningTotal ? (listeningCorrect / listeningTotal) : 0;
+      const langRate = (vocabTotal + grammarTotal) ? ((vocabCorrect + grammarCorrect) / (vocabTotal + grammarTotal)) : 0;
+
+      const hasCutoffRisk = (langRate < 0.316) || (readingRate < 0.316) || (listeningRate < 0.316);
+
+      if (hasCutoffRisk) {
+        passBadge.textContent = `기준점 미달 위험 (${scaledScore}点 추정)`;
+        passBadge.className = 'text-2xl sm:text-3xl font-black font-serif text-red-600';
+        passDetail.textContent = '특정 영역 득점률이 과락선(31.6%) 미만입니다. 영역별 최저점(19점) 보강이 최우선입니다.';
+      } else if (scaledScore >= 110) {
+        passBadge.textContent = `합격권 추정 (${scaledScore}点)`;
+        passBadge.className = 'text-2xl sm:text-3xl font-black font-serif text-neutral-900';
+        passDetail.textContent = '정답률 기준 목표 110점권 도달 · (※ 본 점수는 비공식 정답률 환산치이며 실제 시험은 득점등화가 적용됩니다)';
+      } else if (scaledScore >= 90) {
+        passBadge.textContent = `경계선 추정 (${scaledScore}点)`;
+        passBadge.className = 'text-2xl sm:text-3xl font-black font-serif text-neutral-800';
+        passDetail.textContent = '합격선(90점) 근접 · 110점 안정권까지 취약 영역 보강 필요';
+      } else {
+        passBadge.textContent = `보강 필요 (${scaledScore}点)`;
+        passBadge.className = 'text-2xl sm:text-3xl font-black font-serif text-neutral-700';
+        passDetail.textContent = '개념 누수 점검 및 어휘·문법 반복 복습 권고';
+      }
+
+      // First period (1~75) vs Second period (76~107)
+      const firstAnswers = userAnswers.slice(0, 75);
+      const secondAnswers = userAnswers.slice(75);
+
+      const firstCorrect = firstAnswers.filter((a, i) => a === sessionQuestions[i].sessionAnswer).length;
+      const secondCorrect = secondAnswers.filter((a, i) => a === sessionQuestions[75 + i].sessionAnswer).length;
+
+      const firstPct = ((firstCorrect / 75) * 100).toFixed(1);
+      const secondPct = ((secondCorrect / 32) * 100).toFixed(1);
+
+      const firstTime = section1ElapsedSeconds;
+      const secondTime = section2ElapsedSeconds;
+
+      document.getElementById('stat-first-half').textContent = `${firstCorrect} / 75 (${firstPct}%)`;
+      document.getElementById('stat-first-half-time').innerHTML = `총 ${Math.round(firstTime/60)}분 · 문항당 ${((firstTime/75)).toFixed(1)}초`;
+
+      document.getElementById('stat-second-half').textContent = `${secondCorrect} / 32 (${secondPct}%)`;
+      document.getElementById('stat-second-half-time').innerHTML = `총 ${Math.round(secondTime/60)}분 · 문항당 ${((secondTime/32)).toFixed(1)}초`;
+
+      const diff = (secondPct - firstPct).toFixed(1);
+      let commentary = `<strong>지구력 분석:</strong> 1교시(필기) 대비 2교시(청해) 정답률 변화 <strong>${diff > 0 ? '+' + diff : diff}%p</strong>. `;
+      if (diff < -15) {
+        commentary += "1교시(105분) 후반부 및 2교시 청해에서 집중력 피로가 나타났습니다. 휴식 시간 동안의 이완 및 당분 보충 루틴이 권장됩니다.";
+      } else if (diff >= -5) {
+        commentary += "1교시와 2교시 청해의 집중도가 균형 있게 유지되었습니다. 155분 전 영역 시험을 완주할 수 있는 실전 멘탈을 갖추고 있습니다.";
+      } else {
+        commentary += "2교시 청해에서 약간의 체력 저하가 감지되었으나 실전 평균 수준입니다.";
+      }
+      document.getElementById('endurance-commentary').innerHTML = commentary;
+
+      renderAllExplanations('all');
+    }
+
+    function renderAllExplanations(filterType) {
+      const container = document.getElementById('explanations-list');
+      container.innerHTML = '';
+
+      sessionQuestions.forEach((q, idx) => {
+        const userAns = userAnswers[idx];
+        const isCorrect = userAns === q.sessionAnswer;
+        const isUnknown = userAns === 'unknown'; const isUnanswered = userAns === null;
+
+        if (filterType === 'wrong' && isCorrect) return;
+        if (filterType === 'unknown' && !isUnknown) return;
+        if (filterType === 'vocab' && q.part !== '文字・語彙') return;
+        if (filterType === 'grammar' && q.part !== '文法') return;
+        if (filterType === 'reading' && q.part !== '読解') return;
+        if (filterType === 'listening' && q.part !== '聴解') return;
+
+        const card = document.createElement('div');
+        card.className = `jlpt-paper rounded-lg p-5 sm:p-6 space-y-4 ${
+          isCorrect ? 'border-neutral-700' : 'border-neutral-950 bg-neutral-50'
+        }`;
+
+        const selectedText = typeof userAns === 'number' ? q.sessionChoices[userAns] : "未回答 (미마킹/모름)";
+        const correctText = q.sessionChoices[q.sessionAnswer];
+
+        let badgeStatus = '';
+        if (isCorrect) {
+          badgeStatus = '<span class="px-2 py-0.5 border border-neutral-900 bg-neutral-900 text-white font-bold text-xs rounded">○ 正解 (정답)</span>';
+        } else if (isUnanswered) {
+          badgeStatus = '<span class="px-2 py-0.5 border border-neutral-600 bg-neutral-200 text-neutral-800 font-bold text-xs rounded">- 未回答 (미마킹)</span>';
+        } else {
+          badgeStatus = '<span class="px-2 py-0.5 border border-neutral-900 text-neutral-900 font-bold text-xs rounded">✕ 誤答 (오답)</span>';
+        }
+
+        // Script block for listening
+        let scriptHtml = '';
+        if (q.audio && q.audio.length > 0) {
+          scriptHtml = `
+            <div class="p-3.5 rounded border border-neutral-400 bg-white space-y-1.5 text-xs">
+              <div class="font-bold text-neutral-900 uppercase tracking-wider">🎧 聴解 大本 (스크립트 전문)</div>
+              <div class="space-y-1 text-neutral-800 leading-relaxed font-sans">
+                ${q.audio.map(a => `<div><strong class="text-neutral-950">${a.speaker === 1 ? '話者1(남/교사/안내)' : a.speaker === 2 ? '話者2(여/학생/손님)' : '解説'}:</strong> ${escapeHtml(a.text)}</div>`).join('')}
+              </div>
+            </div>
+          `;
+        }
+
+        card.innerHTML = `
+          <!-- Header -->
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-300 pb-2.5">
+            <div class="flex items-center gap-2">
+              <span class="text-xs font-mono font-bold px-2 py-0.5 bg-neutral-900 text-white rounded">
+                問 ${q.id}
+              </span>
+              <span class="text-xs font-bold text-neutral-900">
+                ${escapeHtml(q.category || '')}
+              </span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[11px] text-neutral-500 font-mono">체류 ${questionDwellTimes[idx] || 0}초</span>
+              ${badgeStatus}
+            </div>
+          </div>
+
+          <!-- Problem & Reading Passage -->
+          <div class="space-y-2 text-xs sm:text-sm leading-relaxed">
+            ${q.instruction && q.instruction.length > 50 ? `<div class="p-3 bg-neutral-100 rounded border border-neutral-300 text-xs text-neutral-700 whitespace-pre-wrap">${escapeHtml(q.instruction)}</div>` : ''}
+            <div class="font-medium text-neutral-950 whitespace-pre-wrap font-serif">${escapeHtml(q.prompt)}</div>
+          </div>
+
+          ${scriptHtml}
+
+          <!-- Choices & Comparison -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs bg-white p-3 rounded border border-neutral-300">
+            <div>
+              <span class="text-neutral-500 block mb-0.5">사용자 마킹</span>
+              <span class="font-bold text-neutral-900">
+                ${escapeHtml(selectedText)}
+              </span>
+            </div>
+            <div>
+              <span class="text-neutral-500 block mb-0.5">공식 정답</span>
+              <span class="font-bold text-neutral-950">
+                ${q.sessionAnswer + 1}番: ${escapeHtml(correctText)}
+              </span>
+            </div>
+          </div>
+
+          <!-- Korean Detailed Explanations -->
+          <div class="text-xs space-y-2 pt-1 text-neutral-700 leading-relaxed border-t border-neutral-200">
+            <div>
+              <strong class="text-neutral-950">【한국어 번역 및 핵심 해설】</strong><br>
+              <span>${q.translation || ''}</span>
+            </div>
+            ${q.connection ? `<div><strong class="text-neutral-950">【접속·어휘 분석】</strong> <span>${q.connection}</span></div>` : ''}
+            ${q.meaning ? `<div><strong class="text-neutral-950">【핵심 의미】</strong> <span>${q.meaning}</span></div>` : ''}
+            ${q.trap ? `<div><strong class="text-neutral-950">【함정 분석】</strong> <span>${q.trap}</span></div>` : ''}
+            ${q.contrast ? `<div><strong class="text-neutral-950">【유사 표현 비교】</strong> <span>${q.contrast}</span></div>` : ''}
+            ${q.example ? `<div><strong class="text-neutral-950">【추가 예문】</strong> <span>${q.example}</span></div>` : ''}
+            <div class="flex items-center justify-between pt-1.5 text-[11px] text-neutral-500 border-t border-neutral-200">
+              <span>복습 주기: <strong>${q.nextReview || 'D+1: 2026-09-21'}</strong></span>
+              <span class="font-mono">${q.sectionName} · ${q.problemNo}</span>
+            </div>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    function copyResultJSON() {
+      const total = sessionQuestions.length;
+      let correct = 0, wrong = 0, unknown = 0, unanswered = 0;
+      let vocabCorrect = 0, grammarCorrect = 0, readingCorrect = 0, listeningCorrect = 0;
+
+      sessionQuestions.forEach((q, idx) => {
+        const userAns = userAnswers[idx];
+        if (userAns === q.sessionAnswer) {
+          correct++;
+          if (q.part === '文字・語彙') vocabCorrect++;
+          if (q.part === '文法') grammarCorrect++;
+          if (q.part === '読解') readingCorrect++;
+          if (q.part === '聴解') listeningCorrect++;
+        } else if (userAns === 'unknown') {
+          unknown++;
+        } else if (userAns === null) {
+          unanswered++;
+        } else {
+          wrong++;
+        }
+      });
+
+      const pct = ((correct / total) * 100).toFixed(1);
+      const vocabTotal = 32, grammarTotal = 22, readingTotal = 21, listeningTotal = 32;
+      const langRate = (vocabCorrect + grammarCorrect) / 54;
+      const readingRate = readingCorrect / 21;
+      const listeningRate = listeningCorrect / 32;
+      const hasCutoffRisk = (langRate < 0.316) || (readingRate < 0.316) || (listeningRate < 0.316);
+
+      const resultPayload = {
+        examDate: new Date().toISOString().split('T')[0],
+        examType: "공식 문제집 제2집 기반 실전모의고사 (개인학습용 / TTS)",
+        examTitle: "JLPT N2 実戦模試（公式問題集 第2集ベース / 個人学習用）",
+        provenanceNote: "출제 원안: 日本語能力試験 公式問題集 第2集(2018) 대조 / 개인학습용 TTS 구현 / 비공식 정답률 추정",
+        totalQuestions: total,
+        correctCount: correct,
+        wrongCount: wrong,
+        unknownCount: unknown,
+        unansweredCount: unanswered,
+        accuracyPercent: Number(pct),
+        scoreScaledEstimate: Math.round((correct / total) * 180),
+        hasSectionalCutoffRisk: hasCutoffRisk,
+        elapsedSeconds: (typeof section1ElapsedSeconds !== 'undefined' ? section1ElapsedSeconds : 0) + (typeof section2ElapsedSeconds !== 'undefined' ? section2ElapsedSeconds : 0),
+        sections: {
+          vocab: { total: 32, correct: vocabCorrect },
+          grammar: { total: 22, correct: grammarCorrect },
+          reading: { total: 21, correct: readingCorrect },
+          listening: { total: 32, correct: listeningCorrect }
+        },
+        questionsRecord: sessionQuestions.map((q, idx) => ({
+          id: q.id,
+          problemNo: q.problemNo,
+          category: q.category,
+          userAnswer: userAnswers[idx],
+          officialAnswer: q.sessionAnswer,
+          isCorrect: userAnswers[idx] === q.sessionAnswer,
+          dwellTimeSeconds: questionDwellTimes[idx] || 0,
+          nextReview: q.nextReview
+        }))
+      };
+
+      navigator.clipboard.writeText(JSON.stringify(resultPayload, null, 2)).then(() => {
+        alert('채점 결과 JSON이 클립보드에 복사되었습니다!\n대화창에 붙여넣어 주시면 학습 원장에 즉시 동기화 기록됩니다.');
+      }).catch(err => {
+        console.error(err);
+        prompt('아래 JSON을 복사하세요:', JSON.stringify(resultPayload));
+      });
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    // Auto-init on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initExam();
+    });
+  </script>
+</body>
+</html>
