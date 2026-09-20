@@ -86,7 +86,10 @@ export default function Home() {
               <div><span>テスト所要時間</span><strong>{formatClock(selected.tests.elapsedSeconds)}</strong><small>{selected.tests.untimedTests ? `未計測 ${selected.tests.untimedTests}回を除く` : '記録済みテストの合計'}</small></div>
               <div><span>誤答 / 不明 / 未回答</span><strong>{selected.tests.wrong} / {selected.tests.unknown} / {selected.tests.unanswered ?? '—'}</strong><small>それぞれ別に集計</small></div>
             </div>
-            <div className="pass-box">{(['N3','N2'] as const).map(level => {const p=selected.probabilities?.[level];return <div key={level}><span>{level}合格可能性・参考</span><strong>{p ? `${p.low}–${p.high}%` : '未評価'}</strong><small>{p ? `12月予測 ${p.projected}%` : 'この日の評価なし'}</small></div>;})}</div>
+            <div className="pass-box">{(() => {
+              const p = selected.probabilities?.N2;
+              return <div><span>N2合格可能性・参考</span><strong>{p ? `${p.low}–${p.high}%` : '未評価'}</strong><small>{p ? `12月予測 ${p.projected}%` : 'この日の評価なし'}</small></div>;
+            })()}</div>
             <div className="mini-bars"><h4>分野別の参考評価・当日正答率ではありません</h4>{orderedDomains(selected.domains ?? []).map(domain => <div key={domain.key} className="bar-row"><span>{domain.label}</span><div><i style={{width: domain.low !== null && domain.high !== null ? `${(domain.low+domain.high)/2}%` : '0%'}} /></div><strong>{domain.grade ?? '—'}</strong></div>)}</div>
           </> : <div className="empty-state" role="status"><span>○</span><strong>{loading ? '記録を読み込み中' : loadError ? '読み込みエラー' : 'まだ記録がありません'}</strong><p>{loading ? '最新の学習記録を確認しています。' : '記録が追加されると、この日に表示されます。'}</p></div>}
         </aside>
