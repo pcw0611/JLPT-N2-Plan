@@ -1,0 +1,12 @@
+============================================================
+VERIFICATION REPORT FOR: n2-past-exam-202312-mock.html
+============================================================
+Total Questions: 104
+  - Section 1 (Language Knowledge & Reading): 72 items
+    * Vocab: 30 items (IDs 1~30)
+    * Grammar: 21 items (IDs 31~51)
+    * Reading: 21 items (IDs 52~72)
+  - Section 2 (Listening): 32 items (IDs 73~104)
+Errors: 0
+Warnings: 0
+============================================================

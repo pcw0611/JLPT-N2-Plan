@@ -1,0 +1,67 @@
+{
+  "source": "日本語能力試験 公式問題集 第2集 (2018) 原本対照 · 個人学習用 実戦模試 (ブラウザTTS聴解演習)",
+  "provenance": "출제 원안: 日本語能力試験 公式問題集 第2集(2018) 대조 / 개인학습용 TTS 구현 / 비공식 정답률 추정",
+  "total_score_scaled": 119,
+  "accuracy_percent": 66.4,
+  "sections": {
+    "vocab": {
+      "total": 32,
+      "correct": 21
+    },
+    "grammar": {
+      "total": 22,
+      "correct": 10
+    },
+    "reading": {
+      "total": 21,
+      "correct": 16
+    },
+    "listening": {
+      "total": 32,
+      "correct": 24
+    }
+  },
+  "has_sectional_cutoff_risk": false,
+  "section1_elapsed_seconds": 5263,
+  "section2_elapsed_seconds": 1768,
+  "wrong_items": [
+    1,
+    6,
+    7,
+    9,
+    10,
+    15,
+    22,
+    23,
+    28,
+    30,
+    31,
+    34,
+    35,
+    36,
+    37,
+    40,
+    44,
+    46,
+    47,
+    48,
+    49,
+    51,
+    54,
+    55,
+    58,
+    63,
+    66,
+    75,
+    76,
+    80,
+    90,
+    94,
+    97,
+    99,
+    102,
+    106
+  ],
+  "unknown_items": [],
+  "unanswered_items": []
+}

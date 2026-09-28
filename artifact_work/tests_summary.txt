@@ -1,0 +1,135 @@
+ID: official-vol2-full-mock-20260920
+Date: 2026-09-20
+Title: JLPT N2 공식 문제집 제2집 전 영역 완본 실전모의고사 (107문항)
+Source: official_mock
+Target: N2
+Score: 71/107 (Unknown: 0, Unanswered: 0)
+Elapsed: 6936s
+Notes: {"source": "日本語能力試験 公式問題集 第2集 (2018) 原本対照 · 個人学習用 実戦模試 (ブラウザTTS聴解演習)", "provenance": "출제 원안: 日本語能力試験 公式問題集 第2集(2018) 대조 / 개인학습용 TTS 구현 / 비공식 정답률 추정", "total_score_scaled": 119, "accuracy_percent": 66....
+------------------------------------------------------------
+ID: n2-grammar-contrast-20260911-7
+Date: 2026-09-11
+Title: 2026-09-11 N2 문법 핵심 대조 테스트 (7문항)
+Source: 자체 제작
+Target: N2
+Score: 4/7 (Unknown: 0, Unanswered: 0)
+Elapsed: 297s
+Notes: {"total_items": 7, "correct_items": 4, "wrong_items": [2, 3, 6], "unknown_items": [], "unanswered_items": [], "elapsed_seconds": 297, "accuracy_pct": 57.1, "contrast_topics": {"1": "〜がたい vs 〜かねない vs 〜...
+------------------------------------------------------------
+ID: n2-listening-practice-20260911-4
+Date: 2026-09-11
+Title: 2026-09-11 N2 청해 실전＆D+3 복습 테스트 (4문항)
+Source: 자체 제작
+Target: N2
+Score: 3/4 (Unknown: 0, Unanswered: 0)
+Elapsed: 351s
+Notes: {"total_items": 4, "correct_items": 3, "wrong_items": [1], "unknown_items": [], "unanswered_items": [], "elapsed_seconds": 351, "accuracy_pct": 75.0, "area_accuracy": {"과제이해": "2/3 (67%)", "포인트이해": "1...
+------------------------------------------------------------
+ID: n2-listening-practice-20260908-4
+Date: 2026-09-08
+Title: 2026-09-08 N2 청해 실전 집중 테스트 (4문항)
+Source: 자체 제작
+Target: N2
+Score: 2/4 (Unknown: 0, Unanswered: 0)
+Elapsed: 297s
+Notes: 과제이해(순서역전/우선순위), 포인트이해(수량계산), 즉시응답(제안수락) 실전 청해 4문항. 정답률 50%(2/4), 소요시간 4분 57초(297초)....
+------------------------------------------------------------
+ID: retest-listening-20260907-3
+Date: 2026-09-07
+Title: 2026-09-07 N2 청해 과제이해 음성교정 재시험 (3문항)
+Source: 자체 제작
+Target: N2
+Score: 3/3 (Unknown: 0, Unanswered: 0)
+Elapsed: 168s
+Notes: {"total_items": 3, "correct_items": 3, "wrong_items": [], "unknown_items": [], "unanswered_items": [], "elapsed_seconds": 168, "notes": "남/녀 TTS 화자 매핑 오류 교정 후 3문항 100% 정답 달성. Q35(원래 오답->정답, D+3 승급), Q...
+------------------------------------------------------------
+ID: due-review-20260906-37
+Date: 2026-09-07
+Title: 2026-09-06 N2 누적 복습 통합 테스트 (37문항)
+Source: 자체 제작
+Target: N2
+Score: 20/37 (Unknown: 5, Unanswered: 0)
+Elapsed: 1316s
+Notes: {"total_items": 37, "correct_items": 20, "wrong_items": [3, 4, 9, 15, 19, 20, 21, 22, 32, 34, 35, 37], "unknown_items": [13, 16, 26, 28, 33], "unanswered_items": [], "elapsed_seconds": 1316, "enduranc...
+------------------------------------------------------------
+ID: n2-grammar-076-084-check-20260905
+Date: 2026-09-05
+Title: N2 문법 076~084 강의 직후 확인시험 (10문항)
+Source: self_made
+Target: N2
+Score: 5/10 (Unknown: 2, Unanswered: 0)
+Elapsed: 248s
+Notes: {"title": "N2 문법 076~084 강의 직후 확인시험 (10문항)", "source": "n2_grammar_076_084_quiz.html", "weak_items": [1, 4, 5, 8, 10], "unknown_items": [5, 8], "wrong_items": [1, 4, 10], "timing": "4분 08초 (248초)"}...
+------------------------------------------------------------
+ID: n2-grammar-060-068-check-20260905
+Date: 2026-09-05
+Title: N2 문법 060~068 강의 직후 확인시험 (10문항)
+Source: self_made
+Target: N2
+Score: 7/10 (Unknown: 1, Unanswered: 0)
+Elapsed: 342s
+Notes: {"title": "N2 문법 060~068 강의 직후 확인시험 (10문항)", "source": "n2_grammar_060_068_quiz.html", "weak_items": [5, 7, 9], "unknown_items": [7], "wrong_items": [5, 9], "timing": "5분 42초 (342초)"}...
+------------------------------------------------------------
+ID: n2-listening-tts-check-20260905
+Date: 2026-09-05
+Title: N2 청해 실전 미니테스트 (TTS 4문항)
+Source: self_made
+Target: N2
+Score: 2/4 (Unknown: 0, Unanswered: 0)
+Elapsed: 471s
+Notes: {"title": "N2 청해 실전 미니테스트 (TTS 4문항)", "source": "n2_listening_practice_quiz.html", "weak_items": [1, 2], "unknown_items": [], "wrong_items": [1, 2], "timing": "7분 51초 (471초)"}...
+------------------------------------------------------------
+ID: n2-grammar-051-059-check-20260905
+Date: 2026-09-05
+Title: N2 문법 051~059 강의 직후 확인시험 (10문항)
+Source: self_made
+Target: N2
+Score: 7/10 (Unknown: 1, Unanswered: 0)
+Elapsed: 578s
+Notes: {"title": "N2 문법 051~059 강의 직후 확인시험 (10문항)", "source": "n2_grammar_051_059_quiz.html", "weak_items": [2, 6, 7], "unknown_items": [2], "wrong_items": [6, 7], "timing": "9분 38초 (578초)"}...
+------------------------------------------------------------
+ID: review-check-20260905-8
+Date: 2026-09-05
+Title: 9/1 오답 변형 복습 확인시험 (8문항)
+Source: 자체 제작
+Target: N2
+Score: 6/8 (Unknown: 0, Unanswered: 0)
+Elapsed: 58s
+Notes: {"wrong_items": [3, 6], "unknown_items": [], "unanswered_items": [], "item_points": {"1": "〜しかない／〜ほかない (정답)", "2": "〜次第 (정답)", "3": "〜そうにない (오답)", "4": "〜それなりの (정답)", "5": "〜ことなく (정답)", "6": "〜ことはない (...
+------------------------------------------------------------
+ID: due-review-20260901-review-plus-grammar
+Date: 2026-09-01
+Title: 만기 복습＋오늘 문법 59문항 중 56문항 제출
+Source: self_made
+Target: N2
+Score: 43/56 (Unknown: 1, Unanswered: 0)
+Elapsed: 1561s
+Notes: {"submitted_result": {"testId": "due-review-20260901-review-plus-grammar", "date": "2026-09-01", "sourceClass": "self_made_due_review", "total": 56, "correct": 43, "wrong": 12, "unknown": 1, "unanswer...
+------------------------------------------------------------
+ID: n2-listening-random-20260831-8
+Date: 2026-08-31
+Title: N2 랜덤 청해 8문항
+Source: self_made_tts
+Target: N2
+Score: 5/8 (Unknown: 0, Unanswered: 0)
+Elapsed: 247s
+Notes: {"source": "자체 제작 일본어 TTS 선택형 청해. 공식 시험·공식 모의고사 아님.", "quality_note": "이번 세트는 짧은 형식 확인용으로 실제 N2 대화 길이·정보량보다 낮았음. 난이도 판정에 사용하지 않음.", "raw_result": "database\\results\\n2-listening-random-20260831-8.jso...
+------------------------------------------------------------
+ID: n2-grammar-026-035-check-20260831
+Date: 2026-08-31
+Title: N2 문법 026~035 강의 직후 확인 12문항
+Source: self_made
+Target: N2
+Score: 10/12 (Unknown: 0, Unanswered: 0)
+Elapsed: 334s
+Notes: {"submitted_result": {"testId": "n2-grammar-026-035-check-20260831", "date": "2026-08-31", "sourceClass": "self_made_immediate_recognition", "total": 12, "correct": 10, "wrong": 2, "unknown": 0, "unan...
+------------------------------------------------------------
+ID: due-review-20260831-all-44
+Date: 2026-08-31
+Title: 만기 복습 44문항 연속 지구력 시험
+Source: self_made
+Target: N3 기반·N2
+Score: 28/44 (Unknown: 2, Unanswered: 0)
+Elapsed: 1696s
+Notes: {"submitted_result": {"testId": "due-review-20260831-all-44", "date": "2026-08-31", "sourceClass": "self_made_due_review", "total": 44, "correct": 28, "wrong": 14, "unknown": 2, "unanswered": 0, "elap...
+------------------------------------------------------------

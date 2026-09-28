@@ -5,11 +5,41 @@ import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy
 
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const examDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-12-06T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
+const mockDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-10-04T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
+
 const dateLabel = (date: string) => {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
   return match ? `${Number(match[2])}月${Number(match[3])}日` : '날짜 없음';
 };
 const numberLabel = (value: number) => new Intl.NumberFormat('ja-JP').format(value);
+
+interface SpecialDateInfo {
+  badge: string;
+  type: 'upcoming-mock' | 'official-exam' | 'completed-mock';
+  title: string;
+  desc: string;
+}
+
+const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
+  '2026-09-20': {
+    badge: '1次完了',
+    type: 'completed-mock',
+    title: '第1回 N2 実戦模擬試験 (完了)',
+    desc: '『JLPT 한권으로 끝내기 N2』 未使用練習模試 102/180点 完了'
+  },
+  '2026-10-04': {
+    badge: '🔥 模試',
+    type: 'upcoming-mock',
+    title: '第2回 N2 実戦模擬試験 (今週日曜日)',
+    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験予定 (言語知識・読解 72問 + 聴解 32問)'
+  },
+  '2026-12-06': {
+    badge: '🎯 本番',
+    type: 'official-exam',
+    title: '2026年 第2回 JLPT N2 本試験',
+    desc: '最優先目標: 2026-12-06 JLPT N2 合格および110点以上達成！'
+  }
+};
 
 export default function Home() {
   const [reports, setReports] = useState<DailyReport[]>([]);
@@ -18,6 +48,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [daysLeft, setDaysLeft] = useState(examDaysLeft);
+  const [mockDays, setMockDays] = useState(mockDaysLeft);
+
   useEffect(() => {
     let mounted = true;
     fetch('/api/study-days', { cache: 'no-store' })
@@ -28,9 +60,10 @@ export default function Home() {
         const days: DailyReport[] = payload.days
           .filter((day): day is DailyReport => !!day && typeof day === 'object' && typeof (day as DailyReport).date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test((day as DailyReport).date))
           .slice()
-          .sort((a: DailyReport,b: DailyReport) => a.date.localeCompare(b.date));
+          .sort((a: DailyReport, b: DailyReport) => a.date.localeCompare(b.date));
         if (!mounted) return;
         setDaysLeft(examDaysLeft());
+        setMockDays(mockDaysLeft());
         setReports(days);
         const today = getSeoulDate();
         const initialDate = days.some(r => r.date === today) ? today : days.at(-1)?.date ?? today;
@@ -41,19 +74,24 @@ export default function Home() {
       .finally(() => { if (mounted) setLoading(false); });
     return () => { mounted = false; };
   }, []);
+
   const latest = reports.at(-1);
   const selected = reports.find(r => r.date === selectedDate);
+  const selectedSpecial = SPECIAL_DATES[selectedDate];
   const month = visibleMonth;
   const [year, monthNumber] = month.split('-').map(Number);
+
   const moveMonth = (offset: number) => {
     const next = new Date(Date.UTC(year, monthNumber - 1 + offset, 1));
     setVisibleMonth(`${next.getUTCFullYear()}-${String(next.getUTCMonth() + 1).padStart(2, '0')}`);
   };
+
   const cells = useMemo(() => {
-    const first = new Date(Date.UTC(year, monthNumber-1, 1)).getUTCDay();
+    const first = new Date(Date.UTC(year, monthNumber - 1, 1)).getUTCDay();
     const length = new Date(Date.UTC(year, monthNumber, 0)).getUTCDate();
-    return [...Array(first).fill(null), ...Array.from({length}, (_,i) => i+1)] as (number | null)[];
+    return [...Array(first).fill(null), ...Array.from({ length }, (_, i) => i + 1)] as (number | null)[];
   }, [year, monthNumber]);
+
   const recorded = new Set(reports.map(r => r.date));
   const isV2 = selected?.schemaVersion === 2;
   const latestProbability = latest?.probabilities?.N2;
@@ -61,24 +99,188 @@ export default function Home() {
 
   return (
     <main className="site-shell">
-      <header className="topbar"><div><p className="eyebrow">JLPT N2 PLAN</p><h1>学習カレンダー</h1></div><div className="topbar-actions"><a className="game-button" href="https://slay-the-jlpt.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="N2単語ゲームを新しいタブで開く"><span aria-hidden="true">🎮</span> N2単語ゲーム <span aria-hidden="true">↗</span></a><div className="exam-chip"><span /> 試験まで{daysLeft}日</div></div></header>
+      <header className="topbar">
+        <div>
+          <p className="eyebrow">JLPT N2 PLAN</p>
+          <h1>学習カレンダー</h1>
+        </div>
+        <div className="topbar-actions">
+          <a className="game-button" href="https://slay-the-jlpt.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="N2単語ゲームを新しいタブで開く">
+            <span aria-hidden="true">🎮</span> N2単語ゲーム <span aria-hidden="true">↗</span>
+          </a>
+          <div className="exam-chips-group">
+            <button
+              type="button"
+              className="exam-chip chip-mock"
+              onClick={() => { setSelectedDate('2026-10-04'); setVisibleMonth('2026-10'); }}
+              title="10月4日(日) 第2回実戦模試 (カレンダーで表示)"
+            >
+              <span className="chip-dot pulse-amber" />
+              <span className="chip-title">10/4 第2回模試</span>
+              <strong className="chip-dday">D-{mockDays}</strong>
+            </button>
+            <button
+              type="button"
+              className="exam-chip chip-exam"
+              onClick={() => { setSelectedDate('2026-12-06'); setVisibleMonth('2026-12'); }}
+              title="12月6日(日) JLPT N2本試験 (カレンダーで表示)"
+            >
+              <span className="chip-dot glow-target" />
+              <span className="chip-title">12/6 本試験</span>
+              <strong className="chip-dday">D-{daysLeft}</strong>
+            </button>
+          </div>
+        </div>
+      </header>
+
       <section className="hero">
-        <div><p className="eyebrow accent">LIVE STUDY LOG</p><h2>今日の学びを<br />合格可能性へ</h2><p>日々の結果と、その日までの記録を分けて確認できます。</p></div>
-        <div className="hero-score"><span>N2 12月予測・最新記録</span><strong>{latestProbability ? `${latestProbability.projected}%` : '—'}</strong><small>{latestProbability ? `現在の推定 ${latestProbability.low}–${latestProbability.high}%` : '記録を確認中'}</small></div>
+        <div>
+          <p className="eyebrow accent">LIVE STUDY LOG</p>
+          <h2>今日の学びを<br />合格可能性へ</h2>
+          <p>日々の結果と、その日までの記録を分けて確認できます。</p>
+        </div>
+        <div className="hero-score">
+          <span>N2 12月予測・最新記録</span>
+          <strong>{latestProbability ? `${latestProbability.projected}%` : '—'}</strong>
+          <small>{latestProbability ? `現在の推定 ${latestProbability.low}–${latestProbability.high}%` : '記録を確認中'}</small>
+        </div>
       </section>
+
       {loadError && <p className="load-message" role="alert">記録を読み込めませんでした。再読み込みしてください。過去の仮データは表示していません。</p>}
+
       <div className="main-grid">
         <section className="calendar-card card">
-          <div className="section-head"><div><p className="eyebrow">CALENDAR</p><h3>{year}年{monthNumber}月</h3></div><div className="calendar-tools"><div className="legend"><span /> 学習記録あり</div><div className="calendar-nav"><button type="button" onClick={() => moveMonth(-1)} aria-label="前の月を表示">‹ 前月</button><button type="button" onClick={() => moveMonth(1)} aria-label="次の月を表示">次月 ›</button></div></div></div>
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">CALENDAR</p>
+              <h3>{year}年{monthNumber}月</h3>
+            </div>
+            <div className="calendar-tools">
+              <div className="legend">
+                <span className="legend-item"><span className="legend-dot dot-record" /> 学習記録</span>
+                <span className="legend-item"><span className="legend-dot dot-mock" /> 10/4 模試</span>
+                <span className="legend-item"><span className="legend-dot dot-exam" /> 12/6 本試験</span>
+              </div>
+              <div className="calendar-nav">
+                <button type="button" onClick={() => moveMonth(-1)} aria-label="前の月を表示">‹ 前月</button>
+                <button type="button" onClick={() => moveMonth(1)} aria-label="次の月を表示">次月 ›</button>
+              </div>
+            </div>
+          </div>
           <div className="weekdays">{['日','月','火','水','木','金','土'].map(d => <span key={d}>{d}</span>)}</div>
-          <div className="calendar-grid">{cells.map((day,i) => {
-            const date = day ? `${month}-${String(day).padStart(2,'0')}` : '';
-            return day ? <button key={date} className={`${selectedDate === date ? 'selected' : ''} ${recorded.has(date) ? 'recorded' : ''}`} onClick={() => setSelectedDate(date)} aria-label={dateLabel(date)} aria-pressed={selectedDate === date}><span>{day}</span>{recorded.has(date) && <i />}</button> : <span key={`empty-${i}`} />;
+          <div className="calendar-grid">{cells.map((day, i) => {
+            if (!day) return <span key={`empty-${i}`} className="empty-cell" />;
+            const date = `${month}-${String(day).padStart(2, '0')}`;
+            const special = SPECIAL_DATES[date];
+            const isSelected = selectedDate === date;
+            const isRecorded = recorded.has(date);
+            const isToday = date === getSeoulDate();
+
+            const classNames = [
+              isSelected ? 'selected' : '',
+              isRecorded ? 'recorded' : '',
+              isToday ? 'today' : '',
+              special ? `special-day ${special.type}` : '',
+            ].filter(Boolean).join(' ');
+
+            return (
+              <button
+                key={date}
+                type="button"
+                className={classNames}
+                onClick={() => setSelectedDate(date)}
+                aria-label={special ? `${dateLabel(date)}: ${special.title}` : dateLabel(date)}
+                aria-pressed={isSelected}
+              >
+                {special && <span className={`cell-tag ${special.type}`}>{special.badge}</span>}
+                <span className="cell-day-num">{day}</span>
+                {isRecorded && <i />}
+              </button>
+            );
           })}</div>
-          <div className="calendar-note"><span>初回N2模擬試験</span><strong>9月20日</strong><p>『JLPT 한권으로 끝내기 N2』の未使用練習模試を実施</p></div>
+
+          <div className="exam-milestones">
+            <div className="milestones-header">
+              <span className="eyebrow accent">EXAM ROADMAP</span>
+              <h4>実戦模試・本試験マイルストーン</h4>
+            </div>
+            <div className="milestones-grid">
+              <button
+                type="button"
+                className={`milestone-item is-completed ${selectedDate === '2026-09-20' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-09-20'); setVisibleMonth('2026-09'); }}
+              >
+                <div className="ms-badge done">完了</div>
+                <div className="ms-date">9/20 (日)</div>
+                <div className="ms-info">
+                  <strong>第1回 N2 実戦模試</strong>
+                  <p>102 / 180点 (한권으로 끝내기 N2 模試1)</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-10-04' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-10-04'); setVisibleMonth('2026-10'); }}
+              >
+                <div className="ms-badge upcoming">🔥 今週日曜日 · D-{mockDays}</div>
+                <div className="ms-date">10/4 (日)</div>
+                <div className="ms-info">
+                  <strong>第2回 N2 実戦模試</strong>
+                  <p>2023年12月 過去問完本 104問 実戦受験</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-target ${selectedDate === '2026-12-06' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-12-06'); setVisibleMonth('2026-12'); }}
+              >
+                <div className="ms-badge target">🎯 本番 · D-{daysLeft}</div>
+                <div className="ms-date">12/6 (日)</div>
+                <div className="ms-info">
+                  <strong>2026 JLPT N2 本試験</strong>
+                  <p>最優先目標: 110点以上合格達成！</p>
+                </div>
+              </button>
+            </div>
+          </div>
         </section>
+
         <aside className="day-card card">
-          <div className="section-head"><div><p className="eyebrow">SELECTED DAY</p><h3>{dateLabel(selectedDate)}</h3></div>{selected && <span className="done-badge">記録あり</span>}</div>
+          <div className="section-head">
+            <div>
+              <p className="eyebrow">SELECTED DAY</p>
+              <h3>{dateLabel(selectedDate)}</h3>
+            </div>
+            <div className="day-header-badges">
+              {selectedSpecial && <span className={`special-day-badge ${selectedSpecial.type}`}>{selectedSpecial.badge}</span>}
+              {selected && <span className="done-badge">記録あり</span>}
+            </div>
+          </div>
+
+          {selectedSpecial && (
+            <div className={`special-callout ${selectedSpecial.type}`}>
+              <div className="callout-header">
+                <span className="callout-icon">{selectedSpecial.type === 'upcoming-mock' ? '🔥' : selectedSpecial.type === 'official-exam' ? '🎯' : '📝'}</span>
+                <div>
+                  <strong>{selectedSpecial.title}</strong>
+                  <p>{selectedSpecial.desc}</p>
+                </div>
+              </div>
+              {selectedSpecial.type === 'upcoming-mock' && (
+                <div className="callout-meta">
+                  <span className="meta-highlight">今週日曜日 実施予定 (D-{mockDays})</span>
+                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 全104問 準備完了</span>
+                </div>
+              )}
+              {selectedSpecial.type === 'official-exam' && (
+                <div className="callout-meta">
+                  <span className="meta-highlight">2026年 12月 6日 (日) 本番 (D-{daysLeft})</span>
+                  <span className="meta-sub">合格基準: 90点以上 & 各領域 19点以上 / 目標: 110点以上</span>
+                </div>
+              )}
+            </div>
+          )}
+
           {selected ? <>
             <div className="metric-grid">
               <div><span>記録済み学習時間</span><strong>{formatStudy(selected.studyMinutes)}</strong><small>未計測の活動あり</small></div>
@@ -94,6 +296,7 @@ export default function Home() {
           </> : <div className="empty-state" role="status"><span>○</span><strong>{loading ? '記録を読み込み中' : loadError ? '読み込みエラー' : 'まだ記録がありません'}</strong><p>{loading ? '最新の学習記録を確認しています。' : '記録が追加されると、この日に表示されます。'}</p></div>}
         </aside>
       </div>
+
       {selected?.anki && 'cardsRemaining' in selected.anki && <section className="anki-card card">
         <div className="section-head"><div><p className="eyebrow">ANKI · TODAY</p><h3>Anki 当日学習記録</h3></div><span className="scope-badge">{selected.anki.scopeLabel}</span></div>
         <p className="data-note">Ankiの学習日境界（韓国時間4時）を基準にした実測値です。</p>
@@ -104,6 +307,7 @@ export default function Home() {
           <div><span>残り</span><strong>{numberLabel(selected.anki.cardsRemaining.learning)}</strong><small>新規 {numberLabel(selected.anki.cardsRemaining.new)} · 復習 {numberLabel(selected.anki.cardsRemaining.review)}</small></div>
         </div>
       </section>}
+
       {selected?.anki && 'forecast' in selected.anki && <section className="anki-card card">
         <div className="section-head"><div><p className="eyebrow">ANKI · CURRENT DECK</p><h3>Anki 現在デッキ統計</h3></div><span className="scope-badge">{selected.anki.scope}</span></div>
         <p className="data-note">選択日のAnki統計PDF。現在デッキの範囲で、全デッキ統計とは合算していません。</p>
@@ -118,6 +322,7 @@ export default function Home() {
           <div className="anki-facts"><div><span>1か月予測</span><strong>{numberLabel(selected.anki.forecast.totalReviews)}回</strong></div><div><span>中央値間隔</span><strong>{selected.anki.medianIntervalDays}日</strong></div><div><span>中央値 ease</span><strong>{selected.anki.medianEasePct}%</strong></div><div><span>直近1週の保持率</span><strong>{selected.anki.retention.lastWeek.pct}%</strong><small>{selected.anki.retention.lastWeek.count}枚</small></div></div>
         </div>
       </section>}
+
       {selected && <>
         <section className="detail-card card">
           <div className="section-head"><div><p className="eyebrow">TYPE ANALYSIS</p><h3>問題形式別の学習記録</h3></div><span className="muted">語彙 → 文法 → 読解 → 聴解</span></div>
@@ -136,6 +341,7 @@ export default function Home() {
           {!!selected.tests.excludedItems && <p className="data-note">音声エラー {selected.tests.excludedItems}問は形式別の正答率・時間から除外。テスト合計には提出時の記録を保持しています。</p>}
           <details className="test-details"><summary>当日のテスト内訳・出典</summary><div className="table-wrap"><table><thead><tr><th>テスト</th><th>出典</th><th>正答</th><th>時間</th></tr></thead><tbody>{selected.testDetails?.map(test => <tr key={test.id}><td>{test.title}</td><td>{sourceLabel(test.sourceClass)}</td><td>{test.correct}/{test.total}</td><td>{formatClock(test.elapsedSeconds)}</td></tr>)}</tbody></table></div></details>
         </section>
+
         <section className="bottom-grid">
           <div className="card next-card"><p className="eyebrow">REVIEW PLAN</p><h3>{selected.nextReview ? `${dateLabel(selected.nextReview.date)}の復習予定` : '次回の復習予定'}</h3><p className="data-note">選択日までの問題から登録された予定です。現在の未完了件数ではありません。</p><ol><li><b>01</b><span>登録された復習 {selected.nextReview?.count ?? 0}問<small>誤答と「不明」を優先</small></span></li><li><b>02</b><span>重点弱点の選択式確認<small>少数問題の結果は方向の目安</small></span></li><li><b>03</b><span>通常講義とAnki<small>期限を迎えた復習を優先</small></span></li></ol></div>
           <div className="card insight-card"><p className="eyebrow">SELECTED DAY RESULTS</p><h3>当日の結果から見える傾向</h3><div><span>当日80%以上の形式</span><p>{isV2 ? selected.strengths?.join('・') || '該当なし' : '再集計待ち'}</p></div><div><span>当日80%未満の形式</span><p>{isV2 ? selected.weaknesses?.join('・') || '該当なし' : '再集計待ち'}</p></div><div><span>データの読み方</span><p>{isV2 ? selected.confidenceNote : '集計方法の更新待ちです。'}</p></div></div>
@@ -145,4 +351,3 @@ export default function Home() {
     </main>
   );
 }
-
