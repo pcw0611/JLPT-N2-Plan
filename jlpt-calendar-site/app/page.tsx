@@ -25,7 +25,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     badge: '1次完了',
     type: 'completed-mock',
     title: '第1回 N2 実戦模擬試験 (完了)',
-    desc: '『JLPT 한권으로 끝내기 N2』 未使用練習模試 102/180点 完了'
+    desc: '公式問題集 第2集 全領域完本 107問 · 119/180点 (71/107問, 66.4%) 合格ライン・目標110点突破！'
   },
   '2026-10-04': {
     badge: '🔥 模試',
@@ -214,7 +214,7 @@ export default function Home() {
                 <div className="ms-date">9/20 (日)</div>
                 <div className="ms-info">
                   <strong>第1回 N2 実戦模試</strong>
-                  <p>102 / 180点 (한권으로 끝내기 N2 模試1)</p>
+                  <p>119 / 180点 (公式問題集 第2集 71/107問 · 66.4%)</p>
                 </div>
               </button>
               <button
@@ -266,6 +266,12 @@ export default function Home() {
                   <p>{selectedSpecial.desc}</p>
                 </div>
               </div>
+              {selectedSpecial.type === 'completed-mock' && (
+                <div className="callout-meta">
+                  <span className="meta-highlight">実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)</span>
+                  <span className="meta-sub">正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)</span>
+                </div>
+              )}
               {selectedSpecial.type === 'upcoming-mock' && (
                 <div className="callout-meta">
                   <span className="meta-highlight">今週日曜日 実施予定 (D-{mockDays})</span>
