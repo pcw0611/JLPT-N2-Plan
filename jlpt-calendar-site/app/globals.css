@@ -1570,9 +1570,11 @@ footer {
 }
 
 .ja-char.current {
-  color: #ffffff;
-  text-shadow: 0 0 12px #38bdf8;
-  animation: pulse-ja 0.7s infinite alternate;
+  color: #fbbf24;
+  text-shadow: 0 0 16px rgba(251, 191, 36, 0.95), 0 0 28px rgba(245, 158, 11, 0.6);
+  border-bottom: 3px solid #fbbf24;
+  padding-bottom: 2px;
+  animation: pulse-current-char 0.8s infinite alternate;
 }
 
 .ja-char.pending {
@@ -1580,9 +1582,9 @@ footer {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes pulse-ja {
-  0% { transform: scale(1); filter: drop-shadow(0 0 4px #38bdf8); }
-  100% { transform: scale(1.08); filter: drop-shadow(0 0 10px #38bdf8); }
+@keyframes pulse-current-char {
+  0% { transform: scale(1); filter: drop-shadow(0 0 6px #fbbf24); }
+  100% { transform: scale(1.08); filter: drop-shadow(0 0 16px #f59e0b); }
 }
 
 /* Korean Lyrics Text */
@@ -1623,9 +1625,10 @@ footer {
 
 .romaji-char.current {
   color: #ffffff;
-  background: rgba(56, 189, 248, 0.3);
-  border-bottom: 3px solid #38bdf8;
+  background: rgba(251, 191, 36, 0.25);
+  border-bottom: 3px solid #fbbf24;
   border-radius: 2px;
+  text-shadow: 0 0 10px rgba(251, 191, 36, 0.8);
   animation: pulse-cursor 0.8s infinite alternate;
 }
 
@@ -1634,8 +1637,8 @@ footer {
 }
 
 @keyframes pulse-cursor {
-  0% { border-color: #38bdf8; background: rgba(56, 189, 248, 0.4); }
-  100% { border-color: transparent; background: transparent; }
+  0% { border-color: #fbbf24; background: rgba(251, 191, 36, 0.35); }
+  100% { border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.1); }
 }
 
 /* Sidebar */

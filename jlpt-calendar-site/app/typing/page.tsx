@@ -286,16 +286,23 @@ export default function MygoTypingPage() {
         matchedLength = 1;
       }
       // 2. Flexible 'n' / 'nn':
-      // Single 'n' typed when target has 'nn' before consonant
-      else if (remaining.startsWith('n') && remaining.length > 1 && pressedChar === remaining[1] && !/[aeiouy]/i.test(remaining[1])) {
-        matchedLength = 2; // Consume the skipped 'n' and the pressed consonant!
+      // Single 'n' typed when target has 'nn':
+      // e.g. 'tenno' -> user typed 't', 'e', 'n'. Remaining is 'no'. If user types 'o', consume 'n' and 'o'!
+      // e.g. 'mannaka' -> user typed 'm', 'a', 'n'. Remaining is 'naka'. If user types 'a', consume 'n' and 'a'!
+      // e.g. 'kanjou' -> user typed 'k', 'a', 'n'. Remaining is 'njou'. If user types 'j', consume 'n' and 'j'!
+      else if (remaining.startsWith('n') && remaining.length > 1 && pressedChar === remaining[1]) {
+        matchedLength = 2; // Consume the skipped 'n' and the pressed char!
       }
       else if (remaining.startsWith('nn') && pressedChar === remaining[2] && remaining[2]) {
         matchedLength = 3;
       }
-      // Tolerate redundant second 'n' after 'n' without penalty
+      // Tolerate redundant second or third 'n' after 'n' without penalty
       else if (pressedChar === 'n' && s.typedHistory.endsWith('n')) {
         return; // gracefully absorb extra 'n'
+      }
+      // Long vowel 'ou' typed as 'o' (e.g. 'kosaten' instead of 'kousaten')
+      else if (remaining.startsWith('u') && remaining.length > 1 && pressedChar === remaining[1] && s.typedHistory.endsWith('o')) {
+        matchedLength = 2; // Consume skipped 'u' and pressed char!
       }
       // 3. 'si' typed when target is 'shi' (skip 'h')
       else if (remaining.startsWith('shi') && pressedChar === 's') {
