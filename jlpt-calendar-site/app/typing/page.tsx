@@ -192,11 +192,21 @@ export default function MygoTypingPage() {
         return;
       }
 
-      // Ignore special non-printable keys
-      if (e.key.length > 1) return;
+      // Reliable Key Extraction (IME Resistant: works even if Korean/Japanese IME is active!)
+      let pressedChar = '';
+      if (e.code && e.code.startsWith('Key')) {
+        pressedChar = e.code.slice(3).toLowerCase(); // 'KeyA' -> 'a'
+      } else if (e.code && e.code.startsWith('Digit')) {
+        pressedChar = e.code.slice(5);
+      } else if (e.code === 'Space') {
+        pressedChar = ' ';
+      } else if (e.key && e.key.length === 1) {
+        pressedChar = e.key.toLowerCase();
+      } else {
+        return;
+      }
 
       e.preventDefault();
-      const pressedChar = e.key.toLowerCase();
 
       // Start timer on first keypress
       if (!isPlaying) {
@@ -252,6 +262,10 @@ export default function MygoTypingPage() {
       // 3. 'shi' typed when target is 'si'
       else if (remaining.startsWith('si') && pressedChar === 's') {
         matchedLength = 1;
+      } else if (remaining.startsWith('i') && pressedChar === 'h') {
+        // user typed 's' then 'h' for 'si' -> tolerate 'h' without error!
+        matchedLength = 0;
+        return;
       }
       // 4. 'ti' typed when target is 'chi'
       else if (remaining.startsWith('chi') && pressedChar === 't') {
@@ -291,6 +305,7 @@ export default function MygoTypingPage() {
         // User pressed the next consonant directly, consume 'nn' and 1 char of next!
         matchedLength = 3;
       }
+
 
       if (matchedLength > 0) {
         let nextIndex = currentPos + matchedLength;
