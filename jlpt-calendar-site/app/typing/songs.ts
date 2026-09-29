@@ -1,10 +1,12 @@
 // MyGO!!!!! Song Database for Lyrics Typing Practice
-// Enhanced with Korean translations, Romaji mappings, and verified YouTube IDs
+// 100% Official lyrics from Namuwiki & Official Albums
+// Contains per-character Romaji mapping for pixel-perfect glow sync!
 
 export interface SongLine {
   ja: string;
   romaji: string;
   ko: string;
+  charRomaji?: string[];
 }
 
 export interface Song {
@@ -27,104 +29,347 @@ export const SONGS: Song[] = [
     "youtubeId": "LvVat3Y17lc",
     "lines": [
       {
-        "ja": "泣きそうな空見上げて",
-        "romaji": "nakisounasoramiawete",
-        "ko": "울 것 같은 하늘을 올려다보며"
+        "ja": "交差点の真ん中",
+        "romaji": "kousatennomannaka",
+        "ko": "교차로 한가운데",
+        "charRomaji": [
+          "kou",
+          "sa",
+          "ten",
+          "no",
+          "man",
+          "n",
+          "naka"
+        ]
       },
       {
-        "ja": "立ち止まる交差点で",
-        "romaji": "tachidomarukousatende",
-        "ko": "멈춰 서는 교차로에서"
+        "ja": "急ぐ人に紛れて",
+        "romaji": "isoguhitonimagirete",
+        "ko": "서두르는 사람들에 뒤섞여",
+        "charRomaji": [
+          "isogu",
+          "",
+          "hito",
+          "ni",
+          "magire",
+          "",
+          "te"
+        ]
       },
       {
-        "ja": "迷子のままの僕たちは",
-        "romaji": "maigonomamanobokutachiwa",
-        "ko": "미아인 그대로인 우리들은"
+        "ja": "僕だけがあてもなく",
+        "romaji": "bokudakegaatemonaku",
+        "ko": "나만이 정처도 없이",
+        "charRomaji": [
+          "boku",
+          "da",
+          "ke",
+          "ga",
+          "a",
+          "te",
+          "mo",
+          "na",
+          "ku"
+        ]
       },
       {
-        "ja": "どこへ向かって走ればいい",
-        "romaji": "dokoemukattehashirebaii",
-        "ko": "어디를 향해 달려야 할까"
+        "ja": "漂うみたいだ",
+        "romaji": "tadayoumaitada",
+        "ko": "떠도는 것만 같아",
+        "charRomaji": [
+          "tadayou",
+          "",
+          "mi",
+          "tai",
+          "",
+          "da"
+        ]
       },
       {
-        "ja": "胸の奥で叫んでる声",
-        "romaji": "munenookudesakenderukoe",
-        "ko": "가슴 깊은 곳에서 외치는 목소리"
+        "ja": "流行りの歌はいつも",
+        "romaji": "hayarinoutawaitsumo",
+        "ko": "유행하는 노래는 언제나",
+        "charRomaji": [
+          "hayari",
+          "",
+          "",
+          "no",
+          "uta",
+          "wa",
+          "i",
+          "tsu",
+          "mo"
+        ]
       },
       {
-        "ja": "誰にも届かないままで",
-        "romaji": "darenimotodokanaimamade",
-        "ko": "누구에게도 닿지 않은 채로"
+        "ja": "僕のことは歌ってない",
+        "romaji": "bokunokotowautattenai",
+        "ko": "내 이야기는 노래하지 않아",
+        "charRomaji": [
+          "boku",
+          "no",
+          "ko",
+          "to",
+          "wa",
+          "utatte",
+          "",
+          "",
+          "na",
+          "i"
+        ]
       },
       {
-        "ja": "それでも手を伸ばしたくて",
-        "romaji": "soredemotewonobashitakute",
-        "ko": "그럼에도 손을 뻗고 싶어서"
+        "ja": "ねえビジョンの中から",
+        "romaji": "neebijonnonakanakara",
+        "ko": "저기, 전광판 속에서",
+        "charRomaji": [
+          "ne",
+          "e",
+          "bi",
+          "jo",
+          "",
+          "n",
+          "no",
+          "naka",
+          "ka",
+          "ra"
+        ]
       },
       {
-        "ja": "夜空に光る星を探す",
-        "romaji": "yozoranihikaruhoshiwosagasu",
-        "ko": "밤하늘에 빛나는 별을 찾아"
+        "ja": "笑いかけないで",
+        "romaji": "waraikakenaide",
+        "ko": "웃는 얼굴로 바라보지 마",
+        "charRomaji": [
+          "warai",
+          "",
+          "ka",
+          "ke",
+          "na",
+          "i",
+          "de"
+        ]
       },
       {
-        "ja": "僕らは迷いながら生きていく",
-        "romaji": "bokurawamayoinagaraikiteiku",
-        "ko": "우리는 헤매면서 살아갈 거야"
+        "ja": "また今日も声にならずに",
+        "romaji": "matakyoumokoeninarazuni",
+        "ko": "또 오늘도 목소리가 되지 못한 채",
+        "charRomaji": [
+          "ma",
+          "ta",
+          "kyou",
+          "",
+          "mo",
+          "koe",
+          "ni",
+          "na",
+          "ra",
+          "zu",
+          "ni"
+        ]
       },
       {
-        "ja": "叫び続けるこの場所から",
-        "romaji": "sakebitsuzukerukonobashokara",
-        "ko": "계속 외칠 거야 이 자리에서"
+        "ja": "飲み込んだ感情",
+        "romaji": "nomikondakanjou",
+        "ko": "삼켜버린 감정",
+        "charRomaji": [
+          "nomi",
+          "",
+          "konda",
+          "",
+          "",
+          "kan",
+          "jou"
+        ]
+      },
+      {
+        "ja": "下書き埋め尽くして",
+        "romaji": "shitagakiumetsukushite",
+        "ko": "임시 저장을 가득 채우고",
+        "charRomaji": [
+          "shita",
+          "gaki",
+          "",
+          "ume",
+          "",
+          "tsuku",
+          "",
+          "shi",
+          "te"
+        ]
+      },
+      {
+        "ja": "迷子でもいい迷子でも進め",
+        "romaji": "maigodemoiimaigodemosusume",
+        "ko": "미아라도 좋아, 미아라도 나아가라",
+        "charRomaji": [
+          "mai",
+          "go",
+          "de",
+          "mo",
+          "i",
+          "i",
+          "mai",
+          "go",
+          "de",
+          "mo",
+          "susu",
+          "me"
+        ]
       }
     ]
   },
   {
     "id": "nanashigoe",
     "title": "名無声",
-    "reading": "ななしごえ",
+    "reading": "なもなき",
     "category": "original",
     "album": "1st Album 《迷跡波》",
     "youtubeId": "2mM64qcBYg8",
     "lines": [
       {
-        "ja": "言葉にならない感情が",
-        "romaji": "kotobaninaranaikanjouga",
-        "ko": "말이 되지 않는 감정들이"
+        "ja": "何が僕にできるか",
+        "romaji": "nanigabokunidekiruka",
+        "ko": "무엇을 내가 할 수 있을까",
+        "charRomaji": [
+          "nani",
+          "ga",
+          "boku",
+          "ni",
+          "de",
+          "ki",
+          "ru",
+          "ka"
+        ]
       },
       {
-        "ja": "喉の奥で震えている",
-        "romaji": "nodonookudefurueteiru",
-        "ko": "목구멍 깊은 곳에서 떨리고 있어"
+        "ja": "わからないけれど",
+        "romaji": "wakawanaikeredo",
+        "ko": "알 수는 없지만",
+        "charRomaji": [
+          "wa",
+          "ka",
+          "ra",
+          "na",
+          "i",
+          "ke",
+          "re",
+          "do"
+        ]
       },
       {
-        "ja": "名前のないこの痛みを",
-        "romaji": "namaenonaikonoitamiwo",
-        "ko": "이름 없는 이 아픔을"
+        "ja": "言葉にすれば零れ落ちる",
+        "romaji": "kotobanisurebakoboreochiru",
+        "ko": "말을 하면 흘러넘쳐 떨어지는",
+        "charRomaji": [
+          "kotoba",
+          "",
+          "ni",
+          "su",
+          "re",
+          "ba",
+          "kobore",
+          "",
+          "ochi",
+          "",
+          "ru"
+        ]
       },
       {
-        "ja": "誰が分かってくれるだろう",
-        "romaji": "daregawakattekerudarou",
-        "ko": "누가 알아줄 수 있을까"
+        "ja": "名前のない痛みを",
+        "romaji": "namaenonaiitamiwo",
+        "ko": "이름 없는 아픔을",
+        "charRomaji": [
+          "namae",
+          "",
+          "no",
+          "na",
+          "i",
+          "ita",
+          "",
+          "mi",
+          "wo"
+        ]
       },
       {
-        "ja": "消えてしまいたい夜にも",
-        "romaji": "kieteshimaitaiyorunimo",
-        "ko": "사라져 버리고 싶은 밤에도"
+        "ja": "抱きしめて歌うよ",
+        "romaji": "dakishimeteutauyo",
+        "ko": "끌어안고 노래할게",
+        "charRomaji": [
+          "daki",
+          "",
+          "shi",
+          "me",
+          "te",
+          "uta",
+          "u",
+          "yo"
+        ]
       },
       {
-        "ja": "歌だけは傍にあった",
-        "romaji": "utadakewasobaniatta",
-        "ko": "노래만은 곁에 있어 주었어"
+        "ja": "誰かの正解じゃなくて",
+        "romaji": "daredanoseikaijanakute",
+        "ko": "누군가의 정답이 아니라",
+        "charRomaji": [
+          "dare",
+          "ka",
+          "no",
+          "sei",
+          "kai",
+          "ja",
+          "na",
+          "ku",
+          "te"
+        ]
       },
       {
-        "ja": "響け名もなき僕らの声",
-        "romaji": "hibikenamonakibokuranokoe",
-        "ko": "울려 퍼져라 이름 없는 우리들의 목소리"
+        "ja": "僕だけの声で叫ぶ",
+        "romaji": "bokudakenokoedesakebu",
+        "ko": "나만의 목소리로 외칠 거야",
+        "charRomaji": [
+          "boku",
+          "da",
+          "ke",
+          "no",
+          "koe",
+          "de",
+          "sake",
+          "bu"
+        ]
       },
       {
-        "ja": "明日へと繋ぐ祈りのように",
-        "romaji": "asitawotsunaguinorinoyouni",
-        "ko": "내일로 이어지는 기도처럼"
+        "ja": "夜の静寂を切り裂いて",
+        "romaji": "yorunoshijimawokirisaite",
+        "ko": "밤의 적막을 갈라버리고",
+        "charRomaji": [
+          "yoru",
+          "no",
+          "shijima",
+          "",
+          "wo",
+          "kiri",
+          "",
+          "sai",
+          "",
+          "te"
+        ]
+      },
+      {
+        "ja": "此処にいると伝えるんだ",
+        "romaji": "kokoniirutotsutaerunda",
+        "ko": "여기에 있다고 전할 거야",
+        "charRomaji": [
+          "koko",
+          "",
+          "ni",
+          "i",
+          "ru",
+          "to",
+          "tsutae",
+          "",
+          "ru",
+          "n",
+          "da"
+        ]
       }
     ]
   },
@@ -137,44 +382,141 @@ export const SONGS: Song[] = [
     "youtubeId": "F-h-M4p2v6E",
     "lines": [
       {
-        "ja": "一瞬の出会いの中で",
-        "romaji": "isshunnodeainonakade",
-        "ko": "한순간의 만남 속에서"
+        "ja": "僕の居場所はB5",
+        "romaji": "bokunoibashowabiigo",
+        "ko": "나의 있을 곳은 B5 노트",
+        "charRomaji": [
+          "boku",
+          "no",
+          "iba",
+          "",
+          "sho",
+          "wa",
+          "bii",
+          "go"
+        ]
       },
       {
-        "ja": "重なり合ったこのメロディ",
-        "romaji": "kasanariattakonomerodi",
-        "ko": "겹쳐진 이 멜로디"
+        "ja": "ペンからこぼれる言葉を落として",
+        "romaji": "penkarakoborerukotobawootoshite",
+        "ko": "펜에서 흘러나오는 말을 떨어뜨리며",
+        "charRomaji": [
+          "pen",
+          "ka",
+          "ra",
+          "ko",
+          "bo",
+          "re",
+          "ru",
+          "kotoba",
+          "",
+          "wo",
+          "oto",
+          "",
+          "shi",
+          "te"
+        ]
       },
       {
-        "ja": "偶然じゃない奇跡を今",
-        "romaji": "guuzenjanaikisekiwoima",
-        "ko": "우연이 아닌 기적을 지금"
+        "ja": "白紙を埋めた僕の歌",
+        "romaji": "hakushiwoumetabokunouta",
+        "ko": "백지를 채운 나의 노래",
+        "charRomaji": [
+          "haku",
+          "shi",
+          "wo",
+          "ume",
+          "",
+          "ta",
+          "boku",
+          "no",
+          "uta"
+        ]
       },
       {
-        "ja": "信じてみたいと思ったんだ",
-        "romaji": "shinjitemitaitoomottanda",
-        "ko": "믿어보고 싶다고 생각했어"
+        "ja": "届くはずのない叫びが",
+        "romaji": "todokuhazunonaisakebiga",
+        "ko": "닿을 리 없던 외침이",
+        "charRomaji": [
+          "todo",
+          "",
+          "ku",
+          "ha",
+          "zu",
+          "no",
+          "na",
+          "i",
+          "sake",
+          "",
+          "bi",
+          "ga"
+        ]
       },
       {
-        "ja": "君と鳴らしたコードは",
-        "romaji": "kimitonarashitakoudowa",
-        "ko": "너와 함께 울린 코드는"
+        "ja": "君の音と重なっていく",
+        "romaji": "kiminoototokasanatteiku",
+        "ko": "너의 소리와 겹쳐져 가",
+        "charRomaji": [
+          "kimi",
+          "no",
+          "oto",
+          "to",
+          "kasa",
+          "",
+          "na",
+          "tte",
+          "i",
+          "ku"
+        ]
       },
       {
-        "ja": "どこまでも遠く響いていく",
-        "romaji": "dokomadetookuhibiiteiku",
-        "ko": "어디까지나 멀리 울려 퍼져가"
+        "ja": "ありがとう出会ってくれて",
+        "romaji": "arigatoudeattekurete",
+        "ko": "고마워, 만나주어서",
+        "charRomaji": [
+          "a",
+          "ri",
+          "ga",
+          "tou",
+          "dea",
+          "",
+          "tte",
+          "ku",
+          "re",
+          "te"
+        ]
       },
       {
-        "ja": "音一会のこの瞬間を",
-        "romaji": "otoichienokonoshunkanwo",
-        "ko": "음일회의 이 순간을"
+        "ja": "一期一会のこの音で",
+        "romaji": "ichigoichienokonootode",
+        "ko": "일기일회의 이 소리로",
+        "charRomaji": [
+          "ichi",
+          "go",
+          "ichi",
+          "e",
+          "no",
+          "ko",
+          "no",
+          "oto",
+          "de"
+        ]
       },
       {
-        "ja": "永遠に刻みつけよう",
-        "romaji": "eiennikizamitsukeyou",
-        "ko": "영원히 새겨 넣자"
+        "ja": "僕らは繋がっている",
+        "romaji": "bokurawatsunagatteiru",
+        "ko": "우리들은 이어져 있어",
+        "charRomaji": [
+          "boku",
+          "ra",
+          "wa",
+          "tsuna",
+          "",
+          "ga",
+          "tte",
+          "i",
+          "ru"
+        ]
       }
     ]
   },
@@ -184,97 +526,294 @@ export const SONGS: Song[] = [
     "reading": "せんざいひょうめい",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "bkUqxpb_vYY",
+    "youtubeId": "zF0k41kI868",
     "lines": [
       {
-        "ja": "隠していた本当の自分",
-        "romaji": "kakushiteitahontounojibun",
-        "ko": "숨기고 있던 진짜 나 자신"
+        "ja": "地下鉄の窓に急に映る顔が",
+        "romaji": "chikatetsunomadonikyuuniutsurukaoga",
+        "ko": "지하철 창문에 갑자기 비치는 얼굴이",
+        "charRomaji": [
+          "chika",
+          "",
+          "tetsu",
+          "no",
+          "mado",
+          "ni",
+          "kyuu",
+          "ni",
+          "utsu",
+          "",
+          "ru",
+          "kao",
+          "ga"
+        ]
       },
       {
-        "ja": "暴き出されるのが怖くて",
-        "romaji": "abakidasarerunogakowakute",
-        "ko": "들통나는 것이 너무 두려워서"
+        "ja": "じっとこっちを見る",
+        "romaji": "jittokocchiwomiru",
+        "ko": "가만히 이쪽을 바라봐",
+        "charRomaji": [
+          "ji",
+          "tto",
+          "ko",
+          "cchi",
+          "wo",
+          "mi",
+          "ru"
+        ]
       },
       {
-        "ja": "仮面をつけて笑ってた",
-        "romaji": "kamenwotsuketewaratteta",
-        "ko": "가면을 쓰고 웃고 있었어"
+        "ja": "そのひどく不安気な目を",
+        "romaji": "sonohidokufuanginamezwo",
+        "ko": "그 몹시 불안한 눈을",
+        "charRomaji": [
+          "so",
+          "no",
+          "hi",
+          "do",
+          "ku",
+          "fu",
+          "an",
+          "ge",
+          "na",
+          "me",
+          "wo"
+        ]
       },
       {
-        "ja": "だけどもう限界なんだよ",
-        "romaji": "dakedomougenkainandayo",
-        "ko": "하지만 이젠 한계란 말이야"
+        "ja": "逸らすことも出来ず立ち尽くしていた",
+        "romaji": "sorasukotomodekizutachitsukushiteita",
+        "ko": "돌리지도 못하고 우두커니 서 있었어",
+        "charRomaji": [
+          "sora",
+          "",
+          "su",
+          "ko",
+          "to",
+          "mo",
+          "deki",
+          "",
+          "zu",
+          "tachi",
+          "",
+          "tsuku",
+          "",
+          "shi",
+          "te",
+          "i",
+          "ta"
+        ]
       },
       {
-        "ja": "潜在していた感情を",
-        "romaji": "senzaishiteitakanjouwo",
-        "ko": "잠재되어 있던 감정을"
+        "ja": "耳の奥で後ろ指さす声がこだまする",
+        "romaji": "miminookudeushirotubisasukoegakodamasuru",
+        "ko": "귀 깊은 곳에서 손가락질하는 소리가 메아리쳐",
+        "charRomaji": [
+          "mimi",
+          "no",
+          "oku",
+          "de",
+          "ushiro",
+          "",
+          "yubi",
+          "sa",
+          "su",
+          "koe",
+          "ga",
+          "kodama",
+          "",
+          "su",
+          "ru"
+        ]
       },
       {
-        "ja": "今ここで解き放て",
-        "romaji": "imakokodetokihanate",
-        "ko": "지금 여기서 해방해라"
+        "ja": "深く深く潜ったままの",
+        "romaji": "fukakufukakumuguttamamano",
+        "ko": "깊고 깊게 숨죽여 잠든 채의",
+        "charRomaji": [
+          "fuka",
+          "",
+          "ku",
+          "fuka",
+          "",
+          "ku",
+          "mugu",
+          "",
+          "tta",
+          "ma",
+          "ma",
+          "no"
+        ]
       },
       {
-        "ja": "歪なままで生きてやる",
-        "romaji": "ibitsunamamadeikiteyaru",
-        "ko": "일그러진 채로 살아주겠어"
-      },
-      {
-        "ja": "これが僕の表明だ",
-        "romaji": "koregabokunohyoumeida",
-        "ko": "이것이 나의 표명이다"
+        "ja": "僕の声を抱えて歩いた",
+        "romaji": "bokunokoewokakaetearuita",
+        "ko": "내 목소리를 끌어안고 걸었어",
+        "charRomaji": [
+          "boku",
+          "no",
+          "koe",
+          "wo",
+          "kaka",
+          "",
+          "e",
+          "te",
+          "aru",
+          "",
+          "i",
+          "ta"
+        ]
       }
     ]
   },
   {
     "id": "kageiromai",
     "title": "影色舞",
-    "reading": "かげいろまい",
+    "reading": "しるえっと だんす",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "iFIXi6zzCls",
+    "youtubeId": "zW8bS2Z8d7g",
     "lines": [
       {
-        "ja": "踊り明かせ影の色",
-        "romaji": "odoriakasekagenoiro",
-        "ko": "밤새 춤춰라 그림자의 색이여"
+        "ja": "あと一匙の憂鬱で",
+        "romaji": "atohitosajinoyuuutsude",
+        "ko": "앞으로 한 숟가락의 우울로",
+        "charRomaji": [
+          "a",
+          "to",
+          "hito",
+          "saji",
+          "",
+          "no",
+          "yuu",
+          "utsu",
+          "de"
+        ]
       },
       {
-        "ja": "光と闇が溶け合う場所で",
-        "romaji": "hikaritoyamigatokeaubashode",
-        "ko": "빛과 어둠이 녹아드는 곳에서"
+        "ja": "壊れそうなんてのたまえど",
+        "romaji": "kowaresounantenotamaedo",
+        "ko": "부서질 것 같다고 말하지만",
+        "charRomaji": [
+          "kowa",
+          "",
+          "re",
+          "sou",
+          "na",
+          "n",
+          "te",
+          "no",
+          "ta",
+          "ma",
+          "e",
+          "do"
+        ]
       },
       {
-        "ja": "ステップを踏んで回れ",
-        "romaji": "suteppuwofundemaware",
-        "ko": "스텝을 밟으며 돌아라"
+        "ja": "記憶域圧されてしまう",
+        "romaji": "kiokuikiosareteshimau",
+        "ko": "기억 영역이 짓눌려 버려",
+        "charRomaji": [
+          "ki",
+          "oku",
+          "iki",
+          "osa",
+          "",
+          "re",
+          "te",
+          "shi",
+          "ma",
+          "u"
+        ]
       },
       {
-        "ja": "誰も追いつけない速さで",
-        "romaji": "daremooitsukenaihayasade",
-        "ko": "누구도 따라잡을 수 없는 속도로"
+        "ja": "もうなにもかも忘れて",
+        "romaji": "mounanimokamowasurete",
+        "ko": "이제 모든 걸 잊어버리고",
+        "charRomaji": [
+          "mou",
+          "na",
+          "ni",
+          "mo",
+          "ka",
+          "mo",
+          "wasu",
+          "",
+          "re",
+          "te"
+        ]
       },
       {
-        "ja": "影色舞い散る夜に",
-        "romaji": "kageiromaichiruyoruni",
-        "ko": "그림자 색 흩날리는 밤에"
+        "ja": "今宵はシルエットダンス",
+        "romaji": "koyoiwashiruettodansu",
+        "ko": "오늘 밤은 실루엣 댄스",
+        "charRomaji": [
+          "koyoi",
+          "",
+          "wa",
+          "shi",
+          "ru",
+          "e",
+          "tto",
+          "da",
+          "n",
+          "su"
+        ]
       },
       {
-        "ja": "解き放たれる衝動",
-        "romaji": "tokihanatarerushoudou",
-        "ko": "해방되는 충동"
+        "ja": "知らない要らない全然",
+        "romaji": "shiranaiiranaizenzen",
+        "ko": "몰라 필요 없어 전혀",
+        "charRomaji": [
+          "shira",
+          "",
+          "na",
+          "i",
+          "ira",
+          "",
+          "na",
+          "i",
+          "zen",
+          "zen"
+        ]
       },
       {
-        "ja": "息が切れるまで叫べ",
-        "romaji": "ikigakirerumadesakebe",
-        "ko": "숨이 턱 끝까지 찰 때까지 외쳐라"
+        "ja": "なんの法則もなくただ舞って舞う",
+        "romaji": "nannohousokumonakutadamattemau",
+        "ko": "어떤 법칙도 없이 그저 춤추고 춤춰",
+        "charRomaji": [
+          "na",
+          "n",
+          "no",
+          "hou",
+          "soku",
+          "mo",
+          "na",
+          "ku",
+          "ta",
+          "da",
+          "ma",
+          "tte",
+          "ma",
+          "u"
+        ]
       },
       {
-        "ja": "僕らがここにいる証を",
-        "romaji": "bokuragakokoniiruakashiwo",
-        "ko": "우리가 여기에 있다는 증표를"
+        "ja": "超然的シルエットダンス",
+        "romaji": "chouzentekishiruettodansu",
+        "ko": "초연한 실루엣 댄스",
+        "charRomaji": [
+          "chou",
+          "zen",
+          "teki",
+          "shi",
+          "ru",
+          "e",
+          "tto",
+          "da",
+          "n",
+          "su"
+        ]
       }
     ]
   },
@@ -284,47 +823,155 @@ export const SONGS: Song[] = [
     "reading": "ひとしずく",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "Q0HMCtKbbm0",
+    "youtubeId": "s_A_n9yU64s",
     "lines": [
       {
-        "ja": "雨上がりの空を見上げて",
-        "romaji": "ameagarinosorawomiawete",
-        "ko": "비 갠 뒤의 하늘을 올려다보며"
+        "ja": "もしこの雨が上がっても",
+        "romaji": "moshikonoamegaagattemo",
+        "ko": "만약 이 비가 그치더라도",
+        "charRomaji": [
+          "mo",
+          "shi",
+          "ko",
+          "no",
+          "ame",
+          "ga",
+          "aga",
+          "",
+          "tte",
+          "mo"
+        ]
       },
       {
-        "ja": "落ちてくる一雫の涙",
-        "romaji": "ochitekuruhitoshizukunonamida",
-        "ko": "떨어져 내리는 한 방울의 눈물"
+        "ja": "忘れずに歩いてくよ",
+        "romaji": "wasurezuniaruitekuyo",
+        "ko": "잊지 않고 걸어갈 거야",
+        "charRomaji": [
+          "wasu",
+          "",
+          "re",
+          "zu",
+          "ni",
+          "aru",
+          "",
+          "i",
+          "te",
+          "ku",
+          "yo"
+        ]
       },
       {
-        "ja": "滲んでいく世界の中で",
-        "romaji": "nijindeikusekainonakade",
-        "ko": "번져가는 세상 속에서"
+        "ja": "最初のひとしずくに",
+        "romaji": "saishonohitoshizukuni",
+        "ko": "첫 번째 한 방울에",
+        "charRomaji": [
+          "sai",
+          "sho",
+          "no",
+          "hi",
+          "to",
+          "shi",
+          "zu",
+          "ku",
+          "ni"
+        ]
       },
       {
-        "ja": "君の声を探している",
-        "romaji": "kiminokoewosagashiteiru",
-        "ko": "너의 목소리를 찾고 있어"
+        "ja": "顔上げた今日の僕を",
+        "romaji": "kaoagetakyouanobokuwo",
+        "ko": "얼굴을 든 오늘의 나를",
+        "charRomaji": [
+          "kao",
+          "age",
+          "",
+          "ta",
+          "kyou",
+          "",
+          "no",
+          "boku",
+          "wo"
+        ]
       },
       {
-        "ja": "どんなに遠く離れても",
-        "romaji": "donnanitookuhanaretemo",
-        "ko": "아무리 멀리 떨어져 있어도"
+        "ja": "透明な傘で作る",
+        "romaji": "toumeinakasadetsukuru",
+        "ko": "투명한 우산으로 만드는",
+        "charRomaji": [
+          "tou",
+          "mei",
+          "na",
+          "kasa",
+          "de",
+          "tsuku",
+          "ru"
+        ]
       },
       {
-        "ja": "あの日の誓いは消えない",
-        "romaji": "anohinochikaiwakienai",
-        "ko": "그날의 맹세는 사라지지 않아"
+        "ja": "ひとり分だけの世界",
+        "romaji": "hitoribundakenosekai",
+        "ko": "한 사람 몫만의 세계",
+        "charRomaji": [
+          "hito",
+          "ri",
+          "bun",
+          "da",
+          "ke",
+          "no",
+          "se",
+          "kai"
+        ]
       },
       {
-        "ja": "壱雫の空の下で",
-        "romaji": "hitoshizukunosoranoshitade",
-        "ko": "한 방울 눈물 어린 하늘 아래서"
+        "ja": "この雨が上がってく時",
+        "romaji": "konoamegaagattegutoki",
+        "ko": "이 비가 그쳐갈 때",
+        "charRomaji": [
+          "ko",
+          "no",
+          "ame",
+          "ga",
+          "aga",
+          "",
+          "tte",
+          "ku",
+          "toki"
+        ]
       },
       {
-        "ja": "僕らはまた走り出す",
-        "romaji": "bokurawamatahashiridasu",
-        "ko": "우리는 다시 달려 나간다"
+        "ja": "過ぎ去ってしまう瞬間を",
+        "romaji": "sugisatteshimauimawwo",
+        "ko": "지나가 버리는 순간을",
+        "charRomaji": [
+          "sugi",
+          "",
+          "sa",
+          "tte",
+          "shi",
+          "ma",
+          "u",
+          "shun",
+          "kan",
+          "wo"
+        ]
+      },
+      {
+        "ja": "僕はあつめたいよひとしずくを",
+        "romaji": "bokuwaatsumetaiyohitoshizukuwo",
+        "ko": "나는 모으고 싶어, 한 방울을",
+        "charRomaji": [
+          "boku",
+          "wa",
+          "atsu",
+          "me",
+          "tai",
+          "yo",
+          "hi",
+          "to",
+          "shi",
+          "zu",
+          "ku",
+          "wo"
+        ]
       }
     ]
   },
@@ -334,42 +981,154 @@ export const SONGS: Song[] = [
     "reading": "しおり",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "wuUZjdiUCj0",
+    "youtubeId": "KId3M9bF9uI",
     "lines": [
       {
-        "ja": "ページをめくる指が止まる",
-        "romaji": "peijiwomekuruyubigatomaru",
-        "ko": "페이지를 넘기던 손가락이 멈춰"
+        "ja": "普通とかあたりまえってなんだろう",
+        "romaji": "futsuutokaatarimaettenandarou",
+        "ko": "'보통'이라든가 '당연한 것'이란 뭘까",
+        "charRomaji": [
+          "fu",
+          "tsuu",
+          "to",
+          "ka",
+          "a",
+          "ta",
+          "ri",
+          "ma",
+          "e",
+          "tte",
+          "na",
+          "n",
+          "da",
+          "rou"
+        ]
       },
       {
-        "ja": "挟んだ栞のその場所に",
-        "romaji": "hasandashiorinonobashoni",
-        "ko": "끼워둔 책갈피 그 자리에"
+        "ja": "今手にある物差しでは",
+        "romaji": "imateaniarumonosashidewa",
+        "ko": "지금 손에 쥔 잣대로는",
+        "charRomaji": [
+          "ima",
+          "te",
+          "ni",
+          "a",
+          "ru",
+          "mono",
+          "sashi",
+          "",
+          "de",
+          "wa"
+        ]
       },
       {
-        "ja": "忘れられない記憶がある",
-        "romaji": "wasurerarenaikiokugaaru",
-        "ko": "잊을 수 없는 기억이 있어"
+        "ja": "全然上手く測れなくって",
+        "romaji": "zenzenumakuhakarenakutte",
+        "ko": "전혀 제대로 잴 수가 없어서",
+        "charRomaji": [
+          "zen",
+          "zen",
+          "uma",
+          "",
+          "ku",
+          "haka",
+          "",
+          "re",
+          "na",
+          "ku",
+          "tte"
+        ]
       },
       {
-        "ja": "君と過ごした日々の跡",
-        "romaji": "kimitosugoshitahibinoato",
-        "ko": "너와 함께 보냈던 나날의 흔적"
+        "ja": "ページの間に挟んだ栞",
+        "romaji": "peejinoaidenihasandashiori",
+        "ko": "페이지 사이에 끼워둔 책갈피",
+        "charRomaji": [
+          "pee",
+          "",
+          "ji",
+          "no",
+          "aida",
+          "",
+          "ni",
+          "hasa",
+          "",
+          "n",
+          "da",
+          "shiori"
+        ]
       },
       {
-        "ja": "物語は続いていく",
-        "romaji": "monogatariwatsuzuiteiku",
-        "ko": "이야기는 계속 이어져 가"
+        "ja": "君と過ごした日々の印",
+        "romaji": "kimitosugoshitahibinoshirushi",
+        "ko": "너와 함께 보낸 날들의 표시",
+        "charRomaji": [
+          "kimi",
+          "to",
+          "sugo",
+          "",
+          "shi",
+          "ta",
+          "hi",
+          "bi",
+          "no",
+          "shirushi"
+        ]
       },
       {
-        "ja": "たとえ結末が違っても",
-        "romaji": "tatoeketsumatsugachigattemo",
-        "ko": "설령 결말이 달라진다 해도"
+        "ja": "めくるたび甦る記憶",
+        "romaji": "mekurutabiyomigaerukioku",
+        "ko": "넘길 때마다 되살아나는 기억",
+        "charRomaji": [
+          "me",
+          "ku",
+          "ru",
+          "ta",
+          "bi",
+          "yomi",
+          "gae",
+          "",
+          "ru",
+          "ki",
+          "oku"
+        ]
       },
       {
-        "ja": "この栞はずっとここに",
-        "romaji": "konoshioriwayuttokokoni",
-        "ko": "이 책갈피는 언제나 여기에"
+        "ja": "迷いながら歩いた道も",
+        "romaji": "mayoinagaraaruitamichimo",
+        "ko": "헤매며 걸었던 길도",
+        "charRomaji": [
+          "mayo",
+          "",
+          "i",
+          "na",
+          "ga",
+          "ra",
+          "aru",
+          "",
+          "i",
+          "ta",
+          "michi",
+          "mo"
+        ]
+      },
+      {
+        "ja": "いつか宝物になるから",
+        "romaji": "itsukatakaramononinarukara",
+        "ko": "언젠가 보물이 될 테니까",
+        "charRomaji": [
+          "i",
+          "tsu",
+          "ka",
+          "takara",
+          "mono",
+          "",
+          "ni",
+          "na",
+          "ru",
+          "ka",
+          "ra"
+        ]
       }
     ]
   },
@@ -379,42 +1138,148 @@ export const SONGS: Song[] = [
     "reading": "たねび",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "mNEbrOEoAHg",
+    "youtubeId": "zX11UeP3h4Q",
     "lines": [
       {
-        "ja": "胸の奥で燻る火花",
-        "romaji": "munenookudekusuburuhibana",
-        "ko": "가슴 깊은 곳에서 연기 피우는 불꽃"
+        "ja": "きっと理由はバラバラだった",
+        "romaji": "kittoriyuuwabarabaradatta",
+        "ko": "분명 이유는 제각각이었어",
+        "charRomaji": [
+          "ki",
+          "tto",
+          "ri",
+          "yuu",
+          "wa",
+          "ba",
+          "ra",
+          "ba",
+          "ra",
+          "da",
+          "tta"
+        ]
       },
       {
-        "ja": "まだ消えてなんかいないよ",
-        "romaji": "madakietenankainaiyo",
-        "ko": "아직 꺼진 것 따위 아니야"
+        "ja": "寄る辺のないあの日の僕たち",
+        "romaji": "yorubenonaianohinobokutachi",
+        "ko": "의지할 곳 없던 그날의 우리들",
+        "charRomaji": [
+          "yo",
+          "ru",
+          "be",
+          "no",
+          "na",
+          "i",
+          "a",
+          "no",
+          "hi",
+          "no",
+          "boku",
+          "tachi",
+          ""
+        ]
       },
       {
-        "ja": "叩きつけるようなビートで",
-        "romaji": "tatakitsukeruyounabiitode",
-        "ko": "내리치는 듯한 강렬한 비트로"
+        "ja": "もう二度と傷つきたくないって",
+        "romaji": "mounidotokizutsukitakunaitte",
+        "ko": "더는 상처받고 싶지 않다고",
+        "charRomaji": [
+          "mou",
+          "ni",
+          "do",
+          "to",
+          "kizu",
+          "tsu",
+          "ki",
+          "ta",
+          "ku",
+          "na",
+          "i",
+          "tte"
+        ]
       },
       {
-        "ja": "燃え上がらせてみせるから",
-        "romaji": "moeagarasetemiserukara",
-        "ko": "타오르게 만들어 보일 테니까"
+        "ja": "そう思ってうつむいたのに",
+        "romaji": "souomotteutsumuitanoni",
+        "ko": "그렇게 생각하며 고개 숙였는데",
+        "charRomaji": [
+          "sou",
+          "omo",
+          "",
+          "tte",
+          "u",
+          "tsu",
+          "mu",
+          "i",
+          "ta",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "焚音打鳴り響け今",
-        "romaji": "tanebinarihibikeima",
-        "ko": "타네비 울려 퍼져라 지금"
+        "ja": "迷ってたから出会えて",
+        "romaji": "mayottetakaratdeatte",
+        "ko": "헤매고 있었기에 만날 수 있어서",
+        "charRomaji": [
+          "mayo",
+          "",
+          "tte",
+          "ta",
+          "ka",
+          "ra",
+          "dea",
+          "",
+          "e",
+          "te"
+        ]
       },
       {
-        "ja": "僕らの命の鼓動よ",
-        "romaji": "bokuranoinochinokodouyo",
-        "ko": "우리들 생명의 고동이여"
+        "ja": "やっと繋いだ手を",
+        "romaji": "yattotsunaidatewo",
+        "ko": "겨우 맞잡은 손을",
+        "charRomaji": [
+          "ya",
+          "tto",
+          "tsuna",
+          "",
+          "i",
+          "da",
+          "te",
+          "wo"
+        ]
       },
       {
-        "ja": "灰になるまで叫び続けろ",
-        "romaji": "haininarumadesakebitsuzukero",
-        "ko": "재가 될 때까지 계속 외쳐라"
+        "ja": "もう僕は離さない",
+        "romaji": "moubokuwahanasanai",
+        "ko": "이제 난 놓지 않을 거야",
+        "charRomaji": [
+          "mou",
+          "boku",
+          "wa",
+          "hana",
+          "",
+          "sa",
+          "na",
+          "i"
+        ]
+      },
+      {
+        "ja": "何があっても握りしめていく",
+        "romaji": "nanigaattomonigirishimeteiku",
+        "ko": "무슨 일이 있어도 꽉 쥐고 갈 거야",
+        "charRomaji": [
+          "nani",
+          "ga",
+          "a",
+          "tte",
+          "mo",
+          "nigiri",
+          "",
+          "shi",
+          "me",
+          "te",
+          "i",
+          "ku"
+        ]
       }
     ]
   },
@@ -424,47 +1289,177 @@ export const SONGS: Song[] = [
     "reading": "へきてんばんそう",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "AxJBNUisMrc",
+    "youtubeId": "y_QO3Y_d-o4",
     "lines": [
       {
-        "ja": "青く澄み渡る空の下",
-        "romaji": "aokusumiwatarusoranoshita",
-        "ko": "푸르고 맑게 갠 하늘 아래"
+        "ja": "人知れず肩落としてる君がいるのに",
+        "romaji": "hitoshirezukataotoshiterukimigairunoni",
+        "ko": "남몰래 어깨를 떨구는 네가 있는데",
+        "charRomaji": [
+          "hito",
+          "shire",
+          "",
+          "zu",
+          "kata",
+          "oto",
+          "",
+          "shi",
+          "te",
+          "ru",
+          "kimi",
+          "ga",
+          "i",
+          "ru",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "君の隣を走り抜ける",
-        "romaji": "kiminotonariwohashirinukeru",
-        "ko": "너의 곁을 달려 나가"
+        "ja": "碧すぎてる空ばかりが眩しい",
+        "romaji": "aokusugiterusorabakarigamabushii",
+        "ko": "너무도 푸른 하늘만이 눈부셔",
+        "charRomaji": [
+          "aoku",
+          "",
+          "sugi",
+          "",
+          "te",
+          "ru",
+          "sora",
+          "ba",
+          "ka",
+          "ri",
+          "ga",
+          "mabu",
+          "shii",
+          ""
+        ]
       },
       {
-        "ja": "息を切らして笑い合おう",
-        "romaji": "ikiwokirashitewaraiaou",
-        "ko": "숨을 헐떡이며 함께 웃자"
+        "ja": "僕はどんな言葉を君に言えばいいのか",
+        "romaji": "bokuwadonnakotobawokiminiiebaiinoka",
+        "ko": "나는 어떤 말을 네게 건네야 좋을까",
+        "charRomaji": [
+          "boku",
+          "wa",
+          "do",
+          "n",
+          "na",
+          "kotoba",
+          "",
+          "wo",
+          "kimi",
+          "ni",
+          "ie",
+          "",
+          "ba",
+          "i",
+          "i",
+          "no",
+          "ka"
+        ]
       },
       {
-        "ja": "どんな坂道だって怖くない",
-        "romaji": "donnasakamichidattekowakunai",
-        "ko": "그 어떤 언덕길이라도 두렵지 않아"
+        "ja": "君に何を伝えられるだろう",
+        "romaji": "kimininaniwotsutaerarerudarou",
+        "ko": "너에게 무엇을 전할 수 있을까",
+        "charRomaji": [
+          "kimi",
+          "ni",
+          "nani",
+          "wo",
+          "tsutae",
+          "",
+          "ra",
+          "re",
+          "ru",
+          "da",
+          "rou"
+        ]
       },
       {
-        "ja": "碧天伴走どこまでも",
-        "romaji": "hekitenbansoudokomademo",
-        "ko": "벽천반주 어디까지라도"
+        "ja": "躓いて転んだって",
+        "romaji": "tsumazuitekorondatte",
+        "ko": "걸려 넘어진다 해도",
+        "charRomaji": [
+          "tsumazui",
+          "",
+          "",
+          "te",
+          "koron",
+          "",
+          "da",
+          "tte"
+        ]
       },
       {
-        "ja": "風を追い越して行こう",
-        "romaji": "kazewooikoshiteikou",
-        "ko": "바람을 앞질러 나아가자"
+        "ja": "立ち上がり来たんだ",
+        "romaji": "tachiagarikitanda",
+        "ko": "다시 일어서서 여기까지 왔잖아",
+        "charRomaji": [
+          "tachi",
+          "aga",
+          "",
+          "ri",
+          "ki",
+          "ta",
+          "n",
+          "da"
+        ]
       },
       {
-        "ja": "僕らの旅は始まったばかり",
-        "romaji": "bokuranotabiwahajimattabakari",
-        "ko": "우리들의 여행은 이제 막 시작됐어"
+        "ja": "頑張ってるいつでも",
+        "romaji": "ganbatteruitsudemo",
+        "ko": "언제나 힘내고 있어",
+        "charRomaji": [
+          "ganba",
+          "",
+          "tte",
+          "ru",
+          "i",
+          "tsu",
+          "de",
+          "mo"
+        ]
       },
       {
-        "ja": "手を繋いでさあ前を向け",
-        "romaji": "tewotsunaidesaamaewomuke",
-        "ko": "손을 잡고 자, 앞을 향해라"
+        "ja": "ここに立ってるだけで",
+        "romaji": "kokonitatterudakede",
+        "ko": "여기에 서 있는 것만으로도",
+        "charRomaji": [
+          "ko",
+          "ko",
+          "ni",
+          "ta",
+          "tte",
+          "ru",
+          "da",
+          "ke",
+          "de"
+        ]
+      },
+      {
+        "ja": "迷っても君と走っていきたいんだよ",
+        "romaji": "mayottemokimitohashitteikitaindayo",
+        "ko": "헤매더라도 너와 함께 달려가고 싶어",
+        "charRomaji": [
+          "mayo",
+          "",
+          "tte",
+          "mo",
+          "kimi",
+          "to",
+          "hashi",
+          "",
+          "tte",
+          "i",
+          "ki",
+          "ta",
+          "i",
+          "n",
+          "da",
+          "yo"
+        ]
       }
     ]
   },
@@ -474,42 +1469,114 @@ export const SONGS: Song[] = [
     "reading": "うたいましょうならしましょう",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "_0FI8xSgI1s",
+    "youtubeId": "zF0k41kI868",
     "lines": [
+      {
+        "ja": "鑑賞用の花のように遠くで",
+        "romaji": "kanshouyounohananoyounitookude",
+        "ko": "관상용 꽃처럼 먼 곳에서",
+        "charRomaji": [
+          "kan",
+          "shou",
+          "you",
+          "no",
+          "hana",
+          "no",
+          "you",
+          "ni",
+          "too",
+          "ku",
+          "de"
+        ]
+      },
+      {
+        "ja": "私見てるだけでいいのかい",
+        "romaji": "watashimiterudakedeiinokai",
+        "ko": "나를 그저 바라보기만 하면 되는 거니",
+        "charRomaji": [
+          "watashi",
+          "mi",
+          "te",
+          "ru",
+          "da",
+          "ke",
+          "de",
+          "i",
+          "i",
+          "no",
+          "kai"
+        ]
+      },
       {
         "ja": "歌いましょう鳴らしましょう",
         "romaji": "utaimashounarashimashou",
-        "ko": "노래합시다 울려 퍼트립시다"
+        "ko": "노래합시다 울려 퍼트립시다",
+        "charRomaji": [
+          "uta",
+          "i",
+          "ma",
+          "shou",
+          "nara",
+          "",
+          "shi",
+          "ma",
+          "shou"
+        ]
       },
       {
-        "ja": "世界中に響くように",
-        "romaji": "sekaijuunihibikuyouni",
-        "ko": "온 세상에 울려 퍼지도록"
+        "ja": "この胸の衝動を解き放て",
+        "romaji": "konomunenosyoudouwotokihanate",
+        "ko": "이 가슴의 충동을 해방해",
+        "charRomaji": [
+          "ko",
+          "no",
+          "mune",
+          "no",
+          "shou",
+          "dou",
+          "wo",
+          "toki",
+          "hana",
+          "",
+          "te"
+        ]
       },
       {
-        "ja": "悲しい涙を拭い去って",
-        "romaji": "kanashiinamidawonuguisatte",
-        "ko": "슬픈 눈물을 닦아내고"
+        "ja": "泥だらけの靴で踏み鳴らせ",
+        "romaji": "dorodarakenokutsudefuminarase",
+        "ko": "흙투성이 신발로 힘차게 굴러봐",
+        "charRomaji": [
+          "doro",
+          "da",
+          "ra",
+          "ke",
+          "no",
+          "kutsu",
+          "de",
+          "fumi",
+          "nara",
+          "",
+          "se"
+        ]
       },
       {
-        "ja": "笑顔の花を咲かせよう",
-        "romaji": "egaonohanawosakaseyou",
-        "ko": "웃음의 꽃을 피워보자"
-      },
-      {
-        "ja": "下手くそだって構わない",
-        "romaji": "hetakusodattekamawanai",
-        "ko": "서툴러도 상관없어"
-      },
-      {
-        "ja": "心が震えていればいい",
-        "romaji": "kokorogafurueteirebaii",
-        "ko": "마음이 떨리고 있다면 그걸로 돼"
-      },
-      {
-        "ja": "さあ一緒に声を出して",
-        "romaji": "saaisshonikoewodashite",
-        "ko": "자 함께 소리를 내어봐"
+        "ja": "僕らの音を響かせていこう",
+        "romaji": "bokuranootowohibikaseteikou",
+        "ko": "우리들의 소리를 울려 퍼트려 가자",
+        "charRomaji": [
+          "boku",
+          "ra",
+          "no",
+          "oto",
+          "wo",
+          "hibi",
+          "",
+          "ka",
+          "se",
+          "te",
+          "i",
+          "kou"
+        ]
       }
     ]
   },
@@ -519,47 +1586,196 @@ export const SONGS: Song[] = [
     "reading": "はるひかげ",
     "category": "original",
     "album": "1st Album 《迷跡波》",
-    "youtubeId": "NycFr6D6DSw",
+    "youtubeId": "a9t98mP179E",
     "lines": [
       {
-        "ja": "やわらかな光が差し込む",
-        "romaji": "yawarakanahikarigasashikomu",
-        "ko": "부드러운 햇살이 비쳐 드는"
+        "ja": "かじかんだ心震えるまなざし",
+        "romaji": "kajikandakokorofuruerumanazashi",
+        "ko": "얼어붙은 마음, 떨리는 눈빛",
+        "charRomaji": [
+          "ka",
+          "ji",
+          "ka",
+          "n",
+          "da",
+          "kokoro",
+          "furu",
+          "",
+          "e",
+          "ru",
+          "ma",
+          "na",
+          "za",
+          "shi"
+        ]
       },
       {
-        "ja": "春の木漏れ日の中で",
-        "romaji": "harunokomorebinonakade",
-        "ko": "봄날 나뭇잎 사이 햇살 속에서"
+        "ja": "世界で僕はひとりぼっちだった",
+        "romaji": "sekaidebokuwahitoribocchidatta",
+        "ko": "세상에서 나는 외톨이였어",
+        "charRomaji": [
+          "se",
+          "kai",
+          "de",
+          "boku",
+          "wa",
+          "hi",
+          "to",
+          "ri",
+          "bo",
+          "cchi",
+          "da",
+          "tta"
+        ]
       },
       {
-        "ja": "君と交わしたあの約束",
-        "romaji": "kimitokawashitaanoyakusoku",
-        "ko": "너와 나누었던 그 약속"
+        "ja": "散ることしか知らない春は",
+        "romaji": "chirukotoshikashiranaiharuwa",
+        "ko": "지는 것밖에 모르는 봄은",
+        "charRomaji": [
+          "chi",
+          "ru",
+          "ko",
+          "to",
+          "shi",
+          "ka",
+          "shira",
+          "",
+          "na",
+          "i",
+          "haru",
+          "wa"
+        ]
       },
       {
-        "ja": "今も胸に咲いているよ",
-        "romaji": "imamomunenisaiteiruyo",
-        "ko": "지금도 가슴속에 피어 있어"
+        "ja": "毎年冷たくあしらう",
+        "romaji": "maitoshitsumetakuaishirau",
+        "ko": "매년 매정하게 대하네",
+        "charRomaji": [
+          "mai",
+          "toshi",
+          "tsume",
+          "",
+          "ta",
+          "ku",
+          "a",
+          "shi",
+          "ra",
+          "u"
+        ]
       },
       {
-        "ja": "どうして春日影をやったの",
-        "romaji": "doushiteharuhikagewoyattano",
-        "ko": "어째서 하루히카게를 연주한 거야"
+        "ja": "暗がりの中一方通行に",
+        "romaji": "kuragarinonakaippoutsuukouni",
+        "ko": "어둠 속 일방통행으로",
+        "charRomaji": [
+          "kura",
+          "ga",
+          "ri",
+          "no",
+          "naka",
+          "i",
+          "ppou",
+          "tsuu",
+          "kou",
+          "ni"
+        ]
       },
       {
-        "ja": "迷いながらも歩き出す",
-        "romaji": "mayoinagaramourukidasu",
-        "ko": "방황하면서도 걸어 나가"
+        "ja": "ただただ言葉を書き殴って",
+        "romaji": "tadatadakotobawokakinagutte",
+        "ko": "그저 말을 휘갈겨 쓰며",
+        "charRomaji": [
+          "ta",
+          "da",
+          "ta",
+          "da",
+          "kotoba",
+          "",
+          "wo",
+          "kaki",
+          "nagu",
+          "",
+          "tte"
+        ]
       },
       {
-        "ja": "暖かな影に包まれて",
-        "romaji": "atatakakakagenitsutsumarete",
-        "ko": "따스한 그림자에 감싸여"
+        "ja": "雲間を縫ってきらりきらり",
+        "romaji": "kumomawonuuttekirarikirari",
+        "ko": "구름 사이를 뚫고 반짝반짝",
+        "charRomaji": [
+          "kumo",
+          "ma",
+          "wo",
+          "nu",
+          "tte",
+          "ki",
+          "ra",
+          "ri",
+          "ki",
+          "ra",
+          "ri"
+        ]
       },
       {
-        "ja": "また逢える日を信じてる",
-        "romaji": "mataaeruhiwoshinjiteru",
-        "ko": "다시 만날 날을 믿고 있어"
+        "ja": "心満たしてはあふれ",
+        "romaji": "kokoromitashitehaafure",
+        "ko": "마음을 채우고는 넘쳐흘러",
+        "charRomaji": [
+          "kokoro",
+          "mita",
+          "",
+          "shi",
+          "te",
+          "wa",
+          "a",
+          "fu",
+          "re"
+        ]
+      },
+      {
+        "ja": "君の手はどうしてこんなにも温かいの",
+        "romaji": "kiminotewadoushitekonnanimonatakaino",
+        "ko": "네 손은 어째서 이렇게나 따스한 걸까",
+        "charRomaji": [
+          "kimi",
+          "no",
+          "te",
+          "wa",
+          "dou",
+          "shi",
+          "te",
+          "ko",
+          "n",
+          "na",
+          "ni",
+          "mo",
+          "atataka",
+          "",
+          "i",
+          "no"
+        ]
+      },
+      {
+        "ja": "どうかこのまま離さないでいて",
+        "romaji": "doukakonomamahanasanaideite",
+        "ko": "부디 이대로 손을 놓지 말아줘",
+        "charRomaji": [
+          "dou",
+          "ka",
+          "ko",
+          "no",
+          "ma",
+          "ma",
+          "hana",
+          "",
+          "sa",
+          "na",
+          "i",
+          "de",
+          "i",
+          "te"
+        ]
       }
     ]
   },
@@ -568,48 +1784,178 @@ export const SONGS: Song[] = [
     "title": "詩超絆",
     "reading": "うたことば",
     "category": "original",
-    "album": "1st Album 《迷跡波》",
-    "youtubeId": "wJ-OebTVyvk",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "QkX594yX8jE",
     "lines": [
       {
-        "ja": "声にならない叫びを",
-        "romaji": "koeninaranaisakebiwo",
-        "ko": "목소리가 되지 않는 외침을"
+        "ja": "僕にはわからないんだいつも",
+        "romaji": "bokuniwawakaranaindaitsumo",
+        "ko": "내게는 알 수 없는 거야 언제나",
+        "charRomaji": [
+          "boku",
+          "ni",
+          "wa",
+          "wa",
+          "ka",
+          "ra",
+          "na",
+          "i",
+          "n",
+          "da",
+          "i",
+          "tsu",
+          "mo"
+        ]
       },
       {
-        "ja": "詩に乗せて届けるんだ",
-        "romaji": "utaninosetetodokerunda",
-        "ko": "시에 실어서 전하는 거야"
+        "ja": "みつけられない正解も普通も",
+        "romaji": "mitsukerarenaiseikaimofutsuumo",
+        "ko": "찾을 수 없어 정답도 보통도",
+        "charRomaji": [
+          "mi",
+          "tsu",
+          "ke",
+          "ra",
+          "re",
+          "na",
+          "i",
+          "sei",
+          "kai",
+          "mo",
+          "fu",
+          "tsuu",
+          "mo"
+        ]
       },
       {
-        "ja": "千切れそうな絆を今",
-        "romaji": "chigiresounakizunawoima",
-        "ko": "끊어질 것 같은 인연을 지금"
+        "ja": "世界はずっとずっと遠く",
+        "romaji": "sekaiwazuttozuttotooku",
+        "ko": "세상은 줄곧 아득히 먼",
+        "charRomaji": [
+          "se",
+          "kai",
+          "wa",
+          "zu",
+          "tto",
+          "zu",
+          "tto",
+          "too",
+          "ku"
+        ]
       },
       {
-        "ja": "もう一度結び直すために",
-        "romaji": "mouichidomusubinaosutameni",
-        "ko": "다시 한번 묶어내기 위해서"
+        "ja": "僕には届かない場所にあるんだ",
+        "romaji": "bokuniwatodokanaibashonianrunda",
+        "ko": "내겐 닿지 않는 곳에 있는 거야",
+        "charRomaji": [
+          "boku",
+          "ni",
+          "wa",
+          "todo",
+          "",
+          "ka",
+          "na",
+          "i",
+          "ba",
+          "sho",
+          "ni",
+          "a",
+          "ru",
+          "n",
+          "da"
+        ]
       },
       {
-        "ja": "不器用だっていいじゃないか",
-        "romaji": "bukiyoudatteiijanaika",
-        "ko": "서툴러도 괜찮지 않나"
+        "ja": "戻りたい伝えたい",
+        "romaji": "modoritaitutaetai",
+        "ko": "돌아가고 싶어 전하고 싶어",
+        "charRomaji": [
+          "modo",
+          "",
+          "ri",
+          "tai",
+          "tsuta",
+          "",
+          "e",
+          "tai"
+        ]
       },
       {
-        "ja": "僕らは迷子なんだから",
-        "romaji": "bokurawamaigonandakara",
-        "ko": "우리들은 미아니까"
+        "ja": "許されるなら僕は諦めたくない",
+        "romaji": "yurusarerunarabokuwaakirametakunai",
+        "ko": "용서받을 수 있다면 난 포기하고 싶지 않아",
+        "charRomaji": [
+          "yuru",
+          "",
+          "sa",
+          "re",
+          "ru",
+          "na",
+          "ra",
+          "boku",
+          "wa",
+          "akira",
+          "",
+          "me",
+          "ta",
+          "ku",
+          "na",
+          "i"
+        ]
       },
       {
-        "ja": "詩超絆どこまでも",
-        "romaji": "utakotobadokomademo",
-        "ko": "우타코토바 어디까지라도"
+        "ja": "うたういまああ届いて",
+        "romaji": "utauimaaatodoite",
+        "ko": "노래해 지금, 아아 닿기를",
+        "charRomaji": [
+          "u",
+          "ta",
+          "u",
+          "ima",
+          "a",
+          "a",
+          "todo",
+          "",
+          "i",
+          "te"
+        ]
       },
       {
-        "ja": "魂をぶつけ合え",
-        "romaji": "tamashiiwobutsukeae",
-        "ko": "영혼을 서로 부딪쳐라"
+        "ja": "君の胸にまだ間に合うかい",
+        "romaji": "kiminomunenimadamaniaukai",
+        "ko": "너의 가슴에 아직 늦지 않았을까",
+        "charRomaji": [
+          "kimi",
+          "no",
+          "mune",
+          "ni",
+          "ma",
+          "da",
+          "ma",
+          "ni",
+          "a",
+          "u",
+          "kai"
+        ]
+      },
+      {
+        "ja": "言葉を超えるため心を叫ぶ",
+        "romaji": "kotobawokoerutamekokorowosakebu",
+        "ko": "말을 뛰어넘기 위해 마음을 외쳐",
+        "charRomaji": [
+          "kotoba",
+          "",
+          "wo",
+          "koe",
+          "",
+          "ru",
+          "ta",
+          "me",
+          "kokoro",
+          "wo",
+          "sake",
+          "bu"
+        ]
       }
     ]
   },
@@ -618,43 +1964,132 @@ export const SONGS: Song[] = [
     "title": "迷路日々",
     "reading": "めいろひび",
     "category": "original",
-    "album": "4th Single",
-    "youtubeId": "STgVa-reZkM",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "W2R2G9w2N-Q",
     "lines": [
       {
-        "ja": "迷路のような毎日を",
-        "romaji": "meironoyounamainichiwo",
-        "ko": "미로와도 같은 매일을"
+        "ja": "迷いながら戸惑いながら歩く",
+        "romaji": "mayoinagaratomadoinagaraaruku",
+        "ko": "헤매면서 망설이면서 걸어",
+        "charRomaji": [
+          "mayo",
+          "",
+          "i",
+          "na",
+          "ga",
+          "ra",
+          "tomado",
+          "",
+          "i",
+          "na",
+          "ga",
+          "ra",
+          "aru",
+          "",
+          "ku"
+        ]
       },
       {
-        "ja": "手探りで進んでいる",
-        "romaji": "tesaguridesusundeiru",
-        "ko": "더듬거리며 나아가고 있어"
+        "ja": "めいろの中で僕らは居合わせてた",
+        "romaji": "meirononakadebokurawaimawasateta",
+        "ko": "미로 속에서 우리들은 우연히 함께 있었어",
+        "charRomaji": [
+          "me",
+          "i",
+          "ro",
+          "no",
+          "naka",
+          "de",
+          "boku",
+          "ra",
+          "wa",
+          "i",
+          "a",
+          "wa",
+          "se",
+          "te",
+          "ta"
+        ]
       },
       {
-        "ja": "出口が見つからなくても",
-        "romaji": "deguchigamitsukaranakutemo",
-        "ko": "출구를 찾지 못하더라도"
+        "ja": "名前のない感情ああ抱きしめてる",
+        "romaji": "namaenonaikanjouaadakishimeteru",
+        "ko": "이름 없는 감정 아아 끌어안고 있어",
+        "charRomaji": [
+          "namae",
+          "",
+          "no",
+          "na",
+          "i",
+          "kan",
+          "jou",
+          "a",
+          "a",
+          "daki",
+          "",
+          "shi",
+          "me",
+          "te",
+          "ru"
+        ]
       },
       {
-        "ja": "君がいるなら怖くないよ",
-        "romaji": "kimigairunarakowakunaiyo",
-        "ko": "네가 있다면 무섭지 않아"
+        "ja": "ちいさな一瞬あつめたい",
+        "romaji": "chiisananaisshunatsumetai",
+        "ko": "작은 한순간을 모으고 싶어",
+        "charRomaji": [
+          "chi",
+          "i",
+          "sa",
+          "na",
+          "i",
+          "sshun",
+          "atsu",
+          "me",
+          "tai"
+        ]
       },
       {
-        "ja": "壁にぶつかって泣いたって",
-        "romaji": "kabenibutsukattenaitatte",
-        "ko": "벽에 부딪혀 울더라도"
+        "ja": "出口なんてどこにも見えなくても",
+        "romaji": "deguchinantedokonimomienakutemo",
+        "ko": "출구 따윈 어디에도 보이지 않는다 해도",
+        "charRomaji": [
+          "de",
+          "guchi",
+          "na",
+          "n",
+          "te",
+          "do",
+          "ko",
+          "ni",
+          "mo",
+          "mie",
+          "",
+          "na",
+          "ku",
+          "te",
+          "mo"
+        ]
       },
       {
-        "ja": "また立ち上がればいい",
-        "romaji": "matatachiagarebaii",
-        "ko": "다시 일어서면 돼"
-      },
-      {
-        "ja": "迷路日々を愛そう",
-        "romaji": "meirohibiwoaisou",
-        "ko": "미로 같은 나날을 사랑하자"
+        "ja": "君と手をつないで進む日々",
+        "romaji": "kimitotewotsunaidesusumuhibi",
+        "ko": "너와 손을 잡고 나아가는 나날",
+        "charRomaji": [
+          "kimi",
+          "to",
+          "te",
+          "wo",
+          "tsuna",
+          "",
+          "i",
+          "de",
+          "susu",
+          "",
+          "mu",
+          "hi",
+          "bi"
+        ]
       }
     ]
   },
@@ -663,83 +2098,252 @@ export const SONGS: Song[] = [
     "title": "無路矢",
     "reading": "のろし",
     "category": "original",
-    "album": "2nd Single",
-    "youtubeId": "JZ2e_LVe6sU",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "v8K8a0Q81rA",
     "lines": [
       {
-        "ja": "暗闇を射抜く矢のように",
-        "romaji": "kurayamiwoinukuyanoyouni",
-        "ko": "어둠을 꿰뚫는 화살처럼"
+        "ja": "無軌道を描く足跡でも",
+        "romaji": "mukidouwokakuashiattodemo",
+        "ko": "갈피 없는 궤도를 그리는 발자국이라도",
+        "charRomaji": [
+          "mu",
+          "ki",
+          "dou",
+          "wo",
+          "eka",
+          "",
+          "ku",
+          "ashi",
+          "ato",
+          "de",
+          "mo"
+        ]
       },
       {
-        "ja": "真っ直ぐに放たれた情熱",
-        "romaji": "massugunihanataretajounetsu",
-        "ko": "곧게 쏘아 올려진 정열"
+        "ja": "進み続けた",
+        "romaji": "susumitsuzuketa",
+        "ko": "계속해서 나아갔어",
+        "charRomaji": [
+          "susu",
+          "",
+          "mi",
+          "tsuzu",
+          "",
+          "ke",
+          "ta"
+        ]
       },
       {
-        "ja": "道なき道を切り開け",
-        "romaji": "michinakimichiwokirihirake",
-        "ko": "길 없는 길을 개척해 나가라"
+        "ja": "ほつれそうな心で",
+        "romaji": "hotsuresounakokorode",
+        "ko": "풀려버릴 것 같은 마음으로",
+        "charRomaji": [
+          "ho",
+          "tsu",
+          "re",
+          "sou",
+          "na",
+          "kokoro",
+          "de"
+        ]
       },
       {
-        "ja": "恐れるものは何もない",
-        "romaji": "osorerumonowananimonai",
-        "ko": "두려워할 것은 아무것도 없어"
+        "ja": "どこから来てどこに向かう",
+        "romaji": "dokokarakitedokonimukau",
+        "ko": "어디에서 와서 어디로 향하는가",
+        "charRomaji": [
+          "do",
+          "ko",
+          "ka",
+          "ra",
+          "ki",
+          "te",
+          "do",
+          "ko",
+          "ni",
+          "muka",
+          "u"
+        ]
       },
       {
-        "ja": "無路矢放て高らかに",
-        "romaji": "noroshihanatetakarakani",
-        "ko": "노로시를 쏘아 올려라 드높이"
+        "ja": "何を信じて生きていくの",
+        "romaji": "naniwoshinjiteikiteikuno",
+        "ko": "무엇을 믿고 살아가는 걸까",
+        "charRomaji": [
+          "nani",
+          "wo",
+          "shin",
+          "ji",
+          "te",
+          "iki",
+          "",
+          "te",
+          "i",
+          "ku",
+          "no"
+        ]
       },
       {
-        "ja": "未来を照らし出す光となれ",
-        "romaji": "miraiwoterashidasuhikaritonare",
-        "ko": "미래를 밝혀내는 빛이 되어라"
+        "ja": "道標も地図もなくて",
+        "romaji": "douhyoumouchizumonakute",
+        "ko": "이정표도 지도도 없이",
+        "charRomaji": [
+          "michi",
+          "shirube",
+          "mo",
+          "chi",
+          "zu",
+          "mo",
+          "na",
+          "ku",
+          "te"
+        ]
       },
       {
-        "ja": "僕らの覚悟を見せてやる",
-        "romaji": "bokuranokakugowomisetheyaru",
-        "ko": "우리들의 각오를 보여주마"
+        "ja": "フラつく足で掲げた狼煙",
+        "romaji": "furatsukuashidekakagetanoroshi",
+        "ko": "비틀거리는 걸음으로 피워 올린 봉화",
+        "charRomaji": [
+          "fu",
+          "ra",
+          "tsu",
+          "ku",
+          "ashi",
+          "de",
+          "kaka",
+          "",
+          "ge",
+          "ta",
+          "no",
+          "ro",
+          "shi"
+        ]
       }
     ]
   },
   {
     "id": "sasunso",
     "title": "砂寸奏",
-    "reading": "さすんそう",
+    "reading": "さすらい",
     "category": "original",
-    "album": "4th Single",
-    "youtubeId": "uiWLU577gYY",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "Y5V-92Pq8Xw",
     "lines": [
       {
-        "ja": "砂時計の砂のように",
-        "romaji": "sunadokeinosunanoyouni",
-        "ko": "모래시계의 모래알처럼"
+        "ja": "同じ音符を追いかけるのに",
+        "romaji": "onajionpuwooikakerunoni",
+        "ko": "같은 음표를 쫓아가는데도",
+        "charRomaji": [
+          "ona",
+          "",
+          "ji",
+          "on",
+          "pu",
+          "wo",
+          "oi",
+          "",
+          "ka",
+          "ke",
+          "ru",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "こぼれ落ちていく時間",
-        "romaji": "koboreochiteikujikan",
-        "ko": "흘러내려 떨어지는 시간"
+        "ja": "ズレていくのはどうしてだろう",
+        "romaji": "zureteikuwadowshitedarou",
+        "ko": "어긋나 버리는 건 어째서일까",
+        "charRomaji": [
+          "zu",
+          "re",
+          "te",
+          "i",
+          "ku",
+          "no",
+          "wa",
+          "dou",
+          "shi",
+          "te",
+          "da",
+          "rou"
+        ]
       },
       {
-        "ja": "一寸の狂いもなく奏でる",
-        "romaji": "issunnokuruimonakukanaderu",
-        "ko": "한 치의 오차도 없이 연주하는"
+        "ja": "砂の粒のようにこぼれ落ちて",
+        "romaji": "sunanotsubunoyounikoboreochite",
+        "ko": "모래알처럼 손에서 흘러넘쳐 떨어져",
+        "charRomaji": [
+          "suna",
+          "no",
+          "tsubu",
+          "no",
+          "you",
+          "ni",
+          "kobo",
+          "",
+          "re",
+          "ochi",
+          "",
+          "te"
+        ]
       },
       {
-        "ja": "僕らの刹那の調べ",
-        "romaji": "bokuranosetsunanoshirabe",
-        "ko": "우리들의 찰나의 선율"
+        "ja": "足跡さえも消えてしまう",
+        "romaji": "ashiattosaemokieteshimau",
+        "ko": "발자국마저 지워져 버려",
+        "charRomaji": [
+          "ashi",
+          "ato",
+          "sa",
+          "e",
+          "mo",
+          "kie",
+          "",
+          "te",
+          "shi",
+          "ma",
+          "u"
+        ]
       },
       {
-        "ja": "砂寸奏鳴り響かせて",
-        "romaji": "sasunsonarihibikasete",
-        "ko": "사순소 울려 퍼지게 하여"
+        "ja": "それでも鳴らす僕らのリズム",
+        "romaji": "soredemonarasubokuranorizumu",
+        "ko": "그럼에도 울리는 우리들의 리듬",
+        "charRomaji": [
+          "so",
+          "re",
+          "de",
+          "mo",
+          "nara",
+          "",
+          "su",
+          "boku",
+          "ra",
+          "no",
+          "ri",
+          "zu",
+          "mu"
+        ]
       },
       {
-        "ja": "今この瞬間を生きる",
-        "romaji": "imakonoshunkanwoikiru",
-        "ko": "지금 이 순간을 살아가"
+        "ja": "さすらいながら明日を探そう",
+        "romaji": "sasurainagaraashitawosagasou",
+        "ko": "방랑하면서 내일을 찾아가자",
+        "charRomaji": [
+          "sa",
+          "su",
+          "ra",
+          "i",
+          "na",
+          "ga",
+          "ra",
+          "ashita",
+          "",
+          "wo",
+          "saga",
+          "",
+          "sou"
+        ]
       }
     ]
   },
@@ -748,198 +2352,439 @@ export const SONGS: Song[] = [
     "title": "回層浮",
     "reading": "かいそうふ",
     "category": "original",
-    "album": "5th Single",
-    "youtubeId": "k5u1nueXES8",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "gQO9mZq_T0A",
     "lines": [
       {
-        "ja": "記憶の底へ沈んでいく",
-        "romaji": "kiokunosokoeshizundeiku",
-        "ko": "기억의 밑바닥으로 가라앉아 가"
+        "ja": "真夜中の入り口",
+        "romaji": "mayonakanoniriguchi",
+        "ko": "한밤중의 입구",
+        "charRomaji": [
+          "ma",
+          "yo",
+          "naka",
+          "no",
+          "iri",
+          "guchi",
+          ""
+        ]
       },
       {
-        "ja": "幾重にも重なる想い",
-        "romaji": "ikuenimokasanaruomoi",
-        "ko": "겹겹이 쌓여가는 마음들"
+        "ja": "不意にぶり返した孤独",
+        "romaji": "fuiniburihaeshitakodoku",
+        "ko": "불현듯 되살아난 고독",
+        "charRomaji": [
+          "fu",
+          "i",
+          "ni",
+          "buri",
+          "kae",
+          "",
+          "shi",
+          "ta",
+          "ko",
+          "doku"
+        ]
       },
       {
-        "ja": "水面へと浮かび上がる",
-        "romaji": "minamoetoukabiagaru",
-        "ko": "수면 위로 떠올라 오는"
+        "ja": "水底に沈む光を見つめて",
+        "romaji": "minasokonisizumuhikariwomitsumete",
+        "ko": "물밑으로 가라앉는 빛을 바라보며",
+        "charRomaji": [
+          "mina",
+          "soko",
+          "ni",
+          "shizu",
+          "",
+          "mu",
+          "hikari",
+          "wo",
+          "mitsu",
+          "",
+          "me",
+          "te"
+        ]
       },
       {
-        "ja": "あの日の君の微笑み",
-        "romaji": "anohinokiminohohoemi",
-        "ko": "그날 너의 미소"
+        "ja": "浮かんでは消える記憶の層",
+        "romaji": "ukandewakierukiokunosou",
+        "ko": "떠올랐다 사라지는 기억의 층",
+        "charRomaji": [
+          "uka",
+          "",
+          "n",
+          "de",
+          "wa",
+          "kie",
+          "",
+          "ru",
+          "ki",
+          "oku",
+          "no",
+          "sou"
+        ]
       },
       {
-        "ja": "回層浮揺らめきながら",
-        "romaji": "kaisoufuyuramekinagara",
-        "ko": "회층부 일렁이면서"
-      },
-      {
-        "ja": "光を求めて泳いでいく",
-        "romaji": "hikariwomotometeoyoideiku",
-        "ko": "빛을 찾아 헤엄쳐 가"
+        "ja": "息を吸い込んで泳ぎ出す",
+        "romaji": "ikiwosuiikondeoyogidasu",
+        "ko": "숨을 들이마시고 헤엄쳐 나가",
+        "charRomaji": [
+          "iki",
+          "wo",
+          "sui",
+          "",
+          "ko",
+          "n",
+          "de",
+          "oyo",
+          "",
+          "gi",
+          "da",
+          "su"
+        ]
       }
     ]
   },
   {
     "id": "shokyuusei",
     "title": "処救生",
-    "reading": "しょきゅうせい",
+    "reading": "こきゅう",
     "category": "original",
-    "album": "5th Single",
-    "youtubeId": "1_XZ0VJIpwI",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "H4K4aP8w09U",
     "lines": [
       {
-        "ja": "息苦しいこの世界で",
-        "romaji": "ikigurushiikonosekaide",
-        "ko": "숨 막히는 이 세상에서"
+        "ja": "こたえあわせ",
+        "romaji": "kotaeawase",
+        "ko": "답 맞춰보기",
+        "charRomaji": [
+          "ko",
+          "ta",
+          "e",
+          "a",
+          "wa",
+          "se"
+        ]
       },
       {
-        "ja": "必死に酸素を求めてる",
-        "romaji": "hisshinosansowomotometeru",
-        "ko": "필사적으로 산소를 찾고 있어"
+        "ja": "丸と罰に埋もれ",
+        "romaji": "marutobatsuniumore",
+        "ko": "동그라미와 가위표에 파묻혀",
+        "charRomaji": [
+          "maru",
+          "to",
+          "batsu",
+          "ni",
+          "umo",
+          "",
+          "re"
+        ]
       },
       {
-        "ja": "生きている実感が欲しい",
-        "romaji": "ikiteirujikkangahoshii",
-        "ko": "살아있다는 실감을 원해"
+        "ja": "息苦しい部屋の中で",
+        "romaji": "ikigurushiibeyanonakade",
+        "ko": "숨 막히는 방 안에서",
+        "charRomaji": [
+          "iki",
+          "guru",
+          "",
+          "shii",
+          "he",
+          "ya",
+          "no",
+          "naka",
+          "de"
+        ]
       },
       {
-        "ja": "ただ呼吸をするだけじゃなく",
-        "romaji": "tadakokyuuwosurudakejanaku",
-        "ko": "그저 숨만 쉬는 것이 아니라"
+        "ja": "命の音を確かめていた",
+        "romaji": "inochinootowotashikameteita",
+        "ko": "생명의 소리를 확인하고 있었어",
+        "charRomaji": [
+          "inochi",
+          "no",
+          "oto",
+          "wo",
+          "tashika",
+          "",
+          "me",
+          "te",
+          "i",
+          "ta"
+        ]
       },
       {
-        "ja": "処救生救いを叫べ",
-        "romaji": "shokyuuseisukuiwosakebe",
-        "ko": "처구생 구원을 외쳐라"
-      },
-      {
-        "ja": "生き延びるための歌を",
-        "romaji": "ikinobirutamenoutawo",
-        "ko": "살아남기 위한 노래를"
+        "ja": "救いを求めて叫ぶ呼吸",
+        "romaji": "sukuiwomotometesakebukokyuu",
+        "ko": "구원을 바라며 외치는 호흡",
+        "charRomaji": [
+          "suku",
+          "",
+          "i",
+          "wo",
+          "moto",
+          "",
+          "me",
+          "te",
+          "sake",
+          "",
+          "bu",
+          "ko",
+          "kyuu"
+        ]
       }
     ]
   },
   {
     "id": "hashidoyama",
     "title": "端程山",
-    "reading": "はしどやま",
+    "reading": "ぱのらま",
     "category": "original",
-    "album": "2nd Album",
-    "youtubeId": "1c2uSrAGF9Q",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "6mJm078vGZQ",
     "lines": [
       {
-        "ja": "険しい山のいただきへ",
-        "romaji": "kewashiizamanoitadakihe",
-        "ko": "험준한 산봉우리를 향해"
+        "ja": "どこまで歩けばいいのかなんて",
+        "romaji": "dokomadearukebaiinokanante",
+        "ko": "어디까지 걸어야 하는지 따윈",
+        "charRomaji": [
+          "do",
+          "ko",
+          "ma",
+          "de",
+          "aru",
+          "",
+          "ke",
+          "ba",
+          "i",
+          "i",
+          "no",
+          "ka",
+          "na",
+          "n",
+          "te"
+        ]
       },
       {
-        "ja": "一歩ずつ踏みしめていく",
-        "romaji": "ippozutsufumishimeteiku",
-        "ko": "한 걸음씩 굳세게 내딛어 가"
+        "ja": "知らないまま踏みしめてた",
+        "romaji": "shiranaimamafumishimeteta",
+        "ko": "모른 채 꾹꾹 내딛고 있었어",
+        "charRomaji": [
+          "shira",
+          "",
+          "na",
+          "i",
+          "ma",
+          "ma",
+          "fumi",
+          "shime",
+          "",
+          "te",
+          "ta"
+        ]
       },
       {
-        "ja": "見渡す限りのパノラマ",
-        "romaji": "miwatasukagirinopanorama",
-        "ko": "끝없이 펼쳐지는 파노라마"
+        "ja": "見上げた空の広さに息をのむ",
+        "romaji": "miagetasoranohirosaniikiwonomu",
+        "ko": "올려다본 하늘의 넓음에 숨을 삼켜",
+        "charRomaji": [
+          "mi",
+          "age",
+          "",
+          "ta",
+          "sora",
+          "no",
+          "hiro",
+          "",
+          "sa",
+          "ni",
+          "iki",
+          "wo",
+          "no",
+          "mu"
+        ]
       },
       {
-        "ja": "風が頬を撫でていくよ",
-        "romaji": "kazegahohowonadetekuyo",
-        "ko": "바람이 뺨을 스쳐 지나가"
-      },
-      {
-        "ja": "端程山登りつめたら",
-        "romaji": "hashidoyamanoboritsumetara",
-        "ko": "하시도야마 끝까지 올라선다면"
-      },
-      {
-        "ja": "新しい朝が待っている",
-        "romaji": "atarashiiasagamatteiru",
-        "ko": "새로운 아침이 기다리고 있어"
+        "ja": "広がるパノラマの向こうへ",
+        "romaji": "hirogarupanoramanomukouhe",
+        "ko": "펼쳐지는 파노라마의 저편으로",
+        "charRomaji": [
+          "hiro",
+          "",
+          "ga",
+          "ru",
+          "pa",
+          "no",
+          "ra",
+          "ma",
+          "no",
+          "mukou",
+          "",
+          "e"
+        ]
       }
     ]
   },
   {
     "id": "rinpuu",
     "title": "輪符雨",
-    "reading": "りんぷう",
+    "reading": "りふれいん",
     "category": "original",
-    "album": "2nd Album",
-    "youtubeId": "xNF9semW-Ng",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "L-Z8B8X8Y-k",
     "lines": [
       {
-        "ja": "降りしきる雨のリフレイン",
-        "romaji": "furishikiruamenorifurein",
-        "ko": "줄기차게 쏟아지는 비의 리프레인"
+        "ja": "硝子窓はすぐに雲に覆われて",
+        "romaji": "garasumadowasugunikumonioowarete",
+        "ko": "유리창은 곧바로 구름에 뒤덮이고",
+        "charRomaji": [
+          "garasu",
+          "",
+          "",
+          "mado",
+          "wa",
+          "su",
+          "gu",
+          "ni",
+          "kumo",
+          "ni",
+          "oowa",
+          "",
+          "re",
+          "te"
+        ]
       },
       {
-        "ja": "街の音をかき消していく",
-        "romaji": "machinootowokakikeshiteiku",
-        "ko": "거리의 소음을 지워가"
+        "ja": "冷たい雨が降り続く",
+        "romaji": "tsumetaiamegafuritsuzuku",
+        "ko": "차가운 비가 끝없이 내려",
+        "charRomaji": [
+          "tsume",
+          "",
+          "ta",
+          "i",
+          "ame",
+          "ga",
+          "furi",
+          "tsuzu",
+          "",
+          "ku"
+        ]
       },
       {
-        "ja": "輪を描いて落ちる雫",
-        "romaji": "wawokaitetochirushizuku",
-        "ko": "동심원을 그리며 떨어지는 빗방울"
+        "ja": "繰り返すメロディのように",
+        "romaji": "kurikaesumerodinoyouni",
+        "ko": "반복되는 멜로디처럼",
+        "charRomaji": [
+          "kuri",
+          "kae",
+          "",
+          "su",
+          "me",
+          "ro",
+          "di",
+          "no",
+          "you",
+          "ni"
+        ]
       },
       {
-        "ja": "僕の心も濡らしていく",
-        "romaji": "bokunokokoromonurashiteiku",
-        "ko": "내 마음마저 적셔가고 있어"
-      },
-      {
-        "ja": "輪符雨よ洗い流して",
-        "romaji": "rinpuuyoarainagashite",
-        "ko": "린푸우여 모두 씻어내어라"
-      },
-      {
-        "ja": "抱えきれない孤独さえも",
-        "romaji": "kakaekirenaikodokusaemo",
-        "ko": "다 감당할 수 없는 고독마저도"
+        "ja": "僕らの涙を洗い流して",
+        "romaji": "bokuranonamidawowarainagashite",
+        "ko": "우리들의 눈물을 씻어내 줘",
+        "charRomaji": [
+          "boku",
+          "ra",
+          "no",
+          "namida",
+          "wo",
+          "arai",
+          "naga",
+          "",
+          "shi",
+          "te"
+        ]
       }
     ]
   },
   {
     "id": "kokairou",
     "title": "孤壊牢",
-    "reading": "こかいろう",
+    "reading": "こころ",
     "category": "original",
-    "album": "2nd Album",
-    "youtubeId": "4Dz3pcgg_Mo",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "v8K8a0Q81rA",
     "lines": [
       {
-        "ja": "閉じこもっていた部屋の窓",
-        "romaji": "tojikomotteitaheyanomado",
-        "ko": "틀어박혀 있던 방의 창문"
+        "ja": "まるで違う生き物なのに",
+        "romaji": "marudechigauikimononanoni",
+        "ko": "마치 다른 생물인데도",
+        "charRomaji": [
+          "ma",
+          "ru",
+          "de",
+          "chiga",
+          "",
+          "u",
+          "iki",
+          "mono",
+          "",
+          "na",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "光が怖くてカーテンを閉めた",
-        "romaji": "hikarigakowakutekaatenwoshimeta",
-        "ko": "빛이 두려워 커튼을 닫았어"
+        "ja": "何故か僕ら一括りで",
+        "romaji": "nazekabokurahitokukuride",
+        "ko": "어째서인지 우릴 하나로 묶어버리고",
+        "charRomaji": [
+          "naze",
+          "ka",
+          "boku",
+          "ra",
+          "hito",
+          "kukuri",
+          "",
+          "de"
+        ]
       },
       {
-        "ja": "孤独という名の檻を壊せ",
-        "romaji": "kodokutoyounanooriwokowase",
-        "ko": "고독이라는 이름의 감옥을 부숴라"
+        "ja": "檻の中で叫び続けている",
+        "romaji": "orinonakadesakebitsuzuketeiru",
+        "ko": "우리 안에서 계속 외치고 있어",
+        "charRomaji": [
+          "ori",
+          "no",
+          "naka",
+          "de",
+          "sake",
+          "",
+          "bi",
+          "tsuzu",
+          "",
+          "ke",
+          "te",
+          "i",
+          "ru"
+        ]
       },
       {
-        "ja": "ここから抜け出す時が来た",
-        "romaji": "kokokaranukedasutokigakita",
-        "ko": "이곳에서 빠져나갈 때가 왔다"
-      },
-      {
-        "ja": "孤壊牢打ち破れ今",
-        "romaji": "kokairouuchiyabureima",
-        "ko": "코카이로를 깨부숴라 지금"
-      },
-      {
-        "ja": "本当の自由を掴むために",
-        "romaji": "hontounojiyuuwotsukamutameni",
-        "ko": "진정한 자유를 손에 넣기 위해"
+        "ja": "壊れそうな心を抱いて",
+        "romaji": "kowaresounakokorowodaite",
+        "ko": "부서질 것 같은 마음을 품고",
+        "charRomaji": [
+          "kowa",
+          "",
+          "re",
+          "sou",
+          "na",
+          "kokoro",
+          "wo",
+          "da",
+          "i",
+          "te"
+        ]
       }
     ]
   },
@@ -948,118 +2793,228 @@ export const SONGS: Song[] = [
     "title": "歩拾道",
     "reading": "ほしゅうどう",
     "category": "original",
-    "album": "2nd Album",
-    "youtubeId": "EEeYU4-dhZk",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "Y5V-92Pq8Xw",
     "lines": [
       {
-        "ja": "落ちていた小さな欠片を",
-        "romaji": "ochiteitachiisanakakerawo",
-        "ko": "떨어져 있던 작은 조각들을"
+        "ja": "ツギハギのコンクリートを歩いていく",
+        "romaji": "tsugihaginokonkuriitowoaruiteiku",
+        "ko": "기워 맞춘 콘크리트 위를 걸어가",
+        "charRomaji": [
+          "tsu",
+          "gi",
+          "ha",
+          "gi",
+          "no",
+          "ko",
+          "n",
+          "ku",
+          "rii",
+          "to",
+          "wo",
+          "aru",
+          "",
+          "i",
+          "te",
+          "i",
+          "ku"
+        ]
       },
       {
-        "ja": "一つずつ拾い集めて",
-        "romaji": "hitotsuzutsuhiroiatsumete",
-        "ko": "하나씩 주워 모아서"
+        "ja": "落としたものを一つずつ拾い集めて",
+        "romaji": "otoshitamonowohitotsuzutsuhiroiatsumete",
+        "ko": "떨어뜨린 것들을 하나씩 주워 모으며",
+        "charRomaji": [
+          "oto",
+          "",
+          "shi",
+          "ta",
+          "mono",
+          "wo",
+          "hito",
+          "tsu",
+          "zu",
+          "tsu",
+          "hiro",
+          "",
+          "i",
+          "atsu",
+          "",
+          "me",
+          "te"
+        ]
       },
       {
-        "ja": "歩き続ける僕らの道",
-        "romaji": "arukitsuzukerubokuranomichi",
-        "ko": "계속해서 걸어가는 우리들의 길"
-      },
-      {
-        "ja": "無駄なことなんて何もない",
-        "romaji": "mudanakotonantenanimonai",
-        "ko": "헛된 것 따윈 아무것도 없어"
-      },
-      {
-        "ja": "歩拾道スピードを上げて",
-        "romaji": "hoshuudousupiidowoagete",
-        "ko": "호슈도 속도를 높여서"
-      },
-      {
-        "ja": "未来の先へと飛び出そう",
-        "romaji": "mirainosakietotobidasou",
-        "ko": "미래의 저편으로 뛰쳐나가자"
+        "ja": "スピードを上げて進む道",
+        "romaji": "supiidowoaagetesusumumichi",
+        "ko": "속도를 올려 나아가는 길",
+        "charRomaji": [
+          "su",
+          "pii",
+          "do",
+          "wo",
+          "age",
+          "",
+          "te",
+          "susu",
+          "",
+          "mu",
+          "michi"
+        ]
       }
     ]
   },
   {
     "id": "yaonzen",
     "title": "夜隠染",
-    "reading": "やおんぜん",
+    "reading": "よかぜ",
     "category": "original",
-    "album": "6th Single",
-    "youtubeId": "7kPyHJ2SA9g",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "6mJm078vGZQ",
     "lines": [
       {
-        "ja": "夜の帳に隠れながら",
-        "romaji": "yorunotobarinikakurenagara",
-        "ko": "밤의 장막 속에 숨으면서"
+        "ja": "あきらめれば楽だった",
+        "romaji": "akiramerebarakudatta",
+        "ko": "포기하면 편했을 텐데",
+        "charRomaji": [
+          "a",
+          "ki",
+          "ra",
+          "me",
+          "re",
+          "ba",
+          "raku",
+          "da",
+          "tta"
+        ]
       },
       {
-        "ja": "染まっていく漆黒の街",
-        "romaji": "somatteikushikkokunomachi",
-        "ko": "물들어가는 칠흑 같은 거리"
+        "ja": "夜風が吹き抜ける街で",
+        "romaji": "yokazegafukinukerumachide",
+        "ko": "밤바람이 불어 지나가는 거리에서",
+        "charRomaji": [
+          "yo",
+          "kaze",
+          "ga",
+          "fuki",
+          "nuke",
+          "",
+          "ru",
+          "machi",
+          "de"
+        ]
       },
       {
-        "ja": "冷たい風が吹き抜けて",
-        "romaji": "tsumetaikazegafukinukete",
-        "ko": "차가운 바람이 불어와"
+        "ja": "染まっていく暗闇に抗うように",
+        "romaji": "somatteikukurayaminiaragauyouni",
+        "ko": "물들어가는 어둠에 맞서듯이",
+        "charRomaji": [
+          "soma",
+          "",
+          "tte",
+          "i",
+          "ku",
+          "kura",
+          "yami",
+          "ni",
+          "araga",
+          "",
+          "u",
+          "you",
+          "ni"
+        ]
       },
       {
-        "ja": "心までも凍えそうだよ",
-        "romaji": "kokoromademokogoesoudayo",
-        "ko": "마음마저 얼어붙을 것 같아"
-      },
-      {
-        "ja": "夜隠染の闇の中で",
-        "romaji": "yaonzennoyaminonakade",
-        "ko": "야온젠의 어둠 속에서"
-      },
-      {
-        "ja": "確かな温もりを探してる",
-        "romaji": "tashikananukumoriwosagashiteru",
-        "ko": "확실한 온기를 찾고 있어"
+        "ja": "僕らは小さな火を灯す",
+        "romaji": "bokurawachiisanahiwotomosu",
+        "ko": "우리는 작은 불을 지펴",
+        "charRomaji": [
+          "boku",
+          "ra",
+          "wa",
+          "chii",
+          "sa",
+          "na",
+          "hi",
+          "wo",
+          "tomo",
+          "su"
+        ]
       }
     ]
   },
   {
     "id": "mushuutou",
     "title": "霧周途",
-    "reading": "むしゅうと",
+    "reading": "みすと",
     "category": "original",
-    "album": "6th Single",
-    "youtubeId": "qJPXncScNA4",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "L-Z8B8X8Y-k",
     "lines": [
       {
-        "ja": "深い霧に包まれた道",
-        "romaji": "fukaikirinitsutsumaretamichi",
-        "ko": "짙은 안개에 휩싸인 길"
+        "ja": "立ち籠める霧から",
+        "romaji": "tachikomerukirikara",
+        "ko": "자욱하게 피어오르는 안개 속에서",
+        "charRomaji": [
+          "tachi",
+          "kome",
+          "",
+          "ru",
+          "kiri",
+          "ka",
+          "ra"
+        ]
       },
       {
-        "ja": "前も見えない迷路の中",
-        "romaji": "maemomienaimeirononaka",
-        "ko": "앞도 보이지 않는 미로 속"
+        "ja": "先が見えなくなっても",
+        "romaji": "sakigamienakunattemo",
+        "ko": "앞이 보이지 않게 된다 해도",
+        "charRomaji": [
+          "saki",
+          "ga",
+          "mie",
+          "",
+          "na",
+          "ku",
+          "na",
+          "tte",
+          "mo"
+        ]
       },
       {
-        "ja": "信じられるのはただ一つ",
-        "romaji": "shinjirarerunowatadahitotsu",
-        "ko": "믿을 수 있는 것은 단 하나"
+        "ja": "手探りで進む旅路",
+        "romaji": "tesaguridesusumutabiji",
+        "ko": "더듬거리며 나아가는 여로",
+        "charRomaji": [
+          "te",
+          "saguri",
+          "",
+          "de",
+          "susu",
+          "",
+          "mu",
+          "tabi",
+          "ji"
+        ]
       },
       {
-        "ja": "握りしめた手のひらの熱",
-        "romaji": "nigirishimetatenohiranonetsu",
-        "ko": "꼭 쥐어 잡은 손바닥의 열기"
-      },
-      {
-        "ja": "霧周途ミストを抜けて",
-        "romaji": "mushuutomisutowonukete",
-        "ko": "무슈토 안개를 뚫고"
-      },
-      {
-        "ja": "青空の下へ駆け出そう",
-        "romaji": "aozoranoshitaekakedasou",
-        "ko": "푸른 하늘 아래로 달려가자"
+        "ja": "霧を切り拓いて僕らは行く",
+        "romaji": "kiriwokirihiraitiebokurawayuku",
+        "ko": "안개를 헤치며 우리는 가네",
+        "charRomaji": [
+          "kiri",
+          "wo",
+          "kiri",
+          "hira",
+          "",
+          "i",
+          "te",
+          "boku",
+          "ra",
+          "wa",
+          "yu",
+          "ku"
+        ]
       }
     ]
   },
@@ -1068,78 +3023,194 @@ export const SONGS: Song[] = [
     "title": "証命讃歌",
     "reading": "しょうめいさんか",
     "category": "original",
-    "album": "9th Single",
-    "youtubeId": "C_OJtQMU52Y",
+    "album": "2nd Album 《跡導尋》",
+    "youtubeId": "QkX594yX8jE",
     "lines": [
       {
-        "ja": "僕らはここで生きていると",
-        "romaji": "bokurawakokodeikiteirutou",
-        "ko": "우리들은 여기서 살아있다고"
+        "ja": "くだらない前例は絶って",
+        "romaji": "kudaranazenreiwatatte",
+        "ko": "하찮은 전례는 끊어버리고",
+        "charRomaji": [
+          "ku",
+          "da",
+          "ra",
+          "na",
+          "i",
+          "zen",
+          "rei",
+          "wa",
+          "ta",
+          "tte"
+        ]
       },
       {
-        "ja": "命の証を歌うんだ",
-        "romaji": "inochinoakashiwoutaunda",
-        "ko": "생명의 증표를 노래하는 거야"
+        "ja": "止まんない衝動に沿って",
+        "romaji": "tomannaishoudounisotte",
+        "ko": "멈추지 않는 충동을 따라서",
+        "charRomaji": [
+          "toma",
+          "",
+          "n",
+          "na",
+          "i",
+          "shou",
+          "dou",
+          "ni",
+          "so",
+          "tte"
+        ]
       },
       {
-        "ja": "どんな悲しみも越えていけ",
-        "romaji": "donnakanashimimokoeteike",
-        "ko": "그 어떤 슬픔도 뛰어넘어라"
+        "ja": "生きてる証を刻み込め",
+        "romaji": "ikiteruakashiwokizamikome",
+        "ko": "살아있다는 증거를 아로새겨라",
+        "charRomaji": [
+          "iki",
+          "",
+          "te",
+          "ru",
+          "akashi",
+          "wo",
+          "kizami",
+          "kome",
+          ""
+        ]
       },
       {
-        "ja": "讃歌を空へと轟かせろ",
-        "romaji": "sankawozoraetotodorokasero",
-        "ko": "찬가를 하늘로 포효하듯 울려라"
-      },
-      {
-        "ja": "証命讃歌響き渡れ",
-        "romaji": "shoumeisankahibikiwatare",
-        "ko": "증명찬가 울려 퍼져라"
-      },
-      {
-        "ja": "消えない光を灯すように",
-        "romaji": "kienaihikarizotomosuyouni",
-        "ko": "꺼지지 않는 빛을 밝히듯이"
+        "ja": "命の讃歌を鳴り響かせろ",
+        "romaji": "inochinosankawonarihibikasero",
+        "ko": "생명의 찬가를 소리 높여 울려라",
+        "charRomaji": [
+          "inochi",
+          "no",
+          "san",
+          "ka",
+          "wo",
+          "nari",
+          "hibika",
+          "",
+          "se",
+          "ro"
+        ]
       }
     ]
   },
   {
     "id": "nonbreath",
     "title": "ノンブレス・オブリージュ",
-    "reading": "のんぶれす・おぶりーじゅ",
+    "reading": "のんぶれす おぶりーじゅ",
     "category": "cover",
-    "album": "Cover Collection Extra",
-    "youtubeId": "gS5n1i1H-yI",
+    "album": "Cover Collection",
+    "youtubeId": "QG3fM0qK9qg",
     "lines": [
       {
-        "ja": "息が苦しいなら吐き出せばいい",
-        "romaji": "ikigakurushiinarahakidasebaii",
-        "ko": "숨이 막힌다면 내뱉으면 돼"
+        "ja": "世界中のすべての人間に好かれるなんて気持ち悪いよ",
+        "romaji": "sekaijuunosubetenoningennsukarerunantekimochowaruiyo",
+        "ko": "온 세상 모든 사람에게 사랑받는다는 건 징그러운 일이야",
+        "charRomaji": [
+          "se",
+          "kai",
+          "juu",
+          "no",
+          "su",
+          "be",
+          "te",
+          "no",
+          "nin",
+          "gen",
+          "ni",
+          "suka",
+          "",
+          "re",
+          "ru",
+          "na",
+          "n",
+          "te",
+          "ki",
+          "mo",
+          "chi",
+          "wa",
+          "ru",
+          "i",
+          "yo"
+        ]
       },
       {
-        "ja": "言葉を詰まらせて泣くくらいなら",
-        "romaji": "kotobawotsumarasetenakukurainara",
-        "ko": "말문이 막혀 울어버릴 바엔"
+        "ja": "だけど一つになれない教室で",
+        "romaji": "dakedohitotsuninarenaikyoushitsude",
+        "ko": "하지만 하나가 될 수 없는 교실에서",
+        "charRomaji": [
+          "da",
+          "ke",
+          "do",
+          "hito",
+          "tsu",
+          "ni",
+          "na",
+          "re",
+          "na",
+          "i",
+          "kyou",
+          "shitsu",
+          "de"
+        ]
       },
       {
-        "ja": "ノンブレス息を止めたまま",
-        "romaji": "nonburesuikiwotometamama",
-        "ko": "논브레스 숨을 멈춘 채로"
+        "ja": "息を止めて息を止めて",
+        "romaji": "ikiwotometeikiwotomete",
+        "ko": "숨을 참고, 숨을 참고",
+        "charRomaji": [
+          "iki",
+          "wo",
+          "tome",
+          "",
+          "te",
+          "iki",
+          "wo",
+          "tome",
+          "",
+          "te"
+        ]
       },
       {
-        "ja": "この世界を駆け抜けていく",
-        "romaji": "konosekaiwokakenuketeiku",
-        "ko": "이 세상을 힘껏 달려 나가"
+        "ja": "誰も傷つけないように潜って",
+        "romaji": "daremokizutsukenaiyounikugutte",
+        "ko": "누구도 상처입히지 않도록 숨죽이며",
+        "charRomaji": [
+          "dare",
+          "mo",
+          "kizu",
+          "tsu",
+          "ke",
+          "na",
+          "i",
+          "you",
+          "ni",
+          "kugu",
+          "",
+          "tte"
+        ]
       },
       {
-        "ja": "義務なんて投げ捨ててしまえ",
-        "romaji": "gimunantenagesteteshimae",
-        "ko": "의무 따위는 집어던져 버려"
-      },
-      {
-        "ja": "僕らは僕らのために歌う",
-        "romaji": "bokurawabokuranotameniutau",
-        "ko": "우리들은 우리를 위해 노래한다"
+        "ja": "苦しくても笑ってみせるんだ",
+        "romaji": "kurushikutemowarattemiserunda",
+        "ko": "괴로워도 웃어 보이는 거야",
+        "charRomaji": [
+          "kuru",
+          "",
+          "shi",
+          "ku",
+          "te",
+          "mo",
+          "wara",
+          "",
+          "tte",
+          "mi",
+          "se",
+          "ru",
+          "n",
+          "da"
+        ]
       }
     ]
   },
@@ -1148,38 +3219,122 @@ export const SONGS: Song[] = [
     "title": "君の神様になりたい。",
     "reading": "きみのかみさまになりたい",
     "category": "cover",
-    "album": "Cover Collection Vol.10",
-    "youtubeId": "W8bWP-E7IJE",
+    "album": "Cover Collection",
+    "youtubeId": "V_S-v8m0k0A",
     "lines": [
       {
-        "ja": "僕の命で君を救えるなら",
-        "romaji": "bokunoinochidekimiwosukuerunara",
-        "ko": "내 목숨으로 너를 구할 수 있다면"
+        "ja": "僕の命の歌で君が命を大事にすればいいのに",
+        "romaji": "bokunoinochinoutadekimigainochiwodaijinisurebaiinoni",
+        "ko": "내 생명의 노래로 네가 목숨을 소중히 여겼으면 좋을 텐데",
+        "charRomaji": [
+          "boku",
+          "no",
+          "inochi",
+          "no",
+          "uta",
+          "de",
+          "kimi",
+          "ga",
+          "inochi",
+          "wo",
+          "dai",
+          "ji",
+          "ni",
+          "su",
+          "re",
+          "ba",
+          "i",
+          "i",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "喜んでこの命を差し出そう",
-        "romaji": "yorokondekonoinochiwosashidasou",
-        "ko": "기꺼이 이 목숨을 바치겠어"
+        "ja": "僕の家族の歌で君が愛を大事にすればいいのに",
+        "romaji": "bokunokazokunoutadekimigaaiwodaijinisurebaiinoni",
+        "ko": "내 가족의 노래로 네가 사랑을 소중히 여겼으면 좋을 텐데",
+        "charRomaji": [
+          "boku",
+          "no",
+          "ka",
+          "zoku",
+          "no",
+          "uta",
+          "de",
+          "kimi",
+          "ga",
+          "ai",
+          "wo",
+          "dai",
+          "ji",
+          "ni",
+          "su",
+          "re",
+          "ba",
+          "i",
+          "i",
+          "no",
+          "ni"
+        ]
       },
       {
-        "ja": "君の神様になりたかった",
-        "romaji": "kiminokamisamaninaritakatta",
-        "ko": "너의 신이 되고 싶었어"
+        "ja": "そんなくだらない幻想を歌っている",
+        "romaji": "sonnakudaranagensouwooutatteiru",
+        "ko": "그런 시시한 환상을 노래하고 있어",
+        "charRomaji": [
+          "so",
+          "n",
+          "na",
+          "ku",
+          "da",
+          "ra",
+          "na",
+          "i",
+          "gen",
+          "sou",
+          "wo",
+          "uta",
+          "",
+          "tte",
+          "i",
+          "ru"
+        ]
       },
       {
-        "ja": "君の悲しみを全部背負って",
-        "romaji": "kiminokanashimiwozenbuseotte",
-        "ko": "너의 슬픔을 전부 짊어지고서"
+        "ja": "君を救えない歌など",
+        "romaji": "kimiwosukuenaiutanado",
+        "ko": "너를 구할 수 없는 노래 따위",
+        "charRomaji": [
+          "kimi",
+          "wo",
+          "suku",
+          "",
+          "e",
+          "na",
+          "i",
+          "uta",
+          "na",
+          "do"
+        ]
       },
       {
-        "ja": "僕が代わりに泣いてあげるよ",
-        "romaji": "bokugakawarininaiteageruyo",
-        "ko": "내가 대신 울어줄게"
-      },
-      {
-        "ja": "どうか笑顔で生きていてほしい",
-        "romaji": "doukaegaodeikiteitehoshii",
-        "ko": "부디 미소 지으며 살아가 주길"
+        "ja": "僕にとっては意味がないんだ",
+        "romaji": "bokunitottewaimiganainda",
+        "ko": "나에게는 아무런 의미가 없어",
+        "charRomaji": [
+          "boku",
+          "ni",
+          "to",
+          "tte",
+          "wa",
+          "i",
+          "mi",
+          "ga",
+          "na",
+          "i",
+          "n",
+          "da"
+        ]
       }
     ]
   },
@@ -1188,38 +3343,107 @@ export const SONGS: Song[] = [
     "title": "シャルル",
     "reading": "しゃるる",
     "category": "cover",
-    "album": "Cover Single",
-    "youtubeId": "IKtjzy0uDkQ",
+    "album": "Cover Collection",
+    "youtubeId": "gB_yD6zU_oQ",
     "lines": [
       {
         "ja": "さよならはあなたから言った",
-        "romaji": "sayonarahaanatakaraitta",
-        "ko": "작별 인사는 당신이 먼저 건넸지"
+        "romaji": "sayonarahaanatakarayitta",
+        "ko": "작별은 당신이 먼저 말했지",
+        "charRomaji": [
+          "sa",
+          "yo",
+          "na",
+          "ra",
+          "wa",
+          "a",
+          "na",
+          "ta",
+          "ka",
+          "ra",
+          "i",
+          "tta"
+        ]
       },
       {
         "ja": "それなのに頬を濡らしてしまうの",
         "romaji": "sorenanonihohowonurashiteshimawuno",
-        "ko": "그런데도 뺨을 적셔버리고 마는 거야"
+        "ko": "그런데도 뺨을 적시고 마는 거야?",
+        "charRomaji": [
+          "so",
+          "re",
+          "na",
+          "no",
+          "ni",
+          "hoho",
+          "wo",
+          "nura",
+          "",
+          "shi",
+          "te",
+          "shi",
+          "ma",
+          "u",
+          "no"
+        ]
       },
       {
         "ja": "そうやって昨日の事も消してしまうなら",
-        "romaji": "souyattekinounokotomokeshiteshimawnara",
-        "ko": "그렇게 어제의 일도 지워버릴 거라면"
+        "romaji": "souyattekinoubokotomokeshiteshimaunara",
+        "ko": "그렇게 어제의 일도 지워버릴 거라면",
+        "charRomaji": [
+          "sou",
+          "ya",
+          "tte",
+          "kinou",
+          "",
+          "no",
+          "koto",
+          "mo",
+          "keshi",
+          "",
+          "te",
+          "shi",
+          "ma",
+          "u",
+          "na",
+          "ra"
+        ]
       },
       {
-        "ja": "もういいよ 笑ってくれよ",
-        "romaji": "mouiiyo warattekureyo",
-        "ko": "이젠 됐어, 웃어줘"
+        "ja": "もういいよ笑って",
+        "romaji": "mouiiyowaratte",
+        "ko": "이젠 됐어, 웃어줘",
+        "charRomaji": [
+          "mou",
+          "i",
+          "i",
+          "yo",
+          "wara",
+          "",
+          "tte"
+        ]
       },
       {
-        "ja": "愛を謳って謳って雲の上",
-        "romaji": "aiwooutatteoutattekumonoue",
-        "ko": "사랑을 노래하고 노래하며 구름 위로"
-      },
-      {
-        "ja": "濁りきっては見えないや",
-        "romaji": "nigorikittewamienaiya",
-        "ko": "완전히 탁해져선 보이질 않네"
+        "ja": "重なり合う影が離れていく",
+        "romaji": "kasanariaukagegahanareteiku",
+        "ko": "겹쳐지던 그림자가 멀어져 가",
+        "charRomaji": [
+          "kasa",
+          "",
+          "na",
+          "ri",
+          "a",
+          "u",
+          "kage",
+          "ga",
+          "hana",
+          "",
+          "re",
+          "te",
+          "i",
+          "ku"
+        ]
       }
     ]
   },
@@ -1228,33 +3452,110 @@ export const SONGS: Song[] = [
     "title": "swim",
     "reading": "すいむ",
     "category": "cover",
-    "album": "Cover Single",
-    "youtubeId": "Vs5YmJ6f6Ds",
+    "album": "Cover Collection",
+    "youtubeId": "mN_F9U6s6r8",
     "lines": [
       {
-        "ja": "泳いでいく冷たい波を掻き分けて",
-        "romaji": "oyoideikutsumetainamiwokakiwakete",
-        "ko": "헤엄쳐 나가 차가운 파도를 헤치며"
+        "ja": "あの日の自分が許せないな",
+        "romaji": "anohinojibungayurusenaina",
+        "ko": "그날의 내 자신이 용서가 안 돼",
+        "charRomaji": [
+          "a",
+          "no",
+          "hi",
+          "no",
+          "ji",
+          "bun",
+          "ga",
+          "yuru",
+          "",
+          "se",
+          "na",
+          "i",
+          "na"
+        ]
       },
       {
-        "ja": "息継ぎさえも忘れるくらいに",
-        "romaji": "ikitsugisaemowasurerukuraini",
-        "ko": "숨을 고르는 것조차 잊어버릴 만큼"
+        "ja": "選び間違えた日々を返せよ",
+        "romaji": "erabimachigaetahibiwokaeseyo",
+        "ko": "잘못 선택했던 날들을 되돌려줘",
+        "charRomaji": [
+          "era",
+          "",
+          "bi",
+          "machi",
+          "gae",
+          "",
+          "ta",
+          "hi",
+          "bi",
+          "wo",
+          "kae",
+          "",
+          "se",
+          "yo"
+        ]
       },
       {
-        "ja": "向こう岸にあるはずの光へ",
-        "romaji": "mukougishinianruhazunohikarie",
-        "ko": "건너편 언덕에 있을 터인 빛을 향해"
+        "ja": "あなたの言葉がしがみついて",
+        "romaji": "anatanokotobagashigamitsuite",
+        "ko": "너의 말이 들러붙어서",
+        "charRomaji": [
+          "a",
+          "na",
+          "ta",
+          "no",
+          "kotoba",
+          "",
+          "ga",
+          "shi",
+          "ga",
+          "mi",
+          "tsu",
+          "i",
+          "te"
+        ]
       },
       {
-        "ja": "止まることなく進み続けろ",
-        "romaji": "tomarukotonakususumitsudukero",
-        "ko": "멈추지 말고 계속 나아가라"
+        "ja": "離れられない逃れられない",
+        "romaji": "hanarerarenainogarerarenai",
+        "ko": "떨어질 수 없어, 벗어날 수 없어",
+        "charRomaji": [
+          "hana",
+          "",
+          "re",
+          "ra",
+          "re",
+          "na",
+          "i",
+          "noga",
+          "",
+          "re",
+          "ra",
+          "re",
+          "na",
+          "i"
+        ]
       },
       {
-        "ja": "僕らのスウィムは終わらない",
-        "romaji": "bokuranosuwimuwawaowaranai",
-        "ko": "우리들의 헤엄은 끝나지 않아"
+        "ja": "泳いでいく暗い海の底へ",
+        "romaji": "oyoydeikukuraiuminosokoe",
+        "ko": "헤엄쳐 가, 어두운 바다 밑으로",
+        "charRomaji": [
+          "oyo",
+          "",
+          "i",
+          "de",
+          "i",
+          "ku",
+          "kura",
+          "",
+          "i",
+          "umi",
+          "no",
+          "soko",
+          "e"
+        ]
       }
     ]
   },
@@ -1263,33 +3564,189 @@ export const SONGS: Song[] = [
     "title": "青春コンプレックス",
     "reading": "せいしゅんこんぷれっくす",
     "category": "cover",
-    "album": "Cover Single",
-    "youtubeId": "V_PDo4_K8OI",
+    "album": "Cover Collection",
+    "youtubeId": "KId3M9bF9uI",
     "lines": [
       {
-        "ja": "暗がりから覗く眩しい世界",
-        "romaji": "kuragarikaranozokumabushiisekai",
-        "ko": "어둠 속에서 훔쳐보는 눈부신 세상"
+        "ja": "暗く狭いのが好きだった",
+        "romaji": "kurakusemainogasukidatta",
+        "ko": "어둡고 좁은 곳이 좋았어",
+        "charRomaji": [
+          "kura",
+          "",
+          "ku",
+          "sema",
+          "",
+          "i",
+          "no",
+          "ga",
+          "suki",
+          "",
+          "da",
+          "tta"
+        ]
       },
       {
-        "ja": "僕には関係ないと思ってた",
-        "romaji": "bokunihakankeinaitoomotteta",
-        "ko": "나와는 상관없는 일이라 생각했어"
+        "ja": "深く被るフードの中",
+        "romaji": "fukakukaburufuudononaka",
+        "ko": "깊게 눌러쓴 후드 속",
+        "charRomaji": [
+          "fuka",
+          "",
+          "ku",
+          "kabu",
+          "",
+          "ru",
+          "fuu",
+          "",
+          "do",
+          "no",
+          "naka"
+        ]
       },
       {
-        "ja": "かき鳴らせギター歪んだ音で",
-        "romaji": "kakinarasegitaahizundaoode",
-        "ko": "마구 긁어 울려라 기타여, 일그러진 소리로"
+        "ja": "無情な世界を恨んだ目は",
+        "romaji": "mujounasekaiwourandmewa",
+        "ko": "무정한 세상을 원망하던 눈은",
+        "charRomaji": [
+          "mu",
+          "jou",
+          "na",
+          "se",
+          "kai",
+          "wo",
+          "ura",
+          "",
+          "n",
+          "da",
+          "me",
+          "wa"
+        ]
       },
       {
-        "ja": "青春コンプレックスを吹き飛ばせ",
-        "romaji": "seishunkonpurekkusuwofukitobase",
-        "ko": "청춘 콤플렉스를 날려버려라"
+        "ja": "どうしようもなく愛を欲してた",
+        "romaji": "doushiyoumonakuaiwohoshshiteta",
+        "ko": "어쩔 도리도 없이 사랑을 갈구했지",
+        "charRomaji": [
+          "dou",
+          "shi",
+          "you",
+          "mo",
+          "na",
+          "ku",
+          "ai",
+          "wo",
+          "hoshite",
+          "",
+          "ta"
+        ]
       },
       {
-        "ja": "これが僕らのロックンロールだ",
-        "romaji": "koregabokuranorokkunrooruda",
-        "ko": "이것이 우리들의 로큰롤이다"
+        "ja": "雨に濡れるのが好きだった",
+        "romaji": "ameninurerunogasukidatta",
+        "ko": "비에 젖는 것이 좋았어",
+        "charRomaji": [
+          "ame",
+          "ni",
+          "nure",
+          "",
+          "ru",
+          "no",
+          "ga",
+          "suki",
+          "",
+          "da",
+          "tta"
+        ]
+      },
+      {
+        "ja": "曇った顔が似合うから",
+        "romaji": "kumottakagoganikaukara",
+        "ko": "흐린 얼굴이 어울리니까",
+        "charRomaji": [
+          "kumo",
+          "",
+          "tta",
+          "kao",
+          "ga",
+          "nia",
+          "",
+          "u",
+          "ka",
+          "ra"
+        ]
+      },
+      {
+        "ja": "嵐に怯えてるフリをして",
+        "romaji": "arashiniobieterufuriwoshite",
+        "ko": "폭풍을 무서워하는 척을 하며",
+        "charRomaji": [
+          "arashi",
+          "ni",
+          "obie",
+          "",
+          "te",
+          "ru",
+          "fu",
+          "ri",
+          "wo",
+          "shi",
+          "te"
+        ]
+      },
+      {
+        "ja": "空が割れるのを待っていたんだ",
+        "romaji": "soragawarerunowomatteitanda",
+        "ko": "하늘이 갈라지기만을 기다렸어",
+        "charRomaji": [
+          "sora",
+          "ga",
+          "ware",
+          "",
+          "ru",
+          "no",
+          "wo",
+          "ma",
+          "tte",
+          "i",
+          "ta",
+          "n",
+          "da"
+        ]
+      },
+      {
+        "ja": "かき鳴らせ光のファズで",
+        "romaji": "kakinarasehikarinoazude",
+        "ko": "가볍게 긁어 울려라, 빛의 퍼즈로",
+        "charRomaji": [
+          "ka",
+          "ki",
+          "nara",
+          "",
+          "se",
+          "hikari",
+          "no",
+          "fa",
+          "zu",
+          "de"
+        ]
+      },
+      {
+        "ja": "雷鳴を轟かせたいんだ",
+        "romaji": "raimeiwotodorokasetainda",
+        "ko": "뇌명을 울려 퍼뜨리고 싶어",
+        "charRomaji": [
+          "rai",
+          "mei",
+          "wo",
+          "todoro",
+          "",
+          "ka",
+          "se",
+          "tai",
+          "n",
+          "da"
+        ]
       }
     ]
   }

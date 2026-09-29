@@ -19,7 +19,7 @@ interface UserStats {
 
 export default function MygoTypingPage() {
   const [selectedSongId, setSelectedSongId] = useState<string>(SONGS[0].id);
-  const [categoryFilter, setCategoryFilter] = useState<'all' | 'original' | 'cover' | 'mv'>('all');
+  const [categoryFilter, setCategoryFilter] = useState<'all' | 'original' | 'cover'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
   // Feature: Toggle Korean Lyrics Translation
@@ -34,6 +34,9 @@ export default function MygoTypingPage() {
   const [correctKeystrokes, setCorrectKeystrokes] = useState(0);
   const [isShaking, setIsShaking] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+
+  // Slide Animation State: Outgoing line for smooth slide-up exit
+  const [outgoingLine, setOutgoingLine] = useState<SongLine | null>(null);
 
   // Time & Speed Tracking
   const [isPlaying, setIsPlaying] = useState(false);
@@ -115,6 +118,7 @@ export default function MygoTypingPage() {
     if (targetSongId) setSelectedSongId(targetSongId);
     setCurrentLineIndex(0);
     setCurrentCharIndex(0);
+    setOutgoingLine(null);
     setTypedHistory('');
     setMissCount(0);
     setTotalKeystrokes(0);
@@ -200,8 +204,13 @@ export default function MygoTypingPage() {
 
         // Check if line finished
         if (nextIndex >= targetRomaji.length) {
-          // Move to next line
           if (currentLineIndex + 1 < song.lines.length) {
+            // Trigger smooth slide-up transition
+            setOutgoingLine(currentLine);
+            setTimeout(() => {
+              setOutgoingLine(null);
+            }, 260);
+
             setCurrentLineIndex(prev => prev + 1);
             setCurrentCharIndex(0);
             setTypedHistory('');
@@ -237,6 +246,7 @@ export default function MygoTypingPage() {
     currentLineIndex,
     targetRomaji,
     song,
+    currentLine,
     correctKeystrokes,
     totalKeystrokes,
     saveStats,
@@ -256,18 +266,38 @@ export default function MygoTypingPage() {
     return Math.round((userStats.totalKeystrokes / userStats.totalTimeSeconds) * 60);
   }, [userStats]);
 
-  // Progress Ratio of Current Line (for syncing Japanese character color)
-  const lineProgressRatio = useMemo(() => {
-    if (!targetRomaji || targetRomaji.length === 0) return 0;
-    return currentCharIndex / targetRomaji.length;
-  }, [currentCharIndex, targetRomaji]);
+  // Precise Per-Character Glow Sync Mapping
+  const jaCharRanges = useMemo(() => {
+    if (!currentLine) return [];
+    const chars = currentLine.ja.split('');
+    const ranges: { char: string; start: number; end: number }[] = [];
+    let offset = 0;
 
-  // Filtered Song List
+    if (currentLine.charRomaji && currentLine.charRomaji.length === chars.length) {
+      for (let i = 0; i < chars.length; i++) {
+        const ro = currentLine.charRomaji[i];
+        const start = offset;
+        const end = offset + ro.length;
+        ranges.push({ char: chars[i], start, end });
+        offset = end;
+      }
+    } else {
+      // Proportional fallback
+      const totalLen = targetRomaji.length || 1;
+      for (let i = 0; i < chars.length; i++) {
+        const start = Math.floor((i / chars.length) * totalLen);
+        const end = Math.floor(((i + 1) / chars.length) * totalLen);
+        ranges.push({ char: chars[i], start, end });
+      }
+    }
+    return ranges;
+  }, [currentLine, targetRomaji]);
+
+  // Filtered Song List (Only All, Original, Cover)
   const filteredSongs = useMemo(() => {
     return SONGS.filter(s => {
       if (categoryFilter === 'original' && s.category !== 'original') return false;
       if (categoryFilter === 'cover' && s.category !== 'cover') return false;
-      if (categoryFilter === 'mv' && !s.youtubeId) return false;
       if (searchQuery.trim()) {
         const q = searchQuery.toLowerCase();
         return s.title.toLowerCase().includes(q) || s.reading.toLowerCase().includes(q) || s.album.toLowerCase().includes(q);
@@ -301,82 +331,66 @@ export default function MygoTypingPage() {
           </div>
         </div>
 
-        <div className="typing-nav-right">
-          {/* Korean Lyrics Toggle Checkbox */}
-          <label className="korean-toggle-label" title="韓国語訳の表示・非表示を切り替えます">
+        {/* Korean Translation Toggle Switch */}
+        <div className="typing-toggle-wrapper">
+          <label className="korean-toggle-label">
             <input
               type="checkbox"
               checked={showKorean}
               onChange={toggleKorean}
               className="korean-toggle-checkbox"
             />
-            <span className="toggle-switch-ui" />
-            <span className="toggle-text">🇰🇷 韓国語訳 (한글 가사)</span>
+            <span className="korean-toggle-switch"></span>
+            <span className="korean-toggle-text">한국어 가사 번역</span>
           </label>
-
-          <div className="career-stat-chip">
-            <span className="label">生涯平均打鍵:</span>
-            <strong className="value">{careerAvgCpm > 0 ? `${careerAvgCpm} CPM` : '未記録'}</strong>
-          </div>
-
-          <button
-            type="button"
-            className="typing-restart-btn"
-            onClick={() => resetGame()}
-            title="リセットして最初から (Esc)"
-          >
-            🔄 最初から
-          </button>
         </div>
       </header>
 
-      {/* Main Layout: Left Typing & Video / Right Song Selector */}
+      {/* Main Layout Grid */}
       <div className="typing-layout-grid">
-        {/* Left Column: Game Area */}
-        <section className="typing-main-column">
-          {/* Real-time HUD Dashboard */}
+        {/* Left Column: Player & Game Arena */}
+        <section className="typing-arena-column">
+          {/* Dashboard HUD */}
           <div className="typing-hud">
-            <div className="hud-metric">
-              <span className="hud-label">リアルタイム打鍵数</span>
-              <div className="hud-val-group">
-                <strong className="hud-value neon-cyan">{currentCpm}</strong>
-                <span className="hud-unit">CPM (打/分)</span>
+            <div className="hud-card cpm-card">
+              <span className="hud-label">リアルタイム打鍵速度</span>
+              <div className="hud-value-row">
+                <span className="hud-number">{currentCpm}</span>
+                <span className="hud-unit">CPM</span>
               </div>
+              <span className="hud-sub">最高: {peakCpm} CPM</span>
             </div>
-            <div className="hud-metric">
-              <span className="hud-label">正確性 (Accuracy)</span>
-              <div className="hud-val-group">
-                <strong className={`hud-value ${accuracy >= 95 ? 'neon-green' : accuracy >= 85 ? 'neon-amber' : 'neon-rose'}`}>
-                  {accuracy}%
-                </strong>
-                <span className="hud-unit">({missCount} 誤打)</span>
+
+            <div className="hud-card acc-card">
+              <span className="hud-label">正確率 (Accuracy)</span>
+              <div className="hud-value-row">
+                <span className="hud-number">{accuracy}%</span>
               </div>
+              <span className="hud-sub">ミス: {missCount}回</span>
             </div>
-            <div className="hud-metric">
-              <span className="hud-label">最高打鍵 / 経過時間</span>
-              <div className="hud-val-group">
-                <strong className="hud-value text-white">{peakCpm}</strong>
-                <span className="hud-unit">最高 | {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}</span>
+
+            <div className="hud-card time-card">
+              <span className="hud-label">経過時間</span>
+              <div className="hud-value-row">
+                <span className="hud-number">
+                  {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}
+                </span>
               </div>
+              <span className="hud-sub">{isPlaying ? '🔥 演奏中' : '準備完了'}</span>
             </div>
-            <div className="hud-metric">
-              <span className="hud-label">進捗 (Progress)</span>
-              <div className="hud-val-group">
-                <strong className="hud-value neon-purple">{progressPct}%</strong>
-                <span className="hud-unit">{currentLineIndex + 1}/{song.lines.length} 行</span>
+
+            <div className="hud-card prog-card">
+              <span className="hud-label">進行状況</span>
+              <div className="hud-value-row">
+                <span className="hud-number">{progressPct}%</span>
+              </div>
+              <div className="progress-bar-bg">
+                <div className="progress-bar-fill" style={{ width: `${progressPct}%` }} />
               </div>
             </div>
           </div>
 
-          {/* Progress Bar */}
-          <div className="typing-progress-track">
-            <div
-              className="typing-progress-fill"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
-
-          {/* YouTube Video Section (Always Available & Auto-Looping) */}
+          {/* YouTube MV / Audio Player */}
           {song.youtubeId && (
             <div className="typing-video-wrapper">
               <iframe
@@ -389,31 +403,46 @@ export default function MygoTypingPage() {
             </div>
           )}
 
-          {/* Lyrics Typing Display Area */}
+          {/* Lyrics Typing Display Area with Slide Up Animation */}
           <div className={`typing-display-box ${isShaking ? 'shake-animation' : ''}`}>
-            {currentLine ? (
-              <div className="typing-line-active">
-                {/* Japanese Original Characters with Real-Time Typing Color Sync */}
+            {/* Outgoing Line (Sliding Out Upwards) */}
+            {outgoingLine && (
+              <div className="typing-line-active slide-out-up">
                 <div className="lyrics-ja-container">
-                  {(() => {
-                    const jaChars = currentLine.ja.split('');
-                    const completedJaCount = Math.round(lineProgressRatio * jaChars.length);
+                  {outgoingLine.ja.split('').map((char, i) => (
+                    <span key={i} className="ja-char completed">{char}</span>
+                  ))}
+                </div>
+                {showKorean && outgoingLine.ko && (
+                  <div className="lyrics-ko-text">{outgoingLine.ko}</div>
+                )}
+                <div className="lyrics-romaji-track">
+                  {outgoingLine.romaji.split('').map((char, idx) => (
+                    <span key={idx} className="romaji-char completed">{char}</span>
+                  ))}
+                </div>
+              </div>
+            )}
 
-                    return jaChars.map((char, i) => {
-                      let statusClass = 'ja-char pending';
-                      if (i < completedJaCount) {
-                        statusClass = 'ja-char completed';
-                      } else if (i === completedJaCount && lineProgressRatio > 0 && lineProgressRatio < 1) {
-                        statusClass = 'ja-char current';
-                      }
+            {/* Current Active Line (Sliding In From Bottom) */}
+            {currentLine ? (
+              <div key={currentLineIndex} className="typing-line-active slide-in-up">
+                {/* Japanese Characters with 100% Precise Glow Sync */}
+                <div className="lyrics-ja-container">
+                  {jaCharRanges.map((r, i) => {
+                    let statusClass = 'ja-char pending';
+                    if (currentCharIndex >= r.end && r.end > 0) {
+                      statusClass = 'ja-char completed';
+                    } else if (currentCharIndex >= r.start) {
+                      statusClass = 'ja-char current';
+                    }
 
-                      return (
-                        <span key={i} className={statusClass}>
-                          {char}
-                        </span>
-                      );
-                    });
-                  })()}
+                    return (
+                      <span key={i} className={statusClass}>
+                        {r.char}
+                      </span>
+                    );
+                  })}
                 </div>
 
                 {/* Optional Korean Translation */}
@@ -423,7 +452,7 @@ export default function MygoTypingPage() {
                   </div>
                 )}
 
-                {/* Romaji Letters with Active Highlight */}
+                {/* Romaji Letters Track */}
                 <div className="lyrics-romaji-track">
                   {targetRomaji.split('').map((char, idx) => {
                     let charStatus = 'pending';
@@ -446,27 +475,6 @@ export default function MygoTypingPage() {
                 <p className="text-muted">準備完了。キーを押してスタート！</p>
               </div>
             )}
-
-            {/* Next Line Preview */}
-            {currentLineIndex + 1 < song.lines.length && (
-              <div className="typing-line-preview">
-                <div className="preview-content">
-                  <span className="preview-label">NEXT:</span>
-                  <span className="preview-text">{song.lines[currentLineIndex + 1].ja}</span>
-                  {showKorean && song.lines[currentLineIndex + 1].ko && (
-                    <span className="preview-ko">({song.lines[currentLineIndex + 1].ko})</span>
-                  )}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* User Guide Hint */}
-          <div className="typing-guide-box">
-            <p className="guide-text">
-              💡 <strong>操作方法:</strong> キーボードでローマ字をタイピングすると、<strong>上の日本語の漢字や仮名もリアルタイムに色が染まっていきます！</strong>
-              右上のチェックボックスで<strong>韓国語訳(한글 가사)</strong>の表示も自由に切り替えられます。
-            </p>
           </div>
         </section>
 
@@ -483,7 +491,7 @@ export default function MygoTypingPage() {
             />
           </div>
 
-          {/* Category Tabs */}
+          {/* Category Tabs: All / Original / Cover */}
           <div className="song-tabs">
             <button
               type="button"
@@ -506,13 +514,6 @@ export default function MygoTypingPage() {
             >
               カバー
             </button>
-            <button
-              type="button"
-              className={`song-tab ${categoryFilter === 'mv' ? 'active' : ''}`}
-              onClick={() => setCategoryFilter('mv')}
-            >
-              🎥 動画あり
-            </button>
           </div>
 
           {/* Song Card List */}
@@ -529,7 +530,7 @@ export default function MygoTypingPage() {
                 >
                   <div className="song-card-header">
                     <span className="song-name">{s.title}</span>
-                    {s.youtubeId && <span className="mv-badge">🎥 動画あり</span>}
+                    <span className="category-badge">{s.category === 'original' ? 'オリジナル' : 'カバー'}</span>
                   </div>
                   <div className="song-card-sub">
                     <span className="song-reading">{s.reading}</span>
@@ -600,21 +601,19 @@ export default function MygoTypingPage() {
                 className="modal-btn-retry"
                 onClick={() => resetGame()}
               >
-                🔄 もう一度挑戦
+                もう一度挑戦
               </button>
-              {(() => {
-                const currentIndex = SONGS.findIndex(s => s.id === song.id);
-                const nextSong = SONGS[(currentIndex + 1) % SONGS.length];
-                return (
-                  <button
-                    type="button"
-                    className="modal-btn-next"
-                    onClick={() => resetGame(nextSong.id)}
-                  >
-                    次の曲へ ({nextSong.title}) →
-                  </button>
-                );
-              })()}
+              <button
+                type="button"
+                className="modal-btn-next"
+                onClick={() => {
+                  const currentIndex = SONGS.findIndex(s => s.id === song.id);
+                  const nextSong = SONGS[(currentIndex + 1) % SONGS.length];
+                  resetGame(nextSong.id);
+                }}
+              >
+                次の曲へ →
+              </button>
             </div>
           </div>
         </div>
