@@ -1425,16 +1425,9 @@ footer {
 }
 
 .shake-animation {
-  animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
   border-color: #f43f5e !important;
-  box-shadow: 0 0 25px rgba(244, 63, 94, 0.4) !important;
-}
-
-@keyframes shake {
-  10%, 90% { transform: translate3d(-2px, 0, 0); }
-  20%, 80% { transform: translate3d(3px, 0, 0); }
-  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
-  40%, 60% { transform: translate3d(4px, 0, 0); }
+  box-shadow: 0 0 25px rgba(244, 63, 94, 0.45) !important;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
 }
 
 /* Korean Toggle Switch */
@@ -1570,11 +1563,11 @@ footer {
 }
 
 .ja-char.current {
-  color: #fbbf24;
-  text-shadow: 0 0 16px rgba(251, 191, 36, 0.95), 0 0 28px rgba(245, 158, 11, 0.6);
-  border-bottom: 3px solid #fbbf24;
+  color: #ffffff;
+  text-shadow: 0 0 12px #38bdf8;
+  border-bottom: 2px solid #38bdf8;
   padding-bottom: 2px;
-  animation: pulse-current-char 0.8s infinite alternate;
+  animation: pulse-ja 0.8s infinite alternate;
 }
 
 .ja-char.pending {
@@ -1582,9 +1575,9 @@ footer {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes pulse-current-char {
-  0% { transform: scale(1); filter: drop-shadow(0 0 6px #fbbf24); }
-  100% { transform: scale(1.08); filter: drop-shadow(0 0 16px #f59e0b); }
+@keyframes pulse-ja {
+  0% { filter: drop-shadow(0 0 4px #38bdf8); }
+  100% { filter: drop-shadow(0 0 12px #38bdf8); }
 }
 
 /* Korean Lyrics Text */
@@ -1625,10 +1618,10 @@ footer {
 
 .romaji-char.current {
   color: #ffffff;
-  background: rgba(251, 191, 36, 0.25);
-  border-bottom: 3px solid #fbbf24;
+  background: rgba(56, 189, 248, 0.3);
+  border-bottom: 3px solid #38bdf8;
   border-radius: 2px;
-  text-shadow: 0 0 10px rgba(251, 191, 36, 0.8);
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.9);
   animation: pulse-cursor 0.8s infinite alternate;
 }
 
@@ -1637,8 +1630,8 @@ footer {
 }
 
 @keyframes pulse-cursor {
-  0% { border-color: #fbbf24; background: rgba(251, 191, 36, 0.35); }
-  100% { border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.1); }
+  0% { border-color: #38bdf8; background: rgba(56, 189, 248, 0.4); }
+  100% { border-color: transparent; background: transparent; }
 }
 
 /* Sidebar */

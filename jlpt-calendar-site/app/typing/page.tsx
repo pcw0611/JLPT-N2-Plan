@@ -269,6 +269,9 @@ export default function MygoTypingPage() {
       const remaining = s.targetRomaji.substring(currentPos);
       const expectedChar = remaining[0];
 
+      // Flexible Romaji Matching Logic:
+      let matchedLength = 0;
+
       // Handle Space gracefully: match if expected, otherwise silently ignore (zero miss/zero shake)
       if (pressedChar === ' ') {
         if (expectedChar === ' ') {
@@ -277,9 +280,6 @@ export default function MygoTypingPage() {
           return;
         }
       }
-
-      // Flexible Romaji Matching Logic:
-      let matchedLength = 0;
 
       // 1. Direct Exact Match
       if (pressedChar === expectedChar) {
