@@ -291,53 +291,63 @@ export default function MygoTypingPage() {
       if (pressedChar === expectedChar) {
         matchedLength = 1;
       }
-      // 2. 'si' typed when target is 'shi' (skip 'h')
+      // 2. Flexible 'n' / 'nn':
+      // Single 'n' typed when target has 'nn' before consonant
+      else if (remaining.startsWith('n') && remaining.length > 1 && pressedChar === remaining[1] && !/[aeiouy]/i.test(remaining[1])) {
+        matchedLength = 2; // Consume the skipped 'n' and the pressed consonant!
+      }
+      else if (remaining.startsWith('nn') && pressedChar === remaining[2] && remaining[2]) {
+        matchedLength = 3;
+      }
+      // Tolerate redundant second 'n' after 'n' without penalty
+      else if (pressedChar === 'n' && s.typedHistory.endsWith('n')) {
+        return; // gracefully absorb extra 'n'
+      }
+      // 3. 'si' typed when target is 'shi' (skip 'h')
       else if (remaining.startsWith('shi') && pressedChar === 's') {
         matchedLength = 1;
       } else if (remaining.startsWith('hi') && pressedChar === 'i') {
         matchedLength = 2;
       }
-      // 3. 'shi' typed when target is 'si'
+      // 4. 'shi' typed when target is 'si'
       else if (remaining.startsWith('si') && pressedChar === 's') {
         matchedLength = 1;
       } else if (remaining.startsWith('i') && pressedChar === 'h') {
         return; // tolerate 'h' without error
       }
-      // 4. 'ti' typed when target is 'chi'
+      // 5. 'ti' typed when target is 'chi'
       else if (remaining.startsWith('chi') && pressedChar === 't') {
         matchedLength = 2;
       }
-      // 5. 'tu' typed when target is 'tsu'
+      // 6. 'tu' typed when target is 'tsu'
       else if (remaining.startsWith('tsu') && pressedChar === 't') {
         matchedLength = 1;
       } else if (remaining.startsWith('su') && pressedChar === 'u') {
         matchedLength = 2;
       }
-      // 6. 'fu' <-> 'hu'
+      // 7. 'fu' <-> 'hu'
       else if (remaining.startsWith('fu') && pressedChar === 'h') {
         matchedLength = 1;
       } else if (remaining.startsWith('hu') && pressedChar === 'f') {
         matchedLength = 1;
       }
-      // 7. 'ji' <-> 'zi'
+      // 8. 'ji' <-> 'zi'
       else if (remaining.startsWith('ji') && pressedChar === 'z') {
         matchedLength = 1;
       } else if (remaining.startsWith('zi') && pressedChar === 'j') {
         matchedLength = 1;
       }
-      // 8. 'o' typed when target is 'wo' (particle を)
+      // 9. 'o' typed when target is 'wo' (particle を)
       else if (remaining.startsWith('wo') && pressedChar === 'o') {
         matchedLength = 2;
+      } else if (remaining.startsWith('o') && pressedChar === 'w') {
+        return; // tolerate 'w' when typing 'wo' for 'o'
       }
-      // 9. 'wa' <-> 'ha' (particle は)
+      // 10. 'wa' <-> 'ha' (particle は)
       else if (remaining.startsWith('ha') && pressedChar === 'w') {
         matchedLength = 1;
       } else if (remaining.startsWith('wa') && pressedChar === 'h') {
         matchedLength = 1;
-      }
-      // 10. Single 'n' typed for 'nn' when followed by consonant
-      else if (remaining.startsWith('nn') && pressedChar === remaining[2] && remaining[2]) {
-        matchedLength = 3;
       }
 
       if (matchedLength > 0) {
@@ -646,10 +656,12 @@ export default function MygoTypingPage() {
                 <div className="lyrics-ja-container">
                   {jaCharRanges.map((r, i) => {
                     let statusClass = 'ja-char pending';
-                    if (currentCharIndex >= r.end && r.end > 0) {
+                    if (currentCharIndex >= r.end && (r.end > 0 || (r.start === r.end && currentCharIndex > 0))) {
                       statusClass = 'ja-char completed';
-                    } else if (currentCharIndex >= r.start) {
+                    } else if (currentCharIndex >= r.start && currentCharIndex < r.end) {
                       statusClass = 'ja-char current';
+                    } else if (currentCharIndex >= r.end) {
+                      statusClass = 'ja-char completed';
                     }
 
                     return (
