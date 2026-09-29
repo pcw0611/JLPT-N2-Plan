@@ -1426,9 +1426,16 @@ footer {
 }
 
 .shake-animation {
+  animation: shake 0.22s cubic-bezier(.36,.07,.19,.97) both;
   border-color: #f43f5e !important;
   box-shadow: 0 0 25px rgba(244, 63, 94, 0.45) !important;
-  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-3px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-5px, 0, 0); }
+  40%, 60% { transform: translate3d(5px, 0, 0); }
 }
 
 /* Korean Toggle Switch */
