@@ -11181,7 +11181,7 @@ export const SONGS: Song[] = [
     "reading": "しょうめいさんか",
     "category": "original",
     "album": "Digital Single (2026), 3rd Album『致並跡』",
-    "youtubeId": "QCIKugYJKPQ",
+    "youtubeId": "C_OJtQMU52Y",
     "parts": [
       {
         "id": "part1",
@@ -11465,7 +11465,7 @@ export const SONGS: Song[] = [
     "reading": "のんぶれす おぶりーじゅ",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "lw7pcm1W5tw",
+    "youtubeId": "cdVOlppDwFo",
     "parts": [
       {
         "id": "part1",
@@ -12475,7 +12475,7 @@ export const SONGS: Song[] = [
     "reading": "すいむ",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "447cO8LTq9A",
+    "youtubeId": "AEZ7suhPML0",
     "parts": [
       {
         "id": "part1",
@@ -14149,7 +14149,7 @@ export const SONGS: Song[] = [
     "reading": "かこをくらう",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "tMKrECxEpq8",
+    "youtubeId": "ZwDx3We2qL8",
     "parts": [
       {
         "id": "part1",
@@ -14628,7 +14628,7 @@ export const SONGS: Song[] = [
     "reading": "はるかかなた",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "nsw-ddleSII",
+    "youtubeId": "qti2NHsaCu4",
     "parts": [
       {
         "id": "part1",
@@ -16502,7 +16502,7 @@ export const SONGS: Song[] = [
     "reading": "パメラ",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "-DvNu0Y-81g",
+    "youtubeId": "wbbcQokPgLM",
     "parts": [
       {
         "id": "part1",
@@ -16841,7 +16841,7 @@ export const SONGS: Song[] = [
     "reading": "にそくほこう",
     "category": "cover",
     "album": "1st LIVE「僕たちじゃなくなる日」",
-    "youtubeId": "cFbWl2aPdTk",
+    "youtubeId": "q7lbzmTw8RM",
     "parts": [
       {
         "id": "part1",
@@ -17784,7 +17784,7 @@ export const SONGS: Song[] = [
     "reading": "ぼくは",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "8L5cQlXMpeY",
+    "youtubeId": "xMyMt9UJaN4",
     "parts": [
       {
         "id": "part1",
@@ -18113,7 +18113,7 @@ export const SONGS: Song[] = [
     "reading": "ただしくなれない",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "258qUAI7rck",
+    "youtubeId": "azECAVAWRxI",
     "parts": [
       {
         "id": "part1",
@@ -18438,7 +18438,7 @@ export const SONGS: Song[] = [
     "reading": "もしもいのちがえがけたら",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "I0kytvnHG-Q",
+    "youtubeId": "uVGIGeTPQVM",
     "parts": [
       {
         "id": "part1",
@@ -18754,7 +18754,7 @@ export const SONGS: Song[] = [
     "reading": "シンデレラボーイ",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "IVbY5edMfCA",
+    "youtubeId": "SKyIh9ddvck",
     "parts": [
       {
         "id": "part1",
@@ -19095,7 +19095,7 @@ export const SONGS: Song[] = [
     "reading": "ティーンエイジライオット",
     "category": "cover",
     "album": "ガルパ カバーコレクション",
-    "youtubeId": "lwolyOIcCQg",
+    "youtubeId": "Hm90Otiz8u8",
     "parts": [
       {
         "id": "part1",
@@ -19775,7 +19775,7 @@ export const SONGS: Song[] = [
     "reading": "らえいせん",
     "category": "original",
     "album": "3rd Album『致並跡』",
-    "youtubeId": "QCIKugYJKPQ",
+    "youtubeId": "4as52H1v3XI",
     "parts": [
       {
         "id": "part1",
@@ -20103,7 +20103,7 @@ export const SONGS: Song[] = [
     "reading": "せいこうそう",
     "category": "original",
     "album": "3rd Album『致並跡』",
-    "youtubeId": "QCIKugYJKPQ",
+    "youtubeId": "9mYY2ZU5-HU",
     "parts": [
       {
         "id": "part1",
@@ -20435,7 +20435,7 @@ export const SONGS: Song[] = [
     "reading": "そききょく",
     "category": "original",
     "album": "3rd Album『致並跡』",
-    "youtubeId": "QCIKugYJKPQ",
+    "youtubeId": "uZSAArx6jKM",
     "parts": [
       {
         "id": "part1",
@@ -20771,7 +20771,7 @@ export const SONGS: Song[] = [
     "reading": "そうこんしゅつ",
     "category": "original",
     "album": "3rd Album『致並跡』",
-    "youtubeId": "QCIKugYJKPQ",
+    "youtubeId": "LBM-sIZGJlo",
     "parts": [
       {
         "id": "part1",
