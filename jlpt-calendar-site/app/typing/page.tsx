@@ -22,6 +22,9 @@ export default function MygoTypingPage() {
   const [categoryFilter, setCategoryFilter] = useState<'all' | 'original' | 'cover' | 'mv'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Feature: Toggle Korean Lyrics Translation
+  const [showKorean, setShowKorean] = useState<boolean>(true);
+
   // Typing Game State
   const [currentLineIndex, setCurrentLineIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
@@ -50,16 +53,33 @@ export default function MygoTypingPage() {
 
   const song = useMemo(() => SONGS.find(s => s.id === selectedSongId) || SONGS[0], [selectedSongId]);
 
-  // Load stats from localStorage
+  // Load stats & preferences from localStorage
   useEffect(() => {
     try {
-      const saved = localStorage.getItem('mygo_typing_stats');
-      if (saved) {
-        setUserStats(JSON.parse(saved));
+      const savedStats = localStorage.getItem('mygo_typing_stats');
+      if (savedStats) {
+        setUserStats(JSON.parse(savedStats));
+      }
+      const savedShowKo = localStorage.getItem('mygo_typing_show_ko');
+      if (savedShowKo !== null) {
+        setShowKorean(savedShowKo === 'true');
       }
     } catch {
       // ignore
     }
+  }, []);
+
+  // Save Korean lyrics toggle preference
+  const toggleKorean = useCallback(() => {
+    setShowKorean(prev => {
+      const next = !prev;
+      try {
+        localStorage.setItem('mygo_typing_show_ko', String(next));
+      } catch {
+        // ignore
+      }
+      return next;
+    });
   }, []);
 
   // Save stats to localStorage
@@ -169,7 +189,7 @@ export default function MygoTypingPage() {
 
       const expectedChar = targetRomaji[currentCharIndex];
 
-      // Check if match (also allow space skipping if next is space and user pressed space or next char)
+      // Check if match
       if (pressedChar === expectedChar) {
         // Correct Keypress
         const nextIndex = currentCharIndex + 1;
@@ -236,6 +256,12 @@ export default function MygoTypingPage() {
     return Math.round((userStats.totalKeystrokes / userStats.totalTimeSeconds) * 60);
   }, [userStats]);
 
+  // Progress Ratio of Current Line (for syncing Japanese character color)
+  const lineProgressRatio = useMemo(() => {
+    if (!targetRomaji || targetRomaji.length === 0) return 0;
+    return currentCharIndex / targetRomaji.length;
+  }, [currentCharIndex, targetRomaji]);
+
   // Filtered Song List
   const filteredSongs = useMemo(() => {
     return SONGS.filter(s => {
@@ -274,11 +300,25 @@ export default function MygoTypingPage() {
             <h1 className="typing-title">{song.title} <small>({song.reading})</small></h1>
           </div>
         </div>
+
         <div className="typing-nav-right">
+          {/* Korean Lyrics Toggle Checkbox */}
+          <label className="korean-toggle-label" title="韓国語訳の表示・非表示を切り替えます">
+            <input
+              type="checkbox"
+              checked={showKorean}
+              onChange={toggleKorean}
+              className="korean-toggle-checkbox"
+            />
+            <span className="toggle-switch-ui" />
+            <span className="toggle-text">🇰🇷 韓国語訳 (한글 가사)</span>
+          </label>
+
           <div className="career-stat-chip">
             <span className="label">生涯平均打鍵:</span>
             <strong className="value">{careerAvgCpm > 0 ? `${careerAvgCpm} CPM` : '未記録'}</strong>
           </div>
+
           <button
             type="button"
             className="typing-restart-btn"
@@ -336,12 +376,12 @@ export default function MygoTypingPage() {
             />
           </div>
 
-          {/* YouTube Video Section (if available) */}
+          {/* YouTube Video Section (Always Available & Auto-Looping) */}
           {song.youtubeId && (
             <div className="typing-video-wrapper">
               <iframe
-                src={`https://www.youtube-nocookie.com/embed/${song.youtubeId}?enablejsapi=1&rel=0&modestbranding=1`}
-                title={`${song.title} - Official Video`}
+                src={`https://www.youtube-nocookie.com/embed/${song.youtubeId}?loop=1&playlist=${song.youtubeId}&enablejsapi=1&rel=0&modestbranding=1`}
+                title={`${song.title} - Video (Loop)`}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="typing-youtube-frame"
@@ -353,10 +393,35 @@ export default function MygoTypingPage() {
           <div className={`typing-display-box ${isShaking ? 'shake-animation' : ''}`}>
             {currentLine ? (
               <div className="typing-line-active">
-                {/* Japanese Original Characters */}
-                <div className="lyrics-ja-text">
-                  {currentLine.ja}
+                {/* Japanese Original Characters with Real-Time Typing Color Sync */}
+                <div className="lyrics-ja-container">
+                  {(() => {
+                    const jaChars = currentLine.ja.split('');
+                    const completedJaCount = Math.round(lineProgressRatio * jaChars.length);
+
+                    return jaChars.map((char, i) => {
+                      let statusClass = 'ja-char pending';
+                      if (i < completedJaCount) {
+                        statusClass = 'ja-char completed';
+                      } else if (i === completedJaCount && lineProgressRatio > 0 && lineProgressRatio < 1) {
+                        statusClass = 'ja-char current';
+                      }
+
+                      return (
+                        <span key={i} className={statusClass}>
+                          {char}
+                        </span>
+                      );
+                    });
+                  })()}
                 </div>
+
+                {/* Optional Korean Translation */}
+                {showKorean && currentLine.ko && (
+                  <div className="lyrics-ko-text">
+                    {currentLine.ko}
+                  </div>
+                )}
 
                 {/* Romaji Letters with Active Highlight */}
                 <div className="lyrics-romaji-track">
@@ -385,8 +450,13 @@ export default function MygoTypingPage() {
             {/* Next Line Preview */}
             {currentLineIndex + 1 < song.lines.length && (
               <div className="typing-line-preview">
-                <span className="preview-label">NEXT:</span>
-                <span className="preview-text">{song.lines[currentLineIndex + 1].ja}</span>
+                <div className="preview-content">
+                  <span className="preview-label">NEXT:</span>
+                  <span className="preview-text">{song.lines[currentLineIndex + 1].ja}</span>
+                  {showKorean && song.lines[currentLineIndex + 1].ko && (
+                    <span className="preview-ko">({song.lines[currentLineIndex + 1].ko})</span>
+                  )}
+                </div>
               </div>
             )}
           </div>
@@ -394,8 +464,8 @@ export default function MygoTypingPage() {
           {/* User Guide Hint */}
           <div className="typing-guide-box">
             <p className="guide-text">
-              💡 <strong>操作方法:</strong> 画面のローマ字に合わせてキーボードを英数字でタイピングしてください。
-              曲をYouTubeで再生しながらリズムに合わせて打つとより楽しく練習できます！
+              💡 <strong>操作方法:</strong> キーボードでローマ字をタイピングすると、<strong>上の日本語の漢字や仮名もリアルタイムに色が染まっていきます！</strong>
+              右上のチェックボックスで<strong>韓国語訳(한글 가사)</strong>の表示も自由に切り替えられます。
             </p>
           </div>
         </section>
@@ -441,7 +511,7 @@ export default function MygoTypingPage() {
               className={`song-tab ${categoryFilter === 'mv' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('mv')}
             >
-              🎥 MVあり
+              🎥 動画あり
             </button>
           </div>
 
@@ -459,7 +529,7 @@ export default function MygoTypingPage() {
                 >
                   <div className="song-card-header">
                     <span className="song-name">{s.title}</span>
-                    {s.youtubeId && <span className="mv-badge">🎥 MV</span>}
+                    {s.youtubeId && <span className="mv-badge">🎥 動画あり</span>}
                   </div>
                   <div className="song-card-sub">
                     <span className="song-reading">{s.reading}</span>
