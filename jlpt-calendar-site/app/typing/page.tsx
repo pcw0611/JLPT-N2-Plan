@@ -208,6 +208,7 @@ export default function MygoTypingPage() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const s = stateRef.current;
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
       if (s.showAllLyricsModal) {
         if (e.key === 'Escape') setShowAllLyricsModal(false);
         return;
@@ -265,24 +266,17 @@ export default function MygoTypingPage() {
         return;
       }
 
-      // If user pressed Space, allow skipping to next word/char
+      const remaining = s.targetRomaji.substring(currentPos);
+      const expectedChar = remaining[0];
+
+      // Handle Space gracefully: match if expected, otherwise silently ignore (zero miss/zero shake)
       if (pressedChar === ' ') {
-        let skipTo = currentPos;
-        while (skipTo < s.targetRomaji.length && /[a-z0-9]/i.test(s.targetRomaji[skipTo])) {
-          skipTo++;
-        }
-        while (skipTo < s.targetRomaji.length && !/[a-z0-9]/i.test(s.targetRomaji[skipTo])) {
-          skipTo++;
-        }
-        if (skipTo > currentPos && skipTo <= s.targetRomaji.length) {
-          setCurrentCharIndex(skipTo);
-          stateRef.current.currentCharIndex = skipTo;
+        if (expectedChar === ' ') {
+          matchedLength = 1;
+        } else {
           return;
         }
       }
-
-      const remaining = s.targetRomaji.substring(currentPos);
-      const expectedChar = remaining[0];
 
       // Flexible Romaji Matching Logic:
       let matchedLength = 0;

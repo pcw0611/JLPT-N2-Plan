@@ -44,7 +44,7 @@ export const SONGS: Song[] = [
         "lines": [
           {
             "ja": "交差点の真ん中急ぐ人に紛れて",
-            "romaji": "kousatennomannakaisoguninnimagirete",
+            "romaji": "kousatennomannakaisoguhitonimagirete",
             "ko": "교차로 한가운데 서두르는 사람들에 뒤섞여",
             "charRomaji": [
               "kou",
@@ -56,7 +56,7 @@ export const SONGS: Song[] = [
               "naka",
               "iso",
               "gu",
-              "nin",
+              "hito",
               "ni",
               "magi",
               "re",
@@ -2672,7 +2672,7 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "金輪際誰も知らない夜僕の夜前衛的シルエットダンス",
-            "romaji": "konrinzaidaremoshiranaiyorubokunoyazenmamorutekishiruettodansu",
+            "romaji": "konrinzaidaremoshiranaiyorubokunoyazeneitekishiruettodansu",
             "ko": "결코 그 누구도 알지 못하는 밤, 나의 밤, 전위적 실루엣 댄스",
             "charRomaji": [
               "ko",
@@ -2688,8 +2688,8 @@ export const SONGS: Song[] = [
               "boku",
               "no",
               "ya",
-              "zen",
-              "mamoru",
+              "z",
+              "enei",
               "teki",
               "shi",
               "ru",
@@ -2811,7 +2811,7 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "ビニール越しの空からこぼれ落ちる音響いて",
-            "romaji": "biniirukoshinoakarakoboreochiruonkyouite",
+            "romaji": "biniirukoshinosorakarakoboreochiruotohibiite",
             "ko": "비닐 너머의 하늘에서 흘러떨어지는 소리가 울려 퍼져",
             "charRomaji": [
               "bi",
@@ -2820,7 +2820,7 @@ export const SONGS: Song[] = [
               "ru",
               "ko",
               "shi",
-              "no",
+              "nosor",
               "a",
               "ka",
               "ra",
@@ -2830,8 +2830,8 @@ export const SONGS: Song[] = [
               "o",
               "chi",
               "ru",
-              "on",
-              "kyou",
+              "ot",
+              "ohibi",
               "i",
               "te"
             ]
@@ -3462,17 +3462,17 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "不器用で空回って傷つくことから逃げている",
-            "romaji": "bukiyoudekuukaittekizutsukukotokaranigeteiru",
+            "romaji": "bukiyoudekaramawatteikizutsukukotokaranigeteiru",
             "ko": "서툴고 헛돌기만 하며 상처받는 것으로부터 도망치고 있어",
             "charRomaji": [
               "bu",
               "ki",
               "you",
               "de",
-              "kuu",
-              "kai",
+              "kar",
+              "amawa",
               "t",
-              "te",
+              "tei",
               "kizu",
               "tsu",
               "ku",
@@ -3667,15 +3667,15 @@ export const SONGS: Song[] = [
         "lines": [
           {
             "ja": "人の顔色を窺いながら流されるままに衣食住",
-            "romaji": "ninnokaoirowokiinagaranagasarerumamaniishokujuu",
+            "romaji": "hitonokaoirowoukagainagaranagasarerumamaniishokujuu",
             "ko": "사람들의 눈치를 보며 휩쓸리는 대로 이어가는 의식주",
             "charRomaji": [
-              "nin",
+              "hito",
               "no",
               "kao",
               "iro",
               "wo",
-              "ki",
+              "ukaga",
               "i",
               "na",
               "ga",
@@ -4348,7 +4348,7 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "言葉になんてしたところで戸惑う人の目が怖かった",
-            "romaji": "kotobaninanteshitatokorodetomadouninnomegakowakatta",
+            "romaji": "kotobaninanteshitatokorodetomadouhitonomegakowakatta",
             "ko": "말로 해봤자 당혹스러워하는 사람들의 시선이 두려웠어",
             "charRomaji": [
               "ko",
@@ -4366,7 +4366,7 @@ export const SONGS: Song[] = [
               "to",
               "mado",
               "u",
-              "nin",
+              "hito",
               "no",
               "me",
               "ga",
@@ -4610,12 +4610,12 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "十分君はもう頑張ってる",
-            "romaji": "juubunkunhamouganbatteru",
+            "romaji": "juubunkimihamouganbatteru",
             "ko": "충분히 너는 이미 열심히 하고 있어",
             "charRomaji": [
               "ju",
               "ubun",
-              "kun",
+              "kimi",
               "ha",
               "mo",
               "u",
@@ -5051,14 +5051,14 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "心臓の音響かせて",
-            "romaji": "shinzounoonkyoukasete",
+            "romaji": "shinzounootohibikasete",
             "ko": "심장의 고동 소리를 울리며",
             "charRomaji": [
               "shin",
               "zou",
               "no",
-              "on",
-              "kyou",
+              "ot",
+              "ohibi",
               "ka",
               "se",
               "te"
@@ -5366,10 +5366,10 @@ export const SONGS: Song[] = [
         "lines": [
           {
             "ja": "悴んだ心ふるえる眼差し",
-            "romaji": "suindakokorofuruerumanazashi",
+            "romaji": "kajikandakokorofuruerumanazashi",
             "ko": "얼어붙은 마음, 떨리는 눈빛",
             "charRomaji": [
-              "sui",
+              "kajika",
               "n",
               "da",
               "kokoro",
@@ -7347,12 +7347,12 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "僕と君なのに叫びたい想いが重なる",
-            "romaji": "bokutokunnanonisakebitaiomoigaomonaru",
+            "romaji": "bokutokiminanonisakebitaiomoigakasanaru",
             "ko": "나와 너인데도 외치고 싶은 마음이 겹쳐져",
             "charRomaji": [
               "boku",
               "to",
-              "kun",
+              "kimi",
               "na",
               "no",
               "ni",
@@ -7363,7 +7363,7 @@ export const SONGS: Song[] = [
               "omo",
               "i",
               "ga",
-              "omo",
+              "kasa",
               "na",
               "ru"
             ]
@@ -8084,14 +8084,14 @@ export const SONGS: Song[] = [
         "lines": [
           {
             "ja": "幾重にも重なる想いの層を突き破り",
-            "romaji": "ikuenimoomonaruomoinosouwotsukiyaburi",
+            "romaji": "ikuenimokasanaruomoinosouwotsukiyaburi",
             "ko": "겹겹이 포개진 마음의 층을 뚫고서",
             "charRomaji": [
               "i",
               "kue",
               "ni",
               "mo",
-              "omo",
+              "kasa",
               "na",
               "ru",
               "omo",
@@ -12654,7 +12654,7 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "息を切らして笑い合える日まで",
-            "romaji": "ikiwokirashitewaraiaerunichimade",
+            "romaji": "ikiwokirashitewaraiaeruhimade",
             "ko": "숨을 헐떡이며 함께 마주 보고 웃을 날까지",
             "charRomaji": [
               "iki",
@@ -12667,8 +12667,8 @@ export const SONGS: Song[] = [
               "i",
               "a",
               "e",
-              "ru",
-              "nichi",
+              "r",
+              "uhi",
               "ma",
               "de"
             ]
@@ -15236,14 +15236,14 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "意地悪な人の空に",
-            "romaji": "ijiwarunaninnosorani",
+            "romaji": "ijiwarunahitonosorani",
             "ko": "심술궂은 사람들의 하늘에",
             "charRomaji": [
               "i",
               "ji",
               "waru",
               "na",
-              "nin",
+              "hito",
               "no",
               "sora",
               "ni"
@@ -16917,7 +16917,7 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "ねえママ僕好きな人が出来たんだ",
-            "romaji": "neemamabokusukinaningadekitanda",
+            "romaji": "neemamabokusukinahitogadekitanda",
             "ko": "있잖아 엄마, 나 좋아하는 사람이 생겼어요",
             "charRomaji": [
               "ne",
@@ -16928,7 +16928,7 @@ export const SONGS: Song[] = [
               "su",
               "ki",
               "na",
-              "nin",
+              "hito",
               "ga",
               "de",
               "ki",
@@ -18522,13 +18522,13 @@ export const SONGS: Song[] = [
           },
           {
             "ja": "大切な人を笑顔にするため",
-            "romaji": "taisetsunaninwoegaonisurutame",
+            "romaji": "taisetsunahitowoegaonisurutame",
             "ko": "소중한 사람을 웃게 만들기 위해",
             "charRomaji": [
               "tai",
               "setsu",
               "na",
-              "nin",
+              "hito",
               "wo",
               "e",
               "gao",
