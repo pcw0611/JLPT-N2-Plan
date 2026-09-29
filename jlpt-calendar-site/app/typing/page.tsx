@@ -171,23 +171,60 @@ export default function MygoTypingPage() {
     return currentLine.romaji.toLowerCase();
   }, [currentLine]);
 
-  // Key Event Listener
+  // Stable State Ref for 100% Leak-Free Single Keyboard Listener
+  const stateRef = useRef({
+    showAllLyricsModal,
+    isCompleted,
+    isPlaying,
+    currentCharIndex,
+    currentLineIndex,
+    targetRomaji,
+    song,
+    activePart,
+    currentLine,
+    correctKeystrokes,
+    totalKeystrokes,
+    saveStats,
+  });
+
+  useEffect(() => {
+    stateRef.current = {
+      showAllLyricsModal,
+      isCompleted,
+      isPlaying,
+      currentCharIndex,
+      currentLineIndex,
+      targetRomaji,
+      song,
+      activePart,
+      currentLine,
+      correctKeystrokes,
+      totalKeystrokes,
+      saveStats,
+    };
+  });
+
+  // Single Persistent Key Event Listener (Zero-Leak Guarantee)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (showAllLyricsModal) {
+      const s = stateRef.current;
+      if (s.showAllLyricsModal) {
         if (e.key === 'Escape') setShowAllLyricsModal(false);
         return;
       }
-      if (isCompleted) return;
+      if (s.isCompleted) return;
       if (e.ctrlKey || e.altKey || e.metaKey) return;
       if (e.key === 'Tab') return;
+      if (e.repeat) return; // Prevent key-hold flood
 
       // Handle Backspace
       if (e.key === 'Backspace') {
         e.preventDefault();
-        if (currentCharIndex > 0) {
-          setCurrentCharIndex(prev => prev - 1);
+        if (s.currentCharIndex > 0) {
+          const nextIdx = s.currentCharIndex - 1;
+          setCurrentCharIndex(nextIdx);
           setTypedHistory(prev => prev.slice(0, -1));
+          stateRef.current.currentCharIndex = nextIdx;
         }
         return;
       }
@@ -209,20 +246,21 @@ export default function MygoTypingPage() {
       e.preventDefault();
 
       // Start timer on first keypress
-      if (!isPlaying) {
+      if (!s.isPlaying) {
         setIsPlaying(true);
+        stateRef.current.isPlaying = true;
         startTimeRef.current = Date.now();
       }
 
-      if (!targetRomaji) return;
+      if (!s.targetRomaji) return;
 
       // Auto-skip any non-alphanumeric characters (spaces, quotes, dashes, etc.)
-      let currentPos = currentCharIndex;
-      while (currentPos < targetRomaji.length && !/[a-z0-9]/i.test(targetRomaji[currentPos])) {
+      let currentPos = s.currentCharIndex;
+      while (currentPos < s.targetRomaji.length && !/[a-z0-9]/i.test(s.targetRomaji[currentPos])) {
         currentPos++;
       }
 
-      if (currentPos >= targetRomaji.length) {
+      if (currentPos >= s.targetRomaji.length) {
         // Line already at end
         return;
       }
@@ -230,19 +268,20 @@ export default function MygoTypingPage() {
       // If user pressed Space, allow skipping to next word/char
       if (pressedChar === ' ') {
         let skipTo = currentPos;
-        while (skipTo < targetRomaji.length && /[a-z0-9]/i.test(targetRomaji[skipTo])) {
+        while (skipTo < s.targetRomaji.length && /[a-z0-9]/i.test(s.targetRomaji[skipTo])) {
           skipTo++;
         }
-        while (skipTo < targetRomaji.length && !/[a-z0-9]/i.test(targetRomaji[skipTo])) {
+        while (skipTo < s.targetRomaji.length && !/[a-z0-9]/i.test(s.targetRomaji[skipTo])) {
           skipTo++;
         }
-        if (skipTo > currentPos && skipTo <= targetRomaji.length) {
+        if (skipTo > currentPos && skipTo <= s.targetRomaji.length) {
           setCurrentCharIndex(skipTo);
+          stateRef.current.currentCharIndex = skipTo;
           return;
         }
       }
 
-      const remaining = targetRomaji.substring(currentPos);
+      const remaining = s.targetRomaji.substring(currentPos);
       const expectedChar = remaining[0];
 
       // Flexible Romaji Matching Logic:
@@ -256,26 +295,22 @@ export default function MygoTypingPage() {
       else if (remaining.startsWith('shi') && pressedChar === 's') {
         matchedLength = 1;
       } else if (remaining.startsWith('hi') && pressedChar === 'i') {
-        // user typed 's' then 'i' for 'shi' -> consume both 'h' and 'i'!
         matchedLength = 2;
       }
       // 3. 'shi' typed when target is 'si'
       else if (remaining.startsWith('si') && pressedChar === 's') {
         matchedLength = 1;
       } else if (remaining.startsWith('i') && pressedChar === 'h') {
-        // user typed 's' then 'h' for 'si' -> tolerate 'h' without error!
-        matchedLength = 0;
-        return;
+        return; // tolerate 'h' without error
       }
       // 4. 'ti' typed when target is 'chi'
       else if (remaining.startsWith('chi') && pressedChar === 't') {
-        matchedLength = 2; // consume 'ch' and expect 'i' next!
+        matchedLength = 2;
       }
       // 5. 'tu' typed when target is 'tsu'
       else if (remaining.startsWith('tsu') && pressedChar === 't') {
         matchedLength = 1;
       } else if (remaining.startsWith('su') && pressedChar === 'u') {
-        // user typed 't' then 'u' for 'tsu' -> consume 'su'!
         matchedLength = 2;
       }
       // 6. 'fu' <-> 'hu'
@@ -292,7 +327,7 @@ export default function MygoTypingPage() {
       }
       // 8. 'o' typed when target is 'wo' (particle を)
       else if (remaining.startsWith('wo') && pressedChar === 'o') {
-        matchedLength = 2; // consume both 'w' and 'o'
+        matchedLength = 2;
       }
       // 9. 'wa' <-> 'ha' (particle は)
       else if (remaining.startsWith('ha') && pressedChar === 'w') {
@@ -302,30 +337,36 @@ export default function MygoTypingPage() {
       }
       // 10. Single 'n' typed for 'nn' when followed by consonant
       else if (remaining.startsWith('nn') && pressedChar === remaining[2] && remaining[2]) {
-        // User pressed the next consonant directly, consume 'nn' and 1 char of next!
         matchedLength = 3;
       }
-
 
       if (matchedLength > 0) {
         let nextIndex = currentPos + matchedLength;
         // Auto-skip any following spaces or symbols
-        while (nextIndex < targetRomaji.length && !/[a-z0-9]/i.test(targetRomaji[nextIndex])) {
+        while (nextIndex < s.targetRomaji.length && !/[a-z0-9]/i.test(s.targetRomaji[nextIndex])) {
           nextIndex++;
         }
 
-        setCorrectKeystrokes(prev => prev + 1);
-        setTotalKeystrokes(prev => prev + 1);
+        const newCorrect = s.correctKeystrokes + 1;
+        const newTotal = s.totalKeystrokes + 1;
+        setCorrectKeystrokes(newCorrect);
+        setTotalKeystrokes(newTotal);
         setTypedHistory(prev => prev + pressedChar);
         setCurrentCharIndex(nextIndex);
 
+        stateRef.current.correctKeystrokes = newCorrect;
+        stateRef.current.totalKeystrokes = newTotal;
+        stateRef.current.currentCharIndex = nextIndex;
+
         // Check if line finished
-        if (nextIndex >= targetRomaji.length) {
-          if (currentLineIndex + 1 < activePart.lines.length) {
-            // Instantly advance to next line with 0ms delay!
-            setCurrentLineIndex(prev => prev + 1);
+        if (nextIndex >= s.targetRomaji.length) {
+          if (s.currentLineIndex + 1 < s.activePart.lines.length) {
+            const nextLineIdx = s.currentLineIndex + 1;
+            setCurrentLineIndex(nextLineIdx);
             setCurrentCharIndex(0);
             setTypedHistory('');
+            stateRef.current.currentLineIndex = nextLineIdx;
+            stateRef.current.currentCharIndex = 0;
             setIsLineEntering(true);
             setTimeout(() => {
               setIsLineEntering(false);
@@ -334,40 +375,33 @@ export default function MygoTypingPage() {
             // Completed Current Part!
             const now = Date.now();
             const timeSec = startTimeRef.current ? Math.max(1, Math.round((now - startTimeRef.current) / 1000)) : 1;
-            const finalCorrect = correctKeystrokes + 1;
-            const finalTotal = totalKeystrokes + 1;
+            const finalCorrect = newCorrect;
+            const finalTotal = newTotal;
             const finalCpm = Math.round((finalCorrect / timeSec) * 60);
             const accuracy = Math.round((finalCorrect / finalTotal) * 100);
 
             setIsPlaying(false);
             setIsCompleted(true);
-            saveStats(song.id, activePart.id, finalCpm, accuracy, timeSec, finalTotal, finalCorrect);
+            stateRef.current.isPlaying = false;
+            stateRef.current.isCompleted = true;
+            s.saveStats(s.song.id, s.activePart.id, finalCpm, accuracy, timeSec, finalTotal, finalCorrect);
           }
         }
       } else {
         // Miss / Typo
         setMissCount(prev => prev + 1);
         setTotalKeystrokes(prev => prev + 1);
+        stateRef.current.totalKeystrokes = s.totalKeystrokes + 1;
         setIsShaking(true);
         setTimeout(() => setIsShaking(false), 200);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
-  }, [
-    showAllLyricsModal,
-    isCompleted,
-    isPlaying,
-    currentCharIndex,
-    currentLineIndex,
-    targetRomaji,
-    song,
-    activePart,
-    currentLine,
-    correctKeystrokes,
-    totalKeystrokes,
-    saveStats,
-  ]);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   // Metrics
   const accuracy = totalKeystrokes > 0
