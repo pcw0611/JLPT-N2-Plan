@@ -105,8 +105,8 @@ export default function Home() {
           <h1>学習カレンダー</h1>
         </div>
         <div className="topbar-actions">
-          <a className="game-button" href="https://slay-the-jlpt.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="N2単語ゲームを新しいタブで開く">
-            <span aria-hidden="true">🎮</span> N2単語ゲーム <span aria-hidden="true">↗</span>
+          <a className="game-button typing-nav-btn" href="/typing" aria-label="MyGO!!!!! 歌詞タイピング練習を開く">
+            <span aria-hidden="true">⌨️</span> MyGO!!!!! タイピング <span aria-hidden="true">→</span>
           </a>
           <div className="exam-chips-group">
             <button

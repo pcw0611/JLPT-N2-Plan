@@ -6,6 +6,7 @@ dist/
 tmp/
 *.tgz
 *.tar.gz
+*.mp3
 .env
 .env.*
 .sync-secret

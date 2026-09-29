@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLPT N2 공식 문제집 제2집 청해 공식 원본 음원 플레이어</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    :root {
+      --bg: #090d16;
+      --card: #131b2e;
+      --card-border: #1e293b;
+      --accent: #38bdf8;
+      --accent-glow: rgba(56, 189, 248, 0.35);
+      --green: #4ade80;
+    }
+    body {
+      background: radial-gradient(circle at 50% 0%, #1e293b 0%, var(--bg) 70%);
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      min-height: 100vh;
+    }
+    .custom-scroll::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 99px;
+    }
+    .active-tab {
+      background: linear-gradient(135deg, #0284c7, #0369a1) !important;
+      color: #ffffff !important;
+      border-color: #38bdf8 !important;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.35);
+    }
+    .wrong-chip {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #fca5a5;
+    }
+  </style>
+</head>
+<body class="p-4 sm:p-8 antialiased">
+  <div class="max-w-5xl mx-auto space-y-6">
+
+    <!-- Top Navigation -->
+    <div class="flex items-center justify-between">
+      <a href="past-exams-portal.html" class="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-400 hover:text-white transition">
+        <span>← 기출문제 포털로 돌아가기</span>
+      </a>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        공식 음원 파일 다운로드 완료
+      </span>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-slate-900/90 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-2xl relative overflow-hidden">
+      <div class="absolute -right-10 -bottom-10 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="relative z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-bold border border-sky-500/20 mb-3">
+          🎧 JLPT Official Practice Workbook Vol.2 · Listening Audio
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black text-white tracking-tight">
+          JLPT N2 공식 문제집 제2집(公式問題集 第2集) 청해 공식 원본 음원
+        </h1>
+        <p class="text-slate-400 text-sm sm:text-base mt-2 leading-relaxed">
+          2026-09-20(일) 제1회 실전 모의고사(119점 달성)의 청해 영역 원본 음성입니다.<br class="hidden sm:inline" />
+          일본국제교류기금(JF) 및 일본국제교육지원협회(JEES) 공식 성우 녹음 원본 MP3 파일 5개와 대본·문제지 PDF를 제공합니다.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Player Card -->
+    <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl space-y-6">
+
+      <!-- Section Selection Tabs -->
+      <div>
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">대문항 선택 (문제 1 ~ 5)</label>
+        <div class="grid grid-cols-1 sm:grid-cols-5 gap-2.5" id="track-tabs">
+          <button type="button" onclick="selectTrack(0)" class="tab-btn px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-left transition hover:border-slate-500 flex flex-col justify-between">
+            <span class="text-xs text-slate-400">問題 1</span>
+            <strong class="text-sm font-bold text-white mt-1">課題理解</strong>
+            <span class="text-[11px] text-slate-400 mt-2">5문항 · 10.3 MB</span>
+          </button>
+          <button type="button" onclick="selectTrack(1)" class="tab-btn px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-left transition hover:border-slate-500 flex flex-col justify-between">
+            <span class="text-xs text-slate-400">問題 2</span>
+            <strong class="text-sm font-bold text-white mt-1">ポイント理解</strong>
+            <span class="text-[11px] text-slate-400 mt-2">6문항 · 13.2 MB</span>
+          </button>
+          <button type="button" onclick="selectTrack(2)" class="tab-btn px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-left transition hover:border-slate-500 flex flex-col justify-between">
+            <span class="text-xs text-slate-400">問題 3</span>
+            <strong class="text-sm font-bold text-white mt-1">概要理解</strong>
+            <span class="text-[11px] text-slate-400 mt-2">5문항 · 9.8 MB</span>
+          </button>
+          <button type="button" onclick="selectTrack(3)" class="tab-btn px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-left transition hover:border-slate-500 flex flex-col justify-between">
+            <span class="text-xs text-slate-400">問題 4</span>
+            <strong class="text-sm font-bold text-white mt-1">即時応答</strong>
+            <span class="text-[11px] text-slate-400 mt-2">12문항 · 7.8 MB</span>
+          </button>
+          <button type="button" onclick="selectTrack(4)" class="tab-btn px-4 py-3 rounded-xl border border-slate-700 bg-slate-800 text-left transition hover:border-slate-500 flex flex-col justify-between">
+            <span class="text-xs text-slate-400">問題 5</span>
+            <strong class="text-sm font-bold text-white mt-1">統合理解</strong>
+            <span class="text-[11px] text-slate-400 mt-2">4문항 · 8.4 MB</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Current Track Info Box -->
+      <div class="bg-slate-950/70 border border-slate-800/80 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span id="current-badge" class="px-2 py-0.5 rounded text-[11px] font-bold bg-sky-500/20 text-sky-300">問題 1</span>
+            <h2 id="current-title" class="text-lg font-bold text-white">課題理解 (5문항)</h2>
+          </div>
+          <p id="current-desc" class="text-xs sm:text-sm text-slate-400 mt-1">
+            질문과 상황을 먼저 듣고, 본문 대화를 들은 뒤 '앞으로 취할 행동'을 찾는 유형입니다.
+          </p>
+        </div>
+        <div class="text-right flex sm:flex-col items-center sm:items-end justify-between gap-1">
+          <span class="text-xs text-slate-500">재생 시간</span>
+          <span id="time-display" class="font-mono text-base font-bold text-sky-400">00:00 / 00:00</span>
+        </div>
+      </div>
+
+      <!-- Audio Element -->
+      <audio id="audio-player" preload="metadata" class="w-full hidden"></audio>
+
+      <!-- Player Progress Bar -->
+      <div class="space-y-1.5">
+        <input type="range" id="seek-bar" value="0" min="0" max="100" step="0.1"
+          class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-sky-400 focus:outline-none">
+        <div class="flex justify-between text-[11px] text-slate-500 font-mono">
+          <span id="time-current">00:00</span>
+          <span id="time-duration">--:--</span>
+        </div>
+      </div>
+
+      <!-- Player Controls -->
+      <div class="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-800">
+        <!-- Main Play/Pause & Skip Buttons -->
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="skip(-5)" title="5초 뒤로" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-sm font-bold flex items-center gap-1">
+            <span>⏪ 5초</span>
+          </button>
+          <button type="button" id="play-btn" onclick="togglePlay()" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-black text-sm transition shadow-lg shadow-sky-500/20 flex items-center gap-2">
+            <span id="play-icon">▶</span>
+            <span id="play-text">재생</span>
+          </button>
+          <button type="button" onclick="skip(5)" title="5초 앞으로" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 transition text-sm font-bold flex items-center gap-1">
+            <span>5초 ⏩</span>
+          </button>
+        </div>
+
+        <!-- Speed Selector -->
+        <div class="flex items-center gap-1.5 bg-slate-950 p-1 rounded-xl border border-slate-800">
+          <span class="text-xs text-slate-400 px-2 font-medium">배속</span>
+          <button type="button" onclick="setSpeed(0.8, this)" class="speed-btn px-2.5 py-1 text-xs rounded-lg font-bold text-slate-400 hover:text-white transition">0.8x</button>
+          <button type="button" onclick="setSpeed(1.0, this)" class="speed-btn active px-2.5 py-1 text-xs rounded-lg font-bold bg-slate-800 text-sky-400 transition">1.0x</button>
+          <button type="button" onclick="setSpeed(1.1, this)" class="speed-btn px-2.5 py-1 text-xs rounded-lg font-bold text-slate-400 hover:text-white transition">1.1x</button>
+          <button type="button" onclick="setSpeed(1.2, this)" class="speed-btn px-2.5 py-1 text-xs rounded-lg font-bold text-slate-400 hover:text-white transition">1.2x</button>
+          <button type="button" onclick="setSpeed(1.5, this)" class="speed-btn px-2.5 py-1 text-xs rounded-lg font-bold text-slate-400 hover:text-white transition">1.5x</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Official Documents & Error Review Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Official PDF Documents -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <span>📑 공식 원본 PDF 문서</span>
+          </h3>
+          <span class="text-xs text-slate-500">클릭하여 바로 열기</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          공식 웹사이트 원본 대본 및 문제지입니다. 음성을 들으며 스크립트와 정답을 함께 대조할 수 있습니다.
+        </p>
+
+        <div class="space-y-2.5">
+          <a href="../references/official_vol2_listening/N2_listening_script.pdf" target="_blank"
+            class="p-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 hover:border-slate-600 transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">📜</span>
+              <div>
+                <strong class="text-sm text-slate-200 group-hover:text-sky-300">청해 스크립트(대본) 전문 PDF</strong>
+                <span class="block text-[11px] text-slate-400 mt-0.5">화자별 대화 대본 및 질문 원문 (1.02 MB)</span>
+              </div>
+            </div>
+            <span class="text-xs text-sky-400 font-bold group-hover:translate-x-1 transition">열기 ↗</span>
+          </a>
+
+          <a href="../references/official_vol2_listening/N2_listening_problems.pdf" target="_blank"
+            class="p-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 hover:border-slate-600 transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">📝</span>
+              <div>
+                <strong class="text-sm text-slate-200 group-hover:text-sky-300">청해 문제지 원본 PDF</strong>
+                <span class="block text-[11px] text-slate-400 mt-0.5">실제 수험자용 시험 문제지 (1.40 MB)</span>
+              </div>
+            </div>
+            <span class="text-xs text-sky-400 font-bold group-hover:translate-x-1 transition">열기 ↗</span>
+          </a>
+
+          <a href="../references/official_vol2_listening/N2_answers.pdf" target="_blank"
+            class="p-3.5 rounded-xl border border-slate-700 bg-slate-800/80 hover:bg-slate-700 hover:border-slate-600 transition flex items-center justify-between group">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🎯</span>
+              <div>
+                <strong class="text-sm text-slate-200 group-hover:text-sky-300">공식 정답표 PDF</strong>
+                <span class="block text-[11px] text-slate-400 mt-0.5">공식 정답 번호표 (80 KB)</span>
+              </div>
+            </div>
+            <span class="text-xs text-sky-400 font-bold group-hover:translate-x-1 transition">열기 ↗</span>
+          </a>
+        </div>
+
+        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] text-slate-400">
+          <span class="font-bold text-slate-300">💡 파일 보관 폴더:</span><br />
+          <code class="text-sky-400 select-all">references/official_vol2_listening/</code>
+        </div>
+      </div>
+
+      <!-- 9/20 Exam Review Reference -->
+      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-6 shadow-xl space-y-4">
+        <div class="flex items-center justify-between">
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <span>🎯 9/20 모의고사 청해 오답 문항 체크</span>
+          </h3>
+          <span class="text-xs text-red-400 font-bold">오답 8문항 집중 복습</span>
+        </div>
+        <p class="text-xs text-slate-400">
+          9월 20일 실전 모의고사에서 오답이 발생했던 청해 8문항입니다. 실제 성우 음원으로 표현을 다시 확인해 보세요.
+        </p>
+
+        <div class="space-y-2 text-xs">
+          <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="wrong-chip px-1.5 py-0.5 rounded text-[10px] font-bold">Q76</span>
+              <span class="text-slate-300">問題1 (과제이해 1번) · 결석 시 과제 확인</span>
+            </div>
+            <button onclick="selectTrackAndPlay(0)" class="text-sky-400 font-bold hover:underline">問題1 재생</button>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="wrong-chip px-1.5 py-0.5 rounded text-[10px] font-bold">Q80</span>
+              <span class="text-slate-300">問題1 (과제이해 5번) · 우선 작업 순서</span>
+            </div>
+            <button onclick="selectTrackAndPlay(0)" class="text-sky-400 font-bold hover:underline">問題1 재생</button>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="wrong-chip px-1.5 py-0.5 rounded text-[10px] font-bold">Q90</span>
+              <span class="text-slate-300">問題3 (개요이해 4번) · 강연의 주제 파악</span>
+            </div>
+            <button onclick="selectTrackAndPlay(2)" class="text-sky-400 font-bold hover:underline">問題3 재생</button>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="wrong-chip px-1.5 py-0.5 rounded text-[10px] font-bold">Q94, 97, 99, 102</span>
+              <span class="text-slate-300">問題4 (즉시응답) · 경어 및 순간 반응 4문항</span>
+            </div>
+            <button onclick="selectTrackAndPlay(3)" class="text-sky-400 font-bold hover:underline">問題4 재생</button>
+          </div>
+
+          <div class="p-2.5 rounded-lg bg-slate-800/60 border border-slate-800 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="wrong-chip px-1.5 py-0.5 rounded text-[10px] font-bold">Q106</span>
+              <span class="text-slate-300">問題5 (통합이해 3번) · 2인 대화 조건 비교</span>
+            </div>
+            <button onclick="selectTrackAndPlay(4)" class="text-sky-400 font-bold hover:underline">問題5 재생</button>
+          </div>
+        </div>
+
+        <div class="pt-2 text-right">
+          <a href="n2-midterm-mock-exam-20260920.html" class="text-xs text-sky-400 hover:text-sky-300 font-bold">
+            9/20 시험 전체 문항 해설 보기 ➔
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    const TRACKS = [
+      {
+        badge: "問題 1",
+        title: "問題 1: 課題理解 (5문항)",
+        desc: "질문과 상황을 먼저 듣고, 본문 대화를 들은 뒤 취해야 할 행동을 고르는 유형입니다. (문제 1번~5번)",
+        local: "../references/official_vol2_listening/N2Q1_mondai1_kadai.mp3",
+        online: "https://www.jlpt.jp/samples/sample2018/mp3/N2Q1.mp3"
+      },
+      {
+        badge: "問題 2",
+        title: "問題 2: ポイント理解 (6문항)",
+        desc: "질문을 듣고, 문제지의 선택지를 읽을 시간(약 20초)이 주어진 후 대화를 듣고 핵심 포인트를 찾는 유형입니다. (문제 1번~6번)",
+        local: "../references/official_vol2_listening/N2Q2_mondai2_point.mp3",
+        online: "https://www.jlpt.jp/samples/sample2018/mp3/N2Q2.mp3"
+      },
+      {
+        badge: "問題 3",
+        title: "問題 3: 概要理解 (5문항)",
+        desc: "문제지에 아무것도 적혀 있지 않으며, 긴 이야기(강연/안내)의 전체적인 취지나 주제를 파악하는 유형입니다. (문제 1번~5번)",
+        local: "../references/official_vol2_listening/N2Q3_mondai3_gaiyou.mp3",
+        online: "https://www.jlpt.jp/samples/sample2018/mp3/N2Q3.mp3"
+      },
+      {
+        badge: "問題 4",
+        title: "問題 4: 即時応答 (12문항)",
+        desc: "짧은 한 문장의 말이나 질문을 듣고, 그에 대한 가장 적절한 즉각적인 응답을 3개 중에서 고르는 유형입니다. (문제 1번~12번)",
+        local: "../references/official_vol2_listening/N2Q4_mondai4_sokuji.mp3",
+        online: "https://www.jlpt.jp/samples/sample2018/mp3/N2Q4.mp3"
+      },
+      {
+        badge: "問題 5",
+        title: "問題 5: 統合理解 (4문항)",
+        desc: "두 사람이 복수의 옵션을 비교하거나 종합적인 결론을 도출하는 긴 대화를 듣고 종합적인 판단을 내리는 최고난도 유형입니다. (문제 1번~3번)",
+        local: "../references/official_vol2_listening/N2Q5_mondai5_tougou.mp3",
+        online: "https://www.jlpt.jp/samples/sample2018/mp3/N2Q5.mp3"
+      }
+    ];
+
+    let currentTrackIndex = 0;
+    const player = document.getElementById('audio-player');
+    const playBtn = document.getElementById('play-btn');
+    const playIcon = document.getElementById('play-icon');
+    const playText = document.getElementById('play-text');
+    const seekBar = document.getElementById('seek-bar');
+    const timeDisplay = document.getElementById('time-display');
+    const timeCurrent = document.getElementById('time-current');
+    const timeDuration = document.getElementById('time-duration');
+    const currentBadge = document.getElementById('current-badge');
+    const currentTitle = document.getElementById('current-title');
+    const currentDesc = document.getElementById('current-desc');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+
+    function formatTime(seconds) {
+      if (isNaN(seconds) || seconds < 0) return '00:00';
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }
+
+    function selectTrack(index, autoPlay = false) {
+      currentTrackIndex = index;
+      const track = TRACKS[index];
+
+      // Update UI elements
+      currentBadge.textContent = track.badge;
+      currentTitle.textContent = track.title;
+      currentDesc.textContent = track.desc;
+
+      tabBtns.forEach((btn, idx) => {
+        if (idx === index) {
+          btn.classList.add('active-tab');
+        } else {
+          btn.classList.remove('active-tab');
+        }
+      });
+
+      // Load audio source with fallback
+      player.src = track.local;
+      player.load();
+
+      player.onerror = () => {
+        // Fallback to online stream if local fails
+        if (player.src !== track.online) {
+          console.warn('Local audio load failed, falling back to jlpt.jp online stream...');
+          player.src = track.online;
+          player.load();
+        }
+      };
+
+      if (autoPlay) {
+        player.play().catch(e => console.log('Autoplay prevented:', e));
+      }
+      updatePlayButton();
+    }
+
+    function selectTrackAndPlay(index) {
+      selectTrack(index, true);
+    }
+
+    function togglePlay() {
+      if (player.paused) {
+        player.play().catch(e => console.log('Play prevented:', e));
+      } else {
+        player.pause();
+      }
+      updatePlayButton();
+    }
+
+    function updatePlayButton() {
+      if (player.paused) {
+        playIcon.textContent = '▶';
+        playText.textContent = '재생';
+        playBtn.classList.remove('bg-amber-400');
+        playBtn.classList.add('bg-sky-500');
+      } else {
+        playIcon.textContent = '⏸';
+        playText.textContent = '일시정지';
+        playBtn.classList.remove('bg-sky-500');
+        playBtn.classList.add('bg-amber-400');
+      }
+    }
+
+    function skip(seconds) {
+      player.currentTime = Math.max(0, Math.min(player.duration || 0, player.currentTime + seconds));
+    }
+
+    function setSpeed(rate, btn) {
+      player.playbackRate = rate;
+      document.querySelectorAll('.speed-btn').forEach(b => {
+        b.classList.remove('active', 'bg-slate-800', 'text-sky-400');
+        b.classList.add('text-slate-400');
+      });
+      btn.classList.add('active', 'bg-slate-800', 'text-sky-400');
+      btn.classList.remove('text-slate-400');
+    }
+
+    // Audio Event Listeners
+    player.addEventListener('timeupdate', () => {
+      if (player.duration) {
+        seekBar.value = (player.currentTime / player.duration) * 100;
+        timeCurrent.textContent = formatTime(player.currentTime);
+        timeDisplay.textContent = `${formatTime(player.currentTime)} / ${formatTime(player.duration)}`;
+      }
+    });
+
+    player.addEventListener('loadedmetadata', () => {
+      timeDuration.textContent = formatTime(player.duration);
+      timeDisplay.textContent = `${formatTime(player.currentTime)} / ${formatTime(player.duration)}`;
+    });
+
+    player.addEventListener('play', updatePlayButton);
+    player.addEventListener('pause', updatePlayButton);
+    player.addEventListener('ended', () => {
+      updatePlayButton();
+      // Auto move to next track if available
+      if (currentTrackIndex < TRACKS.length - 1) {
+        selectTrack(currentTrackIndex + 1, true);
+      }
+    });
+
+    seekBar.addEventListener('input', () => {
+      if (player.duration) {
+        player.currentTime = (seekBar.value / 100) * player.duration;
+      }
+    });
+
+    // Initialize with Track 0
+    selectTrack(0);
+  </script>
+</body>
+</html>
