@@ -1,0 +1,1056 @@
+{
+  "examDate": "2026-09-30",
+  "examType": "official_past_mock",
+  "examTitle": "2023年 第2回 (12月) JLPT N2 本試験 全領域 実戦模試 (102問)",
+  "provenanceNote": "출제 원안: 2023年 第2回 (12月) JLPT N2 本試験 원문 대조 / 실제 본시험 전문 성우 원음(영상 숨김 순수 청해) / 공식 정답 일치",
+  "testId": "official-past-202312-full-mock-20261004",
+  "totalQuestions": 102,
+  "correctCount": 51,
+  "wrongCount": 51,
+  "unknownCount": 0,
+  "unansweredCount": 0,
+  "accuracyPercent": 50,
+  "scoreScaledEstimate": 90,
+  "hasSectionalCutoffRisk": true,
+  "elapsedSeconds": 8788,
+  "sections": {
+    "vocab": {
+      "total": 32,
+      "correct": 16
+    },
+    "grammar": {
+      "total": 22,
+      "correct": 9
+    },
+    "reading": {
+      "total": 21,
+      "correct": 13
+    },
+    "listening": {
+      "total": 32,
+      "correct": 0
+    }
+  },
+  "questionsRecord": [
+    {
+      "id": 1,
+      "problemNo": "問題1",
+      "category": "어휘 → 언어지식 → 한자읽기",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 22,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 2,
+      "problemNo": "問題1",
+      "category": "어휘 → 언어지식 → 한자읽기",
+      "userAnswer": 1,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 55,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 3,
+      "problemNo": "問題1",
+      "category": "어휘 → 언어지식 → 한자읽기",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 7,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 4,
+      "problemNo": "問題1",
+      "category": "어휘 → 언어지식 → 한자읽기",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 36,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 5,
+      "problemNo": "問題1",
+      "category": "어휘 → 언어지식 → 한자읽기",
+      "userAnswer": 2,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 42,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 6,
+      "problemNo": "問題2",
+      "category": "어휘 → 언어지식 → 표기",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 26,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 7,
+      "problemNo": "問題2",
+      "category": "어휘 → 언어지식 → 표기",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 35,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 8,
+      "problemNo": "問題2",
+      "category": "어휘 → 언어지식 → 표기",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 58,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 9,
+      "problemNo": "問題2",
+      "category": "어휘 → 언어지식 → 표기",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 23,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 10,
+      "problemNo": "問題2",
+      "category": "어휘 → 언어지식 → 표기",
+      "userAnswer": 1,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 48,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 11,
+      "problemNo": "問題3",
+      "category": "어휘 → 언어지식 → 어형성",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 63,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 12,
+      "problemNo": "問題3",
+      "category": "어휘 → 언어지식 → 어형성",
+      "userAnswer": 2,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 50,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 13,
+      "problemNo": "問題3",
+      "category": "어휘 → 언어지식 → 어형성",
+      "userAnswer": 3,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 33,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 14,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 1,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 84,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 15,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 0,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 34,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 16,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 100,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 17,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 85,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 18,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 41,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 19,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 70,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 20,
+      "problemNo": "問題4",
+      "category": "어휘 → 언어지식 → 문맥 규정",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 43,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 21,
+      "problemNo": "問題5",
+      "category": "어휘 → 언어지식 → 유의표현",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 72,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 22,
+      "problemNo": "問題5",
+      "category": "어휘 → 언어지식 → 유의표현",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 44,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 23,
+      "problemNo": "問題5",
+      "category": "어휘 → 언어지식 → 유의표현",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 49,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 24,
+      "problemNo": "問題5",
+      "category": "어휘 → 언어지식 → 유의표현",
+      "userAnswer": 3,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 50,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 25,
+      "problemNo": "問題5",
+      "category": "어휘 → 언어지식 → 유의표현",
+      "userAnswer": 0,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 43,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 26,
+      "problemNo": "問題6",
+      "category": "어휘 → 언어지식 → 용법",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 79,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 27,
+      "problemNo": "問題6",
+      "category": "어휘 → 언어지식 → 용법",
+      "userAnswer": 3,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 108,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 28,
+      "problemNo": "問題6",
+      "category": "어휘 → 언어지식 → 용법",
+      "userAnswer": 3,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 129,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 29,
+      "problemNo": "問題6",
+      "category": "어휘 → 언어지식 → 용법",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 83,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 30,
+      "problemNo": "問題6",
+      "category": "어휘 → 언어지식 → 용법",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 51,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 31,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 극단적 사례 제시",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 90,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 32,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 무관·상관없음",
+      "userAnswer": 0,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 82,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 33,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 부사적 어구",
+      "userAnswer": 3,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 91,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 34,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 이중성·반면",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 23,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 35,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 조건 제시",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 27,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 36,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 의지형+としたら",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 73,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 37,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 정중한 금지·요청",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 74,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 38,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 조건·달려있음",
+      "userAnswer": 2,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 109,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 39,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 가끔 그러한 일 있음",
+      "userAnswer": 3,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 69,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 40,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 사역 수수 표현",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 49,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 41,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 겸양 표현",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 37,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 42,
+      "problemNo": "問題7",
+      "category": "문법 → 문법형식 판단 → 완곡한 부탁",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 87,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 43,
+      "problemNo": "問題8",
+      "category": "문법 → 문장 배열 → それなりの",
+      "userAnswer": 0,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 68,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 44,
+      "problemNo": "問題8",
+      "category": "문법 → 문장 배열 → だけでなく",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 118,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 45,
+      "problemNo": "問題8",
+      "category": "문법 → 문장 배열 → かねない",
+      "userAnswer": 0,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 133,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 46,
+      "problemNo": "問題8",
+      "category": "문법 → 문장 배열 → といっても",
+      "userAnswer": 2,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 59,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 47,
+      "problemNo": "問題8",
+      "category": "문법 → 문장 배열 → てしまうと",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 123,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 48,
+      "problemNo": "問題9",
+      "category": "문법 → 글의 문법 → 접속 표현",
+      "userAnswer": 3,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 218,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 49,
+      "problemNo": "問題9",
+      "category": "문법 → 글의 문법 → 권고 호응",
+      "userAnswer": 1,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 71,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 50,
+      "problemNo": "問題9",
+      "category": "문법 → 글의 문법 → 시간 투자",
+      "userAnswer": 3,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 112,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 51,
+      "problemNo": "問題9",
+      "category": "문법 → 글의 문법 → 가정 파탄 호응",
+      "userAnswer": 0,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 122,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 52,
+      "problemNo": "問題10",
+      "category": "독해 → 단문 이해 → 대화와 경청",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 260,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 53,
+      "problemNo": "問題10",
+      "category": "독해 → 단문 이해 → 사내 공지 절차",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 237,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 54,
+      "problemNo": "問題10",
+      "category": "독해 → 단문 이해 → 뇌와 기억의 메커니즘",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 134,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 55,
+      "problemNo": "問題10",
+      "category": "독해 → 단문 이해 → 지역 분리수거 안내",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 120,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 56,
+      "problemNo": "問題10",
+      "category": "독해 → 단문 이해 → 고정관념의 탈피",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 129,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 57,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 조건과 결과",
+      "userAnswer": 3,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 507,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 58,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 비유와 인간의 삶",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 80,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 59,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 필자의 주장",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 73,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 60,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 회의에서의 발언 기피 원인",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 161,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 61,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 리더의 역할",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 100,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 62,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 필자의 주장",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 156,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 63,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 완벽주의의 함정",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 158,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 64,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 궤도 수정의 전제 조건",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 135,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 65,
+      "problemNo": "問題11",
+      "category": "독해 → 중문 이해 → 종합 결론",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 79,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 66,
+      "problemNo": "問題12",
+      "category": "독해 → 통합 이해 → 운동 습관 비교",
+      "userAnswer": 2,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 24,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 67,
+      "problemNo": "問題12",
+      "category": "독해 → 통합 이해 → 공통 목적",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 24,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 68,
+      "problemNo": "問題13",
+      "category": "독해 → 장문 이해 → 이타적 행동과 자기 효능감",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 35,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 69,
+      "problemNo": "問題13",
+      "category": "독해 → 장문 이해 → 부모의 과보호에 대한 비판",
+      "userAnswer": 3,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 19,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 70,
+      "problemNo": "問題13",
+      "category": "독해 → 장문 이해 → 필자의 제언",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 32,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 71,
+      "problemNo": "問題14",
+      "category": "독해 → 정보 검색 → 요금 할인 계산",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 230,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 72,
+      "problemNo": "問題14",
+      "category": "독해 → 정보 검색 → 다른 지점 반납 조건",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 86,
+      "nextReview": "D+1: 2026-09-21"
+    },
+    {
+      "id": 73,
+      "problemNo": "問題1",
+      "category": "청해 → 과제이해(課題理解) → 발표 연습 직후 우선 과제",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 73,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 74,
+      "problemNo": "問題1",
+      "category": "청해 → 과제이해(課題理解) → 신칸센 좌석 예약 배치",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 109,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 75,
+      "problemNo": "問題1",
+      "category": "청해 → 과제이해(課題理解) → 수업 종료 시점의 그룹 과제",
+      "userAnswer": 0,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 103,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 76,
+      "problemNo": "問題1",
+      "category": "청해 → 과제이해(課題理解) → 문화제 응모 최우선 절차",
+      "userAnswer": 2,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 86,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 77,
+      "problemNo": "問題1",
+      "category": "청해 → 과제이해(課題理解) → 식물 관리 최우선 조치",
+      "userAnswer": 3,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 77,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 78,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 아나운서의 가장 뛰어난 점",
+      "userAnswer": 0,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 128,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 79,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 기획서의 문제점 지적",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 110,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 80,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 헌 셔츠의 재활용 방식",
+      "userAnswer": 1,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 92,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 81,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 연필 드로잉의 최고 매력",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 116,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 82,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 비치코밍 수집 목적",
+      "userAnswer": 3,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 135,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 83,
+      "problemNo": "問題2",
+      "category": "청해 → 포인트이해(ポイント理解) → 로봇 청소기의 단점",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 100,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 84,
+      "problemNo": "問題3",
+      "category": "청해 → 개요이해(概要理解) → 반려견의 건강 관리",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 227,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 85,
+      "problemNo": "問題3",
+      "category": "청해 → 개요이해(概要理解) → 농촌 이주자 지원 정책",
+      "userAnswer": 2,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 107,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 86,
+      "problemNo": "問題3",
+      "category": "청해 → 개요이해(概要理解) → 사과 농원의 올빼미 활용 해충 구제",
+      "userAnswer": 2,
+      "officialAnswer": 3,
+      "isCorrect": false,
+      "dwellTimeSeconds": 96,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 87,
+      "problemNo": "問題3",
+      "category": "청해 → 개요이해(概要理解) → 간병인 부담 경감 복지 기기 개발",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 96,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 88,
+      "problemNo": "問題3",
+      "category": "청해 → 개요이해(概要理解) → 전통 한지 장인의 입문 동기",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 95,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 89,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 아르바이트 추가 출근 부탁에 대한 응답",
+      "userAnswer": 2,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 83,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 90,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 감동 문형(~ずにはいられない)에 대한 맞장구",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 31,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 91,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 상사 방문 전화 보고에 대한 대처",
+      "userAnswer": 0,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 32,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 92,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 감상 의견(~物足りなくなかった？)에 대한 답변",
+      "userAnswer": 1,
+      "officialAnswer": 1,
+      "isCorrect": true,
+      "dwellTimeSeconds": 34,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 93,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 지적(~つけっぱなし)에 대한 사과",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 31,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 94,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 기쁜 소식(추첨 당첨)에 대한 축하",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 25,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 95,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 작업 마무리 제안(~切り上げましょうか)",
+      "userAnswer": 1,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 41,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 96,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 소요 시간 문의(~回りきれる？)",
+      "userAnswer": 0,
+      "officialAnswer": 0,
+      "isCorrect": true,
+      "dwellTimeSeconds": 27,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 97,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 행사 연기 불가피성(~やむを得ない)",
+      "userAnswer": 0,
+      "officialAnswer": 1,
+      "isCorrect": false,
+      "dwellTimeSeconds": 24,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 98,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 대리 사회 부탁(~務めてもらえませんか)",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 49,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 99,
+      "problemNo": "問題4",
+      "category": "청해 → 즉시응답(即時応答) → 거절 표현(~お引き受けいたしかねます)",
+      "userAnswer": 1,
+      "officialAnswer": 2,
+      "isCorrect": false,
+      "dwellTimeSeconds": 26,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 100,
+      "problemNo": "問題5",
+      "category": "청해 → 통합이해(統合理解) → 시민센터 가을 이벤트 기획 선정",
+      "userAnswer": 2,
+      "officialAnswer": 2,
+      "isCorrect": true,
+      "dwellTimeSeconds": 176,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 101,
+      "problemNo": "問題5",
+      "category": "청해 → 통합이해(統合理解) → 어학연수 숙소 선택 (남학생)",
+      "userAnswer": 1,
+      "officialAnswer": 0,
+      "isCorrect": false,
+      "dwellTimeSeconds": 176,
+      "nextReview": "D+1"
+    },
+    {
+      "id": 102,
+      "problemNo": "問題5",
+      "category": "청해 → 통합이해(統合理解) → 어학연수 숙소 선택 (여학생)",
+      "userAnswer": 3,
+      "officialAnswer": 3,
+      "isCorrect": true,
+      "dwellTimeSeconds": 8,
+      "nextReview": "D+1"
+    }
+  ]
+}

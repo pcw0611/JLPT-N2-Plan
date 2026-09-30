@@ -1,0 +1,18 @@
+{
+  "id": "official-vol2-full-mock-20260920",
+  "test_date": "2026-09-20",
+  "title": "JLPT N2 공식 문제집 제2집 전 영역 완본 실전모의고사 (107문항)",
+  "source_class": "official_mock",
+  "target_level": "N2",
+  "difficulty_label": "official_standard",
+  "memory_timing": "full_mock_real",
+  "response_format": "multiple_choice_4",
+  "total_items": 107,
+  "correct_items": 71,
+  "unknown_items": 0,
+  "unanswered_items": 0,
+  "elapsed_seconds": 6936,
+  "time_limit_seconds": 9300,
+  "diagnostic_weight": 1.0,
+  "notes": "{\"source\": \"日本語能力試験 公式問題集 第2集 (2018) 原本対照 · 個人学習用 実戦模試 (ブラウザTTS聴解演習)\", \"provenance\": \"출제 원안: 日本語能力試験 公式問題集 第2集(2018) 대조 / 개인학습용 TTS 구현 / 비공식 정답률 추정\", \"total_score_scaled\": 119, \"accuracy_percent\": 66.4, \"sections\": {\"vocab\": {\"total\": 32, \"correct\": 21}, \"grammar\": {\"total\": 22, \"correct\": 10}, \"reading\": {\"total\": 21, \"correct\": 16}, \"listening\": {\"total\": 32, \"correct\": 24}}, \"has_sectional_cutoff_risk\": false, \"section1_elapsed_seconds\": 5263, \"section2_elapsed_seconds\": 1768, \"wrong_items\": [1, 6, 7, 9, 10, 15, 22, 23, 28, 30, 31, 34, 35, 36, 37, 40, 44, 46, 47, 48, 49, 51, 54, 55, 58, 63, 66, 75, 76, 80, 90, 94, 97, 99, 102, 106], \"unknown_items\": [], \"unanswered_items\": []}"
+}

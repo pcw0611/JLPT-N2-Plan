@@ -28,10 +28,10 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     desc: '公式問題集 第2集 全領域完本 107問 · 119/180点 (71/107問, 66.4%) 合格ライン・目標110点突破！'
   },
   '2026-09-30': {
-    badge: '🔥 今夜 20:00',
-    type: 'upcoming-mock',
-    title: '第2回 N2 実戦模擬試験 (今夜 20:00 実施)',
-    desc: '2023年12月 JLPT N2 過去問完本 102問 実戦受験 (言語知識・読解 72問 + 聴解 30問)'
+    badge: '2次完了',
+    type: 'completed-mock',
+    title: '第2回 N2 実戦模擬試験 (完了)',
+    desc: '2023年12月 JLPT N2 過去問完本 102問完走 · 92/180点 (51/102問, 50.0%) 全領域足切り0件＆合格ライン突破！'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -119,11 +119,11 @@ export default function Home() {
               type="button"
               className="exam-chip chip-mock"
               onClick={() => { setSelectedDate('2026-09-30'); setVisibleMonth('2026-09'); }}
-              title="9月30日(水) 20:00 第2回実戦模試 (カレンダーで表示)"
+              title="9月30日 第2回実戦模試 92点合格 (カレンダーで表示)"
             >
-              <span className="chip-dot pulse-amber" />
-              <span className="chip-title">今夜 20:00 第2回模試</span>
-              <strong className="chip-dday">TODAY</strong>
+              <span className="chip-dot glow-target" />
+              <span className="chip-title">第2回模試 92点合格</span>
+              <strong className="chip-dday">PASS</strong>
             </button>
             <button
               type="button"
@@ -164,7 +164,7 @@ export default function Home() {
             <div className="calendar-tools">
               <div className="legend">
                 <span className="legend-item"><span className="legend-dot dot-record" /> 学習記録</span>
-                <span className="legend-item"><span className="legend-dot dot-mock" /> 10/4 模試</span>
+                <span className="legend-item"><span className="legend-dot dot-mock" /> 模試完了</span>
                 <span className="legend-item"><span className="legend-dot dot-exam" /> 12/6 本試験</span>
               </div>
               <div className="calendar-nav">
@@ -225,14 +225,14 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-09-30' ? 'active' : ''}`}
+                className={`milestone-item is-completed ${selectedDate === '2026-09-30' ? 'active' : ''}`}
                 onClick={() => { setSelectedDate('2026-09-30'); setVisibleMonth('2026-09'); }}
               >
-                <div className="ms-badge upcoming">{mockDays === 0 ? '🔥 今夜 20:00 実施！' : `🔥 D-${mockDays}`}</div>
+                <div className="ms-badge done">完了</div>
                 <div className="ms-date">9/30 (水)</div>
                 <div className="ms-info">
-                  <strong>第2回 N2 実戦模試</strong>
-                  <p>2023年12月 過去問完本 102問 (今夜 20:00)</p>
+                  <strong>第2回 N2 実戦模試 (合格)</strong>
+                  <p>92 / 180点 (2023.12 過去問完本 51/102問 · 50.0%)</p>
                 </div>
               </button>
               <button
@@ -274,16 +274,24 @@ export default function Home() {
               </div>
               {selectedSpecial.type === 'completed-mock' && (
                 <div className="callout-meta">
-                  <span className="meta-highlight">実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)</span>
-                  <span className="meta-sub">正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)</span>
+                  <span className="meta-highlight">
+                    {selectedDate === '2026-09-30'
+                      ? '実戦換算得点: 92 / 180点 (合格基準90点突破！全領域足切り0件)'
+                      : '実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)'}
+                  </span>
+                  <span className="meta-sub">
+                    {selectedDate === '2026-09-30'
+                      ? '正答 51/102問 (50.0%) · 所要時間 146分28秒 (言語知識 29点 · 読解 37点 · 聴解 26点)'
+                      : '正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)'}
+                  </span>
                   <div style={{ marginTop: '10px' }}>
                     <a
-                      href="/exams/n2-midterm-mock-exam-20260920.html"
+                      href={selectedDate === '2026-09-30' ? "/exams/n2-past-exam-202312-mock.html" : "/exams/n2-midterm-mock-exam-20260920.html"}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mock-exam-link-btn"
                     >
-                      📘 第1回 模試問題・解説 (107問) を開く ➔
+                      {selectedDate === '2026-09-30' ? "📘 第2回 模試問題・解説 (102問) を開く ➔" : "📘 第1回 模試問題・解説 (107問) を開く ➔"}
                     </a>
                   </div>
                 </div>

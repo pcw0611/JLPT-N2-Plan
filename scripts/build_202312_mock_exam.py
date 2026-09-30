@@ -553,12 +553,32 @@ def build():
         testId: "official-past-202312-full-mock-20261004","""
     html = html.replace(old_json_meta, new_json_meta)
 
-    # Vocab/Grammar totals in result payload
+    # Vocab/Grammar totals in result payload & accurate section counting
     old_totals = """const vocabTotal = 32, grammarTotal = 22, readingTotal = 21, listeningTotal = 32;
       const langRate = (vocabCorrect + grammarCorrect) / 54;"""
     new_totals = """const vocabTotal = 30, grammarTotal = 21, readingTotal = 21, listeningTotal = 30;
       const langRate = (vocabCorrect + grammarCorrect) / 51;"""
     html = html.replace(old_totals, new_totals)
+
+    # Fix renderResults listening condition (since q.part in 2023.12 has specific problem names)
+    html = html.replace(
+        "else if (q.part === '聴解') {\n          listeningTotal++;",
+        "else if (q.part === '聴解' || idx >= 72) {\n          listeningTotal++;"
+    )
+
+    # Fix copyResultJSON listening condition and section totals
+    html = html.replace(
+        "if (q.part === '聴解') listeningCorrect++;",
+        "if (q.part === '聴解' || idx >= 72) listeningCorrect++;"
+    )
+    html = html.replace(
+        "listeningRate = listeningCorrect / 32;",
+        "listeningRate = listeningCorrect / 30;"
+    )
+    html = html.replace(
+        "vocab: { total: 32, correct: vocabCorrect },\n          grammar: { total: 22, correct: grammarCorrect },\n          reading: { total: 21, correct: readingCorrect },\n          listening: { total: 32, correct: listeningCorrect }",
+        "vocab: { total: 30, correct: vocabCorrect },\n          grammar: { total: 21, correct: grammarCorrect },\n          reading: { total: 21, correct: readingCorrect },\n          listening: { total: 30, correct: listeningCorrect }"
+    )
 
     # 3. Replace listening status panel HTML with hidden video player
     panel_start = html.find('<!-- Listening ON-AIR Broadcast Status Panel')

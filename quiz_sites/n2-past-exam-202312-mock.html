@@ -1414,7 +1414,7 @@
           readingTotal++;
           readingTime += time;
           if (userAns === q.sessionAnswer) readingCorrect++;
-        } else if (q.part === '聴解') {
+        } else if (q.part === '聴解' || idx >= 72) {
           listeningTotal++;
           listeningTime += time;
           if (userAns === q.sessionAnswer) listeningCorrect++;
@@ -1644,7 +1644,7 @@
           if (q.part === '文字・語彙') vocabCorrect++;
           if (q.part === '文法') grammarCorrect++;
           if (q.part === '読解') readingCorrect++;
-          if (q.part === '聴解') listeningCorrect++;
+          if (q.part === '聴解' || idx >= 72) listeningCorrect++;
         } else if (userAns === 'unknown') {
           unknown++;
         } else if (userAns === null) {
@@ -1658,7 +1658,7 @@
       const vocabTotal = 30, grammarTotal = 21, readingTotal = 21, listeningTotal = 30;
       const langRate = (vocabCorrect + grammarCorrect) / 51;
       const readingRate = readingCorrect / 21;
-      const listeningRate = listeningCorrect / 32;
+      const listeningRate = listeningCorrect / 30;
       const hasCutoffRisk = (langRate < 0.316) || (readingRate < 0.316) || (listeningRate < 0.316);
 
       const resultPayload = {
@@ -1677,10 +1677,10 @@
         hasSectionalCutoffRisk: hasCutoffRisk,
         elapsedSeconds: (typeof section1ElapsedSeconds !== 'undefined' ? section1ElapsedSeconds : 0) + (typeof section2ElapsedSeconds !== 'undefined' ? section2ElapsedSeconds : 0),
         sections: {
-          vocab: { total: 32, correct: vocabCorrect },
-          grammar: { total: 22, correct: grammarCorrect },
+          vocab: { total: 30, correct: vocabCorrect },
+          grammar: { total: 21, correct: grammarCorrect },
           reading: { total: 21, correct: readingCorrect },
-          listening: { total: 32, correct: listeningCorrect }
+          listening: { total: 30, correct: listeningCorrect }
         },
         questionsRecord: sessionQuestions.map((q, idx) => ({
           id: q.id,
