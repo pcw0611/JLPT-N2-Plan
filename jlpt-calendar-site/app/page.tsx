@@ -5,7 +5,7 @@ import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy
 
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const examDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-12-06T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
-const mockDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-10-04T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
+const mockDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-09-30T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
 
 const dateLabel = (date: string) => {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
@@ -15,7 +15,7 @@ const numberLabel = (value: number) => new Intl.NumberFormat('ja-JP').format(val
 
 interface SpecialDateInfo {
   badge: string;
-  type: 'upcoming-mock' | 'official-exam' | 'completed-mock';
+  type: 'upcoming-mock' | 'official-exam' | 'completed-mock' | 'trip';
   title: string;
   desc: string;
 }
@@ -27,11 +27,35 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     title: '第1回 N2 実戦模擬試験 (完了)',
     desc: '公式問題集 第2集 全領域完本 107問 · 119/180点 (71/107問, 66.4%) 合格ライン・目標110点突破！'
   },
-  '2026-10-04': {
-    badge: '🔥 模試',
+  '2026-09-30': {
+    badge: '🔥 今夜 20:00',
     type: 'upcoming-mock',
-    title: '第2回 N2 実戦模擬試験 (今週日曜日)',
-    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験予定 (言語知識・読解 72問 + 聴解 32問)'
+    title: '第2回 N2 実戦模擬試験 (今夜 20:00 実施)',
+    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験 (言語知識・読解 72問 + 聴解 32問) ※10/2〜5旅行に伴い前倒し実施'
+  },
+  '2026-10-02': {
+    badge: '✈️ 旅行',
+    type: 'trip',
+    title: '学習休息 / 旅行日程 (10/2〜10/5)',
+    desc: '充電及びコンディション調整期間'
+  },
+  '2026-10-03': {
+    badge: '✈️ 旅行',
+    type: 'trip',
+    title: '学習休息 / 旅行日程 (10/2〜10/5)',
+    desc: '充電及びコンディション調整期間'
+  },
+  '2026-10-04': {
+    badge: '✈️ 旅行',
+    type: 'trip',
+    title: '学習休息 / 旅行日程 (10/2〜10/5)',
+    desc: '※第2回実戦模試は9/30(水) 20:00へ前倒し完了'
+  },
+  '2026-10-05': {
+    badge: '✈️ 旅行',
+    type: 'trip',
+    title: '学習休息 / 旅行日程 (10/2〜10/5)',
+    desc: '充電及びコンディション調整期間'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -108,16 +132,19 @@ export default function Home() {
           <a className="game-button typing-nav-btn" href="/typing" aria-label="MyGO!!!!! 歌詞タイピング練習を開く">
             <span aria-hidden="true">⌨️</span> MyGO!!!!! タイピング <span aria-hidden="true">→</span>
           </a>
+          <a className="game-button mock-nav-btn" href="/exams/past-exams-portal.html" aria-label="実戦模試・過去問アーカイブを開く">
+            <span aria-hidden="true">📝</span> 過去問・模試 <span aria-hidden="true">→</span>
+          </a>
           <div className="exam-chips-group">
             <button
               type="button"
               className="exam-chip chip-mock"
-              onClick={() => { setSelectedDate('2026-10-04'); setVisibleMonth('2026-10'); }}
-              title="10月4日(日) 第2回実戦模試 (カレンダーで表示)"
+              onClick={() => { setSelectedDate('2026-09-30'); setVisibleMonth('2026-09'); }}
+              title="9月30日(水) 20:00 第2回実戦模試 (カレンダーで表示)"
             >
               <span className="chip-dot pulse-amber" />
-              <span className="chip-title">10/4 第2回模試</span>
-              <strong className="chip-dday">D-{mockDays}</strong>
+              <span className="chip-title">今夜 20:00 第2回模試</span>
+              <strong className="chip-dday">TODAY</strong>
             </button>
             <button
               type="button"
@@ -219,14 +246,14 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-10-04' ? 'active' : ''}`}
-                onClick={() => { setSelectedDate('2026-10-04'); setVisibleMonth('2026-10'); }}
+                className={`milestone-item is-upcoming ${selectedDate === '2026-09-30' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-09-30'); setVisibleMonth('2026-09'); }}
               >
-                <div className="ms-badge upcoming">🔥 今週日曜日 · D-{mockDays}</div>
-                <div className="ms-date">10/4 (日)</div>
+                <div className="ms-badge upcoming">{mockDays === 0 ? '🔥 今夜 20:00 実施！' : `🔥 D-${mockDays}`}</div>
+                <div className="ms-date">9/30 (水)</div>
                 <div className="ms-info">
                   <strong>第2回 N2 実戦模試</strong>
-                  <p>2023年12月 過去問完本 104問 実戦受験</p>
+                  <p>2023年12月 過去問完本 104問 (今夜 20:00)</p>
                 </div>
               </button>
               <button
@@ -260,7 +287,7 @@ export default function Home() {
           {selectedSpecial && (
             <div className={`special-callout ${selectedSpecial.type}`}>
               <div className="callout-header">
-                <span className="callout-icon">{selectedSpecial.type === 'upcoming-mock' ? '🔥' : selectedSpecial.type === 'official-exam' ? '🎯' : '📝'}</span>
+                <span className="callout-icon">{selectedSpecial.type === 'upcoming-mock' ? '🔥' : selectedSpecial.type === 'official-exam' ? '🎯' : selectedSpecial.type === 'trip' ? '✈️' : '📝'}</span>
                 <div>
                   <strong>{selectedSpecial.title}</strong>
                   <p>{selectedSpecial.desc}</p>
@@ -270,12 +297,38 @@ export default function Home() {
                 <div className="callout-meta">
                   <span className="meta-highlight">実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)</span>
                   <span className="meta-sub">正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)</span>
+                  <div style={{ marginTop: '10px' }}>
+                    <a
+                      href="/exams/n2-midterm-mock-exam-20260920.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mock-exam-link-btn"
+                    >
+                      📘 第1回 模試問題・解説 (107問) を開く ➔
+                    </a>
+                  </div>
                 </div>
               )}
               {selectedSpecial.type === 'upcoming-mock' && (
                 <div className="callout-meta">
-                  <span className="meta-highlight">今週日曜日 実施予定 (D-{mockDays})</span>
-                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 全104問 準備完了</span>
+                  <span className="meta-highlight">{mockDays === 0 ? '🔥 本日 20:00 実施予定 (今夜！)' : `実施予定 (D-${mockDays})`}</span>
+                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 全104問 (2023.12 過去問完本)</span>
+                  <div style={{ marginTop: '10px' }}>
+                    <a
+                      href="/exams/n2-past-exam-202312-mock.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mock-exam-link-btn emerald"
+                    >
+                      🎯 今夜 20:00 第2回 実戦模試 (104問) を受験する ➔
+                    </a>
+                  </div>
+                </div>
+              )}
+              {selectedSpecial.type === 'trip' && (
+                <div className="callout-meta">
+                  <span className="meta-highlight">✈️ 10/2(金) 〜 10/5(月) 旅行日程</span>
+                  <span className="meta-sub">旅行中のため学習休息・コンディション調整 (※模試は9/30に前倒し実施)</span>
                 </div>
               )}
               {selectedSpecial.type === 'official-exam' && (
