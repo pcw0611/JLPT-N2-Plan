@@ -111,6 +111,9 @@ export default function Home() {
           <a className="game-button mock-nav-btn" href="/exams/past-exams-portal.html" aria-label="実戦模試・過去問アーカイブを開く">
             <span aria-hidden="true">📝</span> 過去問・模試 <span aria-hidden="true">→</span>
           </a>
+          <a className="game-button listening-nav-btn" href="/exams/official-vol2-listening-player.html" aria-label="公式聴解音源プレイヤーを開く">
+            <span aria-hidden="true">🎧</span> 聴解プレイヤー <span aria-hidden="true">→</span>
+          </a>
           <div className="exam-chips-group">
             <button
               type="button"

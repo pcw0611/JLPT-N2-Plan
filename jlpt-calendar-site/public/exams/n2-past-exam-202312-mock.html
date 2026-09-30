@@ -202,9 +202,33 @@
         </ol>
       </div>
 
+      
+      <!-- Local Storage Previous Result Banner -->
+      <div id="local-history-banner" class="hidden border-2 border-emerald-700 bg-emerald-50/90 p-5 rounded-xl space-y-3 font-sans my-4 shadow-md">
+        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-200 pb-2.5">
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded bg-emerald-700 text-white font-bold text-xs">📊 최근 응시 기록 보존됨</span>
+            <span id="local-score-summary" class="font-extrabold text-neutral-950 text-sm sm:text-base"></span>
+          </div>
+          <span id="local-date-summary" class="text-xs text-neutral-600 font-mono font-bold"></span>
+        </div>
+        <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed">
+          이전에 응시하신 답안이 보존되어 있습니다. 아래 버튼을 눌러 틀린 문제의 오답 노트와 해설을 바로 확인하실 수 있습니다.
+        </p>
+        <div class="flex flex-wrap gap-2.5 pt-1">
+          <button onclick="loadLocalExamResult('wrong')" type="button" class="flex-1 py-3 px-4 bg-red-700 hover:bg-red-800 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition-all flex items-center justify-center gap-2 cursor-pointer">
+            <span>❌ 최근 응시 틀린 문제 오답노트 바로보기</span>
+            <span>➔</span>
+          </button>
+          <button onclick="loadLocalExamResult('all')" type="button" class="py-3 px-4 bg-neutral-900 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition-all cursor-pointer">
+            📊 전체 성적표 및 해설 보기
+          </button>
+        </div>
+      </div>
+
       <!-- Start Button -->
       <div class="text-center pt-2">
-        <button id="btn-start-exam" onclick="startSection1()" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest">
+        <button id="btn-start-exam" onclick="checkExamPin(() => startSection1())" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest">
           第1限 開始 (1교시 언어지식·독해 시작)
         </button>
         <div class="text-[11px] text-neutral-500 font-sans mt-2">
@@ -603,6 +627,7 @@
           <div class="text-xs text-neutral-600">
             ※ 채점 결과 JSON을 클립보드에 복사하여 대화창에 전달하면 학습 원장(`database/jlpt_learning.db`)에 즉시 반영됩니다.
           </div>
+          <button onclick="restartExamFresh()" class="px-5 py-3 bg-neutral-700 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all mr-2">🔄 새 시험으로 다시 풀기</button>
           <button onclick="copyResultJSON()" class="w-full sm:w-auto px-6 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all">
             📋 DB 기록용 JSON 결과 복사
           </button>
@@ -667,6 +692,120 @@
 
     function toggleTheme() {
       document.body.classList.toggle('dark-theme');
+    }
+
+    
+    // =========================================================================
+    // PIN Authentication (비밀번호: 6997)
+    // =========================================================================
+    let pendingExamStartCallback = null;
+
+    function checkExamPin(callback) {
+      if (sessionStorage.getItem('jlpt_exam_pin_auth') === '6997') {
+        callback();
+        return;
+      }
+      pendingExamStartCallback = callback;
+      const modal = document.getElementById('pin-modal');
+      modal.classList.remove('hidden');
+      const input = document.getElementById('pin-input');
+      input.value = '';
+      input.classList.remove('border-red-600');
+      document.getElementById('pin-error').classList.add('hidden');
+      setTimeout(() => input.focus(), 150);
+    }
+
+    function closePinModal() {
+      document.getElementById('pin-modal').classList.add('hidden');
+      pendingExamStartCallback = null;
+    }
+
+    function submitPinAuth() {
+      const input = document.getElementById('pin-input');
+      const val = input.value.trim();
+      if (val === '6997') {
+        sessionStorage.setItem('jlpt_exam_pin_auth', '6997');
+        document.getElementById('pin-modal').classList.add('hidden');
+        if (pendingExamStartCallback) {
+          const cb = pendingExamStartCallback;
+          pendingExamStartCallback = null;
+          cb();
+        }
+      } else {
+        document.getElementById('pin-error').classList.remove('hidden');
+        input.classList.add('border-red-600');
+        input.value = '';
+        input.focus();
+      }
+    }
+
+
+    // =========================================================================
+    // Local Storage Preservation for 2023.12 Mock Exam
+    // =========================================================================
+    function checkPreviousResult() {
+      try {
+        const raw = localStorage.getItem('n2_past_exam_202312_result');
+        if (raw) {
+          const data = JSON.parse(raw);
+          const banner = document.getElementById('local-history-banner');
+          if (banner) {
+            document.getElementById('local-score-summary').textContent = `실전 환산: ${data.scoreScaledEstimate || 0} / 180점 (정답 ${data.correctCount || 0} · 오답 ${data.wrongCount || 0})`;
+            document.getElementById('local-date-summary').textContent = `${data.examDate || ''} 응시`;
+            banner.classList.remove('hidden');
+          }
+        }
+      } catch (e) {
+        console.warn('Could not load previous local result', e);
+      }
+    }
+
+    function loadLocalExamResult(filterType = 'wrong') {
+      try {
+        const raw = localStorage.getItem('n2_past_exam_202312_result');
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        if (!sessionQuestions || sessionQuestions.length === 0) {
+          initExam();
+      checkPreviousResult();
+        }
+        userAnswers = data.questionsRecord.map(q => q.userAnswer);
+        questionDwellTimes = data.questionsRecord.map(q => q.dwellTimeSeconds || 0);
+        section1ElapsedSeconds = data.elapsedSeconds ? Math.round(data.elapsedSeconds * 0.6) : 3600;
+        section2ElapsedSeconds = data.elapsedSeconds ? (data.elapsedSeconds - section1ElapsedSeconds) : 2400;
+
+        document.getElementById('screen-intro').classList.add('hidden');
+        document.getElementById('screen-quiz').classList.add('hidden');
+        document.getElementById('screen-break').classList.add('hidden');
+        document.getElementById('screen-listening-intro').classList.add('hidden');
+        document.getElementById('screen-result').classList.remove('hidden');
+
+        calculateAndRenderResults();
+        renderAllExplanations(filterType);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (e) {
+        console.error('Failed to load local result', e);
+      }
+    }
+
+    function saveResultToLocal(payload) {
+      try {
+        localStorage.setItem('n2_past_exam_202312_result', JSON.stringify(payload));
+      } catch (e) {
+        console.warn('Failed to save to localStorage', e);
+      }
+    }
+
+    function restartExamFresh() {
+      checkExamPin(() => {
+        initExam();
+      checkPreviousResult();
+        section1RemainingSeconds = 105 * 60;
+        section1ElapsedSeconds = 0;
+        section2ElapsedSeconds = 0;
+        currentQuestionIndex = 0;
+        startSection1();
+      });
     }
 
     function initExam() {
@@ -1909,6 +2048,7 @@
       const listeningRate = listeningCorrect / 32;
       const hasCutoffRisk = (langRate < 0.316) || (readingRate < 0.316) || (listeningRate < 0.316);
 
+      saveResultToLocal(resultPayload);
       const resultPayload = {
         examDate: new Date().toISOString().split('T')[0],
         examType: "official_past_mock",
@@ -1963,7 +2103,51 @@
     // Auto-init on load
     window.addEventListener('DOMContentLoaded', () => {
       initExam();
+      checkPreviousResult();
     });
   </script>
+
+    <!-- ================================================================= -->
+    <!-- PIN Auth Modal (응시 비밀번호: 6997) -->
+    <!-- ================================================================= -->
+    <div id="pin-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white border-2 border-neutral-900 rounded-2xl p-6 sm:p-8 max-w-sm w-full text-center space-y-4 shadow-2xl font-sans">
+        <div class="w-14 h-14 rounded-full bg-neutral-100 text-neutral-900 flex items-center justify-center mx-auto text-3xl border border-neutral-300">
+          🔒
+        </div>
+        <div>
+          <h3 class="text-xl font-bold font-serif text-neutral-950">
+            受験者 認証 (JLPT N2)
+          </h3>
+          <p class="text-xs text-neutral-600 mt-1.5 leading-relaxed">
+            본 모의고사는 수험자 전용 비공개 시험입니다.<br>
+            <strong>응시 비밀번호 (4자리)</strong>를 입력하세요.
+          </p>
+        </div>
+        <div class="space-y-2">
+          <input
+            type="password"
+            id="pin-input"
+            maxlength="4"
+            placeholder="••••"
+            autocomplete="off"
+            class="w-full text-center text-3xl font-mono tracking-[0.4em] py-3 px-4 border-2 border-neutral-400 focus:border-neutral-950 rounded-xl outline-none transition-all"
+            onkeydown="if(event.key === 'Enter') submitPinAuth()"
+          />
+          <div id="pin-error" class="hidden text-xs text-red-600 font-bold">
+            비밀번호가 올바르지 않습니다. 다시 입력해 주세요.
+          </div>
+        </div>
+        <div class="flex gap-2 pt-2">
+          <button onclick="closePinModal()" type="button" class="flex-1 py-3 border border-neutral-400 hover:bg-neutral-100 text-neutral-700 text-xs font-bold rounded-lg transition-colors cursor-pointer">
+            취소
+          </button>
+          <button onclick="submitPinAuth()" type="button" class="flex-1 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold rounded-lg shadow transition-colors cursor-pointer">
+            인증 및 시험 시작
+          </button>
+        </div>
+      </div>
+    </div>
+
 </body>
 </html>

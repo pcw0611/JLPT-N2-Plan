@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>JLPT N2 聴解 実戦ミニテスト (TTS音声対応)</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
+  <style>
+    :root {
+      --bg-page: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #cbd5e1;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --situation-bg: #f1f5f9;
+      --situation-border: #94a3b8;
+      --situation-text: #0f172a;
+      --audio-box-bg: #f5f3ff;
+      --audio-box-border: #8b5cf6;
+      --audio-title: #2e1065;
+      --audio-sub: #581c87;
+      --option-bg: #ffffff;
+      --option-border: #cbd5e1;
+      --option-text: #0f172a;
+      --option-hover: #f8fafc;
+      --option-selected-bg: #ede9fe;
+      --option-selected-border: #7c3aed;
+      --option-selected-text: #2e1065;
+      --timer-bg: #0f172a;
+      --timer-text: #34d399;
+      --inner-box-bg: #f8fafc;
+      --inner-box-border: #e2e8f0;
+    }
+
+    html.dark {
+      --bg-page: #0b0f19;
+      --card-bg: #161e2e;
+      --border-color: #334155;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --situation-bg: #1e293b;
+      --situation-border: #475569;
+      --situation-text: #f8fafc;
+      --audio-box-bg: #24153f;
+      --audio-box-border: #a855f7;
+      --audio-title: #faf5ff;
+      --audio-sub: #e9d5ff;
+      --option-bg: #1e293b;
+      --option-border: #334155;
+      --option-text: #f8fafc;
+      --option-hover: #27354f;
+      --option-selected-bg: #3b1d60;
+      --option-selected-border: #c084fc;
+      --option-selected-text: #ffffff;
+      --timer-bg: #020617;
+      --timer-text: #34d399;
+      --inner-box-bg: #0f141f;
+      --inner-box-border: #2a3449;
+    }
+
+    body {
+      background-color: var(--bg-page) !important;
+      color: var(--text-main) !important;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .theme-card {
+      background-color: var(--card-bg) !important;
+      border: 1px solid var(--border-color) !important;
+    }
+
+    .situation-box {
+      background-color: var(--situation-bg) !important;
+      border: 1.5px solid var(--situation-border) !important;
+      color: var(--situation-text) !important;
+    }
+
+    .audio-box {
+      background-color: var(--audio-box-bg) !important;
+      border: 2px solid var(--audio-box-border) !important;
+    }
+
+    .audio-title {
+      color: var(--audio-title) !important;
+    }
+
+    .audio-sub {
+      color: var(--audio-sub) !important;
+    }
+
+    .option-label {
+      background-color: var(--option-bg) !important;
+      border: 1.5px solid var(--option-border) !important;
+      color: var(--option-text) !important;
+      transition: all 0.15s ease;
+    }
+
+    .option-label:hover {
+      background-color: var(--option-hover) !important;
+      border-color: #94a3b8 !important;
+    }
+
+    .option-label.is-selected {
+      background-color: var(--option-selected-bg) !important;
+      border-color: var(--option-selected-border) !important;
+      border-width: 2px !important;
+      color: var(--option-selected-text) !important;
+      font-weight: 700 !important;
+    }
+
+    .timer-badge {
+      background-color: var(--timer-bg) !important;
+    }
+
+    .timer-text {
+      color: var(--timer-text) !important;
+    }
+
+    .exp-inner-box {
+      background-color: var(--inner-box-bg) !important;
+      border: 1.5px solid var(--inner-box-border) !important;
+    }
+
+    .exp-item-label {
+      font-weight: 700;
+      white-space: nowrap;
+      flex-shrink: 0;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .exp-item-text {
+      color: var(--text-main) !important;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    ruby rt {
+      font-size: 0.68em;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body class="antialiased p-4 md:p-6 min-h-screen">
+  <div class="max-w-3xl mx-auto">
+    <!-- Header -->
+    <header class="theme-card rounded-2xl p-6 mb-6 shadow-sm">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <span class="inline-block px-3 py-1 text-xs font-bold rounded-full bg-purple-700 text-white shadow-sm">
+              JLPT N2 聴解 실전 모의
+            </span>
+            <button id="themeToggleBtn" onclick="toggleTheme()" class="px-2.5 py-1 text-xs font-semibold rounded-lg border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1">
+              <span id="themeIcon">🌙</span> <span id="themeLabel">다크 모드</span>
+            </button>
+          </div>
+          <h1 class="text-2xl font-black tracking-tight">N2 聴解 実戦ミニテスト (4問)</h1>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-1 font-medium">
+            유형: 課題理解(첫 행동·조건) · ポイント理解 · 即時応答 · 일본어 TTS 음성 지원
+          </p>
+        </div>
+        <div class="timer-badge flex items-center gap-2 px-5 py-2.5 rounded-xl shadow-inner border border-slate-800">
+          <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">経過時間</span>
+          <span id="timerDisplay" class="timer-text font-mono text-2xl font-black">00:00</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Start View -->
+    <div id="startView" class="theme-card rounded-2xl p-8 text-center shadow-sm">
+      <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center text-purple-700 dark:text-purple-300 text-3xl shadow-sm">
+        🎧
+      </div>
+      <h2 class="text-xl font-extrabold mb-2">音声テストを開始しますか？</h2>
+      <div class="text-sm max-w-md mx-auto mb-6 text-left space-y-2.5 p-4 rounded-xl situation-box">
+        <p>• <strong>음성 재생</strong>: 각 문제의 「▶ 音声を再生する」 버튼을 누르면 일본어 대화가 시작됩니다.</p>
+        <p>• <strong>1회 재생 제한</strong>: 실전 시험 규격에 따라 음성은 1회만 재생됩니다.</p>
+        <p>• <strong>화자 구분</strong>: 남성/여성 화자의 억양과 음색이 구분되어 재생됩니다.</p>
+        <p>• <strong>대본 비공개</strong>: 대본(후리가나 표기) 및 한국어 해설은 제출 후 결과 화면에서 공개됩니다.</p>
+      </div>
+      <button id="startBtn" class="px-9 py-3.5 bg-purple-700 hover:bg-purple-800 text-white font-bold text-base rounded-xl shadow-md transition duration-150 transform active:scale-95">
+        開始する (시험 시작)
+      </button>
+    </div>
+
+    <!-- Quiz View -->
+    <div id="quizView" class="hidden space-y-6">
+      <div id="questionList" class="space-y-6"></div>
+      <div class="p-6 theme-card rounded-2xl flex items-center justify-between shadow-sm">
+        <span class="text-sm font-bold text-slate-600 dark:text-slate-300" id="progressStatus">回答状況: 0 / 4</span>
+        <button id="submitBtn" class="px-9 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base rounded-xl shadow-md transition duration-150 transform active:scale-95">
+          提出する (채점하기)
+        </button>
+      </div>
+    </div>
+
+    <!-- Results View -->
+    <div id="resultView" class="hidden space-y-6">
+      <!-- Score Summary Card -->
+      <div class="theme-card rounded-2xl p-6 shadow-sm">
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-700 pb-4 mb-4">
+          <div>
+            <h2 class="text-2xl font-black">聴解テスト結果</h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5" id="resultTimestamp"></p>
+          </div>
+          <div class="flex items-center gap-6">
+            <div class="text-right">
+              <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">正答率</div>
+              <div id="scoreDisplay" class="text-3xl font-black text-purple-700 dark:text-purple-400"></div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase">所要時間</div>
+              <div id="timeDisplay" class="text-2xl font-bold font-mono text-slate-800 dark:text-slate-200"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 text-center mb-4 text-sm font-bold">
+          <div class="p-3 bg-emerald-100/80 text-emerald-900 dark:bg-emerald-950/70 dark:text-emerald-300 rounded-xl border border-emerald-300 dark:border-emerald-800">
+            正解: <span id="correctCount" class="font-extrabold text-lg">0</span>
+          </div>
+          <div class="p-3 bg-rose-100/80 text-rose-900 dark:bg-rose-950/70 dark:text-rose-300 rounded-xl border border-rose-300 dark:border-rose-800">
+            誤答: <span id="wrongCount" class="font-extrabold text-lg">0</span>
+          </div>
+          <div class="p-3 bg-amber-100/80 text-amber-900 dark:bg-amber-950/70 dark:text-amber-300 rounded-xl border border-amber-300 dark:border-amber-800">
+            分からない: <span id="unknownCount" class="font-extrabold text-lg">0</span>
+          </div>
+        </div>
+
+        <!-- Copy Record Section -->
+        <div class="mt-4 p-4 rounded-xl border situation-box">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs font-bold">📋 대화창 기록용 결과 텍스트</span>
+            <button id="copyBtn" class="px-3.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold rounded-lg transition duration-150 shadow-sm">
+              결과 복사하기
+            </button>
+          </div>
+          <textarea id="copyArea" readonly rows="7" class="w-full text-xs font-mono p-2.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none"></textarea>
+        </div>
+      </div>
+
+      <!-- Detailed Review List -->
+      <div class="space-y-5" id="explanationList"></div>
+    </div>
+  </div>
+
+  <script>
+    const listeningQuestions = [
+      {
+        id: 1,
+        type: "課題理解 (첫 행동)",
+        category: "청해 → 과제이해(課題理解) → 담당자·첫 행동",
+        situation: "会社で、上司(男)と部下(女)が新製品の発表会の準備について話しています。",
+        question: "女の人は、まず何をしなければなりませんか。",
+        script: [
+          { speaker: 0, label: "男", text: "明日の新製品発表会の準備だけど、進み具合はどう？" },
+          { speaker: 1, label: "女", text: "はい。会場の設営は終わっていて、配布する資料の印刷も完了しています。" },
+          { speaker: 0, label: "男", text: "そうか。アンケート用紙は用意した？" },
+          { speaker: 1, label: "女", text: "あ、アンケート用紙はまだ印刷していません。今すぐやります。" },
+          { speaker: 0, label: "男", text: "いや、アンケートの前に、さっき企画部からスライドに修正が入ったって連絡があったんだ。プロジェクターで映す画面の確認を先にしてくれるかい？ その後でアンケートを印刷すればいいから。" },
+          { speaker: 1, label: "女", text: "分かりました。すぐにプロジェクターとスライドを確認します。" }
+        ],
+        options: [
+          "スライドの画面を確認する",
+          "アンケート用紙を印刷する",
+          "会場の設営をする",
+          "配布資料を印刷する"
+        ],
+        answerIndex: 0,
+        explanation: {
+          translation: "회사에서 상사(남)와 부하 직원(여)이 신제품 발표회 준비에 대해 이야기하고 있습니다. 여자는 먼저 무엇을 해야 합니까?",
+          clue: "「アンケートの前に……プロジェクターで映す画面の確認を先にしてくれるかい？ その後でアンケートを印刷すればいいから」",
+          analysis: "여직원이 설문지(アンケート用紙)를 지금 당장 인쇄하겠다고 했으나, 상사가 '그 전에 슬라이드 수정이 들어왔으니 프로젝터 화면 확인을 먼저 해달라'고 지시를 바꿉니다. 따라서 가장 먼저 해야 할 행동은 '스마트 화면 확인'입니다.",
+          trap: "여직원이 '今すぐやります'라고 말한 2번(설문지 인쇄)에 낚이기 쉬운 전형적인 N2 역전 함정입니다. 'その前に', '先にしてくれるかい' 뒤의 내용을 캐치해야 합니다.",
+          scriptRuby: `
+            <div class="space-y-2 text-sm leading-relaxed">
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong><ruby>明日<rt>あした</rt></ruby>の<ruby>新製品<rt>しんせいひん</rt></ruby><ruby>発表会<rt>はっぴょうかい</rt></ruby>の<ruby>準備<rt>じゅんび</rt></ruby>だけど、<ruby>進<rt>すす</rt></ruby>み<ruby>具合<rt>ぐあい</rt></ruby>はどう？</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong>はい。<ruby>会場<rt>かいじょう</rt></ruby>の<ruby>設営<rt>せつえい</rt></ruby>は<ruby>終<rt>お</rt></ruby>わっていて、<ruby>配布<rt>はいふ</rt></ruby>する<ruby>資料<rt>しりょう</rt></ruby>の<ruby>印刷<rt>いんさつ</rt></ruby>も<ruby>完了<rt>かんりょう</rt></ruby>しています。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong>そうか。アンケート<ruby>用紙<rt>ようし</rt></ruby>は<ruby>用意<rt>ようい</rt></ruby>した？</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong>あ、アンケート<ruby>用紙<rt>ようし</rt></ruby>はまだ<ruby>印刷<rt>いんさつ</rt></ruby>していません。<ruby>今<rt>いま</rt></ruby>すぐやります。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong>いや、アンケートの<ruby>前<rt>まえ</rt></ruby>に、さっき<ruby>企画部<rt>きかくぶ</rt></ruby>からスライドに<ruby>修正<rt>しゅうせい</rt></ruby>が<ruby>入<rt>はい</rt></ruby>ったって<ruby>連絡<rt>れんらく</rt></ruby>があったんだ。プロジェクターで<ruby>映<rt>うつ</rt></ruby>す<ruby>画面<rt>がめん</rt></ruby>の<ruby>確認<rt>かくにん</rt></ruby>を<strong><ruby>先<rt>さき</rt></ruby>にしてくれるかい？</strong> その<ruby>後<rt>あと</rt></ruby>でアンケートを<ruby>印刷<rt>いんさつ</rt></ruby>すればいいから。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong><ruby>分<rt>わ</rt></ruby>かりました。<ruby>画面<rt>がめん</rt></ruby>をすぐ<ruby>確認<rt>かくにん</rt></ruby>します。</p>
+            </div>
+          `,
+          reviewDate: "D+1 (2026-09-06)"
+        }
+      },
+      {
+        id: 2,
+        type: "課題理解 (조건 및 오늘 기한)",
+        category: "청해 → 과제이해(課題理解) → 제출 기한·조건",
+        situation: "大学の事務室で、留学生(男)と職員(女)が奨学金の申請について話しています。",
+        question: "男の学生は、今日中に何を提出しなければなりませんか。",
+        script: [
+          { speaker: 1, label: "女", text: "留学生奨学金の申請ですね。申請書と、成績証明書、それから指導教員の推薦状が必要です。" },
+          { speaker: 0, label: "男", text: "はい、申請書と成績証明書は持ってきました。でも、推薦状の先生のサインがまだもらえていなくて。" },
+          { speaker: 1, label: "女", text: "そうですか。推薦状がないと正式な受付はできませんが、締め切りは来週の月曜日まで延長できますよ。ただ、申請の事前登録用紙だけは、今日中に提出してもらわないと資格がなくなってしまうんです。" },
+          { speaker: 0, label: "男", text: "えっ、そうなんですか。その用紙はどこにありますか？" },
+          { speaker: 1, label: "女", text: "今ここでお渡ししますから、お名前と学籍番号を書いてすぐに出してください。" },
+          { speaker: 0, label: "男", text: "分かりました。すぐ書きます。" }
+        ],
+        options: [
+          "事前登録用紙",
+          "奨学金の申請書",
+          "成績証明書",
+          "指導教員の推薦状"
+        ],
+        answerIndex: 0,
+        explanation: {
+          translation: "대학 사무실에서 유학생(남)과 직원(여)이 장학금 신청에 대해 이야기하고 있습니다. 남학생은 오늘 중에 무엇을 제출해야 합니까?",
+          clue: "「締め切りは来週の月曜日まで延長できますよ。ただ、申請の事前登録用紙だけは、今日中に提出してもらわないと資格がなくなってしまうんです」",
+          analysis: "신청서, 성적증명서, 추천서의 최종 마감은 다음 주 월요일까지 연장되지만, '事前登録用紙(사전 등록 용지)'만큼은 오늘 중으로 제출하지 않으면 자격이 상실된다고 명시하고 있습니다.",
+          trap: "남학생이 이미 가져왔다고 말한 '신청서'나 '성적증명서', 아직 못 받았다는 '추천서'를 섞어놓고 '오늘 중 필수 제출 서류'를 묻는 조건 식별 문제입니다.",
+          scriptRuby: `
+            <div class="space-y-2 text-sm leading-relaxed">
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong><ruby>留学生<rt>りゅうがくせい</rt></ruby><ruby>奨学金<rt>しょうがくきん</rt></ruby>の<ruby>申請<rt>しんせい</rt></ruby>ですね。<ruby>申請書<rt>しんせいしょ</rt></ruby>と、<ruby>成績<rt>せいせき</rt></ruby><ruby>証明書<rt>しょうめいしょ</rt></ruby>、それから<ruby>指導<rt>しどう</rt></ruby><ruby>教員<rt>きょういん</rt></ruby>の<ruby>推薦状<rt>すいせんじょう</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>です。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong>はい、<ruby>申請書<rt>しんせいしょ</rt></ruby>と<ruby>成績<rt>せいせき</rt></ruby><ruby>証明書<rt>しょうめいしょ</rt></ruby>は<ruby>持<rt>も</rt></ruby>ってきました。でも、<ruby>推薦状<rt>すいせんじょう</rt></ruby>の<ruby>先生<rt>せんせい</rt></ruby>のサインがまだもらえていなくて。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong>そうですか。<ruby>締<rt>し</rt></ruby>め<ruby>切<rt>き</rt></ruby>りは<ruby>来週<rt>らいしゅう</rt></ruby>の<ruby>月曜日<rt>げつようび</rt></ruby>まで<ruby>延長<rt>えんちょう</rt></ruby>できますよ。ただ、<strong><ruby>申請<rt>しんせい</rt></ruby>の<ruby>事前<rt>じぜん</rt></ruby><ruby>登録<rt>とうろく</rt></ruby><ruby>用紙<rt>ようし</rt></ruby>だけは、<ruby>今日中<rt>きょうじゅう</rt></ruby>に<ruby>提出<rt>ていしゅつ</rt></ruby>してもらわないと</strong><ruby>資格<rt>しかく</rt></ruby>がなくなってしまうんです。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong>えっ、そうなんですか。その<ruby>用紙<rt>ようし</rt></ruby>はどこにありますか？</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong><ruby>今<rt>いま</rt></ruby>お<ruby>渡<rt>わた</rt></ruby>ししますから、お<ruby>名前<rt>なまえ</rt></ruby>と<ruby>学籍<rt>がくせき</rt></ruby><ruby>番号<rt>ばんごう</rt></ruby>を<ruby>書<rt>か</rt></ruby>いてすぐに出してください。</p>
+              <p><strong class="text-purple-700 dark:text-purple-300">男：</strong><ruby>分<rt>わ</rt></ruby>かりました。すぐ<ruby>書<rt>か</rt></ruby>きます。</p>
+            </div>
+          `,
+          reviewDate: "D+1 (2026-09-06)"
+        }
+      },
+      {
+        id: 3,
+        type: "ポイント理解 (최우선 호평 이유)",
+        category: "청해 → 포인트이해(ポイント理解) → 핵심 이유",
+        situation: "ラジオで、アナウンサー(女)が新しくオープンした図書館について話しています。",
+        question: "この図書館が利用者に最も好評な理由は何ですか。",
+        script: [
+          { speaker: 1, label: "女", text: "先月オープンした中央図書館は、連日多くの市民で賑わっています。蔵書の数が二十万冊と充実していることや、駅から徒歩三分というアクセスの良さも魅力ですが、何より利用者に喜ばれているのは、館内全席に設置された個別ブースと静かな学習環境です。利用者のアンケートでも、『周りを気にせず集中して勉強や読書ができる』という声が圧倒的に多く寄せられています。なお、カフェの営業時間は来月から延長される予定です。" }
+        ],
+        options: [
+          "集中して勉強できる静かな学習環境",
+          "蔵書の数が二十万冊と充実していること",
+          "駅から徒歩三分とアクセスが良いこと",
+          "併設されたカフェの営業時間が長いこと"
+        ],
+        answerIndex: 0,
+        explanation: {
+          translation: "라디오에서 아나운서(여)가 새로 개관한 도서관에 대해 이야기하고 있습니다. 이 도서관이 이용자에게 가장 호평받는 이유는 무엇입니까?",
+          clue: "「……アクセスの良さも魅力ですが、何より利用者に喜ばれているのは、館内全席に設置された個別ブースと静かな学習環境です」",
+          analysis: "장서의 수(2번)나 역과의 거리(3번)도 '매력(魅力)'이라고 언급되었지만, '何より(무엇보다도)'라는 최상급 표지 뒤에 '이용자들에게 가장 기쁨을 주는 것은 개별 부스와 조용한 학습 환경'이라고 핵심을 짚고 있습니다.",
+          trap: "지문에 나오는 단어들(20만 권, 도보 3분, 카페 등)이 선택지에 다 나오기 때문에, '何より利用者に喜ばれているのは'라는 결론 유도 접속어를 놓치면 오답을 고르게 됩니다.",
+          scriptRuby: `
+            <div class="space-y-2 text-sm leading-relaxed">
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong><ruby>先月<rt>せんげつ</rt></ruby>オープンした<ruby>中央<rt>ちゅうおう</rt></ruby><ruby>図書館<rt>としょかん</rt></ruby>は、<ruby>連日<rt>れんじつ</rt></ruby><ruby>多<rt>おお</rt></ruby>くの<ruby>市民<rt>しみん</rt></ruby>で<ruby>賑<rt>にぎ</rt></ruby>わっています。<ruby>蔵書<rt>ぞうしょ</rt></ruby>の<ruby>数<rt>かず</rt></ruby>が<ruby>二十万<rt>にじゅうまん</rt></ruby><ruby>冊<rt>さつ</rt></ruby>と<ruby>充実<rt>じゅうじつ</rt></ruby>していることや、<ruby>駅<rt>えき</rt></ruby>から<ruby>徒歩<rt>とほ</rt></ruby><ruby>三分<rt>さんぷん</rt></ruby>というアクセスの<ruby>良<rt>よ</rt></ruby>さも<ruby>魅力<rt>みりょく</rt></ruby>ですが、<strong><ruby>何<rt>なに</rt></ruby>より<ruby>利用<rt>りよう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>に<ruby>喜<rt>よろこ</rt></ruby>ばれているのは、<ruby>館内<rt>かんない</rt></ruby><ruby>全席<rt>ぜんせき</rt></ruby>に<ruby>設置<rt>せっち</rt></ruby>された<ruby>個別<rt>こべつ</rt></ruby>ブースと<ruby>静<rt>しず</rt></ruby>かな<ruby>学習<rt>がくしゅう</rt></ruby><ruby>環境<rt>かんきょう</rt></ruby>です。</strong><ruby>利用<rt>りよう</rt></ruby><ruby>者<rt>しゃ</rt></ruby>のアンケートでも、『<ruby>周<rt>まわ</rt></ruby>りを<ruby>気<rt>き</rt></ruby>にせず<ruby>集中<rt>しゅうちゅう</rt></ruby>して<ruby>勉強<rt>べんきょう</rt></ruby>や<ruby>読書<rt>どくしょ</rt></ruby>ができる』という<ruby>声<rt>こえ</rt></ruby>が<ruby>圧倒的<rt>あっとうてき</rt></ruby>に<ruby>多<rt>おお</rt></ruby>く<ruby>寄<rt>よ</rt></ruby>せられています。</p>
+            </div>
+          `,
+          reviewDate: "D+1 (2026-09-06)"
+        }
+      },
+      {
+        id: 4,
+        type: "即時応答 (호의 제안 수락)",
+        category: "청해 → 즉시응답(即時応答) → 호의 제안·경어",
+        situation: "職場で、同僚(女)が困っている男の人に声をかけます。",
+        question: "女の人の言葉に、男の人はどう答えますか。最もよいものを一つ選びなさい。",
+        script: [
+          { speaker: 1, label: "女", text: "田中さん、さっきの会議の資料、私でよければ手伝いましょうか。" }
+        ],
+        options: [
+          "本当ですか。助かります。",
+          "ええ、ぜひ手伝わせてください。",
+          "いえ、手伝ってあげてください。",
+          "どういたしまして。"
+        ],
+        answerIndex: 0,
+        explanation: {
+          translation: "직장에서 동료(여)가 곤란해하는 남자에게 말을 겁니다. '다나카 씨, 아까 회의 자료, 저라도 괜찮다면 도와드릴까요?'",
+          clue: "「私でよければ手伝いましょうか」",
+          analysis: "상대방이 나를 도와주겠다고 호의를 제안(〜ましょうか)했을 때, 감사히 받아들이는 자연스러운 일본어 표현은 '本当ですか。助かります(정말요? 큰 도움이 되겠습니다 / 살았습니다)'입니다.",
+          trap: "2번 '手伝わせてください'는 '내가 상대를 돕게 해달라'는 사역이므로 반대 주체, 3번 '手伝ってあげてください'는 제3자를 도와주라는 뜻, 4번 'どういたしまして'는 자기가 호의를 베풀었을 때 쓰는 답이므로 모두 오답입니다.",
+          scriptRuby: `
+            <div class="space-y-2 text-sm leading-relaxed">
+              <p><strong class="text-purple-700 dark:text-purple-300">女：</strong><ruby>田中<rt>たなか</rt></ruby>さん、さっきの<ruby>会議<rt>かいぎ</rt></ruby>の<ruby>資料<rt>しりょう</rt></ruby>、<ruby>私<rt>わたし</rt></ruby>でよければ<strong><ruby>手伝<rt>てつだ</rt></ruby>いましょうか。</strong></p>
+              <p><strong class="text-purple-700 dark:text-purple-300">正解応答：</strong><ruby>本当<rt>ほんとう</rt></ruby>ですか。<ruby>助<rt>たす</rt></ruby>かります。</p>
+            </div>
+          `,
+          reviewDate: "D+1 (2026-09-06)"
+        }
+      }
+    ];
+
+    let timerInterval = null;
+    let elapsedSeconds = 0;
+    let userSelections = {};
+    let playCounts = {};
+    let isPlaying = false;
+    let preparedQuestions = [];
+
+    // Theme Toggle Functionality
+    function toggleTheme() {
+      const htmlEl = document.documentElement;
+      const isDark = htmlEl.classList.toggle("dark");
+      localStorage.setItem("jlpt_quiz_theme", isDark ? "dark" : "light");
+      updateThemeUI(isDark);
+    }
+
+    function updateThemeUI(isDark) {
+      document.getElementById("themeIcon").innerText = isDark ? "☀️" : "🌙";
+      document.getElementById("themeLabel").innerText = isDark ? "라이트 모드" : "다크 모드";
+    }
+
+    // Initialize Theme
+    const savedTheme = localStorage.getItem("jlpt_quiz_theme");
+    if (savedTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    function prepareQuestions() {
+      preparedQuestions = listeningQuestions.map((q) => {
+        const originalCorrectText = q.options[q.answerIndex];
+        const optsWithoutUnknown = [...q.options];
+        
+        // Shuffle choices
+        for (let i = optsWithoutUnknown.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [optsWithoutUnknown[i], optsWithoutUnknown[j]] = [optsWithoutUnknown[j], optsWithoutUnknown[i]];
+        }
+        
+        optsWithoutUnknown.push("分からない");
+        const newAnswerIndex = optsWithoutUnknown.indexOf(originalCorrectText);
+        
+        return {
+          ...q,
+          displayOptions: optsWithoutUnknown,
+          correctIndex: newAnswerIndex,
+          correctText: originalCorrectText,
+        };
+      });
+    }
+
+    function renderQuestions() {
+      const container = document.getElementById("questionList");
+      container.innerHTML = preparedQuestions.map((q, idx) => `
+        <div class="theme-card rounded-2xl p-6 shadow-sm" id="q-card-${idx}">
+          <!-- Meta Header -->
+          <div class="flex items-center justify-between text-xs mb-3 pb-2 border-b border-slate-200 dark:border-slate-700">
+            <span class="font-extrabold text-sm text-purple-700 dark:text-purple-400">問題 ${idx + 1} 【${q.type}】</span>
+            <span class="px-2.5 py-1 bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold rounded-lg text-xs">1回再生</span>
+          </div>
+
+          <!-- Situation text (High-contrast box) -->
+          <div class="situation-box p-3.5 rounded-xl mb-4 text-sm font-medium leading-relaxed">
+            <strong class="font-bold mr-1">【状況】</strong>${q.situation}
+          </div>
+
+          <!-- Audio Box (High-contrast distinct container) -->
+          <div class="audio-box mb-5 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
+            <div class="flex items-center gap-3">
+              <div class="w-11 h-11 rounded-full bg-purple-700 text-white flex items-center justify-center font-black text-xl shadow">
+                音
+              </div>
+              <div>
+                <div class="audio-title text-base font-extrabold tracking-tight">音声を聞いて答えてください</div>
+                <div class="audio-sub text-xs font-semibold mt-0.5">※ 再生は1回のみです。スクリプトは提出後に表示されます。</div>
+              </div>
+            </div>
+            <button id="play-btn-${idx}" onclick="playQuestionAudio(${idx})" class="px-5 py-2.5 bg-purple-700 hover:bg-purple-800 disabled:bg-slate-300 dark:disabled:bg-slate-700 disabled:text-slate-500 text-white font-bold text-sm rounded-xl shadow transition duration-150 flex items-center gap-2">
+              <span id="play-btn-text-${idx}">▶ 音声を再生する</span>
+            </button>
+          </div>
+
+          <!-- Question Prompt -->
+          <div class="text-base md:text-lg font-bold mb-4 leading-snug">
+            ${q.question}
+          </div>
+
+          <!-- Choices -->
+          <div class="space-y-3">
+            ${q.displayOptions.map((opt, optIdx) => `
+              <label id="opt-label-${idx}-${optIdx}" class="option-label flex items-center gap-3.5 p-4 rounded-xl cursor-pointer">
+                <input type="radio" name="q_${idx}" value="${optIdx}" class="w-4 h-4 text-purple-700 focus:ring-purple-600" onchange="onSelectOption(${idx}, ${optIdx})">
+                <span class="text-sm md:text-base ${opt === '分からない' ? 'text-amber-700 dark:text-amber-400 font-bold' : 'font-medium'}">${optIdx + 1}. ${opt}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    
+    let reviewPlayingIdx = null;
+    let reviewLineIndex = 0;
+
+    window.playReviewAudio = function(idx) {
+      if (!('speechSynthesis' in window)) {
+        alert("이 브라우저는 음성 합성(Speech Synthesis)을 지원하지 않습니다.");
+        return;
+      }
+
+      const btn = document.getElementById(`review-play-btn-${idx}`);
+      const btnText = document.getElementById(`review-play-text-${idx}`);
+
+      // If already playing this question, stop it
+      if (reviewPlayingIdx === idx) {
+        window.speechSynthesis.cancel();
+        reviewPlayingIdx = null;
+        if (btnText) btnText.innerText = "▶ 다시 듣기";
+        if (btn) btn.classList.replace("bg-rose-700", "bg-purple-700");
+        return;
+      }
+
+      // If playing another question, reset that button
+      if (reviewPlayingIdx !== null) {
+        const oldBtn = document.getElementById(`review-play-btn-${reviewPlayingIdx}`);
+        const oldBtnText = document.getElementById(`review-play-text-${reviewPlayingIdx}`);
+        if (oldBtnText) oldBtnText.innerText = "▶ 다시 듣기";
+        if (oldBtn) oldBtn.classList.replace("bg-rose-700", "bg-purple-700");
+      }
+
+      window.speechSynthesis.cancel();
+      reviewPlayingIdx = idx;
+      reviewLineIndex = 0;
+
+      if (btnText) btnText.innerText = "⏹ 재생 중지";
+      if (btn) btn.classList.replace("bg-purple-700", "bg-rose-700");
+
+      const q = preparedQuestions[idx];
+
+      function speakReviewLine() {
+        if (reviewPlayingIdx !== idx) return;
+
+        if (reviewLineIndex >= q.script.length) {
+          reviewPlayingIdx = null;
+          if (btnText) btnText.innerText = "▶ 다시 듣기";
+          if (btn) btn.classList.replace("bg-rose-700", "bg-purple-700");
+          return;
+        }
+
+        const line = q.script[reviewLineIndex];
+        const utter = new SpeechSynthesisUtterance(line.text);
+        utter.lang = "ja-JP";
+        utter.rate = 0.90;
+        utter.pitch = line.speaker === 0 ? 0.85 : 1.18;
+
+        const voices = window.speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().startsWith("ja"));
+        if (voices.length > 1) {
+          utter.voice = voices[line.speaker % voices.length];
+        } else if (voices.length === 1) {
+          utter.voice = voices[0];
+        }
+
+        utter.onend = () => {
+          reviewLineIndex++;
+          setTimeout(speakReviewLine, 350);
+        };
+
+        utter.onerror = () => {
+          reviewLineIndex++;
+          setTimeout(speakReviewLine, 350);
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      speakReviewLine();
+    };
+
+    window.playQuestionAudio = function(idx) {
+      if (playCounts[idx] >= 1 || isPlaying) return;
+      if (!('speechSynthesis' in window)) {
+        alert("이 브라우저는 음성 합성(Speech Synthesis)을 지원하지 않습니다.");
+        return;
+      }
+
+      const q = preparedQuestions[idx];
+      const btn = document.getElementById(`play-btn-${idx}`);
+      const btnText = document.getElementById(`play-btn-text-${idx}`);
+      
+      playCounts[idx] = 1;
+      isPlaying = true;
+      btn.disabled = true;
+      btnText.innerText = "🔊 音声再生中...";
+
+      window.speechSynthesis.cancel();
+      let lineIndex = 0;
+
+      function speakLine() {
+        if (lineIndex >= q.script.length) {
+          isPlaying = false;
+          btnText.innerText = "✓ 再生完了 (1/1)";
+          return;
+        }
+
+        const line = q.script[lineIndex];
+        const utter = new SpeechSynthesisUtterance(line.text);
+        utter.lang = "ja-JP";
+        utter.rate = 0.92;
+        utter.pitch = line.speaker === 0 ? 0.85 : 1.18;
+
+        const voices = window.speechSynthesis.getVoices().filter(v => v.lang.toLowerCase().startsWith("ja"));
+        if (voices.length > 1) {
+          utter.voice = voices[line.speaker % voices.length];
+        } else if (voices.length === 1) {
+          utter.voice = voices[0];
+        }
+
+        utter.onend = () => {
+          lineIndex++;
+          setTimeout(speakLine, 350);
+        };
+
+        utter.onerror = () => {
+          lineIndex++;
+          setTimeout(speakLine, 350);
+        };
+
+        window.speechSynthesis.speak(utter);
+      }
+
+      speakLine();
+    };
+
+    window.onSelectOption = function(qIdx, optIdx) {
+      userSelections[qIdx] = optIdx;
+      const answeredCount = Object.keys(userSelections).length;
+      document.getElementById("progressStatus").innerText = `回答状況: ${answeredCount} / ${preparedQuestions.length}`;
+      
+      // Highlight option
+      const q = preparedQuestions[qIdx];
+      q.displayOptions.forEach((_, oIdx) => {
+        const lbl = document.getElementById(`opt-label-${qIdx}-${oIdx}`);
+        if (lbl) {
+          if (oIdx === optIdx) {
+            lbl.classList.add("is-selected");
+          } else {
+            lbl.classList.remove("is-selected");
+          }
+        }
+      });
+    };
+
+    function startQuiz() {
+      document.getElementById("startView").classList.add("hidden");
+      document.getElementById("quizView").classList.remove("hidden");
+      
+      prepareQuestions();
+      renderQuestions();
+      
+      timerInterval = setInterval(() => {
+        elapsedSeconds++;
+        const mins = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+        const secs = String(elapsedSeconds % 60).padStart(2, '0');
+        document.getElementById("timerDisplay").innerText = `${mins}:${secs}`;
+      }, 1000);
+    }
+
+    function submitQuiz() {
+      clearInterval(timerInterval);
+      window.speechSynthesis.cancel();
+
+      document.getElementById("quizView").classList.add("hidden");
+      document.getElementById("resultView").classList.remove("hidden");
+
+      let correct = 0;
+      let wrong = 0;
+      let unknown = 0;
+      let wrongList = [];
+      let unknownList = [];
+      let responses = [];
+
+      preparedQuestions.forEach((q, idx) => {
+        const selectedOptIdx = userSelections[idx];
+        const isUnknown = selectedOptIdx === (q.displayOptions.length - 1);
+        const selectedText = selectedOptIdx !== undefined ? q.displayOptions[selectedOptIdx] : "未回答";
+        const isCorrect = selectedOptIdx === q.correctIndex;
+
+        if (isCorrect) {
+          correct++;
+        } else if (isUnknown) {
+          unknown++;
+          unknownList.push(idx + 1);
+        } else {
+          wrong++;
+          wrongList.push(idx + 1);
+        }
+
+        responses.push({
+          itemNo: idx + 1,
+          selectedText,
+          correctText: q.correctText,
+          isCorrect,
+          isUnknown,
+          state: isCorrect ? 'correct' : (isUnknown ? 'unknown' : 'wrong')
+        });
+      });
+
+      const total = preparedQuestions.length;
+      const scorePct = ((correct / total) * 100).toFixed(1);
+      const mins = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
+      const secs = String(elapsedSeconds % 60).padStart(2, '0');
+      const timeText = `${mins}:${secs}`;
+
+      document.getElementById("scoreDisplay").innerText = `${scorePct}% (${correct}/${total})`;
+      document.getElementById("timeDisplay").innerText = timeText;
+      document.getElementById("correctCount").innerText = correct;
+      document.getElementById("wrongCount").innerText = wrong;
+      document.getElementById("unknownCount").innerText = unknown;
+      document.getElementById("resultTimestamp").innerText = new Date().toLocaleString("ko-KR");
+
+      // Generate Copy Text
+      const summaryText = `[N2 청해 실전 미니테스트 제출 결과]
+- 시험명: N2 청해 실전 미니테스트 (TTS 4문항)
+- 점수: ${correct} / ${total} (${scorePct}%)
+- 소요 시간: ${timeText} (${elapsedSeconds}초)
+- 오답 문항: ${wrongList.length > 0 ? wrongList.join(', ') : '없음'}
+- 分からない 문항: ${unknownList.length > 0 ? unknownList.join(', ') : '없음'}
+- 미응답: 없음
+
+이 결과를 DB와 학습 로그에 기록하고 청해 취약점 분석을 진행해줘.`;
+
+      const copyArea = document.getElementById("copyArea");
+      copyArea.value = summaryText;
+
+      document.getElementById("copyBtn").onclick = () => {
+        navigator.clipboard.writeText(summaryText).then(() => {
+          const btn = document.getElementById("copyBtn");
+          btn.innerText = "✓ 복사 완료!";
+          btn.classList.replace("bg-purple-700", "bg-emerald-600");
+          setTimeout(() => {
+            btn.innerText = "결과 복사하기";
+            btn.classList.replace("bg-emerald-600", "bg-purple-700");
+          }, 2000);
+        }).catch(() => {
+          copyArea.select();
+          document.execCommand("copy");
+          alert("클립보드에 복사되었습니다!");
+        });
+      };
+
+      // Render Detailed Explanations
+      const expContainer = document.getElementById("explanationList");
+      expContainer.innerHTML = preparedQuestions.map((q, idx) => {
+        const resp = responses[idx];
+        const borderColor = resp.isCorrect ? "border-emerald-500" : (resp.isUnknown ? "border-amber-500" : "border-rose-500");
+        const topBannerBg = resp.isCorrect ? "bg-emerald-100/90 text-emerald-950 dark:bg-emerald-950 dark:text-emerald-200 border-emerald-300 dark:border-emerald-800" :
+                            (resp.isUnknown ? "bg-amber-100/90 text-amber-950 dark:bg-amber-950 dark:text-amber-200 border-amber-300 dark:border-amber-800" :
+                             "bg-rose-100/90 text-rose-950 dark:bg-rose-950 dark:text-rose-200 border-rose-300 dark:border-rose-800");
+        const badge = resp.isCorrect ? `<span class="px-3 py-1 bg-emerald-700 text-white font-black text-xs rounded-md shadow">✓ 正解</span>` :
+                      (resp.isUnknown ? `<span class="px-3 py-1 bg-amber-600 text-white font-black text-xs rounded-md shadow">？ 分からない</span>` :
+                       `<span class="px-3 py-1 bg-rose-700 text-white font-black text-xs rounded-md shadow">✗ 不正解</span>`);
+
+        return `
+          <div class="theme-card border-2 rounded-2xl overflow-hidden shadow-sm ${borderColor}">
+            <!-- Top Header Bar -->
+            <div class="flex items-center justify-between px-5 py-3.5 border-b ${topBannerBg}">
+              <span class="font-black text-sm tracking-wide">問題 ${idx + 1} 【${q.category}】</span>
+              ${badge}
+            </div>
+
+            <div class="p-5 md:p-6 space-y-4">
+              <!-- Question Prompt -->
+              <div class="text-base font-bold leading-relaxed">
+                【問い】 ${q.question}
+              </div>
+              
+              <!-- Selection & Correct Answer Box -->
+              <div class="exp-inner-box grid grid-cols-1 sm:grid-cols-2 gap-3 p-3.5 rounded-xl text-sm font-semibold">
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-500 dark:text-slate-400">선택한 답:</span>
+                  <span class="px-2.5 py-1 rounded font-bold ${resp.isCorrect ? 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800' : (resp.isUnknown ? 'bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 border border-amber-300 dark:border-amber-800' : 'bg-rose-100 text-rose-900 dark:bg-rose-950 dark:text-rose-300 border border-rose-300 dark:border-rose-800 line-through')}">${resp.selectedText}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-slate-500 dark:text-slate-400">정답:</span>
+                  <span class="px-2.5 py-1 rounded font-bold bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">${q.correctText}</span>
+                </div>
+              </div>
+
+              
+              <!-- Audio Replay Player for Review -->
+              <div class="flex flex-wrap items-center justify-between gap-3 p-3.5 rounded-xl situation-box border">
+                <div class="flex items-center gap-2.5">
+                  <span class="text-xl">🎧</span>
+                  <div>
+                    <div class="text-xs font-extrabold text-purple-700 dark:text-purple-300">음성 다시 듣기 (복습 & 섀도잉)</div>
+                    <div class="text-[11px] text-slate-500 dark:text-slate-400">대본을 보면서 원어민 발음과 억양, 핵심 전환 단서를 다시 들어보세요.</div>
+                  </div>
+                </div>
+                <button id="review-play-btn-${idx}" onclick="playReviewAudio(${idx})" class="px-4 py-2 bg-purple-700 hover:bg-purple-800 text-white font-bold text-xs rounded-xl shadow transition duration-150 flex items-center gap-1.5">
+                  <span id="review-play-text-${idx}">▶ 다시 듣기</span>
+                </button>
+              </div>
+
+              <!-- Full Transcript with Ruby Furigana -->
+              <div class="p-4 rounded-xl border situation-box">
+                <div class="text-xs font-black text-purple-700 dark:text-purple-400 mb-2 flex items-center gap-1.5 uppercase tracking-wider">
+                  <span>📜 일본어 대본 (후리가나 표기)</span>
+                </div>
+                <div class="leading-loose">
+                  ${q.explanation.scriptRuby}
+                </div>
+              </div>
+
+              <!-- Korean Detailed Explanation Items -->
+              <div class="space-y-3.5 pt-2">
+                <!-- Translation -->
+                <div class="flex items-start gap-2.5">
+                  <span class="exp-item-label px-2.5 py-1 text-xs rounded-md bg-blue-700 text-white font-bold">한국어 번역</span>
+                  <div class="exp-item-text">${q.explanation.translation}</div>
+                </div>
+
+                <!-- Clue / Listening Signal -->
+                <div class="flex items-start gap-2.5">
+                  <span class="exp-item-label px-2.5 py-1 text-xs rounded-md bg-purple-700 text-white font-bold">핵심 단서</span>
+                  <div class="exp-item-text font-bold text-purple-900 dark:text-purple-300">${q.explanation.clue}</div>
+                </div>
+
+                <!-- Analysis -->
+                <div class="flex items-start gap-2.5">
+                  <span class="exp-item-label px-2.5 py-1 text-xs rounded-md bg-indigo-700 text-white font-bold">청취 분석</span>
+                  <div class="exp-item-text">${q.explanation.analysis}</div>
+                </div>
+
+                <!-- Trap Hypothesis -->
+                <div class="flex items-start gap-2.5">
+                  <span class="exp-item-label px-2.5 py-1 text-xs rounded-md bg-rose-700 text-white font-bold">함정 분석</span>
+                  <div class="exp-item-text">${q.explanation.trap}</div>
+                </div>
+
+                <!-- Next Review Date if wrong -->
+                ${!resp.isCorrect ? `
+                  <div class="mt-3 p-3.5 rounded-xl bg-rose-100/90 dark:bg-rose-950/70 border border-rose-300 dark:border-rose-800 flex items-center justify-between text-xs font-bold text-rose-900 dark:text-rose-200">
+                    <span>📅 다음 복습 예정일: ${q.explanation.reviewDate}</span>
+                    <span class="px-2.5 py-1 bg-rose-200 dark:bg-rose-900 text-rose-950 dark:text-rose-100 rounded-md font-extrabold">D+1, D+3, D+7 큐 등록 예정</span>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    document.getElementById("startBtn").addEventListener("click", startQuiz);
+    document.getElementById("submitBtn").addEventListener("click", submitQuiz);
+  </script>
+</body>
+</html>
