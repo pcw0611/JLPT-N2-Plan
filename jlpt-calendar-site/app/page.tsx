@@ -31,7 +31,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     badge: '🔥 今夜 20:00',
     type: 'upcoming-mock',
     title: '第2回 N2 実戦模擬試験 (今夜 20:00 実施)',
-    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験 (言語知識・読解 72問 + 聴解 32問)'
+    desc: '2023年12月 JLPT N2 過去問完本 102問 実戦受験 (言語知識・読解 72問 + 聴解 30問)'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -232,7 +232,7 @@ export default function Home() {
                 <div className="ms-date">9/30 (水)</div>
                 <div className="ms-info">
                   <strong>第2回 N2 実戦模試</strong>
-                  <p>2023年12月 過去問完本 104問 (今夜 20:00)</p>
+                  <p>2023年12月 過去問完本 102問 (今夜 20:00)</p>
                 </div>
               </button>
               <button
@@ -291,7 +291,7 @@ export default function Home() {
               {selectedSpecial.type === 'upcoming-mock' && (
                 <div className="callout-meta">
                   <span className="meta-highlight">{mockDays === 0 ? '🔥 本日 20:00 実施予定 (今夜！)' : `実施予定 (D-${mockDays})`}</span>
-                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 全104問 (2023.12 過去問完本)</span>
+                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 30問 (50分) · 全102問 (2023.12 過去問完本)</span>
                   <div style={{ marginTop: '10px' }}>
                     <a
                       href="/exams/n2-past-exam-202312-mock.html"
@@ -299,7 +299,7 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="mock-exam-link-btn emerald"
                     >
-                      🎯 今夜 20:00 第2回 実戦模試 (104問) を受験する ➔
+                      🎯 今夜 20:00 第2回 実戦模試 (102問) を受験する ➔
                     </a>
                   </div>
                 </div>
