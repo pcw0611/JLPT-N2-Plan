@@ -203,33 +203,9 @@
       </div>
 
       
-      <!-- 9/20 DB Historical Record & Wrong Questions Banner -->
-      <div class="border-2 border-red-700 bg-red-50/90 p-5 rounded-xl space-y-3 font-sans my-4 shadow-md">
-        <div class="flex flex-wrap items-center justify-between gap-2 border-b border-red-200 pb-2.5">
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 rounded bg-red-700 text-white font-bold text-xs">📊 9/20 응시 기록 (DB 보존)</span>
-            <span class="font-extrabold text-neutral-950 text-sm sm:text-base">실전 환산: 119 / 180점 (정답 71 · 오답 36)</span>
-          </div>
-          <span class="text-xs text-neutral-600 font-mono font-bold">2026-09-20 응시 완료</span>
-        </div>
-        <p class="text-xs sm:text-sm text-neutral-800 leading-relaxed">
-          지난 9월 20일 실전 모의고사에서 작성하신 107문항 답안 데이터가 원본 그대로 보존되어 있습니다.<br>
-          아래 버튼을 누르면 <strong>당시 틀렸던 문제(36문항)와 내가 선택했던 오답, 정답 및 정밀 한국어 해설</strong>이 즉시 펼쳐집니다.
-        </p>
-        <div class="flex flex-wrap gap-2.5 pt-1">
-          <button onclick="loadHistoricalExam20260920('wrong')" type="button" class="flex-1 py-3 px-4 bg-red-700 hover:bg-red-800 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition-all flex items-center justify-center gap-2 cursor-pointer">
-            <span>❌ 지난 시험 틀린 문제 (36문항) 오답노트 바로보기</span>
-            <span>➔</span>
-          </button>
-          <button onclick="loadHistoricalExam20260920('all')" type="button" class="py-3 px-4 bg-neutral-900 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded-lg shadow transition-all cursor-pointer">
-            📊 전체 107문항 성적표 및 해설 보기
-          </button>
-        </div>
-      </div>
-
       <!-- Start Button -->
       <div class="text-center pt-2">
-        <button id="btn-start-exam" onclick="checkExamPin(() => startSection1())" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest">
+        <button id="btn-start-exam" onclick="startSection1()" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest cursor-pointer">
           第1限 開始 (1교시 언어지식·독해 시작)
         </button>
         <div class="text-[11px] text-neutral-500 font-sans mt-2">
@@ -733,95 +709,13 @@
     }
 
     
-    // =========================================================================
-    // PIN Authentication (비밀번호: 6997)
-    // =========================================================================
-    let pendingExamStartCallback = null;
-
-    function checkExamPin(callback) {
-      if (sessionStorage.getItem('jlpt_exam_pin_auth') === '6997') {
-        callback();
-        return;
-      }
-      pendingExamStartCallback = callback;
-      const modal = document.getElementById('pin-modal');
-      modal.classList.remove('hidden');
-      const input = document.getElementById('pin-input');
-      input.value = '';
-      input.classList.remove('border-red-600');
-      document.getElementById('pin-error').classList.add('hidden');
-      setTimeout(() => input.focus(), 150);
-    }
-
-    function closePinModal() {
-      document.getElementById('pin-modal').classList.add('hidden');
-      pendingExamStartCallback = null;
-    }
-
-    function submitPinAuth() {
-      const input = document.getElementById('pin-input');
-      const val = input.value.trim();
-      if (val === '6997') {
-        sessionStorage.setItem('jlpt_exam_pin_auth', '6997');
-        document.getElementById('pin-modal').classList.add('hidden');
-        if (pendingExamStartCallback) {
-          const cb = pendingExamStartCallback;
-          pendingExamStartCallback = null;
-          cb();
-        }
-      } else {
-        document.getElementById('pin-error').classList.remove('hidden');
-        input.classList.add('border-red-600');
-        input.value = '';
-        input.focus();
-      }
-    }
-
-
-    // =========================================================================
-    // 9/20 Database Historical Result & Wrong Questions Auto-Loader
-    // =========================================================================
-    const DB_HISTORICAL_20260920 = {
-      examDate: "2026-09-20",
-      totalQuestions: 107,
-      correctCount: 71,
-      wrongCount: 36,
-      scaledScore: 119,
-      section1ElapsedSeconds: 4320,
-      section2ElapsedSeconds: 2616,
-      answers: [0, 3, 1, 2, 0, 2, 0, 1, 1, 1, 0, 2, 2, 3, 2, 1, 0, 2, 1, 2, 0, 1, 2, 3, 2, 3, 1, 0, 3, 2, 2, 1, 0, 2, 0, 3, 1, 2, 1, 0, 2, 3, 2, 0, 0, 2, 2, 2, 2, 1, 3, 3, 0, 0, 3, 2, 3, 0, 0, 0, 2, 0, 1, 0, 1, 2, 2, 0, 3, 2, 1, 3, 2, 3, 1, 2, 1, 1, 3, 1, 2, 1, 0, 1, 3, 0, 1, 0, 2, 1, 1, 1, 2, 2, 0, 2, 2, 1, 0, 1, 0, 1, 1, 2, 0, 1, 0],
-      dwellTimes: [23, 16, 15, 28, 28, 38, 44, 22, 68, 30, 37, 36, 27, 23, 49, 39, 16, 32, 32, 27, 21, 36, 23, 52, 32, 20, 39, 92, 37, 24, 63, 29, 50, 39, 37, 56, 53, 17, 27, 19, 95, 55, 70, 24, 69, 92, 85, 60, 36, 82, 74, 52, 124, 40, 119, 154, 71, 115, 61, 115, 47, 53, 178, 46, 182, 103, 133, 73, 453, 206, 110, 100, 89, 287, 154, 73, 53, 51, 57, 59, 84, 73, 80, 75, 74, 80, 87, 73, 77, 76, 75, 38, 30, 29, 29, 25, 30, 30, 29, 26, 29, 27, 30, 96, 62, 57, 54]
-    };
-
-    function loadHistoricalExam20260920(filterType = 'wrong') {
-      if (!sessionQuestions || sessionQuestions.length === 0) {
-        initExam();
-      }
-      userAnswers = [...DB_HISTORICAL_20260920.answers];
-      questionDwellTimes = [...DB_HISTORICAL_20260920.dwellTimes];
-      section1ElapsedSeconds = DB_HISTORICAL_20260920.section1ElapsedSeconds;
-      section2ElapsedSeconds = DB_HISTORICAL_20260920.section2ElapsedSeconds;
-
-      document.getElementById('screen-intro').classList.add('hidden');
-      document.getElementById('screen-quiz').classList.add('hidden');
-      document.getElementById('screen-break').classList.add('hidden');
-      document.getElementById('screen-listening-intro').classList.add('hidden');
-      document.getElementById('screen-result').classList.remove('hidden');
-
-      calculateAndRenderResults();
-      renderAllExplanations(filterType);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    function restartExamFresh() {
-      checkExamPin(() => {
-        initExam();
-        section1RemainingSeconds = 105 * 60;
-        section1ElapsedSeconds = 0;
-        section2ElapsedSeconds = 0;
-        currentQuestionIndex = 0;
-        startSection1();
-      });
+        function restartExamFresh() {
+      initExam();
+      section1RemainingSeconds = 105 * 60;
+      section1ElapsedSeconds = 0;
+      section2ElapsedSeconds = 0;
+      currentIndex = 0;
+      startSection1();
     }
 
     function initExam() {
@@ -836,9 +730,12 @@
     }
 
     // =========================================================================
-    // Phase 1: Section 1 (言語知識・読解 1~75번, 105분)
+    // Phase 1: Section 1 (言語知識・読解 1~72번, 105분)
     // =========================================================================
     function startSection1() {
+      if (!sessionQuestions || sessionQuestions.length === 0) {
+        initExam();
+      }
       currentPhase = 'section1';
       document.getElementById('screen-intro').classList.add('hidden');
       document.getElementById('screen-break').classList.add('hidden');
@@ -854,6 +751,7 @@
 
       // 105분 카운트다운 타이머
       updateSection1TimerDisplay();
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
       section1TimerInterval = setInterval(() => {
         section1RemainingSeconds--;
         section1ElapsedSeconds++;
@@ -866,6 +764,7 @@
         }
       }, 1000);
 
+      if (questionTimerInterval) clearInterval(questionTimerInterval);
       questionTimerInterval = setInterval(() => {
         if (!isExamFinished && currentPhase !== 'break') {
           questionDwellTimes[currentIndex] = (questionDwellTimes[currentIndex] || 0) + 1;
@@ -874,6 +773,7 @@
 
       renderPaletteGrid();
       loadQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function updateSection1TimerDisplay() {
@@ -955,69 +855,14 @@
     // =========================================================================
     // Phase 3: Section 2 (聴解 公式 オープニング イントロ & 本試験)
     // =========================================================================
+        // =========================================================================
+    // Phase 3: Section 2 (聴解 実戦 公式 音声 本試験)
+    // =========================================================================
     function startSection2() {
       if (breakTimerInterval) clearInterval(breakTimerInterval);
-      currentPhase = 'listening_intro';
+      currentPhase = 'section2';
 
       document.getElementById('screen-break').classList.add('hidden');
-      document.getElementById('screen-quiz').classList.add('hidden');
-      document.getElementById('screen-listening-intro').classList.remove('hidden');
-
-      playListeningIntroAudio();
-    }
-
-    function playListeningIntroAudio() {
-      if (!('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel();
-
-      const voices = window.speechSynthesis.getVoices().filter(v => v.lang.startsWith('ja'));
-      const introScript = [
-        "これより、日本語能力試験、エヌにの、聴解試験を始めます。",
-        "問題用紙を開けてください。問題用紙に汚れや破れがある場合、または印刷がはっきりしない場合は、手を挙げてください。",
-        "音の大きさを確かめます。音が聞こえにくい場合は、手を挙げてください。…… 天気がいいから、散歩しましょう。…… いかがですか。よろしいですか。",
-        "それでは、始めます。"
-      ];
-
-      let idx = 0;
-      function speakLine() {
-        if (currentPhase !== 'listening_intro') return;
-        if (idx >= introScript.length) {
-          setTimeout(() => {
-            if (currentPhase === 'listening_intro') {
-              startListeningQuestions();
-            }
-          }, 1200);
-          return;
-        }
-
-        const utter = new SpeechSynthesisUtterance(introScript[idx]);
-        utter.lang = 'ja-JP';
-        utter.rate = 0.95;
-        utter.pitch = 0.95;
-        if (voices.length > 0) utter.voice = voices[0];
-
-        utter.onend = () => {
-          idx++;
-          setTimeout(speakLine, 700);
-        };
-        utter.onerror = () => {
-          idx++;
-          speakLine();
-        };
-
-        window.speechSynthesis.speak(utter);
-      }
-
-      speakLine();
-    }
-
-    function skipListeningIntro() {
-      window.speechSynthesis && window.speechSynthesis.cancel();
-      startListeningQuestions();
-    }
-
-    function startListeningQuestions() {
-      currentPhase = 'section2';
       document.getElementById('screen-listening-intro').classList.add('hidden');
       document.getElementById('screen-quiz').classList.remove('hidden');
 
@@ -1031,6 +876,7 @@
       document.getElementById('q-total-period-num').textContent = '102';
 
       section2StartTime = Date.now();
+      if (section2TimerInterval) clearInterval(section2TimerInterval);
       section2TimerInterval = setInterval(() => {
         section2ElapsedSeconds = Math.floor((Date.now() - section2StartTime) / 1000);
         const m = String(Math.floor(section2ElapsedSeconds / 60)).padStart(2, '0');
@@ -1041,11 +887,13 @@
       renderPaletteGrid();
       // 청해 첫 문제(72번 인덱스 = 73번 문항) 로드 및 자동 방송 개시
       loadQuestion(72);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // =========================================================================
-    // Question Loader & Renderer
-    // =========================================================================
+    function skipListeningIntro() {
+      startSection2();
+    }
+
     function loadQuestion(index) {
       currentIndex = index;
       const q = sessionQuestions[index];
@@ -1169,7 +1017,7 @@
           promptEl.innerHTML = `
             <div class="py-6 px-4 text-center border border-dashed border-neutral-300 rounded bg-neutral-50 space-y-2">
               <div class="font-serif font-bold text-neutral-700 text-sm">
-                問題５（3番 - 質問${meta.qNum === 106 ? '1' : '2'}）
+                問題５（3番 - 質問${meta.qNum === 101 ? '1' : '2'}）
               </div>
               <div class="text-xs text-neutral-500 leading-relaxed">
                 右側の【解答欄（選択肢）】に印刷された選択肢を見ながら、放送される質問に答えてください。
@@ -1518,12 +1366,18 @@
       if (section2TimerInterval) clearInterval(section2TimerInterval);
       if (questionTimerInterval) clearInterval(questionTimerInterval);
       if (listeningCountdownTimer) clearInterval(listeningCountdownTimer);
-      window.speechSynthesis && window.speechSynthesis.cancel();
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
 
-      // 방송 종료 아나운스 멘트
-      const finishUtter = new SpeechSynthesisUtterance('これで、レベルN2の聴解試験を終わります。');
-      finishUtter.lang = 'ja-JP';
-      window.speechSynthesis && window.speechSynthesis.speak(finishUtter);
+      // Stop audio playback
+      const iframe = document.getElementById('yt-actual-audio');
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage(JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+          args: []
+        }), '*');
+      }
+      isYtPlaying = false;
 
       document.getElementById('screen-quiz').classList.add('hidden');
       document.getElementById('screen-break').classList.add('hidden');
@@ -1860,53 +1714,18 @@
         .replace(/'/g, '&#039;');
     }
 
-    // Auto-init on load
+    // Auto-init on load and robust button wiring
     window.addEventListener('DOMContentLoaded', () => {
       initExam();
+      const startBtn = document.getElementById('btn-start-exam');
+      if (startBtn) {
+        startBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          startSection1();
+        });
+      }
     });
   </script>
 
-    <!-- ================================================================= -->
-    <!-- PIN Auth Modal (응시 비밀번호: 6997) -->
-    <!-- ================================================================= -->
-    <div id="pin-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-      <div class="bg-white border-2 border-neutral-900 rounded-2xl p-6 sm:p-8 max-w-sm w-full text-center space-y-4 shadow-2xl font-sans">
-        <div class="w-14 h-14 rounded-full bg-neutral-100 text-neutral-900 flex items-center justify-center mx-auto text-3xl border border-neutral-300">
-          🔒
-        </div>
-        <div>
-          <h3 class="text-xl font-bold font-serif text-neutral-950">
-            受験者 認証 (JLPT N2)
-          </h3>
-          <p class="text-xs text-neutral-600 mt-1.5 leading-relaxed">
-            본 모의고사는 수험자 전용 비공개 시험입니다.<br>
-            <strong>응시 비밀번호 (4자리)</strong>를 입력하세요.
-          </p>
-        </div>
-        <div class="space-y-2">
-          <input
-            type="password"
-            id="pin-input"
-            maxlength="4"
-            placeholder="••••"
-            autocomplete="off"
-            class="w-full text-center text-3xl font-mono tracking-[0.4em] py-3 px-4 border-2 border-neutral-400 focus:border-neutral-950 rounded-xl outline-none transition-all"
-            onkeydown="if(event.key === 'Enter') submitPinAuth()"
-          />
-          <div id="pin-error" class="hidden text-xs text-red-600 font-bold">
-            비밀번호가 올바르지 않습니다. 다시 입력해 주세요.
-          </div>
-        </div>
-        <div class="flex gap-2 pt-2">
-          <button onclick="closePinModal()" type="button" class="flex-1 py-3 border border-neutral-400 hover:bg-neutral-100 text-neutral-700 text-xs font-bold rounded-lg transition-colors cursor-pointer">
-            취소
-          </button>
-          <button onclick="submitPinAuth()" type="button" class="flex-1 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold rounded-lg shadow transition-colors cursor-pointer">
-            인증 및 시험 시작
-          </button>
-        </div>
-      </div>
-    </div>
-
-</body>
+    </body>
 </html>

@@ -143,6 +143,112 @@ AUDIO_JS = """let isYtPlaying = false;
     }
 """
 
+CLEAN_SECTION1_START_JS = """    function restartExamFresh() {
+      initExam();
+      section1RemainingSeconds = 105 * 60;
+      section1ElapsedSeconds = 0;
+      section2ElapsedSeconds = 0;
+      currentIndex = 0;
+      startSection1();
+    }
+
+    function initExam() {
+      sessionQuestions = RAW_QUESTIONS.map(q => ({
+        ...q,
+        sessionChoices: [...q.choices],
+        sessionAnswer: q.answer
+      }));
+
+      userAnswers = new Array(sessionQuestions.length).fill(null);
+      questionDwellTimes = new Array(sessionQuestions.length).fill(0);
+    }
+
+    // =========================================================================
+    // Phase 1: Section 1 (言語知識・読解 1~72번, 105분)
+    // =========================================================================
+    function startSection1() {
+      if (!sessionQuestions || sessionQuestions.length === 0) {
+        initExam();
+      }
+      currentPhase = 'section1';
+      document.getElementById('screen-intro').classList.add('hidden');
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      document.getElementById('badge-period-name').textContent = '第1限 (1교시)';
+      document.getElementById('badge-section-title').textContent = '言語知識（文字・語彙・文法）・読解';
+      document.getElementById('badge-listening-onair').classList.add('hidden');
+      document.getElementById('listening-status-panel').classList.add('hidden');
+      document.getElementById('section1-actions').classList.remove('hidden');
+      document.getElementById('section2-actions').classList.add('hidden');
+      document.getElementById('q-total-period-num').textContent = '72';
+
+      // 105분 카운트다운 타이머
+      updateSection1TimerDisplay();
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
+      section1TimerInterval = setInterval(() => {
+        section1RemainingSeconds--;
+        section1ElapsedSeconds++;
+        updateSection1TimerDisplay();
+
+        if (section1RemainingSeconds <= 0) {
+          clearInterval(section1TimerInterval);
+          alert('第1限（言語知識・読解）の試験時間(105分)が終了しました。休憩時間に入ります。\\n(1교시 105분이 종료되었습니다. 휴식 시간으로 이동합니다.)');
+          finishSection1();
+        }
+      }, 1000);
+
+      if (questionTimerInterval) clearInterval(questionTimerInterval);
+      questionTimerInterval = setInterval(() => {
+        if (!isExamFinished && currentPhase !== 'break') {
+          questionDwellTimes[currentIndex] = (questionDwellTimes[currentIndex] || 0) + 1;
+        }
+      }, 1000);
+
+      renderPaletteGrid();
+      loadQuestion(0);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }"""
+
+CLEAN_SECTION2_START_JS = """    // =========================================================================
+    // Phase 3: Section 2 (聴解 実戦 公式 音声 本試験)
+    // =========================================================================
+    function startSection2() {
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      currentPhase = 'section2';
+
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-listening-intro').classList.add('hidden');
+      document.getElementById('screen-quiz').classList.remove('hidden');
+
+      document.getElementById('badge-period-name').textContent = '第2限 (2교시)';
+      document.getElementById('badge-section-title').textContent = '聴解 (실시간 방송 진행)';
+      document.getElementById('badge-listening-onair').classList.remove('hidden');
+      document.getElementById('listening-status-panel').classList.remove('hidden');
+      document.getElementById('section1-actions').classList.add('hidden');
+      document.getElementById('section2-actions').classList.remove('hidden');
+      document.getElementById('timer-icon').textContent = '⏱️ 진행시간';
+      document.getElementById('q-total-period-num').textContent = '102';
+
+      section2StartTime = Date.now();
+      if (section2TimerInterval) clearInterval(section2TimerInterval);
+      section2TimerInterval = setInterval(() => {
+        section2ElapsedSeconds = Math.floor((Date.now() - section2StartTime) / 1000);
+        const m = String(Math.floor(section2ElapsedSeconds / 60)).padStart(2, '0');
+        const s = String(section2ElapsedSeconds % 60).padStart(2, '0');
+        document.getElementById('period-timer').textContent = `${m}:${s}`;
+      }, 1000);
+
+      renderPaletteGrid();
+      // 청해 첫 문제(72번 인덱스 = 73번 문항) 로드 및 자동 방송 개시
+      loadQuestion(72);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function skipListeningIntro() {
+      startSection2();
+    }"""
+
 def build():
     # 1. Load 2023_12.json
     with open('database/past_exams/2023_12.json', 'r', encoding='utf-8') as f:
@@ -200,6 +306,32 @@ def build():
         '102번의 마킹이 종료되는 순간'
     )
 
+    # Remove 9/20 historical banner from HTML
+    hist_start = html.find('<!-- 9/20 DB Historical Record & Wrong Questions Banner -->')
+    if hist_start != -1:
+        hist_end = html.find('<!-- Start Button -->')
+        if hist_end != -1:
+            html = html[:hist_start] + html[hist_end:]
+
+    # Remove PIN modal from HTML
+    pin_modal_start = html.find('<!-- ================================================================= -->\n    <!-- PIN Auth Modal')
+    if pin_modal_start == -1:
+        pin_modal_start = html.find('<!-- PIN Auth Modal')
+    if pin_modal_start != -1:
+        pin_modal_end = html.find('</body>')
+        if pin_modal_end != -1:
+            html = html[:pin_modal_start] + html[pin_modal_end:]
+
+    # Fix Start Button in HTML: direct startSection1, cursor-pointer, full width styling
+    html = html.replace(
+        '<button id="btn-start-exam" onclick="checkExamPin(() => startSection1())" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest">',
+        '<button id="btn-start-exam" onclick="startSection1()" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-bold text-lg rounded border-2 border-neutral-950 shadow-md transition-all tracking-widest cursor-pointer">'
+    )
+    html = html.replace(
+        'onclick="checkExamPin(() => startSection1())"',
+        'onclick="startSection1()"'
+    )
+
     # Replace explanation filter button numbers
     html = html.replace('전체 (107)', '전체 (102)')
     html = html.replace('어휘 (32)', '어휘 (30)')
@@ -225,10 +357,6 @@ def build():
     html = html.replace(
         "document.getElementById('q-total-period-num').textContent = '107';",
         "document.getElementById('q-total-period-num').textContent = '102';"
-    )
-    html = html.replace(
-        "// 청해 첫 문제(75번 인덱스 = 76번 문항) 로드 및 자동 방송 개시\n      loadQuestion(75);",
-        "// 청해 첫 문제(72번 인덱스 = 73번 문항) 로드 및 자동 방송 개시\n      loadQuestion(72);"
     )
     html = html.replace(
         "document.getElementById('q-side-badge').textContent = `問 ${index + 1} / 107`;",
@@ -259,6 +387,30 @@ def build():
         "let startIdx = currentPhase === 'section2' ? 72 : 0;\n      let endIdx = currentPhase === 'section2' ? 102 : 72;"
     )
 
+    # Clean replace PIN JS + 9/20 historical JS + old startSection1
+    # Locate from '// PIN Authentication' (or '// 9/20 Database Historical Result') down to 'function updateSection1TimerDisplay()'
+    p_start = html.find('// PIN Authentication')
+    if p_start == -1:
+        p_start = html.find('// 9/20 Database Historical Result')
+    if p_start == -1:
+        p_start = html.find('function restartExamFresh()')
+    else:
+        # back up to comment line
+        line_start = html.rfind('// =', 0, p_start)
+        if line_start != -1:
+            p_start = line_start
+
+    p_end = html.find('function updateSection1TimerDisplay()')
+    assert p_start != -1 and p_end != -1, "Could not find startSection1 replacement bounds"
+    html = html[:p_start] + CLEAN_SECTION1_START_JS + "\n\n    " + html[p_end:]
+
+    # Clean replace Section 2 start (remove TTS intro & speechSynthesis)
+    s2_start = html.find('function startSection2() {')
+    if s2_start != -1:
+        s2_end = html.find('function loadQuestion(index) {')
+        assert s2_end != -1, "Could not find loadQuestion marker"
+        html = html[:s2_start] + CLEAN_SECTION2_START_JS + "\n\n    " + html[s2_end:]
+
     # getListeningMeta logic replacement
     old_meta_pattern = re.compile(r'function getListeningMeta\(index\) \{.*?return null;\s*\}', re.DOTALL)
     new_meta_code = """function getListeningMeta(index) {
@@ -285,6 +437,12 @@ def build():
       return null;
     }"""
     html = old_meta_pattern.sub(new_meta_code, html, count=1)
+
+    # Fix Problem 5 Question 1 & 2 label comparison
+    html = html.replace(
+        "meta.qNum === 106 ? '1' : '2'",
+        "meta.qNum === 101 ? '1' : '2'"
+    )
 
     # Endurance stats replacement
     old_endurance = """const firstAnswers = userAnswers.slice(0, 75);
@@ -360,7 +518,74 @@ def build():
     html = html.replace("index === 103", "index === 101")
     html = html.replace("currentIndex === 103", "currentIndex === 101")
 
-    # 6. Save to both destinations
+    # 5.1 Clean replace finishAllExams (remove SpeechSynthesisUtterance, cleanly pause YouTube player)
+    old_finish = """    function finishAllExams() {
+      isExamFinished = true;
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      if (section2TimerInterval) clearInterval(section2TimerInterval);
+      if (questionTimerInterval) clearInterval(questionTimerInterval);
+      if (listeningCountdownTimer) clearInterval(listeningCountdownTimer);
+      window.speechSynthesis && window.speechSynthesis.cancel();
+
+      // 방송 종료 아나운스 멘트
+      const finishUtter = new SpeechSynthesisUtterance('これで、レベルN2の聴解試験を終わります。');
+      finishUtter.lang = 'ja-JP';
+      window.speechSynthesis && window.speechSynthesis.speak(finishUtter);
+
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-result').classList.remove('hidden');
+
+      renderResults();
+    }"""
+    new_finish = """    function finishAllExams() {
+      isExamFinished = true;
+      if (section1TimerInterval) clearInterval(section1TimerInterval);
+      if (breakTimerInterval) clearInterval(breakTimerInterval);
+      if (section2TimerInterval) clearInterval(section2TimerInterval);
+      if (questionTimerInterval) clearInterval(questionTimerInterval);
+      if (listeningCountdownTimer) clearInterval(listeningCountdownTimer);
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+
+      // Stop audio playback
+      const iframe = document.getElementById('yt-actual-audio');
+      if (iframe && iframe.contentWindow) {
+        iframe.contentWindow.postMessage(JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+          args: []
+        }), '*');
+      }
+      isYtPlaying = false;
+
+      document.getElementById('screen-quiz').classList.add('hidden');
+      document.getElementById('screen-break').classList.add('hidden');
+      document.getElementById('screen-result').classList.remove('hidden');
+
+      renderResults();
+    }"""
+    html = html.replace(old_finish, new_finish)
+
+    # 6. Ensure robust DOMContentLoaded start button binding
+    auto_init_old = """    // Auto-init on load
+    window.addEventListener('DOMContentLoaded', () => {
+      initExam();
+    });"""
+    auto_init_new = """    // Auto-init on load and robust button wiring
+    window.addEventListener('DOMContentLoaded', () => {
+      initExam();
+      const startBtn = document.getElementById('btn-start-exam');
+      if (startBtn) {
+        startBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          startSection1();
+        });
+      }
+    });"""
+    html = html.replace(auto_init_old, auto_init_new)
+
+    # 7. Save to both destinations
     destinations = [
         'quiz_sites/n2-past-exam-202312-mock.html',
         'jlpt-calendar-site/public/exams/n2-past-exam-202312-mock.html'
