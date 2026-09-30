@@ -68,7 +68,7 @@ AUDIO_PANEL_HTML = """            <!-- Listening ON-AIR Broadcast Status Panel (
               </div>
             </div>"""
 
-AUDIO_JS = """    let isYtPlaying = false;
+AUDIO_JS = """let isYtPlaying = false;
 
     function toggleAudioPlay() {
       const iframe = document.getElementById('yt-actual-audio');
@@ -129,9 +129,7 @@ AUDIO_JS = """    let isYtPlaying = false;
     }
 
     function startContinuousListeningForQuestion(index) {
-      const q = sessionQuestions[index];
       const phaseText = document.getElementById('listening-phase-text');
-
       if (window.speechSynthesis) window.speechSynthesis.cancel();
 
       const meta = getListeningMeta(index);
@@ -345,18 +343,18 @@ def build():
     html = html.replace(old_totals, new_totals)
 
     # 3. Replace listening status panel HTML with hidden video player
-    panel_pattern = re.compile(r'<!-- Listening ON-AIR Broadcast Status Panel.*?</div>\s*</div>\s*</div>', re.DOTALL)
-    if panel_pattern.search(html):
-        html = panel_pattern.sub(AUDIO_PANEL_HTML, html, count=1)
-    else:
-        # Fallback replacement
-        html = re.sub(r'<div id="listening-status-panel".*?</div>\s*</div>\s*</div>', AUDIO_PANEL_HTML, html, flags=re.DOTALL, count=1)
+    panel_start = html.find('<!-- Listening ON-AIR Broadcast Status Panel')
+    panel_end = html.find('<!-- Problem Header Badge -->')
+    assert panel_start != -1 and panel_end != -1, "Could not find listening panel markers"
+    html = html[:panel_start] + AUDIO_PANEL_HTML + "\n\n            " + html[panel_end:]
 
-    # 4. Replace continuous listening JS with audio controller
-    old_listening_js = re.compile(r'function startContinuousListeningForQuestion\(index\) \{.*?\}', re.DOTALL)
-    html = old_listening_js.sub(AUDIO_JS, html, count=1)
+    # 4. Cleanly replace the entire old TTS block with AUDIO_JS
+    tts_start = html.find('function startContinuousListeningForQuestion(index) {')
+    tts_end = html.find('function confirmSubmitAll() {')
+    assert tts_start != -1 and tts_end != -1, "Could not find TTS block markers"
+    html = html[:tts_start] + AUDIO_JS + "\n    " + html[tts_end:]
 
-    # 5. Fix end-of-exam triggers (index == 101 instead of 103 or 106)
+    # 5. Fix end-of-exam triggers (index == 101 instead of 106)
     html = html.replace("if (index === 106)", "if (index === 101)")
     html = html.replace("if (currentIndex === 106)", "if (currentIndex === 101)")
     html = html.replace("index === 103", "index === 101")
