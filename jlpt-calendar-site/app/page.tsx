@@ -15,7 +15,7 @@ const numberLabel = (value: number) => new Intl.NumberFormat('ja-JP').format(val
 
 interface SpecialDateInfo {
   badge: string;
-  type: 'upcoming-mock' | 'official-exam' | 'completed-mock' | 'trip';
+  type: 'upcoming-mock' | 'official-exam' | 'completed-mock';
   title: string;
   desc: string;
 }
@@ -31,31 +31,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     badge: '🔥 今夜 20:00',
     type: 'upcoming-mock',
     title: '第2回 N2 実戦模擬試験 (今夜 20:00 実施)',
-    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験 (言語知識・読解 72問 + 聴解 32問) ※10/2〜5旅行に伴い前倒し実施'
-  },
-  '2026-10-02': {
-    badge: '✈️ 旅行',
-    type: 'trip',
-    title: '学習休息 / 旅行日程 (10/2〜10/5)',
-    desc: '充電及びコンディション調整期間'
-  },
-  '2026-10-03': {
-    badge: '✈️ 旅行',
-    type: 'trip',
-    title: '学習休息 / 旅行日程 (10/2〜10/5)',
-    desc: '充電及びコンディション調整期間'
-  },
-  '2026-10-04': {
-    badge: '✈️ 旅行',
-    type: 'trip',
-    title: '学習休息 / 旅行日程 (10/2〜10/5)',
-    desc: '※第2回実戦模試は9/30(水) 20:00へ前倒し完了'
-  },
-  '2026-10-05': {
-    badge: '✈️ 旅行',
-    type: 'trip',
-    title: '学習休息 / 旅行日程 (10/2〜10/5)',
-    desc: '充電及びコンディション調整期間'
+    desc: '2023年12月 JLPT N2 過去問完本 104問 実戦受験 (言語知識・読解 72問 + 聴解 32問)'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -287,7 +263,7 @@ export default function Home() {
           {selectedSpecial && (
             <div className={`special-callout ${selectedSpecial.type}`}>
               <div className="callout-header">
-                <span className="callout-icon">{selectedSpecial.type === 'upcoming-mock' ? '🔥' : selectedSpecial.type === 'official-exam' ? '🎯' : selectedSpecial.type === 'trip' ? '✈️' : '📝'}</span>
+                <span className="callout-icon">{selectedSpecial.type === 'upcoming-mock' ? '🔥' : selectedSpecial.type === 'official-exam' ? '🎯' : '📝'}</span>
                 <div>
                   <strong>{selectedSpecial.title}</strong>
                   <p>{selectedSpecial.desc}</p>
@@ -323,12 +299,6 @@ export default function Home() {
                       🎯 今夜 20:00 第2回 実戦模試 (104問) を受験する ➔
                     </a>
                   </div>
-                </div>
-              )}
-              {selectedSpecial.type === 'trip' && (
-                <div className="callout-meta">
-                  <span className="meta-highlight">✈️ 10/2(金) 〜 10/5(月) 旅行日程</span>
-                  <span className="meta-sub">旅行中のため学習休息・コンディション調整 (※模試は9/30に前倒し実施)</span>
                 </div>
               )}
               {selectedSpecial.type === 'official-exam' && (
