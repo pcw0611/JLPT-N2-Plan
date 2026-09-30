@@ -362,13 +362,73 @@ def build():
         "document.getElementById('q-side-badge').textContent = `問 ${index + 1} / 107`;",
         "document.getElementById('q-side-badge').textContent = `問 ${index + 1} / 102`;"
     )
+    # Unblock nextQuestion and prevQuestion across Section 1 and Section 2
+    old_nav = """    function prevQuestion() {
+      if (currentPhase === 'section1' && currentIndex > 0) {
+        loadQuestion(currentIndex - 1);
+      }
+    }
+
+    function nextQuestion() {
+      if (currentPhase === 'section1') {
+        if (currentIndex < 74) {
+          loadQuestion(currentIndex + 1);
+        } else {
+          confirmFinishSection1();
+        }
+      } else if (currentPhase === 'section2') {
+        // 청해 시험 중에는 방송 진행에 따라 자동 전환되므로 임의 건너뛰기 차단
+        alert('※ 聴解試験では、放送の進行に合わせて自動的に次の問題へ進みます。手動でのスキップはできません。\\n(청해 시험에서는 방송 흐름에 맞춰 자동 전환됩니다. 수동 건너뛰기는 불가합니다.)');
+      }
+    }"""
+
+    new_nav = """    function prevQuestion() {
+      if (currentPhase === 'section1' && currentIndex > 0) {
+        loadQuestion(currentIndex - 1);
+      } else if (currentPhase === 'section2' && currentIndex > 72) {
+        loadQuestion(currentIndex - 1);
+      }
+    }
+
+    function nextQuestion() {
+      if (currentPhase === 'section1') {
+        if (currentIndex < 71) {
+          loadQuestion(currentIndex + 1);
+        } else {
+          confirmFinishSection1();
+        }
+      } else if (currentPhase === 'section2') {
+        if (currentIndex < sessionQuestions.length - 1) {
+          loadQuestion(currentIndex + 1);
+        } else {
+          confirmSubmitAll();
+        }
+      }
+    }"""
+    html = html.replace(old_nav, new_nav)
+
+    # Next button text at end of Section 1
     html = html.replace(
         "if (index === 74) {\n          btnNextText.textContent = '第1限 終了へ →';",
         "if (index === 71) {\n          btnNextText.textContent = '第1限 終了へ →';"
     )
+
+    # Unblock palette dot clicks in Section 2
+    old_dot_click = """        if (currentPhase === 'section2') {
+          // 청해 중에는 임의 점프/되돌아가기 불가!
+          dot.onclick = () => {
+            alert('※ 聴解試験では、問題の再聴取や自由移動はできません。放送順に従って解答してください。\\n(청해 시험에서는 임의 이동 및 다시듣기가 불가능합니다. 방송 순서에 따라 풀어주세요.)');
+          };
+        } else {
+          dot.onclick = () => loadQuestion(idx);
+        }"""
+    new_dot_click = """        dot.onclick = () => loadQuestion(idx);"""
+    html = html.replace(old_dot_click, new_dot_click)
+
+    # Allow Previous button in Section 2 (disabled only on first question index 72)
     html = html.replace(
-        "if (currentIndex < 74) {\n          loadQuestion(currentIndex + 1);",
-        "if (currentIndex < 71) {\n          loadQuestion(currentIndex + 1);"
+        "document.getElementById('btn-prev').disabled = true; // 청해는 이전 문제 복귀 불가",
+        "document.getElementById('btn-prev').disabled = (index === 72);"
     )
     html = html.replace(
         "const s1Answers = userAnswers.slice(0, 75);\n      const nextUnans = s1Answers.findIndex((ans, idx) => idx > currentIndex && ans === null);",
