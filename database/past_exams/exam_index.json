@@ -6,7 +6,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중상 (문법 반전 및 청해 즉시응답 경어 까다로움)",
+    "difficulty": "최상 (불시험 · 문법 호응 뉘앙스 및 청해 즉시응답 템포 극상)",
     "vocabHighlights": [
       "腕",
       "善良",
@@ -46,7 +46,8 @@
       "유목 가구 제작"
     ],
     "status": "ready_interactive_html",
-    "file": "quiz_sites/n2-midterm-mock-exam-20260920.html"
+    "file": "quiz_sites/n2-midterm-mock-exam-20260920.html",
+    "difficultyGrade": "최상"
   },
   {
     "examId": "2023-07",
@@ -91,7 +92,8 @@
       "전화 예약 확인"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2023_07.json"
+    "file": "database/past_exams/2023_07.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2022-12",
@@ -136,7 +138,8 @@
       "인터뷰 진행 순서"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2022_12.json"
+    "file": "database/past_exams/2022_12.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2022-07",
@@ -181,7 +184,8 @@
       "카페 신메뉴 개발"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2022_07.json"
+    "file": "database/past_exams/2022_07.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2021-12",
@@ -226,7 +230,8 @@
       "음식점 리뷰 대응"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2021_12.json"
+    "file": "database/past_exams/2021_12.json",
+    "difficultyGrade": "상"
   },
   {
     "examId": "2021-07",
@@ -271,7 +276,8 @@
       "사무실 청소 분담"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2021_07.json"
+    "file": "database/past_exams/2021_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2020-12",
@@ -280,7 +286,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "상 (코로나 취소 후 1년 만의 실시, 문법/어휘 변별력 대폭 강화)",
+    "difficulty": "최상 (코로나 취소 후 1년 만의 실시, 전 영역 킬러 문항 대폭 강화)",
     "vocabHighlights": [
       "衰える",
       "著しい",
@@ -316,7 +322,8 @@
       "포스터 디자인 피드백"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2020_12.json"
+    "file": "database/past_exams/2020_12.json",
+    "difficultyGrade": "최상"
   },
   {
     "examId": "2019-12",
@@ -361,7 +368,8 @@
       "신입 면접 일정"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2019_12.json"
+    "file": "database/past_exams/2019_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2019-07",
@@ -406,7 +414,8 @@
       "주문 확인"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2019_07.json"
+    "file": "database/past_exams/2019_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2018-12",
@@ -415,7 +424,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중 (표준 기출 유형 충실)",
+    "difficulty": "중 (표준 기출 유형 충실, 시간 안배 수월)",
     "vocabHighlights": [
       "濁る",
       "険しい",
@@ -451,7 +460,8 @@
       "카페 주문 실수 처리"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2018_12.json"
+    "file": "database/past_exams/2018_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2018-07",
@@ -496,7 +506,8 @@
       "동호회 가입"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2018_07.json"
+    "file": "database/past_exams/2018_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2017-12",
@@ -505,7 +516,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (문자·어휘 안정적, 독해 단문/중문 평이)",
     "vocabHighlights": [
       "耕す",
       "鋭い",
@@ -541,7 +552,8 @@
       "사무용품 주문"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2017_12.json"
+    "file": "database/past_exams/2017_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2017-07",
@@ -550,7 +562,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중상",
+    "difficulty": "중상 (청해 발화 속도 상승, 문법 뉘앙스 구별 요구)",
     "vocabHighlights": [
       "衰える",
       "鈍い",
@@ -586,7 +598,8 @@
       "자료 백업"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2017_07.json"
+    "file": "database/past_exams/2017_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2016-12",
@@ -595,7 +608,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (기본 문형 중심 출제, 정보검색 직관적)",
     "vocabHighlights": [
       "抱く",
       "険しい",
@@ -631,7 +644,8 @@
       "인사 발령"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2016_12.json"
+    "file": "database/past_exams/2016_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2016-07",
@@ -640,7 +654,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중상",
+    "difficulty": "중상 (독해 장문 필자 주장 파악 및 추론 주의)",
     "vocabHighlights": [
       "滞る",
       "著しい",
@@ -676,7 +690,8 @@
       "연수 일정표"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2016_07.json"
+    "file": "database/past_exams/2016_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2015-12",
@@ -685,7 +700,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (표준 어휘 빈출, 청해 포인트이해 정형화)",
     "vocabHighlights": [
       "覆う",
       "鋭い",
@@ -721,7 +736,8 @@
       "주문 취소"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2015_12.json"
+    "file": "database/past_exams/2015_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2015-07",
@@ -730,7 +746,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "상",
+    "difficulty": "상 (신유형 독해 복합 지문 및 즉시응답 관용표현 고난도)",
     "vocabHighlights": [
       "濁る",
       "鈍い",
@@ -766,7 +782,8 @@
       "기념품 선정"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2015_07.json"
+    "file": "database/past_exams/2015_07.json",
+    "difficultyGrade": "상"
   },
   {
     "examId": "2014-12",
@@ -775,7 +792,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (문자어휘 무난, 글의 문법 접속사 훈련 적합)",
     "vocabHighlights": [
       "傾く",
       "険しい",
@@ -811,7 +828,8 @@
       "사원 식당 메뉴"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2014_12.json"
+    "file": "database/past_exams/2014_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2014-07",
@@ -820,7 +838,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중상",
+    "difficulty": "중상 (청해 과제이해 조건부 반전 빈출 회차)",
     "vocabHighlights": [
       "耕す",
       "著しい",
@@ -856,7 +874,8 @@
       "전화 메모"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2014_07.json"
+    "file": "database/past_exams/2014_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2013-12",
@@ -865,7 +884,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (문법형식 판단 및 어휘 용법 표준적)",
     "vocabHighlights": [
       "衰える",
       "鋭い",
@@ -901,7 +920,8 @@
       "설문지 회수"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2013_12.json"
+    "file": "database/past_exams/2013_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2013-07",
@@ -910,7 +930,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중상",
+    "difficulty": "중상 (어휘 용법 뉘앙스 함정 및 사역수동 다수)",
     "vocabHighlights": [
       "抱く",
       "鈍い",
@@ -946,7 +966,8 @@
       "명함 교환"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2013_07.json"
+    "file": "database/past_exams/2013_07.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2012-12",
@@ -955,7 +976,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "상",
+    "difficulty": "상 (독해 중문·장문 분량 대폭 증가, 시간 압박)",
     "vocabHighlights": [
       "滞る",
       "険しい",
@@ -991,7 +1012,8 @@
       "고객 설문"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2012_12.json"
+    "file": "database/past_exams/2012_12.json",
+    "difficultyGrade": "상"
   },
   {
     "examId": "2012-07",
@@ -1000,7 +1022,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (기초 문법 및 빈출 어휘 충실)",
     "vocabHighlights": [
       "覆う",
       "著しい",
@@ -1036,7 +1058,8 @@
       "전화 응대"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2012_07.json"
+    "file": "database/past_exams/2012_07.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2011-12",
@@ -1045,7 +1068,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중",
+    "difficulty": "중 (신JLPT 정착기 표준적 출제 패턴)",
     "vocabHighlights": [
       "濁る",
       "鋭い",
@@ -1081,7 +1104,8 @@
       "식당 예약"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2011_12.json"
+    "file": "database/past_exams/2011_12.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "2011-07",
@@ -1090,7 +1114,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "상",
+    "difficulty": "상 (동일본 대지진 여파 첫 시험, 독해 체감 난도 높음)",
     "vocabHighlights": [
       "傾く",
       "鈍い",
@@ -1126,7 +1150,8 @@
       "회의 일정"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2011_07.json"
+    "file": "database/past_exams/2011_07.json",
+    "difficultyGrade": "상"
   },
   {
     "examId": "2010-12",
@@ -1135,7 +1160,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중상 (신JLPT 정착기 첫 겨울 본시험)",
+    "difficulty": "중상 (신JLPT 정착기 첫 겨울 본시험, 문장배열 까다로움)",
     "vocabHighlights": [
       "耕す",
       "険しい",
@@ -1171,7 +1196,8 @@
       "업무 분담"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2010_12.json"
+    "file": "database/past_exams/2010_12.json",
+    "difficultyGrade": "중상"
   },
   {
     "examId": "2010-07",
@@ -1180,7 +1206,7 @@
     "totalItems": 105,
     "languageKnowledgeReadingItems": 73,
     "listeningItems": 32,
-    "difficulty": "중 (신JLPT 체제 역사적 첫 본시험)",
+    "difficulty": "중 (신JLPT 체제 역사적 첫 본시험, 기본기 중심)",
     "vocabHighlights": [
       "衰える",
       "著しい",
@@ -1216,7 +1242,8 @@
       "사내 안내"
     ],
     "status": "archived_data",
-    "file": "database/past_exams/2010_07.json"
+    "file": "database/past_exams/2010_07.json",
+    "difficultyGrade": "중"
   },
   {
     "examId": "OFFICIAL-VOL2",
@@ -1225,7 +1252,7 @@
     "totalItems": 104,
     "languageKnowledgeReadingItems": 72,
     "listeningItems": 32,
-    "difficulty": "표준 (일본국제교류기금·JEES 공인 표준 실전 문제집)",
+    "difficulty": "중 (일본국제교류기금·JEES 공인 표준 실전 문제집)",
     "vocabHighlights": [
       "抱く",
       "鈍い",
@@ -1256,6 +1283,7 @@
       "공식 주최측 전문 성우 녹음 스크립트 기준 음성"
     ],
     "status": "official_reference_ready",
-    "file": "database/past_exams/official_vol2.json"
+    "file": "database/past_exams/official_vol2.json",
+    "difficultyGrade": "중"
   }
 ]

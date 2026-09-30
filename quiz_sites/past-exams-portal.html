@@ -73,30 +73,39 @@
 
     <!-- Exam Cards Grid -->
     <div class="space-y-4">
-      <div class="flex items-center justify-between">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-700/60">
         <h2 class="text-xl font-bold flex items-center gap-2">
           <span>📚 회차별 기출 상세 목록 및 출제 스펙</span>
-          <span class="text-xs font-normal text-slate-400">(최신순 정렬)</span>
+          <span class="text-xs font-normal text-slate-400">(2010〜2023 전 28회분)</span>
         </h2>
+        <div class="flex flex-wrap items-center gap-1.5" id="difficultyFilterBar">
+          <button type="button" onclick="setDiffFilter('all', this)" class="diff-btn active px-3 py-1.5 rounded-xl text-xs font-bold bg-blue-600 text-white transition-all shadow cursor-pointer">전체 (28회)</button>
+          <button type="button" onclick="setDiffFilter('최상', this)" class="diff-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-rose-300 border border-rose-500/40 transition-all cursor-pointer">🔥 최상 (2회)</button>
+          <button type="button" onclick="setDiffFilter('상', this)" class="diff-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/30 transition-all cursor-pointer">⚡ 상 (4회)</button>
+          <button type="button" onclick="setDiffFilter('중상', this)" class="diff-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-yellow-300 border border-yellow-500/30 transition-all cursor-pointer">⚖️ 중상 (9회)</button>
+          <button type="button" onclick="setDiffFilter('중', this)" class="diff-btn px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-emerald-500/30 transition-all cursor-pointer">📘 중 (13회)</button>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-blue-500/40 rounded-2xl p-5 shadow-lg transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-blue-500/40 rounded-2xl p-5 shadow-lg transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">日本語能力試験 公式問題集 第2集 (N2 完本)</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">1차 실전응시 완료 · 119점 합격</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <div class="flex items-center gap-2">
               <a href="official-vol2-listening-player.html" class="px-2.5 py-1.5 bg-sky-600/80 hover:bg-sky-500 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1">🎧 음원</a>
               <a href="n2-midterm-mock-exam-20260920.html" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-colors flex items-center gap-1">결과·오답 해설 보기 →</a>
             </div>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>응시일: 2026-09-20 (공식 제2집)</span>
             <span>문항수: 107문항</span>
             <span>실전 결과: 119 / 180점 (정답 71/107, 66.4% · 합격선 90점 및 목표 110점 돌파)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (일본국제교류기금·JEES 공인 표준 실전 문제집)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -119,18 +128,20 @@
         </div>
 
 
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-blue-500/40 rounded-2xl p-5 shadow-lg transition-all space-y-3" data-difficulty="최상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
-              <span class="font-bold text-base text-white">2023年 第2回 (12月) JLPT N2 本試験</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">실전 응시 즉시 가능</span>
-            </div>
-            <a href="n2-past-exam-202312-mock.html" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold rounded-lg transition-colors">응시하기 →</a>
+              <span class="font-bold text-base text-white">2023年 第2回 (12月) JLPT N2 本試験 (完本 102問)</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-500/20 text-blue-400 border border-blue-500/30">2차 실전응시 완료 · 92점 합격</span>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/40 flex items-center gap-1 shadow-sm"><span>🔥</span> 난이도 최상 (불시험)</span></div>
+            <a href="n2-past-exam-202312-mock.html" class="px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition-colors">결과·오답 해설 보기 →</a>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
-            <span>시행일: 2023-12-03</span>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
+            <span>응시일: 2026-09-30 (2023.12 기출)</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상 (문법 반전 및 청해 즉시응답 경어 까다로움)</span>
+            <span>실전 결과: 92 / 180점 (정답 51/102, 50.0% · 전 영역 과락 0건 합격 돌파)</span>
+            <span class="text-rose-400 font-bold">난이도: 최상 (불시험 · 문법 호응 뉘앙스 및 청해 즉시응답 템포 극상)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -152,18 +163,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2023年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2023-07-02</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중 (문맥규정 및 독해 정보검색 무난, 문장배열 정밀도 요구)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문맥규정 및 독해 정보검색 무난, 문장배열 정밀도 요구)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -185,18 +197,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2022年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2022-12-04</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중상 (어형성 접미사 및 독해 추론 문제 변별력 높음)</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (어형성 접미사 및 독해 추론 문제 변별력 높음)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -218,18 +231,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2022年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2022-07-03</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중 (문자어휘 표준적, 청해 통합이해 복수 조건 비교 주의)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문자어휘 표준적, 청해 통합이해 복수 조건 비교 주의)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -251,18 +265,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2021年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow-sm"><span>⚡</span> 난이도 상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2021-12-05</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 상 (독해 장문 추상도 높음, 문법 접속 오답 유도 교묘)</span>
+            <span class="text-amber-400 font-semibold">난이도: 상 (독해 장문 추상도 높음, 문법 접속 오답 유도 교묘)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -284,18 +299,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2021年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2021-07-04</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상 (청해 과제이해 및 즉시응답 까다로움)</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (청해 과제이해 및 즉시응답 까다로움)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -317,18 +333,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="최상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2020年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-rose-500/20 text-rose-300 border border-rose-500/40 flex items-center gap-1 shadow-sm"><span>🔥</span> 난이도 최상 (불시험)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2020-12-06</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 상 (코로나 취소 후 1년 만의 실시, 문법/어휘 변별력 대폭 강화)</span>
+            <span class="text-rose-400 font-bold">난이도: 최상 (코로나 취소 후 1년 만의 실시, 전 영역 킬러 문항 대폭 강화)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -350,18 +367,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2019年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2019-12-01</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중 (문자어휘 평이, 독해 중문 논리 파악 필요)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문자어휘 평이, 독해 중문 논리 파악 필요)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -383,18 +401,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2019年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2019-07-07</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상 (문장배열 및 청해 즉시응답 트릭 다수)</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (문장배열 및 청해 즉시응답 트릭 다수)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -416,18 +435,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2018年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2018-12-02</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중 (표준 기출 유형 충실)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (표준 기출 유형 충실, 시간 안배 수월)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -449,18 +469,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2018年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2018-07-01</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상 (공식 문제집 제2집 표준 출제 회차)</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (공식 문제집 제2집 표준 출제 회차)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -482,18 +503,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2017年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2017-12-03</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문자·어휘 안정적, 독해 단문/중문 평이)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -515,18 +537,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2017年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2017-07-02</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (청해 발화 속도 상승, 문법 뉘앙스 구별 요구)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -548,18 +571,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2016年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2016-12-04</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (기본 문형 중심 출제, 정보검색 직관적)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -581,18 +605,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2016年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2016-07-03</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (독해 장문 필자 주장 파악 및 추론 주의)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -614,18 +639,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2015年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2015-12-06</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (표준 어휘 빈출, 청해 포인트이해 정형화)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -647,18 +673,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2015年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow-sm"><span>⚡</span> 난이도 상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2015-07-05</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 상</span>
+            <span class="text-amber-400 font-semibold">난이도: 상 (신유형 독해 복합 지문 및 즉시응답 관용표현 고난도)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -680,18 +707,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2014年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2014-12-07</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문자어휘 무난, 글의 문법 접속사 훈련 적합)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -713,18 +741,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2014年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2014-07-06</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (청해 과제이해 조건부 반전 빈출 회차)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -746,18 +775,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2013年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2013-12-01</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (문법형식 판단 및 어휘 용법 표준적)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -779,18 +809,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2013年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2013-07-07</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중상</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (어휘 용법 뉘앙스 함정 및 사역수동 다수)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -812,18 +843,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2012年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow-sm"><span>⚡</span> 난이도 상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2012-12-02</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 상</span>
+            <span class="text-amber-400 font-semibold">난이도: 상 (독해 중문·장문 분량 대폭 증가, 시간 압박)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -845,18 +877,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2012年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2012-07-01</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (기초 문법 및 빈출 어휘 충실)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -878,18 +911,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2011年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2011-12-04</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (신JLPT 정착기 표준적 출제 패턴)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -911,18 +945,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2011年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center gap-1 shadow-sm"><span>⚡</span> 난이도 상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2011-07-03</span>
             <span>문항수: 102문항</span>
-            <span>난이도: 상</span>
+            <span class="text-amber-400 font-semibold">난이도: 상 (동일본 대지진 여파 첫 시험, 독해 체감 난도 높음)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -944,18 +979,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중상">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2010年 第2回 (12月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 flex items-center gap-1 shadow-sm"><span>⚖️</span> 난이도 중상</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2010-12-05</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중상 (신JLPT 정착기 첫 겨울 본시험)</span>
+            <span class="text-yellow-400 font-semibold">난이도: 중상 (신JLPT 정착기 첫 겨울 본시험, 문장배열 까다로움)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -977,18 +1013,19 @@
           </div>
         </div>
     
-        <div class="bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3">
+        <div class="exam-card bg-slate-800/60 hover:bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow transition-all space-y-3" data-difficulty="중">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
               <span class="font-bold text-base text-white">2010年 第1回 (7月) JLPT N2 本試験</span>
               <span class="px-2 py-0.5 rounded text-[11px] font-medium bg-slate-700 text-slate-300">데이터베이스 아카이브</span>
-            </div>
+            
+              <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center gap-1 shadow-sm"><span>📘</span> 난이도 중 (표준)</span></div>
             <span class="text-xs text-slate-400">JSON 저장 완료</span>
           </div>
-          <div class="flex items-center gap-4 text-xs text-slate-400">
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-400">
             <span>시행일: 2010-07-04</span>
             <span>문항수: 105문항</span>
-            <span>난이도: 중 (신JLPT 체제 역사적 첫 본시험)</span>
+            <span class="text-emerald-400 font-semibold">난이도: 중 (신JLPT 체제 역사적 첫 본시험, 기본기 중심)</span>
           </div>
           <div class="space-y-1.5 pt-1 border-t border-slate-700/60 text-xs">
             <div>
@@ -1264,5 +1301,25 @@
     });
   </script>
 
+
+  <script>
+    function setDiffFilter(diff, btn) {
+      document.querySelectorAll('#difficultyFilterBar .diff-btn').forEach(b => {
+        b.classList.remove('bg-blue-600', 'text-white', 'shadow');
+        b.classList.add('bg-slate-800');
+      });
+      btn.classList.remove('bg-slate-800');
+      btn.classList.add('bg-blue-600', 'text-white', 'shadow');
+
+      const cards = document.querySelectorAll('.exam-card');
+      cards.forEach(card => {
+        if (diff === 'all' || card.getAttribute('data-difficulty') === diff) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
