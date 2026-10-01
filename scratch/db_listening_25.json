@@ -1,0 +1,227 @@
+{
+  "1회_공식제2집_Q76": {
+    "item_no": 76,
+    "type": "listening_task",
+    "state": "wrong",
+    "seconds": 73,
+    "selected": "先生にメールで確認する",
+    "correct": "研究室の前の掲示を見る",
+    "trap": "친구에게 묻지 말라고 강조함."
+  },
+  "1회_공식제2집_Q80": {
+    "item_no": 80,
+    "type": "listening_task",
+    "state": "wrong",
+    "seconds": 59,
+    "selected": "取引先に訪問時間の変更を連絡する",
+    "correct": "ホテルの宿泊日を1日延ばす",
+    "trap": "신칸센 취소나 거래처 시간 변경이 아님."
+  },
+  "1회_공식제2집_Q90": {
+    "item_no": 90,
+    "type": "listening_summary",
+    "state": "wrong",
+    "seconds": 76,
+    "selected": "高層ビルの建設が鳥類の生態系に与える悪影響",
+    "correct": "都市の屋上緑化が気温上昇の緩和に果たす役割",
+    "trap": "조류 생태계나 지하 저수 문제는 아님."
+  },
+  "1회_공식제2집_Q94": {
+    "item_no": 94,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 29,
+    "selected": "山田さんが全員分集めたんだね。",
+    "correct": "山田さん、答えてないの？",
+    "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의."
+  },
+  "1회_공식제2집_Q97": {
+    "item_no": 97,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 30,
+    "selected": "それなら、修理してもらおう。",
+    "correct": "じゃ、新しいの買わなきゃね。",
+    "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의."
+  },
+  "1회_공식제2집_Q99": {
+    "item_no": 99,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 29,
+    "selected": "分かりました。そうしてみます。",
+    "correct": "ほんと、変えて、正解ですね。",
+    "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의."
+  },
+  "1회_공식제2집_Q102": {
+    "item_no": 102,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 27,
+    "selected": "絶対見逃さないようにね。",
+    "correct": "惜しいことしたね、いい試合だったよ。",
+    "trap": "3지선다 규격 준수. 시제나 경어 주체 혼동 주의."
+  },
+  "1회_공식제2집_Q106": {
+    "item_no": 106,
+    "type": "listening_integrated",
+    "state": "wrong",
+    "seconds": 57,
+    "selected": "ハイキングと自然散策コース",
+    "correct": "温泉旅館でゆっくり過ごす癒やしプラン",
+    "trap": "하이킹이나 카누는 체력 부담 때문에 배제."
+  },
+  "2회_202312_Q75": {
+    "item_no": 75,
+    "type": "listening_task",
+    "state": "wrong",
+    "seconds": 103,
+    "selected": "グループ内の役割分担",
+    "correct": "調べる国",
+    "trap": "선택지 1번 오답 선택"
+  },
+  "2회_202312_Q76": {
+    "item_no": 76,
+    "type": "listening_task",
+    "state": "wrong",
+    "seconds": 86,
+    "selected": "応募申請書を新しく作成する",
+    "correct": "応募申請書を提出する",
+    "trap": "선택지 3번 오답 선택"
+  },
+  "2회_202312_Q77": {
+    "item_no": 77,
+    "type": "listening_task",
+    "state": "wrong",
+    "seconds": 77,
+    "selected": "今すぐ大きな鉢に植え替える",
+    "correct": "日光がよく当たる窓際に移す",
+    "trap": "선택지 4번 오답 선택"
+  },
+  "2회_202312_Q78": {
+    "item_no": 78,
+    "type": "listening_point",
+    "state": "wrong",
+    "seconds": 128,
+    "selected": "柔らかい表情と親しみやすい雰囲気",
+    "correct": "討論番組での司会進行の仕方",
+    "trap": "선택지 1번 오답 선택"
+  },
+  "2회_202312_Q80": {
+    "item_no": 80,
+    "type": "listening_point",
+    "state": "wrong",
+    "seconds": 92,
+    "selected": "子供やペットの服に仕立て直している",
+    "correct": "紐状に細く切ってクッションカバーなどを編んでいる",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q82": {
+    "item_no": 82,
+    "type": "listening_point",
+    "state": "wrong",
+    "seconds": 135,
+    "selected": "プラスチックゴミを回収して環境を守るため",
+    "correct": "流木（木の枝）を拾ってテーブルや椅子を作るため",
+    "trap": "선택지 4번 오답 선택"
+  },
+  "2회_202312_Q85": {
+    "item_no": 85,
+    "type": "listening_summary",
+    "state": "wrong",
+    "seconds": 107,
+    "selected": "移住についての注意点",
+    "correct": "移住を希望する人への支援",
+    "trap": "선택지 3번 오답 선택"
+  },
+  "2회_202312_Q86": {
+    "item_no": 86,
+    "type": "listening_summary",
+    "state": "wrong",
+    "seconds": 96,
+    "selected": "りんごを鳥から守る方法",
+    "correct": "ネズミの被害を減らすための工夫",
+    "trap": "선택지 3번 오답 선택"
+  },
+  "2회_202312_Q88": {
+    "item_no": 88,
+    "type": "listening_summary",
+    "state": "wrong",
+    "seconds": 95,
+    "selected": "和紙の色々な活用法",
+    "correct": "和紙を作る職人を目指したきっかけ",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q89": {
+    "item_no": 89,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 83,
+    "selected": "いえ、気にしないでください。",
+    "correct": "6時以降ならできますが。",
+    "trap": "선택지 3번 오답 선택"
+  },
+  "2회_202312_Q90": {
+    "item_no": 90,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 31,
+    "selected": "確かに、泣くほどじゃなかったよね。",
+    "correct": "本当、泣ける映画だったね。",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q91": {
+    "item_no": 91,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 32,
+    "selected": "本社には私が行くんですね。",
+    "correct": "何時頃来るって言っていましたか。",
+    "trap": "선택지 1번 오답 선택"
+  },
+  "2회_202312_Q95": {
+    "item_no": 95,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 41,
+    "selected": "今すぐにやらなきゃいけないんですね。",
+    "correct": "そうですね、今日はここまでですね。",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q97": {
+    "item_no": 97,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 24,
+    "selected": "まあ、延期はできないからですよね。",
+    "correct": "やみそうにありませんからね。",
+    "trap": "선택지 1번 오답 선택"
+  },
+  "2회_202312_Q98": {
+    "item_no": 98,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 49,
+    "selected": "課長がやってくださるなら安心です。",
+    "correct": "構いませんが、課長どうされたんですか。",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q99": {
+    "item_no": 99,
+    "type": "listening_quick_response",
+    "state": "wrong",
+    "seconds": 26,
+    "selected": "お引き受けいただけてよかったです。",
+    "correct": "あの、どこが問題でしょうか。",
+    "trap": "선택지 2번 오답 선택"
+  },
+  "2회_202312_Q101": {
+    "item_no": 101,
+    "type": "listening_integrated",
+    "state": "wrong",
+    "seconds": 176,
+    "selected": "タイプ2（ホームステイ・文化体験）",
+    "correct": "タイプ1（学内の寮・4人部屋・最安）",
+    "trap": "선택지 2번 오답 선택"
+  }
+}

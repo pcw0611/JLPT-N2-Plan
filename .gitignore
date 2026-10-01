@@ -7,6 +7,8 @@ tmp/
 *.tgz
 *.tar.gz
 *.mp3
+*.wav
+*.ogg
 .env
 .env.*
 .sync-secret

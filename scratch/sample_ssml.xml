@@ -1,0 +1,19 @@
+<speak version="1.0" xmlns="http://www.w3.org/2001/10/synthesis" xml:lang="ja-JP">
+  <s>会社で上司と女性社員が話しています。女の人はこのあと、何をしなければなりませんか。</s>
+  <break time="800ms"/>
+  <prosody pitch="-15%" rate="-5%">
+    来週の大阪出張、先方の都合で打ち合わせが翌日にも入ることになったんだ。
+  </prosody>
+  <break time="600ms"/>
+  <prosody pitch="+15%" rate="0%">
+    分かりました。では新幹線はそのままですね。
+  </prosody>
+  <break time="600ms"/>
+  <prosody pitch="-15%" rate="-5%">
+    うん。ただ、ホテルの予約を一日延ばして、もう一泊できるように変更手続きをしてくれるかい？
+  </prosody>
+  <break time="600ms"/>
+  <prosody pitch="+15%" rate="0%">
+    かしこまりました。すぐに旅行会社に電話して変更いたします。
+  </prosody>
+</speak>
