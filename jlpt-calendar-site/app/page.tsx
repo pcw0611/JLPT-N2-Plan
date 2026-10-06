@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from 'react';
 import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy, orderedDomains, orderedTypes, sourceLabel } from '../lib/reports';
 
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
-const examDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-12-06T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
-const mockDaysLeft = () => Math.max(0, Math.ceil((Date.parse('2026-09-30T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000));
+const getDaysDiff = (targetDate: string) => Math.ceil((Date.parse(targetDate + 'T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000);
+const examDaysLeft = () => Math.max(0, getDaysDiff('2026-12-06'));
+const nextMockDaysLeft = () => Math.max(0, getDaysDiff('2026-10-18'));
 
 const dateLabel = (date: string) => {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
@@ -18,6 +19,9 @@ interface SpecialDateInfo {
   type: 'upcoming-mock' | 'official-exam' | 'completed-mock';
   title: string;
   desc: string;
+  subDesc?: string;
+  linkText?: string;
+  linkUrl?: string;
 }
 
 const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
@@ -32,6 +36,42 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     type: 'completed-mock',
     title: '第2回 N2 実戦模擬試験 (完了)',
     desc: '2023年12月 JLPT N2 過去問完本 102問完走 · 92/180点 (51/102問, 50.0%) 全領域足切り0件＆合格ライン突破！'
+  },
+  '2026-10-18': {
+    badge: '3次予定',
+    type: 'upcoming-mock',
+    title: '第3回 N2 実戦模擬試験 (2023年7月 過去問完本)',
+    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 実戦規格',
+    subDesc: '10월 단어 전권 완독 및 N2 문법 예문 복습 성과 중간 점검 (목표: 105점+ 돌파)',
+    linkUrl: '/exams/past-exams-portal.html',
+    linkText: '📋 2023.07 기출 분석 및 출제 경향 확인 ➔'
+  },
+  '2026-11-01': {
+    badge: '4次予定',
+    type: 'upcoming-mock',
+    title: '第4回 N2 実戦模擬試験 (2022年12月 過去問完本)',
+    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 実戦規格',
+    subDesc: '고난도 문법 호응 및 청해 즉시응답 방어율 집중 점검 (목표: 110점 안정권)',
+    linkUrl: '/exams/past-exams-portal.html',
+    linkText: '📋 2022.12 기출 분석 및 출제 경향 확인 ➔'
+  },
+  '2026-11-15': {
+    badge: '5次予定',
+    type: 'upcoming-mock',
+    title: '第5回 N2 実戦模擬試験 (2022年7月 過去問完本)',
+    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 실전규격',
+    subDesc: '전 영역 과락 위험 제로 및 110점 방어선 공고화 (목표: 115점+ 고득점 도전)',
+    linkUrl: '/exams/past-exams-portal.html',
+    linkText: '📋 2022.07 기출 분석 및 출제 경향 확인 ➔'
+  },
+  '2026-11-29': {
+    badge: '最終模試',
+    type: 'upcoming-mock',
+    title: '第6回 N2 ファイナル実戦リハーサル (D-7)',
+    desc: '본시험 1주일 전 최종 실전 리허설 · 실제 시험 시간표 100% 동일 적용 104문항 완본',
+    subDesc: '실전 시간 배분, 마킹 루틴, 멘탈 및 컨디션 최종 점검',
+    linkUrl: '/exams/past-exams-portal.html',
+    linkText: '📋 최종 실전 리허설 가이드 ➔'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -48,7 +88,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [daysLeft, setDaysLeft] = useState(examDaysLeft);
-  const [mockDays, setMockDays] = useState(mockDaysLeft);
+  const [mockDays, setMockDays] = useState(nextMockDaysLeft);
 
   useEffect(() => {
     let mounted = true;
@@ -63,7 +103,7 @@ export default function Home() {
           .sort((a: DailyReport, b: DailyReport) => a.date.localeCompare(b.date));
         if (!mounted) return;
         setDaysLeft(examDaysLeft());
-        setMockDays(mockDaysLeft());
+        setMockDays(nextMockDaysLeft());
         setReports(days);
         const today = getSeoulDate();
         const initialDate = days.some(r => r.date === today) ? today : days.at(-1)?.date ?? today;
@@ -118,12 +158,12 @@ export default function Home() {
             <button
               type="button"
               className="exam-chip chip-mock"
-              onClick={() => { setSelectedDate('2026-09-30'); setVisibleMonth('2026-09'); }}
-              title="9月30日 第2回実戦模試 92点合格 (カレンダーで表示)"
+              onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
+              title="10月18日(日) 第3回実戦模試 (カレンダーで表示)"
             >
-              <span className="chip-dot glow-target" />
-              <span className="chip-title">第2回模試 92点合格</span>
-              <strong className="chip-dday">PASS</strong>
+              <span className="chip-dot pulse-amber" />
+              <span className="chip-title">10/18 第3回模試</span>
+              <strong className="chip-dday">D-{mockDays}</strong>
             </button>
             <button
               type="button"
@@ -164,7 +204,7 @@ export default function Home() {
             <div className="calendar-tools">
               <div className="legend">
                 <span className="legend-item"><span className="legend-dot dot-record" /> 学習記録</span>
-                <span className="legend-item"><span className="legend-dot dot-mock" /> 模試完了</span>
+                <span className="legend-item"><span className="legend-dot dot-mock" /> 実戦模試</span>
                 <span className="legend-item"><span className="legend-dot dot-exam" /> 12/6 本試験</span>
               </div>
               <div className="calendar-nav">
@@ -220,7 +260,7 @@ export default function Home() {
                 <div className="ms-date">9/20 (日)</div>
                 <div className="ms-info">
                   <strong>第1回 N2 実戦模試</strong>
-                  <p>119 / 180点 (公式問題集 第2集 71/107問 · 66.4%)</p>
+                  <p>119 / 180点 (公式第2集 71/107問 · 66.4%)</p>
                 </div>
               </button>
               <button
@@ -232,7 +272,55 @@ export default function Home() {
                 <div className="ms-date">9/30 (水)</div>
                 <div className="ms-info">
                   <strong>第2回 N2 実戦模試 (合格)</strong>
-                  <p>92 / 180点 (2023.12 過去問完本 51/102問 · 50.0%)</p>
+                  <p>92 / 180点 (2023.12 51/102問 · 50.0%)</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-10-18' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-10-18'))}</div>
+                <div className="ms-date">10/18 (日)</div>
+                <div className="ms-info">
+                  <strong>第3回 N2 実戦模試 (2023.07)</strong>
+                  <p>104問 全領域実戦 · 単語/文法成果検証 (目標 105点+)</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-01' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-01'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-01'))}</div>
+                <div className="ms-date">11/1 (日)</div>
+                <div className="ms-info">
+                  <strong>第4回 N2 実戦模試 (2022.12)</strong>
+                  <p>104問 全領域実戦 · 難関文法/聴解即時応答点検</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-15' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-15'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-15'))}</div>
+                <div className="ms-date">11/15 (日)</div>
+                <div className="ms-info">
+                  <strong>第5回 N2 実戦模試 (2022.07)</strong>
+                  <p>104問 全領域実戦 · 110点防衛線確立 (目標 115点+)</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-29' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-29'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-29'))}</div>
+                <div className="ms-date">11/29 (日)</div>
+                <div className="ms-info">
+                  <strong>第6回 ファイナルリハーサル</strong>
+                  <p>本番1週間前 · 時間配分＆実戦メンタル最終点検</p>
                 </div>
               </button>
               <button
@@ -298,18 +386,26 @@ export default function Home() {
               )}
               {selectedSpecial.type === 'upcoming-mock' && (
                 <div className="callout-meta">
-                  <span className="meta-highlight">{mockDays === 0 ? '🔥 本日 20:00 実施予定 (今夜！)' : `実施予定 (D-${mockDays})`}</span>
-                  <span className="meta-sub">言語知識・読解 72問 (105分) ＋ 聴解 30問 (50分) · 全102問 (2023.12 過去問完本)</span>
-                  <div style={{ marginTop: '10px' }}>
-                    <a
-                      href="/exams/n2-past-exam-202312-mock.html"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mock-exam-link-btn emerald"
-                    >
-                      🎯 今夜 20:00 第2回 実戦模試 (102問) を受験する ➔
-                    </a>
-                  </div>
+                  <span className="meta-highlight">
+                    {getDaysDiff(selectedDate) === 0
+                      ? '🔥 本日 実施予定 (今夜！)'
+                      : `実施予定 (D-${Math.max(0, getDaysDiff(selectedDate))})`}
+                  </span>
+                  <span className="meta-sub">
+                    {selectedSpecial.subDesc || selectedSpecial.desc}
+                  </span>
+                  {selectedSpecial.linkUrl && (
+                    <div style={{ marginTop: '10px' }}>
+                      <a
+                        href={selectedSpecial.linkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mock-exam-link-btn emerald"
+                      >
+                        {selectedSpecial.linkText || '🎯 実戦模試の詳細・問題を開く ➔'}
+                      </a>
+                    </div>
+                  )}
                 </div>
               )}
               {selectedSpecial.type === 'official-exam' && (
