@@ -51,6 +51,9 @@ body {
   20%, 60% { transform: translateX(-8px); }
   40%, 80% { transform: translateX(8px); }
 }
+.slot-filled {
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-3 sm:p-5">
@@ -81,7 +84,7 @@ body {
         N2 文法 SPEED RUN
       </h1>
       <p class="text-slate-400 text-sm">
-        한국어 문맥의 <strong class="text-amber-300">색칠된 뉘앙스</strong>를 보고 1초 만에 N2 문형을 저격하세요!
+        일본어 빈칸 <strong class="text-amber-300">（　　）</strong>과 한국어 뉘앙스를 보고 1초 만에 N2 문형을 저격하세요!
       </p>
     </div>
 
@@ -142,7 +145,7 @@ body {
   </div>
 
   <!-- SCREEN 2: ACTIVE GAME PLAY -->
-  <div id="screenPlay" class="hidden space-y-6">
+  <div id="screenPlay" class="hidden space-y-5">
     <!-- Top HUD -->
     <div class="flex items-center justify-between text-sm">
       <div class="flex items-center gap-2">
@@ -167,26 +170,37 @@ body {
       <div id="hudProgress" class="h-full bg-gradient-to-r from-amber-400 to-rose-500 transition-all duration-200" style="width: 1%"></div>
     </div>
 
-    <!-- Center Prompt Card: Korean Sentence with Highlight -->
-    <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-7 text-center space-y-4 relative">
-      <div class="flex items-center justify-center gap-2">
-        <span id="qPatternNum" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-          N2 문법 001
-        </span>
-        <span class="text-xs text-slate-400">
-          문맥 속 뉘앙스 매칭
-        </span>
+    <!-- Center Prompt Card: Japanese Blank + Korean Nuance -->
+    <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 sm:p-6 text-center space-y-4 relative">
+      <!-- Top Badges -->
+      <div class="flex items-center justify-between text-xs">
+        <div class="flex items-center gap-2">
+          <span id="qPatternNum" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+            N2 문법 001
+          </span>
+          <span class="text-slate-400 text-[11px] hidden sm:inline">실전 문형 빈칸 완성</span>
+        </div>
+        <div id="qConnectionBadge" class="font-mono text-[11px] text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-800/70 max-w-[200px] truncate">
+          접속 정보
+        </div>
       </div>
 
-      <!-- The Sentence with Highlight -->
-      <div class="py-2">
-        <div id="qSentence" class="text-xl sm:text-2xl font-bold text-slate-200 leading-relaxed break-keep">
-          <!-- Injected sentence -->
+      <!-- 1. Japanese Blank Sentence (Primary Target) -->
+      <div class="py-3 px-4 rounded-xl bg-slate-950/60 border border-slate-800/80 shadow-inner">
+        <div id="qSentenceJa" class="text-xl sm:text-2xl font-black text-white leading-relaxed break-keep tracking-wide font-sans">
+          <!-- Injected Japanese blank sentence -->
+        </div>
+      </div>
+
+      <!-- 2. Korean Translation with Nuance Highlight (Context Support) -->
+      <div class="py-1 px-2">
+        <div id="qSentenceKo" class="text-sm sm:text-base font-semibold text-slate-300 leading-relaxed break-keep">
+          <!-- Injected Korean translation -->
         </div>
       </div>
 
       <!-- Target Nuance Banner -->
-      <div class="pt-3 border-t border-slate-700/60 flex items-center justify-center gap-1.5 text-xs">
+      <div class="pt-3 border-t border-slate-700/60 flex items-center justify-center gap-2 text-xs">
         <span class="text-slate-400 font-semibold">저격 대상:</span>
         <span id="qTargetNuance" class="font-bold text-amber-300 text-sm">
           <!-- target nuance -->
@@ -206,7 +220,7 @@ body {
     </div>
 
     <!-- INSTANT 1-SECOND SNIPER FEEDBACK OVERLAY (On Wrong Answer) -->
-    <div id="feedbackModal" class="hidden p-4 rounded-xl bg-red-950/80 border border-red-500/60 space-y-2.5">
+    <div id="feedbackModal" class="hidden p-4 rounded-xl bg-red-950/80 border border-red-500/60 space-y-3">
       <div class="flex items-center justify-between">
         <div class="font-bold text-red-300 text-sm flex items-center gap-1.5">
           <span>❌ 오답! 1초 킬러 포인트 확인</span>
@@ -217,13 +231,19 @@ body {
       <div class="bg-slate-900/90 p-3.5 rounded-lg border border-slate-800 space-y-2 text-xs">
         <div class="flex items-center justify-between">
           <div>
-            <span class="text-slate-400">정답: </span>
+            <span class="text-slate-400">정답 문형: </span>
             <span id="fbPattern" class="text-lg font-black text-amber-300">〜あげく</span>
             <span id="fbMeaning" class="text-slate-300 font-bold ml-1.5">(~한 끝에)</span>
           </div>
           <div id="fbConnection" class="font-mono text-[11px] text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-800">
             Vた＋あげく
           </div>
+        </div>
+
+        <!-- Full Example Sentence in Feedback -->
+        <div class="pt-2 border-t border-slate-800 space-y-1">
+          <div class="text-slate-300 font-bold text-sm" id="fbJaSentence"></div>
+          <div class="text-slate-400 text-xs" id="fbKoSentence"></div>
         </div>
 
         <div class="text-slate-300 pt-1 border-t border-slate-800">
@@ -235,7 +255,7 @@ body {
         </div>
       </div>
 
-      <button id="btnNextAfterMistake" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 rounded-lg transition">
+      <button id="btnNextAfterMistake" class="w-full py-2.5 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 rounded-lg transition border border-slate-700">
         확인하고 다음 문제로 (Space / Enter)
       </button>
     </div>
@@ -415,20 +435,33 @@ function generateQuestions(course, count) {
       [choices[c], choices[j]] = [choices[j], choices[c]];
     }
 
-    let sentenceHtml = item.sentence_ko;
-    const target = item.target_ko;
-    if (target && sentenceHtml.includes(target)) {
-      sentenceHtml = sentenceHtml.replace(
-        target,
-        `<span class="text-amber-300 font-black bg-amber-400/25 px-2 py-0.5 rounded border border-amber-400/40 underline decoration-amber-400 decoration-2">${target}</span>`
+    // Construct Japanese blank HTML
+    let jaBlankHtml = item.sentence_ja_blank || (item.sentence_ja + ' （　　）');
+    if (jaBlankHtml.includes('（　　）')) {
+      jaBlankHtml = jaBlankHtml.replace(
+        '（　　）',
+        `<span id="blankSlot" class="slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-dashed border-amber-400 bg-amber-400/20 text-amber-300 font-black tracking-wider text-lg sm:text-xl shadow-sm">（　　）</span>`
       );
     } else {
-      sentenceHtml = `<span class="text-amber-300 font-black bg-amber-400/25 px-2 py-0.5 rounded border border-amber-400/40">[ ${item.meaning} ]</span> ${sentenceHtml}`;
+      jaBlankHtml = `<span id="blankSlot" class="slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-dashed border-amber-400 bg-amber-400/20 text-amber-300 font-black tracking-wider text-lg sm:text-xl shadow-sm">（　　）</span> ${jaBlankHtml}`;
+    }
+
+    // Construct Korean HTML with highlight
+    let koHtml = item.sentence_ko;
+    const target = item.target_ko;
+    if (target && koHtml.includes(target)) {
+      koHtml = koHtml.replace(
+        target,
+        `<span class="text-amber-300 font-bold bg-amber-400/25 px-2 py-0.5 rounded border border-amber-400/40 underline decoration-amber-400 decoration-2">${target}</span>`
+      );
+    } else {
+      koHtml = `<span class="text-amber-300 font-bold bg-amber-400/25 px-2 py-0.5 rounded border border-amber-400/40">[ ${item.meaning} ]</span> ${koHtml}`;
     }
 
     return {
       item,
-      sentenceHtml,
+      jaBlankHtml,
+      koHtml,
       choices,
       answer: item.pattern
     };
@@ -551,7 +584,9 @@ function renderQuestion() {
   $('hudProgress').style.width = `${((state.currentIndex) / state.questions.length) * 100}%`;
 
   $('qPatternNum').textContent = `N2 문법 ${q.item.num}`;
-  $('qSentence').innerHTML = q.sentenceHtml;
+  $('qConnectionBadge').textContent = q.item.connection ? `접속: ${q.item.connection}` : '접속: V/N연결';
+  $('qSentenceJa').innerHTML = q.jaBlankHtml;
+  $('qSentenceKo').innerHTML = q.koHtml;
   $('qTargetNuance').textContent = q.item.target_ko ? `[ ${q.item.target_ko} ] ➔ ${q.item.meaning}` : q.item.meaning;
 
   const container = $('choiceContainer');
@@ -570,6 +605,7 @@ function renderQuestion() {
 function checkAnswer(userAnswer) {
   if (state.waitingConfirm) return;
   const q = state.questions[state.currentIndex];
+  const slot = $('blankSlot');
 
   if (userAnswer === q.answer) {
     state.score++;
@@ -585,7 +621,13 @@ function checkAnswer(userAnswer) {
     updateComboBadge();
     const card = $('promptCard');
     card.classList.add('flash-correct');
-    setTimeout(advanceNext, 180);
+
+    if (slot) {
+      slot.textContent = q.item.sentence_ja_target || q.item.pattern;
+      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-emerald-400 bg-emerald-500/30 text-emerald-300 font-black tracking-wider text-lg sm:text-xl shadow-md scale-105';
+    }
+
+    setTimeout(advanceNext, 220);
   } else {
     state.combo = 0;
     updateComboBadge();
@@ -593,6 +635,11 @@ function checkAnswer(userAnswer) {
 
     const card = $('promptCard');
     card.classList.add('shake-wrong');
+
+    if (slot) {
+      slot.textContent = q.item.sentence_ja_target || q.item.pattern;
+      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-rose-500 bg-rose-500/30 text-rose-300 font-black tracking-wider text-lg sm:text-xl shadow-md';
+    }
 
     state.mistakes.push({
       q,
@@ -605,6 +652,8 @@ function checkAnswer(userAnswer) {
     $('fbPattern').textContent = q.item.pattern;
     $('fbMeaning').textContent = `(${ q.item.meaning })`;
     $('fbConnection').textContent = q.item.connection || 'V/N接続';
+    $('fbJaSentence').textContent = q.item.sentence_ja;
+    $('fbKoSentence').textContent = q.item.sentence_ko;
     $('fbCore').textContent = q.item.core_meaning;
     
     if (q.item.diff_point) {
@@ -663,16 +712,19 @@ function finishGame() {
     $('resMistakeContainer').classList.remove('hidden');
     $('btnRetryWrong').classList.remove('hidden');
     mistakeListEl.innerHTML = state.mistakes.map(m => `
-      <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
-        <div>
-          <span class="font-bold text-amber-300 text-sm">${m.q.item.pattern}</span>
-          <span class="text-slate-400 text-xs ml-1">${m.q.item.meaning}</span>
-          <div class="text-[11px] text-slate-400 mt-0.5">${m.q.item.core_meaning}</div>
+      <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
+        <div class="flex items-center justify-between">
+          <div>
+            <span class="font-bold text-amber-300 text-sm">${m.q.item.pattern}</span>
+            <span class="text-slate-400 text-xs ml-1">${m.q.item.meaning}</span>
+          </div>
+          <div>
+            <span class="text-xs text-red-400 line-through">${m.userAnswer}</span>
+            <span class="text-xs font-bold text-emerald-400 ml-1.5">✓ ${m.q.answer}</span>
+          </div>
         </div>
-        <div class="text-right">
-          <span class="text-xs text-red-400 line-through">${m.userAnswer}</span>
-          <span class="text-xs font-bold text-emerald-400 ml-1.5">✓ ${m.q.answer}</span>
-        </div>
+        <div class="text-[11px] text-slate-300 font-sans">${m.q.item.sentence_ja}</div>
+        <div class="text-[11px] text-slate-500">${m.q.item.sentence_ko}</div>
       </div>
     `).join('');
   }
