@@ -151,6 +151,9 @@ export default function Home() {
           <a className="game-button speedrun-nav-btn" href="/exams/verb-speedrun-100.html" aria-label="動詞活用 SPEED RUN 100 練習を開く">
             <span aria-hidden="true">⚡</span> 動詞活用 SPEED RUN <span aria-hidden="true">→</span>
           </a>
+          <a className="game-button grammar-nav-btn" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈를 열기">
+            <span aria-hidden="true">🎯</span> N2 文法 SPEED RUN <span aria-hidden="true">→</span>
+          </a>
           <a className="game-button mock-nav-btn" href="/exams/past-exams-portal.html" aria-label="実戦模試・過去問アーカイブを開く">
             <span aria-hidden="true">📝</span> 過去問・模試 <span aria-hidden="true">→</span>
           </a>
