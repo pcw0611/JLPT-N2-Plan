@@ -37,7 +37,7 @@ body {
   100% { transform: scale(1); opacity: 1; }
 }
 .flash-correct {
-  animation: flashGreen 0.3s ease-out;
+  animation: flashGreen 0.4s ease-out;
 }
 @keyframes flashGreen {
   0% { background-color: rgba(74, 222, 128, 0.25); }
@@ -52,7 +52,7 @@ body {
   40%, 80% { transform: translateX(8px); }
 }
 .slot-filled {
-  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 </style>
 </head>
@@ -149,7 +149,7 @@ body {
     <!-- Top HUD -->
     <div class="flex items-center justify-between text-sm">
       <div class="flex items-center gap-2">
-        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Question</span>
+        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">문제</span>
         <span id="hudQIndex" class="font-extrabold text-amber-400 text-lg">1</span>
         <span class="text-slate-500">/</span>
         <span id="hudQTotal" class="text-slate-400 font-semibold">35</span>
@@ -170,18 +170,18 @@ body {
       <div id="hudProgress" class="h-full bg-gradient-to-r from-amber-400 to-rose-500 transition-all duration-200" style="width: 1%"></div>
     </div>
 
-    <!-- Center Prompt Card: Japanese Blank + Korean Nuance -->
+    <!-- Center Prompt Card: Japanese Blank + Korean Nuance (HINT LEAKS ELIMINATED) -->
     <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-5 sm:p-6 text-center space-y-4 relative">
-      <!-- Top Badges -->
-      <div class="flex items-center justify-between text-xs">
+      <!-- Top Header: Question label only, NO number or connection hints! -->
+      <div class="flex items-center justify-between text-xs pb-1">
         <div class="flex items-center gap-2">
-          <span id="qPatternNum" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
-            N2 문법 001
+          <span id="qSeqNum" class="px-2.5 py-0.5 rounded text-[11px] font-extrabold bg-slate-800 text-slate-300 border border-slate-700">
+            문제 1
           </span>
-          <span class="text-slate-400 text-[11px] hidden sm:inline">실전 문형 빈칸 완성</span>
+          <span class="text-slate-400 text-[11px]">실전 문형 빈칸 완성</span>
         </div>
-        <div id="qConnectionBadge" class="font-mono text-[11px] text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-800/70 max-w-[200px] truncate">
-          접속 정보
+        <div class="text-[11px] text-slate-500 font-medium">
+          빈칸에 들어갈 올바른 문형은?
         </div>
       </div>
 
@@ -199,12 +199,19 @@ body {
         </div>
       </div>
 
-      <!-- Target Nuance Banner -->
-      <div class="pt-3 border-t border-slate-700/60 flex items-center justify-center gap-2 text-xs">
-        <span class="text-slate-400 font-semibold">저격 대상:</span>
-        <span id="qTargetNuance" class="font-bold text-amber-300 text-sm">
-          <!-- target nuance -->
+      <!-- 3. Solved Banner (Hidden before answering, revealed on correct answer!) -->
+      <div id="qSolvedBanner" class="hidden py-1.5 px-3 rounded-lg bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-bold animate-pulse flex items-center justify-between">
+        <span id="qSolvedText">✓ 정답! 문형 확인 완료</span>
+        <span class="text-[10px] text-emerald-400 font-normal">곧 다음 문제로 이동 (Space로 즉시 넘김)</span>
+      </div>
+
+      <!-- Bottom Guide Bar -->
+      <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 px-1">
+        <span class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+          <span>한국어 문맥의 <strong class="text-amber-300 font-semibold">강조된 뉘앙스</strong>에 알맞은 N2 문형을 고르세요</span>
         </span>
+        <span class="text-slate-500 font-mono">1~4 키</span>
       </div>
     </div>
 
@@ -214,7 +221,7 @@ body {
         <!-- 4 choice buttons injected here -->
       </div>
       <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
-        <span>키보드 <strong>1, 2, 3, 4</strong> 키로 초고속 선택 가능</span>
+        <span>키보드 <strong>1, 2, 3, 4</strong> 키로 선택</span>
         <button id="btnSkip" class="text-amber-400 hover:text-amber-300 underline font-semibold">모름 / 패스 (Space / Esc)</button>
       </div>
     </div>
@@ -230,10 +237,13 @@ body {
       
       <div class="bg-slate-900/90 p-3.5 rounded-lg border border-slate-800 space-y-2 text-xs">
         <div class="flex items-center justify-between">
-          <div>
-            <span class="text-slate-400">정답 문형: </span>
-            <span id="fbPattern" class="text-lg font-black text-amber-300">〜あげく</span>
-            <span id="fbMeaning" class="text-slate-300 font-bold ml-1.5">(~한 끝에)</span>
+          <div class="flex items-center gap-2">
+            <span id="fbCardNum" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">N2 문법 001</span>
+            <div>
+              <span class="text-slate-400 text-xs">정답: </span>
+              <span id="fbPattern" class="text-base font-black text-amber-300">〜あげく</span>
+              <span id="fbMeaning" class="text-slate-300 font-bold ml-1">(~한 끝에)</span>
+            </div>
           </div>
           <div id="fbConnection" class="font-mono text-[11px] text-sky-300 bg-sky-950/60 px-2 py-0.5 rounded border border-sky-800">
             Vた＋あげく
@@ -242,7 +252,7 @@ body {
 
         <!-- Full Example Sentence in Feedback -->
         <div class="pt-2 border-t border-slate-800 space-y-1">
-          <div class="text-slate-300 font-bold text-sm" id="fbJaSentence"></div>
+          <div class="text-slate-200 font-bold text-sm tracking-wide" id="fbJaSentence"></div>
           <div class="text-slate-400 text-xs" id="fbKoSentence"></div>
         </div>
 
@@ -394,6 +404,8 @@ const state = {
   timerInterval: null,
   elapsedSec: 0,
   waitingConfirm: false,
+  canFastForward: false,
+  advanceTimer: null,
   mistakes: []
 };
 
@@ -514,6 +526,15 @@ function initLobbyUI() {
       }
       return;
     }
+    if (state.canFastForward) {
+      if (e.key === 'Enter' || e.key === ' ' || ['1', '2', '3', '4'].includes(e.key)) {
+        e.preventDefault();
+        clearTimeout(state.advanceTimer);
+        state.canFastForward = false;
+        advanceNext();
+        return;
+      }
+    }
     if (!$('screenPlay').classList.contains('hidden')) {
       if (['1', '2', '3', '4'].includes(e.key)) {
         const idx = parseInt(e.key, 10) - 1;
@@ -555,6 +576,8 @@ function startSessionWithQuestions() {
   state.elapsedSec = 0;
   state.mistakes = [];
   state.waitingConfirm = false;
+  state.canFastForward = false;
+  clearTimeout(state.advanceTimer);
 
   $('screenLobby').classList.add('hidden');
   $('screenResult').classList.add('hidden');
@@ -574,7 +597,11 @@ function startSessionWithQuestions() {
 
 function renderQuestion() {
   state.waitingConfirm = false;
+  state.canFastForward = false;
+  clearTimeout(state.advanceTimer);
+
   $('feedbackModal').classList.add('hidden');
+  $('qSolvedBanner').classList.add('hidden');
   const card = $('promptCard');
   card.classList.remove('flash-correct', 'shake-wrong');
 
@@ -583,11 +610,10 @@ function renderQuestion() {
   $('hudQTotal').textContent = state.questions.length;
   $('hudProgress').style.width = `${((state.currentIndex) / state.questions.length) * 100}%`;
 
-  $('qPatternNum').textContent = `N2 문법 ${q.item.num}`;
-  $('qConnectionBadge').textContent = q.item.connection ? `접속: ${q.item.connection}` : '접속: V/N연결';
+  // Clean, no hint leak: only question sequence number
+  $('qSeqNum').textContent = `문제 ${state.currentIndex + 1}`;
   $('qSentenceJa').innerHTML = q.jaBlankHtml;
   $('qSentenceKo').innerHTML = q.koHtml;
-  $('qTargetNuance').textContent = q.item.target_ko ? `[ ${q.item.target_ko} ] ➔ ${q.item.meaning}` : q.item.meaning;
 
   const container = $('choiceContainer');
   container.innerHTML = q.choices.map((c, idx) => `
@@ -603,9 +629,10 @@ function renderQuestion() {
 }
 
 function checkAnswer(userAnswer) {
-  if (state.waitingConfirm) return;
+  if (state.waitingConfirm || state.canFastForward) return;
   const q = state.questions[state.currentIndex];
   const slot = $('blankSlot');
+  const buttons = document.querySelectorAll('.choice-item');
 
   if (userAnswer === q.answer) {
     state.score++;
@@ -622,12 +649,31 @@ function checkAnswer(userAnswer) {
     const card = $('promptCard');
     card.classList.add('flash-correct');
 
+    // Fill blank slot with green glow
     if (slot) {
       slot.textContent = q.item.sentence_ja_target || q.item.pattern;
       slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-emerald-400 bg-emerald-500/30 text-emerald-300 font-black tracking-wider text-lg sm:text-xl shadow-md scale-105';
     }
 
-    setTimeout(advanceNext, 220);
+    // Highlight selected button green
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      if (btn.dataset.val === q.answer) {
+        btn.classList.add('border-emerald-400', 'bg-emerald-950/70', 'text-emerald-300', 'ring-2', 'ring-emerald-400/50');
+      }
+    });
+
+    // Reveal solved banner with grammar number and meaning (AFTER solving)
+    $('qSolvedBanner').classList.remove('hidden');
+    $('qSolvedText').innerHTML = `✓ 정답! <span class="text-amber-300 font-extrabold mr-1.5">[N2 문법 ${q.item.num}]</span> ${q.item.pattern} <span class="text-slate-300 text-[11px] font-normal ml-1">(${q.item.meaning})</span>`;
+
+    // 1.0 second comfortable reading time (Fast-forwardable with Space / Enter / Numbers)
+    state.canFastForward = true;
+    state.advanceTimer = setTimeout(() => {
+      state.canFastForward = false;
+      advanceNext();
+    }, 1000);
+
   } else {
     state.combo = 0;
     updateComboBadge();
@@ -636,10 +682,20 @@ function checkAnswer(userAnswer) {
     const card = $('promptCard');
     card.classList.add('shake-wrong');
 
+    // Fill blank slot with red border
     if (slot) {
       slot.textContent = q.item.sentence_ja_target || q.item.pattern;
       slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-rose-500 bg-rose-500/30 text-rose-300 font-black tracking-wider text-lg sm:text-xl shadow-md';
     }
+
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      if (btn.dataset.val === q.answer) {
+        btn.classList.add('border-emerald-400', 'bg-emerald-950/70', 'text-emerald-300');
+      } else if (btn.dataset.val === userAnswer) {
+        btn.classList.add('border-rose-500', 'bg-rose-950/70', 'text-rose-300');
+      }
+    });
 
     state.mistakes.push({
       q,
@@ -649,9 +705,10 @@ function checkAnswer(userAnswer) {
     state.questions.push({ ...q });
 
     state.waitingConfirm = true;
+    $('fbCardNum').textContent = `N2 문법 ${q.item.num}`;
     $('fbPattern').textContent = q.item.pattern;
     $('fbMeaning').textContent = `(${ q.item.meaning })`;
-    $('fbConnection').textContent = q.item.connection || 'V/N接続';
+    $('fbConnection').textContent = q.item.connection ? `접속: ${q.item.connection}` : '접속: V/N연결';
     $('fbJaSentence').textContent = q.item.sentence_ja;
     $('fbKoSentence').textContent = q.item.sentence_ko;
     $('fbCore').textContent = q.item.core_meaning;
@@ -688,6 +745,9 @@ function advanceNext() {
 
 function finishGame() {
   clearInterval(state.timerInterval);
+  clearTimeout(state.advanceTimer);
+  state.canFastForward = false;
+
   $('screenPlay').classList.add('hidden');
   $('screenResult').classList.remove('hidden');
 
@@ -714,13 +774,14 @@ function finishGame() {
     mistakeListEl.innerHTML = state.mistakes.map(m => `
       <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 space-y-1">
         <div class="flex items-center justify-between">
-          <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30">N2 문법 ${m.q.item.num}</span>
             <span class="font-bold text-amber-300 text-sm">${m.q.item.pattern}</span>
-            <span class="text-slate-400 text-xs ml-1">${m.q.item.meaning}</span>
+            <span class="text-slate-400 text-xs">${m.q.item.meaning}</span>
           </div>
           <div>
-            <span class="text-xs text-red-400 line-through">${m.userAnswer}</span>
-            <span class="text-xs font-bold text-emerald-400 ml-1.5">✓ ${m.q.answer}</span>
+            <span class="text-xs text-red-400 line-through mr-1">${m.userAnswer}</span>
+            <span class="text-xs font-bold text-emerald-400">✓ ${m.q.answer}</span>
           </div>
         </div>
         <div class="text-[11px] text-slate-300 font-sans">${m.q.item.sentence_ja}</div>
