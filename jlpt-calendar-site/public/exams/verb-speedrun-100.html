@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>動詞活用 SPEED RUN 100 — JLPT N2 活用特訓</title>
+<script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-alt: #334155;
+  --border: #475569;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.25);
+  --green: #4ade80;
+  --red: #f87171;
+  --amber: #fbbf24;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+  user-select: none;
+}
+.glow-box {
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+.combo-pop {
+  animation: pop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.flash-correct {
+  animation: flashGreen 0.3s ease-out;
+}
+@keyframes flashGreen {
+  0% { background-color: rgba(74, 222, 128, 0.3); }
+  100% { background-color: transparent; }
+}
+.shake-wrong {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+<!-- Main Game Wrapper -->
+<div id="app" class="w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+  
+  <!-- Sound / Fullscreen Top Bar -->
+  <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800 text-xs text-slate-400">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="font-bold tracking-wider text-slate-300">JLPT N2 動詞活用 SPEED RUN</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="btnSound" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300">
+        <span id="soundIcon">🔊</span> <span id="soundLabel">Sound ON</span>
+      </button>
+      <button id="btnHelp" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition text-slate-300">
+        ❓ 活用公式
+      </button>
+    </div>
+  </div>
+
+  <!-- SCREEN 1: LOBBY / SETUP -->
+  <div id="screenLobby" class="space-y-6">
+    <div class="text-center space-y-2 py-4">
+      <h1 class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-emerald-400">
+        動詞活用 SPEED RUN 100
+      </h1>
+      <p class="text-slate-400 text-sm sm:text-base">
+        머뭇거림 없는 <strong class="text-sky-300">0.5초 반사 신경</strong> 완성! 영타 로마자 자동 변환 &amp; 스피드 콤보 트레이너
+      </p>
+    </div>
+
+    <!-- Course Selection -->
+    <div class="space-y-2">
+      <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase">1. 코스 선택</label>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="courseList">
+        <button data-course="n2killer" class="course-btn p-3.5 rounded-xl border border-sky-500 bg-sky-950/40 text-left hover:border-sky-400 transition relative">
+          <div class="text-xs font-bold text-sky-400">★ N2 필수 킬러 코스 (강력 추천)</div>
+          <div class="font-bold text-white text-base mt-0.5">수동 · 사역 · 사역수동</div>
+          <div class="text-xs text-slate-400 mt-1">청해 과제이해 및 독해 술어부 0.5초 판별</div>
+          <div class="absolute top-3 right-3 text-sky-400 text-sm font-bold">🎯</div>
+        </button>
+
+        <button data-course="middle" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-indigo-400">중급 핵심 코스</div>
+          <div class="font-bold text-white text-base mt-0.5">가능형 · 가정형(ば) · 의향형</div>
+          <div class="text-xs text-slate-400 mt-1">~ㄹ 수 있다, ~하면, ~하자(하려고) 변형</div>
+        </button>
+
+        <button data-course="basic" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-emerald-400">기초 4대 변형 코스</div>
+          <div class="font-bold text-white text-base mt-0.5">ます · ない · た · て</div>
+          <div class="text-xs text-slate-400 mt-1">1단/5단/불규칙 어간 손풀기 기본기</div>
+        </button>
+
+        <button data-course="all" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-amber-400">종합 그랑프리 100제</div>
+          <div class="font-bold text-white text-base mt-0.5">전체 변형 무작위 셔플</div>
+          <div class="text-xs text-slate-400 mt-1">실전 감각 완벽 점검 (10대 활용 총망라)</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mode & Question Count -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase mb-2">2. 입력 모드</label>
+        <div class="grid grid-cols-2 gap-2" id="modeList">
+          <button data-mode="typing" class="mode-btn p-2.5 rounded-lg border border-sky-500 bg-sky-950/40 text-center font-bold text-sm text-sky-200">
+            ⌨️ 로마자 타이핑<br><span class="text-[11px] font-normal text-slate-400">영타 치면 자동 히라가나</span>
+          </button>
+          <button data-mode="choice" class="mode-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            ⚡ 4지선다 퀵샷<br><span class="text-[11px] font-normal text-slate-400">숫자 1~4 키로 3분 컷</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase mb-2">3. 문제 수</label>
+        <div class="grid grid-cols-3 gap-2" id="countList">
+          <button data-count="30" class="count-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            30제<br><span class="text-[11px] font-normal text-slate-400">가볍게 2분</span>
+          </button>
+          <button data-count="50" class="count-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            50제<br><span class="text-[11px] font-normal text-slate-400">표준 세션</span>
+          </button>
+          <button data-count="100" class="count-btn p-2.5 rounded-lg border border-sky-500 bg-sky-950/40 text-center font-bold text-sm text-sky-200">
+            100제 🔥<br><span class="text-[11px] font-normal text-slate-400">일일 완주 루틴</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Button -->
+    <button id="btnStart" class="w-full py-4 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 font-black text-lg text-white shadow-lg shadow-sky-500/20 active:scale-[0.99] transition">
+      스피드런 시작하기 (Space / Enter)
+    </button>
+  </div>
+
+  <!-- SCREEN 2: ACTIVE GAME PLAY -->
+  <div id="screenPlay" class="hidden space-y-6">
+    <!-- Top HUD: Progress, Timer, Combo -->
+    <div class="flex items-center justify-between text-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Question</span>
+        <span id="hudQIndex" class="font-extrabold text-sky-400 text-lg">1</span>
+        <span class="text-slate-500">/</span>
+        <span id="hudQTotal" class="text-slate-400 font-semibold">100</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Combo Pill -->
+        <div id="comboBadge" class="hidden px-2.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 font-black text-xs combo-pop">
+          🔥 <span id="comboCount">0</span> COMBO!
+        </div>
+
+        <!-- Timer -->
+        <div class="font-mono text-base font-bold text-slate-300 flex items-center gap-1">
+          ⏱️ <span id="hudTimer">00:00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+      <div id="hudProgress" class="h-full bg-gradient-to-r from-sky-400 to-emerald-400 transition-all duration-200" style="width: 1%"></div>
+    </div>
+
+    <!-- Center Card: Prompt Target -->
+    <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 text-center space-y-3 relative">
+      <div class="flex items-center justify-center gap-2">
+        <span id="qGroupBadge" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+          1그룹 동사
+        </span>
+        <span id="qMeaning" class="text-xs text-slate-400">
+          마시다
+        </span>
+      </div>
+
+      <!-- Target Verb in Kanji + Reading -->
+      <div class="py-2">
+        <div id="qVerb" class="text-4xl sm:text-5xl font-black text-white tracking-wide">
+          飲む
+        </div>
+        <div id="qKana" class="text-sm font-semibold text-sky-300 mt-1">
+          のむ
+        </div>
+      </div>
+
+      <!-- Target Conjugation Type (The Mission) -->
+      <div class="pt-2 border-t border-slate-700/60">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">변형 미션</div>
+        <div id="qTargetForm" class="text-xl sm:text-2xl font-black text-amber-300 mt-0.5">
+          사역수동형 (축약형)
+        </div>
+      </div>
+    </div>
+
+    <!-- INPUT AREA: TYPING MODE -->
+    <div id="areaTyping" class="space-y-3">
+      <div class="relative">
+        <input type="text" id="typeInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+          placeholder="로마자(nomasareru) 또는 히라가나 입력..."
+          class="w-full py-4 px-5 bg-slate-950 border-2 border-slate-700 focus:border-sky-400 rounded-xl text-xl sm:text-2xl font-bold text-center text-white outline-none transition placeholder:text-slate-600 placeholder:text-base">
+        <div id="kanaPreview" class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-mono px-2 py-1 bg-slate-800 text-sky-400 rounded border border-slate-700 hidden">
+          Kana
+        </div>
+      </div>
+      <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+        <span>엔터(Enter): <strong>제출</strong> / 영타 입력 시 <strong>히라가나 자동 변환</strong></span>
+        <button id="btnSkipTyping" class="text-amber-400 hover:text-amber-300 underline font-semibold">모름 / 패스 (Tab / Esc)</button>
+      </div>
+    </div>
+
+    <!-- INPUT AREA: 4-CHOICE MODE -->
+    <div id="areaChoice" class="hidden space-y-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="choiceContainer">
+        <!-- 4 choice buttons injected here -->
+      </div>
+      <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
+        <span>키보드 <strong>1, 2, 3, 4</strong> 키로 초고속 선택 가능</span>
+        <button id="btnSkipChoice" class="text-amber-400 hover:text-amber-300 underline font-semibold">모름 / 패스 (Space / Esc)</button>
+      </div>
+    </div>
+
+    <!-- QUICK FEEDBACK OVERLAY / MODAL (On Wrong Answer) -->
+    <div id="feedbackModal" class="hidden p-4 rounded-xl bg-red-950/80 border border-red-500/60 space-y-2.5 animate-fadeIn">
+      <div class="flex items-center justify-between">
+        <div class="font-bold text-red-300 text-sm flex items-center gap-1.5">
+          <span>❌ 오답 / 확인 필요</span>
+        </div>
+        <div class="text-xs text-slate-400">잠시 후 재출제 큐에 추가됨</div>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900/90 p-3 rounded-lg border border-slate-800 gap-2">
+        <div>
+          <span class="text-xs text-slate-400">정답: </span>
+          <span id="fbCorrectKanji" class="text-lg font-black text-white">飲まされる</span>
+          <span id="fbCorrectKana" class="text-sm font-bold text-emerald-400 ml-1.5">(のまされる)</span>
+        </div>
+        <div id="fbRuleSummary" class="text-xs text-slate-300">
+          1그룹 사역수동 축약: 어미 む → あ단(ま) + される
+        </div>
+      </div>
+      <button id="btnNextAfterMistake" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 rounded-lg transition">
+        확인하고 다음 문제로 (Space / Enter)
+      </button>
+    </div>
+
+  </div>
+
+  <!-- SCREEN 3: RESULT REPORT -->
+  <div id="screenResult" class="hidden space-y-6">
+    <div class="text-center space-y-1 py-2">
+      <div class="text-xs font-bold text-sky-400 tracking-widest uppercase">FINISH! 스피드런 완료</div>
+      <h2 class="text-3xl sm:text-4xl font-black text-white" id="resTitle">
+        대단합니다!
+      </h2>
+      <p class="text-slate-400 text-sm" id="resSub">
+        100문항 완주로 뇌내 반사 회로가 한층 더 날카로워졌습니다.
+      </p>
+    </div>
+
+    <!-- Score Big Card -->
+    <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center">
+      <div>
+        <div class="text-xs text-slate-400">정답률</div>
+        <div class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1" id="resAccuracy">94%</div>
+        <div class="text-[11px] text-slate-500" id="resScoreFraction">94 / 100</div>
+      </div>
+      <div>
+        <div class="text-xs text-slate-400">총 소요 시간</div>
+        <div class="text-2xl sm:text-3xl font-black text-sky-400 mt-1" id="resTotalTime">04:12</div>
+        <div class="text-[11px] text-slate-500" id="resPace">문제당 2.5초</div>
+      </div>
+      <div>
+        <div class="text-xs text-slate-400">최대 콤보</div>
+        <div class="text-2xl sm:text-3xl font-black text-amber-400 mt-1" id="resMaxCombo">38</div>
+        <div class="text-[11px] text-slate-500">연속 무오답</div>
+      </div>
+    </div>
+
+    <!-- Weakness Radar by Conjugation Type -->
+    <div class="space-y-2">
+      <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase">변형 유형별 정확도 분석</h3>
+      <div id="resFormBreakdown" class="space-y-2 text-xs">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Review Mistake List (If any) -->
+    <div id="resMistakeContainer" class="space-y-2">
+      <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase">오늘의 오답 목록 (<span id="resMistakeCount">0</span>)</h3>
+      <div id="resMistakeList" class="max-h-48 overflow-y-auto space-y-1.5 pr-1 text-xs">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+      <button id="btnRetryWrong" class="hidden flex-1 py-3 bg-amber-500 hover:bg-amber-400 font-bold text-slate-950 rounded-xl transition text-sm">
+        🔁 오답만 모아서 다시 풀기
+      </button>
+      <button id="btnPlayAgain" class="flex-1 py-3 bg-sky-500 hover:bg-sky-400 font-bold text-slate-950 rounded-xl transition text-sm">
+        🚀 새로운 세션 시작하기
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- FORMULA REFERENCE MODAL -->
+<div id="modalHelp" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+  <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 space-y-4 text-xs text-slate-300">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <h3 class="text-base font-bold text-white">동사 10대 활용 공식 요약</h3>
+      <button id="btnCloseHelp" class="text-slate-400 hover:text-white text-lg">✕</button>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-sky-300 text-sm block mb-1">1. 수동형 (受身) · ~에게 당하다</strong>
+        <p>• 1그룹: 어미 う단 → <strong>あ단 + れる</strong> (書く → 書かれる / 飲む → 飲まれる)</p>
+        <p>• 2그룹: 어미 る 탈락 + <strong>られる</strong> (食べる → 食べられる)</p>
+        <p>• 3그룹: する → <strong>される</strong> / 来る → <strong>こられる(来られる)</strong></p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-amber-300 text-sm block mb-1">2. 사역형 (使役) · ~하게 시키다</strong>
+        <p>• 1그룹: 어미 う단 → <strong>あ단 + せる</strong> (書く → 書かせる / 飲む → 飲ませる)</p>
+        <p>• 2그룹: 어미 る 탈락 + <strong>させる</strong> (食べる → 食べさせる)</p>
+        <p>• 3그룹: する → <strong>させる</strong> / 来る → <strong>こさせる(来させる)</strong></p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-red-400 text-sm block mb-1">3. 사역수동형 (使役受身) · 억지로 시킴당하다</strong>
+        <p>• 1그룹 축약형: 어미 う단 → <strong>あ단 + される</strong> (飲む → 飲まされる / 待つ → 待たされる)<br>
+           <span class="text-slate-400">*(단, す로 끝나는 1그룹은 話させられる 처럼 풀형태 사용)*</span></p>
+        <p>• 2그룹: 어미 る 탈락 + <strong>させられる</strong> (食べる → 食べさせられる)</p>
+        <p>• 3그룹: する → <strong>させられる</strong> / 来る → <strong>こさせられる</strong></p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-emerald-300 text-sm block mb-1">4. 가능형 (可能) · ~할 수 있다</strong>
+        <p>• 1그룹: 어미 う단 → <strong>え단 + る</strong> (書く → 書ける / 飲む → 飲める)</p>
+        <p>• 2그룹: 어미 る 탈락 + <strong>られる</strong> (食べる → 食べられる)</p>
+        <p>• 3그룹: する → <strong>できる</strong> / 来る → <strong>こられる(来られる)</strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========================================================
+   ROMANIZATION -> HIRAGANA CONVERTER ENGINE (WANIKANI STYLE)
+   ======================================================== */
+const ROMAJI_TABLE = {
+  'kya':'きゃ','kyu':'きゅ','kyo':'きょ',
+  'sha':'しゃ','shu':'しゅ','sho':'しょ','sya':'しゃ','syu':'しゅ','syo':'しょ',
+  'cha':'ちゃ','chu':'ちゅ','cho':'ちょ','tya':'ちゃ','tyu':'ちゅ','tyo':'ちょ',
+  'nya':'にゃ','nyu':'にゅ','nyo':'にょ',
+  'hya':'ひゃ','hyu':'ひゅ','hyo':'ひょ',
+  'mya':'みゃ','myu':'みゅ','myo':'みょ',
+  'rya':'りゃ','ryu':'りゅ','ryo':'りょ',
+  'gya':'ぎゃ','gyu':'ぎゅ','gyo':'ぎょ',
+  'ja':'じゃ','ju':'じゅ','jo':'じょ','zya':'じゃ','zyu':'じゅ','zyo':'じょ','jya':'じゃ','jyu':'じゅ','jyo':'じょ',
+  'bya':'びゃ','byu':'びゅ','byo':'びょ',
+  'pya':'ぴゃ','pyu':'ぴゅ','pyo':'ぴょ',
+  'ka':'か','ki':'き','ku':'く','ke':'け','ko':'こ',
+  'sa':'さ','shi':'し','si':'し','su':'す','se':'せ','so':'そ',
+  'ta':'た','chi':'ち','ti':'ち','tsu':'つ','tu':'つ','te':'て','to':'と',
+  'na':'な','ni':'に','nu':'ぬ','ne':'ね','no':'の',
+  'ha':'は','hi':'ひ','fu':'ふ','hu':'ふ','he':'へ','ho':'ほ',
+  'ma':'ま','mi':'み','mu':'む','me':'め','mo':'も',
+  'ya':'や','yu':'ゆ','yo':'よ',
+  'ra':'ら','ri':'り','ru':'る','re':'れ','ro':'ろ',
+  'wa':'わ','wo':'を',
+  'ga':'が','gi':'ぎ','gu':'ぐ','ge':'げ','go':'ご',
+  'za':'ざ','ji':'じ','zi':'じ','zu':'ず','ze':'ぜ','zo':'ぞ',
+  'da':'だ','di':'ぢ','du':'づ','de':'で','do':'ど',
+  'ba':'ば','bi':'び','bu':'ぶ','be':'べ','bo':'ぼ',
+  'pa':'ぱ','pi':'ぴ','pu':'ぷ','pe':'ぺ','po':'ぽ',
+  'a':'あ','i':'い','u':'う','e':'え','o':'お',
+  'nn':'ん',"n'":'ん'
+};
+
+function romajiToHiragana(text) {
+  let str = text.toLowerCase();
+  let result = '';
+  let i = 0;
+  while (i < str.length) {
+    // Already hiragana or punctuation
+    const code = str.charCodeAt(i);
+    if (code >= 0x3040 && code <= 0x309F) {
+      result += str[i];
+      i++;
+      continue;
+    }
+    // Check double consonant (sokuon: っ)
+    if (i + 1 < str.length && str[i] === str[i+1] && str[i] !== 'n' && /[bcdfghjklmpqrstvwxyz]/.test(str[i])) {
+      result += 'っ';
+      i++;
+      continue;
+    }
+    // Check 3-char match
+    let sub3 = str.slice(i, i + 3);
+    if (ROMAJI_TABLE[sub3]) {
+      result += ROMAJI_TABLE[sub3];
+      i += 3;
+      continue;
+    }
+    // Check 2-char match
+    let sub2 = str.slice(i, i + 2);
+    if (ROMAJI_TABLE[sub2]) {
+      result += ROMAJI_TABLE[sub2];
+      i += 2;
+      continue;
+    }
+    // Single n before consonant or end of word
+    if (str[i] === 'n') {
+      if (i + 1 === str.length) {
+        // Trailing 'n'
+        result += 'ん';
+        i++;
+        continue;
+      } else if (!/[aiueoy]/.test(str[i+1])) {
+        result += 'ん';
+        i++;
+        continue;
+      }
+    }
+    // Check 1-char match (vowels)
+    let sub1 = str.slice(i, i + 1);
+    if (ROMAJI_TABLE[sub1]) {
+      result += ROMAJI_TABLE[sub1];
+      i += 1;
+      continue;
+    }
+    // Fallback: pass through
+    result += str[i];
+    i++;
+  }
+  return result;
+}
+
+/* ========================================================
+   WEB AUDIO SOUND SYNTHESIZER (ZERO-LATENCY, NO CDN)
+   ======================================================== */
+class SoundEngine {
+  constructor() {
+    this.enabled = true;
+    this.ctx = null;
+  }
+  init() {
+    if (!this.ctx) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtx) this.ctx = new AudioCtx();
+    }
+  }
+  playCorrect(combo = 1) {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    // Pitch rises slightly with combo
+    const baseFreq = Math.min(880, 523.25 + (combo * 15));
+    osc.type = 'triangle';
+    osc.frequency.setValueAtTime(baseFreq, now);
+    osc.frequency.exponentialRampToValueAtTime(baseFreq * 1.5, now + 0.12);
+    gain.gain.setValueAtTime(0.18, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.18);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.18);
+  }
+  playWrong() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(180, now);
+    osc.frequency.linearRampToValueAtTime(120, now + 0.22);
+    gain.gain.setValueAtTime(0.2, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.22);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.22);
+  }
+  playComboMilestone() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    [523.25, 659.25, 783.99, 1046.5].forEach((freq, idx) => {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq;
+      gain.gain.setValueAtTime(0.12, now + idx * 0.05);
+      gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.05 + 0.2);
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+      osc.start(now + idx * 0.05);
+      osc.stop(now + idx * 0.05 + 0.2);
+    });
+  }
+}
+const sounds = new SoundEngine();
+
+/* ========================================================
+   VERB DATABASE & CONJUGATION ENGINE
+   ======================================================== */
+const VERB_POOL = [
+  // --- 1그룹 동사 (5단) ---
+  { kanji: '飲む', reading: 'のむ', group: 1, mean: '마시다', stem: '飲', stemKana: 'の', tail: 'む' },
+  { kanji: '書く', reading: 'かく', group: 1, mean: '쓰다', stem: '書', stemKana: 'か', tail: 'く' },
+  { kanji: '話す', reading: 'はなす', group: 1, mean: '이야기하다', stem: '話', stemKana: 'はな', tail: 'す' },
+  { kanji: '待つ', reading: 'まつ', group: 1, mean: '기다리다', stem: '待', stemKana: 'ま', tail: 'つ' },
+  { kanji: '買う', reading: 'かう', group: 1, mean: '사다', stem: '買', stemKana: 'か', tail: 'う' },
+  { kanji: '取る', reading: 'とる', group: 1, mean: '집다/취하다', stem: '取', stemKana: 'と', tail: 'る' },
+  { kanji: '泳ぐ', reading: 'およぐ', group: 1, mean: '수영하다', stem: '泳', stemKana: 'およ', tail: 'ぐ' },
+  { kanji: '呼ぶ', reading: 'よぶ', group: 1, mean: '부르다', stem: '呼', stemKana: 'よ', tail: 'ぶ' },
+  { kanji: '頼む', reading: 'たのむ', group: 1, mean: '부탁하다', stem: '頼', stemKana: 'たの', tail: 'む' },
+  { kanji: '急ぐ', reading: 'いそぐ', group: 1, mean: '서두르다', stem: '急', stemKana: 'いそ', tail: 'ぐ' },
+  { kanji: '直す', reading: 'なおす', group: 1, mean: '고치다', stem: '直', stemKana: 'なお', tail: 'す' },
+  { kanji: '運ぶ', reading: 'はこぶ', group: 1, mean: '옮기다/나르다', stem: '運', stemKana: 'はこ', tail: 'ぶ' },
+  { kanji: '送る', reading: 'おくる', group: 1, mean: '보내다', stem: '送', stemKana: 'おく', tail: 'る' },
+  { kanji: '断る', reading: 'ことわる', group: 1, mean: '거절하다', stem: '断', stemKana: 'ことわ', tail: 'る' },
+  { kanji: '手伝う', reading: 'てつだう', group: 1, mean: '돕다', stem: '手伝', stemKana: 'てつだ', tail: 'う' },
+  { kanji: '守る', reading: 'まもる', group: 1, mean: '지키다', stem: '守', stemKana: 'まも', tail: 'る' },
+  { kanji: '走る', reading: 'はしる', group: 1, mean: '달리다 (예외 1그룹)', stem: '走', stemKana: 'はし', tail: 'る' },
+  { kanji: '帰る', reading: 'かえる', group: 1, mean: '돌아가다 (예외 1그룹)', stem: '帰', stemKana: 'かえ', tail: 'る' },
+  { kanji: '入る', reading: 'はいる', group: 1, mean: '들어가다 (예외 1그룹)', stem: '入', stemKana: 'はい', tail: 'る' },
+  { kanji: '知る', reading: 'しる', group: 1, mean: '알다 (예외 1그룹)', stem: '知', stemKana: 'し', tail: 'る' },
+  { kanji: '切る', reading: 'きる', group: 1, mean: '자르다 (예외 1그룹)', stem: '切', stemKana: 'き', tail: 'る' },
+  { kanji: '行く', reading: 'いく', group: 1, mean: '가다 (특수)', stem: '行', stemKana: 'い', tail: 'く', isIku: true },
+
+  // --- 2그룹 동사 (1단) ---
+  { kanji: '食べる', reading: 'たべる', group: 2, mean: '먹다', stem: '食', stemKana: 'た', tail: 'べる' },
+  { kanji: '見る', reading: 'みる', group: 2, mean: '보다', stem: '見', stemKana: 'み', tail: 'る' },
+  { kanji: '起きる', reading: 'おきる', group: 2, mean: '일어나다', stem: '起', stemKana: 'おき', tail: 'る' },
+  { kanji: '降りる', reading: 'おりる', group: 2, mean: '내리다', stem: '降', stemKana: 'おり', tail: 'る' },
+  { kanji: '借りる', reading: 'かりる', group: 2, mean: '빌리다', stem: '借', stemKana: 'かり', tail: 'る' },
+  { kanji: '覚える', reading: 'おぼえる', group: 2, mean: '외우다/기억하다', stem: '覚', stemKana: 'おぼ', tail: 'える' },
+  { kanji: '決める', reading: 'きめる', group: 2, mean: '정하다', stem: '決', stemKana: 'き', tail: 'める' },
+  { kanji: '答える', reading: 'こたえる', group: 2, mean: '대답하다', stem: '答', stemKana: 'こた', tail: 'える' },
+  { kanji: '忘れる', reading: 'わすれる', group: 2, mean: '잊다', stem: '忘', stemKana: 'わす', tail: 'れる' },
+  { kanji: '続ける', reading: 'つづける', group: 2, mean: '계속하다', stem: '続', stemKana: 'つづ', tail: 'ける' },
+  { kanji: '調べる', reading: 'しらべる', group: 2, mean: '조사하다', stem: '調', stemKana: 'しら', tail: 'べる' },
+  { kanji: '褒める', reading: 'ほめる', group: 2, mean: '칭찬하다', stem: '褒', stemKana: 'ほ', tail: 'める' },
+  { kanji: '伝える', reading: 'つたえる', group: 2, mean: '전하다', stem: '伝', stemKana: 'つた', tail: 'える' },
+  { kanji: '受ける', reading: 'うける', group: 2, mean: '받다/응시하다', stem: '受', stemKana: 'う', tail: 'ける' },
+
+  // --- 3그룹 동사 (불규칙) ---
+  { kanji: 'する', reading: 'する', group: 3, mean: '하다', isSuru: true },
+  { kanji: '来る', reading: 'くる', group: 3, mean: '오다', isKuru: true }
+];
+
+// Dan shifts for 1-group verbs
+const GODAN_MAP = {
+  'う': { a: 'わ', i: 'い', u: 'う', e: 'え', o: 'お' },
+  'く': { a: 'か', i: 'き', u: 'く', e: 'け', o: 'こ' },
+  'ぐ': { a: 'が', i: 'ぎ', u: 'ぐ', e: 'げ', o: 'ご' },
+  'す': { a: 'さ', i: 'し', u: 'す', e: 'せ', o: 'そ' },
+  'つ': { a: 'た', i: 'ち', u: 'つ', e: 'て', o: 'と' },
+  'ぬ': { a: 'な', i: 'に', u: 'ぬ', e: 'ね', o: 'の' },
+  'ぶ': { a: 'ば', i: 'び', u: 'ぶ', e: 'べ', o: 'ぼ' },
+  'む': { a: 'ま', i: 'み', u: 'む', e: 'め', o: 'も' },
+  'る': { a: 'ら', i: 'り', u: 'る', e: 'れ', o: 'ろ' }
+};
+
+// Conjugation functions
+function conjugate(verb, formKey) {
+  // 3-group: する
+  if (verb.isSuru) {
+    switch (formKey) {
+      case 'masu': return { kanji: 'します', kana: 'します', rule: '3그룹: する → します' };
+      case 'nai': return { kanji: 'しない', kana: 'しない', rule: '3그룹: する → しない' };
+      case 'te': return { kanji: 'して', kana: 'して', rule: '3그룹: する → して' };
+      case 'ta': return { kanji: 'した', kana: 'した', rule: '3그룹: する → した' };
+      case 'potential': return { kanji: 'できる', kana: 'できる', rule: '3그룹 가능형: する → できる' };
+      case 'ba': return { kanji: 'すれば', kana: 'すれば', rule: '3그룹 가정형: する → すれば' };
+      case 'volitional': return { kanji: 'しよう', kana: 'しよう', rule: '3그룹 의향형: する → しよう' };
+      case 'passive': return { kanji: 'される', kana: 'される', rule: '3그룹 수동형: する → される' };
+      case 'causative': return { kanji: 'させる', kana: 'させる', rule: '3그룹 사역형: する → させる' };
+      case 'causative_passive': return { kanji: 'させられる', kana: 'させられる', rule: '3그룹 사역수동형: する → させられる' };
+    }
+  }
+
+  // 3-group: 来る (くる)
+  if (verb.isKuru) {
+    switch (formKey) {
+      case 'masu': return { kanji: '来ます', kana: 'きます', rule: '3그룹: 来る(くる) → きます(来ます)' };
+      case 'nai': return { kanji: '来ない', kana: 'こない', rule: '3그룹: 来る(くる) → こない(来ない)' };
+      case 'te': return { kanji: '来て', kana: 'きて', rule: '3그룹: 来る(くる) → きて(来て)' };
+      case 'ta': return { kanji: '来た', kana: 'きた', rule: '3그룹: 来る(くる) → きた(来た)' };
+      case 'potential': return { kanji: '来られる', kana: 'こられる', rule: '3그룹 가능형: 来る → こられる' };
+      case 'ba': return { kanji: '来れば', kana: 'くれば', rule: '3그룹 가정형: 来る → くれば' };
+      case 'volitional': return { kanji: '来よう', kana: 'こよう', rule: '3그룹 의향형: 来る → こよう' };
+      case 'passive': return { kanji: '来られる', kana: 'こられる', rule: '3그룹 수동형: 来る → こられる' };
+      case 'causative': return { kanji: '来させる', kana: 'こさせる', rule: '3그룹 사역형: 来る → こさせる' };
+      case 'causative_passive': return { kanji: '来させられる', kana: 'こさせられる', rule: '3그룹 사역수동형: 来る → こさせられる' };
+    }
+  }
+
+  // 2-group verbs
+  if (verb.group === 2) {
+    const stemK = verb.kanji.slice(0, -1);
+    const stemH = verb.reading.slice(0, -1);
+    switch (formKey) {
+      case 'masu': return { kanji: stemK + 'ます', kana: stemH + 'ます', rule: '2그룹: 어미 る 탈락 + ます' };
+      case 'nai': return { kanji: stemK + 'ない', kana: stemH + 'ない', rule: '2그룹: 어미 る 탈락 + ない' };
+      case 'te': return { kanji: stemK + 'て', kana: stemH + 'て', rule: '2그룹: 어미 る 탈락 + て' };
+      case 'ta': return { kanji: stemK + 'た', kana: stemH + 'た', rule: '2그룹: 어미 る 탈락 + た' };
+      case 'potential': return { kanji: stemK + 'られる', kana: stemH + 'られる', rule: '2그룹 가능형: 어미 る 탈락 + られる' };
+      case 'ba': return { kanji: stemK + 'れば', kana: stemH + 'れば', rule: '2그룹 가정형: 어미 る 탈락 + れば' };
+      case 'volitional': return { kanji: stemK + 'よう', kana: stemH + 'よう', rule: '2그룹 의향형: 어미 る 탈락 + よう' };
+      case 'passive': return { kanji: stemK + 'られる', kana: stemH + 'られる', rule: '2그룹 수동형: 어미 る 탈락 + られる' };
+      case 'causative': return { kanji: stemK + 'させる', kana: stemH + 'させる', rule: '2그룹 사역형: 어미 る 탈락 + させる' };
+      case 'causative_passive': return { kanji: stemK + 'させられる', kana: stemH + 'させられる', rule: '2그룹 사역수동형: 어미 る 탈락 + させられる' };
+    }
+  }
+
+  // 1-group verbs
+  const lastChar = verb.kanji.slice(-1);
+  const stemK = verb.kanji.slice(0, -1);
+  const stemH = verb.reading.slice(0, -1);
+  const row = GODAN_MAP[lastChar];
+
+  switch (formKey) {
+    case 'masu':
+      return { kanji: stemK + row.i + 'ます', kana: stemH + row.i + 'ます', rule: `1그룹: 어미 ${lastChar} → い단(${row.i}) + ます` };
+    case 'nai':
+      return { kanji: stemK + row.a + 'ない', kana: stemH + row.a + 'ない', rule: `1그룹: 어미 ${lastChar} → あ단(${row.a}) + ない` };
+    case 'ba':
+      return { kanji: stemK + row.e + 'ば', kana: stemH + row.e + 'ば', rule: `1그룹 가정형: 어미 ${lastChar} → え단(${row.e}) + ば` };
+    case 'volitional':
+      return { kanji: stemK + row.o + 'う', kana: stemH + row.o + 'う', rule: `1그룹 의향형: 어미 ${lastChar} → お단(${row.o}) + う` };
+    case 'potential':
+      return { kanji: stemK + row.e + 'る', kana: stemH + row.e + 'る', rule: `1그룹 가능형: 어미 ${lastChar} → え단(${row.e}) + る` };
+    case 'passive':
+      return { kanji: stemK + row.a + 'れる', kana: stemH + row.a + 'れる', rule: `1그룹 수동형: 어미 ${lastChar} → あ단(${row.a}) + れる` };
+    case 'causative':
+      return { kanji: stemK + row.a + 'せる', kana: stemH + row.a + 'せる', rule: `1그룹 사역형: 어미 ${lastChar} → あ단(${row.a}) + せる` };
+    case 'causative_passive':
+      // 1-group short form: except for 'su', which must be ~saserareru
+      if (lastChar === 'す') {
+        return { kanji: stemK + 'させられる', kana: stemH + 'させられる', rule: `1그룹 す어미 사역수동: ~させられる (축약 불가)` };
+      }
+      return { kanji: stemK + row.a + 'される', kana: stemH + row.a + 'される', rule: `1그룹 사역수동 축약형: 어미 ${lastChar} → あ단(${row.a}) + される` };
+    case 'te':
+    case 'ta': {
+      let teEnd = '', taEnd = '';
+      if (verb.isIku) {
+        teEnd = 'って'; taEnd = 'った';
+      } else if (lastChar === 'う' || lastChar === 'つ' || lastChar === 'る') {
+        teEnd = 'って'; taEnd = 'った';
+      } else if (lastChar === 'む' || lastChar === 'ぶ' || lastChar === 'ぬ') {
+        teEnd = 'んで'; taEnd = 'んだ';
+      } else if (lastChar === 'く') {
+        teEnd = 'いて'; taEnd = 'いた';
+      } else if (lastChar === 'ぐ') {
+        teEnd = 'いで'; taEnd = 'いだ';
+      } else if (lastChar === 'す') {
+        teEnd = 'して'; taEnd = 'した';
+      }
+      if (formKey === 'te') {
+        return { kanji: stemK + teEnd, kana: stemH + teEnd, rule: `1그룹 て형 음편: ${lastChar} → ${teEnd}` };
+      } else {
+        return { kanji: stemK + taEnd, kana: stemH + taEnd, rule: `1그룹 た형 과거: ${lastChar} → ${taEnd}` };
+      }
+    }
+  }
+}
+
+const FORM_METADATA = {
+  masu: { name: 'ます형 (정중형)', category: 'basic' },
+  nai: { name: 'ない형 (부정형)', category: 'basic' },
+  te: { name: 'て형 (연결형)', category: 'basic' },
+  ta: { name: 'た형 (과거형)', category: 'basic' },
+  potential: { name: '가능형 (可能形)', category: 'middle' },
+  ba: { name: '가정형 (ば형)', category: 'middle' },
+  volitional: { name: '의향·권유형 (〜よう)', category: 'middle' },
+  passive: { name: '수동형 (受身形)', category: 'n2killer' },
+  causative: { name: '사역형 (使役形)', category: 'n2killer' },
+  causative_passive: { name: '사역수동형 (使役受身)', category: 'n2killer' }
+};
+
+/* ========================================================
+   GAME CONTROLLER STATE
+   ======================================================== */
+const state = {
+  course: 'n2killer', // 'n2killer' | 'middle' | 'basic' | 'all'
+  mode: 'typing',     // 'typing' | 'choice'
+  targetCount: 100,
+  questions: [],
+  currentIndex: 0,
+  score: 0,
+  combo: 0,
+  maxCombo: 0,
+  startTime: null,
+  timerInterval: null,
+  elapsedSec: 0,
+  waitingConfirm: false,
+  mistakes: [],
+  typeStats: {} // { potential: { correct: 0, total: 0 } }
+};
+
+// Generate Question Set
+function generateQuestions(course, count) {
+  let eligibleForms = [];
+  if (course === 'basic') eligibleForms = ['masu', 'nai', 'te', 'ta'];
+  else if (course === 'middle') eligibleForms = ['potential', 'ba', 'volitional'];
+  else if (course === 'n2killer') eligibleForms = ['passive', 'causative', 'causative_passive'];
+  else eligibleForms = Object.keys(FORM_METADATA);
+
+  const list = [];
+  for (let i = 0; i < count; i++) {
+    // Pick random verb & random form
+    const verb = VERB_POOL[Math.floor(Math.random() * VERB_POOL.length)];
+    const formKey = eligibleForms[Math.floor(Math.random() * eligibleForms.length)];
+    const answer = conjugate(verb, formKey);
+    
+    // Generate 3 distractors for 4-choice mode
+    const distractors = new Set();
+    const otherForms = Object.keys(FORM_METADATA).filter(k => k !== formKey);
+    while (distractors.size < 3) {
+      const altForm = otherForms[Math.floor(Math.random() * otherForms.length)];
+      const altAns = conjugate(verb, altForm);
+      if (altAns.kanji !== answer.kanji) distractors.add(altAns.kanji);
+      if (distractors.size < 3) {
+        // Also add altered tails as tricky traps
+        const fakeTail = answer.kanji.endsWith('る') ? answer.kanji.slice(0, -1) + 'す' : answer.kanji + 'る';
+        distractors.add(fakeTail);
+      }
+    }
+
+    const choices = [answer.kanji, ...Array.from(distractors).slice(0, 3)];
+    // Shuffle choices
+    for (let c = choices.length - 1; c > 0; c--) {
+      const j = Math.floor(Math.random() * (c + 1));
+      [choices[c], choices[j]] = [choices[j], choices[c]];
+    }
+
+    list.push({
+      verb,
+      formKey,
+      formMeta: FORM_METADATA[formKey],
+      answer,
+      choices
+    });
+  }
+  return list;
+}
+
+/* ========================================================
+   UI & EVENT HANDLING
+   ======================================================== */
+const $ = id => document.getElementById(id);
+
+function initLobbyUI() {
+  // Course buttons
+  document.querySelectorAll('.course-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.course-btn').forEach(b => {
+        b.classList.remove('border-sky-500', 'bg-sky-950/40');
+        b.classList.add('border-slate-700', 'bg-slate-800/60');
+      });
+      btn.classList.add('border-sky-500', 'bg-sky-950/40');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60');
+      state.course = btn.dataset.course;
+    };
+  });
+
+  // Mode buttons
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-200');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-200');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      state.mode = btn.dataset.mode;
+    };
+  });
+
+  // Count buttons
+  document.querySelectorAll('.count-btn').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('.count-btn').forEach(b => {
+        b.classList.remove('border-sky-500', 'bg-sky-950/40', 'text-sky-200');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btn.classList.add('border-sky-500', 'bg-sky-950/40', 'text-sky-200');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      state.targetCount = parseInt(btn.dataset.count, 10);
+    };
+  });
+
+  // Start button
+  $('btnStart').onclick = startGame;
+
+  // Sound toggle
+  $('btnSound').onclick = () => {
+    sounds.enabled = !sounds.enabled;
+    $('soundIcon').textContent = sounds.enabled ? '🔊' : '🔇';
+    $('soundLabel').textContent = sounds.enabled ? 'Sound ON' : 'Mute';
+  };
+
+  // Help modal
+  $('btnHelp').onclick = () => $('modalHelp').classList.remove('hidden');
+  $('btnCloseHelp').onclick = () => $('modalHelp').classList.add('hidden');
+
+  // Next after mistake button
+  $('btnNextAfterMistake').onclick = advanceNext;
+
+  // Typing Input Romaji Handler
+  const inputEl = $('typeInput');
+  inputEl.addEventListener('input', () => {
+    const raw = inputEl.value;
+    const kana = romajiToHiragana(raw);
+    if (kana !== raw) {
+      inputEl.value = kana;
+    }
+  });
+
+  inputEl.addEventListener('keydown', e => {
+    if (state.waitingConfirm) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        advanceNext();
+      }
+      return;
+    }
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      checkAnswer(inputEl.value.trim());
+    } else if (e.key === 'Tab' || e.key === 'Escape') {
+      e.preventDefault();
+      handleSkip();
+    }
+  });
+
+  $('btnSkipTyping').onclick = handleSkip;
+  $('btnSkipChoice').onclick = handleSkip;
+
+  // Global key listener for 1,2,3,4 in choice mode
+  window.addEventListener('keydown', e => {
+    if (state.waitingConfirm) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        advanceNext();
+      }
+      return;
+    }
+    if (state.mode === 'choice' && !$('screenPlay').classList.contains('hidden')) {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        const idx = parseInt(e.key, 10) - 1;
+        const currentQ = state.questions[state.currentIndex];
+        if (currentQ && currentQ.choices[idx]) {
+          checkAnswer(currentQ.choices[idx]);
+        }
+      } else if (e.key === ' ' || e.key === 'Escape') {
+        e.preventDefault();
+        handleSkip();
+      }
+    }
+  });
+
+  $('btnPlayAgain').onclick = () => {
+    clearInterval(state.timerInterval);
+    $('screenResult').classList.add('hidden');
+    $('screenLobby').classList.remove('hidden');
+  };
+
+  $('btnRetryWrong').onclick = () => {
+    if (state.mistakes.length === 0) return;
+    state.questions = state.mistakes.map(m => ({ ...m.q }));
+    state.targetCount = state.questions.length;
+    startSessionWithQuestions();
+  };
+}
+
+function startGame() {
+  state.questions = generateQuestions(state.course, state.targetCount);
+  startSessionWithQuestions();
+}
+
+function startSessionWithQuestions() {
+  state.currentIndex = 0;
+  state.score = 0;
+  state.combo = 0;
+  state.maxCombo = 0;
+  state.elapsedSec = 0;
+  state.mistakes = [];
+  state.waitingConfirm = false;
+  state.typeStats = {};
+  Object.keys(FORM_METADATA).forEach(k => {
+    state.typeStats[k] = { correct: 0, total: 0 };
+  });
+
+  $('screenLobby').classList.add('hidden');
+  $('screenResult').classList.add('hidden');
+  $('screenPlay').classList.remove('hidden');
+
+  // Toggle Mode areas
+  if (state.mode === 'typing') {
+    $('areaTyping').classList.remove('hidden');
+    $('areaChoice').classList.add('hidden');
+  } else {
+    $('areaTyping').classList.add('hidden');
+    $('areaChoice').classList.remove('hidden');
+  }
+
+  // Start timer
+  state.startTime = Date.now();
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(() => {
+    state.elapsedSec = Math.floor((Date.now() - state.startTime) / 1000);
+    const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+    const s = String(state.elapsedSec % 60).padStart(2, '0');
+    $('hudTimer').textContent = `${m}:${s}`;
+  }, 1000);
+
+  renderQuestion();
+}
+
+function renderQuestion() {
+  state.waitingConfirm = false;
+  $('feedbackModal').classList.add('hidden');
+  const card = $('promptCard');
+  card.classList.remove('flash-correct', 'shake-wrong');
+
+  const q = state.questions[state.currentIndex];
+  $('hudQIndex').textContent = state.currentIndex + 1;
+  $('hudQTotal').textContent = state.questions.length;
+  $('hudProgress').style.width = `${((state.currentIndex) / state.questions.length) * 100}%`;
+
+  // Verb display
+  $('qVerb').textContent = q.verb.kanji;
+  $('qKana').textContent = q.verb.reading;
+  $('qMeaning').textContent = q.verb.mean;
+
+  // Group Badge
+  let grpText = q.verb.group === 1 ? '1그룹 동사' : q.verb.group === 2 ? '2그룹 동사' : '3그룹 불규칙';
+  $('qGroupBadge').textContent = grpText;
+
+  // Target Form
+  $('qTargetForm').textContent = q.formMeta.name;
+
+  if (state.mode === 'typing') {
+    const input = $('typeInput');
+    input.value = '';
+    input.disabled = false;
+    setTimeout(() => input.focus(), 50);
+  } else {
+    // 4 choices
+    const container = $('choiceContainer');
+    container.innerHTML = q.choices.map((c, idx) => `
+      <button data-val="${c}" class="choice-item py-3 px-4 rounded-xl border border-slate-700 bg-slate-800/80 hover:border-sky-400 hover:bg-slate-700/80 transition text-left flex items-center justify-between font-bold text-white text-base">
+        <span>${c}</span>
+        <span class="w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-xs text-slate-300 font-mono">${idx + 1}</span>
+      </button>
+    `).join('');
+
+    container.querySelectorAll('.choice-item').forEach(btn => {
+      btn.onclick = () => checkAnswer(btn.dataset.val);
+    });
+  }
+}
+
+function checkAnswer(userAnswer) {
+  if (state.waitingConfirm) return;
+  const q = state.questions[state.currentIndex];
+  state.typeStats[q.formKey].total++;
+
+  // Match against kanji or pure hiragana reading
+  const isMatch = (userAnswer === q.answer.kanji) || (userAnswer === q.answer.kana);
+
+  if (isMatch) {
+    // Correct!
+    state.score++;
+    state.combo++;
+    if (state.combo > state.maxCombo) state.maxCombo = state.combo;
+    state.typeStats[q.formKey].correct++;
+
+    // Combo milestones
+    if (state.combo >= 5 && state.combo % 5 === 0) {
+      sounds.playComboMilestone();
+    } else {
+      sounds.playCorrect(state.combo);
+    }
+
+    updateComboBadge();
+    const card = $('promptCard');
+    card.classList.add('flash-correct');
+
+    // Next after brief delay for speedrun tempo
+    setTimeout(advanceNext, 180);
+  } else {
+    // Wrong
+    state.combo = 0;
+    updateComboBadge();
+    sounds.playWrong();
+
+    const card = $('promptCard');
+    card.classList.add('shake-wrong');
+
+    // Record mistake
+    state.mistakes.push({
+      q,
+      userAnswer: userAnswer || '(미입력/모름)',
+      correctKanji: q.answer.kanji,
+      correctKana: q.answer.kana,
+      rule: q.answer.rule
+    });
+
+    // Re-queue question to enforce mastery before session ends!
+    state.questions.push({ ...q });
+
+    // Show instant feedback modal
+    state.waitingConfirm = true;
+    $('fbCorrectKanji').textContent = q.answer.kanji;
+    $('fbCorrectKana').textContent = `(${q.answer.kana})`;
+    $('fbRuleSummary').textContent = q.answer.rule;
+    $('feedbackModal').classList.remove('hidden');
+
+    if (state.mode === 'typing') {
+      $('typeInput').disabled = true;
+    }
+  }
+}
+
+function handleSkip() {
+  checkAnswer('');
+}
+
+function updateComboBadge() {
+  const badge = $('comboBadge');
+  if (state.combo >= 3) {
+    badge.classList.remove('hidden');
+    $('comboCount').textContent = state.combo;
+  } else {
+    badge.classList.add('hidden');
+  }
+}
+
+function advanceNext() {
+  state.currentIndex++;
+  if (state.currentIndex >= state.questions.length) {
+    finishGame();
+  } else {
+    renderQuestion();
+  }
+}
+
+function finishGame() {
+  clearInterval(state.timerInterval);
+  $('screenPlay').classList.add('hidden');
+  $('screenResult').classList.remove('hidden');
+
+  const accuracy = Math.round((state.score / (state.score + state.mistakes.length)) * 100) || 0;
+  $('resAccuracy').textContent = `${accuracy}%`;
+  $('resScoreFraction').textContent = `${state.score} / ${state.score + state.mistakes.length} (정답수/총시도)`;
+
+  const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+  const s = String(state.elapsedSec % 60).padStart(2, '0');
+  $('resTotalTime').textContent = `${m}:${s}`;
+
+  const avgPace = ((state.elapsedSec / (state.score + state.mistakes.length)) || 0).toFixed(1);
+  $('resPace').textContent = `문항당 평균 ${avgPace}초`;
+  $('resMaxCombo').textContent = state.maxCombo;
+
+  // Breakdown by form
+  const breakdownEl = $('resFormBreakdown');
+  breakdownEl.innerHTML = Object.entries(state.typeStats)
+    .filter(([_, data]) => data.total > 0)
+    .map(([key, data]) => {
+      const pct = Math.round((data.correct / data.total) * 100);
+      const meta = FORM_METADATA[key];
+      const barColor = pct >= 85 ? 'bg-emerald-400' : pct >= 65 ? 'bg-sky-400' : 'bg-red-400';
+      return `
+        <div class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center justify-between gap-3">
+          <div class="w-36 font-bold text-slate-200 truncate">${meta.name}</div>
+          <div class="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
+            <div class="${barColor} h-full" style="width: ${pct}%"></div>
+          </div>
+          <div class="font-mono font-bold text-right w-16 ${pct < 70 ? 'text-red-400' : 'text-slate-300'}">
+            ${pct}% <span class="text-[10px] text-slate-500 font-normal">(${data.correct}/${data.total})</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+  // Mistakes
+  $('resMistakeCount').textContent = state.mistakes.length;
+  const mistakeListEl = $('resMistakeList');
+  if (state.mistakes.length === 0) {
+    $('resMistakeContainer').classList.add('hidden');
+    $('btnRetryWrong').classList.add('hidden');
+  } else {
+    $('resMistakeContainer').classList.remove('hidden');
+    $('btnRetryWrong').classList.remove('hidden');
+    mistakeListEl.innerHTML = state.mistakes.map(m => `
+      <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+        <div>
+          <span class="font-bold text-white text-sm">${m.q.verb.kanji}</span>
+          <span class="text-slate-400 text-xs ml-1">→ ${m.q.formMeta.name}</span>
+          <div class="text-[11px] text-slate-400 mt-0.5">${m.rule}</div>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-red-400 line-through">${m.userAnswer}</span>
+          <span class="text-xs font-bold text-emerald-400 ml-1.5">✓ ${m.correctKanji}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+// Kickoff
+window.addEventListener('DOMContentLoaded', initLobbyUI);
+</script>
+</body>
+</html>

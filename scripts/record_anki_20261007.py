@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 """
 Record Anki study stats for 2026-10-07 (and finalize 2026-10-06) in database/jlpt_learning.db.
+Updated with:
+1) Anki latest revlog (1,323 reviews, 231.17 mins, 630 distinct cards)
+2) User confirmed personal study 1 hour (60 mins, 3,600s)
+Total for 2026-10-07: 291 mins 10.15s (4h 51m 10.15s)
 """
 
 import sqlite3
@@ -38,7 +42,7 @@ deck_names = {r[0]: r[1].replace('\x1f', '::') for r in cur_anki.fetchall()}
 
 KST = timezone(timedelta(hours=9))
 
-def process_day(d_str, day_num, lecture_mins=0, is_today=False):
+def process_day(d_str, day_num, extra_study_mins=0, extra_type="lecture", is_today=False):
     s_dt = datetime(2026, 10, day_num, 4, 0, 0, tzinfo=KST)
     e_dt = s_dt + timedelta(days=1)
     s_ms = int(s_dt.timestamp() * 1000)
@@ -121,8 +125,8 @@ def process_day(d_str, day_num, lecture_mins=0, is_today=False):
     ''', (s_ms, e_ms))
     grammar_reviewed_today = cur_anki.fetchone()[0] or 0
 
-    lecture_sec = lecture_mins * 60
-    total_sec = anki_sec + lecture_sec
+    extra_sec = extra_study_mins * 60
+    total_sec = anki_sec + extra_sec
     whole_mins = int(total_sec // 60)
     rem_sec = round(total_sec % 60, 2)
 
@@ -144,18 +148,19 @@ def process_day(d_str, day_num, lecture_mins=0, is_today=False):
             f"Anki revlog 2026-10-06 실측치 (총 {cnt:,}회, {round(anki_mins, 2)}분) + N2 정규 강의 24분 합산 (총 {whole_mins}분 {rem_sec}초)."
         )
     else:
-        status_suffix = " (10:33~19:15 KST 진행 중)" if is_today else ""
+        status_suffix = " (10:33~22:55 KST 진행 중)" if is_today else ""
         session_summary = (
             f"[{d_str}] 당일 현재 누적 순수 학습시간 {whole_mins}분 {rem_sec}초 (약 {whole_mins//60}시간 {whole_mins%60}분 / {round(total_sec/60.0, 2)}분{status_suffix}). "
-            f"★Anki 대규모 집중 회독 세션 {cnt:,}회 실측 ({round(anki_mins, 2)}분 / 3시간 42분 52초, {min_dt_str}~{max_dt_str} 완수, 고유 카드 {distinct_cards}장, 카드당 평균 {sec_per_card}초)★: "
-            f"1) 주요 덱 회독: {deck_summary_str}. "
-            f"2) 학습 반응: Again {again_c:,} ({again_pct}%), Hard {hard_c} ({round(hard_c/cnt*100, 2)}%), "
+            f"1) ★Anki 대규모 집중 회독 세션 {cnt:,}회 실측 ({round(anki_mins, 2)}분 / 3시간 51분 10초, {min_dt_str}~{max_dt_str} 완수, 고유 카드 {distinct_cards}장, 카드당 평균 {sec_per_card}초)★: "
+            f"주요 덱 회독 {deck_summary_str}. "
+            f"학습 반응: Again {again_c:,} ({again_pct}%), Hard {hard_c} ({round(hard_c/cnt*100, 2)}%), "
             f"Good {good_c} ({round(good_c/cnt*100, 2)}%), Easy {easy_c} ({round(easy_c/cnt*100, 2)}%). "
-            f"3) 복습 617회 + 재학습 693회 집중 소화. 컬렉션 재학습 큐 {learn_rem}장 타이트 소화 관리 중. 잔여 {rem_sec}초 보존."
+            f"청해 오답 6회(5.1분), 경어·축약 5회(2.8분), 예외1그룹 1회 집중 점검 포함. "
+            f"2) 사용자 명시 보고: 개인공부 1시간 (60분 / 3,600초 실측 추가, study_intervals ID 9 기록). "
+            f"잔여 {rem_sec}초 보존."
         )
         source_note = (
-            f"Anki revlog 2026-10-07 실측치 (총 {cnt:,}회, {round(anki_mins, 2)}분 / 3시간 42분 52초, 고유 카드 {distinct_cards}장). "
-            f"주요 덱: {deck_summary_str}."
+            f"Anki revlog 2026-10-07 실측치 ({cnt:,}회, {round(anki_mins, 2)}분) + 개인공부 60분(3,600초) 합산 (총 {whole_mins}분 {rem_sec}초)."
         )
 
     summary_payload = {
@@ -202,7 +207,7 @@ def process_day(d_str, day_num, lecture_mins=0, is_today=False):
         'distinct_cards': distinct_cards,
         'anki_mins': anki_mins,
         'anki_sec': anki_sec,
-        'lecture_mins': lecture_mins,
+        'extra_study_mins': extra_study_mins,
         'whole_mins': whole_mins,
         'rem_sec': rem_sec,
         'total_sec': total_sec,
@@ -216,8 +221,8 @@ def process_day(d_str, day_num, lecture_mins=0, is_today=False):
         'max_dt_str': max_dt_str
     }
 
-data_06 = process_day('2026-10-06', 6, lecture_mins=24, is_today=False)
-data_07 = process_day('2026-10-07', 7, lecture_mins=0, is_today=True)
+data_06 = process_day('2026-10-06', 6, extra_study_mins=24, extra_type="lecture", is_today=False)
+data_07 = process_day('2026-10-07', 7, extra_study_mins=60, extra_type="personal", is_today=True)
 
 con_anki.close()
 
@@ -225,6 +230,24 @@ con_anki.close()
 con_db = sqlite3.connect(DB)
 with con_db:
     cur_db = con_db.cursor()
+
+    # Insert study_intervals for 10/07 if not already inserted
+    cur_db.execute("SELECT id FROM study_intervals WHERE session_date = '2026-10-07' AND source = 'chat_confirmed'")
+    existing_interval = cur_db.fetchone()
+    if existing_interval:
+        cur_db.execute('''
+            UPDATE study_intervals
+            SET duration_seconds = 3600,
+                notes = '사용자 명시 보고: 개인공부 1시간(60분/3,600초) 완료'
+            WHERE id = ?
+        ''', (existing_interval[0],))
+        print(f"Updated study_intervals ID {existing_interval[0]} with 3,600s personal study.")
+    else:
+        cur_db.execute('''
+            INSERT INTO study_intervals (session_date, started_at, ended_at, duration_seconds, status, source, notes)
+            VALUES ('2026-10-07', '2026-10-07T21:45:00+09:00', '2026-10-07T22:45:00+09:00', 3600, 'completed', 'chat_confirmed', '사용자 명시 보고: 개인공부 1시간(60분/3,600초) 완료')
+        ''')
+        print("Inserted new study_intervals row for 2026-10-07 personal study 1h.")
 
     for data in [data_06, data_07]:
         d_str = data['d_str']
