@@ -283,20 +283,24 @@ body {
         <!-- Injected via JS -->
       </div>
 
-      <!-- Translation Hint Section (Toggle & Hold supported) -->
-      <div class="pt-2 border-t border-slate-700/50 flex flex-col items-start gap-2">
-        <div class="flex items-center gap-3 w-full">
-          <button id="btnHoldTrans" type="button" class="hold-hint-btn px-3.5 py-1.5 rounded-lg bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-700/70 text-indigo-300 font-bold text-xs flex items-center gap-2 shadow-sm transition">
-            <span>👁️ 訳・意味ヒント</span>
-            <span id="holdTransStatus" class="text-[10px] text-indigo-400 bg-indigo-900/60 px-1.5 py-0.5 rounded">클릭 / 누르기</span>
+      <!-- Translation Hint Section (Zero Layout Shift Floating Tooltip) -->
+      <div class="pt-2 border-t border-slate-700/50 flex items-center justify-between relative">
+        <div class="relative inline-block">
+          <button id="btnHoverTrans" type="button" class="px-3.5 py-1.5 rounded-lg bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-700/70 text-indigo-300 hover:text-white font-bold text-xs flex items-center gap-2 shadow-sm transition cursor-pointer">
+            <span>👁️ 訳・ヒント</span>
+            <span class="text-[10px] text-indigo-400 bg-indigo-900/80 px-1.5 py-0.5 rounded">마우스 오버</span>
           </button>
-          <span class="text-[11px] text-slate-400 hidden sm:inline">※ 클릭하거나 누르고 있으면 한국어 번역이 표시됩니다</span>
-        </div>
 
-        <!-- Translation Container -->
-        <div id="transPreview" class="hidden w-full p-3 rounded-xl bg-indigo-950/60 border border-indigo-700/60 text-indigo-100 text-xs sm:text-sm font-medium leading-relaxed shadow-inner">
-          <!-- Translation text injected here -->
+          <!-- Floating Tooltip: Absolute positioning ensures ZERO layout shift! -->
+          <div id="transTooltip" class="hidden absolute left-0 top-full mt-2 z-50 w-80 sm:w-[420px] p-3.5 rounded-xl bg-slate-900/95 backdrop-blur-md border border-indigo-500/80 shadow-2xl shadow-indigo-950 text-xs sm:text-sm text-slate-100 pointer-events-none transition-all">
+            <div class="flex items-start gap-2">
+              <span class="text-amber-400 font-bold shrink-0">💡 한국어 번역:</span>
+              <span id="transTooltipText" class="text-slate-100 font-medium leading-relaxed"></span>
+            </div>
+            <div class="absolute left-6 bottom-full w-0 h-0 border-x-4 border-x-transparent border-b-4 border-b-indigo-500/80"></div>
+          </div>
         </div>
+        <span class="text-[11px] text-slate-500">※ 마우스를 올리면 번역이 뜨고 벗어나면 사라집니다</span>
       </div>
     </div>
 
@@ -544,8 +548,9 @@ const comboBadge = document.getElementById('comboBadge');
 const comboCount = document.getElementById('comboCount');
 
 const qSentence = document.getElementById('qSentence');
-const btnHoldTrans = document.getElementById('btnHoldTrans');
-const transPreview = document.getElementById('transPreview');
+const btnHoverTrans = document.getElementById('btnHoverTrans');
+const transTooltip = document.getElementById('transTooltip');
+const transTooltipText = document.getElementById('transTooltipText');
 const blockPool = document.getElementById('blockPool');
 const btnClearSlots = document.getElementById('btnClearSlots');
 const btnUnknown = document.getElementById('btnUnknown');
@@ -594,67 +599,29 @@ document.querySelectorAll('.count-btn').forEach(btn => {
   });
 });
 
-// --- TRANSLATION HINT HANDLERS (Click Toggle & Press Hold both supported) ---
-let isTransToggled = false;
-let pressStartTime = 0;
-
-function updateTransUI(show) {
+// --- HOVER TRANSLATION TOOLTIP (Zero Layout Shift) ---
+function showTooltip() {
   if (!currentQ) return;
-  const statusEl = document.getElementById('holdTransStatus');
-  if (show) {
-    transPreview.innerHTML = `
-      <div class="flex items-start gap-2">
-        <span class="text-amber-400 font-bold shrink-0">💡 한국어 번역:</span>
-        <span class="text-slate-100 font-medium leading-relaxed">${escapeHtml(currentQ.translation)}</span>
-      </div>
-    `;
-    transPreview.classList.remove('hidden');
-    btnHoldTrans.classList.add('border-indigo-400', 'bg-indigo-800', 'text-white', 'shadow-md');
-    if (statusEl) {
-      statusEl.textContent = '표시 중 (클릭 시 닫기)';
-      statusEl.className = 'text-[10px] text-emerald-300 bg-emerald-950 px-1.5 py-0.5 rounded font-bold border border-emerald-600/50';
-    }
-  } else {
-    if (isAnswered) return; // Keep visible if answer already submitted
-    transPreview.classList.add('hidden');
-    btnHoldTrans.classList.remove('border-indigo-400', 'bg-indigo-800', 'text-white', 'shadow-md');
-    if (statusEl) {
-      statusEl.textContent = '클릭 / 누르기';
-      statusEl.className = 'text-[10px] text-indigo-400 bg-indigo-900/60 px-1.5 py-0.5 rounded';
-    }
-  }
+  transTooltipText.textContent = currentQ.translation;
+  transTooltip.classList.remove('hidden');
+  btnHoverTrans.classList.add('border-indigo-400', 'bg-indigo-800', 'text-white');
+}
+function hideTooltip() {
+  transTooltip.classList.add('hidden');
+  btnHoverTrans.classList.remove('border-indigo-400', 'bg-indigo-800', 'text-white');
 }
 
-// 1. Direct Click / Tap handler: Toggles on and off cleanly!
-btnHoldTrans.addEventListener('click', (e) => {
+// Mouse hover: show on enter, hide on leave
+btnHoverTrans.addEventListener('mouseenter', showTooltip);
+btnHoverTrans.addEventListener('mouseleave', hideTooltip);
+
+// Touch / click toggle support
+btnHoverTrans.addEventListener('click', (e) => {
   e.preventDefault();
-  const elapsed = Date.now() - pressStartTime;
-  // If user held for more than 400ms, it was a hold gesture, so click doesn't toggle
-  if (elapsed >= 400) return;
-  isTransToggled = !isTransToggled;
-  updateTransUI(isTransToggled);
-});
-
-// 2. Press & Hold gesture
-btnHoldTrans.addEventListener('pointerdown', (e) => {
-  pressStartTime = Date.now();
-  updateTransUI(true);
-});
-
-btnHoldTrans.addEventListener('pointerup', () => {
-  const elapsed = Date.now() - pressStartTime;
-  if (elapsed >= 400) {
-    // Was a long hold: hide on release (peek gesture)
-    isTransToggled = false;
-    updateTransUI(false);
-  }
-});
-
-btnHoldTrans.addEventListener('pointerleave', () => {
-  const elapsed = Date.now() - pressStartTime;
-  if (elapsed >= 400) {
-    isTransToggled = false;
-    updateTransUI(false);
+  if (transTooltip.classList.contains('hidden')) {
+    showTooltip();
+  } else {
+    hideTooltip();
   }
 });
 
@@ -726,8 +693,7 @@ function renderQuestion() {
   progressBar.style.width = `${progressPercent}%`;
 
   explainSheet.classList.add('hidden');
-  isTransToggled = false;
-  updateTransUI(false);
+  hideTooltip();
 
   btnCheck.disabled = false;
   btnUnknown.disabled = false;
@@ -950,8 +916,7 @@ function updateComboUI() {
 
 function showExplanation(isCorrect, isUnknown) {
   explainSheet.classList.remove('hidden');
-  transPreview.classList.remove('hidden'); // Reveal translation permanently during explanation
-  transPreview.textContent = currentQ.translation;
+  hideTooltip();
 
   if (isCorrect) {
     explainBanner.innerHTML = `
