@@ -283,18 +283,18 @@ body {
         <!-- Injected via JS -->
       </div>
 
-      <!-- Press & Hold Translation Hint Section -->
+      <!-- Translation Hint Section (Toggle & Hold supported) -->
       <div class="pt-2 border-t border-slate-700/50 flex flex-col items-start gap-2">
         <div class="flex items-center gap-3 w-full">
-          <button id="btnHoldTrans" type="button" class="hold-hint-btn px-3 py-1.5 rounded-lg bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-700/70 text-indigo-300 font-bold text-xs flex items-center gap-1.5 shadow-sm">
+          <button id="btnHoldTrans" type="button" class="hold-hint-btn px-3.5 py-1.5 rounded-lg bg-indigo-950/80 hover:bg-indigo-900 border border-indigo-700/70 text-indigo-300 font-bold text-xs flex items-center gap-2 shadow-sm transition">
             <span>👁️ 訳・意味ヒント</span>
-            <span class="text-[10px] text-indigo-400 bg-indigo-900/60 px-1 rounded">누르고 있기</span>
+            <span id="holdTransStatus" class="text-[10px] text-indigo-400 bg-indigo-900/60 px-1.5 py-0.5 rounded">클릭 / 누르기</span>
           </button>
-          <span class="text-[11px] text-slate-500 hidden sm:inline">※ 押している間だけ日本語の訳文が表示されます</span>
+          <span class="text-[11px] text-slate-400 hidden sm:inline">※ 클릭하거나 누르고 있으면 한국어 번역이 표시됩니다</span>
         </div>
 
-        <!-- Hidden Translation Container (Only visible while holding) -->
-        <div id="transPreview" class="hidden w-full p-2.5 rounded-lg bg-indigo-950/40 border border-indigo-800/50 text-indigo-200 text-xs sm:text-sm font-medium leading-relaxed">
+        <!-- Translation Container -->
+        <div id="transPreview" class="hidden w-full p-3 rounded-xl bg-indigo-950/60 border border-indigo-700/60 text-indigo-100 text-xs sm:text-sm font-medium leading-relaxed shadow-inner">
           <!-- Translation text injected here -->
         </div>
       </div>
@@ -594,29 +594,69 @@ document.querySelectorAll('.count-btn').forEach(btn => {
   });
 });
 
-// --- PRESS & HOLD TRANSLATION HANDLERS ---
-function showTrans() {
+// --- TRANSLATION HINT HANDLERS (Click Toggle & Press Hold both supported) ---
+let isTransToggled = false;
+let pressStartTime = 0;
+
+function updateTransUI(show) {
   if (!currentQ) return;
-  transPreview.textContent = currentQ.translation;
-  transPreview.classList.remove('hidden');
-  btnHoldTrans.classList.add('holding');
-}
-function hideTrans() {
-  if (isAnswered) return; // Keep visible if already answered
-  transPreview.classList.add('hidden');
-  btnHoldTrans.classList.remove('holding');
+  const statusEl = document.getElementById('holdTransStatus');
+  if (show) {
+    transPreview.innerHTML = `
+      <div class="flex items-start gap-2">
+        <span class="text-amber-400 font-bold shrink-0">💡 한국어 번역:</span>
+        <span class="text-slate-100 font-medium leading-relaxed">${escapeHtml(currentQ.translation)}</span>
+      </div>
+    `;
+    transPreview.classList.remove('hidden');
+    btnHoldTrans.classList.add('border-indigo-400', 'bg-indigo-800', 'text-white', 'shadow-md');
+    if (statusEl) {
+      statusEl.textContent = '표시 중 (클릭 시 닫기)';
+      statusEl.className = 'text-[10px] text-emerald-300 bg-emerald-950 px-1.5 py-0.5 rounded font-bold border border-emerald-600/50';
+    }
+  } else {
+    if (isAnswered) return; // Keep visible if answer already submitted
+    transPreview.classList.add('hidden');
+    btnHoldTrans.classList.remove('border-indigo-400', 'bg-indigo-800', 'text-white', 'shadow-md');
+    if (statusEl) {
+      statusEl.textContent = '클릭 / 누르기';
+      statusEl.className = 'text-[10px] text-indigo-400 bg-indigo-900/60 px-1.5 py-0.5 rounded';
+    }
+  }
 }
 
-btnHoldTrans.addEventListener('mousedown', showTrans);
-btnHoldTrans.addEventListener('mouseup', hideTrans);
-btnHoldTrans.addEventListener('mouseleave', hideTrans);
-
-btnHoldTrans.addEventListener('touchstart', (e) => {
+// 1. Direct Click / Tap handler: Toggles on and off cleanly!
+btnHoldTrans.addEventListener('click', (e) => {
   e.preventDefault();
-  showTrans();
+  const elapsed = Date.now() - pressStartTime;
+  // If user held for more than 400ms, it was a hold gesture, so click doesn't toggle
+  if (elapsed >= 400) return;
+  isTransToggled = !isTransToggled;
+  updateTransUI(isTransToggled);
 });
-btnHoldTrans.addEventListener('touchend', hideTrans);
-btnHoldTrans.addEventListener('touchcancel', hideTrans);
+
+// 2. Press & Hold gesture
+btnHoldTrans.addEventListener('pointerdown', (e) => {
+  pressStartTime = Date.now();
+  updateTransUI(true);
+});
+
+btnHoldTrans.addEventListener('pointerup', () => {
+  const elapsed = Date.now() - pressStartTime;
+  if (elapsed >= 400) {
+    // Was a long hold: hide on release (peek gesture)
+    isTransToggled = false;
+    updateTransUI(false);
+  }
+});
+
+btnHoldTrans.addEventListener('pointerleave', () => {
+  const elapsed = Date.now() - pressStartTime;
+  if (elapsed >= 400) {
+    isTransToggled = false;
+    updateTransUI(false);
+  }
+});
 
 // --- START GAME ---
 btnStart.addEventListener('click', () => {
@@ -686,8 +726,8 @@ function renderQuestion() {
   progressBar.style.width = `${progressPercent}%`;
 
   explainSheet.classList.add('hidden');
-  transPreview.classList.add('hidden');
-  btnHoldTrans.classList.remove('holding');
+  isTransToggled = false;
+  updateTransUI(false);
 
   btnCheck.disabled = false;
   btnUnknown.disabled = false;
