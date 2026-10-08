@@ -140,8 +140,11 @@ body {
         <div id="comboBadge" class="hidden px-2.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 font-black text-xs combo-pop">
           🔥 <span id="comboCount">0</span> COMBO!
         </div>
-        <div class="font-mono text-base font-bold text-slate-300 flex items-center gap-1">
+        <div class="font-mono text-base font-bold text-slate-300 flex items-center gap-1.5">
           ⏱️ <span id="hudTimer">00:00</span>
+          <button id="btnCopyHudTime" title="현재까지의 학습 시간 복사" class="text-[11px] font-sans px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/40 hover:bg-sky-500/30 transition">
+            📋 복사
+          </button>
         </div>
       </div>
     </div>
@@ -292,6 +295,9 @@ body {
 
     <!-- Action Buttons -->
     <div class="flex flex-col sm:flex-row gap-3 pt-2">
+      <button id="btnCopyTime" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-400 font-bold text-slate-950 rounded-xl transition text-sm flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-500/20">
+        📋 학습 시간 복사하기
+      </button>
       <button id="btnRetryWrong" class="hidden flex-1 py-3 bg-amber-500 hover:bg-amber-400 font-bold text-slate-950 rounded-xl transition text-sm">
         🔁 오답 문형만 다시 풀기
       </button>
@@ -542,6 +548,9 @@ function initLobbyUI() {
     state.targetCount = state.questions.length;
     startSessionWithQuestions();
   };
+
+  $('btnCopyTime').onclick = () => copyStudyTime(false);
+  $('btnCopyHudTime').onclick = () => copyStudyTime(true);
 }
 
 function startGame() {
@@ -724,45 +733,55 @@ function advanceNext() {
   }
 }
 
-function recordDailyGameTime(gameType, seconds) {
-  if (!seconds || seconds <= 0) return;
-  try {
-    const today = new Intl.DateTimeFormat('sv-SE', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    }).format(new Date());
+/* ========================================================
+   STUDY TIME COPY FEATURE (MANUAL TRACKING)
+   ======================================================== */
+function copyStudyTime(isHud) {
+  const today = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).format(new Date());
+  const sec = state.elapsedSec || 0;
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
+  const courseNames = {
+    c1: '강의 001~050 핵심 문형',
+    c2: '강의 051~100 핵심 문형',
+    c3: '강의 101~150 완결 문형',
+    all: 'N2 전범위 150제 종합'
+  };
+  const course = courseNames[state.course] || state.course;
+  const attempts = state.score + state.mistakes.length;
+  const accuracy = attempts > 0 ? Math.round((state.score / attempts) * 100) : 0;
+  const text = `[${today} N2 文法 SPEED RUN] 학습 시간: ${timeStr} (코스: ${course}, 정답: ${state.score}/${attempts}, 정답률: ${accuracy}%)`;
 
-    const storageKey = 'jlpt_game_daily_activity';
-    const raw = localStorage.getItem(storageKey);
-    const data = raw ? JSON.parse(raw) : {};
-
-    if (!data[today]) {
-      data[today] = {
-        typingSec: 0,
-        verbSec: 0,
-        grammarSec: 0,
-        totalSec: 0,
-        sessions: 0
-      };
+  const doCopy = () => {
+    if (isHud) {
+      const el = $('btnCopyHudTime');
+      if (el) {
+        const orig = el.textContent;
+        el.textContent = '✓ 복사됨!';
+        setTimeout(() => el.textContent = orig, 1800);
+      }
+    } else {
+      const el = $('btnCopyTime');
+      if (el) {
+        const orig = el.innerHTML;
+        el.innerHTML = '✓ 학습시간 복사완료!';
+        setTimeout(() => el.innerHTML = orig, 2000);
+      }
     }
+  };
 
-    if (gameType === 'typing') {
-      data[today].typingSec = (data[today].typingSec || 0) + seconds;
-    } else if (gameType === 'verb') {
-      data[today].verbSec = (data[today].verbSec || 0) + seconds;
-    } else if (gameType === 'grammar') {
-      data[today].grammarSec = (data[today].grammarSec || 0) + seconds;
-    }
-
-    data[today].totalSec = (data[today].typingSec || 0) + (data[today].verbSec || 0) + (data[today].grammarSec || 0);
-    data[today].sessions = (data[today].sessions || 0) + 1;
-    data[today].lastUpdated = new Date().toISOString();
-
-    localStorage.setItem(storageKey, JSON.stringify(data));
-  } catch (err) {
-    console.error('Failed to record daily game time:', err);
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(doCopy).catch(() => {
+      prompt('클립보드 복사:', text);
+    });
+  } else {
+    prompt('클립보드 복사:', text);
   }
 }
 
@@ -770,7 +789,6 @@ function finishGame() {
   clearInterval(state.timerInterval);
   clearTimeout(state.advanceTimer);
   state.canFastForward = false;
-  recordDailyGameTime('grammar', state.elapsedSec);
 
   $('screenPlay').classList.add('hidden');
   $('screenResult').classList.remove('hidden');

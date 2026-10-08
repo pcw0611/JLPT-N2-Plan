@@ -39,6 +39,7 @@ export default function MygoTypingPage() {
   const [correctKeystrokes, setCorrectKeystrokes] = useState(0);
   const [isShaking, setIsShaking] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [copiedNotice, setCopiedNotice] = useState(false);
 
   // Snappy Line Entrance Animation State (0ms delay)
   const [isLineEntering, setIsLineEntering] = useState(false);
@@ -93,54 +94,9 @@ export default function MygoTypingPage() {
     });
   }, []);
 
-// Record daily game play time to unified calendar storage
-function recordDailyGameTime(gameType: 'typing' | 'verb' | 'grammar', seconds: number) {
-  if (!seconds || seconds <= 0) return;
-  try {
-    const today = new Intl.DateTimeFormat('sv-SE', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    }).format(new Date());
-
-    const storageKey = 'jlpt_game_daily_activity';
-    const raw = localStorage.getItem(storageKey);
-    const data = raw ? JSON.parse(raw) : {};
-
-    if (!data[today]) {
-      data[today] = {
-        typingSec: 0,
-        verbSec: 0,
-        grammarSec: 0,
-        totalSec: 0,
-        sessions: 0
-      };
-    }
-
-    if (gameType === 'typing') {
-      data[today].typingSec = (data[today].typingSec || 0) + seconds;
-    } else if (gameType === 'verb') {
-      data[today].verbSec = (data[today].verbSec || 0) + seconds;
-    } else if (gameType === 'grammar') {
-      data[today].grammarSec = (data[today].grammarSec || 0) + seconds;
-    }
-
-    data[today].totalSec = (data[today].typingSec || 0) + (data[today].verbSec || 0) + (data[today].grammarSec || 0);
-    data[today].sessions = (data[today].sessions || 0) + 1;
-    data[today].lastUpdated = new Date().toISOString();
-
-    localStorage.setItem(storageKey, JSON.stringify(data));
-  } catch (err) {
-    console.error('Failed to record daily game time:', err);
-  }
-}
-
   // Save stats to localStorage
   const saveStats = useCallback((songId: string, partId: string, finalCpm: number, accuracy: number, timeSec: number, keys: number, correctKeys: number) => {
     const recordKey = `${songId}_${partId}`;
-    // Also record to unified daily game activity for calendar integration!
-    recordDailyGameTime('typing', timeSec);
     setUserStats(prev => {
       const prevRecord = prev.records[recordKey] || { bestCpm: 0, bestAccuracy: 0, playCount: 0 };
       const updatedRecords = {
@@ -487,6 +443,24 @@ function recordDailyGameTime(gameType: 'typing' | 'verb' | 'grammar', seconds: n
     return careerAvgCpm > 0 ? careerAvgCpm : currentCpm;
   }, [isPlaying, elapsedSeconds, correctKeystrokes, careerAvgCpm, currentCpm]);
 
+  // Copy Study Time to Clipboard (Manual Tracking for User)
+  const copyStudyTime = useCallback(() => {
+    const today = new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'Asia/Seoul',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(new Date());
+    const m = Math.floor(elapsedSeconds / 60);
+    const s = elapsedSeconds % 60;
+    const timeStr = m > 0 ? `${m}분 ${s > 0 ? `${s}초` : ''}` : `${s}초`;
+    const text = `[${today} MyGO!!!!! 歌詞タイピング] 학습 시간: ${timeStr} (곡: ${song.title} ${activePart.name}, CPM: ${currentCpm}, 정확도: ${accuracy}%)`;
+    navigator.clipboard?.writeText(text).then(() => {
+      setCopiedNotice(true);
+      setTimeout(() => setCopiedNotice(false), 2000);
+    });
+  }, [elapsedSeconds, song.title, activePart.name, currentCpm, accuracy]);
+
   // Precise Per-Character Glow Sync Mapping
   const jaCharRanges = useMemo(() => {
     if (!currentLine) return [];
@@ -623,9 +597,28 @@ function recordDailyGameTime(gameType: 'typing' | 'verb' | 'grammar', seconds: n
             <div className="hud-card prog-card">
               <div className="hud-title-with-time">
                 <span className="hud-label">進行 ({activePart.name})</span>
-                <span className="hud-time-badge">
-                  ⏱️ {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span className="hud-time-badge">
+                    ⏱️ {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={copyStudyTime}
+                    title="현재까지의 학습 시간 복사"
+                    style={{
+                      background: 'rgba(56, 189, 248, 0.15)',
+                      border: '1px solid rgba(56, 189, 248, 0.35)',
+                      color: '#38bdf8',
+                      borderRadius: '6px',
+                      padding: '2px 8px',
+                      fontSize: '11px',
+                      cursor: 'pointer',
+                      fontWeight: 600,
+                    }}
+                  >
+                    {copiedNotice ? '✓ 복사됨!' : '📋 시간복사'}
+                  </button>
+                </div>
               </div>
               <div className="hud-value-row">
                 <span className="hud-number">{progressPct}%</span>
@@ -891,6 +884,24 @@ function recordDailyGameTime(gameType: 'typing' | 'verb' | 'grammar', seconds: n
                 onClick={() => resetGame(song.id, selectedPartIndex)}
               >
                 もう一度挑戦
+              </button>
+              <button
+                type="button"
+                onClick={copyStudyTime}
+                style={{
+                  background: 'rgba(16, 185, 129, 0.25)',
+                  border: '1px solid rgba(16, 185, 129, 0.5)',
+                  color: '#34d399',
+                  fontWeight: 700,
+                  padding: '10px 16px',
+                  borderRadius: '10px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px'
+                }}
+              >
+                {copiedNotice ? '✓ 학습시간 복사완료!' : '📋 학습시간 복사'}
               </button>
               {selectedPartIndex + 1 < song.parts.length ? (
                 <button

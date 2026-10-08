@@ -90,25 +90,6 @@ export default function Home() {
   const [daysLeft, setDaysLeft] = useState(examDaysLeft);
   const [mockDays, setMockDays] = useState(nextMockDaysLeft);
 
-  // Daily Game Activity Tracking (Typing, Verb Speedrun, Grammar Speedrun)
-  const [dailyGameActivity, setDailyGameActivity] = useState<Record<string, { typingSec?: number; verbSec?: number; grammarSec?: number; totalSec: number; sessions?: number }>>({});
-  const [copiedGameNotice, setCopiedGameNotice] = useState<boolean>(false);
-
-  useEffect(() => {
-    const updateGameActivity = () => {
-      try {
-        const raw = localStorage.getItem('jlpt_game_daily_activity');
-        if (raw) setDailyGameActivity(JSON.parse(raw));
-      } catch {}
-    };
-    updateGameActivity();
-    window.addEventListener('storage', updateGameActivity);
-    window.addEventListener('focus', updateGameActivity);
-    return () => {
-      window.removeEventListener('storage', updateGameActivity);
-      window.removeEventListener('focus', updateGameActivity);
-    };
-  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -170,6 +151,9 @@ export default function Home() {
           </a>
           <a className="game-button speedrun-nav-btn" href="/exams/verb-speedrun-100.html" aria-label="動詞活用 SPEED RUN 100 練習を開く">
             <span aria-hidden="true">⚡</span> 動詞活用 SPEED RUN <span aria-hidden="true">→</span>
+          </a>
+          <a className="game-button adj-speedrun-nav-btn" href="/exams/adj-speedrun-100.html" aria-label="形容詞活用 SPEED RUN 100 練習を開く">
+            <span aria-hidden="true">🌟</span> 形容詞活用 SPEED RUN <span aria-hidden="true">→</span>
           </a>
           <a className="game-button grammar-nav-btn" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈를 열기">
             <span aria-hidden="true">🎯</span> N2 文法 SPEED RUN <span aria-hidden="true">→</span>
@@ -443,105 +427,19 @@ export default function Home() {
             </div>
           )}
 
-          {(() => {
-            const selectedGame = dailyGameActivity[selectedDate];
-            const hasGameTime = selectedGame && selectedGame.totalSec > 0;
-            const formatGameTime = (sec: number) => {
-              const m = Math.floor(sec / 60);
-              const s = sec % 60;
-              return m > 0 ? `${m}분 ${s > 0 ? `${s}초` : ''}` : `${s}초`;
-            };
-
-            const copyGameSummary = () => {
-              if (!selectedGame) return;
-              const text = `[${selectedDate} 게임·루틴 훈련 실측]\n- 총 훈련시간: ${formatGameTime(selectedGame.totalSec)}\n- MyGO!!!!! 歌詞タイピング: ${formatGameTime(selectedGame.typingSec || 0)}\n- N2 文法 SPEED RUN: ${formatGameTime(selectedGame.grammarSec || 0)}\n- 動詞活用 SPEED RUN 100: ${formatGameTime(selectedGame.verbSec || 0)}`;
-              navigator.clipboard?.writeText(text).then(() => {
-                setCopiedGameNotice(true);
-                setTimeout(() => setCopiedGameNotice(false), 2000);
-              });
-            };
-
-            return (
-              <>
-                {selected ? (
-                  <>
-                    <div className="metric-grid">
-                      <div>
-                        <span>記録済み学習時間</span>
-                        <strong>
-                          {formatStudy(selected.studyMinutes)}
-                          {hasGameTime && (
-                            <span style={{ fontSize: '13px', color: '#38bdf8', fontWeight: 700, marginLeft: '6px' }}>
-                              (+{Math.round(selectedGame.totalSec / 60)}分🎮)
-                            </span>
-                          )}
-                        </strong>
-                        <small>未計測の活動あり</small>
-                      </div>
-                      <div><span>当日のテスト合計</span><strong>{selected.tests.correct} / {selected.tests.total}</strong><small>{selected.tests.count}回・{selected.tests.total ? `正答率${Math.round(selected.tests.correct/selected.tests.total*100)}%` : '未実施'}</small></div>
-                      <div><span>テスト所要時間</span><strong>{formatClock(selected.tests.elapsedSeconds)}</strong><small>{selected.tests.untimedTests ? `未計測 ${selected.tests.untimedTests}回を除く` : '記録済みテストの合計'}</small></div>
-                      <div><span>誤答 / 不明 / 未回答</span><strong>{selected.tests.wrong} / {selected.tests.unknown} / {selected.tests.unanswered ?? '—'}</strong><small>それぞれ別に集計</small></div>
-                    </div>
-                    <div className="pass-box">{(() => {
-                      const p = selected.probabilities?.N2;
-                      return <div><span>N2合格可能性・参考</span><strong>{p ? `${p.low}–${p.high}%` : '未評価'}</strong><small>{p ? `12月予測 ${p.projected}%` : 'この日の評価なし'}</small></div>;
-                    })()}</div>
-                    <div className="mini-bars"><h4>分野別の参考評価・当日正答率ではありません</h4>{orderedDomains(selected.domains ?? []).map(domain => <div key={domain.key} className="bar-row"><span>{domain.label}</span><div><i style={{width: domain.low !== null && domain.high !== null ? `${(domain.low+domain.high)/2}%` : '0%'}} /></div><strong>{domain.grade ?? '—'}</strong></div>)}</div>
-                  </>
-                ) : (
-                  <div className="empty-state" role="status">
-                    <span>○</span>
-                    <strong>{loading ? '記録を読み込み中' : loadError ? '読み込みエラー' : 'まだDB記録がありません'}</strong>
-                    <p>{loading ? '最新の学習記録を確認しています。' : hasGameTime ? '당일 게임 훈련이 실시간 측정되어 있습니다 (아래 참조).' : '記録が追加されると、この日に表示されます。'}</p>
-                  </div>
-                )}
-
-                {/* Unified Real-time Game Training Activity Box */}
-                {hasGameTime && (
-                  <div className="game-activity-card">
-                    <div className="game-activity-header">
-                      <div className="game-activity-title">
-                        <span>⚡</span>
-                        <span>당일 게임·루틴 훈련 실측</span>
-                      </div>
-                      <span className="game-activity-badge">
-                        총 {formatGameTime(selectedGame.totalSec)}
-                      </span>
-                    </div>
-
-                    <div className="game-activity-grid">
-                      <div className="game-stat-pill">
-                        <span className="game-stat-label">⌨️ MyGO 타이핑</span>
-                        <span className="game-stat-value">{formatGameTime(selectedGame.typingSec || 0)}</span>
-                      </div>
-                      <div className="game-stat-pill">
-                        <span className="game-stat-label">🎯 N2 문법 저격</span>
-                        <span className="game-stat-value">{formatGameTime(selectedGame.grammarSec || 0)}</span>
-                      </div>
-                      <div className="game-stat-pill">
-                        <span className="game-stat-label">⚡ 동사 SPEED RUN</span>
-                        <span className="game-stat-value">{formatGameTime(selectedGame.verbSec || 0)}</span>
-                      </div>
-                    </div>
-
-                    <div className="game-activity-footer">
-                      <span>
-                        {selected ? `합산 총 활동시간: ${formatStudy(selected.studyMinutes + Math.floor(selectedGame.totalSec / 60))}` : '브라우저 실시간 자동 집계 중'}
-                      </span>
-                      <button
-                        type="button"
-                        className="game-copy-btn"
-                        onClick={copyGameSummary}
-                        title="오늘 게임 학습시간 텍스트를 클립보드에 복사합니다"
-                      >
-                        {copiedGameNotice ? '✓ 복사완료!' : '📋 게임시간 복사'}
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </>
-            );
-          })()}
+          {selected ? <>
+            <div className="metric-grid">
+              <div><span>記録済み学習時間</span><strong>{formatStudy(selected.studyMinutes)}</strong><small>未計測の活動あり</small></div>
+              <div><span>当日のテスト合計</span><strong>{selected.tests.correct} / {selected.tests.total}</strong><small>{selected.tests.count}回・{selected.tests.total ? `正答率${Math.round(selected.tests.correct/selected.tests.total*100)}%` : '未実施'}</small></div>
+              <div><span>テスト所要時間</span><strong>{formatClock(selected.tests.elapsedSeconds)}</strong><small>{selected.tests.untimedTests ? `未計測 ${selected.tests.untimedTests}回を除く` : '記録済みテストの合計'}</small></div>
+              <div><span>誤答 / 不明 / 未回答</span><strong>{selected.tests.wrong} / {selected.tests.unknown} / {selected.tests.unanswered ?? '—'}</strong><small>それぞれ別に集計</small></div>
+            </div>
+            <div className="pass-box">{(() => {
+              const p = selected.probabilities?.N2;
+              return <div><span>N2合格可能性・参考</span><strong>{p ? `${p.low}–${p.high}%` : '未評価'}</strong><small>{p ? `12月予測 ${p.projected}%` : 'この日の評価なし'}</small></div>;
+            })()}</div>
+            <div className="mini-bars"><h4>分野別の参考評価・当日正答率ではありません</h4>{orderedDomains(selected.domains ?? []).map(domain => <div key={domain.key} className="bar-row"><span>{domain.label}</span><div><i style={{width: domain.low !== null && domain.high !== null ? `${(domain.low+domain.high)/2}%` : '0%'}} /></div><strong>{domain.grade ?? '—'}</strong></div>)}</div>
+          </> : <div className="empty-state" role="status"><span>○</span><strong>{loading ? '記録を読み込み中' : loadError ? '読み込みエラー' : 'まだ記録がありません'}</strong><p>{loading ? '最新の学習記録を確認しています。' : '記録が追加されると、この日に表示されます。'}</p></div>}
         </aside>
       </div>
 

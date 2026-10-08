@@ -1,12 +1,14 @@
 import re
 import sys
 
-sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
 
 with open('jlpt-calendar-site/app/typing/songs.ts', 'r', encoding='utf-8') as f:
-    content = f.read()
+    text = f.read()
 
-matches = re.findall(r'"id":\s*"([^"]+)",\s*"title":\s*"([^"]+)"', content)
+# Match song objects
+matches = re.findall(r'\"id\":\s*\"([^\"]+)\",\s*\"title\":\s*\"([^\"]+)\",\s*\"reading\":\s*\"([^\"]+)\",\s*\"category\":\s*\"([^\"]+)\"', text)
 print(f"Total songs: {len(matches)}")
-for m in matches:
-    print(f"- {m[0]}: {m[1]}")
+for i, (sid, title, reading, cat) in enumerate(matches):
+    print(f"{i+1:2d}. [{cat:8s}] {sid:18s} : {title} ({reading})")

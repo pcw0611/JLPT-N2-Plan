@@ -1,0 +1,1348 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>形容詞活用 SPEED RUN 100 — JLPT N2・N3 形容詞活用特訓</title>
+<script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+<style>
+:root {
+  --bg: #0f172a;
+  --surface: #1e293b;
+  --surface-alt: #334155;
+  --border: #475569;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #f59e0b;
+  --accent-glow: rgba(245, 158, 11, 0.25);
+  --green: #4ade80;
+  --red: #f87171;
+  --amber: #fbbf24;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", sans-serif;
+  user-select: none;
+}
+.glow-box {
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+.combo-pop {
+  animation: pop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.flash-correct {
+  animation: flashGreen 0.3s ease-out;
+}
+@keyframes flashGreen {
+  0% { background-color: rgba(74, 222, 128, 0.3); }
+  100% { background-color: transparent; }
+}
+.shake-wrong {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-8px); }
+  40%, 80% { transform: translateX(8px); }
+}
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
+
+<!-- Main Game Wrapper -->
+<div id="app" class="w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-6 sm:p-8 relative overflow-hidden">
+  
+  <!-- Sound / Fullscreen Top Bar -->
+  <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800 text-xs text-slate-400">
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
+      <span class="font-bold tracking-wider text-slate-300">JLPT N2・N3 形容詞活用 SPEED RUN</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="btnSound" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300">
+        <span id="soundIcon">🔊</span> <span id="soundLabel">Sound ON</span>
+      </button>
+      <button id="btnHelp" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition text-slate-300">
+        ❓ 活用公式
+      </button>
+    </div>
+  </div>
+
+  <!-- SCREEN 1: LOBBY / SETUP -->
+  <div id="screenLobby" class="space-y-6">
+    <div class="text-center space-y-2 py-4">
+      <h1 class="text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-rose-300 to-indigo-400">
+        形容詞活用 SPEED RUN 100
+      </h1>
+      <p class="text-slate-400 text-sm sm:text-base">
+        머뭇거림 없는 <strong class="text-amber-300">0.5초 반사 신경</strong> 완성! い형용사 · な형용사 · N2 특수 함정 8대 활용 스피드런
+      </p>
+    </div>
+
+    <!-- Course Selection -->
+    <div class="space-y-2">
+      <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase">1. 코스 선택</label>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="courseList">
+        <button data-course="trap" class="course-btn p-3.5 rounded-xl border border-amber-500 bg-amber-950/40 text-left hover:border-amber-400 transition relative">
+          <div class="text-xs font-bold text-amber-400">★ N2 필수 함정 코스 (강력 추천)</div>
+          <div class="font-bold text-white text-base mt-0.5">이/나형용사 판별 &amp; 불규칙 예외</div>
+          <div class="text-xs text-slate-400 mt-1">いい/よい 불규칙, きれい/得意 등 い종결 な형용사, 〜そう 양태 판별</div>
+          <div class="absolute top-3 right-3 text-amber-400 text-sm font-bold">🎯</div>
+        </button>
+
+        <button data-course="i_adj" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-sky-400">い형용사 8대 활용 코스</div>
+          <div class="font-bold text-white text-base mt-0.5">くない · かった · く · くて · ければ</div>
+          <div class="text-xs text-slate-400 mt-1">부정/과거/부사/연결/가정/명사화(~さ)/양태(~そう)</div>
+        </button>
+
+        <button data-course="na_adj" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-emerald-400">な형용사 8대 활용 코스</div>
+          <div class="font-bold text-white text-base mt-0.5">な · に · で · ではない · だった</div>
+          <div class="text-xs text-slate-400 mt-1">명사수식/부사화/연결/부정/과거/가정(~なら)/양태</div>
+        </button>
+
+        <button data-course="all" class="course-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition">
+          <div class="text-xs font-bold text-rose-400">종합 그랑프리 100제 🔥</div>
+          <div class="font-bold text-white text-base mt-0.5">전체 형용사 무작위 셔플</div>
+          <div class="text-xs text-slate-400 mt-1">실전 감각 완벽 점검 (い형용사 + な형용사 + 특수변형 총망라)</div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mode & Question Count -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase mb-2">2. 입력 모드</label>
+        <div class="grid grid-cols-2 gap-2" id="modeList">
+          <button data-mode="typing" class="mode-btn p-2.5 rounded-lg border border-amber-500 bg-amber-950/40 text-center font-bold text-sm text-amber-200">
+            ⌨️ 로마자 타이핑<br><span class="text-[11px] font-normal text-slate-400">영타 치면 자동 히라가나</span>
+          </button>
+          <button data-mode="choice" class="mode-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            ⚡ 4지선다 퀵샷<br><span class="text-[11px] font-normal text-slate-400">숫자 1~4 키로 3분 컷</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase mb-2">3. 문제 수</label>
+        <div class="grid grid-cols-3 gap-2" id="countList">
+          <button data-count="30" class="count-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            30제<br><span class="text-[11px] font-normal text-slate-400">가볍게 2분</span>
+          </button>
+          <button data-count="50" class="count-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            50제<br><span class="text-[11px] font-normal text-slate-400">표준 세션</span>
+          </button>
+          <button data-count="100" class="count-btn p-2.5 rounded-lg border border-amber-500 bg-amber-950/40 text-center font-bold text-sm text-amber-200">
+            100제 🔥<br><span class="text-[11px] font-normal text-slate-400">일일 완주 루틴</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start Button -->
+    <button id="btnStart" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 via-rose-500 to-indigo-600 hover:from-amber-400 hover:to-indigo-500 font-black text-lg text-white shadow-lg shadow-amber-500/20 active:scale-[0.99] transition">
+      스피드런 시작하기 (Space / Enter)
+    </button>
+  </div>
+
+  <!-- SCREEN 2: ACTIVE GAME PLAY -->
+  <div id="screenPlay" class="hidden space-y-6">
+    <!-- Top HUD: Progress, Timer, Combo -->
+    <div class="flex items-center justify-between text-sm">
+      <div class="flex items-center gap-2">
+        <span class="text-xs uppercase tracking-wider text-slate-400 font-bold">Question</span>
+        <span id="hudQIndex" class="font-extrabold text-amber-400 text-lg">1</span>
+        <span class="text-slate-500">/</span>
+        <span id="hudQTotal" class="text-slate-400 font-semibold">100</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!-- Combo Pill -->
+        <div id="comboBadge" class="hidden px-2.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 font-black text-xs combo-pop">
+          🔥 <span id="comboCount">0</span> COMBO!
+        </div>
+
+        <!-- Timer -->
+        <div class="font-mono text-base font-bold text-slate-300 flex items-center gap-1.5">
+          ⏱️ <span id="hudTimer">00:00</span>
+          <button id="btnCopyHudTime" title="현재까지의 학습 시간 복사" class="text-[11px] font-sans px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/40 hover:bg-sky-500/30 transition">
+            📋 복사
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+      <div id="hudProgress" class="h-full bg-gradient-to-r from-amber-400 via-rose-400 to-emerald-400 transition-all duration-200" style="width: 1%"></div>
+    </div>
+
+    <!-- Center Card: Prompt Target -->
+    <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 text-center space-y-3 relative">
+      <div class="flex items-center justify-center gap-2">
+        <span id="qGroupBadge" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-amber-500/20 text-amber-300 border border-amber-500/30">
+          い형용사
+        </span>
+        <span id="qMeaning" class="text-xs text-slate-400">
+          높다 / 비싸다
+        </span>
+      </div>
+
+      <!-- Target Adjective in Kanji + Reading -->
+      <div class="py-2">
+        <div id="qAdj" class="text-4xl sm:text-5xl font-black text-white tracking-wide">
+          高い
+        </div>
+        <div id="qKana" class="text-sm font-semibold text-amber-300 mt-1">
+          たかい
+        </div>
+      </div>
+
+      <!-- Target Conjugation Type (The Mission) -->
+      <div class="pt-2 border-t border-slate-700/60">
+        <div class="text-xs font-bold text-slate-400 uppercase tracking-widest">변형 미션</div>
+        <div id="qTargetForm" class="text-xl sm:text-2xl font-black text-sky-300 mt-0.5">
+          부정형 (~くない)
+        </div>
+      </div>
+    </div>
+
+    <!-- INPUT AREA: TYPING MODE -->
+    <div id="areaTyping" class="space-y-3">
+      <div class="relative">
+        <input type="text" id="typeInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+          placeholder="로마자(takakunai) 또는 히라가나 입력..."
+          class="w-full py-4 px-5 bg-slate-950 border-2 border-slate-700 focus:border-amber-400 rounded-xl text-xl sm:text-2xl font-bold text-center text-white outline-none transition placeholder:text-slate-600 placeholder:text-base">
+        <div id="kanaPreview" class="absolute right-4 top-1/2 -translate-y-1/2 text-xs font-mono px-2 py-1 bg-slate-800 text-amber-400 rounded border border-slate-700 hidden">
+          Kana
+        </div>
+      </div>
+      <div class="flex items-center justify-between text-xs text-slate-400 px-1">
+        <span>엔터(Enter): <strong>제출</strong> / 영타 입력 시 <strong>히라가나 자동 변환</strong></span>
+        <button id="btnSkipTyping" class="text-amber-400 hover:text-amber-300 underline font-semibold">모름 / 패스 (Tab / Esc)</button>
+      </div>
+    </div>
+
+    <!-- INPUT AREA: 4-CHOICE MODE -->
+    <div id="areaChoice" class="hidden space-y-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5" id="choiceContainer">
+        <!-- 4 choice buttons injected here -->
+      </div>
+      <div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1">
+        <span>키보드 <strong>1, 2, 3, 4</strong> 키로 초고속 선택 가능</span>
+        <button id="btnSkipChoice" class="text-amber-400 hover:text-amber-300 underline font-semibold">모름 / 패스 (Space / Esc)</button>
+      </div>
+    </div>
+
+    <!-- QUICK FEEDBACK OVERLAY / MODAL (On Wrong Answer) -->
+    <div id="feedbackModal" class="hidden p-4 rounded-xl bg-red-950/80 border border-red-500/60 space-y-2.5 animate-fadeIn">
+      <div class="flex items-center justify-between">
+        <div class="font-bold text-red-300 text-sm flex items-center gap-1.5">
+          <span>❌ 오답 / 확인 필요</span>
+        </div>
+        <div class="text-xs text-slate-400">잠시 후 재출제 큐에 추가됨</div>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900/90 p-3 rounded-lg border border-slate-800 gap-2">
+        <div>
+          <span class="text-xs text-slate-400">정답: </span>
+          <span id="fbCorrectKanji" class="text-lg font-black text-white">高くない</span>
+          <span id="fbCorrectKana" class="text-sm font-bold text-emerald-400 ml-1.5">(たかくない)</span>
+        </div>
+        <div id="fbRuleSummary" class="text-xs text-slate-300">
+          い형용사 부정형: 어미 い 탈락 + くない
+        </div>
+      </div>
+      <button id="btnNextAfterMistake" class="w-full py-2 bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-200 rounded-lg transition">
+        확인하고 다음 문제로 (Space / Enter)
+      </button>
+    </div>
+
+  </div>
+
+  <!-- SCREEN 3: RESULT REPORT -->
+  <div id="screenResult" class="hidden space-y-6">
+    <div class="text-center space-y-1 py-2">
+      <div class="text-xs font-bold text-amber-400 tracking-widest uppercase">FINISH! 스피드런 완료</div>
+      <h2 class="text-3xl sm:text-4xl font-black text-white" id="resTitle">
+        대단합니다!
+      </h2>
+      <p class="text-slate-400 text-sm" id="resSub">
+        형용사 활용 완주로 독해·문법 반사 신경이 한층 더 날카로워졌습니다.
+      </p>
+    </div>
+
+    <!-- Score Big Card -->
+    <div class="grid grid-cols-3 gap-3 p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-center">
+      <div>
+        <div class="text-xs text-slate-400">정답률</div>
+        <div class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1" id="resAccuracy">94%</div>
+        <div class="text-[11px] text-slate-500" id="resScoreFraction">94 / 100</div>
+      </div>
+      <div>
+        <div class="text-xs text-slate-400">총 소요 시간</div>
+        <div class="text-2xl sm:text-3xl font-black text-amber-400 mt-1" id="resTotalTime">04:12</div>
+        <div class="text-[11px] text-slate-500" id="resPace">문제당 2.5초</div>
+      </div>
+      <div>
+        <div class="text-xs text-slate-400">최대 콤보</div>
+        <div class="text-2xl sm:text-3xl font-black text-rose-400 mt-1" id="resMaxCombo">38</div>
+        <div class="text-[11px] text-slate-500">연속 무오답</div>
+      </div>
+    </div>
+
+    <!-- Weakness Radar by Conjugation Type -->
+    <div class="space-y-2">
+      <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase">변형 유형별 정확도 분석</h3>
+      <div id="resFormBreakdown" class="space-y-2 text-xs">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Review Mistake List (If any) -->
+    <div id="resMistakeContainer" class="space-y-2">
+      <h3 class="text-xs font-bold text-slate-400 tracking-wider uppercase">오늘의 오답 목록 (<span id="resMistakeCount">0</span>)</h3>
+      <div id="resMistakeList" class="max-h-48 overflow-y-auto space-y-1.5 pr-1 text-xs">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+      <button id="btnCopyTime" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-400 font-bold text-slate-950 rounded-xl transition text-sm flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-500/20">
+        📋 학습 시간 복사하기
+      </button>
+      <button id="btnRetryWrong" class="hidden flex-1 py-3 bg-amber-500 hover:bg-amber-400 font-bold text-slate-950 rounded-xl transition text-sm">
+        🔁 오답만 모아서 다시 풀기
+      </button>
+      <button id="btnPlayAgain" class="flex-1 py-3 bg-sky-500 hover:bg-sky-400 font-bold text-slate-950 rounded-xl transition text-sm">
+        🚀 새로운 세션 시작하기
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<!-- FORMULA REFERENCE MODAL -->
+<div id="modalHelp" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+  <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full max-h-[85vh] overflow-y-auto p-6 space-y-4 text-xs text-slate-300">
+    <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+      <h3 class="text-base font-bold text-white">형용사 8대 활용 공식 요약</h3>
+      <button id="btnCloseHelp" class="text-slate-400 hover:text-white text-lg">✕</button>
+    </div>
+    
+    <div class="space-y-3">
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-sky-300 text-sm block mb-1">1. い형용사 기본 8대 변형</strong>
+        <p>• 부정형: 어미 い 탈락 + <strong>くない</strong> (高い → 高くない)</p>
+        <p>• 과거형: 어미 い 탈락 + <strong>かった</strong> (高い → 高かった)</p>
+        <p>• 과거부정: 어미 い 탈락 + <strong>くなかった</strong> (高い → 高くなかった)</p>
+        <p>• 부사형 (동사 수식): 어미 い 탈락 + <strong>く</strong> (高い → 高くする)</p>
+        <p>• 연결형 (て형): 어미 い 탈락 + <strong>くて</strong> (高い → 高くて)</p>
+        <p>• 가정형 (ば형): 어미 い 탈락 + <strong>ければ</strong> (高い → 高ければ)</p>
+        <p>• 명사화: 어미 い 탈락 + <strong>さ</strong> (高い → 高さ)</p>
+        <p>• 양태추측 (~해 보인다): 어미 い 탈락 + <strong>そうだ</strong> (高い → 高そうだ)</p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700/60">
+        <strong class="text-emerald-300 text-sm block mb-1">2. な형용사 (형용동사) 기본 8대 변형</strong>
+        <p>• 명사 수식 (연체형): 어간 + <strong>な</strong> (静かだ → 静かな)</p>
+        <p>• 부사화 (동사 수식): 어간 + <strong>に</strong> (静かだ → 静かに)</p>
+        <p>• 연결형 (て형): 어간 + <strong>で</strong> (静かだ → 静かで)</p>
+        <p>• 부정형: 어간 + <strong>ではない / じゃない</strong> (静かだ → 静かではない)</p>
+        <p>• 과거형: 어간 + <strong>だった</strong> (静かだ → 静かだった)</p>
+        <p>• 과거부정: 어간 + <strong>ではなかった</strong> (静かだ → 静かではなかった)</p>
+        <p>• 가정형: 어간 + <strong>なら</strong> (静かだ → 静かなら)</p>
+        <p>• 양태추측 (~해 보인다): 어간 + <strong>そうだ</strong> (静かだ → 静かそうだ)</p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-amber-500/50">
+        <strong class="text-amber-300 text-sm block mb-1">★ N2 필수 킬러: いい / よい 불규칙 활용</strong>
+        <p>• 기본형만 <strong>いい</strong>, 모든 활용은 <strong>よい</strong> 기준!</p>
+        <p>• 부정: <strong>よくない</strong> (X いくない) / 과거: <strong>よかった</strong> (X いかった)</p>
+        <p>• 부사: <strong>よく</strong> / 연결: <strong>よくて</strong> / 가정: <strong>よければ</strong></p>
+        <p>• 양태 (~좋아보인다): <strong>よさそうだ</strong> (X いいそうだ/よいそうだ)</p>
+        <p>• 명사화: <strong>よさ</strong> (X いいさ) / 복합: <strong>かっこよくない</strong></p>
+      </div>
+
+      <div class="p-3 rounded-lg bg-slate-800/60 border border-rose-500/50">
+        <strong class="text-rose-300 text-sm block mb-1">★ N2 함정: い로 끝나지만 な형용사인 단어</strong>
+        <p>• <strong>綺麗だ (きれいだ)</strong> → 綺麗な (X きれいくない), 綺麗に, 綺麗ではない</p>
+        <p>• <strong>嫌いだ (きらいだ)</strong> → 嫌いな (X きらいくない), 嫌いで, 嫌いではない</p>
+        <p>• <strong>得意だ (とくいだ)</strong> → 得意な (X とくいくない), 得意に</p>
+        <p>• <strong>丁寧だ (ていねいだ)</strong> → 丁寧な, 丁寧に入, 丁寧ではない</p>
+        <p>• <strong>曖昧だ (あいまいだ)</strong> → 曖昧な, 曖昧に, 曖昧ではない</p>
+        <p>• <strong>有名だ (ゆうめいだ)</strong> → 有名な (X ゆうめいくない)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ========================================================
+   ROMANIZATION -> HIRAGANA CONVERTER ENGINE (WANIKANI STYLE)
+   ======================================================== */
+const ROMAJI_TABLE = {
+  'kya':'きゃ','kyu':'きゅ','kyo':'きょ',
+  'sha':'しゃ','shu':'しゅ','sho':'しょ','sya':'しゃ','syu':'しゅ','syo':'しょ',
+  'cha':'ちゃ','chu':'ちゅ','cho':'ちょ','tya':'ちゃ','tyu':'ちゅ','tyo':'ちょ',
+  'nya':'にゃ','nyu':'にゅ','nyo':'にょ',
+  'hya':'ひゃ','hyu':'ひゅ','hyo':'ひょ',
+  'mya':'みゃ','myu':'みゅ','myo':'みょ',
+  'rya':'りゃ','ryu':'りゅ','ryo':'りょ',
+  'gya':'ぎゃ','gyu':'ぎゅ','gyo':'ぎょ',
+  'ja':'じゃ','ju':'じゅ','jo':'じょ','zya':'じゃ','zyu':'じゅ','zyo':'じょ','jya':'じゃ','jyu':'じゅ','jyo':'じょ',
+  'bya':'びゃ','byu':'びゅ','byo':'びょ',
+  'pya':'ぴゃ','pyu':'ぴゅ','pyo':'ぴょ',
+  'ka':'か','ki':'き','ku':'く','ke':'け','ko':'こ',
+  'sa':'さ','shi':'し','si':'し','su':'す','se':'せ','so':'そ',
+  'ta':'た','chi':'ち','ti':'ち','tsu':'つ','tu':'つ','te':'て','to':'と',
+  'na':'な','ni':'に','nu':'ぬ','ne':'ね','no':'의','no':'の',
+  'ha':'は','hi':'ひ','fu':'ふ','hu':'ふ','he':'へ','ho':'ほ',
+  'ma':'ま','mi':'み','mu':'む','me':'め','mo':'も',
+  'ya':'や','yu':'ゆ','yo':'よ',
+  'ra':'ら','ri':'り','ru':'る','re':'れ','ro':'ろ',
+  'wa':'わ','wo':'を',
+  'ga':'が','gi':'ぎ','gu':'ぐ','ge':'げ','go':'ご',
+  'za':'ざ','ji':'じ','zi':'じ','zu':'ず','ze':'ぜ','zo':'ぞ',
+  'da':'だ','di':'ぢ','du':'づ','de':'で','do':'ど',
+  'ba':'ば','bi':'び','bu':'ぶ','be':'べ','bo':'ぼ',
+  'pa':'ぱ','pi':'ぴ','pu':'ぷ','pe':'ぺ','po':'ぽ',
+  'a':'あ','i':'い','u':'う','e':'え','o':'お',
+  'nn':'ん',"n'":'ん'
+};
+
+function romajiToHiragana(text) {
+  let str = text.toLowerCase();
+  let result = '';
+  let i = 0;
+  while (i < str.length) {
+    const code = str.charCodeAt(i);
+    if (code >= 0x3040 && code <= 0x309F) {
+      result += str[i];
+      i++;
+      continue;
+    }
+    if (i + 1 < str.length && str[i] === str[i+1] && str[i] !== 'n' && /[bcdfghjklmpqrstvwxyz]/.test(str[i])) {
+      result += 'っ';
+      i++;
+      continue;
+    }
+    let sub3 = str.slice(i, i + 3);
+    if (ROMAJI_TABLE[sub3]) {
+      result += ROMAJI_TABLE[sub3];
+      i += 3;
+      continue;
+    }
+    let sub2 = str.slice(i, i + 2);
+    if (ROMAJI_TABLE[sub2]) {
+      result += ROMAJI_TABLE[sub2];
+      i += 2;
+      continue;
+    }
+    if (str[i] === 'n') {
+      if (i + 1 === str.length) {
+        result += 'ん';
+        i++;
+        continue;
+      } else if (!/[aiueoy]/.test(str[i+1])) {
+        result += 'ん';
+        i++;
+        continue;
+      }
+    }
+    let sub1 = str.slice(i, i + 1);
+    if (ROMAJI_TABLE[sub1]) {
+      result += ROMAJI_TABLE[sub1];
+      i += 1;
+      continue;
+    }
+    result += str[i];
+    i++;
+  }
+  return result;
+}
+
+/* ========================================================
+   SYNTHESIZER SOUND ENGINE (Web Audio API)
+   ======================================================== */
+class SoundEngine {
+  constructor() {
+    this.ctx = null;
+    this.enabled = true;
+  }
+  init() {
+    if (!this.ctx && (window.AudioContext || window.webkitAudioContext)) {
+      const AudioCtx = window.AudioContext || window.webkitAudioContext;
+      this.ctx = new AudioCtx();
+    }
+  }
+  playCorrect(combo = 0) {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    const baseFreq = 523.25; // C5
+    const pitchMul = Math.min(2.0, 1 + combo * 0.05);
+    osc.frequency.setValueAtTime(baseFreq * pitchMul, now);
+    osc.frequency.exponentialRampToValueAtTime(baseFreq * 1.5 * pitchMul, now + 0.12);
+    gain.gain.setValueAtTime(0.15, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.25);
+  }
+  playWrong() {
+    if (!this.enabled) return;
+    this.init();
+    if (!this.ctx) return;
+    const now = this.ctx.currentTime;
+    const osc = this.ctx.createOscillator();
+    const gain = this.ctx.createGain();
+    osc.type = 'sawtooth';
+    osc.frequency.setValueAtTime(140, now);
+    osc.frequency.linearRampToValueAtTime(90, now + 0.25);
+    gain.gain.setValueAtTime(0.2, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+    osc.connect(gain);
+    gain.connect(this.ctx.destination);
+    osc.start(now);
+    osc.stop(now + 0.3);
+  }
+}
+const sound = new SoundEngine();
+
+/* ========================================================
+   ADJECTIVE DATABASE & CONJUGATION RULES
+   ======================================================== */
+const FORM_METADATA = {
+  negative: { name: '부정형 (~くない / ~ではない)', desc: '현재 부정 표현' },
+  past: { name: '과거형 (~かった / ~だった)', desc: '과거 긍정 단정' },
+  past_neg: { name: '과거부정 (~くなかった / ~ではなかった)', desc: '과거 부정 표현' },
+  adverb: { name: '부사형 (~く / ~に)', desc: '동사/술어 수식형' },
+  te: { name: '연결형 (~くて / ~で)', desc: '문장 나열/원인/이유' },
+  ba: { name: '가정형 (~ければ / ~なら)', desc: '조건/가정 표현' },
+  sa: { name: '명사화 (~さ)', desc: '정도를 나타내는 명사' },
+  sou: { name: '양태추측 (~そうだ)', desc: '~해 보인다/외관 추측' }
+};
+
+// 1. い형용사 풀
+const I_ADJECTIVES = [
+  { kanji: '高い', kana: 'たかい', stem: '高', stemKana: 'たか', meaning: '높다 / 비싸다', jlpt: 'N5' },
+  { kanji: '安い', kana: 'やすい', stem: '安', stemKana: 'やす', meaning: '싸다', jlpt: 'N5' },
+  { kanji: '新しい', kana: 'あたらしい', stem: '新し', stemKana: 'あたらし', meaning: '새롭다', jlpt: 'N5' },
+  { kanji: '古い', kana: 'ふるい', stem: '古', stemKana: 'ふる', meaning: '오래되다', jlpt: 'N5' },
+  { kanji: '大きい', kana: 'おおきい', stem: '大き', stemKana: 'おおき', meaning: '크다', jlpt: 'N5' },
+  { kanji: '小さい', kana: 'ちいさい', stem: '小さ', stemKana: 'ちいさ', meaning: '작다', jlpt: 'N5' },
+  { kanji: '楽しい', kana: 'たのしい', stem: '楽し', stemKana: 'たのし', meaning: '즐겁다', jlpt: 'N5' },
+  { kanji: '優しい', kana: 'やさしい', stem: '優し', stemKana: 'やさし', meaning: '상냥하다 / 쉽다', jlpt: 'N4' },
+  { kanji: '難しい', kana: 'むずかしい', stem: '難し', stemKana: 'むずかし', meaning: '어렵다', jlpt: 'N5' },
+  { kanji: '早い', kana: 'はやい', stem: '早', stemKana: 'はや', meaning: '빠르다 / 이르다', jlpt: 'N5' },
+  { kanji: '遅い', kana: 'おそい', stem: '遅', stemKana: 'おそ', meaning: '늦다', jlpt: 'N5' },
+  { kanji: '強い', kana: 'つよい', stem: '強', stemKana: 'つよ', meaning: '강하다', jlpt: 'N4' },
+  { kanji: '弱い', kana: 'よわい', stem: '弱', stemKana: 'よわ', meaning: '약하다', jlpt: 'N4' },
+  { kanji: '忙しい', kana: 'いそがしい', stem: '忙し', stemKana: 'いそがし', meaning: '바쁘다', jlpt: 'N5' },
+  { kanji: '美味しい', kana: 'おいしい', stem: '美味し', stemKana: 'おいし', meaning: '맛있다', jlpt: 'N5' },
+  { kanji: '重い', kana: 'おもい', stem: '重', stemKana: 'おも', meaning: '무겁다', jlpt: 'N5' },
+  { kanji: '軽い', kana: 'かるい', stem: '軽', stemKana: 'かる', meaning: '가볍다', jlpt: 'N5' },
+  { kanji: '珍しい', kana: 'めずらしい', stem: '珍し', stemKana: 'めずらし', meaning: '드물다 / 희귀하다', jlpt: 'N3' },
+  { kanji: '厳しい', kana: 'きびしい', stem: '厳し', stemKana: 'きびし', meaning: '엄격하다', jlpt: 'N3' },
+  { kanji: '激しい', kana: 'はげしい', stem: '激し', stemKana: 'はげし', meaning: '격렬하다', jlpt: 'N2' },
+  { kanji: '怪しい', kana: 'あやしい', stem: '怪し', stemKana: 'あやし', meaning: '수상하다', jlpt: 'N2' },
+  { kanji: '悔しい', kana: 'くやしい', stem: '悔し', stemKana: 'くやし', meaning: '분하다 / 억울하다', jlpt: 'N3' },
+  { kanji: '貧しい', kana: 'まずしい', stem: '貧し', stemKana: 'まずし', meaning: '가난하다', jlpt: 'N3' },
+  { kanji: '幼い', kana: 'おさない', stem: '幼', stemKana: 'おさな', meaning: '어리다', jlpt: 'N2' },
+  { kanji: '恐ろしい', kana: 'おそろしい', stem: '恐ろし', stemKana: 'おそろし', meaning: '무섭다', jlpt: 'N3' },
+  { kanji: '苦しい', kana: 'くるしい', stem: '苦し', stemKana: 'くるし', meaning: '괴롭다', jlpt: 'N3' },
+  { kanji: '詳しい', kana: 'くわしい', stem: '詳し', stemKana: 'くわし', meaning: '자세하다', jlpt: 'N3' },
+  { kanji: '深い', kana: 'ふかい', stem: '深', stemKana: 'ふか', meaning: '깊다', jlpt: 'N4' },
+  { kanji: '浅い', kana: 'あさい', stem: '浅', stemKana: 'あさ', meaning: '얕다', jlpt: 'N3' },
+  { kanji: '温かい', kana: 'あたたかい', stem: '温か', stemKana: 'あたたか', meaning: '따뜻하다', jlpt: 'N4' },
+  { kanji: '冷たい', kana: 'つめたい', stem: '冷た', stemKana: 'つめた', meaning: '차갑다', jlpt: 'N4' },
+  { kanji: '危ない', kana: 'あぶない', stem: '危な', stemKana: 'あぶな', meaning: '위험하다', jlpt: 'N5' },
+  { kanji: '美しい', kana: 'うつくしい', stem: '美し', stemKana: 'うつくし', meaning: '아름답다', jlpt: 'N3' },
+  { kanji: '明るい', kana: 'あかるい', stem: '明る', stemKana: 'あかる', meaning: '밝다', jlpt: 'N5' },
+  { kanji: '暗い', kana: 'くらい', stem: '暗', stemKana: 'くら', meaning: '어둡다', jlpt: 'N5' }
+];
+
+// 2. な형용사 풀
+const NA_ADJECTIVES = [
+  { kanji: '静かだ', kana: 'しずかだ', stem: '静か', stemKana: 'しずか', meaning: '조용하다', jlpt: 'N5' },
+  { kanji: '簡単だ', kana: 'かんたんだ', stem: '簡単', stemKana: 'かんたん', meaning: '간단하다', jlpt: 'N5' },
+  { kanji: '親切だ', kana: 'しんせつだ', stem: '親切', stemKana: 'しんせつ', meaning: '친절하다', jlpt: 'N5' },
+  { kanji: '便利だ', kana: 'べんりだ', stem: '便利', stemKana: 'べんり', meaning: '편리하다', jlpt: 'N5' },
+  { kanji: '大切だ', kana: 'たいせつだ', stem: '大切', stemKana: 'たいせつ', meaning: '소중하다', jlpt: 'N5' },
+  { kanji: '特別だ', kana: 'とくべつだ', stem: '特別', stemKana: 'とくべつ', meaning: '특별하다', jlpt: 'N4' },
+  { kanji: '複雑だ', kana: 'ふくざつだ', stem: '複雑', stemKana: 'ふくざつ', meaning: '복잡하다', jlpt: 'N4' },
+  { kanji: '正確だ', kana: 'せいかくだ', stem: '正確', stemKana: 'せいかく', meaning: '정확하다', jlpt: 'N3' },
+  { kanji: '熱心だ', kana: 'ねっしんだ', stem: '熱心', stemKana: 'ねっしん', meaning: '열심이다', jlpt: 'N4' },
+  { kanji: '適切だ', kana: 'てきせつだ', stem: '適切', stemKana: 'てきせつ', meaning: '적절하다', jlpt: 'N2' },
+  { kanji: '退屈だ', kana: 'たいくつだ', stem: '退屈', stemKana: 'たいくつ', meaning: '지루하다', jlpt: 'N3' },
+  { kanji: '器用だ', kana: 'きようだ', stem: '器用', stemKana: 'きよう', meaning: '손재주가 좋다 / 능숙하다', jlpt: 'N2' },
+  { kanji: '厄介だ', kana: 'やっかいだ', stem: '厄介', stemKana: 'やっかい', meaning: '성가시다 / 까다롭다', jlpt: 'N2' },
+  { kanji: '無駄だ', kana: 'むだだ', stem: '無駄', stemKana: 'むだ', meaning: '쓸데없다 / 헛되다', jlpt: 'N4' },
+  { kanji: '見事だ', kana: 'みごとだ', stem: '見事', stemKana: 'みごと', meaning: '훌륭하다 / 멋지다', jlpt: 'N2' },
+  { kanji: '冷静だ', kana: 'れいせいだ', stem: '冷静', stemKana: 'れいせい', meaning: '냉정하다', jlpt: 'N2' },
+  { kanji: '勝手だ', kana: 'かってだ', stem: '勝手', stemKana: 'かって', meaning: '제멋대로다', jlpt: 'N3' },
+  { kanji: '明確だ', kana: 'めいかくだ', stem: '明確', stemKana: 'めいかく', meaning: '명확하다', jlpt: 'N2' },
+  { kanji: '新鮮だ', kana: 'しんせんだ', stem: '新鮮', stemKana: 'しんせん', meaning: '신선하다', jlpt: 'N3' },
+  { kanji: '穏やかだ', kana: 'おだやかだ', stem: '穏やか', stemKana: 'おだやか', meaning: '온화하다', jlpt: 'N2' },
+  { kanji: '豪華だ', kana: 'ごうかだ', stem: '豪華', stemKana: 'ごうか', meaning: '호화롭다', jlpt: 'N3' },
+  { kanji: '質素だ', kana: 'しっそだ', stem: '質素', stemKana: 'しっそ', meaning: '검소하다', jlpt: 'N2' },
+  { kanji: '悲惨だ', kana: 'ひさんだ', stem: '悲惨', stemKana: 'ひさん', meaning: '비참하다', jlpt: 'N2' },
+  { kanji: '過剰だ', kana: 'かじょうだ', stem: '過剰', stemKana: 'かじょう', meaning: '과잉이다 / 지나치다', jlpt: 'N2' },
+  { kanji: '頑固だ', kana: 'がんこだ', stem: '頑固', stemKana: 'がんこ', meaning: '완고하다', jlpt: 'N2' },
+  { kanji: '柔軟だ', kana: 'じゅうなんだ', stem: '柔軟', stemKana: 'じゅうなん', meaning: '유연하다', jlpt: 'N2' },
+  { kanji: '安全だ', kana: 'あんぜんだ', stem: '安全', stemKana: 'あんぜん', meaning: '안전하다', jlpt: 'N5' },
+  { kanji: '危険だ', kana: 'きけんだ', stem: '危険', stemKana: 'きけん', meaning: '위험하다', jlpt: 'N4' }
+];
+
+// 3. 특수 / 함정 (い로 끝나지만 な형용사 + いい 불규칙 등)
+const TRAP_ADJECTIVES = [
+  // A. いい / よい 불규칙
+  { kanji: 'いい', kana: 'いい', type: 'ii_irregular', meaning: '좋다 (불규칙 8대 활용)', jlpt: 'N5' },
+  { kanji: 'かっこいい', kana: 'かっこいい', type: 'ii_irregular_kakko', meaning: '멋지다 (불규칙 활용)', jlpt: 'N3' },
+  { kanji: '気持ちいい', kana: 'きもちいい', type: 'ii_irregular_kimochi', meaning: '기분 좋다 (불규칙 활용)', jlpt: 'N3' },
+  { kanji: 'ない', kana: 'ない', type: 'nai_irregular', meaning: '없다 (~なさそうだ 양태)', jlpt: 'N5' },
+
+  // B. い로 끝나지만 な형용사 (초빈출 N2 킬러)
+  { kanji: '綺麗だ', kana: 'きれいだ', stem: '綺麗', stemKana: 'きれい', type: 'na_trap', meaning: '예쁘다 / 깨끗하다 (★な형용사)', jlpt: 'N5' },
+  { kanji: '嫌いだ', kana: 'きらいだ', stem: '嫌い', stemKana: 'きらい', type: 'na_trap', meaning: '싫다 (★な형용사)', jlpt: 'N5' },
+  { kanji: '得意だ', kana: 'とくいだ', stem: '得意', stemKana: 'とくい', type: 'na_trap', meaning: '자신있다 / 능숙하다 (★な형용사)', jlpt: 'N3' },
+  { kanji: '苦手だ', kana: 'にがてだ', stem: '苦手', stemKana: 'にがて', type: 'na_trap', meaning: '서툴다 / 질색이다 (★な형용사)', jlpt: 'N4' },
+  { kanji: '丁寧だ', kana: 'ていねいだ', stem: '丁寧', stemKana: 'ていねい', type: 'na_trap', meaning: '정중하다 / 공손하다 (★な형용사)', jlpt: 'N3' },
+  { kanji: '曖昧だ', kana: 'あいまいだ', stem: '曖昧', stemKana: 'あいまい', type: 'na_trap', meaning: '애매하다 (★な형용사)', jlpt: 'N2' },
+  { kanji: '有名だ', kana: 'ゆうめいだ', stem: '有名', stemKana: 'ゆうめい', type: 'na_trap', meaning: '유명하다 (★な형용사)', jlpt: 'N5' }
+];
+
+/* ========================================================
+   CONJUGATION LOGIC & QUESTION BUILDER
+   ======================================================== */
+function conjugateI(adj, formKey) {
+  const sk = adj.stem;
+  const ska = adj.stemKana;
+  switch (formKey) {
+    case 'negative':
+      return { kanji: `${sk}くない`, kana: `${ska}くない`, rule: '어미 い 탈락 + くない' };
+    case 'past':
+      return { kanji: `${sk}かった`, kana: `${ska}かった`, rule: '어미 い 탈락 + かった' };
+    case 'past_neg':
+      return { kanji: `${sk}くなかった`, kana: `${ska}くなかった`, rule: '어미 い 탈락 + くなかった' };
+    case 'adverb':
+      return { kanji: `${sk}く`, kana: `${ska}く`, rule: '부사화: 어미 い 탈락 + く' };
+    case 'te':
+      return { kanji: `${sk}くて`, kana: `${ska}くて`, rule: '연결형: 어미 い 탈락 + くて' };
+    case 'ba':
+      return { kanji: `${sk}ければ`, kana: `${ska}ければ`, rule: '가정형: 어미 い 탈락 + ければ' };
+    case 'sa':
+      return { kanji: `${sk}さ`, kana: `${ska}さ`, rule: '명사화: 어미 い 탈락 + さ' };
+    case 'sou':
+      return { kanji: `${sk}そうだ`, kana: `${ska}そうだ`, rule: '양태추측: 어미 い 탈락 + そうだ' };
+  }
+}
+
+function conjugateNa(adj, formKey) {
+  const sk = adj.stem;
+  const ska = adj.stemKana;
+  switch (formKey) {
+    case 'negative':
+      return { kanji: `${sk}ではない`, kana: `${ska}ではない`, altKana: `${ska}じゃない`, rule: '부정형: 어간 + ではない (또는 じゃない)' };
+    case 'past':
+      return { kanji: `${sk}だった`, kana: `${ska}だった`, rule: '과거형: 어간 + だった' };
+    case 'past_neg':
+      return { kanji: `${sk}ではなかった`, kana: `${ska}ではなかった`, altKana: `${ska}じゃなかった`, rule: '과거부정: 어간 + ではなかった' };
+    case 'adverb':
+      return { kanji: `${sk}に`, kana: `${ska}に`, rule: '부사화: 어간 + に (동사 수식)' };
+    case 'te':
+      return { kanji: `${sk}で`, kana: `${ska}で`, rule: '연결형: 어간 + で' };
+    case 'ba':
+      return { kanji: `${sk}なら`, kana: `${ska}なら`, rule: '가정형: 어간 + なら' };
+    case 'sa':
+      // な형용사는 보통 명사수식(な) 출제
+      return { kanji: `${sk}な`, kana: `${ska}な`, rule: '연체형: 어간 + な (명사 수식)' };
+    case 'sou':
+      return { kanji: `${sk}そうだ`, kana: `${ska}そうだ`, rule: '양태추측: 어간 + そうだ' };
+  }
+}
+
+function conjugateTrap(adj, formKey) {
+  // いい / よい 계열
+  if (adj.type === 'ii_irregular' || adj.type === 'ii_irregular_kakko' || adj.type === 'ii_irregular_kimochi') {
+    const prefixK = adj.type === 'ii_irregular_kakko' ? 'かっこ' : adj.type === 'ii_irregular_kimochi' ? '気持ち' : '';
+    const prefixKana = adj.type === 'ii_irregular_kakko' ? 'かっこ' : adj.type === 'ii_irregular_kimochi' ? 'きもち' : '';
+    
+    switch (formKey) {
+      case 'negative':
+        return { kanji: `${prefixK}よくない`, kana: `${prefixKana}よくない`, rule: '★불규칙: よい 기준 → よくない (X いくない)' };
+      case 'past':
+        return { kanji: `${prefixK}よかった`, kana: `${prefixKana}よかった`, rule: '★불규칙: よい 기준 → よかった (X いかった)' };
+      case 'past_neg':
+        return { kanji: `${prefixK}よくなかった`, kana: `${prefixKana}よくなかった`, rule: '★불규칙: よい 기준 → よくなかった' };
+      case 'adverb':
+        return { kanji: `${prefixK}よく`, kana: `${prefixKana}よく`, rule: '★불규칙 부사화: よく (X いく)' };
+      case 'te':
+        return { kanji: `${prefixK}よくて`, kana: `${prefixKana}よくて`, rule: '★불규칙 연결형: よくて (X いくて)' };
+      case 'ba':
+        return { kanji: `${prefixK}よければ`, kana: `${prefixKana}よければ`, rule: '★불규칙 가정형: よければ (X いければ)' };
+      case 'sa':
+        return { kanji: `${prefixK}よさ`, kana: `${prefixKana}よさ`, rule: '★불규칙 명사화: よさ (X いいさ)' };
+      case 'sou':
+        return { kanji: `${prefixK}よさそうだ`, kana: `${prefixKana}よさそうだ`, rule: '★초빈출 킬러: いい 양태는 よさそうだ! (X いいそうだ/よいそうだ)' };
+    }
+  }
+
+  // ない 계열
+  if (adj.type === 'nai_irregular') {
+    switch (formKey) {
+      case 'sou':
+        return { kanji: 'なさそうだ', kana: 'なさそうだ', rule: '★초빈출 킬러: ない 양태는 なさそうだ! (X ないそうだ)' };
+      case 'past':
+        return { kanji: 'なかった', kana: 'なかった', rule: '과거형: なかった' };
+      case 'ba':
+        return { kanji: 'なければ', kana: 'なければ', rule: '가정형: なければ' };
+      default:
+        return { kanji: 'なく', kana: 'なく', rule: '부사형: なく' };
+    }
+  }
+
+  // い로 끝나는 な형용사
+  if (adj.type === 'na_trap') {
+    const res = conjugateNa(adj, formKey);
+    res.rule = `★N2 함정: い로 끝나지만 【な형용사】! ${res.rule}`;
+    return res;
+  }
+}
+
+// 오답 보기 3개 생성기 (매력적인 함정)
+function generateDistractors(adj, formKey, correctKana, correctKanji) {
+  const distractors = new Set();
+  const k = adj.stem || (adj.kanji === 'いい' ? 'いい' : adj.kanji.replace(/い$/, ''));
+  const ka = adj.stemKana || (adj.kana === 'いい' ? 'いい' : adj.kana.replace(/い$/, ''));
+
+  // 1. い형용사 오답 패턴
+  if (adj.stem && adj.kanji.endsWith('い')) {
+    distractors.add(`${k}な`);
+    distractors.add(`${k}に`);
+    distractors.add(`${k}で`);
+    distractors.add(`${k}いくない`);
+    distractors.add(`${k}いだ`);
+    distractors.add(`${k}いそうだ`);
+    distractors.add(`${k}ければ`);
+    distractors.add(`${k}かった`);
+    distractors.add(`${k}くない`);
+    distractors.add(`${k}く`);
+  }
+
+  // 2. な형용사 오답 패턴 (い형용사식으로 잘못 변형한 함정!)
+  if (adj.stem && adj.kanji.endsWith('だ')) {
+    distractors.add(`${k}くない`);
+    distractors.add(`${k}かった`);
+    distractors.add(`${k}く`);
+    distractors.add(`${k}くて`);
+    distractors.add(`${k}ければ`);
+    distractors.add(`${k}さ`);
+    distractors.add(`${k}だそうだ`);
+  }
+
+  // 3. いい / trap 계열 오답 패턴
+  if (adj.kanji === 'いい' || adj.type?.startsWith('ii_irregular')) {
+    const p = adj.kanji === 'かっこいい' ? 'かっこ' : adj.kanji === '気持ちいい' ? '気持ち' : '';
+    distractors.add(`${p}いくない`);
+    distractors.add(`${p}いかった`);
+    distractors.add(`${p}いく`);
+    distractors.add(`${p}いくて`);
+    distractors.add(`${p}いければ`);
+    distractors.add(`${p}いいそうだ`);
+    distractors.add(`${p}よいそうだ`);
+    distractors.add(`${p}よそうだ`);
+  }
+
+  distractors.delete(correctKanji);
+  distractors.delete(correctKana);
+
+  const arr = Array.from(distractors).filter(d => d && d !== correctKanji && d !== correctKana);
+  // 셔플하여 3개 추출
+  arr.sort(() => Math.random() - 0.5);
+  return arr.slice(0, 3);
+}
+
+function buildQuestions(course, count) {
+  const forms = ['negative', 'past', 'past_neg', 'adverb', 'te', 'ba', 'sa', 'sou'];
+  const pool = [];
+
+  if (course === 'trap') {
+    // 트랩 코스: TRAP_ADJECTIVES 중심 + 전 문항 함정 위주
+    for (const adj of TRAP_ADJECTIVES) {
+      for (const f of forms) {
+        if (adj.type === 'nai_irregular' && !['sou', 'past', 'ba'].includes(f)) continue;
+        const conj = conjugateTrap(adj, f);
+        if (conj) {
+          pool.push({
+            adj,
+            groupName: adj.type?.includes('trap') ? '★な형용사 함정' : '★불규칙 예외',
+            formKey: f,
+            formMeta: FORM_METADATA[f],
+            targetFormName: f === 'sa' && adj.stem ? '명사수식 (~な)' : FORM_METADATA[f].name,
+            conj
+          });
+        }
+      }
+    }
+  } else if (course === 'i_adj') {
+    for (const adj of I_ADJECTIVES) {
+      for (const f of forms) {
+        const conj = conjugateI(adj, f);
+        pool.push({
+          adj,
+          groupName: 'い형용사',
+          formKey: f,
+          formMeta: FORM_METADATA[f],
+          targetFormName: FORM_METADATA[f].name,
+          conj
+        });
+      }
+    }
+  } else if (course === 'na_adj') {
+    for (const adj of NA_ADJECTIVES) {
+      for (const f of forms) {
+        const conj = conjugateNa(adj, f);
+        pool.push({
+          adj,
+          groupName: 'な형용사',
+          formKey: f,
+          formMeta: FORM_METADATA[f],
+          targetFormName: f === 'sa' ? '명사수식 (~な)' : FORM_METADATA[f].name,
+          conj
+        });
+      }
+    }
+  } else {
+    // all: 전체 총망라
+    for (const adj of I_ADJECTIVES) {
+      for (const f of forms) {
+        pool.push({
+          adj,
+          groupName: 'い형용사',
+          formKey: f,
+          formMeta: FORM_METADATA[f],
+          targetFormName: FORM_METADATA[f].name,
+          conj: conjugateI(adj, f)
+        });
+      }
+    }
+    for (const adj of NA_ADJECTIVES) {
+      for (const f of forms) {
+        pool.push({
+          adj,
+          groupName: 'な형용사',
+          formKey: f,
+          formMeta: FORM_METADATA[f],
+          targetFormName: f === 'sa' ? '명사수식 (~な)' : FORM_METADATA[f].name,
+          conj: conjugateNa(adj, f)
+        });
+      }
+    }
+    for (const adj of TRAP_ADJECTIVES) {
+      for (const f of forms) {
+        if (adj.type === 'nai_irregular' && !['sou', 'past', 'ba'].includes(f)) continue;
+        const conj = conjugateTrap(adj, f);
+        if (conj) {
+          pool.push({
+            adj,
+            groupName: adj.type?.includes('trap') ? '★な형용사 함정' : '★불규칙 예외',
+            formKey: f,
+            formMeta: FORM_METADATA[f],
+            targetFormName: f === 'sa' && adj.stem ? '명사수식 (~な)' : FORM_METADATA[f].name,
+            conj
+          });
+        }
+      }
+    }
+  }
+
+  // 셔플 및 count 추출
+  pool.sort(() => Math.random() - 0.5);
+  const selected = pool.slice(0, count);
+
+  return selected.map(q => {
+    const distractors = generateDistractors(q.adj, q.formKey, q.conj.kana, q.conj.kanji);
+    const choices = [q.conj.kanji, ...distractors].sort(() => Math.random() - 0.5);
+    return {
+      ...q,
+      choices,
+      correctKanji: q.conj.kanji,
+      correctKana: q.conj.kana,
+      altKana: q.conj.altKana || null,
+      rule: q.conj.rule
+    };
+  });
+}
+
+/* ========================================================
+   GAME CONTROLLER & STATE
+   ======================================================== */
+const state = {
+  course: 'trap',
+  mode: 'typing',
+  count: 100,
+  questions: [],
+  currentIndex: 0,
+  score: 0,
+  combo: 0,
+  maxCombo: 0,
+  mistakes: [],
+  typeStats: {},
+  startTime: null,
+  elapsedSec: 0,
+  timerInterval: null,
+  waitingFeedback: false
+};
+
+const $ = id => document.getElementById(id);
+
+function initLobbyUI() {
+  document.querySelectorAll('.course-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.course-btn').forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-950/40');
+        b.classList.add('border-slate-700', 'bg-slate-800/60');
+      });
+      btn.classList.add('border-amber-500', 'bg-amber-950/40');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60');
+      state.course = btn.dataset.course;
+    });
+  });
+
+  document.querySelectorAll('.mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-950/40', 'text-amber-200');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btn.classList.add('border-amber-500', 'bg-amber-950/40', 'text-amber-200');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      state.mode = btn.dataset.mode;
+    });
+  });
+
+  document.querySelectorAll('.count-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.count-btn').forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-950/40', 'text-amber-200');
+        b.classList.add('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      });
+      btn.classList.add('border-amber-500', 'bg-amber-950/40', 'text-amber-200');
+      btn.classList.remove('border-slate-700', 'bg-slate-800/60', 'text-slate-300');
+      state.count = parseInt(btn.dataset.count, 10);
+    });
+  });
+
+  $('btnStart').addEventListener('click', startGame);
+  $('btnPlayAgain').addEventListener('click', () => {
+    $('screenResult').classList.add('hidden');
+    $('screenLobby').classList.remove('hidden');
+  });
+  $('btnRetryWrong').addEventListener('click', startRetryWrong);
+  $('btnCopyTime').addEventListener('click', () => copyStudyTime(false));
+  $('btnCopyHudTime').addEventListener('click', () => copyStudyTime(true));
+
+  $('btnSound').addEventListener('click', () => {
+    sound.enabled = !sound.enabled;
+    $('soundIcon').textContent = sound.enabled ? '🔊' : '🔇';
+    $('soundLabel').textContent = sound.enabled ? 'Sound ON' : 'Sound OFF';
+  });
+
+  $('btnHelp').addEventListener('click', () => $('modalHelp').classList.remove('hidden'));
+  $('btnCloseHelp').addEventListener('click', () => $('modalHelp').classList.add('hidden'));
+
+  // Typing Input Realtime conversion
+  const inputEl = $('typeInput');
+  inputEl.addEventListener('input', e => {
+    const raw = e.target.value;
+    const kana = romajiToHiragana(raw);
+    if (kana !== raw) {
+      e.target.value = kana;
+    }
+  });
+
+  inputEl.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      submitAnswer(inputEl.value.trim());
+    } else if (e.key === 'Escape' || e.key === 'Tab') {
+      e.preventDefault();
+      skipQuestion();
+    }
+  });
+
+  $('btnSkipTyping').addEventListener('click', skipQuestion);
+  $('btnSkipChoice').addEventListener('click', skipQuestion);
+  $('btnNextAfterMistake').addEventListener('click', advanceToNextQuestion);
+
+  // Keyboard shortcut 1,2,3,4 for choice mode & Space for lobby/finish
+  window.addEventListener('keydown', e => {
+    if (!$('modalHelp').classList.contains('hidden') && e.key === 'Escape') {
+      $('modalHelp').classList.add('hidden');
+      return;
+    }
+
+    if (state.waitingFeedback) {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        advanceToNextQuestion();
+      }
+      return;
+    }
+
+    if (!$('screenLobby').classList.contains('hidden')) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        startGame();
+      }
+      return;
+    }
+
+    if (!$('screenPlay').classList.contains('hidden') && state.mode === 'choice') {
+      if (['1', '2', '3', '4'].includes(e.key)) {
+        e.preventDefault();
+        const idx = parseInt(e.key, 10) - 1;
+        const choiceBtns = document.querySelectorAll('.choice-option-btn');
+        if (choiceBtns[idx]) choiceBtns[idx].click();
+      } else if (e.key === ' ' || e.key === 'Escape') {
+        e.preventDefault();
+        skipQuestion();
+      }
+    }
+  });
+}
+
+function startGame() {
+  state.questions = buildQuestions(state.course, state.count);
+  state.currentIndex = 0;
+  state.score = 0;
+  state.combo = 0;
+  state.maxCombo = 0;
+  state.mistakes = [];
+  state.typeStats = {
+    negative: { correct: 0, total: 0 },
+    past: { correct: 0, total: 0 },
+    past_neg: { correct: 0, total: 0 },
+    adverb: { correct: 0, total: 0 },
+    te: { correct: 0, total: 0 },
+    ba: { correct: 0, total: 0 },
+    sa: { correct: 0, total: 0 },
+    sou: { correct: 0, total: 0 }
+  };
+  state.startTime = Date.now();
+  state.elapsedSec = 0;
+  state.waitingFeedback = false;
+
+  $('screenLobby').classList.add('hidden');
+  $('screenResult').classList.add('hidden');
+  $('screenPlay').classList.remove('hidden');
+
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(() => {
+    state.elapsedSec = Math.floor((Date.now() - state.startTime) / 1000);
+    const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+    const s = String(state.elapsedSec % 60).padStart(2, '0');
+    $('hudTimer').textContent = `${m}:${s}`;
+  }, 1000);
+
+  renderQuestion();
+}
+
+function startRetryWrong() {
+  if (state.mistakes.length === 0) return;
+  state.questions = state.mistakes.map(m => m.q).sort(() => Math.random() - 0.5);
+  state.count = state.questions.length;
+  state.currentIndex = 0;
+  state.score = 0;
+  state.combo = 0;
+  state.maxCombo = 0;
+  state.mistakes = [];
+  state.startTime = Date.now();
+  state.elapsedSec = 0;
+  state.waitingFeedback = false;
+
+  $('screenResult').classList.add('hidden');
+  $('screenPlay').classList.remove('hidden');
+
+  clearInterval(state.timerInterval);
+  state.timerInterval = setInterval(() => {
+    state.elapsedSec = Math.floor((Date.now() - state.startTime) / 1000);
+    const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+    const s = String(state.elapsedSec % 60).padStart(2, '0');
+    $('hudTimer').textContent = `${m}:${s}`;
+  }, 1000);
+
+  renderQuestion();
+}
+
+function renderQuestion() {
+  state.waitingFeedback = false;
+  $('feedbackModal').classList.add('hidden');
+
+  const q = state.questions[state.currentIndex];
+  if (!q) {
+    finishGame();
+    return;
+  }
+
+  // HUD
+  $('hudQIndex').textContent = state.currentIndex + 1;
+  $('hudQTotal').textContent = state.questions.length;
+  const progressPct = ((state.currentIndex + 1) / state.questions.length) * 100;
+  $('hudProgress').style.width = `${progressPct}%`;
+
+  // Prompt card
+  $('qGroupBadge').textContent = q.groupName;
+  $('qMeaning').textContent = q.adj.meaning;
+  $('qAdj').textContent = q.adj.kanji;
+  $('qKana').textContent = q.adj.kana;
+  $('qTargetForm').textContent = q.targetFormName;
+
+  // Combo Pill
+  if (state.combo >= 2) {
+    $('comboBadge').classList.remove('hidden');
+    $('comboCount').textContent = state.combo;
+  } else {
+    $('comboBadge').classList.add('hidden');
+  }
+
+  // Mode Display
+  if (state.mode === 'typing') {
+    $('areaTyping').classList.remove('hidden');
+    $('areaChoice').classList.add('hidden');
+    const inputEl = $('typeInput');
+    inputEl.value = '';
+    setTimeout(() => inputEl.focus(), 20);
+  } else {
+    $('areaTyping').classList.add('hidden');
+    $('areaChoice').classList.remove('hidden');
+    const choiceContainer = $('choiceContainer');
+    choiceContainer.innerHTML = q.choices.map((c, i) => `
+      <button class="choice-option-btn p-3.5 rounded-xl border border-slate-700 bg-slate-800/90 text-left hover:border-amber-400 hover:bg-slate-700 transition flex items-center justify-between group active:scale-[0.98]">
+        <div class="flex items-center gap-3">
+          <span class="w-6 h-6 rounded-md bg-slate-900 border border-slate-700 flex items-center justify-center text-xs font-bold text-slate-400 group-hover:border-amber-400 group-hover:text-amber-300">
+            ${i + 1}
+          </span>
+          <span class="text-base sm:text-lg font-bold text-white group-hover:text-amber-200">
+            ${c}
+          </span>
+        </div>
+        <span class="text-xs text-slate-500 group-hover:text-slate-400">선택</span>
+      </button>
+    `).join('');
+
+    document.querySelectorAll('.choice-option-btn').forEach((btn, i) => {
+      btn.addEventListener('click', () => submitAnswer(q.choices[i]));
+    });
+  }
+}
+
+function submitAnswer(rawAns) {
+  if (state.waitingFeedback) return;
+  const q = state.questions[state.currentIndex];
+  const userAns = rawAns.trim();
+  if (!userAns) return;
+
+  const userKana = romajiToHiragana(userAns);
+  const isCorrect = (
+    userAns === q.correctKanji ||
+    userAns === q.correctKana ||
+    userKana === q.correctKana ||
+    (q.altKana && userKana === q.altKana)
+  );
+
+  state.typeStats[q.formKey].total++;
+
+  if (isCorrect) {
+    state.score++;
+    state.combo++;
+    if (state.combo > state.maxCombo) state.maxCombo = state.combo;
+    state.typeStats[q.formKey].correct++;
+    sound.playCorrect(state.combo);
+
+    const appEl = $('app');
+    appEl.classList.add('flash-correct');
+    setTimeout(() => appEl.classList.remove('flash-correct'), 300);
+
+    state.currentIndex++;
+    renderQuestion();
+  } else {
+    state.combo = 0;
+    sound.playWrong();
+
+    const appEl = $('app');
+    appEl.classList.add('shake-wrong');
+    setTimeout(() => appEl.classList.remove('shake-wrong'), 350);
+
+    state.mistakes.push({
+      q,
+      userAnswer: userAns,
+      correctKanji: q.correctKanji,
+      correctKana: q.correctKana,
+      rule: q.rule
+    });
+
+    showMistakeFeedback(q, userAns);
+  }
+}
+
+function skipQuestion() {
+  if (state.waitingFeedback) return;
+  const q = state.questions[state.currentIndex];
+  state.combo = 0;
+  sound.playWrong();
+
+  state.typeStats[q.formKey].total++;
+  state.mistakes.push({
+    q,
+    userAnswer: '패스 (모름)',
+    correctKanji: q.correctKanji,
+    correctKana: q.correctKana,
+    rule: q.rule
+  });
+
+  showMistakeFeedback(q, '모름 / 패스');
+}
+
+function showMistakeFeedback(q, userAns) {
+  state.waitingFeedback = true;
+  $('fbCorrectKanji').textContent = q.correctKanji;
+  $('fbCorrectKana').textContent = `(${q.correctKana})`;
+  $('fbRuleSummary').textContent = q.rule;
+  $('feedbackModal').classList.remove('hidden');
+
+  if (state.mode === 'typing') {
+    $('typeInput').blur();
+  }
+  $('btnNextAfterMistake').focus();
+}
+
+function advanceToNextQuestion() {
+  state.currentIndex++;
+  renderQuestion();
+}
+
+/* ========================================================
+   STUDY TIME COPY FEATURE (MANUAL TRACKING)
+   ======================================================== */
+function copyStudyTime(isHud) {
+  const today = new Date().toLocaleDateString('sv');
+  const sec = state.elapsedSec || 0;
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
+  const courseNames = {
+    trap: '★ N2 필수 함정 코스 (30제)',
+    i: 'い형용사 8대 활용 코스 (35제)',
+    na: 'な형용사 8대 활용 코스 (28제)',
+    grand: '종합 그랑프리 100제'
+  };
+  const course = courseNames[state.course] || state.course;
+  const attempts = state.score + state.mistakes.length;
+  const accuracy = attempts > 0 ? Math.round((state.score / attempts) * 100) : 0;
+  const text = `[${today} 形容詞活用 SPEED RUN 100] 학습 시간: ${timeStr} (코스: ${course}, 정답: ${state.score}/${attempts}, 정답률: ${accuracy}%)`;
+
+  const doCopy = () => {
+    if (isHud) {
+      const el = $('btnCopyHudTime');
+      if (el) {
+        const orig = el.textContent;
+        el.textContent = '✓ 복사됨!';
+        setTimeout(() => el.textContent = orig, 1800);
+      }
+    } else {
+      const el = $('btnCopyTime');
+      if (el) {
+        const orig = el.innerHTML;
+        el.innerHTML = '✓ 학습시간 복사완료!';
+        setTimeout(() => el.innerHTML = orig, 2000);
+      }
+    }
+  };
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(doCopy).catch(() => {
+      prompt('클립보드 복사:', text);
+    });
+  } else {
+    prompt('클립보드 복사:', text);
+  }
+}
+
+function finishGame() {
+  clearInterval(state.timerInterval);
+  $('screenPlay').classList.add('hidden');
+  $('screenResult').classList.remove('hidden');
+
+  const accuracy = Math.round((state.score / (state.score + state.mistakes.length)) * 100) || 0;
+  $('resAccuracy').textContent = `${accuracy}%`;
+  $('resScoreFraction').textContent = `${state.score} / ${state.score + state.mistakes.length} (정답수/총시도)`;
+
+  const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+  const s = String(state.elapsedSec % 60).padStart(2, '0');
+  $('resTotalTime').textContent = `${m}:${s}`;
+
+  const avgPace = ((state.elapsedSec / (state.score + state.mistakes.length)) || 0).toFixed(1);
+  $('resPace').textContent = `문항당 평균 ${avgPace}초`;
+  $('resMaxCombo').textContent = state.maxCombo;
+
+  // Breakdown by form
+  const breakdownEl = $('resFormBreakdown');
+  breakdownEl.innerHTML = Object.entries(state.typeStats)
+    .filter(([_, data]) => data.total > 0)
+    .map(([key, data]) => {
+      const pct = Math.round((data.correct / data.total) * 100);
+      const meta = FORM_METADATA[key];
+      const barColor = pct >= 85 ? 'bg-emerald-400' : pct >= 65 ? 'bg-amber-400' : 'bg-red-400';
+      return `
+        <div class="bg-slate-800/60 p-2.5 rounded-lg border border-slate-700/60 flex items-center justify-between gap-3">
+          <div class="w-40 font-bold text-slate-200 truncate">${meta.name}</div>
+          <div class="flex-1 h-2 bg-slate-700 rounded-full overflow-hidden">
+            <div class="${barColor} h-full" style="width: ${pct}%"></div>
+          </div>
+          <div class="font-mono font-bold text-right w-16 ${pct < 70 ? 'text-red-400' : 'text-slate-300'}">
+            ${pct}% <span class="text-[10px] text-slate-500 font-normal">(${data.correct}/${data.total})</span>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+  // Mistakes
+  $('resMistakeCount').textContent = state.mistakes.length;
+  const mistakeListEl = $('resMistakeList');
+  if (state.mistakes.length === 0) {
+    $('resMistakeContainer').classList.add('hidden');
+    $('btnRetryWrong').classList.add('hidden');
+  } else {
+    $('resMistakeContainer').classList.remove('hidden');
+    $('btnRetryWrong').classList.remove('hidden');
+    mistakeListEl.innerHTML = state.mistakes.map(m => `
+      <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-between">
+        <div>
+          <span class="font-bold text-white text-sm">${m.q.adj.kanji}</span>
+          <span class="text-slate-400 text-xs ml-1">→ ${m.q.targetFormName}</span>
+          <div class="text-[11px] text-slate-400 mt-0.5">${m.rule}</div>
+        </div>
+        <div class="text-right">
+          <span class="text-xs text-red-400 line-through">${m.userAnswer}</span>
+          <span class="text-xs font-bold text-emerald-400 ml-1.5">✓ ${m.correctKanji}</span>
+        </div>
+      </div>
+    `).join('');
+  }
+}
+
+// Kickoff
+window.addEventListener('DOMContentLoaded', initLobbyUI);
+</script>
+</body>
+</html>
