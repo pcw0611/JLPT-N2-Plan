@@ -167,10 +167,7 @@
             </div>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-xs font-black text-emerald-800 font-mono" id="masteredCountText">8 / 87문항 정복 (9%)</span>
-            <button id="btnResetMastered" type="button" class="text-[11px] text-neutral-500 hover:text-rose-600 underline transition cursor-pointer">
-              🔄 초기화
-            </button>
+            <span class="text-xs font-black text-emerald-800 font-mono" id="masteredCountText">0 / 87문항 정복 (0%)</span>
           </div>
         </div>
 
@@ -873,7 +870,7 @@
     }
 
     if (pool.length === 0) {
-      alert('선택하신 코스의 모든 오답을 이미 정복하셨습니다! 🏆\n오답노트 격파 완료를 축하합니다!\n(다시 풀고 싶으실 때는 상단의 "체크 해제" 또는 "초기화"를 누르시면 됩니다)');
+      alert('선택하신 코스의 모든 오답을 이미 정복하셨습니다! 🏆\n오답노트 격파 완료를 축하합니다!\n(다시 풀고 싶으실 때는 상단의 "정복한 문제 출제 제외" 체크를 해제하시면 됩니다)');
       return;
     }
 
