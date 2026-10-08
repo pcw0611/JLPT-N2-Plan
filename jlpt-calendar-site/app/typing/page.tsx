@@ -93,9 +93,54 @@ export default function MygoTypingPage() {
     });
   }, []);
 
+// Record daily game play time to unified calendar storage
+function recordDailyGameTime(gameType: 'typing' | 'verb' | 'grammar', seconds: number) {
+  if (!seconds || seconds <= 0) return;
+  try {
+    const today = new Intl.DateTimeFormat('sv-SE', {
+      timeZone: 'Asia/Seoul',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit'
+    }).format(new Date());
+
+    const storageKey = 'jlpt_game_daily_activity';
+    const raw = localStorage.getItem(storageKey);
+    const data = raw ? JSON.parse(raw) : {};
+
+    if (!data[today]) {
+      data[today] = {
+        typingSec: 0,
+        verbSec: 0,
+        grammarSec: 0,
+        totalSec: 0,
+        sessions: 0
+      };
+    }
+
+    if (gameType === 'typing') {
+      data[today].typingSec = (data[today].typingSec || 0) + seconds;
+    } else if (gameType === 'verb') {
+      data[today].verbSec = (data[today].verbSec || 0) + seconds;
+    } else if (gameType === 'grammar') {
+      data[today].grammarSec = (data[today].grammarSec || 0) + seconds;
+    }
+
+    data[today].totalSec = (data[today].typingSec || 0) + (data[today].verbSec || 0) + (data[today].grammarSec || 0);
+    data[today].sessions = (data[today].sessions || 0) + 1;
+    data[today].lastUpdated = new Date().toISOString();
+
+    localStorage.setItem(storageKey, JSON.stringify(data));
+  } catch (err) {
+    console.error('Failed to record daily game time:', err);
+  }
+}
+
   // Save stats to localStorage
   const saveStats = useCallback((songId: string, partId: string, finalCpm: number, accuracy: number, timeSec: number, keys: number, correctKeys: number) => {
     const recordKey = `${songId}_${partId}`;
+    // Also record to unified daily game activity for calendar integration!
+    recordDailyGameTime('typing', timeSec);
     setUserStats(prev => {
       const prevRecord = prev.records[recordKey] || { bestCpm: 0, bestAccuracy: 0, playCount: 0 };
       const updatedRecords = {
