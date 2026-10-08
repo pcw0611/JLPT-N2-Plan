@@ -158,6 +158,9 @@ export default function Home() {
           <a className="game-button grammar-nav-btn" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈를 열기">
             <span aria-hidden="true">🎯</span> N2 文法 SPEED RUN <span aria-hidden="true">→</span>
           </a>
+          <a className="game-button puzzle-nav-btn" href="/exams/n2-grammar-puzzle.html" aria-label="N2 文法 接続パズル 블록 조립 퀴즈를 열기">
+            <span aria-hidden="true">🧩</span> N2 文法 接続パズル <span aria-hidden="true">→</span>
+          </a>
           <a className="game-button error-nav-btn" href="/exams/n2-mock-error-review-pool.html" aria-label="모의고사 間違いノート 복습 마스터 풀 열기">
             <span aria-hidden="true">📑</span> 模試 間違いノート <span aria-hidden="true">→</span>
           </a>
