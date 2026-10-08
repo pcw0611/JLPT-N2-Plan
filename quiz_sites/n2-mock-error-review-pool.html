@@ -155,6 +155,27 @@
     <!-- SCREEN 1: LOBBY & COURSE SELECTION -->
     <!-- ================================================================= -->
     <section id="screenLobby" class="jlpt-paper rounded-xl p-5 sm:p-10 space-y-6">
+      <!-- RESUME SESSION BANNER (Shown if saved progress exists) -->
+      <div id="resumeBanner" class="hidden p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-400 font-sans shadow-md space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-black text-indigo-900 flex items-center gap-1.5">
+            <span>🔄</span> <span>이전에 풀던 복습 세션이 남아있습니다!</span>
+          </span>
+          <span class="text-[11px] font-bold text-indigo-700 font-mono" id="resumeSavedTime"></span>
+        </div>
+        <p class="text-xs text-indigo-900" id="resumeInfoText">
+          진행 상황: Q14까지 진행 완료
+        </p>
+        <div class="flex items-center gap-2 pt-1">
+          <button id="btnResumeSession" type="button" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-lg transition shadow flex items-center gap-1">
+            <span>▶</span> <span>이어서 계속 풀기 (재개)</span>
+          </button>
+          <button id="btnDiscardSession" type="button" class="px-3 py-2 bg-white hover:bg-neutral-100 border border-neutral-300 text-neutral-700 font-bold text-xs rounded-lg transition">
+            ✕ 새로 시작하기
+          </button>
+        </div>
+      </div>
+
       
       <!-- Top Header Cover Box -->
       <div class="jlpt-header-box p-6 sm:p-8 text-center space-y-3 bg-white">
@@ -268,6 +289,30 @@
         </div>
       </div>
 
+      <!-- Question Count Selector -->
+      <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200 font-sans space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="text-xs font-black text-neutral-900 flex items-center gap-1.5">
+            <span>📏</span> <span>1회 학습 분량 선택 (問題数)</span>
+          </div>
+          <span class="text-[11px] text-neutral-500">부담 없는 단위로 나누어 풀 수 있습니다</span>
+        </div>
+        <div class="grid grid-cols-4 gap-2 text-xs font-bold" id="qCountButtons">
+          <button type="button" data-limit="10" class="q-limit-btn py-2.5 rounded-lg border border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-800 transition text-center">
+            ⚡ 10문항
+          </button>
+          <button type="button" data-limit="20" class="q-limit-btn py-2.5 rounded-lg border border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-800 transition text-center">
+            🎯 20문항
+          </button>
+          <button type="button" data-limit="30" class="q-limit-btn py-2.5 rounded-lg border border-neutral-300 bg-white hover:bg-neutral-100 text-neutral-800 transition text-center">
+            🔥 30문항
+          </button>
+          <button type="button" data-limit="all" class="q-limit-btn py-2.5 rounded-lg border-2 border-neutral-900 bg-neutral-900 text-white transition text-center shadow-sm">
+            🏆 전 문항 (기본)
+          </button>
+        </div>
+      </div>
+
       <!-- Feature Principles Guide -->
       <div class="p-4 rounded-lg bg-neutral-50 border border-neutral-200 text-xs space-y-1.5 font-sans text-neutral-700">
         <div class="font-bold text-neutral-900 text-sm flex items-center gap-1.5">
@@ -320,9 +365,14 @@
             <span>📝</span> <span class="hidden sm:inline">OMR</span><span id="omrAnsweredCount">0/87</span>
           </button>
 
+          <!-- Partial Finish Button (중간 채점) -->
+          <button id="btnPartialSubmit" class="px-2.5 sm:px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition shadow text-[11px] sm:text-xs flex items-center gap-1" title="지금까지 푼 문제만 즉시 채점하고 복사합니다">
+            <span>⏸️</span> <span>푼 것만 채점</span>
+          </button>
+
           <!-- Submit Button -->
-          <button id="btnSubmitExam" class="px-3 sm:px-4 py-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-lg transition shadow">
-            終了·採点 (채점)
+          <button id="btnSubmitExam" class="px-2.5 sm:px-3 py-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-lg transition shadow text-[11px] sm:text-xs">
+            전체 채점
           </button>
         </div>
       </div>
@@ -463,6 +513,65 @@
     </div>
 
     <!-- ================================================================= -->
+    
+    <!-- PARTIAL SUBMIT MODAL (중간 채점 확인 팝업) -->
+    <div id="partialSubmitModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-3 font-sans">
+      <div class="bg-white rounded-2xl max-w-md w-full p-6 flex flex-col space-y-4 shadow-2xl">
+        <div class="flex items-center gap-2 text-emerald-800">
+          <span class="text-2xl">⏸️</span>
+          <h3 class="font-black text-lg text-neutral-900">중간 채점 & 학습 갱신</h3>
+        </div>
+        <p class="text-xs text-neutral-600 leading-relaxed" id="partialModalDesc">
+          현재까지 총 <strong class="text-emerald-700 font-bold" id="partialModalCount">0문항</strong>을 풀었습니다.<br>
+          지금까지 푼 문항만 즉시 채점하고 학습 결과 복사 화면으로 이동하시겠습니까?
+        </p>
+        <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-900 space-y-1">
+          <div class="font-bold flex items-center gap-1"><span>✓</span> <span>미응답 문항은 오답으로 처리되지 않습니다!</span></div>
+          <div class="text-[11px] text-emerald-700">실제로 푼 문항만 분모로 계산되어 정답률이 왜곡되지 않고 정확히 기록됩니다.</div>
+        </div>
+        <div class="flex items-center gap-2 pt-2">
+          <button id="btnConfirmPartialSubmit" class="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl transition shadow">
+            ✓ 푼 것만 채점하고 완료
+          </button>
+          <button id="btnCancelPartialSubmit" class="px-4 py-3 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold text-xs rounded-xl transition">
+            계속 풀기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- FULL SUBMIT CONFIRM MODAL (미마킹 문항 존재 시 확인) -->
+    <div id="fullSubmitModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-3 font-sans">
+      <div class="bg-white rounded-2xl max-w-md w-full p-6 flex flex-col space-y-4 shadow-2xl">
+        <div class="flex items-center gap-2 text-rose-800">
+          <span class="text-2xl">⚠️</span>
+          <h3 class="font-black text-lg text-neutral-900">시험 종료 확인</h3>
+        </div>
+        <p class="text-xs text-neutral-600 leading-relaxed" id="fullModalDesc">
+          미마킹 문항이 남아있습니다. 종료 방식을 선택하세요:
+        </p>
+        <div class="space-y-2">
+          <button id="btnModalChoosePartial" class="w-full p-3 text-left rounded-xl border-2 border-emerald-500 bg-emerald-50 hover:bg-emerald-100 transition">
+            <div class="font-bold text-xs text-emerald-900 flex items-center gap-1.5">
+              <span>⏸️</span> <span>[추천] 지금까지 푼 문항만 채점하기 (<span id="modalPartialCount">0</span>문항)</span>
+            </div>
+            <div class="text-[11px] text-emerald-700 mt-0.5">안 푼 문제는 오답에 포함하지 않고 현재까지 푼 것만 점수 계산</div>
+          </button>
+          <button id="btnModalChooseFull" class="w-full p-3 text-left rounded-xl border border-neutral-300 bg-white hover:bg-neutral-100 transition">
+            <div class="font-bold text-xs text-neutral-800 flex items-center gap-1.5">
+              <span>🏁</span> <span>남은 문항 전부 오답/미응답 처리하고 전체 종료</span>
+            </div>
+            <div class="text-[11px] text-neutral-500 mt-0.5">전체 문항수를 기준으로 채점합니다</div>
+          </button>
+        </div>
+        <div class="pt-2">
+          <button id="btnCancelFullSubmit" class="w-full py-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-bold text-xs rounded-xl transition">
+            취소하고 계속 풀기
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- SCREEN 3: RESULTS & FULL EXPLANATIONS -->
     <!-- ================================================================= -->
     <section id="screenResult" class="hidden space-y-6">
@@ -566,19 +675,23 @@
      ======================================================== */
   const state = {
     course: 'all',
+    qLimit: 'all', // '10', '20', '30', 'all'
     activeQuestions: [],
+    evalQuestions: [], // 실제 채점 대상 문항
     currentIndex: 0,
     userAnswers: {}, // id -> choiceNum (1~4, or 5 for unknown)
     startTime: null,
     timerInterval: null,
     elapsedSec: 0,
     submitted: false,
+    isPartial: false,
     wrongList: [],
     filterMode: 'all',
     feedbackMode: 'instant', // 'instant' (1問1答) or 'batch' (실전 일괄)
     currentAnswered: false
   };
 
+  const STORAGE_KEY = 'machigai_review_saved_state_v1';
   const $ = id => document.getElementById(id);
 
   /* Init Event Listeners */
@@ -586,17 +699,140 @@
     initLobby();
     initExamControls();
     initTheme();
+    checkSavedProgress();
   });
 
   function initTheme() {
     const btn = $('btnThemeToggle');
+    if (!btn) return;
     btn.onclick = () => {
       document.body.classList.toggle('dark-theme');
       btn.textContent = document.body.classList.contains('dark-theme') ? '☀️ 라이트 모드' : '🌓 다크 모드';
     };
   }
 
+  /* ----------------------------------------------------
+     LOCAL STORAGE: AUTO-SAVE & RESUME
+     ---------------------------------------------------- */
+  function saveProgress() {
+    if (state.submitted || !state.activeQuestions.length) return;
+    try {
+      const data = {
+        course: state.course,
+        qLimit: state.qLimit,
+        activeQuestionIds: state.activeQuestions.map(q => q.id),
+        currentIndex: state.currentIndex,
+        userAnswers: state.userAnswers,
+        elapsedSec: state.elapsedSec,
+        feedbackMode: state.feedbackMode,
+        timestamp: Date.now()
+      };
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+      console.warn('Auto-save error:', e);
+    }
+  }
+
+  function clearSavedProgress() {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (e) {}
+  }
+
+  function checkSavedProgress() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+      if (!data || !data.activeQuestionIds || !data.activeQuestionIds.length) return;
+
+      // Check expiry (7 days)
+      if (Date.now() - (data.timestamp || 0) > 7 * 24 * 3600 * 1000) {
+        clearSavedProgress();
+        return;
+      }
+
+      const answeredCount = Object.keys(data.userAnswers || {}).length;
+      const banner = $('resumeBanner');
+      if (!banner) return;
+
+      const dateStr = new Date(data.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      $('resumeSavedTime').textContent = `최근 저장: ${dateStr}`;
+
+      const courseNames = {
+        all: '全領域 87제',
+        lang_reading: '言語知識・読解 62제',
+        listening: '聴解 原本音声 25제',
+        vocab_grammar: '語彙・文法 30제'
+      };
+      const courseTitle = courseNames[data.course] || data.course;
+      $('resumeInfoText').innerHTML = `이전 진행 내역: <strong>${courseTitle}</strong> · <strong>Q${(data.currentIndex || 0) + 1}</strong> 진행 중 (마킹 완료: ${answeredCount}/${data.activeQuestionIds.length}문항, 소요시간: ${Math.floor(data.elapsedSec / 60)}분 ${data.elapsedSec % 60}초)`;
+
+      banner.classList.remove('hidden');
+
+      $('btnResumeSession').onclick = resumeSavedSession;
+      $('btnDiscardSession').onclick = () => {
+        if (confirm('저장된 이전 진행 내역을 삭제하고 새로 시작하시겠습니까?')) {
+          clearSavedProgress();
+          banner.classList.add('hidden');
+        }
+      };
+    } catch (e) {
+      console.warn('Error checking saved progress:', e);
+    }
+  }
+
+  function resumeSavedSession() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      const data = JSON.parse(raw);
+
+      state.course = data.course || 'all';
+      state.qLimit = data.qLimit || 'all';
+      state.feedbackMode = data.feedbackMode || 'instant';
+
+      const idMap = new Map(ALL_ERROR_QUESTIONS.map(q => [q.id, q]));
+      state.activeQuestions = data.activeQuestionIds.map(id => idMap.get(id)).filter(Boolean);
+      state.currentIndex = Math.min(data.currentIndex || 0, state.activeQuestions.length - 1);
+      state.userAnswers = data.userAnswers || {};
+      state.elapsedSec = data.elapsedSec || 0;
+      state.submitted = false;
+      state.wrongList = [];
+      state.filterMode = 'all';
+
+      const currentQ = state.activeQuestions[state.currentIndex];
+      state.currentAnswered = currentQ ? (state.userAnswers[currentQ.id] !== undefined) : false;
+
+      $('screenLobby').classList.add('hidden');
+      $('screenResult').classList.add('hidden');
+      $('screenExam').classList.remove('hidden');
+
+      $('hudModeBadge').textContent = (state.feedbackMode === 'instant') ? '⚡ 1問1答 即時解説' : '📝 実戦連続解答';
+
+      state.startTime = Date.now() - (state.elapsedSec * 1000);
+      clearInterval(state.timerInterval);
+      state.timerInterval = setInterval(() => {
+        state.elapsedSec = Math.floor((Date.now() - state.startTime) / 1000);
+        const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
+        const s = String(state.elapsedSec % 60).padStart(2, '0');
+        $('hudTimer').textContent = `${m}:${s}`;
+        if (state.elapsedSec % 5 === 0) saveProgress();
+      }, 1000);
+
+      renderQuestion();
+      updateOmrCount();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (e) {
+      alert('저장된 세션을 복원하는 중 오류가 발생했습니다: ' + e.message);
+    }
+  }
+
+  /* ----------------------------------------------------
+     LOBBY & CONFIGURATION
+     ---------------------------------------------------- */
   function initLobby() {
+    // Course selection cards
     document.querySelectorAll('.course-card').forEach(card => {
       card.onclick = () => {
         document.querySelectorAll('.course-card').forEach(c => {
@@ -608,6 +844,19 @@
         card.classList.add('border-neutral-900', 'bg-neutral-900', 'text-white', 'shadow-md');
         card.classList.remove('border-neutral-300', 'bg-white', 'text-neutral-900');
         state.course = card.dataset.course;
+      };
+    });
+
+    // Question count limit buttons
+    document.querySelectorAll('.q-limit-btn').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('.q-limit-btn').forEach(b => {
+          b.classList.remove('border-2', 'border-neutral-900', 'bg-neutral-900', 'text-white', 'shadow-sm');
+          b.classList.add('border-neutral-300', 'bg-white', 'text-neutral-800');
+        });
+        btn.classList.add('border-2', 'border-neutral-900', 'bg-neutral-900', 'text-white', 'shadow-sm');
+        btn.classList.remove('border-neutral-300', 'bg-white', 'text-neutral-800');
+        state.qLimit = btn.dataset.limit;
       };
     });
 
@@ -631,7 +880,14 @@
       pool = ALL_ERROR_QUESTIONS.filter(q => q.is_listening);
     } else if (state.course === 'vocab_grammar') {
       const vg = ALL_ERROR_QUESTIONS.filter(q => q.section.includes('文字・語彙') || q.section.includes('文法'));
-      pool = [...vg].sort(() => 0.5 - Math.random()).slice(0, 30);
+      pool = [...vg].sort(() => 0.5 - Math.random());
+    }
+
+    if (state.qLimit !== 'all') {
+      const limit = parseInt(state.qLimit, 10);
+      if (limit > 0 && limit < pool.length) {
+        pool = pool.slice(0, limit);
+      }
     }
 
     startSessionWithPool(pool);
@@ -643,6 +899,7 @@
     state.userAnswers = {};
     state.elapsedSec = 0;
     state.submitted = false;
+    state.isPartial = false;
     state.wrongList = [];
     state.filterMode = 'all';
     state.currentAnswered = false;
@@ -660,175 +917,273 @@
       const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
       const s = String(state.elapsedSec % 60).padStart(2, '0');
       $('hudTimer').textContent = `${m}:${s}`;
+      if (state.elapsedSec % 5 === 0) saveProgress();
     }, 1000);
 
     renderQuestion();
-    renderOmrGrid();
+    updateOmrCount();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    saveProgress();
   }
 
+  /* ----------------------------------------------------
+     EXAM CONTROLS & NAVIGATION
+     ---------------------------------------------------- */
+  function initExamControls() {
+    $('btnToggleOmr').onclick = () => {
+      renderOmrGrid();
+      $('omrModal').classList.remove('hidden');
+    };
+    $('btnCloseOmr').onclick = () => {
+      $('omrModal').classList.add('hidden');
+    };
+    $('btnConfirmSubmitFromOmr').onclick = () => {
+      $('omrModal').classList.add('hidden');
+      confirmSubmit();
+    };
+
+    // Full Submit button
+    $('btnSubmitExam').onclick = confirmSubmit;
+
+    // Partial Finish button (푼 것만 채점)
+    if ($('btnPartialSubmit')) {
+      $('btnPartialSubmit').onclick = confirmPartialSubmit;
+    }
+
+    // Modal event handlers
+    initModalEvents();
+
+    $('btnPrevQ').onclick = () => {
+      if (state.currentIndex > 0) {
+        state.currentIndex--;
+        renderQuestion();
+      }
+    };
+    $('btnNextQ').onclick = () => {
+      if (state.currentIndex < state.activeQuestions.length - 1) {
+        state.currentIndex++;
+        renderQuestion();
+      } else {
+        confirmSubmit();
+      }
+    };
+
+    // 1問1答 Instant Next Buttons
+    $('btnInstantNextTop').onclick = advanceNextInstant;
+    $('btnInstantNextBottom').onclick = advanceNextInstant;
+
+    // Global Keyboard Shortcuts
+    window.addEventListener('keydown', e => {
+      if (state.submitted || $('screenExam').classList.contains('hidden')) return;
+      if ($('omrModal') && !$('omrModal').classList.contains('hidden')) return;
+      if ($('partialSubmitModal') && !$('partialSubmitModal').classList.contains('hidden')) return;
+      if ($('fullSubmitModal') && !$('fullSubmitModal').classList.contains('hidden')) return;
+
+      const key = e.key;
+      if (['1', '2', '3', '4'].includes(key)) {
+        if (!state.currentAnswered || state.feedbackMode !== 'instant') {
+          e.preventDefault();
+          selectAnswer(parseInt(key, 10));
+        }
+      } else if (key === 'Enter') {
+        if (state.feedbackMode === 'instant' && state.currentAnswered) {
+          e.preventDefault();
+          advanceNextInstant();
+        }
+      } else if (key === ' ' || key === '5' || key === '0') {
+        if (state.feedbackMode === 'instant' && state.currentAnswered) {
+          e.preventDefault();
+          advanceNextInstant();
+        } else if (!state.currentAnswered || state.feedbackMode !== 'instant') {
+          e.preventDefault();
+          selectAnswer(5); // unknown
+        }
+      } else if (key === 'ArrowRight') {
+        if (state.feedbackMode !== 'instant') $('btnNextQ').click();
+      } else if (key === 'ArrowLeft') {
+        $('btnPrevQ').click();
+      }
+    });
+  }
+
+  function initModalEvents() {
+    // Partial Submit Modal
+    if ($('btnConfirmPartialSubmit')) {
+      $('btnConfirmPartialSubmit').onclick = () => {
+        $('partialSubmitModal').classList.add('hidden');
+        finishExam(true);
+      };
+    }
+    if ($('btnCancelPartialSubmit')) {
+      $('btnCancelPartialSubmit').onclick = () => {
+        $('partialSubmitModal').classList.add('hidden');
+      };
+    }
+
+    // Full Submit Modal (When unanswered exist)
+    if ($('btnModalChoosePartial')) {
+      $('btnModalChoosePartial').onclick = () => {
+        $('fullSubmitModal').classList.add('hidden');
+        finishExam(true);
+      };
+    }
+    if ($('btnModalChooseFull')) {
+      $('btnModalChooseFull').onclick = () => {
+        $('fullSubmitModal').classList.add('hidden');
+        finishExam(false);
+      };
+    }
+    if ($('btnCancelFullSubmit')) {
+      $('btnCancelFullSubmit').onclick = () => {
+        $('fullSubmitModal').classList.add('hidden');
+      };
+    }
+  }
+
+  /* ----------------------------------------------------
+     QUESTION RENDERING & INTERACTION
+     ---------------------------------------------------- */
   function renderQuestion() {
     const q = state.activeQuestions[state.currentIndex];
     if (!q) return;
 
-    state.currentAnswered = (state.userAnswers[q.id] !== undefined);
-
-    // HUD updates
+    // HUD Update
     $('hudSectionBadge').textContent = q.section;
     $('hudQIndexBadge').textContent = `Q${state.currentIndex + 1} / ${state.activeQuestions.length}`;
-
-    // Header info
     $('qExamSrc').textContent = q.exam_src;
-    $('qMondaiTitle').textContent = q.mondai_title || q.section;
+    $('qMondaiTitle').textContent = q.mondai_title;
     $('qNumTag').textContent = q.q_num;
+    $('qInstructionBox').textContent = q.instruction;
 
-    // Instruction
-    const instrBox = $('qInstructionBox');
-    if (q.instruction) {
-      instrBox.classList.remove('hidden');
-      instrBox.textContent = q.instruction;
+    // Passage box
+    const passageBox = $('qPassageBox');
+    if (q.passage_text && q.passage_text.trim()) {
+      passageBox.innerHTML = q.passage_text;
+      passageBox.classList.remove('hidden');
     } else {
-      instrBox.classList.add('hidden');
+      passageBox.classList.add('hidden');
     }
 
-    // Audio player for listening
+    // Audio box
     const audioBox = $('qAudioBox');
     const audioPlayer = $('audioPlayer');
     if (q.is_listening && q.audio_file) {
       audioBox.classList.remove('hidden');
       audioPlayer.src = `/exams/audio_clips/${q.audio_file}`;
-      $('audioStatusText').textContent = '재생 준비 완료 (' + q.audio_file + ')';
+      $('audioStatusText').textContent = '재생 대기중 (클릭하여 듣기)';
+      audioPlayer.onplay = () => $('audioStatusText').textContent = '🔊 음성 재생 중...';
+      audioPlayer.onended = () => $('audioStatusText').textContent = '✓ 음성 재생 완료';
     } else {
       audioBox.classList.add('hidden');
       audioPlayer.pause();
-      audioPlayer.src = '';
-    }
-
-    // Reading passage
-    const passageBox = $('qPassageBox');
-    if (q.passage_text) {
-      passageBox.classList.remove('hidden');
-      passageBox.innerHTML = q.passage_text.split('\n\n').map(p => `<p class="mb-3">${p}</p>`).join('');
-    } else {
-      passageBox.classList.add('hidden');
+      audioPlayer.removeAttribute('src');
     }
 
     // Question sentence
-    $('qQuestionSentence').innerHTML = q.question_text || '次の問いに答えなさい。';
+    $('qQuestionSentence').innerHTML = q.question_text;
 
-    // Hide instant feedback box initially when rendering new question
-    const fbBox = $('instantFeedbackBox');
-    const standardNavBox = $('standardNavBox');
-
+    // Check if already answered
     const currentAns = state.userAnswers[q.id];
+    state.currentAnswered = (currentAns !== undefined);
 
-    // Choices
+    // Render Choices
     const container = $('choicesContainer');
-    let choiceHtml = q.choices.map((c, idx) => {
-      const num = idx + 1;
-      let btnClass = '';
-      if (currentAns) {
-        if (num === q.correct_num) btnClass = 'correct-choice ring-2 ring-emerald-500';
-        else if (num === currentAns) btnClass = 'wrong-choice';
+    container.innerHTML = '';
+
+    q.choices.forEach((choiceText, idx) => {
+      const choiceNum = idx + 1;
+      const btn = document.createElement('button');
+      btn.className = 'omr-choice-btn w-full p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 transition cursor-pointer';
+
+      let circleClass = '';
+      if (currentAns === choiceNum) {
+        btn.classList.add('selected');
       }
-      return `
-        <button type="button" data-num="${num}" ${currentAns && state.feedbackMode === 'instant' ? 'disabled' : ''} class="omr-choice-btn w-full p-3.5 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none ${btnClass}">
-          <div class="flex items-center gap-3">
-            <span class="omr-circle">${num}</span>
-            <span class="font-bold tracking-wide">${c}</span>
-          </div>
-          <span class="text-xs opacity-60 font-mono hidden sm:inline">[${num}]</span>
-        </button>
+
+      // If already answered in instant mode, reveal correct/wrong styles immediately
+      if (state.feedbackMode === 'instant' && state.currentAnswered) {
+        if (choiceNum === q.correct_num) {
+          btn.classList.add('correct-choice');
+        } else if (currentAns === choiceNum && currentAns !== q.correct_num) {
+          btn.classList.add('wrong-choice');
+        }
+      }
+
+      btn.innerHTML = `
+        <span class="omr-circle">${choiceNum}</span>
+        <span class="text-sm sm:text-base leading-snug flex-1 font-serif pt-0.5">${choiceText}</span>
       `;
-    }).join('');
 
-    // Add 5. 分からない choice
-    let unknownClass = '';
-    if (currentAns === 5) {
-      unknownClass = 'wrong-choice ring-2 ring-amber-500';
-    }
-    choiceHtml += `
-      <button type="button" data-num="5" ${currentAns && state.feedbackMode === 'instant' ? 'disabled' : ''} class="omr-choice-btn w-full p-3 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none border-dashed border-amber-500 ${unknownClass}">
-        <div class="flex items-center gap-3 text-amber-700">
-          <span class="omr-circle border-amber-600">?</span>
-          <span class="font-bold">分からない (모름 / 확실하지 않음)</span>
-        </div>
-        <span class="text-xs opacity-60 font-mono text-amber-600 hidden sm:inline">[Space]</span>
-      </button>
-    `;
-
-    container.innerHTML = choiceHtml;
-
-    container.querySelectorAll('.omr-choice-btn').forEach(btn => {
-      btn.onclick = () => {
-        const num = parseInt(btn.dataset.num, 10);
-        selectAnswer(num);
-      };
+      btn.onclick = () => selectAnswer(choiceNum);
+      container.appendChild(btn);
     });
 
-    // Update Instant Feedback Box if already answered
-    if (currentAns !== undefined && state.feedbackMode === 'instant') {
-      showInstantFeedback(q, currentAns);
-      standardNavBox.classList.add('hidden');
+    // Unknown Button (分からない)
+    const unknownBtn = document.createElement('button');
+    unknownBtn.className = 'omr-choice-btn w-full p-2.5 sm:p-3 rounded-xl text-left flex items-center justify-between text-xs transition cursor-pointer border-dashed border-amber-400 bg-amber-50/50 hover:bg-amber-100 text-amber-950 mt-2';
+    if (currentAns === 5) {
+      unknownBtn.classList.add('selected', 'bg-amber-300', 'border-amber-600', 'font-bold');
+    }
+    unknownBtn.innerHTML = `
+      <div class="flex items-center gap-2">
+        <span class="w-5 h-5 rounded-full border border-amber-600 flex items-center justify-center font-bold text-[10px]">?</span>
+        <span>分からない (모름 / 확실하지 않음)</span>
+      </div>
+      <span class="text-[10px] text-amber-800 font-mono">단축키: Space / 5</span>
+    `;
+    unknownBtn.onclick = () => selectAnswer(5);
+    container.appendChild(unknownBtn);
+
+    // Instant Feedback UI handling
+    const feedbackBox = $('instantFeedbackBox');
+    const standardNav = $('standardNavBox');
+
+    if (state.feedbackMode === 'instant') {
+      standardNav.classList.add('hidden');
+      if (state.currentAnswered) {
+        showInstantFeedback(q, currentAns);
+      } else {
+        feedbackBox.classList.add('hidden');
+      }
     } else {
-      fbBox.classList.add('hidden');
-      standardNavBox.classList.remove('hidden');
+      feedbackBox.classList.add('hidden');
+      standardNav.classList.remove('hidden');
+      $('btnPrevQ').disabled = (state.currentIndex === 0);
+      $('btnNextQ').innerHTML = (state.currentIndex === state.activeQuestions.length - 1)
+        ? `<span>채점하기 (採点)</span> <span>🏁</span>`
+        : `<span>다음 문제 (次の問題)</span> <span>▶</span>`;
     }
 
-    // Update Nav buttons
-    $('btnPrevQ').disabled = state.currentIndex === 0;
-    $('btnNextQ').textContent = (state.currentIndex === state.activeQuestions.length - 1) ? '마지막 문제 (OMR확인) ➔' : '다음 문제 (次の問題) ▶';
-
     updateOmrCount();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   function selectAnswer(choiceNum) {
     const q = state.activeQuestions[state.currentIndex];
+    if (!q) return;
+
     state.userAnswers[q.id] = choiceNum;
     state.currentAnswered = true;
-
     updateOmrCount();
-    updateOmrGridSingle(state.currentIndex);
+    saveProgress();
 
     if (state.feedbackMode === 'instant') {
-      // In Instant 1-by-1 Mode, immediately reveal explanation and lock choices
-      const container = $('choicesContainer');
-      container.querySelectorAll('.omr-choice-btn').forEach(btn => {
-        btn.disabled = true;
-        const num = parseInt(btn.dataset.num, 10);
-        if (num === q.correct_num) {
-          btn.classList.add('correct-choice', 'ring-2', 'ring-emerald-500');
-        } else if (num === choiceNum) {
-          btn.classList.add('wrong-choice');
-        }
-      });
-
-      showInstantFeedback(q, choiceNum);
-      $('standardNavBox').classList.add('hidden');
+      renderQuestion();
     } else {
-      // Standard batch mode
-      const container = $('choicesContainer');
-      container.querySelectorAll('.omr-choice-btn').forEach(btn => {
-        const num = parseInt(btn.dataset.num, 10);
-        if (num === choiceNum) btn.classList.add('selected');
-        else btn.classList.remove('selected');
-      });
+      renderQuestion();
+      if (state.currentIndex < state.activeQuestions.length - 1) {
+        state.currentIndex++;
+        renderQuestion();
+      }
     }
   }
 
-  function showInstantFeedback(q, userChoice) {
-    const fbBox = $('instantFeedbackBox');
-    fbBox.classList.remove('hidden');
+  function showInstantFeedback(q, userAns) {
+    const feedbackBox = $('instantFeedbackBox');
+    feedbackBox.classList.remove('hidden');
 
-    const isCorrect = (userChoice === q.correct_num);
-    const isUnknown = (userChoice === 5);
+    const isCorrect = (userAns === q.correct_num);
+    const isUnknown = (userAns === 5);
     const banner = $('instantVerdictBanner');
-
-    const isLast = (state.currentIndex === state.activeQuestions.length - 1);
-    const nextBtnText = isLast ? '🎉 마지막 문제 완료! 최종 결과 보기 (Enter) ➔' : '확인 완료 · 다음 문제로 이동 (Enter / Space) ➔';
-
-    $('btnInstantNextTop').innerHTML = `<span>${nextBtnText}</span>`;
-    $('btnInstantNextBottom').innerHTML = `<span>${nextBtnText}</span>`;
 
     if (isCorrect) {
       banner.className = 'p-4 rounded-xl font-bold flex items-center justify-between text-sm sm:text-base bg-emerald-50 border-2 border-emerald-500 text-emerald-900 shadow-sm';
@@ -859,10 +1214,7 @@
       `;
     }
 
-    // Injected explanation content
     $('instantExplanationContent').innerHTML = q.explanation_html;
-
-    // Scroll slightly to reveal verdict banner
     banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
@@ -870,75 +1222,15 @@
     if (state.currentIndex < state.activeQuestions.length - 1) {
       state.currentIndex++;
       renderQuestion();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      finishExam();
+      finishExam(false);
     }
   }
 
   function updateOmrCount() {
     const answered = Object.keys(state.userAnswers).length;
     $('omrAnsweredCount').textContent = `${answered}/${state.activeQuestions.length}`;
-  }
-
-  function initExamControls() {
-    $('btnPrevQ').onclick = () => {
-      if (state.currentIndex > 0) {
-        state.currentIndex--;
-        renderQuestion();
-      }
-    };
-
-    $('btnNextQ').onclick = () => {
-      if (state.currentIndex < state.activeQuestions.length - 1) {
-        state.currentIndex++;
-        renderQuestion();
-      } else {
-        $('omrModal').classList.remove('hidden');
-      }
-    };
-
-    $('btnInstantNextTop').onclick = advanceNextInstant;
-    $('btnInstantNextBottom').onclick = advanceNextInstant;
-
-    $('btnToggleOmr').onclick = () => {
-      $('omrModal').classList.remove('hidden');
-    };
-
-    $('btnCloseOmr').onclick = () => {
-      $('omrModal').classList.add('hidden');
-    };
-
-    $('btnSubmitExam').onclick = confirmSubmit;
-    $('btnConfirmSubmitFromOmr').onclick = confirmSubmit;
-
-    // Keyboard navigation
-    window.addEventListener('keydown', e => {
-      if ($('screenExam').classList.contains('hidden') || state.submitted) return;
-
-      // If instant feedback is showing and user presses Enter or Space, immediately advance to next!
-      if (state.feedbackMode === 'instant' && state.currentAnswered) {
-        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') {
-          e.preventDefault();
-          advanceNextInstant();
-          return;
-        }
-      }
-
-      if (['1', '2', '3', '4'].includes(e.key)) {
-        if (!state.currentAnswered || state.feedbackMode !== 'instant') {
-          selectAnswer(parseInt(e.key, 10));
-        }
-      } else if (e.key === ' ' || e.key === '5' || e.key === '0') {
-        if (!state.currentAnswered || state.feedbackMode !== 'instant') {
-          e.preventDefault();
-          selectAnswer(5); // unknown
-        }
-      } else if (e.key === 'ArrowRight') {
-        if (state.feedbackMode !== 'instant') $('btnNextQ').click();
-      } else if (e.key === 'ArrowLeft') {
-        $('btnPrevQ').click();
-      }
-    });
   }
 
   function renderOmrGrid() {
@@ -967,26 +1259,62 @@
     });
   }
 
-  function updateOmrGridSingle(idx) {
-    renderOmrGrid();
+  /* ----------------------------------------------------
+     PARTIAL & FULL SUBMISSION LOGIC
+     ---------------------------------------------------- */
+  function confirmPartialSubmit() {
+    const answeredCount = Object.keys(state.userAnswers).length;
+    if (answeredCount === 0) {
+      alert('아직 푼 문제가 없습니다. 최소 1문제 이상 풀어주세요.');
+      return;
+    }
+
+    if ($('partialSubmitModal')) {
+      $('partialModalCount').textContent = `${answeredCount}문항`;
+      $('partialSubmitModal').classList.remove('hidden');
+    } else {
+      const ok = confirm(`현재까지 총 ${answeredCount}문제를 풀었습니다.\n지금까지 푼 문항만 즉시 채점하고 완료하시겠습니까?\n(미응답 문항은 오답으로 처리되지 않습니다)`);
+      if (ok) finishExam(true);
+    }
   }
 
   function confirmSubmit() {
-    const unanswered = state.activeQuestions.length - Object.keys(state.userAnswers).length;
+    const totalQ = state.activeQuestions.length;
+    const answeredCount = Object.keys(state.userAnswers).length;
+    const unanswered = totalQ - answeredCount;
+
     if (unanswered > 0) {
-      const ok = confirm(`미마킹 문항이 ${unanswered}개 남아있습니다.\n이대로 종료하고 최종 채점하시겠습니까?`);
-      if (!ok) return;
+      if ($('fullSubmitModal')) {
+        $('modalPartialCount').textContent = answeredCount;
+        $('fullModalDesc').innerHTML = `전체 ${totalQ}문항 중 <strong class="text-rose-600">${unanswered}개</strong>가 미마킹 상태입니다.<br>어떻게 채점할지 방식을 선택해 주세요:`;
+        $('fullSubmitModal').classList.remove('hidden');
+      } else {
+        const ok = confirm(`미마킹 문항이 ${unanswered}개 남아있습니다.\n이대로 종료하고 최종 채점하시겠습니까?`);
+        if (ok) finishExam(false);
+      }
+      return;
     }
-    finishExam();
+
+    finishExam(false);
   }
 
-  function finishExam() {
+  function finishExam(isPartial = false) {
+    state.isPartial = isPartial;
     state.submitted = true;
     clearInterval(state.timerInterval);
-    $('audioPlayer').pause();
-    $('omrModal').classList.add('hidden');
+    clearSavedProgress();
+
+    if ($('audioPlayer')) $('audioPlayer').pause();
+    if ($('omrModal')) $('omrModal').classList.add('hidden');
+    if ($('partialSubmitModal')) $('partialSubmitModal').classList.add('hidden');
+    if ($('fullSubmitModal')) $('fullSubmitModal').classList.add('hidden');
     $('screenExam').classList.add('hidden');
     $('screenResult').classList.remove('hidden');
+
+    // Evaluation Pool
+    state.evalQuestions = isPartial
+      ? state.activeQuestions.filter(q => state.userAnswers[q.id] !== undefined)
+      : state.activeQuestions;
 
     let correctCount = 0;
     let wrongCount = 0;
@@ -995,7 +1323,7 @@
 
     const sectionStats = {};
 
-    state.activeQuestions.forEach(q => {
+    state.evalQuestions.forEach(q => {
       const ans = state.userAnswers[q.id];
       const isCorrect = (ans === q.correct_num);
       const isUnknown = (ans === 5);
@@ -1015,17 +1343,23 @@
       }
     });
 
-    const total = state.activeQuestions.length;
-    const accuracy = Math.round((correctCount / total) * 100);
+    const total = state.evalQuestions.length;
+    const accuracy = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
     $('resAccuracy').textContent = `${accuracy}%`;
-    $('resFraction').textContent = `${correctCount} / ${total} (정답/총문항)`;
-    
+    if (isPartial) {
+      $('resFraction').textContent = `${correctCount} / ${total} (중간 채점 / 전체 ${state.activeQuestions.length}제 중)`;
+      $('resSubtitle').innerHTML = `총 ${state.activeQuestions.length}문항 중 <strong class="text-emerald-700 font-bold">${total}문항 중간 채점</strong>이 완료되었습니다. (미응답 문항은 오답에 미반영)`;
+    } else {
+      $('resFraction').textContent = `${correctCount} / ${total} (정답/총문항)`;
+      $('resSubtitle').textContent = `모의고사 間違いノート(오답노트) 복습 세션이 정상적으로 완료되었습니다.`;
+    }
+
     const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
     const s = String(state.elapsedSec % 60).padStart(2, '0');
     $('resTime').textContent = `${m}:${s}`;
-    
-    const pace = (state.elapsedSec / total).toFixed(1);
+
+    const pace = total > 0 ? (state.elapsedSec / total).toFixed(1) : 0;
     $('resPace').textContent = `문항당 평균 ${pace}초`;
     $('resWrongCount').textContent = wrongCount;
     $('resUnknownCount').textContent = unknownCount;
@@ -1067,12 +1401,12 @@
     const s = sec % 60;
     const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
 
-    const total = state.activeQuestions.length;
+    const total = state.evalQuestions.length;
     let correct = 0;
-    state.activeQuestions.forEach(q => {
+    state.evalQuestions.forEach(q => {
       if (state.userAnswers[q.id] === q.correct_num) correct++;
     });
-    const accuracy = Math.round((correct / total) * 100);
+    const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
 
     const courseNames = {
       all: '전영역 87제 풀 코스',
@@ -1080,7 +1414,10 @@
       listening: '청해 실전음원 25제',
       vocab_grammar: '어휘·문법 킬러 30제'
     };
-    const courseTitle = courseNames[state.course] || state.course;
+    let courseTitle = courseNames[state.course] || state.course;
+    if (state.isPartial) {
+      courseTitle += ` [${total}문항 중간완료]`;
+    }
 
     const wrongIds = state.wrongList.map(item => item.q.q_num).join(', ');
 
@@ -1106,6 +1443,7 @@
     $('btnRestartLobby').onclick = () => {
       $('screenResult').classList.add('hidden');
       $('screenLobby').classList.remove('hidden');
+      checkSavedProgress();
     };
 
     $('btnRetryWrongOnly').onclick = () => {
@@ -1133,8 +1471,8 @@
 
   function renderExplanations() {
     const container = $('explanationsList');
-    
-    const filtered = state.activeQuestions.filter(q => {
+
+    const filtered = state.evalQuestions.filter(q => {
       const ans = state.userAnswers[q.id];
       const isCorrect = (ans === q.correct_num);
       const isUnknown = (ans === 5);
