@@ -412,11 +412,28 @@ function generateQuestions(course, count) {
   return selected.map(item => {
     const distractors = new Set();
     
-    // 1. Check if diff_point mentions another pattern
+    // 1. Check if diff_point mentions another pattern (Prioritize clean match from ALL_PATTERNS)
     if (item.diff_point) {
-      const match = item.diff_point.match(/〜[^\s、。ととは]+(?=[ととは]|\s|\b|$)/);
-      if (match && match[0] !== item.pattern) {
-        distractors.add(match[0]);
+      // 1-1. Find registered pattern mentioned in diff_point
+      for (const candidate of ALL_PATTERNS) {
+        if (candidate.id === item.id || candidate.pattern === item.pattern) continue;
+        const subPats = candidate.pattern.split(/[／/・]/).map(p => p.replace(/^[〜~]/, '').replace(/[（(].*?[）)]/g, '').trim());
+        const isMentioned = subPats.some(sp => sp.length >= 2 && item.diff_point.includes(sp));
+        if (isMentioned) {
+          distractors.add(candidate.pattern);
+          break;
+        }
+      }
+
+      // 1-2. Fallback: Extract pure Japanese grammar token starting with 〜 (strict no-Korean)
+      if (distractors.size === 0) {
+        const rawMatch = item.diff_point.match(/[〜~][\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFFー]+/);
+        if (rawMatch) {
+          const cleaned = rawMatch[0].replace(/[ととはがのをにへで]+$/, '');
+          if (cleaned.length >= 2 && cleaned !== item.pattern && !/[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(cleaned)) {
+            distractors.add(cleaned);
+          }
+        }
       }
     }
 
@@ -428,7 +445,16 @@ function generateQuestions(course, count) {
       }
     }
 
-    const choices = [item.pattern, ...Array.from(distractors).slice(0, 3)];
+    // 3. Absolute Purity Check: Never allow Korean characters in choices
+    const rawChoices = [item.pattern, ...Array.from(distractors).slice(0, 3)];
+    const choices = rawChoices.map(c => {
+      if (/[ㄱ-ㅎㅏ-ㅣ가-힣]/.test(c)) {
+        const fallback = ALL_PATTERNS[Math.floor(Math.random() * ALL_PATTERNS.length)];
+        return fallback.pattern;
+      }
+      return c;
+    });
+
     for (let c = choices.length - 1; c > 0; c--) {
       const j = Math.floor(Math.random() * (c + 1));
       [choices[c], choices[j]] = [choices[j], choices[c]];
