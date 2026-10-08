@@ -487,6 +487,15 @@ export default function MygoTypingPage() {
     return ranges;
   }, [currentLine, targetRomaji]);
 
+  // Album track count helper
+  const albumCounts = useMemo(() => ({
+    all: SONGS.length,
+    album1: SONGS.filter(s => s.album.includes('1st Album『迷跡波』')).length,
+    album2: SONGS.filter(s => s.album.includes('2nd Album『跡暖空』')).length,
+    album3: SONGS.filter(s => s.album.includes('3rd Album『致並跡』')).length,
+    cover: SONGS.filter(s => s.category === 'cover').length,
+  }), []);
+
   // Filtered Song List
   const filteredSongs = useMemo(() => {
     return SONGS.filter(s => {
@@ -764,35 +773,35 @@ export default function MygoTypingPage() {
               className={`song-tab ${categoryFilter === 'all' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('all')}
             >
-              全曲 ({SONGS.length})
+              全曲 ({albumCounts.all})
             </button>
             <button
               type="button"
               className={`song-tab ${categoryFilter === 'album1' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('album1')}
             >
-              1st 迷跡波
+              1st 迷跡波 ({albumCounts.album1})
             </button>
             <button
               type="button"
               className={`song-tab ${categoryFilter === 'album2' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('album2')}
             >
-              2nd 跡暖空
+              2nd 跡暖空 ({albumCounts.album2})
             </button>
             <button
               type="button"
               className={`song-tab ${categoryFilter === 'album3' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('album3')}
             >
-              3rd 致並跡
+              3rd 致並跡 ({albumCounts.album3})
             </button>
             <button
               type="button"
               className={`song-tab ${categoryFilter === 'cover' ? 'active' : ''}`}
               onClick={() => setCategoryFilter('cover')}
             >
-              カバー ({SONGS.filter(s => s.category === 'cover').length})
+              カバー ({albumCounts.cover})
             </button>
           </div>
 

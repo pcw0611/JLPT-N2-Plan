@@ -1663,7 +1663,7 @@ export const SONGS: Song[] =
     "reading": "おといちえ",
     "category": "original",
     "album": "2nd Single『音一会』, 1st Album『迷跡波』",
-    "youtubeId": "F-h-M4p2v6E",
+    "youtubeId": "FlDoO0F4p44",
     "parts": [
       {
         "id": "part1",
@@ -2826,7 +2826,7 @@ export const SONGS: Song[] =
     "reading": "せんざいひょうめい",
     "category": "original",
     "album": "2nd Single『音一会』c/w, 1st Album『迷跡波』",
-    "youtubeId": "zF0k41kI868",
+    "youtubeId": "bkUqxpb_vYY",
     "parts": [
       {
         "id": "part1",
@@ -4005,7 +4005,7 @@ export const SONGS: Song[] =
     "reading": "しるえっと だんす",
     "category": "original",
     "album": "2nd Single『音一会』c/w, 1st Album『迷跡波』",
-    "youtubeId": "zW8bS2Z8d7g",
+    "youtubeId": "iFIXi6zzCls",
     "parts": [
       {
         "id": "part1",
@@ -4921,7 +4921,7 @@ export const SONGS: Song[] =
     "reading": "ひとしずく",
     "category": "original",
     "album": "3rd Single『壱雫空』, 1st Album『迷跡波』",
-    "youtubeId": "1gZqI5lE5s4",
+    "youtubeId": "_CraJ8654Bg",
     "parts": [
       {
         "id": "part1",
@@ -5816,7 +5816,7 @@ export const SONGS: Song[] =
     "reading": "しおり",
     "category": "original",
     "album": "3rd Single『壱雫空』c/w, 1st Album『迷跡波』",
-    "youtubeId": "tqF9p9wH4hQ",
+    "youtubeId": "wuUZjdiUCj0",
     "parts": [
       {
         "id": "part1",
@@ -6900,8 +6900,8 @@ export const SONGS: Song[] =
     "title": "焚音打",
     "reading": "たねび",
     "category": "original",
-    "album": "3rd Single『壱雫空』c/w, 1st Album『迷跡波』",
-    "youtubeId": "c0X3o-f4wYs",
+    "album": "3rd Single『壱雫空』c/w, 2nd Album『跡暖空』",
+    "youtubeId": "mNEbrOEoAHg",
     "parts": [
       {
         "id": "part1",
@@ -8062,7 +8062,7 @@ export const SONGS: Song[] =
     "reading": "へきてんばんそう",
     "category": "original",
     "album": "1st Album『迷跡波』",
-    "youtubeId": "kUe6Xj-6yG4",
+    "youtubeId": "zsO9_fZP2Uc",
     "parts": [
       {
         "id": "part1",
@@ -8892,7 +8892,7 @@ export const SONGS: Song[] =
     "reading": "うたいましょうならしましょう",
     "category": "original",
     "album": "1st Album『迷跡波』",
-    "youtubeId": "w3f5R1b6b5A",
+    "youtubeId": "_0FI8xSgI1s",
     "parts": [
       {
         "id": "part1",
@@ -9505,7 +9505,7 @@ export const SONGS: Song[] =
     "reading": "はるひかげ",
     "category": "original",
     "album": "1st Album『迷跡波』",
-    "youtubeId": "s7U5p07F5-E",
+    "youtubeId": "NJ1tne9u8YM",
     "parts": [
       {
         "id": "part1",
@@ -10353,7 +10353,7 @@ export const SONGS: Song[] =
     "reading": "うたことば",
     "category": "original",
     "album": "1st Album『迷跡波』",
-    "youtubeId": "d3V9Qx7lC_8",
+    "youtubeId": "wJ-OebTVyvk",
     "parts": [
       {
         "id": "part1",
@@ -11379,7 +11379,7 @@ export const SONGS: Song[] =
     "reading": "めいろひび",
     "category": "original",
     "album": "1st Album『迷跡波』",
-    "youtubeId": "X7l3w9u1-E8",
+    "youtubeId": "STgVa-reZkM",
     "parts": [
       {
         "id": "part1",
@@ -11954,8 +11954,8 @@ export const SONGS: Song[] =
     "title": "無路矢",
     "reading": "のろし",
     "category": "original",
-    "album": "4th Single『無路矢』, 2nd Album『跡暖空』",
-    "youtubeId": "c5i3H_H4JFs",
+    "album": "4th Single『無路矢』, 1st Album『迷跡波』",
+    "youtubeId": "s3BTDeNKufQ",
     "parts": [
       {
         "id": "part1",
@@ -12605,7 +12605,7 @@ export const SONGS: Song[] =
     "reading": "さすらい",
     "category": "original",
     "album": "5th Single『砂寸奏／回層浮』, 2nd Album『跡暖空』",
-    "youtubeId": "L4Y_v2N9w3k",
+    "youtubeId": "uiWLU577gYY",
     "parts": [
       {
         "id": "part1",
@@ -13428,7 +13428,7 @@ export const SONGS: Song[] =
     "reading": "かいそうふ",
     "category": "original",
     "album": "5th Single『砂寸奏／回層浮』, 2nd Album『跡暖空』",
-    "youtubeId": "J-wJ7lXw4bQ",
+    "youtubeId": "k5u1nueXES8",
     "parts": [
       {
         "id": "part1",
@@ -15002,7 +15002,7 @@ export const SONGS: Song[] =
     "reading": "こきゅう",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "zK9U5f7L1vY",
+    "youtubeId": "Z2OLVzWFaY0",
     "parts": [
       {
         "id": "part1",
@@ -15833,8 +15833,8 @@ export const SONGS: Song[] =
     "title": "端程山",
     "reading": "ぱのらま",
     "category": "original",
-    "album": "2nd Album『跡暖空』",
-    "youtubeId": "yN6qR5zM4tE",
+    "album": "5th Single c/w, 2nd Album『跡暖空』",
+    "youtubeId": "1c2uSrAGF9Q",
     "parts": [
       {
         "id": "part1",
@@ -16703,7 +16703,7 @@ export const SONGS: Song[] =
     "reading": "りふれいん",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "kX8jN2pL9wQ",
+    "youtubeId": "xNF9semW-Ng",
     "parts": [
       {
         "id": "part1",
@@ -17478,7 +17478,7 @@ export const SONGS: Song[] =
     "reading": "こころ",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "mP3vR6zL8tY",
+    "youtubeId": "MQkr0cVfyjQ",
     "parts": [
       {
         "id": "part1",
@@ -18273,7 +18273,7 @@ export const SONGS: Song[] =
     "reading": "ほしゅうどう",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "vN4kL9wR2tM",
+    "youtubeId": "daSwx7663RQ",
     "parts": [
       {
         "id": "part1",
@@ -19122,7 +19122,7 @@ export const SONGS: Song[] =
     "reading": "よかぜ",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "jK7L2vN9w4R",
+    "youtubeId": "7kPyHJ2SA9g",
     "parts": [
       {
         "id": "part1",
@@ -19670,7 +19670,7 @@ export const SONGS: Song[] =
     "reading": "みすと",
     "category": "original",
     "album": "2nd Album『跡暖空』",
-    "youtubeId": "qN5tL8vR2wY",
+    "youtubeId": "qJPXncScNA4",
     "parts": [
       {
         "id": "part1",
@@ -20563,8 +20563,8 @@ export const SONGS: Song[] =
     "title": "証命讃歌",
     "reading": "しょうめいさんか",
     "category": "original",
-    "album": "2nd Album『跡暖空』",
-    "youtubeId": "bL6vN9wR2tY",
+    "album": "3rd Album『致並跡』",
+    "youtubeId": "C_OJtQMU52Y",
     "parts": [
       {
         "id": "part1",
@@ -34144,8 +34144,8 @@ export const SONGS: Song[] =
     "title": "エガクミライ",
     "reading": "えがくみらい",
     "category": "original",
-    "album": "2nd Album『跡暖空』",
-    "youtubeId": "xL9vN2wR4tM",
+    "album": "3rd Album『致並跡』",
+    "youtubeId": "55QclsX-8dg",
     "parts": [
       {
         "id": "part1",
@@ -38699,7 +38699,7 @@ export const SONGS: Song[] =
     "reading": "アゲイン",
     "category": "original",
     "album": "Digital Single (2024), 2nd Album『跡暖空』",
-    "youtubeId": "80n3z8EHRtU",
+    "youtubeId": "6sJ7vXe_oMU",
     "parts": [
       {
         "id": "part1",
@@ -47273,7 +47273,7 @@ export const SONGS: Song[] =
     "reading": "そうこんしゅつ",
     "category": "original",
     "album": "3rd Album『致並跡』",
-    "youtubeId": "LBM-sIZGJlo",
+    "youtubeId": "GzbCOAHhwzM",
     "parts": [
       {
         "id": "part1",
