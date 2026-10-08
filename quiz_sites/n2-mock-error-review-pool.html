@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JLPT N2 模試 誤答ノート 総整理 復習マスタープール (全87問)</title>
+  <title>JLPT N2 模試 間違いノート 総整理 復習マスタープール (全87問)</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <style>
     :root {
@@ -63,16 +63,35 @@
       color: var(--text-main);
     }
 
-    .omr-choice-btn:hover {
+    .omr-choice-btn:hover:not(:disabled) {
       background-color: #f4f4f5;
     }
-    .dark-theme .omr-choice-btn:hover {
+    .dark-theme .omr-choice-btn:hover:not(:disabled) {
       background-color: #334155;
     }
     .omr-choice-btn.selected {
       background-color: var(--omr-selected-bg);
       color: var(--omr-selected-text);
       border-color: var(--omr-selected-bg);
+    }
+    .omr-choice-btn.correct-choice {
+      border-color: #10b981 !important;
+      background-color: #ecfdf5 !important;
+      color: #065f46 !important;
+      font-weight: 800;
+    }
+    .dark-theme .omr-choice-btn.correct-choice {
+      background-color: #064e3b !important;
+      color: #6ee7b7 !important;
+    }
+    .omr-choice-btn.wrong-choice {
+      border-color: #f43f5e !important;
+      background-color: #fff1f2 !important;
+      color: #9f1239 !important;
+    }
+    .dark-theme .omr-choice-btn.wrong-choice {
+      background-color: #881337 !important;
+      color: #fda4af !important;
     }
 
     .omr-circle {
@@ -98,7 +117,6 @@
       user-select: none;
     }
 
-    /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -141,17 +159,43 @@
       <!-- Top Header Cover Box -->
       <div class="jlpt-header-box p-6 sm:p-8 text-center space-y-3 bg-white">
         <div class="text-xs tracking-widest text-neutral-600 font-sans font-semibold uppercase">
-          JLPT N2 實戰模試 誤答ノート 全領域 復習マスタープール
+          JLPT N2 實戰模試 間違いノート 全領域 復習マスタープール
         </div>
         <div class="text-xs font-mono font-bold tracking-widest text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded inline-block border border-emerald-300">
           ★ 2023.12 기출 본시험 & 공식 제2집 모의고사 오답노트 전수 수록 (87문항 완비) ★
         </div>
         <h1 class="text-2xl sm:text-4xl font-black tracking-tight text-neutral-950 font-serif pt-1">
-          Ｎ２ 誤答ノート 復習試験
+          Ｎ２ 間違いノート 復習試験
         </h1>
         <p class="text-xs sm:text-sm text-neutral-700 font-sans max-w-xl mx-auto leading-relaxed">
-          실제 모의고사에서 틀렸던 모든 문항(문자·어휘, 문법, 독해, 청해 실전 음원)을 실전 시험 규격으로 재응시하여 약점을 완벽하게 극복합니다.
+          실제 모의고사에서 틀렸던 모든 문항을 <strong>1문제 풀 때마다 즉시 정답 및 상세 해설(루비, 함정 분석, 청해 대본)</strong>을 확인하며 약점을 완벽하게 극복합니다.
         </p>
+      </div>
+
+      <!-- Mode Selector: Instant Feedback (Default) vs Mock Batch -->
+      <div class="p-4 rounded-xl bg-amber-50 border-2 border-amber-300 space-y-2 font-sans">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-black text-amber-900 flex items-center gap-1.5">
+            <span>⚡</span> <span>해설 표시 모드 설정 (解説モード)</span>
+          </span>
+          <span class="text-[11px] font-bold text-amber-800">오답노트 학습 효율 극대화</span>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white border border-amber-300 cursor-pointer shadow-sm hover:bg-amber-100/50 transition">
+            <input type="radio" name="feedbackMode" value="instant" checked class="text-amber-600 focus:ring-amber-500 w-4 h-4">
+            <div>
+              <strong class="text-neutral-900">⚡ 1問1答 즉시 해설 모드 (기본 추천)</strong>
+              <p class="text-[11px] text-neutral-500">한 문제 풀 때마다 즉시 정답, 번역, 함정, 청해 대본 확인</p>
+            </div>
+          </label>
+          <label class="flex items-center gap-2 p-2.5 rounded-lg bg-white border border-neutral-300 cursor-pointer shadow-sm hover:bg-neutral-100 transition">
+            <input type="radio" name="feedbackMode" value="batch" class="text-neutral-600 focus:ring-neutral-500 w-4 h-4">
+            <div>
+              <strong class="text-neutral-900">📝 실전 연속 풀이 모드</strong>
+              <p class="text-[11px] text-neutral-500">실제 시험처럼 끝까지 모두 풀고 한 번에 제출 및 채점</p>
+            </div>
+          </label>
+        </div>
       </div>
 
       <!-- Course Selection Cards -->
@@ -170,12 +214,12 @@
             <div class="flex items-start justify-between">
               <div>
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400 text-neutral-950 uppercase">추천 풀코스</span>
-                <div class="text-base font-black mt-1 font-serif">全領域 総整理 マスター (87問)</div>
+                <div class="text-base font-black mt-1 font-serif">全領域 間違い 総整理 (87問)</div>
               </div>
               <span class="text-xl font-bold font-mono text-amber-300">87제</span>
             </div>
             <p class="text-xs text-neutral-300 mt-2 leading-relaxed">
-              문자어휘(25) + 문법(24) + 독해(13) + 청해 원본 음원(25) 전영역 종합 실전 모의고사
+              문자어휘(25) + 문법(24) + 독해(13) + 청해 원본 음원(25) 전영역 종합 실전 복습
             </p>
           </button>
 
@@ -230,18 +274,17 @@
           <span>📋</span> <span>시험 진행 규격 안내</span>
         </div>
         <ul class="list-disc list-inside space-y-1 pl-1 text-[11px] leading-relaxed">
+          <li><strong>1문1답 즉시 교정:</strong> 보기를 선택하는 즉시 정답 여부와 한국어 완본 해설(루비 태그, 오답 함정, 청해 대본)이 펼쳐집니다.</li>
           <li><strong>실제 시험과 동일한 화면:</strong> 문제 풀이 중에는 일본어만 표시되며 후리가나가 노출되지 않습니다.</li>
           <li><strong>객관식 및 모름 선택지:</strong> 전 문항 4지선다(즉시응답 3지선다) 및 <code>分からない (모름)</code> 선택지가 제공됩니다.</li>
-          <li><strong>실전 청해 오디오:</strong> 청해 문항은 내장된 공식 원본 성우 음원을 재생하며 응시합니다.</li>
-          <li><strong>제출 후 한국어 완본 해설:</strong> 제출 즉시 자동 채점되며, 한자 루비 태그, 오답 함정 분석, 청해 화자별 대본 번역이 완비된 상세 해설이 제공됩니다.</li>
-          <li><strong>수동 완료 복사 기능:</strong> 시험 완료 후 <code>📋 학습 시간 복사하기</code> 버튼을 눌러 학습 기록에 바로 제출할 수 있습니다.</li>
+          <li><strong>수동 완료 복사 기능:</strong> 시험 완료 후 <code>📋 학습 결과 복사하기</code> 버튼을 눌러 학습 기록에 바로 제출할 수 있습니다.</li>
         </ul>
       </div>
 
       <!-- Start Button -->
       <div class="pt-2 text-center">
         <button id="btnStartExam" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-black text-lg rounded-xl shadow-lg transition active:scale-[0.99] flex items-center justify-center gap-2 mx-auto">
-          <span>試験を開始する (시험 시작)</span> <span>➔</span>
+          <span>間違いノートの復習を開始する (시험 시작)</span> <span>➔</span>
         </button>
       </div>
 
@@ -261,8 +304,8 @@
           <span id="hudQIndexBadge" class="font-mono font-bold text-sm text-neutral-900">
             Q1 / 87
           </span>
-          <span id="hudSourceBadge" class="hidden sm:inline-block px-2 py-0.5 rounded text-[11px] bg-neutral-100 text-neutral-600 border border-neutral-300">
-            출처
+          <span id="hudModeBadge" class="hidden sm:inline-block px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+            ⚡ 1問1答 即時解説
           </span>
         </div>
 
@@ -279,7 +322,7 @@
 
           <!-- Submit Button -->
           <button id="btnSubmitExam" class="px-3 sm:px-4 py-1.5 bg-rose-600 hover:bg-rose-700 text-white font-bold rounded-lg transition shadow">
-            提出 (제출)
+            終了·採点 (채점)
           </button>
         </div>
       </div>
@@ -342,8 +385,40 @@
           <!-- Choice buttons injected here -->
         </div>
 
-        <!-- Navigation Buttons -->
-        <div class="flex items-center justify-between pt-6 border-t border-neutral-300 font-sans text-xs">
+        <!-- INSTANT FEEDBACK CARD (Appears immediately after picking an answer in 1問1答 mode) -->
+        <div id="instantFeedbackBox" class="hidden space-y-4 pt-4 border-t-2 border-neutral-300 font-sans">
+          <!-- Verdict banner -->
+          <div id="instantVerdictBanner" class="p-4 rounded-xl font-bold flex items-center justify-between text-sm sm:text-base shadow-sm">
+            <!-- Injected verdict text -->
+          </div>
+
+          <!-- Top Quick Next Button -->
+          <div class="text-center">
+            <button id="btnInstantNextTop" class="w-full py-3 bg-neutral-950 hover:bg-neutral-800 text-white font-bold rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>확인 완료 · 다음 문제로 이동 (Enter / Space)</span> <span>➔</span>
+            </button>
+          </div>
+
+          <!-- Explanation Details -->
+          <div class="p-4 sm:p-6 rounded-xl bg-neutral-50 border border-neutral-200 space-y-3 text-xs leading-relaxed">
+            <div class="font-extrabold text-sm text-neutral-900 flex items-center gap-1.5 border-b border-neutral-200 pb-2">
+              <span>📖</span> <span>상세 해설 & 오답 원인 분석 (解説・対訳)</span>
+            </div>
+            <div id="instantExplanationContent" class="space-y-3">
+              <!-- Injected explanation HTML -->
+            </div>
+          </div>
+
+          <!-- Bottom Quick Next Button -->
+          <div class="text-center pt-1">
+            <button id="btnInstantNextBottom" class="w-full py-3 bg-neutral-950 hover:bg-neutral-800 text-white font-bold rounded-xl transition shadow flex items-center justify-center gap-2">
+              <span>다음 문제로 (次の問題へ) (Enter / Space)</span> <span>➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Standard Navigation Buttons (For Batch Mode) -->
+        <div id="standardNavBox" class="flex items-center justify-between pt-6 border-t border-neutral-300 font-sans text-xs">
           <button id="btnPrevQ" class="px-4 py-2.5 rounded-lg border border-neutral-400 bg-white hover:bg-neutral-100 font-bold transition flex items-center gap-1">
             <span>◀</span> <span>이전 문제 (前の問題)</span>
           </button>
@@ -399,10 +474,10 @@
             EXAM RESULT · 採点結果
           </span>
           <h2 class="text-3xl sm:text-5xl font-black text-neutral-950 font-serif pt-2">
-            誤答ノート 復習完了
+            間違いノート 復習完了
           </h2>
           <p class="text-xs sm:text-sm text-neutral-600 font-sans" id="resSubtitle">
-            모의고사 오답노트 복습 세션이 정상적으로 완료되었습니다.
+            모의고사 間違いノート(오답노트) 복습 세션이 정상적으로 완료되었습니다.
           </p>
         </div>
 
@@ -444,7 +519,7 @@
             <span>📋</span> <span id="copyBtnText">학습 결과 복사하기 (클립보드)</span>
           </button>
           <button id="btnRetryWrongOnly" class="flex-1 py-3.5 bg-rose-600 hover:bg-rose-500 text-white font-black text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
-            <span>🔁</span> <span>오답 문항만 즉시 다시 풀기</span>
+            <span>🔁</span> <span>間違い問題だけ再挑戦 (오답만 다시 풀기)</span>
           </button>
           <button id="btnRestartLobby" class="py-3.5 px-6 border border-neutral-400 bg-white hover:bg-neutral-100 text-neutral-800 font-bold text-sm rounded-xl transition">
             <span>새로운 코스 선택</span>
@@ -500,7 +575,8 @@
     submitted: false,
     wrongList: [],
     filterMode: 'all',
-    audioPlaying: false
+    feedbackMode: 'instant', // 'instant' (1問1答) or 'batch' (실전 일괄)
+    currentAnswered: false
   };
 
   const $ = id => document.getElementById(id);
@@ -535,6 +611,13 @@
       };
     });
 
+    // Feedback Mode Radio change
+    document.querySelectorAll('input[name="feedbackMode"]').forEach(radio => {
+      radio.onchange = () => {
+        state.feedbackMode = radio.value;
+      };
+    });
+
     $('btnStartExam').onclick = startExam;
   }
 
@@ -562,10 +645,13 @@
     state.submitted = false;
     state.wrongList = [];
     state.filterMode = 'all';
+    state.currentAnswered = false;
 
     $('screenLobby').classList.add('hidden');
     $('screenResult').classList.add('hidden');
     $('screenExam').classList.remove('hidden');
+
+    $('hudModeBadge').textContent = (state.feedbackMode === 'instant') ? '⚡ 1問1答 即時解説' : '📝 実戦連続解答';
 
     state.startTime = Date.now();
     clearInterval(state.timerInterval);
@@ -584,10 +670,11 @@
     const q = state.activeQuestions[state.currentIndex];
     if (!q) return;
 
+    state.currentAnswered = (state.userAnswers[q.id] !== undefined);
+
     // HUD updates
     $('hudSectionBadge').textContent = q.section;
     $('hudQIndexBadge').textContent = `Q${state.currentIndex + 1} / ${state.activeQuestions.length}`;
-    $('hudSourceBadge').textContent = q.exam_src.replace('제2회 실전 모의고사 ', '').replace('제1회 실전 모의고사 ', '');
 
     // Header info
     $('qExamSrc').textContent = q.exam_src;
@@ -628,15 +715,23 @@
     // Question sentence
     $('qQuestionSentence').innerHTML = q.question_text || '次の問いに答えなさい。';
 
-    // Choices
-    const container = $('choicesContainer');
+    // Hide instant feedback box initially when rendering new question
+    const fbBox = $('instantFeedbackBox');
+    const standardNavBox = $('standardNavBox');
+
     const currentAns = state.userAnswers[q.id];
 
+    // Choices
+    const container = $('choicesContainer');
     let choiceHtml = q.choices.map((c, idx) => {
       const num = idx + 1;
-      const isSel = currentAns === num;
+      let btnClass = '';
+      if (currentAns) {
+        if (num === q.correct_num) btnClass = 'correct-choice ring-2 ring-emerald-500';
+        else if (num === currentAns) btnClass = 'wrong-choice';
+      }
       return `
-        <button type="button" data-num="${num}" class="omr-choice-btn w-full p-3 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none ${isSel ? 'selected' : ''}">
+        <button type="button" data-num="${num}" ${currentAns && state.feedbackMode === 'instant' ? 'disabled' : ''} class="omr-choice-btn w-full p-3.5 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none ${btnClass}">
           <div class="flex items-center gap-3">
             <span class="omr-circle">${num}</span>
             <span class="font-bold tracking-wide">${c}</span>
@@ -647,9 +742,12 @@
     }).join('');
 
     // Add 5. 分からない choice
-    const isUnknownSel = currentAns === 5;
+    let unknownClass = '';
+    if (currentAns === 5) {
+      unknownClass = 'wrong-choice ring-2 ring-amber-500';
+    }
     choiceHtml += `
-      <button type="button" data-num="5" class="omr-choice-btn w-full p-3 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none border-dashed border-amber-500 ${isUnknownSel ? 'selected' : ''}">
+      <button type="button" data-num="5" ${currentAns && state.feedbackMode === 'instant' ? 'disabled' : ''} class="omr-choice-btn w-full p-3 sm:p-4 rounded-xl text-left flex items-center justify-between text-sm sm:text-base cursor-pointer select-none border-dashed border-amber-500 ${unknownClass}">
         <div class="flex items-center gap-3 text-amber-700">
           <span class="omr-circle border-amber-600">?</span>
           <span class="font-bold">分からない (모름 / 확실하지 않음)</span>
@@ -667,6 +765,15 @@
       };
     });
 
+    // Update Instant Feedback Box if already answered
+    if (currentAns !== undefined && state.feedbackMode === 'instant') {
+      showInstantFeedback(q, currentAns);
+      standardNavBox.classList.add('hidden');
+    } else {
+      fbBox.classList.add('hidden');
+      standardNavBox.classList.remove('hidden');
+    }
+
     // Update Nav buttons
     $('btnPrevQ').disabled = state.currentIndex === 0;
     $('btnNextQ').textContent = (state.currentIndex === state.activeQuestions.length - 1) ? '마지막 문제 (OMR확인) ➔' : '다음 문제 (次の問題) ▶';
@@ -678,20 +785,94 @@
   function selectAnswer(choiceNum) {
     const q = state.activeQuestions[state.currentIndex];
     state.userAnswers[q.id] = choiceNum;
-
-    // Refresh choice styles immediately
-    const container = $('choicesContainer');
-    container.querySelectorAll('.omr-choice-btn').forEach(btn => {
-      const num = parseInt(btn.dataset.num, 10);
-      if (num === choiceNum) {
-        btn.classList.add('selected');
-      } else {
-        btn.classList.remove('selected');
-      }
-    });
+    state.currentAnswered = true;
 
     updateOmrCount();
     updateOmrGridSingle(state.currentIndex);
+
+    if (state.feedbackMode === 'instant') {
+      // In Instant 1-by-1 Mode, immediately reveal explanation and lock choices
+      const container = $('choicesContainer');
+      container.querySelectorAll('.omr-choice-btn').forEach(btn => {
+        btn.disabled = true;
+        const num = parseInt(btn.dataset.num, 10);
+        if (num === q.correct_num) {
+          btn.classList.add('correct-choice', 'ring-2', 'ring-emerald-500');
+        } else if (num === choiceNum) {
+          btn.classList.add('wrong-choice');
+        }
+      });
+
+      showInstantFeedback(q, choiceNum);
+      $('standardNavBox').classList.add('hidden');
+    } else {
+      // Standard batch mode
+      const container = $('choicesContainer');
+      container.querySelectorAll('.omr-choice-btn').forEach(btn => {
+        const num = parseInt(btn.dataset.num, 10);
+        if (num === choiceNum) btn.classList.add('selected');
+        else btn.classList.remove('selected');
+      });
+    }
+  }
+
+  function showInstantFeedback(q, userChoice) {
+    const fbBox = $('instantFeedbackBox');
+    fbBox.classList.remove('hidden');
+
+    const isCorrect = (userChoice === q.correct_num);
+    const isUnknown = (userChoice === 5);
+    const banner = $('instantVerdictBanner');
+
+    const isLast = (state.currentIndex === state.activeQuestions.length - 1);
+    const nextBtnText = isLast ? '🎉 마지막 문제 완료! 최종 결과 보기 (Enter) ➔' : '확인 완료 · 다음 문제로 이동 (Enter / Space) ➔';
+
+    $('btnInstantNextTop').innerHTML = `<span>${nextBtnText}</span>`;
+    $('btnInstantNextBottom').innerHTML = `<span>${nextBtnText}</span>`;
+
+    if (isCorrect) {
+      banner.className = 'p-4 rounded-xl font-bold flex items-center justify-between text-sm sm:text-base bg-emerald-50 border-2 border-emerald-500 text-emerald-900 shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="text-xl">✓</span>
+          <span>정답입니다! (正解)</span>
+        </div>
+        <span class="text-xs font-mono bg-emerald-200/60 px-2 py-0.5 rounded text-emerald-800 font-extrabold">공식 정답: ${q.correct_num}번 ${q.correct_text ? '(' + q.correct_text + ')' : ''}</span>
+      `;
+    } else if (isUnknown) {
+      banner.className = 'p-4 rounded-xl font-bold flex items-center justify-between text-sm sm:text-base bg-amber-50 border-2 border-amber-500 text-amber-900 shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="text-xl">❓</span>
+          <span>모름 (판단 유보) — 정답과 오답 함정을 확인하고 뇌에 새기세요</span>
+        </div>
+        <span class="text-xs font-mono bg-amber-200/60 px-2 py-0.5 rounded text-amber-800 font-extrabold">공식 정답: ${q.correct_num}번 ${q.correct_text ? '(' + q.correct_text + ')' : ''}</span>
+      `;
+    } else {
+      banner.className = 'p-4 rounded-xl font-bold flex items-center justify-between text-sm sm:text-base bg-rose-50 border-2 border-rose-500 text-rose-900 shadow-sm';
+      banner.innerHTML = `
+        <div class="flex items-center gap-2">
+          <span class="text-xl">❌</span>
+          <span>오답입니다! (不正解)</span>
+        </div>
+        <span class="text-xs font-mono bg-rose-200/60 px-2 py-0.5 rounded text-rose-800 font-extrabold">공식 정답: ${q.correct_num}번 ${q.correct_text ? '(' + q.correct_text + ')' : ''}</span>
+      `;
+    }
+
+    // Injected explanation content
+    $('instantExplanationContent').innerHTML = q.explanation_html;
+
+    // Scroll slightly to reveal verdict banner
+    banner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function advanceNextInstant() {
+    if (state.currentIndex < state.activeQuestions.length - 1) {
+      state.currentIndex++;
+      renderQuestion();
+    } else {
+      finishExam();
+    }
   }
 
   function updateOmrCount() {
@@ -716,6 +897,9 @@
       }
     };
 
+    $('btnInstantNextTop').onclick = advanceNextInstant;
+    $('btnInstantNextBottom').onclick = advanceNextInstant;
+
     $('btnToggleOmr').onclick = () => {
       $('omrModal').classList.remove('hidden');
     };
@@ -730,13 +914,27 @@
     // Keyboard navigation
     window.addEventListener('keydown', e => {
       if ($('screenExam').classList.contains('hidden') || state.submitted) return;
+
+      // If instant feedback is showing and user presses Enter or Space, immediately advance to next!
+      if (state.feedbackMode === 'instant' && state.currentAnswered) {
+        if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowRight') {
+          e.preventDefault();
+          advanceNextInstant();
+          return;
+        }
+      }
+
       if (['1', '2', '3', '4'].includes(e.key)) {
-        selectAnswer(parseInt(e.key, 10));
+        if (!state.currentAnswered || state.feedbackMode !== 'instant') {
+          selectAnswer(parseInt(e.key, 10));
+        }
       } else if (e.key === ' ' || e.key === '5' || e.key === '0') {
-        e.preventDefault();
-        selectAnswer(5); // unknown
-      } else if (e.key === 'ArrowRight' || e.key === 'Enter') {
-        $('btnNextQ').click();
+        if (!state.currentAnswered || state.feedbackMode !== 'instant') {
+          e.preventDefault();
+          selectAnswer(5); // unknown
+        }
+      } else if (e.key === 'ArrowRight') {
+        if (state.feedbackMode !== 'instant') $('btnNextQ').click();
       } else if (e.key === 'ArrowLeft') {
         $('btnPrevQ').click();
       }
@@ -776,7 +974,7 @@
   function confirmSubmit() {
     const unanswered = state.activeQuestions.length - Object.keys(state.userAnswers).length;
     if (unanswered > 0) {
-      const ok = confirm(`미마킹 문항이 ${unanswered}개 남아있습니다.\n이대로 제출하고 채점하시겠습니까?`);
+      const ok = confirm(`미마킹 문항이 ${unanswered}개 남아있습니다.\n이대로 종료하고 최종 채점하시겠습니까?`);
       if (!ok) return;
     }
     finishExam();
@@ -886,7 +1084,7 @@
 
     const wrongIds = state.wrongList.map(item => item.q.q_num).join(', ');
 
-    const text = `[${today} JLPT N2 모의고사 오답노트 복습] 학습 시간: ${timeStr} (코스: ${courseTitle}, 점수: ${correct}/${total}, 정답률: ${accuracy}%)\n- 오답 문항 (${state.wrongList.length}건): ${wrongIds || '없음 (전문항 정답)'}`;
+    const text = `[${today} JLPT N2 模試 間違いノート 復習] 학습 시간: ${timeStr} (코스: ${courseTitle}, 점수: ${correct}/${total}, 정답률: ${accuracy}%)\n- 오답 문항 (${state.wrongList.length}건): ${wrongIds || '없음 (전문항 정답)'}`;
 
     const doSuccess = () => {
       const btn = $('copyBtnText');
