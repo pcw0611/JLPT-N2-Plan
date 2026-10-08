@@ -48,6 +48,32 @@ body {
   20%, 60% { transform: translateX(-8px); }
   40%, 80% { transform: translateX(8px); }
 }
+.hint-revealed {
+  display: none;
+}
+.hint-hidden {
+  display: inline;
+}
+#hintContainer:hover .hint-hidden,
+#hintContainer.force-revealed .hint-hidden {
+  display: none !important;
+}
+#hintContainer:hover .hint-revealed,
+#hintContainer.force-revealed .hint-revealed {
+  display: inline !important;
+}
+#hintContainer:hover .hint-group-box,
+#hintContainer.force-revealed .hint-group-box {
+  border-color: rgba(129, 140, 248, 0.8) !important;
+  background-color: rgba(49, 46, 129, 0.6) !important;
+  color: #e0e7ff !important;
+}
+#hintContainer:hover .hint-meaning-box,
+#hintContainer.force-revealed .hint-meaning-box {
+  border-color: rgba(251, 191, 36, 0.6) !important;
+  background-color: rgba(51, 65, 85, 0.8) !important;
+  color: #fef08a !important;
+}
 </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4">
@@ -182,13 +208,19 @@ body {
 
     <!-- Center Card: Prompt Target -->
     <div id="promptCard" class="bg-slate-800/80 border border-slate-700/80 rounded-2xl p-6 sm:p-8 text-center space-y-3 relative">
-      <div class="flex items-center justify-center gap-2">
-        <span id="qGroupBadge" class="px-2 py-0.5 rounded text-[11px] font-extrabold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
-          1그룹 동사
-        </span>
-        <span id="qMeaning" class="text-xs text-slate-400">
-          마시다
-        </span>
+      <!-- Hover Reveal Hint Badges (Zero Layout Shift, 사각 테두리 완비) -->
+      <div id="hintContainer" class="flex items-center justify-center gap-2 h-7 min-h-[28px] cursor-pointer select-none">
+        <!-- 1. Group Badge -->
+        <div class="hint-group-box px-2.5 py-0.5 rounded-lg text-[11px] font-extrabold border transition-all duration-200 flex items-center justify-center border-indigo-500/40 bg-indigo-950/40 text-indigo-300 shadow-sm">
+          <span class="hint-hidden text-indigo-400/80 font-normal">💡 그룹</span>
+          <span id="qGroupBadge" class="hint-revealed font-black text-indigo-200">1그룹 동사</span>
+        </div>
+
+        <!-- 2. Meaning Badge (사각 테두리 완비) -->
+        <div class="hint-meaning-box px-2.5 py-0.5 rounded-lg text-[11px] font-bold border transition-all duration-200 flex items-center justify-center border-slate-600/70 bg-slate-800/80 text-slate-300 shadow-sm">
+          <span class="hint-hidden text-slate-400/80 font-normal">💡 뜻</span>
+          <span id="qMeaning" class="hint-revealed font-bold text-slate-100">마시다</span>
+        </div>
       </div>
 
       <!-- Target Verb in Kanji + Reading -->
@@ -835,6 +867,11 @@ function initLobbyUI() {
   $('btnHelp').onclick = () => $('modalHelp').classList.remove('hidden');
   $('btnCloseHelp').onclick = () => $('modalHelp').classList.add('hidden');
 
+  // Hint Container touch/click toggle
+  $('hintContainer')?.addEventListener('click', () => {
+    $('hintContainer')?.classList.toggle('force-revealed');
+  });
+
   // Next after mistake button
   $('btnNextAfterMistake').onclick = advanceNext;
 
@@ -955,6 +992,7 @@ function startSessionWithQuestions() {
 function renderQuestion() {
   state.waitingConfirm = false;
   $('feedbackModal').classList.add('hidden');
+  $('hintContainer')?.classList.remove('force-revealed');
   const card = $('promptCard');
   card.classList.remove('flash-correct', 'shake-wrong');
 
