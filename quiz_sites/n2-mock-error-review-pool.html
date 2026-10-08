@@ -155,26 +155,43 @@
     <!-- SCREEN 1: LOBBY & COURSE SELECTION -->
     <!-- ================================================================= -->
     <section id="screenLobby" class="jlpt-paper rounded-xl p-5 sm:p-10 space-y-6">
-      <!-- RESUME SESSION BANNER (Shown if saved progress exists) -->
-      <div id="resumeBanner" class="hidden p-4 rounded-xl bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-indigo-400 font-sans shadow-md space-y-2">
+
+      <!-- MASTERED PROGRESS CARD (오답 격파 현황 & 잔여 오답 모드) -->
+      <div class="p-4 sm:p-5 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 border-2 border-emerald-400 font-sans shadow-sm space-y-3">
         <div class="flex items-center justify-between">
-          <span class="text-xs font-black text-indigo-900 flex items-center gap-1.5">
-            <span>🔄</span> <span>이전에 풀던 복습 세션이 남아있습니다!</span>
-          </span>
-          <span class="text-[11px] font-bold text-indigo-700 font-mono" id="resumeSavedTime"></span>
+          <div class="flex items-center gap-2">
+            <span class="text-xl">🏆</span>
+            <div>
+              <span class="text-xs sm:text-sm font-black text-emerald-950">오답노트 격파 현황 (間違い 撃破)</span>
+              <span class="hidden sm:inline text-[11px] text-emerald-700 ml-1.5 font-normal">맞힌 문제는 오답노트에서 자동으로 지워집니다</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-black text-emerald-800 font-mono" id="masteredCountText">8 / 87문항 정복 (9%)</span>
+            <button id="btnResetMastered" type="button" class="text-[11px] text-neutral-500 hover:text-rose-600 underline transition cursor-pointer">
+              🔄 초기화
+            </button>
+          </div>
         </div>
-        <p class="text-xs text-indigo-900" id="resumeInfoText">
-          진행 상황: Q14까지 진행 완료
-        </p>
-        <div class="flex items-center gap-2 pt-1">
-          <button id="btnResumeSession" type="button" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-lg transition shadow flex items-center gap-1">
-            <span>▶</span> <span>이어서 계속 풀기 (재개)</span>
-          </button>
-          <button id="btnDiscardSession" type="button" class="px-3 py-2 bg-white hover:bg-neutral-100 border border-neutral-300 text-neutral-700 font-bold text-xs rounded-lg transition">
-            ✕ 새로 시작하기
-          </button>
+
+        <!-- Progress Bar -->
+        <div class="w-full bg-neutral-200/80 rounded-full h-3.5 p-0.5 overflow-hidden">
+          <div id="masteredProgressBar" class="bg-gradient-to-r from-emerald-500 to-teal-500 h-2.5 rounded-full transition-all duration-500 shadow-sm" style="width: 9%;"></div>
+        </div>
+
+        <!-- Mode Toggle: Exclude Mastered vs All -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between pt-1 gap-2 text-xs border-t border-emerald-200/60">
+          <label class="flex items-center gap-2 cursor-pointer font-bold text-emerald-950 selection:bg-none">
+            <input type="checkbox" id="chkExcludeMastered" checked class="w-4 h-4 text-emerald-600 rounded focus:ring-emerald-500 accent-emerald-600 cursor-pointer">
+            <span>🔥 이미 맞힌 문제는 오답노트에서 제외 (미정복 오답만 출제)</span>
+          </label>
+          <div class="flex items-center gap-1.5 text-[11px] font-mono text-emerald-900 bg-emerald-100/80 px-2 py-0.5 rounded border border-emerald-300">
+            <span>남은 미정복 오답:</span> <strong id="currentPoolCountTag" class="text-emerald-700 font-black">79제</strong>
+          </div>
         </div>
       </div>
+
+      
 
       
       <!-- Top Header Cover Box -->
@@ -237,7 +254,7 @@
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-400 text-neutral-950 uppercase">추천 풀코스</span>
                 <div class="text-base font-black mt-1 font-serif">全領域 間違い 総整理 (87問)</div>
               </div>
-              <span class="text-xl font-bold font-mono text-amber-300">87제</span>
+              <span class="text-xl font-bold font-mono text-amber-300" id="courseBadgeAll">87제</span>
             </div>
             <p class="text-xs text-neutral-300 mt-2 leading-relaxed">
               문자어휘(25) + 문법(24) + 독해(13) + 청해 원본 음원(25) 전영역 종합 실전 복습
@@ -251,7 +268,7 @@
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">필기 집중</span>
                 <div class="text-base font-bold mt-1 font-serif text-neutral-900">言語知識・読解 集中 (62問)</div>
               </div>
-              <span class="text-xl font-bold font-mono text-neutral-700">62제</span>
+              <span class="text-xl font-bold font-mono text-neutral-700" id="courseBadgeLang">62제</span>
             </div>
             <p class="text-xs text-neutral-600 mt-2 leading-relaxed">
               문자·어휘, 문법 형식 판단 및 배열, 단문/중문/장문/정보검색 독해 지문 전체
@@ -265,7 +282,7 @@
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">100% 실전 음원</span>
                 <div class="text-base font-bold mt-1 font-serif text-neutral-900">聴解 原本音声 集中 (25問)</div>
               </div>
-              <span class="text-xl font-bold font-mono text-neutral-700">25제</span>
+              <span class="text-xl font-bold font-mono text-neutral-700" id="courseBadgeListening">25제</span>
             </div>
             <p class="text-xs text-neutral-600 mt-2 leading-relaxed">
               과제이해, 포인트이해, 개요이해, 즉시응답, 통합이해 공식 성우 원본 음원 탑재
@@ -279,7 +296,7 @@
                 <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800">15분 퀵 샷</span>
                 <div class="text-base font-bold mt-1 font-serif text-neutral-900">語彙・文法 킬러 30제 쾌속 러시</div>
               </div>
-              <span class="text-xl font-bold font-mono text-neutral-700">30제</span>
+              <span class="text-xl font-bold font-mono text-neutral-700" id="courseBadgeVocab">30제</span>
             </div>
             <p class="text-xs text-neutral-600 mt-2 leading-relaxed">
               헷갈리는 한자 표기·어휘 용법 및 고난도 N2 문법 접속 오답만 30문항 랜덤 점검
@@ -673,6 +690,13 @@
   /* ========================================================
      EXAM STATE & LOGIC
      ======================================================== */
+  const INITIAL_MASTERED_IDS = [
+    'err-lang-01', 'err-lang-02', 'err-lang-03', 'err-lang-04',
+    'err-lang-05', 'err-lang-06', 'err-lang-07', 'err-lang-08'
+  ];
+
+  const MASTERED_STORAGE_KEY = 'machigai_mastered_ids_v1';
+
   const state = {
     course: 'all',
     qLimit: 'all', // '10', '20', '30', 'all'
@@ -688,18 +712,19 @@
     wrongList: [],
     filterMode: 'all',
     feedbackMode: 'instant', // 'instant' (1問1答) or 'batch' (실전 일괄)
-    currentAnswered: false
+    currentAnswered: false,
+    masteredIds: new Set()
   };
 
-  const STORAGE_KEY = 'machigai_review_saved_state_v1';
   const $ = id => document.getElementById(id);
 
   /* Init Event Listeners */
   window.addEventListener('DOMContentLoaded', () => {
+    initMasteredIds();
     initLobby();
     initExamControls();
     initTheme();
-    checkSavedProgress();
+    updateLobbyMasteredUI();
   });
 
   function initTheme() {
@@ -712,119 +737,67 @@
   }
 
   /* ----------------------------------------------------
-     LOCAL STORAGE: AUTO-SAVE & RESUME
+     MASTERED QUESTION SYSTEM (오답 격파 및 자동 소화)
      ---------------------------------------------------- */
-  function saveProgress() {
-    if (state.submitted || !state.activeQuestions.length) return;
+  function initMasteredIds() {
     try {
-      const data = {
-        course: state.course,
-        qLimit: state.qLimit,
-        activeQuestionIds: state.activeQuestions.map(q => q.id),
-        currentIndex: state.currentIndex,
-        userAnswers: state.userAnswers,
-        elapsedSec: state.elapsedSec,
-        feedbackMode: state.feedbackMode,
-        timestamp: Date.now()
-      };
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+      const raw = localStorage.getItem(MASTERED_STORAGE_KEY);
+      if (raw) {
+        state.masteredIds = new Set(JSON.parse(raw));
+      } else {
+        // 첫 방문 시 사용자가 방금 푼 8문항 기본 정복 세팅
+        state.masteredIds = new Set(INITIAL_MASTERED_IDS);
+        saveMasteredIds();
+      }
     } catch (e) {
-      console.warn('Auto-save error:', e);
+      state.masteredIds = new Set(INITIAL_MASTERED_IDS);
     }
   }
 
-  function clearSavedProgress() {
+  function saveMasteredIds() {
     try {
-      localStorage.removeItem(STORAGE_KEY);
+      localStorage.setItem(MASTERED_STORAGE_KEY, JSON.stringify([...state.masteredIds]));
     } catch (e) {}
   }
 
-  function checkSavedProgress() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return;
-      const data = JSON.parse(raw);
-      if (!data || !data.activeQuestionIds || !data.activeQuestionIds.length) return;
-
-      // Check expiry (7 days)
-      if (Date.now() - (data.timestamp || 0) > 7 * 24 * 3600 * 1000) {
-        clearSavedProgress();
-        return;
-      }
-
-      const answeredCount = Object.keys(data.userAnswers || {}).length;
-      const banner = $('resumeBanner');
-      if (!banner) return;
-
-      const dateStr = new Date(data.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-      $('resumeSavedTime').textContent = `최근 저장: ${dateStr}`;
-
-      const courseNames = {
-        all: '全領域 87제',
-        lang_reading: '言語知識・読解 62제',
-        listening: '聴解 原本音声 25제',
-        vocab_grammar: '語彙・文法 30제'
-      };
-      const courseTitle = courseNames[data.course] || data.course;
-      $('resumeInfoText').innerHTML = `이전 진행 내역: <strong>${courseTitle}</strong> · <strong>Q${(data.currentIndex || 0) + 1}</strong> 진행 중 (마킹 완료: ${answeredCount}/${data.activeQuestionIds.length}문항, 소요시간: ${Math.floor(data.elapsedSec / 60)}분 ${data.elapsedSec % 60}초)`;
-
-      banner.classList.remove('hidden');
-
-      $('btnResumeSession').onclick = resumeSavedSession;
-      $('btnDiscardSession').onclick = () => {
-        if (confirm('저장된 이전 진행 내역을 삭제하고 새로 시작하시겠습니까?')) {
-          clearSavedProgress();
-          banner.classList.add('hidden');
-        }
-      };
-    } catch (e) {
-      console.warn('Error checking saved progress:', e);
-    }
+  function resetMasteredIds() {
+    const ok = confirm('오답 정복 기록을 초기화하시겠습니까?\n초기화하면 맞힌 문제들이 다시 복습 풀에 나타납니다.');
+    if (!ok) return;
+    state.masteredIds = new Set();
+    saveMasteredIds();
+    updateLobbyMasteredUI();
   }
 
-  function resumeSavedSession() {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY);
-      if (!raw) return;
-      const data = JSON.parse(raw);
+  function updateLobbyMasteredUI() {
+    const totalCount = ALL_ERROR_QUESTIONS.length;
+    const masteredCount = state.masteredIds.size;
+    const pct = Math.round((masteredCount / totalCount) * 100);
 
-      state.course = data.course || 'all';
-      state.qLimit = data.qLimit || 'all';
-      state.feedbackMode = data.feedbackMode || 'instant';
+    const txt = $('masteredCountText');
+    if (txt) txt.textContent = `${masteredCount} / ${totalCount}문항 정복 (${pct}%)`;
 
-      const idMap = new Map(ALL_ERROR_QUESTIONS.map(q => [q.id, q]));
-      state.activeQuestions = data.activeQuestionIds.map(id => idMap.get(id)).filter(Boolean);
-      state.currentIndex = Math.min(data.currentIndex || 0, state.activeQuestions.length - 1);
-      state.userAnswers = data.userAnswers || {};
-      state.elapsedSec = data.elapsedSec || 0;
-      state.submitted = false;
-      state.wrongList = [];
-      state.filterMode = 'all';
+    const bar = $('masteredProgressBar');
+    if (bar) bar.style.width = `${pct}%`;
 
-      const currentQ = state.activeQuestions[state.currentIndex];
-      state.currentAnswered = currentQ ? (state.userAnswers[currentQ.id] !== undefined) : false;
+    const exclude = $('chkExcludeMastered')?.checked ?? true;
 
-      $('screenLobby').classList.add('hidden');
-      $('screenResult').classList.add('hidden');
-      $('screenExam').classList.remove('hidden');
+    // Course Badges calculation
+    const allRem = exclude ? ALL_ERROR_QUESTIONS.filter(q => !state.masteredIds.has(q.id)).length : totalCount;
+    const langAll = ALL_ERROR_QUESTIONS.filter(q => !q.is_listening);
+    const langRem = exclude ? langAll.filter(q => !state.masteredIds.has(q.id)).length : langAll.length;
+    const listenAll = ALL_ERROR_QUESTIONS.filter(q => q.is_listening);
+    const listenRem = exclude ? listenAll.filter(q => !state.masteredIds.has(q.id)).length : listenAll.length;
+    const vgAll = ALL_ERROR_QUESTIONS.filter(q => q.section.includes('文字・語彙') || q.section.includes('文法'));
+    const vgRem = exclude ? vgAll.filter(q => !state.masteredIds.has(q.id)).length : vgAll.length;
 
-      $('hudModeBadge').textContent = (state.feedbackMode === 'instant') ? '⚡ 1問1答 即時解説' : '📝 実戦連続解答';
+    if ($('courseBadgeAll')) $('courseBadgeAll').textContent = `${allRem}제`;
+    if ($('courseBadgeLang')) $('courseBadgeLang').textContent = `${langRem}제`;
+    if ($('courseBadgeListening')) $('courseBadgeListening').textContent = `${listenRem}제`;
+    if ($('courseBadgeVocab')) $('courseBadgeVocab').textContent = `${Math.min(30, vgRem)}제`;
 
-      state.startTime = Date.now() - (state.elapsedSec * 1000);
-      clearInterval(state.timerInterval);
-      state.timerInterval = setInterval(() => {
-        state.elapsedSec = Math.floor((Date.now() - state.startTime) / 1000);
-        const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
-        const s = String(state.elapsedSec % 60).padStart(2, '0');
-        $('hudTimer').textContent = `${m}:${s}`;
-        if (state.elapsedSec % 5 === 0) saveProgress();
-      }, 1000);
-
-      renderQuestion();
-      updateOmrCount();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } catch (e) {
-      alert('저장된 세션을 복원하는 중 오류가 발생했습니다: ' + e.message);
+    const poolTag = $('currentPoolCountTag');
+    if (poolTag) {
+      poolTag.textContent = exclude ? `${allRem}제` : `${totalCount}제 (전체 풀)`;
     }
   }
 
@@ -832,6 +805,16 @@
      LOBBY & CONFIGURATION
      ---------------------------------------------------- */
   function initLobby() {
+    // Mastered Reset Button
+    const btnReset = $('btnResetMastered');
+    if (btnReset) btnReset.onclick = resetMasteredIds;
+
+    // Exclude Mastered Checkbox
+    const chk = $('chkExcludeMastered');
+    if (chk) {
+      chk.onchange = () => updateLobbyMasteredUI();
+    }
+
     // Course selection cards
     document.querySelectorAll('.course-card').forEach(card => {
       card.onclick = () => {
@@ -883,6 +866,17 @@
       pool = [...vg].sort(() => 0.5 - Math.random());
     }
 
+    // Exclude mastered questions if toggle is on
+    const exclude = $('chkExcludeMastered')?.checked ?? true;
+    if (exclude) {
+      pool = pool.filter(q => !state.masteredIds.has(q.id));
+    }
+
+    if (pool.length === 0) {
+      alert('선택하신 코스의 모든 오답을 이미 정복하셨습니다! 🏆\n오답노트 격파 완료를 축하합니다!\n(다시 풀고 싶으실 때는 상단의 "체크 해제" 또는 "초기화"를 누르시면 됩니다)');
+      return;
+    }
+
     if (state.qLimit !== 'all') {
       const limit = parseInt(state.qLimit, 10);
       if (limit > 0 && limit < pool.length) {
@@ -917,13 +911,11 @@
       const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
       const s = String(state.elapsedSec % 60).padStart(2, '0');
       $('hudTimer').textContent = `${m}:${s}`;
-      if (state.elapsedSec % 5 === 0) saveProgress();
     }, 1000);
 
     renderQuestion();
     updateOmrCount();
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    saveProgress();
   }
 
   /* ----------------------------------------------------
@@ -1007,7 +999,6 @@
   }
 
   function initModalEvents() {
-    // Partial Submit Modal
     if ($('btnConfirmPartialSubmit')) {
       $('btnConfirmPartialSubmit').onclick = () => {
         $('partialSubmitModal').classList.add('hidden');
@@ -1020,7 +1011,6 @@
       };
     }
 
-    // Full Submit Modal (When unanswered exist)
     if ($('btnModalChoosePartial')) {
       $('btnModalChoosePartial').onclick = () => {
         $('fullSubmitModal').classList.add('hidden');
@@ -1082,7 +1072,6 @@
     // Question sentence
     $('qQuestionSentence').innerHTML = q.question_text;
 
-    // Check if already answered
     const currentAns = state.userAnswers[q.id];
     state.currentAnswered = (currentAns !== undefined);
 
@@ -1095,12 +1084,10 @@
       const btn = document.createElement('button');
       btn.className = 'omr-choice-btn w-full p-3.5 sm:p-4 rounded-xl text-left flex items-start gap-3 transition cursor-pointer';
 
-      let circleClass = '';
       if (currentAns === choiceNum) {
         btn.classList.add('selected');
       }
 
-      // If already answered in instant mode, reveal correct/wrong styles immediately
       if (state.feedbackMode === 'instant' && state.currentAnswered) {
         if (choiceNum === q.correct_num) {
           btn.classList.add('correct-choice');
@@ -1164,7 +1151,6 @@
     state.userAnswers[q.id] = choiceNum;
     state.currentAnswered = true;
     updateOmrCount();
-    saveProgress();
 
     if (state.feedbackMode === 'instant') {
       renderQuestion();
@@ -1302,7 +1288,6 @@
     state.isPartial = isPartial;
     state.submitted = true;
     clearInterval(state.timerInterval);
-    clearSavedProgress();
 
     if ($('audioPlayer')) $('audioPlayer').pause();
     if ($('omrModal')) $('omrModal').classList.add('hidden');
@@ -1311,7 +1296,6 @@
     $('screenExam').classList.add('hidden');
     $('screenResult').classList.remove('hidden');
 
-    // Evaluation Pool
     state.evalQuestions = isPartial
       ? state.activeQuestions.filter(q => state.userAnswers[q.id] !== undefined)
       : state.activeQuestions;
@@ -1319,6 +1303,7 @@
     let correctCount = 0;
     let wrongCount = 0;
     let unknownCount = 0;
+    let newlyMastered = 0;
     state.wrongList = [];
 
     const sectionStats = {};
@@ -1336,23 +1321,36 @@
       if (isCorrect) {
         correctCount++;
         sectionStats[q.section].correct++;
+        // Mastered logic: 맞힌 문제는 정복 ID에 추가!
+        if (!state.masteredIds.has(q.id)) {
+          state.masteredIds.add(q.id);
+          newlyMastered++;
+        }
       } else {
         if (isUnknown) unknownCount++;
         else wrongCount++;
         state.wrongList.push({ q, userAns: ans });
+        // 오답인 경우 혹시 정복 목록에 있었다면 제거(다시 풀어야 함)
+        state.masteredIds.delete(q.id);
       }
     });
+
+    saveMasteredIds();
 
     const total = state.evalQuestions.length;
     const accuracy = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
     $('resAccuracy').textContent = `${accuracy}%`;
+    const masteredInfoHtml = (newlyMastered > 0)
+      ? `<br><span class="inline-block mt-1 px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-bold text-xs">🎉 이번 풀이로 ${newlyMastered}문항 추가 정복! (총 ${state.masteredIds.size}/87문항 격파)</span>`
+      : '';
+
     if (isPartial) {
       $('resFraction').textContent = `${correctCount} / ${total} (중간 채점 / 전체 ${state.activeQuestions.length}제 중)`;
-      $('resSubtitle').innerHTML = `총 ${state.activeQuestions.length}문항 중 <strong class="text-emerald-700 font-bold">${total}문항 중간 채점</strong>이 완료되었습니다. (미응답 문항은 오답에 미반영)`;
+      $('resSubtitle').innerHTML = `총 ${state.activeQuestions.length}문항 중 <strong class="text-emerald-700 font-bold">${total}문항 중간 채점</strong>이 완료되었습니다. (미응답 문항은 오답에 미반영)${masteredInfoHtml}`;
     } else {
       $('resFraction').textContent = `${correctCount} / ${total} (정답/총문항)`;
-      $('resSubtitle').textContent = `모의고사 間違いノート(오답노트) 복습 세션이 정상적으로 완료되었습니다.`;
+      $('resSubtitle').innerHTML = `모의고사 間違いノート(오답노트) 복습 세션이 정상적으로 완료되었습니다.${masteredInfoHtml}`;
     }
 
     const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
@@ -1443,7 +1441,7 @@
     $('btnRestartLobby').onclick = () => {
       $('screenResult').classList.add('hidden');
       $('screenLobby').classList.remove('hidden');
-      checkSavedProgress();
+      updateLobbyMasteredUI();
     };
 
     $('btnRetryWrongOnly').onclick = () => {
@@ -1492,7 +1490,7 @@
       const isCorrect = (userAns === q.correct_num);
       const isUnknown = (userAns === 5);
 
-      let badge = '<span class="px-2.5 py-1 rounded text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">✓ 정답</span>';
+      let badge = '<span class="px-2.5 py-1 rounded text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">✓ 정답 (정복)</span>';
       if (isUnknown) badge = '<span class="px-2.5 py-1 rounded text-xs font-bold bg-amber-100 text-amber-800 border border-amber-300">❓ 모름</span>';
       else if (!isCorrect) badge = '<span class="px-2.5 py-1 rounded text-xs font-bold bg-rose-100 text-rose-800 border border-rose-300">❌ 오답</span>';
 
