@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="ja">
 <head>
+  <script src="/auth-gate.js"></script>
+  <script src="/exam-auto-submit.js"></script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>N2 文法 接続パズル SPEED RUN — ブロック組み立て・文形攻略</title>
@@ -992,6 +995,30 @@ function finishQuiz() {
 
   const total = sessionQuestions.length;
   const accuracy = Math.round((correctCount / total) * 100);
+
+  // Auto Submit to Calendar Site API
+  if (window.autoSubmitExamResult) {
+    const courseNames = {
+      c1: '動詞活用 接続トラップ (25제)',
+      c2: '名詞・形容詞 接続トラップ (20제)',
+      c3: 'N2 문法 001~035 총정리 (25제)',
+      all: '全範囲 総合ランダム (30제)'
+    };
+    window.autoSubmitExamResult({
+      examType: 'grammar-puzzle',
+      title: 'N2 文法 接続パズル SPEED RUN',
+      course: courseNames[currentCourse] || currentCourse,
+      elapsedSeconds: elapsedSeconds,
+      totalQuestions: total,
+      correctCount: correctCount,
+      wrongCount: total - correctCount,
+      accuracy: accuracy,
+      details: {
+        maxCombo: maxCombo,
+        userAnswers: userAnswers.map(a => ({ id: a.q.id, grammar: a.q.grammar_point, isCorrect: a.isCorrect }))
+      }
+    });
+  }
 
   const m = String(Math.floor(elapsedSeconds / 60)).padStart(2, '0');
   const s = String(elapsedSeconds % 60).padStart(2, '0');

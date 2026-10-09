@@ -30,11 +30,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.brand-group {
+  flex-shrink: 0;
+  min-width: max-content;
+}
+.brand-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 4px 0 0;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
 }
 .topbar h1 {
-  font-size: 19px;
+  font-size: 22px;
   margin: 4px 0 0;
+  white-space: nowrap;
 }
 .eyebrow {
   margin: 0;
@@ -45,38 +58,152 @@ body {
 }
 .accent { color: var(--green); }
 
-/* Topbar Actions & Chips */
-.topbar-actions {
+/* Training Hub Section */
+.training-hub {
+  background: rgba(18, 23, 16, 0.75);
+  border: 1px solid rgba(58, 70, 54, 0.6);
+  border-radius: 18px;
+  padding: 18px 22px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+.hub-header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(58, 70, 54, 0.35);
+}
+.hub-title-box {
+  display: flex;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
-.game-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-height: 42px;
-  padding: 8px 16px;
-  border: 1px solid var(--green);
-  border-radius: 99px;
-  background: var(--green);
-  color: #11150d;
-  font-size: 13px;
+.hub-badge {
+  font-size: 14px;
   font-weight: 800;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background .15s, transform .15s;
+  color: #e5f2dc;
+  letter-spacing: 0.04em;
 }
-.game-button:hover {
-  background: #cdfb7a;
+.hub-sub {
+  font-size: 11px;
+  color: #8b9985;
+}
+.hub-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+.hub-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.hub-group-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #9cb094;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hub-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+.hub-btn:hover {
   transform: translateY(-1px);
 }
-.game-button:focus-visible {
-  outline: 3px solid var(--text);
-  outline-offset: 4px;
+.hub-btn .hub-icon {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hub-btn .hub-text {
+  flex: 1;
+}
+.hub-btn .hub-arrow {
+  font-size: 12px;
+  opacity: 0.5;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.hub-btn:hover .hub-arrow {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+/* Color themes for hub buttons */
+.hub-btn-amber {
+  background: rgba(245, 158, 11, 0.09);
+  border-color: rgba(245, 158, 11, 0.28);
+  color: #fde68a;
+}
+.hub-btn-amber:hover {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: rgba(245, 158, 11, 0.6);
+  box-shadow: 0 2px 14px rgba(245, 158, 11, 0.25);
+}
+
+.hub-btn-emerald {
+  background: rgba(16, 185, 129, 0.09);
+  border-color: rgba(16, 185, 129, 0.28);
+  color: #a7f3d0;
+}
+.hub-btn-emerald:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.6);
+  box-shadow: 0 2px 14px rgba(16, 185, 129, 0.25);
+}
+
+.hub-btn-sky {
+  background: rgba(14, 165, 233, 0.09);
+  border-color: rgba(14, 165, 233, 0.28);
+  color: #bae6fd;
+}
+.hub-btn-sky:hover {
+  background: rgba(14, 165, 233, 0.2);
+  border-color: rgba(14, 165, 233, 0.6);
+  box-shadow: 0 2px 14px rgba(14, 165, 233, 0.25);
+}
+
+.hub-btn-indigo {
+  background: rgba(99, 102, 241, 0.09);
+  border-color: rgba(99, 102, 241, 0.28);
+  color: #c7d2fe;
+}
+.hub-btn-indigo:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 2px 14px rgba(99, 102, 241, 0.25);
+}
+
+.hub-btn-pink {
+  background: rgba(236, 72, 153, 0.09);
+  border-color: rgba(236, 72, 153, 0.28);
+  color: #fbcfe8;
+}
+.hub-btn-pink:hover {
+  background: rgba(236, 72, 153, 0.2);
+  border-color: rgba(236, 72, 153, 0.6);
+  box-shadow: 0 2px 14px rgba(236, 72, 153, 0.25);
 }
 
 .exam-chips-group {
@@ -1109,6 +1236,20 @@ footer {
     font-size: 11px;
     padding: 6px 10px;
     justify-content: center;
+  }
+  .training-hub {
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+  }
+  .hub-groups {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .hub-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
   }
 }
 

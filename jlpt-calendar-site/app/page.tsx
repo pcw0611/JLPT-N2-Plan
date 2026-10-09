@@ -141,59 +141,105 @@ export default function Home() {
   return (
     <main className="site-shell">
       <header className="topbar">
-        <div>
+        <div className="brand-group">
           <p className="eyebrow">JLPT N2 PLAN</p>
-          <h1>学習カレンダー</h1>
+          <h1 className="brand-title">学習カレンダー</h1>
         </div>
-        <div className="topbar-actions">
-          <a className="game-button typing-nav-btn" href="/typing" aria-label="MyGO!!!!! 歌詞タイピング練習を開く">
-            <span aria-hidden="true">⌨️</span> MyGO!!!!! タイピング <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button speedrun-nav-btn" href="/exams/verb-speedrun-100.html" aria-label="動詞活用 SPEED RUN 100 練習を開く">
-            <span aria-hidden="true">⚡</span> 動詞活用 SPEED RUN <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button adj-speedrun-nav-btn" href="/exams/adj-speedrun-100.html" aria-label="形容詞活用 SPEED RUN 100 練習を開く">
-            <span aria-hidden="true">🌟</span> 形容詞活用 SPEED RUN <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button grammar-nav-btn" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈를 열기">
-            <span aria-hidden="true">🎯</span> N2 文法 SPEED RUN <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button puzzle-nav-btn" href="/exams/n2-grammar-puzzle.html" aria-label="N2 文法 接続パズル 블록 조립 퀴즈를 열기">
-            <span aria-hidden="true">🧩</span> N2 文法 接続パズル <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button error-nav-btn" href="/exams/n2-mock-error-review-pool.html" aria-label="모의고사 間違いノート 복습 마스터 풀 열기">
-            <span aria-hidden="true">📑</span> 模試 間違いノート <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button mock-nav-btn" href="/exams/past-exams-portal.html" aria-label="実戦模試・過去問アーカイブを開く">
-            <span aria-hidden="true">📝</span> 過去問・模試 <span aria-hidden="true">→</span>
-          </a>
-          <a className="game-button listening-nav-btn" href="/exams/official-vol2-listening-player.html" aria-label="公式聴解音源プレイヤーを開く">
-            <span aria-hidden="true">🎧</span> 聴解プレイヤー <span aria-hidden="true">→</span>
-          </a>
-          <div className="exam-chips-group">
-            <button
-              type="button"
-              className="exam-chip chip-mock"
-              onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
-              title="10月18日(日) 第3回実戦模試 (カレンダーで表示)"
-            >
-              <span className="chip-dot pulse-amber" />
-              <span className="chip-title">10/18 第3回模試</span>
-              <strong className="chip-dday">D-{mockDays}</strong>
-            </button>
-            <button
-              type="button"
-              className="exam-chip chip-exam"
-              onClick={() => { setSelectedDate('2026-12-06'); setVisibleMonth('2026-12'); }}
-              title="12月6日(日) JLPT N2本試験 (カレンダーで表示)"
-            >
-              <span className="chip-dot glow-target" />
-              <span className="chip-title">12/6 本試験</span>
-              <strong className="chip-dday">D-{daysLeft}</strong>
-            </button>
-          </div>
+        <div className="exam-chips-group">
+          <button
+            type="button"
+            className="exam-chip chip-mock"
+            onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
+            title="10月18日(日) 第3回実戦模試 (カレンダーで表示)"
+          >
+            <span className="chip-dot pulse-amber" />
+            <span className="chip-title">10/18 第3回模試</span>
+            <strong className="chip-dday">D-{mockDays}</strong>
+          </button>
+          <button
+            type="button"
+            className="exam-chip chip-exam"
+            onClick={() => { setSelectedDate('2026-12-06'); setVisibleMonth('2026-12'); }}
+            title="12月6日(日) JLPT N2本試験 (カレンダーで表示)"
+          >
+            <span className="chip-dot glow-target" />
+            <span className="chip-title">12/6 本試験</span>
+            <strong className="chip-dday">D-{daysLeft}</strong>
+          </button>
         </div>
       </header>
+
+      {/* N2 実戦トレーニングハブ */}
+      <nav className="training-hub" aria-label="N2 実戦トレーニングハブ">
+        <div className="hub-header">
+          <div className="hub-title-box">
+            <span className="hub-badge">🚀 N2 実戦トレーニングハブ</span>
+            <span className="hub-sub">전 문항 자동 채점 및 캘린더 실시간 연동</span>
+          </div>
+        </div>
+        <div className="hub-groups">
+          {/* Group 1: 活用特訓 */}
+          <div className="hub-group">
+            <span className="hub-group-label">⚡ 活用特訓</span>
+            <div className="hub-links">
+              <a className="hub-btn hub-btn-amber" href="/exams/verb-speedrun-100.html" aria-label="動詞活用 SPEED RUN 100 練習を開く">
+                <span className="hub-icon" aria-hidden="true">⚡</span>
+                <span className="hub-text">動詞活用 SPEED RUN</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-amber" href="/exams/adj-speedrun-100.html" aria-label="形容詞活用 SPEED RUN 100 練習を開く">
+                <span className="hub-icon" aria-hidden="true">🌟</span>
+                <span className="hub-text">形容詞活用 SPEED RUN</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Group 2: 文法攻略 */}
+          <div className="hub-group">
+            <span className="hub-group-label">🎯 文法攻略</span>
+            <div className="hub-links">
+              <a className="hub-btn hub-btn-emerald" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈 열기">
+                <span className="hub-icon" aria-hidden="true">🎯</span>
+                <span className="hub-text">N2 文法 SPEED RUN</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-emerald" href="/exams/n2-grammar-puzzle.html" aria-label="N2 文法 接続パズル 블록 조립 퀴즈 열기">
+                <span className="hub-icon" aria-hidden="true">🧩</span>
+                <span className="hub-text">N2 文法 接続パズル</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Group 3: 模試・復習・音源 */}
+          <div className="hub-group">
+            <span className="hub-group-label">📑 模試・復習・音源</span>
+            <div className="hub-links">
+              <a className="hub-btn hub-btn-sky" href="/exams/n2-mock-error-review-pool.html" aria-label="모의고사 間違いノート 복습 마스터 풀 열기">
+                <span className="hub-icon" aria-hidden="true">📑</span>
+                <span className="hub-text">模試 間違いノート</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-sky" href="/exams/past-exams-portal.html" aria-label="実戦模試・過去問アーカイブを開く">
+                <span className="hub-icon" aria-hidden="true">📝</span>
+                <span className="hub-text">過去問・模試</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-indigo" href="/exams/official-vol2-listening-player.html" aria-label="公式聴解音源プレイヤーを開く">
+                <span className="hub-icon" aria-hidden="true">🎧</span>
+                <span className="hub-text">聴解プレイヤー</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-pink" href="/typing" aria-label="MyGO!!!!! 歌詞タイピング練習を開く">
+                <span className="hub-icon" aria-hidden="true">⌨️</span>
+                <span className="hub-text">MyGO!!!!! タイピング</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       <section className="hero">
         <div>

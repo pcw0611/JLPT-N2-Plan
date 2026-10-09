@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <script src="/auth-gate.js"></script>
+  <script src="/exam-auto-submit.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JLPT N2 模試 間違いノート 総整理 復習マスタープール (全87問)</title>
@@ -1380,6 +1383,35 @@
     initResultControls();
     renderExplanations();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Auto Submit to Calendar Site API
+    if (window.autoSubmitExamResult) {
+      const courseNames = {
+        all: '전영역 87제 풀 코스',
+        lang_reading: '언어지식·독해 62제',
+        listening: '청해 실전음원 25제',
+        vocab_grammar: '어휘·문법 킬러 30제'
+      };
+      let courseTitle = courseNames[state.course] || state.course;
+      if (state.isPartial) {
+        courseTitle += ` [${total}문항 중간완료]`;
+      }
+      window.autoSubmitExamResult({
+        examType: 'mock-error-pool',
+        title: 'JLPT N2 模試 間違いノート 復習',
+        course: courseTitle,
+        elapsedSeconds: state.elapsedSec,
+        totalQuestions: total,
+        correctCount: correctCount,
+        wrongCount: wrongCount,
+        accuracy: accuracy,
+        details: {
+          isPartial: state.isPartial,
+          unknownCount: unknownCount,
+          wrongQuestions: state.wrongList.map(w => w.q.q_num)
+        }
+      });
+    }
   }
 
   /* Copy result string to clipboard (MANUAL TRACKING FEATURE) */

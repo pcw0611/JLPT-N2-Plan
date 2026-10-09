@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <script src="/auth-gate.js"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JLPT N2 公式問題集 第2集 総合実践模試 (107問 決定版)</title>
@@ -702,7 +704,8 @@
     let pendingExamStartCallback = null;
 
     function checkExamPin(callback) {
-      if (sessionStorage.getItem('jlpt_exam_pin_auth') === '6997') {
+      if (sessionStorage.getItem('jlpt_exam_pin_auth') === '6997' || /(?:^|;\s*)jlpt_auth=6997(?:;|$)/.test(document.cookie) || localStorage.getItem('jlpt_auth') === '6997') {
+        sessionStorage.setItem('jlpt_exam_pin_auth', '6997');
         callback();
         return;
       }

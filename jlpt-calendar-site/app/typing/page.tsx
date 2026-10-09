@@ -397,6 +397,27 @@ export default function MygoTypingPage() {
             stateRef.current.isPlaying = false;
             stateRef.current.isCompleted = true;
             s.saveStats(s.song.id, s.activePart.id, finalCpm, accuracy, timeSec, finalTotal, finalCorrect);
+            try {
+              fetch('/api/submit-exam', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  examType: 'typing',
+                  title: `MyGO!!!!! タイピング (${s.song.title} - ${s.activePart.title})`,
+                  course: s.song.title,
+                  elapsedSeconds: timeSec,
+                  totalQuestions: finalTotal,
+                  correctCount: finalCorrect,
+                  wrongCount: finalTotal - finalCorrect,
+                  accuracy: accuracy,
+                  details: {
+                    cpm: finalCpm,
+                    songId: s.song.id,
+                    partId: s.activePart.id,
+                  }
+                }),
+              }).catch(() => {});
+            } catch {}
           }
         }
       } else {

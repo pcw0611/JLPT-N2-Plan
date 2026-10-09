@@ -52,3 +52,19 @@ export const dailyReports = sqliteTable('daily_reports', {
   payloadJson: text('payload_json').notNull(),
   updatedAt: text('updated_at').notNull(),
 });
+
+export const examSubmissions = sqliteTable('exam_submissions', {
+  id: integer('id').primaryKey({ autoIncrement: true }),
+  examType: text('exam_type').notNull(),
+  title: text('title').notNull(),
+  course: text('course'),
+  elapsedSeconds: integer('elapsed_seconds').notNull(),
+  totalQuestions: integer('total_questions').notNull(),
+  correctCount: integer('correct_count').notNull(),
+  wrongCount: integer('wrong_count').notNull(),
+  accuracy: integer('accuracy').notNull(),
+  date: text('date').notNull(),
+  payloadJson: text('payload_json').notNull(),
+  createdAt: text('created_at').notNull(),
+});
+

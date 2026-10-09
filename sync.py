@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 JLPT N2 Plan - 원클릭 동기화 스크립트 (Windows & macOS 지원)
 사용법:
@@ -85,8 +85,16 @@ def sync_push():
         print(f"  [에러] GitHub 푸시 실패:\n{push_res.stderr or push_res.stdout}")
         return False
 
+def pull_online_submissions():
+    pull_script = ROOT / "jlpt-calendar-site" / "scripts" / "pull_submissions.py"
+    if pull_script.exists():
+        py_cmd = "python3" if platform.system() == "Darwin" else "python"
+        res = run_cmd(f"{py_cmd} {pull_script}", check=False)
+        if res.stdout.strip():
+            print(res.stdout.strip())
+
 def sync_calendar():
-    print("[3/3] 웹 캘린더 사이트 동기화 확인 중...")
+    print("[3/3] 웹 캘린더 사이트 및 시험 결과 동기화 확인 중...")
     secret_file = ROOT / "jlpt-calendar-site" / ".sync-secret"
     sync_script = ROOT / "jlpt-calendar-site" / "scripts" / "sync_learning_data.py"
     
@@ -94,6 +102,8 @@ def sync_calendar():
         print("  [알림] 'jlpt-calendar-site/.sync-secret' 파일이 없어 웹 캘린더 동기화는 건너뜁니다.")
         print("        (동기화가 필요하시면 Windows PC의 해당 파일을 복사해 넣어주세요.)")
         return
+
+    pull_online_submissions()
 
     if sync_script.exists():
         py_cmd = "python3" if platform.system() == "Darwin" else "python"

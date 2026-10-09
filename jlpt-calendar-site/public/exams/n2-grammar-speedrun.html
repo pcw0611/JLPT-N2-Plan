@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="ko">
 <head>
+  <script src="/auth-gate.js"></script>
+  <script src="/exam-auto-submit.js"></script>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>N2 文法 SPEED RUN — 문형 저격 퀴즈</title>
@@ -824,6 +827,31 @@ function finishGame() {
   const accuracy = Math.round((state.score / (state.score + state.mistakes.length)) * 100) || 0;
   $('resAccuracy').textContent = `${accuracy}%`;
   $('resScoreFraction').textContent = `${state.score} / ${state.score + state.mistakes.length} (정답수/총시도)`;
+
+  // Auto Submit to Calendar Site API
+  if (window.autoSubmitExamResult) {
+    const courseNames = {
+      c1: '강의 001~050 핵심 문형',
+      c2: '강의 051~100 핵심 문형',
+      c3: '강의 101~150 완결 문형',
+      all: 'N2 전범위 150제 종합'
+    };
+    const attempts = state.score + state.mistakes.length;
+    window.autoSubmitExamResult({
+      examType: 'grammar-speedrun',
+      title: 'N2 文法 SPEED RUN',
+      course: courseNames[state.course] || state.course,
+      elapsedSeconds: state.elapsedSec,
+      totalQuestions: attempts,
+      correctCount: state.score,
+      wrongCount: state.mistakes.length,
+      accuracy: accuracy,
+      details: {
+        maxCombo: state.maxCombo,
+        mistakes: state.mistakes.map(m => ({ num: m.q.item.num, pattern: m.q.item.pattern, user: m.userAnswer, correct: m.q.answer }))
+      }
+    });
+  }
 
   const m = String(Math.floor(state.elapsedSec / 60)).padStart(2, '0');
   const s = String(state.elapsedSec % 60).padStart(2, '0');
