@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'MyGO!!!!! タイピング | JLPT N2 Plan',
-  description: 'MyGO!!!!! 歌詞タイピング練習',
+  title: 'タイピング | JLPT N2 Plan',
+  description: '日本語 歌詞・文章タイピング練習',
 };
 
 export default function TypingLayout({

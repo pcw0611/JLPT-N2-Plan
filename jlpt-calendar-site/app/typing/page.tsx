@@ -403,7 +403,7 @@ export default function MygoTypingPage() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                   examType: 'typing',
-                  title: `MyGO!!!!! タイピング (${s.song.title} - ${s.activePart.title})`,
+                  title: `タイピング (${s.song.title} - ${s.activePart.title})`,
                   course: s.song.title,
                   elapsedSeconds: timeSec,
                   totalQuestions: finalTotal,
@@ -475,7 +475,7 @@ export default function MygoTypingPage() {
     const m = Math.floor(elapsedSeconds / 60);
     const s = elapsedSeconds % 60;
     const timeStr = m > 0 ? `${m}분 ${s > 0 ? `${s}초` : ''}` : `${s}초`;
-    const text = `[${today} MyGO!!!!! 歌詞タイピング] 학습 시간: ${timeStr} (곡: ${song.title} ${activePart.name}, CPM: ${currentCpm}, 정확도: ${accuracy}%)`;
+    const text = `[${today} タイピング] 학습 시간: ${timeStr} (곡: ${song.title} ${activePart.name}, CPM: ${currentCpm}, 정확도: ${accuracy}%)`;
     navigator.clipboard?.writeText(text).then(() => {
       setCopiedNotice(true);
       setTimeout(() => setCopiedNotice(false), 2000);
@@ -559,7 +559,7 @@ export default function MygoTypingPage() {
             ← 学習カレンダー
           </a>
           <div className="typing-title-group">
-            <span className="typing-badge">MyGO!!!!! 歌詞タイピング</span>
+            <span className="typing-badge">日本語 タイピング</span>
             <h1 className="typing-title">{song.title} <small>({song.reading})</small></h1>
           </div>
         </div>

@@ -231,9 +231,9 @@ export default function Home() {
                 <span className="hub-text">聴解プレイヤー</span>
                 <span className="hub-arrow" aria-hidden="true">→</span>
               </a>
-              <a className="hub-btn hub-btn-pink" href="/typing" aria-label="MyGO!!!!! 歌詞タイピング練習を開く">
+              <a className="hub-btn hub-btn-pink" href="/typing" aria-label="タイピング練習を開く">
                 <span className="hub-icon" aria-hidden="true">⌨️</span>
-                <span className="hub-text">MyGO!!!!! タイピング</span>
+                <span className="hub-text">タイピング</span>
                 <span className="hub-arrow" aria-hidden="true">→</span>
               </a>
             </div>
