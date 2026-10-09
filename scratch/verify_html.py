@@ -11,5 +11,5 @@ patterns = json.loads(text[idx1 + len('const ALL_PATTERNS = '):idx2 + 1])
 print(f"Total patterns in HTML: {len(patterns)}")
 
 for p in patterns:
-    if p['num'] in ['001', '003', '008', '016', '090', '129']:
-        print(f"[{p['num']}] {p['pattern']} -> blank: {p['sentence_ja_blank']} | tgt: {p['sentence_ja_target']}")
+    if p['num'] in ['008', '021', '054']:
+        print(f"[{p['num']}] {p['pattern']} -> blank: {p['sentence_ja_blank']} | tgt: {p['sentence_ja_target']} | tko: {p['target_ko']}")
