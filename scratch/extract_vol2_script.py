@@ -1,12 +1,13 @@
-import pypdf
+import pdfplumber
+import sys
 
-reader = pypdf.PdfReader('references/official_vol2_listening/N2_listening_script.pdf')
-print("Total pages:", len(reader.pages))
-full_text = ""
-for i, page in enumerate(reader.pages):
-    full_text += f"\n--- Page {i+1} ---\n" + page.extract_text()
+sys.stdout.reconfigure(encoding='utf-8')
 
-with open('scratch/vol2_script.txt', 'w', encoding='utf-8') as f:
-    f.write(full_text)
-
-print("Saved scratch/vol2_script.txt, length:", len(full_text))
+with pdfplumber.open('references/official_vol2_listening/N2_listening_script.pdf') as pdf:
+    for page_idx, page in enumerate(pdf.pages):
+        text = page.extract_text()
+        print(f"--- PAGE {page_idx + 1} ---")
+        lines = text.split('\n')
+        for line in lines[:15]:
+            print(line)
+        print(f"(Total lines on page: {len(lines)})")

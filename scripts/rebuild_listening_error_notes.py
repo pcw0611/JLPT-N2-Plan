@@ -324,14 +324,13 @@ ALL_25_LISTENING_CARDS = [
             '応募申請書を提出する'
         ],
         'answer_idx': 3,
-        'script': """<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>中村さん、青葉市の市民文化祭のことだけど、ステージ演奏の出演者募集に応募しようっていう話、２人でギター弾いて歌おうって言ってたやつね。事前選考のための演奏動画の作成が締め切りに間に合わないって諦めたよね。それ、僕の勘違いだったよ。ごめん。</div>
-<div style="margin-bottom:6px;"><b style="color:#2563eb;">女：</b>え？</div>
-<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>応募申請書と動画を同時に提出しなきゃいけないと思ってたんだけど、動画は申請書の締め切り後、１週間以内の提出だったんだ。</div>
-<div style="margin-bottom:6px;"><b style="color:#2563eb;">女：</b>え、そうだったの？私もホームページ見たのに気がつかなかった、ごめんね。</div>
-<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>うん、間に合いそうだから申し込もうよ。パソコンで申請書作ってくれたって言ってたけど、削除しちゃった？</div>
+        'script': """<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>中村さん、青葉市の市民文化祭のことだけど、ステージ演奏の出演者募集に応募しようっていう話、２人でギター弾いて歌おうって言ってたやつね。事前選考のための演奏動画の作成が締め切りに間に合わないって諦めたよね。それ、僕の勘違いだったよ。ごめん。応募申請書と動画を同時に提出しなきゃいけないと思ってたんだけど、動画は申請書の締め切り後、１週間以内の提出だったんだ。</div>
+<div style="margin-bottom:6px;"><b style="color:#2563eb;">女：</b>え、そうだったの？私もホームページ見たのに気がつかなかった。ごめんね。</div>
+<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>うん。間に合いそうだから申し込もうよ。パソコンで申請書作ってくれたって言ってたけど、削除しちゃった？</div>
 <div style="margin-bottom:6px;"><b style="color:#2563eb;">女：</b>残してあるよ。</div>
-<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>じゃあそれ使えるね。締め切り明日だから、提出任せるね。</div>
-<div><b style="color:#2563eb;">女：</b>了解。動画作成もすぐに取りかかんなきゃ。応募する以上は絶対出たいからね。</div>""",
+<div style="margin-bottom:6px;"><b style="color:#475569;">男：</b>じゃあ、それ使えるね。締め切り明日だから提出任せるね。</div>
+<div style="margin-bottom:6px;"><b style="color:#2563eb;">女：</b>了解。動画作成もすぐに取りかかんなきゃ。応募する以上は絶対出たいからね。</div>
+<div><b style="color:#0369a1;">問い：</b>女の学生はこの後まず何をしますか。</div>""",
         'translation': '여학생은 이 후 우선 무엇을 합니까?',
         'explanation': '남학생이 마감이 내일인 신청서 제출을 부탁했고, 여학생이 만들어 둔 파일이 컴퓨터에 남아있어 이를 바로 제출하기로 수락(了解)했습니다. 동영상 제작은 그 다음입니다.',
         'user_selected': '応募申請書を新しく作成する',
