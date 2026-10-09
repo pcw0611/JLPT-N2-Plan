@@ -33,10 +33,15 @@ public_target = ROOT / 'jlpt-calendar-site' / 'public' / 'exams' / 'n2-grammar-s
 quiz_target = ROOT / 'quiz_sites' / 'n2-grammar-speedrun.html'
 dist_target = ROOT / 'jlpt-calendar-site' / 'dist' / 'client' / 'exams' / 'n2-grammar-speedrun.html'
 
+# 1. Update public HTML with json dataset
 update_html_file(public_target)
-update_html_file(quiz_target)
+
+# 2. Mirror complete public HTML to quiz_sites and dist
+shutil.copy2(public_target, quiz_target)
+print(f"Mirrored public HTML to {quiz_target}")
+
 if dist_target.exists():
     shutil.copy2(public_target, dist_target)
-    print(f"Copied updated public file to {dist_target}")
+    print(f"Mirrored public HTML to {dist_target}")
 
-print("All Grammar Speedrun HTML targets updated successfully!")
+print("All Grammar Speedrun HTML targets synchronized successfully!")

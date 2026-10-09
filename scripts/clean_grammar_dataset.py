@@ -329,6 +329,94 @@ SURGICAL_KO = {
 cleaned = []
 errors = []
 
+SPLIT_CHARS = r'[、。，\sがをにへとはでもよりからまで]'
+
+def clean_anchor(anchor, before):
+    if anchor == 'の' or anchor == 'な':
+        return anchor
+    anchor = re.sub(r'^(?:明日の|費用の|の|少し|毎日|窓が|部屋は|この|その|あの|どんなに|私)', '', anchor)
+    if not anchor:
+        anchor = before[-2:]
+    return anchor
+
+CUSTOM_ANCHOR_FIXES = {
+    '039': ('使わ', 'Vない형(아단 어간)', '동사 「使う」의 아단(ない형) 어간 「使わ」 뒤에 「ざるを得ない」가 결합합니다!'),
+    '044': ('食べ', 'Vない형(1단 어간)', '동사 「食べる」의 ない형 어간 「食べ」 뒤에 「ずに(~하지 않고)」가 결합합니다!'),
+    '045': ('行か', 'Vない형(아단 어간)', '동사 「行く」의 아단(ない형) 어간 「行か」 뒤에 「ずに済んだ」가 결합합니다!'),
+    '046': ('笑わ', 'Vない형(아단 어간)', '동사 「笑う」의 아단(ない형) 어간 「笑わ」 뒤에 「ず에는いられなかった」가 결합합니다!'),
+    '049': ('少なくても、', '문맥 수식 결합', '역접 접속 뒤에서 뒤의 명사 「方法」를 수식하여 「그 나름의 방법」으로 이어집니다!'),
+    '058': ('時から', '명사+조사 결합', '명사구 「何時から」 뒤에 회상·확인의 구어 표현 「だっけ」가 결합합니다!'),
+    '066': ('し', 'Vて형(연결형)', '동사 「する」의 어간 「し」 뒤에 「てでも(て형＋でも)」가 결합합니다!'),
+    '067': ('心配', '나형용사/명사 で', '감정 명사/나형용사 「心配」 뒤에 「でならない(너무 ~하다)」가 결합합니다!'),
+    '068': ('なっ', 'Vて형(촉음편 어간)', '동사 「なる」의 촉음편 어간 「なっ」 뒤에 「てはじめて」가 결합합니다!'),
+    '069': ('甘え', 'Vて형 어간', '동사 「甘える」의 어간 「甘え」 뒤에 「てばかりはいられない」가 결합합니다!'),
+    '070': ('勝っ', 'Vて형(촉음편 어간)', '동사 「勝つ」의 촉음편 어간 「勝っ」 뒤에 「てみせる」가 결합합니다!'),
+    '071': ('後悔し', 'Vて형 어간', '동사 「後悔する」의 어간 뒤에 「ても始まらない」가 결합합니다!'),
+    '072': ('願っ', 'Vて형(촉음편 어간)', '동사 「願う」의 촉음편 어간 「願っ」 뒤에 「てやまない」가 결합합니다!'),
+    '076': ('留学し', '동사 의지형 어간', '동사 「留学する」의 어간 뒤에 의지형 결합 「ようと思う」가 이어집니다!'),
+    '077': ('旅行', '명사(名詞) 직결', '앞 단어 「旅行」가 명사이므로 「どころではない」와 직접 결합합니다!'),
+    '085': ('やってみ', 'Vない형 어간', '보조동사 「みる」의 어간 뒤에 「ないことには(~하지 않고는)」가 결합합니다!'),
+    '087': ('私', '명사(名詞) 직결', '인칭대명사 「私」 뒤에 경시·겸양의 조사 「なんて」가 직접 결합합니다!'),
+    '098': ('新製品の発売', '명사(名詞) 직결', '동작성 명사 「新製品の発売」에 문형 「に先立って」가 직접 결합합니다!'),
+    '100': ('激しい風雨', '명사(名詞) 직결', '명사 「激しい風雨」 뒤에 역접 문형 「にもかかわらず」가 직접 결합합니다!'),
+    '102': ('第一歩', '명사(名詞) 직결', '명사 「第一歩」 뒤에 한정 문형 「にすぎない」가 직접 결합합니다!'),
+    '105': ('彼', '명사(名詞) 직결', '대명사 「彼」 뒤에 확신 문형 「に違いない」가 직접 결합합니다!'),
+    '109': ('人口の増加', '명사(名詞) 직결', '동작성 명사 「人口の増加」 뒤에 동반변화 문형 「にともなって」가 직접 결합합니다!'),
+    '119': ('勉強', '동사 어간 결합', '「勉強すればするほど」 비례 관계의 앞 동사 어간입니다!'),
+    '123': ('持ってくれ', '가정형(ば형) 어간', '동사 「持ってくれる」의 가정형 어간 뒤에 「ばよかった」가 결합합니다!'),
+    '138': ('出', '동사 의지형 어간', '동사 「出る」의 어간 「出」 뒤에 의향형 결합 「ようとする」가 이어집니다!'),
+    '141': ('忘れてしまわ', 'Vない형(아단 어간)', '동사 「忘れてしまう」의 아단(부정형) 어간 뒤에 「ないように」가 결합합니다!')
+}
+
+def extract_anchor_info(num, blank, conn):
+    if num in CUSTOM_ANCHOR_FIXES:
+        return CUSTOM_ANCHOR_FIXES[num]
+    before = blank.split('（　　）')[0].strip() if '（　　）' in blank else ''
+    if before.endswith('の'):
+        anchor = 'の'
+        conn_type = '조사 「の」'
+        hint = "앞 단어 뒤에 명사 수식 조사 「の」가 붙어 문형과 결합합니다!"
+    elif before.endswith('な'):
+        tokens = re.split(SPLIT_CHARS, before[:-1])
+        base = tokens[-1] if tokens else ''
+        anchor = base + 'な' if base else 'な'
+        conn_type = '나형용사 「な」'
+        hint = f"앞 단어 「{anchor}」가 나형용사(ナA) 연체형 「な」이므로 결합합니다!"
+    elif 'ます語幹' in conn or 'ます形' in conn:
+        tokens = re.split(SPLIT_CHARS, before)
+        anchor = tokens[-1] if tokens and tokens[-1] else before[-2:]
+        anchor = clean_anchor(anchor, before)
+        conn_type = 'Vます형(연용형 어간)'
+        hint = f"앞 단어 「{anchor}」가 동사 마스형(ます語幹) 어간이므로 바로 결합합니다!"
+    else:
+        tokens = re.split(SPLIT_CHARS, before)
+        last_token = tokens[-1] if tokens and tokens[-1] else before[-3:]
+        anchor = clean_anchor(last_token, before)
+        
+        if anchor.endswith('た') or anchor.endswith('だ'):
+            conn_type = 'Vた형(과거·완료)'
+            hint = f"앞 동사 「{anchor}」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!"
+        elif anchor.endswith('て') or anchor.endswith('で'):
+            conn_type = 'Vて형(연결형)'
+            hint = f"앞 동사 「{anchor}」가 て형(연결형)이므로 문형과 직결됩니다!"
+        elif anchor.endswith('ない'):
+            conn_type = 'Vない형(부정형)'
+            hint = f"앞 동사 「{anchor}」가 부정형(ない形)이므로 결합합니다!"
+        elif conn.startswith('N') or conn.startswith('数量') or '名詞' in conn:
+            conn_type = '명사(名詞) 직결'
+            hint = f"앞 단어 「{anchor}」가 명사이므로 문형과 직접 결합합니다!"
+        elif any(anchor.endswith(end) for end in ['る', 'く', 'ぐ', 'す', 'つ', 'ぬ', 'ぶ', 'む', 'う']):
+            conn_type = 'V사전형(기본형)'
+            hint = f"앞 동사 「{anchor}」가 사전형(기본형)이므로 결합합니다!"
+        elif anchor.endswith('い'):
+            conn_type = '이형용사(イA) 기본형'
+            hint = f"앞 단어 「{anchor}」가 이형용사 기본형이므로 결합합니다!"
+        else:
+            conn_type = '기본 결합'
+            hint = f"앞 단어 「{anchor}」의 접속 형태에 맞추어 결합합니다!"
+            
+    return anchor, conn_type, hint
+
 for x in items:
     num = x['num']
     ja = x['sentence_ja']
@@ -366,6 +454,8 @@ for x in items:
     if t_ko not in ko:
         errors.append(f"[{num}] KO target '{t_ko}' not in '{ko}'")
         
+    anc, c_type, c_hint = extract_anchor_info(num, blank, x.get('connection', ''))
+
     cleaned.append({
         'id': x['id'],
         'num': num,
@@ -379,7 +469,10 @@ for x in items:
         'sentence_ko': ko,
         'target_ko': t_ko,
         'diff_point': x.get('diff_point', ''),
-        'exam_signal': x.get('exam_signal', '')
+        'exam_signal': x.get('exam_signal', ''),
+        'conn_anchor': anc,
+        'conn_type': c_type,
+        'conn_hint': c_hint
     })
 
 print(f"Total processed: {len(cleaned)}")
