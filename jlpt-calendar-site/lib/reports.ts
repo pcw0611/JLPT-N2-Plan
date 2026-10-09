@@ -21,10 +21,20 @@ export type AnkiDailySummary = {
   cardsRemaining: { new: number; learning: number; review: number };
   sourceNote?: string;
 };
+export type ActivityItem = {
+  id: string;
+  source: 'anki' | 'quiz' | 'exam' | 'typing' | 'activity' | string;
+  durationSeconds: number;
+  timeStr: string;
+  minutes: number;
+  notes: string;
+  startedAt?: string | null;
+};
 export type DailyReport = {
   schemaVersion?: number; date: string; syncedAt?: string; studyMinutes: number; hasUntrackedActivity: boolean;
   tests: { count: number; correct: number; total: number; wrong: number; unknown: number; unanswered?: number; elapsedSeconds: number; untimedTests?: number; unclassifiedItems?: number; excludedItems?: number };
   testDetails?: { id: string; title: string; sourceClass: string; correct: number; total: number; elapsedSeconds: number | null }[];
+  activityHistory?: ActivityItem[];
   probabilities: Partial<Record<'N3' | 'N2', Probability>>; domains: Domain[]; types: TypeMetric[];
   anki?: AnkiStats | AnkiDailySummary | null;
   nextReview: { date: string; count: number } | null; strengths: string[]; weaknesses: string[]; confidenceNote: string;

@@ -39,7 +39,6 @@ export default function MygoTypingPage() {
   const [correctKeystrokes, setCorrectKeystrokes] = useState(0);
   const [isShaking, setIsShaking] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
-  const [copiedNotice, setCopiedNotice] = useState(false);
 
   // Snappy Line Entrance Animation State (0ms delay)
   const [isLineEntering, setIsLineEntering] = useState(false);
@@ -464,23 +463,6 @@ export default function MygoTypingPage() {
     return careerAvgCpm > 0 ? careerAvgCpm : currentCpm;
   }, [isPlaying, elapsedSeconds, correctKeystrokes, careerAvgCpm, currentCpm]);
 
-  // Copy Study Time to Clipboard (Manual Tracking for User)
-  const copyStudyTime = useCallback(() => {
-    const today = new Intl.DateTimeFormat('sv-SE', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    }).format(new Date());
-    const m = Math.floor(elapsedSeconds / 60);
-    const s = elapsedSeconds % 60;
-    const timeStr = m > 0 ? `${m}분 ${s > 0 ? `${s}초` : ''}` : `${s}초`;
-    const text = `[${today} タイピング] 학습 시간: ${timeStr} (곡: ${song.title} ${activePart.name}, CPM: ${currentCpm}, 정확도: ${accuracy}%)`;
-    navigator.clipboard?.writeText(text).then(() => {
-      setCopiedNotice(true);
-      setTimeout(() => setCopiedNotice(false), 2000);
-    });
-  }, [elapsedSeconds, song.title, activePart.name, currentCpm, accuracy]);
 
   // Precise Per-Character Glow Sync Mapping
   const jaCharRanges = useMemo(() => {
@@ -627,27 +609,10 @@ export default function MygoTypingPage() {
             <div className="hud-card prog-card">
               <div className="hud-title-with-time">
                 <span className="hud-label">進行 ({activePart.name})</span>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div>
                   <span className="hud-time-badge">
                     ⏱️ {Math.floor(elapsedSeconds / 60)}:{(elapsedSeconds % 60).toString().padStart(2, '0')}
                   </span>
-                  <button
-                    type="button"
-                    onClick={copyStudyTime}
-                    title="현재까지의 학습 시간 복사"
-                    style={{
-                      background: 'rgba(56, 189, 248, 0.15)',
-                      border: '1px solid rgba(56, 189, 248, 0.35)',
-                      color: '#38bdf8',
-                      borderRadius: '6px',
-                      padding: '2px 8px',
-                      fontSize: '11px',
-                      cursor: 'pointer',
-                      fontWeight: 600,
-                    }}
-                  >
-                    {copiedNotice ? '✓ 복사됨!' : '📋 시간복사'}
-                  </button>
                 </div>
               </div>
               <div className="hud-value-row">
@@ -914,24 +879,6 @@ export default function MygoTypingPage() {
                 onClick={() => resetGame(song.id, selectedPartIndex)}
               >
                 もう一度挑戦
-              </button>
-              <button
-                type="button"
-                onClick={copyStudyTime}
-                style={{
-                  background: 'rgba(16, 185, 129, 0.25)',
-                  border: '1px solid rgba(16, 185, 129, 0.5)',
-                  color: '#34d399',
-                  fontWeight: 700,
-                  padding: '10px 16px',
-                  borderRadius: '10px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '6px'
-                }}
-              >
-                {copiedNotice ? '✓ 학습시간 복사완료!' : '📋 학습시간 복사'}
               </button>
               {selectedPartIndex + 1 < song.parts.length ? (
                 <button

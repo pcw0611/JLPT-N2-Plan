@@ -134,8 +134,64 @@ def make_report(conn, date):
     unknown = sum(t["unknown_items"] for t in tests)
     unanswered = sum(t["unanswered_items"] for t in tests)
     measured = [m for m in metrics if m["total"]]
-    # Stable sorting keeps taxonomy order for tied scores.
     ranked = sorted(measured, key=lambda m:-m["correct"]/m["total"])
+    intervals = conn.execute("""
+        SELECT id, started_at, duration_seconds, source, notes
+        FROM study_intervals
+        WHERE session_date = ?
+        ORDER BY id ASC
+    """, (date,)).fetchall()
+
+    activity_history = []
+    seen_test_titles = set()
+    for r in intervals:
+        sec = r["duration_seconds"] or 0
+        m = sec // 60
+        s = sec % 60
+        time_str = f"{m}분 {s}초" if m > 0 else (f"{s}초" if sec > 0 else "미측정")
+        src = r["source"] or "activity"
+        activity_history.append({
+            "id": f"int-{r['id']}",
+            "source": src,
+            "durationSeconds": sec,
+            "timeStr": time_str,
+            "minutes": round(sec / 60, 1),
+            "notes": r["notes"] or "",
+            "startedAt": r["started_at"]
+        })
+        for t in tests:
+            if t["id"] in (r["notes"] or "") or (r["notes"] and (t["title"] in r["notes"] or t["title"][:15] in r["notes"])):
+                seen_test_titles.add(t["id"])
+
+    for t in tests:
+        if t["id"] not in seen_test_titles:
+            sec = t["elapsed_seconds"] or 0
+            m = sec // 60
+            s = sec % 60
+            time_str = f"{m}분 {s}초" if m > 0 else (f"{s}초" if sec > 0 else "미측정")
+            activity_history.append({
+                "id": f"test-{t['id']}",
+                "source": "quiz",
+                "durationSeconds": sec,
+                "timeStr": time_str,
+                "minutes": round(sec / 60, 1),
+                "notes": f"[{t['title']}] {t['correct_items']}/{t['total_items']} ({t['source_class']})",
+                "startedAt": None
+            })
+
+    if not any(a["source"] == "anki" for a in activity_history) and anki:
+        anki_min = anki.get("studyMinutes", 0)
+        if anki_min:
+            activity_history.append({
+                "id": f"anki-{date}",
+                "source": "anki",
+                "durationSeconds": round(anki_min * 60),
+                "timeStr": f"{round(anki_min, 1)}분",
+                "minutes": round(anki_min, 1),
+                "notes": f"Anki 플래시카드 복습 ({anki.get('answeredCards', 0)}회)",
+                "startedAt": None
+            })
+
     return {
         "schemaVersion":2,"date":date,"syncedAt":datetime.now(timezone.utc).isoformat(),
         "studyMinutes":session["verified_minutes"],"hasUntrackedActivity":bool(session["has_untracked_activity"]),
@@ -145,6 +201,7 @@ def make_report(conn, date):
                  "unclassifiedItems":max(0,total-len(daily)),"excludedItems":sum(audio_error(r) for r in daily)},
         "testDetails":[{"id":t["id"],"title":t["title"],"sourceClass":t["source_class"],
                         "correct":t["correct_items"],"total":t["total_items"],"elapsedSeconds":t["elapsed_seconds"]} for t in tests],
+        "activityHistory":activity_history,
         "probabilities":probabilities,"domains":domains,"types":metrics,"anki":anki,
         "nextReview":{"date":review["review_date"],"count":review["count"]} if review else None,
         "strengths":[m["label"] for m in ranked if m["correct"]/m["total"] >= .8][:3],

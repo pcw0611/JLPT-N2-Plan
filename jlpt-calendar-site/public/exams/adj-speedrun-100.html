@@ -147,11 +147,11 @@ body {
       <div>
         <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase mb-2">2. 입력 모드</label>
         <div class="grid grid-cols-2 gap-2" id="modeList">
-          <button data-mode="typing" class="mode-btn p-2.5 rounded-lg border border-amber-500 bg-amber-950/40 text-center font-bold text-sm text-amber-200">
-            ⌨️ 로마자 타이핑<br><span class="text-[11px] font-normal text-slate-400">영타 치면 자동 히라가나</span>
-          </button>
-          <button data-mode="choice" class="mode-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+          <button data-mode="choice" class="mode-btn p-2.5 rounded-lg border border-amber-500 bg-amber-950/40 text-center font-bold text-sm text-amber-200">
             ⚡ 4지선다 퀵샷<br><span class="text-[11px] font-normal text-slate-400">숫자 1~4 키로 3분 컷</span>
+          </button>
+          <button data-mode="typing" class="mode-btn p-2.5 rounded-lg border border-slate-700 bg-slate-800/60 text-center font-bold text-sm text-slate-300">
+            ⌨️ 로마자 타이핑<br><span class="text-[11px] font-normal text-slate-400">영타 치면 자동 히라가나</span>
           </button>
         </div>
       </div>
@@ -197,9 +197,6 @@ body {
         <!-- Timer -->
         <div class="font-mono text-base font-bold text-slate-300 flex items-center gap-1.5">
           ⏱️ <span id="hudTimer">00:00</span>
-          <button id="btnCopyHudTime" title="현재까지의 학습 시간 복사" class="text-[11px] font-sans px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-500/40 hover:bg-sky-500/30 transition">
-            📋 복사
-          </button>
         </div>
       </div>
     </div>
@@ -346,9 +343,6 @@ body {
 
     <!-- Action Buttons -->
     <div class="flex flex-col sm:flex-row gap-3 pt-2">
-      <button id="btnCopyTime" class="flex-1 py-3 bg-emerald-500 hover:bg-emerald-400 font-bold text-slate-950 rounded-xl transition text-sm flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-500/20">
-        📋 학습 시간 복사하기
-      </button>
       <button id="btnRetryWrong" class="hidden flex-1 py-3 bg-amber-500 hover:bg-amber-400 font-bold text-slate-950 rounded-xl transition text-sm">
         🔁 오답만 모아서 다시 풀기
       </button>
@@ -923,7 +917,7 @@ function buildQuestions(course, count) {
    ======================================================== */
 const state = {
   course: 'trap',
-  mode: 'typing',
+  mode: 'choice',
   count: 100,
   questions: [],
   currentIndex: 0,
@@ -983,8 +977,6 @@ function initLobbyUI() {
     $('screenLobby').classList.remove('hidden');
   });
   $('btnRetryWrong').addEventListener('click', startRetryWrong);
-  $('btnCopyTime').addEventListener('click', () => copyStudyTime(false));
-  $('btnCopyHudTime').addEventListener('click', () => copyStudyTime(true));
 
   $('btnSound').addEventListener('click', () => {
     sound.enabled = !sound.enabled;
@@ -1272,52 +1264,6 @@ function advanceToNextQuestion() {
   renderQuestion();
 }
 
-/* ========================================================
-   STUDY TIME COPY FEATURE (MANUAL TRACKING)
-   ======================================================== */
-function copyStudyTime(isHud) {
-  const today = new Date().toLocaleDateString('sv');
-  const sec = state.elapsedSec || 0;
-  const m = Math.floor(sec / 60);
-  const s = sec % 60;
-  const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
-  const courseNames = {
-    trap: '★ N2 필수 함정 코스 (30제)',
-    i: 'い형용사 8대 활용 코스 (35제)',
-    na: 'な형용사 8대 활용 코스 (28제)',
-    grand: '종합 그랑프리 100제'
-  };
-  const course = courseNames[state.course] || state.course;
-  const attempts = state.score + state.mistakes.length;
-  const accuracy = attempts > 0 ? Math.round((state.score / attempts) * 100) : 0;
-  const text = `[${today} 形容詞活用 SPEED RUN 100] 학습 시간: ${timeStr} (코스: ${course}, 정답: ${state.score}/${attempts}, 정답률: ${accuracy}%)`;
-
-  const doCopy = () => {
-    if (isHud) {
-      const el = $('btnCopyHudTime');
-      if (el) {
-        const orig = el.textContent;
-        el.textContent = '✓ 복사됨!';
-        setTimeout(() => el.textContent = orig, 1800);
-      }
-    } else {
-      const el = $('btnCopyTime');
-      if (el) {
-        const orig = el.innerHTML;
-        el.innerHTML = '✓ 학습시간 복사완료!';
-        setTimeout(() => el.innerHTML = orig, 2000);
-      }
-    }
-  };
-
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(text).then(doCopy).catch(() => {
-      prompt('클립보드 복사:', text);
-    });
-  } else {
-    prompt('클립보드 복사:', text);
-  }
-}
 
 function finishGame() {
   clearInterval(state.timerInterval);

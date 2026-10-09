@@ -89,6 +89,15 @@ export default function Home() {
   const [loadError, setLoadError] = useState(false);
   const [daysLeft, setDaysLeft] = useState(examDaysLeft);
   const [mockDays, setMockDays] = useState(nextMockDaysLeft);
+  const [isHistoryModalOpen, setIsHistoryModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsHistoryModalOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
 
   useEffect(() => {
@@ -481,7 +490,21 @@ export default function Home() {
 
           {selected ? <>
             <div className="metric-grid">
-              <div><span>記録済み学習時間</span><strong>{formatStudy(selected.studyMinutes)}</strong><small>未計測の活動あり</small></div>
+              <div
+                className="metric-clickable"
+                onClick={() => setIsHistoryModalOpen(true)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setIsHistoryModalOpen(true); }}
+                title="클릭하여 학습 시간 상세 내역(히스토리) 확인"
+              >
+                <span>記録済み学習時間</span>
+                <strong>{formatStudy(selected.studyMinutes)}</strong>
+                <small style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <span>未計測の活動あり</span>
+                  <span className="metric-clickable-badge">📜 내역 보기 ➔</span>
+                </small>
+              </div>
               <div><span>当日のテスト合計</span><strong>{selected.tests.correct} / {selected.tests.total}</strong><small>{selected.tests.count}回・{selected.tests.total ? `正答率${Math.round(selected.tests.correct/selected.tests.total*100)}%` : '未実施'}</small></div>
               <div><span>テスト所要時間</span><strong>{formatClock(selected.tests.elapsedSeconds)}</strong><small>{selected.tests.untimedTests ? `未計測 ${selected.tests.untimedTests}回を除く` : '記録済みテストの合計'}</small></div>
               <div><span>誤答 / 不明 / 未回答</span><strong>{selected.tests.wrong} / {selected.tests.unknown} / {selected.tests.unanswered ?? '—'}</strong><small>それぞれ別に集計</small></div>
@@ -546,6 +569,192 @@ export default function Home() {
         </section>
       </>}
       <footer>自作テストは公式模擬試験と区別して記録しています。最新記録日: {latest?.date ?? '—'}</footer>
+
+      {isHistoryModalOpen && selected && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="history-modal-title"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            zIndex: 99999,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '16px',
+            background: 'rgba(0, 0, 0, 0.78)',
+            backdropFilter: 'blur(8px)',
+          }}
+          onClick={() => setIsHistoryModalOpen(false)}
+        >
+          <div
+            style={{
+              background: '#141814',
+              border: '1px solid #2d382d',
+              borderRadius: '20px',
+              padding: '24px',
+              width: '100%',
+              maxWidth: '540px',
+              maxHeight: '85vh',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px',
+              boxShadow: '0 25px 60px rgba(0, 0, 0, 0.7), 0 0 30px rgba(56, 189, 248, 0.15)',
+              color: '#e2e8f0',
+              fontFamily: 'inherit',
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid #232c23', paddingBottom: '12px' }}>
+              <div>
+                <h3 id="history-modal-title" style={{ fontSize: '18px', fontWeight: 900, color: '#ffffff', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span>⏱️</span>
+                  <span>{dateLabel(selectedDate)} 学習時間 内訳・履歴</span>
+                </h3>
+                <p style={{ margin: '4px 0 0', fontSize: '12px', color: '#889988' }}>
+                  당일 기록된 학습 활동별 소요 시간 및 상세 인터벌
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setIsHistoryModalOpen(false)}
+                style={{
+                  background: 'transparent',
+                  border: 'none',
+                  color: '#889988',
+                  fontSize: '20px',
+                  cursor: 'pointer',
+                  padding: '4px 8px',
+                  borderRadius: '8px',
+                }}
+                aria-label="닫기"
+              >
+                ✕
+              </button>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 16px', borderRadius: '12px', background: 'rgba(0, 0, 0, 0.4)', border: '1px solid #232c23' }}>
+              <div>
+                <span style={{ fontSize: '11px', color: '#889988', display: 'block' }}>当日の合計 学習時間</span>
+                <strong style={{ fontSize: '22px', fontWeight: 900, color: '#4ade80' }}>{formatStudy(selected.studyMinutes)}</strong>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <span style={{ fontSize: '11px', color: '#889988', display: 'block' }}>記録済み活動数</span>
+                <strong style={{ fontSize: '16px', fontWeight: 700, color: '#f1f5f9' }}>
+                  {(selected.activityHistory?.length || (selected.testDetails?.length ? selected.testDetails.length + (selected.anki ? 1 : 0) : (selected.anki ? 1 : 0))) || 1}건
+                </strong>
+              </div>
+            </div>
+
+            <div style={{ overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '10px', paddingRight: '4px', flex: 1 }}>
+              {selected.activityHistory && selected.activityHistory.length > 0 ? (
+                selected.activityHistory.map((item, idx) => {
+                  const isAnki = item.source === 'anki';
+                  const isQuiz = item.source === 'quiz';
+                  const isExam = item.source === 'exam';
+                  const badgeStyle = isAnki
+                    ? { background: 'rgba(74, 222, 128, 0.15)', borderColor: 'rgba(74, 222, 128, 0.35)', color: '#86efac' }
+                    : isQuiz
+                    ? { background: 'rgba(56, 189, 248, 0.15)', borderColor: 'rgba(56, 189, 248, 0.35)', color: '#7dd3fc' }
+                    : isExam
+                    ? { background: 'rgba(167, 139, 250, 0.15)', borderColor: 'rgba(167, 139, 250, 0.35)', color: '#c4b5fd' }
+                    : { background: 'rgba(251, 191, 36, 0.15)', borderColor: 'rgba(251, 191, 36, 0.35)', color: '#fde047' };
+
+                  const icon = isAnki ? '🎴' : isQuiz ? '⚡' : isExam ? '📝' : '📚';
+                  const label = isAnki ? 'Anki 복습' : isQuiz ? 'SPEED RUN / 퀴즈' : isExam ? '실전모의고사' : '학습 세션';
+
+                  return (
+                    <div
+                      key={item.id || idx}
+                      style={{
+                        padding: '12px 14px',
+                        borderRadius: '12px',
+                        background: '#192019',
+                        border: '1px solid #2a362a',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '6px',
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <span
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '4px',
+                            padding: '3px 8px',
+                            borderRadius: '6px',
+                            fontSize: '11px',
+                            fontWeight: 800,
+                            border: '1px solid',
+                            ...badgeStyle,
+                          }}
+                        >
+                          <span>{icon}</span> <span>{label}</span>
+                        </span>
+                        <span style={{ fontSize: '14px', fontWeight: 900, fontFamily: 'monospace', color: '#4ade80' }}>
+                          {item.timeStr || `${item.minutes}분`}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: '12px', color: '#cbd5e1', lineHeight: '1.45', wordBreak: 'break-word' }}>
+                        {item.notes}
+                      </div>
+                      {item.startedAt && (
+                        <div style={{ fontSize: '10px', color: '#64748b' }}>
+                          기록 시각: {item.startedAt}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })
+              ) : (
+                <div style={{ padding: '16px', borderRadius: '12px', background: '#192019', border: '1px solid #2a362a', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  {selected.anki && (
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '8px', borderBottom: '1px solid #2a362a' }}>
+                      <span style={{ color: '#86efac', fontWeight: 800, fontSize: '13px' }}>🎴 Anki 플래시카드 단어 복습</span>
+                      <span style={{ fontFamily: 'monospace', fontWeight: 800, color: '#f1f5f9' }}>{selected.anki.studyMinutes.toFixed(1)}분</span>
+                    </div>
+                  )}
+                  {selected.testDetails && selected.testDetails.length > 0 && selected.testDetails.map(t => (
+                    <div key={t.id} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingBottom: '8px', borderBottom: '1px solid #2a362a' }}>
+                      <div>
+                        <span style={{ color: '#7dd3fc', fontWeight: 800, fontSize: '13px', display: 'block' }}>⚡ {t.title}</span>
+                        <span style={{ fontSize: '11px', color: '#94a3b8' }}>정답 {t.correct}/{t.total} ({sourceLabel(t.sourceClass)})</span>
+                      </div>
+                      <span style={{ fontFamily: 'monospace', fontWeight: 800, color: '#f1f5f9' }}>{formatClock(t.elapsedSeconds)}</span>
+                    </div>
+                  ))}
+                  {(!selected.anki && (!selected.testDetails || selected.testDetails.length === 0)) && (
+                    <div style={{ fontSize: '12px', color: '#94a3b8' }}>
+                      상세 인터벌이 분리되지 않은 통합 학습 세션입니다. (총 {formatStudy(selected.studyMinutes)})
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div style={{ paddingTop: '8px', borderTop: '1px solid #232c23', display: 'flex', justifyContent: 'flex-end' }}>
+              <button
+                type="button"
+                onClick={() => setIsHistoryModalOpen(false)}
+                style={{
+                  padding: '8px 16px',
+                  borderRadius: '10px',
+                  background: '#242e24',
+                  border: '1px solid #364436',
+                  color: '#e2e8f0',
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                }}
+              >
+                닫기 (ESC)
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

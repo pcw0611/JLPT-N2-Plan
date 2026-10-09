@@ -426,10 +426,6 @@ body {
 
     <!-- Action Buttons -->
     <div class="space-y-2.5 pt-2">
-      <button id="btnCopyResult" class="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm tracking-wide shadow-lg transition flex items-center justify-center gap-2">
-        <span>📋 学習結果をコピーする (클립보드 복사)</span>
-      </button>
-
       <div class="grid grid-cols-2 gap-3">
         <button id="btnRetryWrong" class="hidden py-3 rounded-xl border border-rose-500/50 bg-rose-950/30 hover:bg-rose-900/50 text-rose-300 font-bold text-xs transition">
           🔁 오답/모름만 다시 풀기
@@ -1080,41 +1076,6 @@ function finishQuiz() {
     btnRetryWrong.classList.add('hidden');
   }
 }
-
-// Copy results to clipboard
-document.getElementById('btnCopyResult').addEventListener('click', () => {
-  const total = sessionQuestions.length;
-  const accuracy = Math.round((correctCount / total) * 100);
-  const m = Math.floor(elapsedSeconds / 60);
-  const s = elapsedSeconds % 60;
-  const timeStr = `${m}분 ${s}초`;
-
-  const missed = userAnswers.filter(a => !a.isCorrect);
-  let missedDetails = '없음 (전 문항 정답)';
-  if (missed.length > 0) {
-    missedDetails = missed.map(m => `${m.q.id} (${m.q.grammar_point})`).join(', ');
-  }
-
-  const courseNames = {
-    c1: '動詞活用 接続トラップ (25제)',
-    c2: '名詞・形容詞 接続トラップ (20제)',
-    c3: 'N2 文法 001~035 총정리 (25제)',
-    all: '全範囲 総合ランダム (30제)'
-  };
-  const cName = courseNames[currentCourse] || currentCourse;
-
-  const todayStr = new Date().toISOString().slice(0, 10);
-  const reportText = `[${todayStr} N2 文法 接続パズル SPEED RUN] 학습 시간: ${timeStr} (코스: ${cName}, 정답: ${correctCount}/${total}, 정답률: ${accuracy}%)\n- 오답/모름 문항 (${missed.length}건): ${missedDetails}`;
-
-  navigator.clipboard.writeText(reportText).then(() => {
-    const btn = document.getElementById('btnCopyResult');
-    const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>✅ 클립보드에 복사 완료! (채팅창에 붙여넣기 가능)</span>';
-    setTimeout(() => {
-      btn.innerHTML = originalText;
-    }, 2500);
-  });
-});
 
 // Retry wrong button
 document.getElementById('btnRetryWrong').addEventListener('click', () => {

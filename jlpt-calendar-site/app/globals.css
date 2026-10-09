@@ -910,6 +910,38 @@ body {
   padding: 16px;
   border-radius: 16px;
 }
+.metric-grid > div.metric-clickable {
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.metric-grid > div.metric-clickable:hover {
+  background: #151a15;
+  border-color: #38bdf8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.2);
+}
+.metric-grid > div.metric-clickable:active {
+  transform: translateY(0);
+}
+.metric-clickable-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 2px 7px;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+.metric-clickable:hover .metric-clickable-badge {
+  background: rgba(56, 189, 248, 0.22);
+  border-color: #38bdf8;
+}
 .metric-grid span, .metric-grid small, .pass-box span, .pass-box small {
   display: block;
   color: var(--muted);

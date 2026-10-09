@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <script src="/auth-gate.js"></script>
+  <script src="/exam-auto-submit.js"></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -625,15 +626,12 @@
           <div id="endurance-commentary" class="text-xs text-neutral-700 leading-relaxed pt-1"></div>
         </div>
 
-        <!-- Copy JSON Button -->
+        <!-- Action Buttons -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-neutral-300">
           <div class="text-xs text-neutral-600">
-            ※ 채점 결과 JSON을 클립보드에 복사하여 대화창에 전달하면 학습 원장(`database/jlpt_learning.db`)에 즉시 반영됩니다.
+            ※ 시험 완료 시 학습 결과가 캘린더 시스템에 실시간으로 자동 동기화됩니다.
           </div>
-          <button onclick="restartExamFresh()" class="px-5 py-3 bg-neutral-700 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all mr-2">🔄 새 시험으로 다시 풀기</button>
-          <button onclick="copyResultJSON()" class="w-full sm:w-auto px-6 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all">
-            📋 DB 기록용 JSON 결과 복사
-          </button>
+          <button onclick="restartExamFresh()" class="px-5 py-3 bg-neutral-700 hover:bg-neutral-800 text-white text-xs sm:text-sm font-bold rounded shadow transition-all">🔄 새 시험으로 다시 풀기</button>
         </div>
 
       </div>
@@ -1889,6 +1887,55 @@
       }
       document.getElementById('endurance-commentary').innerHTML = commentary;
 
+      // Auto Submit to Calendar Site & Database
+      if (window.autoSubmitExamResult) {
+        const total = sessionQuestions.length;
+        let correct = 0, wrong = 0, unknown = 0, unanswered = 0;
+        let vocabCorrect = 0, grammarCorrect = 0, readingCorrect = 0, listeningCorrect = 0;
+
+        sessionQuestions.forEach((q, idx) => {
+          const userAns = userAnswers[idx];
+          if (userAns === q.sessionAnswer) {
+            correct++;
+            if (q.part === '文字・語彙') vocabCorrect++;
+            if (q.part === '文法') grammarCorrect++;
+            if (q.part === '読解') readingCorrect++;
+            if (q.part === '聴解') listeningCorrect++;
+          } else if (userAns === 'unknown') {
+            unknown++;
+          } else if (userAns === null) {
+            unanswered++;
+          } else {
+            wrong++;
+          }
+        });
+
+        const pct = Number(((correct / total) * 100).toFixed(1));
+        const totalElapsed = (typeof section1ElapsedSeconds !== 'undefined' ? section1ElapsedSeconds : 0) + (typeof section2ElapsedSeconds !== 'undefined' ? section2ElapsedSeconds : 0);
+
+        window.autoSubmitExamResult({
+          examType: 'midterm-mock-20260920',
+          title: 'JLPT N2 実戦模試（公式問題集 第2集）',
+          course: '전 영역 107문항 종합 모의고사',
+          elapsedSeconds: totalElapsed,
+          totalQuestions: total,
+          correctCount: correct,
+          wrongCount: wrong,
+          accuracy: pct,
+          details: {
+            unknownCount: unknown,
+            unansweredCount: unanswered,
+            scoreScaledEstimate: Math.round((correct / total) * 180),
+            sections: {
+              vocab: { total: 32, correct: vocabCorrect },
+              grammar: { total: 22, correct: grammarCorrect },
+              reading: { total: 21, correct: readingCorrect },
+              listening: { total: 32, correct: listeningCorrect }
+            }
+          }
+        });
+      }
+
       renderAllExplanations('all');
     }
 
@@ -2001,74 +2048,6 @@
       });
     }
 
-    function copyResultJSON() {
-      const total = sessionQuestions.length;
-      let correct = 0, wrong = 0, unknown = 0, unanswered = 0;
-      let vocabCorrect = 0, grammarCorrect = 0, readingCorrect = 0, listeningCorrect = 0;
-
-      sessionQuestions.forEach((q, idx) => {
-        const userAns = userAnswers[idx];
-        if (userAns === q.sessionAnswer) {
-          correct++;
-          if (q.part === '文字・語彙') vocabCorrect++;
-          if (q.part === '文法') grammarCorrect++;
-          if (q.part === '読解') readingCorrect++;
-          if (q.part === '聴解') listeningCorrect++;
-        } else if (userAns === 'unknown') {
-          unknown++;
-        } else if (userAns === null) {
-          unanswered++;
-        } else {
-          wrong++;
-        }
-      });
-
-      const pct = ((correct / total) * 100).toFixed(1);
-      const vocabTotal = 32, grammarTotal = 22, readingTotal = 21, listeningTotal = 32;
-      const langRate = (vocabCorrect + grammarCorrect) / 54;
-      const readingRate = readingCorrect / 21;
-      const listeningRate = listeningCorrect / 32;
-      const hasCutoffRisk = (langRate < 0.316) || (readingRate < 0.316) || (listeningRate < 0.316);
-
-      const resultPayload = {
-        examDate: new Date().toISOString().split('T')[0],
-        examType: "공식 문제집 제2집 기반 실전모의고사 (개인학습용 / TTS)",
-        examTitle: "JLPT N2 実戦模試（公式問題集 第2集ベース / 個人学習用）",
-        provenanceNote: "출제 원안: 日本語能力試験 公式問題集 第2集(2018) 대조 / 개인학습용 TTS 구현 / 비공식 정답률 추정",
-        totalQuestions: total,
-        correctCount: correct,
-        wrongCount: wrong,
-        unknownCount: unknown,
-        unansweredCount: unanswered,
-        accuracyPercent: Number(pct),
-        scoreScaledEstimate: Math.round((correct / total) * 180),
-        hasSectionalCutoffRisk: hasCutoffRisk,
-        elapsedSeconds: (typeof section1ElapsedSeconds !== 'undefined' ? section1ElapsedSeconds : 0) + (typeof section2ElapsedSeconds !== 'undefined' ? section2ElapsedSeconds : 0),
-        sections: {
-          vocab: { total: 32, correct: vocabCorrect },
-          grammar: { total: 22, correct: grammarCorrect },
-          reading: { total: 21, correct: readingCorrect },
-          listening: { total: 32, correct: listeningCorrect }
-        },
-        questionsRecord: sessionQuestions.map((q, idx) => ({
-          id: q.id,
-          problemNo: q.problemNo,
-          category: q.category,
-          userAnswer: userAnswers[idx],
-          officialAnswer: q.sessionAnswer,
-          isCorrect: userAnswers[idx] === q.sessionAnswer,
-          dwellTimeSeconds: questionDwellTimes[idx] || 0,
-          nextReview: q.nextReview
-        }))
-      };
-
-      navigator.clipboard.writeText(JSON.stringify(resultPayload, null, 2)).then(() => {
-        alert('채점 결과 JSON이 클립보드에 복사되었습니다!\n대화창에 붙여넣어 주시면 학습 원장에 즉시 동기화 기록됩니다.');
-      }).catch(err => {
-        console.error(err);
-        prompt('아래 JSON을 복사하세요:', JSON.stringify(resultPayload));
-      });
-    }
 
     function escapeHtml(str) {
       if (!str) return '';

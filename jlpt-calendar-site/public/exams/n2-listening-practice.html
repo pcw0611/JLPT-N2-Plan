@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <script src="/auth-gate.js"></script>
+  <script src="/exam-auto-submit.js"></script>
 
   <meta charset="UTF-8">
   <title>JLPT N2 聴解 実戦ミニテスト (TTS音声対応)</title>
@@ -236,15 +237,15 @@
           </div>
         </div>
 
-        <!-- Copy Record Section -->
-        <div class="mt-4 p-4 rounded-xl border situation-box">
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-xs font-bold">📋 대화창 기록용 결과 텍스트</span>
-            <button id="copyBtn" class="px-3.5 py-1.5 bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold rounded-lg transition duration-150 shadow-sm">
-              결과 복사하기
-            </button>
+        <!-- Auto Sync Notice -->
+        <div class="mt-4 p-4 rounded-xl border situation-box flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2">
+            <span class="text-base text-emerald-600">⚡</span>
+            <span class="font-bold text-slate-700 dark:text-slate-300">시험 결과가 학습 캘린더 및 DB에 자동으로 기록·동기화되었습니다.</span>
           </div>
-          <textarea id="copyArea" readonly rows="7" class="w-full text-xs font-mono p-2.5 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-900 dark:text-slate-100 focus:outline-none"></textarea>
+          <button onclick="location.reload()" class="px-3.5 py-1.5 bg-neutral-900 hover:bg-neutral-800 text-white font-bold rounded-lg transition duration-150 shadow-sm">
+            🔄 다시 풀기
+          </button>
         </div>
       </div>
 
@@ -714,35 +715,24 @@
       document.getElementById("unknownCount").innerText = unknown;
       document.getElementById("resultTimestamp").innerText = new Date().toLocaleString("ko-KR");
 
-      // Generate Copy Text
-      const summaryText = `[N2 청해 실전 미니테스트 제출 결과]
-- 시험명: N2 청해 실전 미니테스트 (TTS 4문항)
-- 점수: ${correct} / ${total} (${scorePct}%)
-- 소요 시간: ${timeText} (${elapsedSeconds}초)
-- 오답 문항: ${wrongList.length > 0 ? wrongList.join(', ') : '없음'}
-- 分からない 문항: ${unknownList.length > 0 ? unknownList.join(', ') : '없음'}
-- 미응답: 없음
-
-이 결과를 DB와 학습 로그에 기록하고 청해 취약점 분석을 진행해줘.`;
-
-      const copyArea = document.getElementById("copyArea");
-      copyArea.value = summaryText;
-
-      document.getElementById("copyBtn").onclick = () => {
-        navigator.clipboard.writeText(summaryText).then(() => {
-          const btn = document.getElementById("copyBtn");
-          btn.innerText = "✓ 복사 완료!";
-          btn.classList.replace("bg-purple-700", "bg-emerald-600");
-          setTimeout(() => {
-            btn.innerText = "결과 복사하기";
-            btn.classList.replace("bg-emerald-600", "bg-purple-700");
-          }, 2000);
-        }).catch(() => {
-          copyArea.select();
-          document.execCommand("copy");
-          alert("클립보드에 복사되었습니다!");
+      // Auto Submit to Calendar Site & Database
+      if (window.autoSubmitExamResult) {
+        window.autoSubmitExamResult({
+          examType: 'listening-practice',
+          title: 'JLPT N2 聴解 実戦ミニテスト (TTS)',
+          course: '청해 실전 미니테스트 4문항',
+          elapsedSeconds: elapsedSeconds,
+          totalQuestions: total,
+          correctCount: correct,
+          wrongCount: wrong,
+          accuracy: Number(scorePct),
+          details: {
+            unknownCount: unknown,
+            wrongQuestions: wrongList,
+            unknownQuestions: unknownList
+          }
         });
-      };
+      }
 
       // Render Detailed Explanations
       const expContainer = document.getElementById("explanationList");

@@ -339,7 +339,7 @@
           <li><strong>1문1답 즉시 교정:</strong> 보기를 선택하는 즉시 정답 여부와 한국어 완본 해설(루비 태그, 오답 함정, 청해 대본)이 펼쳐집니다.</li>
           <li><strong>실제 시험과 동일한 화면:</strong> 문제 풀이 중에는 일본어만 표시되며 후리가나가 노출되지 않습니다.</li>
           <li><strong>객관식 및 모름 선택지:</strong> 전 문항 4지선다(즉시응답 3지선다) 및 <code>分からない (모름)</code> 선택지가 제공됩니다.</li>
-          <li><strong>수동 완료 복사 기능:</strong> 시험 완료 후 <code>📋 학습 결과 복사하기</code> 버튼을 눌러 학습 기록에 바로 제출할 수 있습니다.</li>
+          <li><strong>자동 기록 및 동기화:</strong> 시험 완료 시 학습 시간 및 오답 분석 데이터가 캘린더 시스템에 자동으로 저장됩니다.</li>
         </ul>
       </div>
 
@@ -348,6 +348,127 @@
         <button id="btnStartExam" class="w-full sm:w-2/3 py-4 bg-neutral-950 hover:bg-neutral-800 text-white font-serif font-black text-lg rounded-xl shadow-lg transition active:scale-[0.99] flex items-center justify-center gap-2 mx-auto">
           <span>間違いノートの復習を開始する (시험 시작)</span> <span>➔</span>
         </button>
+      </div>
+
+      <!-- ================================================================= -->
+      <!-- ANKI-STYLE QUESTION POOL & SRS BROWSER -->
+      <!-- ================================================================= -->
+      <div id="ankiPoolSection" class="pt-6 border-t-2 border-neutral-300 space-y-4 font-sans">
+        
+        <!-- Header -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xl">🗂️</span>
+              <h2 class="text-base sm:text-lg font-black text-neutral-900 font-serif">
+                오답 풀 브라우저 & Anki 복습 관리 (全87問 詳細一覧)
+              </h2>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5">
+              전체 87개 오답의 상태(신규·오늘 복습·정복)를 한눈에 파악하고 원하는 문항을 단독으로 바로 다시 풀 수 있습니다.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 self-start sm:self-auto">
+            <button id="btnResetMastered" class="px-2.5 py-1 text-[11px] font-bold text-neutral-600 bg-neutral-100 hover:bg-neutral-200 border border-neutral-300 rounded-lg transition">
+              🔄 정복 기록 초기화
+            </button>
+          </div>
+        </div>
+
+        <!-- Anki Deck Status Badges / Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
+          <!-- Due (Today's Review) -->
+          <div data-anki-filter="due" class="anki-stat-card p-3 rounded-xl border-2 border-amber-400 bg-amber-50 hover:bg-amber-100 transition text-left cursor-pointer shadow-sm">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-bold text-amber-800">🔔 오늘 복습 (Due)</span>
+              <span class="w-2 h-2 rounded-full bg-amber-500 animate-ping"></span>
+            </div>
+            <div class="text-2xl font-black text-amber-950 font-mono mt-1" id="ankiCountDue">0</div>
+            <div class="text-[10px] text-amber-700 mt-0.5">오늘 복습 기한 도래</div>
+          </div>
+
+          <!-- New (Not yet reviewed) -->
+          <div data-anki-filter="new" class="anki-stat-card p-3 rounded-xl border border-blue-300 bg-blue-50/70 hover:bg-blue-100 transition text-left cursor-pointer shadow-sm">
+            <div class="text-[11px] font-bold text-blue-800">✨ 신규 (New)</div>
+            <div class="text-2xl font-black text-blue-950 font-mono mt-1" id="ankiCountNew">0</div>
+            <div class="text-[10px] text-blue-700 mt-0.5">아직 풀지 않은 신규 문항</div>
+          </div>
+
+          <!-- Lapsed (Failed recently) -->
+          <div data-anki-filter="lapsed" class="anki-stat-card p-3 rounded-xl border border-rose-300 bg-rose-50/70 hover:bg-rose-100 transition text-left cursor-pointer shadow-sm">
+            <div class="text-[11px] font-bold text-rose-800">❌ 오답·모름 (Lapsed)</div>
+            <div class="text-2xl font-black text-rose-950 font-mono mt-1" id="ankiCountLapsed">0</div>
+            <div class="text-[10px] text-rose-700 mt-0.5">최근 오답/판단 유보</div>
+          </div>
+
+          <!-- Mastered (Completed) -->
+          <div data-anki-filter="mastered" class="anki-stat-card p-3 rounded-xl border border-emerald-300 bg-emerald-50/70 hover:bg-emerald-100 transition text-left cursor-pointer shadow-sm">
+            <div class="text-[11px] font-bold text-emerald-800">🏆 정복 완료 (Mastered)</div>
+            <div class="text-2xl font-black text-emerald-950 font-mono mt-1" id="ankiCountMastered">0</div>
+            <div class="text-[10px] text-emerald-700 mt-0.5">맞혀서 정복 완료</div>
+          </div>
+        </div>
+
+        <!-- Filter Bar & Search Box -->
+        <div class="p-3.5 bg-neutral-100 rounded-xl border border-neutral-300 space-y-3">
+          <!-- Filter Buttons -->
+          <div class="flex flex-wrap items-center gap-1.5 text-xs font-bold" id="ankiFilterBar">
+            <button type="button" data-anki-filter="all" class="anki-filter-pill px-3 py-1.5 rounded-lg bg-neutral-900 text-white shadow-sm transition">
+              전체 (<span id="pillCountAll">87</span>)
+            </button>
+            <button type="button" data-anki-filter="due" class="anki-filter-pill px-3 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-800 hover:bg-neutral-200 transition">
+              🔔 오늘 복습 (<span id="pillCountDue">0</span>)
+            </button>
+            <button type="button" data-anki-filter="new" class="anki-filter-pill px-3 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-800 hover:bg-neutral-200 transition">
+              ✨ 신규 (<span id="pillCountNew">0</span>)
+            </button>
+            <button type="button" data-anki-filter="lapsed" class="anki-filter-pill px-3 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-800 hover:bg-neutral-200 transition">
+              ❌ 오답·모름 (<span id="pillCountLapsed">0</span>)
+            </button>
+            <button type="button" data-anki-filter="mastered" class="anki-filter-pill px-3 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-800 hover:bg-neutral-200 transition">
+              🏆 정복 완료 (<span id="pillCountMastered">0</span>)
+            </button>
+            <span class="text-neutral-400">|</span>
+            <button type="button" data-anki-filter="vocab" class="anki-filter-pill px-2.5 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-700 hover:bg-neutral-200 transition">
+              🔤 어휘 (<span id="pillCountVocab">25</span>)
+            </button>
+            <button type="button" data-anki-filter="grammar" class="anki-filter-pill px-2.5 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-700 hover:bg-neutral-200 transition">
+              📐 문법 (<span id="pillCountGrammar">24</span>)
+            </button>
+            <button type="button" data-anki-filter="reading" class="anki-filter-pill px-2.5 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-700 hover:bg-neutral-200 transition">
+              📖 독해 (<span id="pillCountReading">13</span>)
+            </button>
+            <button type="button" data-anki-filter="listening" class="anki-filter-pill px-2.5 py-1.5 rounded-lg bg-white border border-neutral-300 text-neutral-700 hover:bg-neutral-200 transition">
+              🎧 청해 (<span id="pillCountListening">25</span>)
+            </button>
+          </div>
+
+          <!-- Search Input & Batch Action Button -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+            <div class="relative flex-1">
+              <span class="absolute left-3 top-2.5 text-neutral-400 text-xs">🔍</span>
+              <input
+                type="text"
+                id="ankiSearchInput"
+                placeholder="문항 검색 (예: 貴重, 招いた, Q01, 2023.12, 접속, 한자읽기)..."
+                class="w-full pl-8 pr-3 py-2 text-xs bg-white border border-neutral-300 rounded-lg text-neutral-900 focus:outline-none focus:ring-2 focus:ring-neutral-900"
+              />
+            </div>
+            <button
+              type="button"
+              id="btnStartFilteredBatch"
+              class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-lg transition shadow flex items-center justify-center gap-1.5 whitespace-nowrap"
+            >
+              <span>⚡ 현재 필터 문항 풀기 (<span id="filteredBatchCount">87</span>문제)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Question Cards List Container -->
+        <div id="ankiQuestionList" class="space-y-3 max-h-[680px] overflow-y-auto pr-1">
+          <!-- Dynamically populated question cards -->
+        </div>
+
       </div>
 
     </section>
@@ -383,7 +504,7 @@
           </button>
 
           <!-- Partial Finish Button (중간 채점) -->
-          <button id="btnPartialSubmit" class="px-2.5 sm:px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition shadow text-[11px] sm:text-xs flex items-center gap-1" title="지금까지 푼 문제만 즉시 채점하고 복사합니다">
+          <button id="btnPartialSubmit" class="px-2.5 sm:px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg transition shadow text-[11px] sm:text-xs flex items-center gap-1" title="지금까지 푼 문제만 즉시 채점하고 기록합니다">
             <span>⏸️</span> <span>푼 것만 채점</span>
           </button>
 
@@ -540,7 +661,7 @@
         </div>
         <p class="text-xs text-neutral-600 leading-relaxed" id="partialModalDesc">
           현재까지 총 <strong class="text-emerald-700 font-bold" id="partialModalCount">0문항</strong>을 풀었습니다.<br>
-          지금까지 푼 문항만 즉시 채점하고 학습 결과 복사 화면으로 이동하시겠습니까?
+          지금까지 푼 문항만 즉시 채점하고 채점 결과 화면으로 이동하시겠습니까?
         </p>
         <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg text-xs text-emerald-900 space-y-1">
           <div class="font-bold flex items-center gap-1"><span>✓</span> <span>미응답 문항은 오답으로 처리되지 않습니다!</span></div>
@@ -639,11 +760,8 @@
           </div>
         </div>
 
-        <!-- Action Buttons (Copy Time & Re-try) -->
+        <!-- Action Buttons (Re-try & Lobby) -->
         <div class="flex flex-col sm:flex-row gap-3 pt-2 font-sans">
-          <button id="btnCopyResult" class="flex-1 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
-            <span>📋</span> <span id="copyBtnText">학습 결과 복사하기 (클립보드)</span>
-          </button>
           <button id="btnRetryWrongOnly" class="flex-1 py-3.5 bg-rose-600 hover:bg-rose-500 text-white font-black text-sm rounded-xl transition shadow-lg flex items-center justify-center gap-2">
             <span>🔁</span> <span>間違い問題だけ再挑戦 (오답만 다시 풀기)</span>
           </button>
@@ -696,6 +814,7 @@
   ];
 
   const MASTERED_STORAGE_KEY = 'machigai_mastered_ids_v1';
+  const SRS_STORAGE_KEY = 'jlpt_n2_mock_srs_v2';
 
   const state = {
     course: 'all',
@@ -713,7 +832,10 @@
     filterMode: 'all',
     feedbackMode: 'instant', // 'instant' (1問1答) or 'batch' (실전 일괄)
     currentAnswered: false,
-    masteredIds: new Set()
+    masteredIds: new Set(),
+    srsData: {},
+    ankiFilter: 'all',
+    ankiSearchQuery: ''
   };
 
   const $ = id => document.getElementById(id);
@@ -721,10 +843,13 @@
   /* Init Event Listeners */
   window.addEventListener('DOMContentLoaded', () => {
     initMasteredIds();
+    initSrsData();
     initLobby();
+    initAnkiBrowser();
     initExamControls();
     initTheme();
     updateLobbyMasteredUI();
+    updateAnkiDeckUI();
   });
 
   function initTheme() {
@@ -761,11 +886,14 @@
   }
 
   function resetMasteredIds() {
-    const ok = confirm('오답 정복 기록을 초기화하시겠습니까?\n초기화하면 맞힌 문제들이 다시 복습 풀에 나타납니다.');
+    const ok = confirm('오답 정복 및 Anki 복습 기록을 초기화하시겠습니까?\n초기화하면 맞힌 문제들이 다시 복습 풀에 나타납니다.');
     if (!ok) return;
     state.masteredIds = new Set();
+    state.srsData = {};
     saveMasteredIds();
+    saveSrsData();
     updateLobbyMasteredUI();
+    updateAnkiDeckUI();
   }
 
   function updateLobbyMasteredUI() {
@@ -799,6 +927,378 @@
     if (poolTag) {
       poolTag.textContent = exclude ? `${allRem}제` : `${totalCount}제 (전체 풀)`;
     }
+  }
+
+  /* ----------------------------------------------------
+     ANKI SRS DECK & QUESTION BROWSER SYSTEM
+     ---------------------------------------------------- */
+  function getTodayStr() {
+    return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(new Date());
+  }
+
+  function addDays(dateStr, days) {
+    const d = new Date(dateStr + 'T00:00:00+09:00');
+    d.setDate(d.getDate() + days);
+    return new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul' }).format(d);
+  }
+
+  function initSrsData() {
+    try {
+      const raw = localStorage.getItem(SRS_STORAGE_KEY);
+      if (raw) {
+        state.srsData = JSON.parse(raw);
+      } else {
+        state.srsData = {};
+      }
+    } catch (e) {
+      state.srsData = {};
+    }
+  }
+
+  function saveSrsData() {
+    try {
+      localStorage.setItem(SRS_STORAGE_KEY, JSON.stringify(state.srsData));
+    } catch (e) {}
+  }
+
+  function getQuestionSrsStatus(q) {
+    const today = getTodayStr();
+    const item = state.srsData[q.id];
+    const isMasteredInIds = state.masteredIds.has(q.id);
+
+    if (!item) {
+      if (isMasteredInIds) {
+        return {
+          status: 'mastered',
+          statusLabel: '정복 완료',
+          badgeClass: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+          reps: 1,
+          nextReview: '정복 완료',
+          lastResult: 'correct',
+          lastDate: '-'
+        };
+      }
+      return {
+        status: 'new',
+        statusLabel: '신규 문항',
+        badgeClass: 'bg-blue-100 text-blue-800 border-blue-300',
+        reps: 0,
+        nextReview: '미학습',
+        lastResult: null,
+        lastDate: '-'
+      };
+    }
+
+    if (item.lastResult === 'wrong' || item.lastResult === 'unknown') {
+      return {
+        status: 'lapsed',
+        statusLabel: item.lastResult === 'unknown' ? '모름 (재검토)' : '오답 (재도전)',
+        badgeClass: 'bg-rose-100 text-rose-800 border-rose-300',
+        reps: item.reps || 0,
+        nextReview: item.nextReviewDate || today,
+        lastResult: item.lastResult,
+        lastDate: item.lastReviewedDate || '-'
+      };
+    }
+
+    if (item.nextReviewDate && item.nextReviewDate <= today) {
+      return {
+        status: 'due',
+        statusLabel: '오늘 복습 대상',
+        badgeClass: 'bg-amber-100 text-amber-900 border-amber-400 font-black animate-pulse',
+        reps: item.reps || 0,
+        nextReview: `${item.nextReviewDate} (오늘 만료)`,
+        lastResult: item.lastResult,
+        lastDate: item.lastReviewedDate || '-'
+      };
+    }
+
+    if (isMasteredInIds || (item.reps >= 2 && item.lastResult === 'correct')) {
+      return {
+        status: 'mastered',
+        statusLabel: '정복 완료',
+        badgeClass: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+        reps: item.reps || 0,
+        nextReview: item.nextReviewDate || '마스터',
+        lastResult: item.lastResult,
+        lastDate: item.lastReviewedDate || '-'
+      };
+    }
+
+    return {
+      status: 'learning',
+      statusLabel: '복습 대기중',
+      badgeClass: 'bg-sky-100 text-sky-800 border-sky-300',
+      reps: item.reps || 0,
+      nextReview: item.nextReviewDate || '-',
+      lastResult: item.lastResult,
+      lastDate: item.lastReviewedDate || '-'
+    };
+  }
+
+  function initAnkiBrowser() {
+    // Stat card filter clicks
+    document.querySelectorAll('.anki-stat-card').forEach(card => {
+      card.onclick = () => {
+        const f = card.dataset.ankiFilter;
+        setActiveAnkiFilter(f);
+      };
+    });
+
+    // Filter bar pills
+    document.querySelectorAll('.anki-filter-pill').forEach(pill => {
+      pill.onclick = () => {
+        const f = pill.dataset.ankiFilter;
+        setActiveAnkiFilter(f);
+      };
+    });
+
+    // Search input
+    const searchInput = $('ankiSearchInput');
+    if (searchInput) {
+      searchInput.oninput = (e) => {
+        state.ankiSearchQuery = e.target.value.trim().toLowerCase();
+        updateAnkiDeckUI();
+      };
+    }
+
+    // Batch solve button
+    const btnBatch = $('btnStartFilteredBatch');
+    if (btnBatch) {
+      btnBatch.onclick = () => {
+        const filtered = getFilteredAnkiQuestions();
+        if (filtered.length === 0) {
+          alert('현재 필터 조건에 해당하는 문제가 없습니다.');
+          return;
+        }
+        startSessionWithPool(filtered);
+      };
+    }
+  }
+
+  function setActiveAnkiFilter(filterName) {
+    state.ankiFilter = filterName;
+    document.querySelectorAll('.anki-filter-pill').forEach(p => {
+      if (p.dataset.ankiFilter === filterName) {
+        p.classList.remove('bg-white', 'text-neutral-800', 'text-neutral-700', 'border', 'border-neutral-300');
+        p.classList.add('bg-neutral-900', 'text-white', 'shadow-sm');
+      } else {
+        p.classList.remove('bg-neutral-900', 'text-white', 'shadow-sm');
+        p.classList.add('bg-white', 'border', 'border-neutral-300', 'text-neutral-800');
+      }
+    });
+    updateAnkiDeckUI();
+  }
+
+  function getFilteredAnkiQuestions() {
+    return ALL_ERROR_QUESTIONS.filter(q => {
+      const srs = getQuestionSrsStatus(q);
+
+      // Filter by tab
+      if (state.ankiFilter === 'due' && srs.status !== 'due') return false;
+      if (state.ankiFilter === 'new' && srs.status !== 'new') return false;
+      if (state.ankiFilter === 'lapsed' && srs.status !== 'lapsed') return false;
+      if (state.ankiFilter === 'mastered' && srs.status !== 'mastered') return false;
+      if (state.ankiFilter === 'vocab' && !q.section.includes('文字・語彙')) return false;
+      if (state.ankiFilter === 'grammar' && !q.section.includes('文法')) return false;
+      if (state.ankiFilter === 'reading' && !q.section.includes('読解')) return false;
+      if (state.ankiFilter === 'listening' && !q.is_listening) return false;
+
+      // Filter by search query
+      if (state.ankiSearchQuery) {
+        const query = state.ankiSearchQuery;
+        const searchTarget = [
+          q.q_num,
+          q.exam_src,
+          q.section,
+          q.mondai_title,
+          q.category_detail,
+          q.instruction,
+          q.passage_text,
+          q.question_text,
+          q.correct_text,
+          q.my_past_answer,
+          ...(q.choices || [])
+        ].join(' ').toLowerCase();
+
+        if (!searchTarget.includes(query)) return false;
+      }
+
+      return true;
+    });
+  }
+
+  function updateAnkiDeckUI() {
+    let cntDue = 0, cntNew = 0, cntLapsed = 0, cntMastered = 0;
+    let cntVocab = 0, cntGrammar = 0, cntReading = 0, cntListening = 0;
+
+    ALL_ERROR_QUESTIONS.forEach(q => {
+      const srs = getQuestionSrsStatus(q);
+      if (srs.status === 'due') cntDue++;
+      else if (srs.status === 'new') cntNew++;
+      else if (srs.status === 'lapsed') cntLapsed++;
+      else if (srs.status === 'mastered') cntMastered++;
+
+      if (q.section.includes('文字・語彙')) cntVocab++;
+      if (q.section.includes('文法')) cntGrammar++;
+      if (q.section.includes('読解')) cntReading++;
+      if (q.is_listening) cntListening++;
+    });
+
+    // Update Big Badges
+    if ($('ankiCountDue')) $('ankiCountDue').textContent = cntDue;
+    if ($('ankiCountNew')) $('ankiCountNew').textContent = cntNew;
+    if ($('ankiCountLapsed')) $('ankiCountLapsed').textContent = cntLapsed;
+    if ($('ankiCountMastered')) $('ankiCountMastered').textContent = cntMastered;
+
+    // Update Filter Pills
+    if ($('pillCountAll')) $('pillCountAll').textContent = ALL_ERROR_QUESTIONS.length;
+    if ($('pillCountDue')) $('pillCountDue').textContent = cntDue;
+    if ($('pillCountNew')) $('pillCountNew').textContent = cntNew;
+    if ($('pillCountLapsed')) $('pillCountLapsed').textContent = cntLapsed;
+    if ($('pillCountMastered')) $('pillCountMastered').textContent = cntMastered;
+    if ($('pillCountVocab')) $('pillCountVocab').textContent = cntVocab;
+    if ($('pillCountGrammar')) $('pillCountGrammar').textContent = cntGrammar;
+    if ($('pillCountReading')) $('pillCountReading').textContent = cntReading;
+    if ($('pillCountListening')) $('pillCountListening').textContent = cntListening;
+
+    // Filter questions
+    const filtered = getFilteredAnkiQuestions();
+    if ($('filteredBatchCount')) $('filteredBatchCount').textContent = filtered.length;
+
+    renderAnkiQuestionList(filtered);
+  }
+
+  function renderAnkiQuestionList(questions) {
+    const list = $('ankiQuestionList');
+    if (!list) return;
+
+    if (questions.length === 0) {
+      list.innerHTML = `
+        <div class="p-8 text-center text-xs text-neutral-500 bg-white rounded-xl border border-dashed border-neutral-300">
+          🔍 일치하는 문항이 없습니다. 검색어를 변경하거나 다른 필터를 선택해 보세요.
+        </div>
+      `;
+      return;
+    }
+
+    list.innerHTML = questions.map((q) => {
+      const srs = getQuestionSrsStatus(q);
+      const isSrc2023 = q.exam_src.includes('2023');
+      const srcBadgeColor = isSrc2023 ? 'bg-purple-100 text-purple-900 border-purple-300' : 'bg-indigo-100 text-indigo-900 border-indigo-300';
+
+      // Past mistake tag
+      let pastMistakeTag = '';
+      if (q.my_past_answer) {
+        pastMistakeTag = `<span class="text-rose-700 font-bold bg-rose-50 px-2 py-0.5 rounded border border-rose-200">내 과거 오답: ${escapeHtml(q.my_past_answer)}</span>`;
+      }
+
+      // Safe question excerpt
+      let promptSnippet = q.question_text || q.instruction || '';
+      if (promptSnippet.length > 120) {
+        promptSnippet = promptSnippet.substring(0, 120) + '...';
+      }
+
+      const audioBadge = q.is_listening ? `<span class="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">🎧 원음 탑재</span>` : '';
+
+      return `
+        <div class="p-4 rounded-xl border border-neutral-200 bg-white hover:border-neutral-400 transition shadow-sm space-y-2.5">
+          <!-- Card Header -->
+          <div class="flex flex-wrap items-center justify-between gap-2 border-b border-neutral-100 pb-2">
+            <div class="flex flex-wrap items-center gap-1.5 text-xs">
+              <span class="px-2 py-0.5 rounded font-bold border ${srcBadgeColor}">${escapeHtml(q.exam_src)}</span>
+              <span class="px-2 py-0.5 rounded font-black font-mono bg-neutral-900 text-white">${q.q_num}</span>
+              <span class="font-bold text-neutral-800">${escapeHtml(q.mondai_title)}</span>
+              ${audioBadge}
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold border ${srs.badgeClass}">
+                ${srs.statusLabel}
+              </span>
+            </div>
+          </div>
+
+          <!-- Problem Preview -->
+          <div class="text-xs sm:text-sm font-serif text-neutral-900 leading-relaxed font-medium">
+            ${promptSnippet}
+          </div>
+
+          <!-- SRS & Category Metadata -->
+          <div class="flex flex-wrap items-center justify-between gap-2 pt-1 text-[11px] text-neutral-500 border-t border-neutral-100">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-neutral-600 font-mono">분류: ${escapeHtml(q.category_detail || q.section)}</span>
+              <span class="text-neutral-300">•</span>
+              <span>복습 횟수: <strong class="text-neutral-800 font-bold">${srs.reps}회</strong></span>
+              <span class="text-neutral-300">•</span>
+              <span>다음 복습: <strong class="text-neutral-800 font-bold">${srs.nextReview}</strong></span>
+              ${pastMistakeTag}
+            </div>
+
+            <div class="flex items-center gap-1.5">
+              <button
+                type="button"
+                data-preview-id="${q.id}"
+                class="btn-toggle-card-exp px-2.5 py-1 text-[11px] font-bold rounded border border-neutral-300 hover:bg-neutral-100 text-neutral-700 transition"
+              >
+                📖 해설 보기
+              </button>
+              <button
+                type="button"
+                data-solve-id="${q.id}"
+                class="btn-solve-single-q px-3 py-1 bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-xs rounded-lg transition shadow flex items-center gap-1"
+              >
+                <span>🎯 1문 풀기</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Collapsible Explanation Preview -->
+          <div id="cardExp-${q.id}" class="hidden p-3 bg-neutral-50 border border-neutral-200 rounded-lg text-xs mt-2 space-y-2">
+            <div class="font-bold text-neutral-800 flex items-center justify-between">
+              <span>【해설 미리보기】 정답: ${q.correct_num}번 ${q.correct_text ? '(' + escapeHtml(q.correct_text) + ')' : ''}</span>
+              <span class="text-[10px] text-neutral-400 cursor-pointer hover:text-neutral-600" onclick="document.getElementById('cardExp-${q.id}').classList.add('hidden')">닫기 ✕</span>
+            </div>
+            <div class="overflow-x-auto max-h-[300px]">
+              ${q.explanation_html}
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Wire up Single Solve button
+    list.querySelectorAll('.btn-solve-single-q').forEach(btn => {
+      btn.onclick = () => {
+        const qid = btn.dataset.solveId;
+        const targetQ = ALL_ERROR_QUESTIONS.find(q => q.id === qid);
+        if (targetQ) {
+          state.feedbackMode = 'instant';
+          startSessionWithPool([targetQ]);
+        }
+      };
+    });
+
+    // Wire up Explanation Toggle
+    list.querySelectorAll('.btn-toggle-card-exp').forEach(btn => {
+      btn.onclick = () => {
+        const qid = btn.dataset.previewId;
+        const drawer = $(`cardExp-${qid}`);
+        if (drawer) {
+          drawer.classList.toggle('hidden');
+          btn.textContent = drawer.classList.contains('hidden') ? '📖 해설 보기' : '📖 해설 닫기';
+        }
+      };
+    });
+  }
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
   }
 
   /* ----------------------------------------------------
@@ -1337,6 +1837,43 @@
 
     saveMasteredIds();
 
+    const today = getTodayStr();
+    state.evalQuestions.forEach(q => {
+      const ans = state.userAnswers[q.id];
+      const isCorrect = (ans === q.correct_num);
+      const isUnknown = (ans === 5);
+
+      const existing = state.srsData[q.id] || { reps: 0 };
+      if (isCorrect) {
+        const nextReps = (existing.reps || 0) + 1;
+        const intervalDays = nextReps === 1 ? 1 : nextReps === 2 ? 3 : nextReps === 3 ? 7 : 14;
+        state.srsData[q.id] = {
+          reps: nextReps,
+          interval: intervalDays,
+          lastReviewedDate: today,
+          nextReviewDate: addDays(today, intervalDays),
+          lastResult: 'correct'
+        };
+      } else if (isUnknown) {
+        state.srsData[q.id] = {
+          reps: 0,
+          interval: 1,
+          lastReviewedDate: today,
+          nextReviewDate: today,
+          lastResult: 'unknown'
+        };
+      } else {
+        state.srsData[q.id] = {
+          reps: 0,
+          interval: 1,
+          lastReviewedDate: today,
+          nextReviewDate: today,
+          lastResult: 'wrong'
+        };
+      }
+    });
+    saveSrsData();
+
     const total = state.evalQuestions.length;
     const accuracy = total > 0 ? Math.round((correctCount / total) * 100) : 0;
 
@@ -1414,63 +1951,13 @@
     }
   }
 
-  /* Copy result string to clipboard (MANUAL TRACKING FEATURE) */
-  function copyResultText() {
-    const today = new Intl.DateTimeFormat('sv-SE', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric',
-      month: '2-digit',
-      day: '2-digit'
-    }).format(new Date());
-
-    const sec = state.elapsedSec || 0;
-    const m = Math.floor(sec / 60);
-    const s = sec % 60;
-    const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
-
-    const total = state.evalQuestions.length;
-    let correct = 0;
-    state.evalQuestions.forEach(q => {
-      if (state.userAnswers[q.id] === q.correct_num) correct++;
-    });
-    const accuracy = total > 0 ? Math.round((correct / total) * 100) : 0;
-
-    const courseNames = {
-      all: '전영역 87제 풀 코스',
-      lang_reading: '언어지식·독해 62제',
-      listening: '청해 실전음원 25제',
-      vocab_grammar: '어휘·문법 킬러 30제'
-    };
-    let courseTitle = courseNames[state.course] || state.course;
-    if (state.isPartial) {
-      courseTitle += ` [${total}문항 중간완료]`;
-    }
-
-    const wrongIds = state.wrongList.map(item => item.q.q_num).join(', ');
-
-    const text = `[${today} JLPT N2 模試 間違いノート 復習] 학습 시간: ${timeStr} (코스: ${courseTitle}, 점수: ${correct}/${total}, 정답률: ${accuracy}%)\n- 오답 문항 (${state.wrongList.length}건): ${wrongIds || '없음 (전문항 정답)'}`;
-
-    const doSuccess = () => {
-      const btn = $('copyBtnText');
-      const orig = btn.textContent;
-      btn.textContent = '✓ 학습결과 클립보드 복사완료!';
-      setTimeout(() => btn.textContent = orig, 2000);
-    };
-
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(doSuccess).catch(() => prompt('복사:', text));
-    } else {
-      prompt('복사:', text);
-    }
-  }
-
   function initResultControls() {
-    $('btnCopyResult').onclick = copyResultText;
 
     $('btnRestartLobby').onclick = () => {
       $('screenResult').classList.add('hidden');
       $('screenLobby').classList.remove('hidden');
       updateLobbyMasteredUI();
+      updateAnkiDeckUI();
     };
 
     $('btnRetryWrongOnly').onclick = () => {
