@@ -4,21 +4,13 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-ROOT = Path(__file__).resolve().parent.parent
-DATASET_PATH = ROOT / 'scripts' / 'n2_grammar_dataset.json'
+ROOT = Path(r"c:\Users\pcw06\Documents\Codex\JLPT-N2-Plan")
+DATASET_PATH = ROOT / "scripts" / "n2_grammar_dataset.json"
 
-with open(DATASET_PATH, 'r', encoding='utf-8') as f:
+with open(DATASET_PATH, "r", encoding="utf-8") as f:
     items = json.load(f)
 
-# Fix for 125 typo and 129 duplicate spoiler
-for x in items:
-    if x['num'] == '125':
-        x['sentence_ja'] = x['sentence_ja'].replace('返すべきた', '返すべきだ')
-    elif x['num'] == '129':
-        x['sentence_ja'] = 'このマンションは日当たりがよく、高齢者向きの設計だ。'
-        x['sentence_ko'] = '이 아파트는 볕이 잘 들고 고령자에게 적합한 설계이다.'
-
-# Complete surgical precision mapping for JA targets across all 143 items
+# Complete SURGICAL_JA dictionary for all 143 items
 SURGICAL_JA = {
     "001": "あげく",
     "002": "あまり",
@@ -154,7 +146,7 @@ SURGICAL_JA = {
     "139": "ようがない",
     "140": "ようでは",
     "141": "ないように",
-    "142": " coupon" if False else "ようになってきた",
+    "142": "ようになってきた",
     "143": "わけにはいかない",
     "144": "わりに",
     "145": "を契機として",
@@ -165,7 +157,6 @@ SURGICAL_JA = {
     "150": "をめぐって"
 }
 
-# Complete surgical precision mapping for KO highlights across all 143 items
 SURGICAL_KO = {
     "001": "끝에",
     "002": "긴장한 나머지",
@@ -204,7 +195,7 @@ SURGICAL_KO = {
     "035": "필요는 없다",
     "036": "한창 하던 중에",
     "037": "조차",
-    "038": "만 있으면",
+    "038": "있으면",
     "039": "않을 수 없었다",
     "040": "수밖에 없다",
     "041": "대로",
@@ -312,68 +303,54 @@ SURGICAL_KO = {
     "150": "둘러싸고"
 }
 
-cleaned = []
 errors = []
-
 for x in items:
     num = x['num']
     ja = x['sentence_ja']
     ko = x['sentence_ko']
     
-    # Clean ko punctuation & spacing
-    ko = re.sub(r'\s+([.,!?])', r'\1', ko)
-    ko = ko.replace('취득했 지만', '취득했지만')
-    ko = ko.replace('나서 려던', '나서려던')
-    ko = ko.replace('유학생 에게', '유학생에게')
-    ko = ko.replace('창 문을', '창문을')
-    ko = ko.replace('쓰레기투성이 였다', '쓰레기투성이였다')
-    ko = ' '.join(ko.split())
-    
-    # Determine JA target
-    if num in SURGICAL_JA:
-        t_ja = SURGICAL_JA[num]
-    else:
-        t_ja = x.get('sentence_ja_target', '')
-        if '、' in t_ja:
-            t_ja = t_ja.split('、')[0].strip()
-            
+    t_ja = SURGICAL_JA.get(num, x.get('sentence_ja_target', ''))
     if t_ja not in ja:
-        errors.append(f"[{num}] JA target '{t_ja}' not in '{ja}'")
-        blank = ja + " （　　）"
+        errors.append(f"[{num}] JA target '{t_ja}' NOT in '{ja}'")
     else:
-        blank = ja.replace(t_ja, "（　　）", 1)
-        
-    # Determine KO target
-    if num in SURGICAL_KO:
-        t_ko = SURGICAL_KO[num]
-    else:
-        t_ko = x.get('target_ko', '')
-        
+        blank = ja.replace(t_ja, '（　　）', 1)
+        if '（　　）' not in blank:
+            errors.append(f"[{num}] Blank failed for '{ja}'")
+            
+    t_ko = SURGICAL_KO.get(num, x.get('target_ko', ''))
     if t_ko not in ko:
-        errors.append(f"[{num}] KO target '{t_ko}' not in '{ko}'")
-        
-    cleaned.append({
-        'id': x['id'],
-        'num': num,
-        'pattern': x['pattern'],
-        'meaning': x['meaning'],
-        'connection': x.get('connection', ''),
-        'core_meaning': x.get('core_meaning', ''),
-        'sentence_ja': ja,
-        'sentence_ja_target': t_ja,
-        'sentence_ja_blank': blank,
-        'sentence_ko': ko,
-        'target_ko': t_ko,
-        'diff_point': x.get('diff_point', ''),
-        'exam_signal': x.get('exam_signal', '')
-    })
+        errors.append(f"[{num}] KO target '{t_ko}' NOT in '{ko}'")
 
-print(f"Total processed: {len(cleaned)}")
+print(f"Total verified: {len(items)}")
 print(f"Total errors: {len(errors)}")
-for e in errors:
-    print("  ERROR:", e)
-
-if not errors:
-    with open(DATASET_PATH, 'w', encoding='utf-8') as f:
-        json.dump(cleaned, f, ensure_ascii=False, indent=2)
-    print("Dataset cleaned and saved successfully!")
+if errors:
+    for e in errors:
+        print("  ERROR:", e)
+else:
+    print("ALL 143 ITEMS PASSED WITH ZERO ERRORS!")
+    with open(ROOT / 'scratch' / 'audited_blanks.txt', 'w', encoding='utf-8') as out:
+        for x in items:
+            num = x['num']
+            pat = x['pattern']
+            ja = x['sentence_ja']
+            t_ja = SURGICAL_JA[num]
+            blk = ja.replace(t_ja, '（　　）', 1)
+            ko = x['sentence_ko']
+            t_ko = SURGICAL_KO[num]
+            out.write(f"[{num:0>3}] {pat}\n")
+            out.write(f"   JA BLK : {blk}\n")
+            out.write(f"   JA TGT : {t_ja}\n")
+            out.write(f"   KO TGT : [{t_ko}] in \"{ko}\"\n\n")
+    print("Wrote scratch/audited_blanks.txt successfully!")
+    print("\nChecking for multiple occurrences of target in sentences:")
+    dup_count = 0
+    for x in items:
+        num = x['num']
+        ja = x['sentence_ja']
+        t_ja = SURGICAL_JA[num]
+        cnt = ja.count(t_ja)
+        if cnt > 1:
+            dup_count += 1
+            print(f"  [{num}] Target '{t_ja}' appears {cnt} times in: '{ja}'")
+    if dup_count == 0:
+        print("  NO DUPLICATES FOUND! All targets appear exactly once.")

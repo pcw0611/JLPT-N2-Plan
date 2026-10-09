@@ -19,8 +19,7 @@ with urllib.request.urlopen(req, timeout=10) as resp:
             print('Live Web Status for 2026-10-09:')
             print('  Date:', d.get('date'))
             print('  studyMinutes:', d.get('studyMinutes'))
-            print('  questions:', d.get('questions'))
-            print('  accuracy:', d.get('accuracy'))
-            print('  tests count:', len(d.get('tests', [])))
-            for t in d.get('tests', []):
-                print(f"    - {t.get('title')} ({t.get('correct')}/{t.get('total')}, {t.get('durationMinutes')}분)")
+            print('  hasUntrackedActivity:', d.get('hasUntrackedActivity'))
+            print('  activityHistory count:', len(d.get('activityHistory', [])))
+            for a in d.get('activityHistory', []):
+                print(f"    [{a.get('source')}] {a.get('notes')} ({a.get('timeStr')})")
