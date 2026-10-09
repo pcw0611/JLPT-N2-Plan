@@ -135,6 +135,17 @@
       margin-top: 12px !important;
       display: none;
     }
+    .jlpt-pin-back-link {
+      display: inline-block !important;
+      margin-top: 16px !important;
+      color: #8fa087 !important;
+      font-size: 12px !important;
+      text-decoration: underline !important;
+      transition: color 0.15s !important;
+    }
+    .jlpt-pin-back-link:hover {
+      color: #cdfb7a !important;
+    }
     @keyframes jlpt-shake {
       0%, 100% { transform: translateX(0); }
       20%, 60% { transform: translateX(-6px); }
@@ -155,7 +166,7 @@
       <div class="jlpt-pin-box" id="jlptPinBox">
         <div class="jlpt-pin-icon">🔐</div>
         <h2 class="jlpt-pin-title">JLPT N2 Codex Private Hub</h2>
-        <p class="jlpt-pin-desc">학습자 전용 비공개 포털입니다.<br>접근을 위해 PIN 코드를 입력하세요.</p>
+        <p class="jlpt-pin-desc">학습자 전용 비공개 훈련 콘텐츠입니다.<br>접근을 위해 PIN 코드를 입력하세요.</p>
         <form id="jlptPinForm" autocomplete="off" onsubmit="return false;">
           <input
             type="password"
@@ -170,6 +181,9 @@
           />
           <button type="submit" id="jlptPinSubmit" class="jlpt-pin-btn">확인 (Enter)</button>
           <div id="jlptPinError" class="jlpt-pin-error">⚠️ 올바른 PIN 코드가 아닙니다.</div>
+          <div>
+            <a href="/" class="jlpt-pin-back-link">← 공개 캘린더로 돌아가기</a>
+          </div>
         </form>
       </div>
     `;
