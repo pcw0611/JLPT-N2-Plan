@@ -466,6 +466,50 @@ const state = {
   mistakes: []
 };
 
+const SYNONYM_GROUPS = [
+  // 1. 기정사실 전제 책임·의무 (이상, 바에는): ~한 이상에는, ~한 바에는
+  ['〜た以上（は）', '〜からには', '〜うえは', '〜上は', '〜以上（は）', '以上は', 'からには', 'うえは', '上は'],
+  // 2. 직후·동시 (~하자마자):
+  ['〜か〜ないかのうちに', '〜たとたん（に）', '〜次第', 'たとたん', 'か〜ないかのうちに', '次第'],
+  // 3. 결과 (~한 끝에):
+  ['〜末（に）', '〜あげく', '末に', 'あげく'],
+  // 4. 불가피 (~할 수밖에 없다):
+  ['〜ざるを得ない', '〜しかない', 'ざるを得ない', 'しかない'],
+  // 5. 근거 (~을 토대로, 바탕으로):
+  ['〜に基づいて', '〜をもとに（して）', '〜に則して', 'に基づいて', 'をもとに', 'に則して'],
+  // 6. 계기 (~을 계기로 하여):
+  ['〜を契機に（해서）', '〜を契機に（して）', '〜をきっかけに（して）', 'を契機に', 'をきっかけに'],
+  // 7. 관련 (~에 관하여, 둘러싸고):
+  ['〜に関して（は）／〜に関する', '〜について（は）／〜についての', '〜をめぐって／〜をめぐる', 'に関して', 'について', '를 둘러싸고', 'をめぐって'],
+  // 8. 시점 (~에 즈음하여):
+  ['〜に際して（は）／〜に際し', '〜にあたって（は）', 'に際して', 'にあたって'],
+  // 9. 시작 (~을 시작으로):
+  ['〜をはじめ（として）', '〜を皮切りに（して）', 'をはじめ', 'を皮切りに'],
+  // 10. 기간/수단 (~에 걸쳐, ~을 통해):
+  ['〜にわたって／〜にわたる', '〜を通じて／〜を通して', 'にわたって', 'を通じて', 'を通して'],
+  // 11. 호응 (~에 응하여, 부응하여):
+  ['〜に応じて', '〜にこたえて', 'に応じて', 'にこたえて'],
+  // 12. 대조 (~에 비하여):
+  ['〜に比べて', '〜にひきかえ', '〜に対して', 'に比べて', 'にひきかえ', 'に対して']
+];
+
+function isSynonym(pat1, pat2) {
+  if (!pat1 || !pat2) return false;
+  if (pat1 === pat2) return true;
+  const norm = p => p.replace(/^[〜~]/, '').replace(/[（(].*?[）)]/g, '').replace(/[\s\/／・]/g, '').trim();
+  const n1 = norm(pat1);
+  const n2 = norm(pat2);
+  if (n1 === n2) return true;
+
+  for (const group of SYNONYM_GROUPS) {
+    const groupNorms = group.map(norm);
+    if (groupNorms.includes(n1) && groupNorms.includes(n2)) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function generateQuestions(course, count) {
   let pool = [];
   if (course === 'c1') pool = ALL_PATTERNS.slice(0, 50);
@@ -486,25 +530,17 @@ function generateQuestions(course, count) {
 
   return selected.map(item => {
     const distractors = new Set();
-    
-    // 1. Check if diff_point mentions another REGISTERED pattern from ALL_PATTERNS
-    if (item.diff_point) {
-      for (const candidate of ALL_PATTERNS) {
-        if (candidate.id === item.id || candidate.pattern === item.pattern) continue;
-        const subPats = candidate.pattern.split(/[／/・]/).map(p => p.replace(/^[〜~]/, '').replace(/[（(].*?[）)]/g, '').trim());
-        const isMentioned = subPats.some(sp => sp.length >= 2 && item.diff_point.includes(sp));
-        if (isMentioned) {
-          distractors.add(candidate.pattern);
-          break;
-        }
-      }
-    }
 
-    // 2. Fill rest strictly from registered ALL_PATTERNS (Never raw string extraction, 100% Pure Japanese)
+    // Fill distractors strictly from registered ALL_PATTERNS,
+    // EXCLUDING the answer itself AND any synonymous/interchangeable patterns!
     const shuffledPatterns = [...ALL_PATTERNS].sort(() => 0.5 - Math.random());
     for (const rand of shuffledPatterns) {
       if (distractors.size >= 3) break;
-      if (rand.pattern !== item.pattern && !distractors.has(rand.pattern)) {
+      if (
+        rand.pattern !== item.pattern &&
+        !isSynonym(rand.pattern, item.pattern) &&
+        !distractors.has(rand.pattern)
+      ) {
         distractors.add(rand.pattern);
       }
     }
@@ -759,7 +795,9 @@ function checkAnswer(userAnswer) {
   const slot = $('blankSlot');
   const buttons = document.querySelectorAll('.choice-item');
 
-  if (userAnswer === q.answer) {
+  const isCorrect = (userAnswer === q.answer) || isSynonym(userAnswer, q.answer);
+
+  if (isCorrect) {
     state.score++;
     state.combo++;
     if (state.combo > state.maxCombo) state.maxCombo = state.combo;
@@ -776,21 +814,25 @@ function checkAnswer(userAnswer) {
 
     // Fill blank slot with green glow
     if (slot) {
-      slot.textContent = q.item.sentence_ja_target || q.item.pattern;
+      slot.textContent = (userAnswer === q.answer) ? (q.item.sentence_ja_target || q.item.pattern) : userAnswer;
       slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-emerald-400 bg-emerald-500/30 text-emerald-300 font-black tracking-wider text-lg sm:text-xl shadow-md scale-105';
     }
 
     // Highlight selected button green
     buttons.forEach(btn => {
       const bIdx = parseInt(btn.dataset.idx, 10);
-      if (q.choices[bIdx] === q.answer) {
+      if (q.choices[bIdx] === userAnswer) {
         btn.classList.add('border-emerald-400', 'bg-emerald-950/70', 'text-emerald-300', 'ring-2', 'ring-emerald-400/50');
       }
     });
 
     // Reveal solved banner with grammar number and meaning (AFTER solving)
     $('qSolvedBanner').classList.remove('hidden');
-    $('qSolvedText').innerHTML = `✓ 정답! <span class="text-amber-300 font-extrabold mr-1.5">[N2 문법 ${q.item.num}]</span> ${q.item.pattern} <span class="text-slate-300 text-[11px] font-normal ml-1">(${q.item.meaning})</span>`;
+    let solvedNote = '';
+    if (userAnswer !== q.answer && isSynonym(userAnswer, q.answer)) {
+      solvedNote = ` <span class="text-emerald-400 font-bold ml-1.5">[동의 문형 복수 정답 인정: ${userAnswer} ⇄ ${q.item.pattern}]</span>`;
+    }
+    $('qSolvedText').innerHTML = `✓ 정답! <span class="text-amber-300 font-extrabold mr-1.5">[N2 문법 ${q.item.num}]</span> ${q.item.pattern} <span class="text-slate-300 text-[11px] font-normal ml-1">(${q.item.meaning})</span>${solvedNote}`;
 
     // Activate blinking highlight on preceding anchor word/particle (ます형, の, 명사 등)
     const anchorEl = $('connAnchor');
