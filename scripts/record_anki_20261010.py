@@ -120,7 +120,7 @@ cur_anki.execute('''
     FROM revlog r
     JOIN cards c ON r.cid = c.id
     WHERE r.id >= ? AND r.id < ? AND c.did IN (
-        SELECT id FROM decks WHERE name LIKE '%문법%' OR name LIKE '%05%' OR name LIKE '%조건형%'
+        SELECT id FROM decks WHERE name LIKE '%문법%' OR name LIKE '%JLPT N2%'
     )
 ''', (s_ms, e_ms))
 grammar_reviewed_today = cur_anki.fetchone()[0] or 0
