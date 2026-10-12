@@ -20,8 +20,8 @@ con_anki = sqlite3.connect(TEMP_DIR / 'collection.anki2')
 cur_anki = con_anki.cursor()
 
 KST = timezone(timedelta(hours=9))
-# Check 2026-10-11 and 2026-10-12
-for date_str, y, m, d in [('2026-10-11', 2026, 10, 11), ('2026-10-12', 2026, 10, 12)]:
+# Check 2026-10-12 and 2026-10-13
+for date_str, y, m, d in [('2026-10-12', 2026, 10, 12), ('2026-10-13', 2026, 10, 13)]:
     s_dt = datetime(y, m, d, 4, 0, 0, tzinfo=KST)
     e_dt = s_dt + timedelta(days=1)
     s_ms = int(s_dt.timestamp() * 1000)
