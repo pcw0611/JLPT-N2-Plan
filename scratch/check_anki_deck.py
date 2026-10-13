@@ -1,64 +1,46 @@
+# -*- coding: utf-8 -*-
+import sqlite3
+import shutil
+import sys
 import json
-import urllib.request
-import sys, io
+from pathlib import Path
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8')
 
-ENDPOINT = "http://127.0.0.1:3141/"
+ANKI_SRC = Path(r'C:\Users\pcw06\AppData\Roaming\Anki2\사용자 1')
+TEMP_DIR = Path(r'C:\Users\pcw06\AppData\Local\Temp\anki_inspect_decks')
+TEMP_DIR.mkdir(exist_ok=True)
+shutil.copy2(ANKI_SRC / 'collection.anki2', TEMP_DIR / 'collection.anki2')
+if (ANKI_SRC / 'collection.anki2-wal').exists():
+    shutil.copy2(ANKI_SRC / 'collection.anki2-wal', TEMP_DIR / 'collection.anki2-wal')
+if (ANKI_SRC / 'collection.anki2-shm').exists():
+    shutil.copy2(ANKI_SRC / 'collection.anki2-shm', TEMP_DIR / 'collection.anki2-shm')
 
-def mcp(name: str, arguments: dict = None):
-    req_body = {
-        "jsonrpc": "2.0",
-        "id": 1,
-        "method": "tools/call",
-        "params": {
-            "name": name,
-            "arguments": arguments or {}
-        }
-    }
-    data = json.dumps(req_body, ensure_ascii=False).encode('utf-8')
-    req = urllib.request.Request(
-        ENDPOINT,
-        data=data,
-        headers={"Content-Type": "application/json", "Accept": "application/json, text/event-stream"},
-        method="POST"
-    )
-    with urllib.request.urlopen(req, timeout=10) as resp:
-        body = resp.read().decode('utf-8')
-    for line in body.splitlines():
-        if line.startswith("data: "):
-            res = json.loads(line[6:])
-            result = res.get('result', {})
-            if 'structuredContent' in result:
-                return result['structuredContent']
-            if 'content' in result and result['content']:
-                try:
-                    return json.loads(result['content'][0]['text'])
-                except:
-                    return result['content'][0]['text']
-            return result
-    return None
+con = sqlite3.connect(TEMP_DIR / 'collection.anki2')
+cur = con.cursor()
 
-if __name__ == '__main__':
-    decks = mcp('list_decks')
-    print("Decks:", decks)
-    
-    # Query notes in listening deck
-    res = mcp('find_notes', {'query': 'deck:"JLPT N2::오답노트 (청해 25문항 · 실전 음원)"'})
-    nids = res.get('notes', []) if isinstance(res, dict) else res
-    print(f"Notes count in listening deck: {len(nids)}")
-    
-    notes_info = mcp('notes_info', {'notes': nids})
-    notes_list = notes_info.get('notes', []) if isinstance(notes_info, dict) else notes_info
-    
-    for n in sorted(notes_list, key=lambda x: x.get('tags', [])):
-        nid = n['noteId']
-        tags = n.get('tags', [])
-        front = n['fields']['Front']['value']
-        back = n['fields']['Back']['value']
-        print(f"\n==========================================")
-        print(f"NOTE {nid} | Tags: {tags}")
-        print("--- FRONT ---")
-        print(front[:300])
-        print("--- BACK ---")
-        print(back[:500])
+print("--- Decks ---")
+cur.execute('SELECT id, name FROM decks')
+decks = sorted(cur.fetchall(), key=lambda x: x[1])
+for did, name in decks:
+    clean_name = name.replace('\x1f', '::')
+    cur.execute('SELECT count(*) FROM cards WHERE did = ?', (did,))
+    card_cnt = cur.fetchone()[0]
+    print(f"ID: {did} | Name: {clean_name} | Cards: {card_cnt}")
+
+print("\n--- Models (Note Types) ---")
+cur.execute('SELECT models FROM col')
+models_json = cur.fetchone()[0]
+if models_json:
+    models = json.loads(models_json)
+    for mid, mdata in models.items():
+        flds = [f['name'] for f in mdata.get('flds', [])]
+        print(f"ID: {mid} | Name: {mdata.get('name')} | Fields: {flds}")
+
+print("\n--- Recent notes (last 5) ---")
+cur.execute('SELECT id, mid, flds, tags FROM notes ORDER BY id DESC LIMIT 5')
+for nid, mid, flds, tags in cur.fetchall():
+    fields_list = flds.split('\x1f')
+    print(f"Note {nid} (Model {mid}): {fields_list[:3]} | Tags: {tags}")
+
+con.close()
