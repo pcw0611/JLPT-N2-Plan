@@ -80,11 +80,14 @@ body {
       <span class="inline-block w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse"></span>
       <span class="font-bold tracking-wider text-slate-300">JLPT N2 文法 SPEED RUN · 문형 저격</span>
     </div>
-    <div class="flex items-center gap-3">
-      <button id="btnSound" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300">
+    <div class="flex items-center gap-2 sm:gap-3">
+      <button id="btnToggleKo" type="button" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300 text-xs font-semibold cursor-pointer select-none" title="앞면 한국어 해석 표시 ON/OFF (단축키: T)">
+        <span id="koIcon">🌐</span> <span id="koLabel">해석 ON</span>
+      </button>
+      <button id="btnSound" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300 text-xs cursor-pointer select-none">
         <span id="soundIcon">🔊</span> <span id="soundLabel">Sound ON</span>
       </button>
-      <a href="/" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition text-slate-300">
+      <a href="/" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition text-slate-300 text-xs">
         🏠 캘린더
       </a>
     </div>
@@ -151,8 +154,35 @@ body {
       </div>
     </div>
 
+    <!-- 3. Front Korean Translation ON/OFF -->
+    <div class="space-y-2">
+      <div class="flex items-center justify-between">
+        <label class="block text-xs font-bold text-slate-400 tracking-wider uppercase">3. 앞면 해석 (힌트) 설정</label>
+        <span class="text-[11px] text-slate-500 font-mono">단축키: T</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="koOptionList">
+        <button type="button" data-ko="on" id="btnKoOn" class="ko-opt-btn p-3 rounded-xl border border-amber-500 bg-amber-950/40 text-left hover:border-amber-400 transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-amber-400">🌐 해석 ON (기본)</span>
+            <span id="koOnCheck" class="text-xs text-amber-400 font-bold">●</span>
+          </div>
+          <div class="font-bold text-white text-sm mt-0.5">한국어 번역 & 뉘앙스 표시</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">한국어 뉘앙스 강조 힌트와 함께 빠른 문형 연상 훈련</div>
+        </button>
+
+        <button type="button" data-ko="off" id="btnKoOff" class="ko-opt-btn p-3 rounded-xl border border-slate-700 bg-slate-800/60 text-left hover:border-slate-500 transition cursor-pointer">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold text-slate-400">🙈 해석 OFF (실전 저격)</span>
+            <span id="koOffCheck" class="text-xs text-slate-600 font-bold">○</span>
+          </div>
+          <div class="font-bold text-white text-sm mt-0.5">일본어 원문만 보고 저격</div>
+          <div class="text-[11px] text-slate-400 mt-0.5">한국어 힌트 차단! 오직 앞뒤 접속과 일본어 문맥으로 승부</div>
+        </button>
+      </div>
+    </div>
+
     <!-- Start Button -->
-    <button id="btnStart" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-400 hover:to-rose-500 font-black text-lg text-white shadow-lg shadow-amber-500/20 active:scale-[0.99] transition">
+    <button id="btnStart" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-rose-600 hover:from-amber-400 hover:to-rose-500 font-black text-lg text-white shadow-lg shadow-amber-500/20 active:scale-[0.99] transition cursor-pointer">
       문형 저격 스피드런 시작 (Space / Enter)
     </button>
   </div>
@@ -206,9 +236,13 @@ body {
       </div>
 
       <!-- 2. Korean Translation with Nuance Highlight (Context Support) -->
-      <div class="py-1 px-2">
+      <div class="py-1 px-2" id="qSentenceKoWrapper">
         <div id="qSentenceKo" class="text-sm sm:text-base font-semibold text-slate-300 leading-relaxed break-keep">
           <!-- Injected Korean translation -->
+        </div>
+        <div id="qSentenceKoPlaceholder" class="hidden py-1.5 px-3 rounded-lg bg-slate-950/50 border border-slate-800 text-xs text-slate-400 hover:text-amber-300 hover:border-amber-500/50 transition cursor-pointer flex items-center justify-center gap-2 select-none" title="클릭하거나 키보드 T 키를 누르면 이번 문제 해석이 표시됩니다">
+          <span>🙈 앞면 해석 숨김</span>
+          <span class="text-[11px] text-amber-400/90 underline font-mono">해석 보기 (T)</span>
         </div>
       </div>
 
@@ -220,11 +254,11 @@ body {
 
       <!-- Bottom Guide Bar -->
       <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400 px-1">
-        <span class="flex items-center gap-1.5">
+        <span class="flex items-center gap-1.5" id="guideTextNuance">
           <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-          <span>한국어 문맥의 <strong class="text-amber-300 font-semibold">강조된 뉘앙스</strong>에 알맞은 N2 문형을 고르세요</span>
+          <span id="guideTextContent">한국어 문맥의 <strong class="text-amber-300 font-semibold">강조된 뉘앙스</strong>에 알맞은 N2 문형을 고르세요</span>
         </span>
-        <span class="text-slate-500 font-mono">1~4 키</span>
+        <span class="text-slate-500 font-mono">1~4 키 / T (해석)</span>
       </div>
     </div>
 
@@ -341,6 +375,10 @@ body {
       <p class="text-slate-400 text-sm" id="resSub">
         N2 핵심 문형의 뉘앙스 직관이 한층 더 날카로워졌습니다.
       </p>
+      <div class="pt-1 flex items-center justify-center gap-2">
+        <span id="resModeBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300">
+        </span>
+      </div>
     </div>
 
     <!-- Score Big Card -->
@@ -454,6 +492,7 @@ const sounds = new SoundEngine();
 const state = {
   course: 'all',
   targetCount: 150,
+  showKo: true,
   questions: [],
   currentIndex: 0,
   score: 0,
@@ -619,7 +658,115 @@ function generateQuestions(course, count) {
 
 const $ = id => document.getElementById(id);
 
+function updateKoUI() {
+  const isKo = state.showKo;
+  const btnToggle = $('btnToggleKo');
+  const icon = $('koIcon');
+  const label = $('koLabel');
+  if (btnToggle && icon && label) {
+    if (isKo) {
+      icon.textContent = '🌐';
+      label.textContent = '해석 ON';
+      btnToggle.className = 'px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 transition flex items-center gap-1.5 text-slate-300 text-xs font-semibold cursor-pointer select-none';
+    } else {
+      icon.textContent = '🙈';
+      label.textContent = '해석 OFF';
+      btnToggle.className = 'px-2.5 py-1 rounded bg-rose-950/60 border border-rose-500/50 hover:bg-rose-900/60 transition flex items-center gap-1.5 text-rose-300 text-xs font-bold cursor-pointer select-none shadow-sm';
+    }
+  }
+
+  const btnOn = $('btnKoOn');
+  const btnOff = $('btnKoOff');
+  const checkOn = $('koOnCheck');
+  const checkOff = $('koOffCheck');
+  if (btnOn && btnOff) {
+    if (isKo) {
+      btnOn.classList.add('border-amber-500', 'bg-amber-950/40');
+      btnOn.classList.remove('border-slate-700', 'bg-slate-800/60');
+      btnOff.classList.remove('border-amber-500', 'bg-amber-950/40');
+      btnOff.classList.add('border-slate-700', 'bg-slate-800/60');
+      if (checkOn) { checkOn.textContent = '●'; checkOn.className = 'text-xs text-amber-400 font-bold'; }
+      if (checkOff) { checkOff.textContent = '○'; checkOff.className = 'text-xs text-slate-600 font-bold'; }
+    } else {
+      btnOff.classList.add('border-amber-500', 'bg-amber-950/40');
+      btnOff.classList.remove('border-slate-700', 'bg-slate-800/60');
+      btnOn.classList.remove('border-amber-500', 'bg-amber-950/40');
+      btnOn.classList.add('border-slate-700', 'bg-slate-800/60');
+      if (checkOff) { checkOff.textContent = '●'; checkOff.className = 'text-xs text-amber-400 font-bold'; }
+      if (checkOn) { checkOn.textContent = '○'; checkOn.className = 'text-xs text-slate-600 font-bold'; }
+    }
+  }
+
+  applyKoVisibility();
+}
+
+function setKoState(show) {
+  state.showKo = show;
+  try {
+    localStorage.setItem('n2_speedrun_show_ko', show ? 'true' : 'false');
+  } catch (e) {}
+  updateKoUI();
+}
+
+function toggleKo() {
+  setKoState(!state.showKo);
+}
+
+function applyKoVisibility() {
+  const koTextEl = $('qSentenceKo');
+  const koPlaceholder = $('qSentenceKoPlaceholder');
+  const guideContent = $('guideTextContent');
+
+  if (!koTextEl) return;
+
+  if (state.waitingConfirm) {
+    koTextEl.classList.remove('hidden');
+    if (koPlaceholder) koPlaceholder.classList.add('hidden');
+    return;
+  }
+
+  if (state.showKo) {
+    koTextEl.classList.remove('hidden');
+    if (koPlaceholder) koPlaceholder.classList.add('hidden');
+    if (guideContent) {
+      guideContent.innerHTML = '한국어 문맥의 <strong class="text-amber-300 font-semibold">강조된 뉘앙스</strong>에 알맞은 N2 문형을 고르세요';
+    }
+  } else {
+    koTextEl.classList.add('hidden');
+    if (koPlaceholder) koPlaceholder.classList.remove('hidden');
+    if (guideContent) {
+      guideContent.innerHTML = '일본어 문맥과 <strong class="text-amber-300 font-semibold">앞뒤 접속 형태</strong>에 알맞은 N2 문형을 고르세요 <span class="text-rose-400 font-bold">(해석 OFF)</span>';
+    }
+  }
+}
+
 function initLobbyUI() {
+  try {
+    const savedKo = localStorage.getItem('n2_speedrun_show_ko');
+    if (savedKo !== null) {
+      state.showKo = (savedKo === 'true');
+    }
+  } catch (e) {}
+  updateKoUI();
+
+  if ($('btnKoOn')) $('btnKoOn').onclick = () => setKoState(true);
+  if ($('btnKoOff')) $('btnKoOff').onclick = () => setKoState(false);
+  if ($('btnToggleKo')) {
+    $('btnToggleKo').onclick = (e) => {
+      e.stopPropagation();
+      toggleKo();
+    };
+  }
+
+  const ph = $('qSentenceKoPlaceholder');
+  if (ph) {
+    ph.onclick = (e) => {
+      e.stopPropagation();
+      $('qSentenceKo').classList.remove('hidden');
+      ph.classList.add('hidden');
+    };
+  }
+
   document.querySelectorAll('.course-btn').forEach(btn => {
     btn.onclick = () => {
       document.querySelectorAll('.course-btn').forEach(b => {
@@ -685,6 +832,13 @@ function initLobbyUI() {
   $('btnSkip').onclick = () => checkAnswer('');
 
   window.addEventListener('keydown', e => {
+    // Toggle translation with 't' / 'T' / 'ㅅ'
+    if (e.key === 't' || e.key === 'T' || e.key === 'ㅅ') {
+      e.preventDefault();
+      toggleKo();
+      return;
+    }
+
     if (state.waitingConfirm) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -773,6 +927,8 @@ function renderQuestion() {
   $('qSeqNum').textContent = `문제 ${state.currentIndex + 1}`;
   $('qSentenceJa').innerHTML = q.jaBlankHtml;
   $('qSentenceKo').innerHTML = q.koHtml;
+
+  applyKoVisibility();
 
   const container = $('choiceContainer');
   container.innerHTML = q.choices.map((c, idx) => `
@@ -863,6 +1019,7 @@ function checkAnswer(userAnswer) {
 
     $('correctFeedbackModal').classList.remove('hidden');
     state.waitingConfirm = true;
+    applyKoVisibility();
 
   } else {
     state.combo = 0;
@@ -893,6 +1050,7 @@ function checkAnswer(userAnswer) {
     });
 
     state.waitingConfirm = true;
+    applyKoVisibility();
     $('fbCardNum').textContent = `N2 문법 ${q.item.num}`;
     $('fbPattern').textContent = q.item.pattern;
     $('fbMeaning').textContent = `(${ q.item.meaning })`;
@@ -944,6 +1102,17 @@ function finishGame() {
   $('resAccuracy').textContent = `${accuracy}%`;
   $('resScoreFraction').textContent = `${state.score} / ${state.score + state.mistakes.length} (정답수/총시도)`;
 
+  const modeBadge = $('resModeBadge');
+  if (modeBadge) {
+    if (state.showKo) {
+      modeBadge.innerHTML = '<span>🌐</span> 앞면 해석 <strong class="text-amber-300 ml-1">ON</strong>';
+      modeBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-xs font-bold text-slate-300';
+    } else {
+      modeBadge.innerHTML = '<span>🙈</span> 앞면 해석 <strong class="text-rose-400 ml-1">OFF (실전 저격 완주!)</strong>';
+      modeBadge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-950/60 border border-rose-500/50 text-xs font-bold text-rose-300 shadow-sm';
+    }
+  }
+
   // Auto Submit to Calendar Site API
   if (window.autoSubmitExamResult) {
     const courseNames = {
@@ -956,13 +1125,14 @@ function finishGame() {
     window.autoSubmitExamResult({
       examType: 'grammar-speedrun',
       title: 'N2 文法 SPEED RUN',
-      course: courseNames[state.course] || state.course,
+      course: `${courseNames[state.course] || state.course}${state.showKo ? '' : ' [해석OFF]'}`,
       elapsedSeconds: state.elapsedSec,
       totalQuestions: attempts,
       correctCount: state.score,
       wrongCount: state.mistakes.length,
       accuracy: accuracy,
       details: {
+        showKo: state.showKo,
         maxCombo: state.maxCombo,
         mistakes: state.mistakes.map(m => ({ num: m.q.item.num, pattern: m.q.item.pattern, user: m.userAnswer, correct: m.q.answer }))
       }
