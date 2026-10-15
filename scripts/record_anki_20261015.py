@@ -5,15 +5,14 @@ Record Anki study stats for 2026-10-15 (and reconcile 2026-10-14 final stats) in
 2026-10-14 (Reconciled Final):
 - Anki: 635 reviews, 7,541.78s (125m 41.78s / 125.70m), 377 distinct cards (07:48 ~ 22:30 KST)
 - Online Quizzes: 3 sessions, 17,348s (289m 8s), 150/165 correct (90.9%)
-- Total learning time: 24,889.78s = 414m 49.78s (approx 6h 54m 50s / 414.83m, verified_minutes = 414m, rem: 49.78s)
+- Total learning time: 24,889.78s = 414m 49.78s (verified_minutes = 414m, rem: 49.78s)
 
-2026-10-15:
-- Anki: 485 reviews, 6,374.29s (106m 14.29s / 106.24m / ~1h 46m 14s), 271 distinct cards (10:07 ~ 16:36 KST)
-- All 485 reviews in JLPT 한끝 Voca decks
-- Ratings: Again 214 (44.12%), Hard 6 (1.24%), Good 7 (1.44%), Easy 258 (53.20%)
-- Types: Review 271, Relearn 214
-- Queue: new 366, learning 28, review 3048 (total 3442)
-- Total learning time: 6,374.29s = 106m 14.29s (verified_minutes = 106m, rem: 14.29s, in progress)
+2026-10-15 (Updated Night Session):
+- Anki: 837 reviews, 10,034.64s (167m 14.64s / 167.24m / ~2h 47m 15s), 315 distinct cards (10:07 ~ 21:36 KST)
+- Voca only: 485 reviews, 6,374.29s (106m 14.29s), 271 cards, Again 214 (44.12%), Hard 6, Good 7, Easy 258
+- Reading vocab deck (14 독해・기사・모의고사 어휘): 352 reviews, 3,660.35s (61m 0.35s), 44 cards (34 new cards memorization)
+- Queue: new 332, learning 20, review 3,090 (total 3,442)
+- Total learning time: 10,034.64s = 167m 14.64s (verified_minutes = 167m, rem: 14.64s, in progress)
 """
 
 import sqlite3
@@ -211,9 +210,9 @@ payload14 = {
         'readingAndChangeDecksMinutes': 36.4
     },
     'cardsRemaining': {
-        'new': 366,
-        'learning': 28,
-        'review': 3048
+        'new': new_rem,
+        'learning': learn_rem,
+        'review': rev_rem
     },
     'decks': deck14_breakdown,
     'studyDay': d14_str,
@@ -241,7 +240,7 @@ cur_db.execute('''
 
 
 # ==========================================
-# 2. Record 2026-10-15 (Today)
+# 2. Record 2026-10-15 (Updated Night Session)
 # ==========================================
 d15_str = '2026-10-15'
 s15_dt = datetime(2026, 10, 15, 4, 0, 0, tzinfo=KST)
@@ -259,23 +258,50 @@ t15_sec = (t15_tms or 0) / 1000.0
 t15_min = t15_sec / 60.0
 min15_dt = datetime.fromtimestamp(min15_id / 1000.0, tz=KST)
 max15_dt = datetime.fromtimestamp(max15_id / 1000.0, tz=KST)
-t15_sec_per_card = round(t15_sec / t15_cnt, 2) if t15_cnt else 0
 
-# Ratings
+# Voca only for accuracy metrics
 cur_anki.execute('''
-    SELECT ease, count(*)
-    FROM revlog
-    WHERE id >= ? AND id < ?
-    GROUP BY ease
+    SELECT count(*), sum(r.time), count(distinct r.cid)
+    FROM revlog r
+    JOIN cards c ON r.cid = c.id
+    JOIN decks d ON c.did = d.id
+    WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%한끝 Voca%'
 ''', (s15_ms, e15_ms))
-r15 = dict(cur_anki.fetchall())
-again15_c = r15.get(1, 0)
-hard15_c = r15.get(2, 0)
-good15_c = r15.get(3, 0)
-easy15_c = r15.get(4, 0)
-again15_pct = round((again15_c / t15_cnt * 100), 2) if t15_cnt else 0.0
+voca15_cnt, voca15_tms, voca15_dist = cur_anki.fetchone()
+voca15_sec = (voca15_tms or 0) / 1000.0
+voca15_min = voca15_sec / 60.0
+voca15_sec_per_card = round(voca15_sec / voca15_cnt, 2) if voca15_cnt else 0
 
-# Types
+cur_anki.execute('''
+    SELECT r.ease, count(*)
+    FROM revlog r
+    JOIN cards c ON r.cid = c.id
+    JOIN decks d ON c.did = d.id
+    WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%한끝 Voca%'
+    GROUP BY r.ease
+''', (s15_ms, e15_ms))
+r15_voca = dict(cur_anki.fetchall())
+again15_c = r15_voca.get(1, 0)
+hard15_c = r15_voca.get(2, 0)
+good15_c = r15_voca.get(3, 0)
+easy15_c = r15_voca.get(4, 0)
+again15_pct = round((again15_c / voca15_cnt * 100), 2) if voca15_cnt else 0.0
+
+# Reading deck stats
+cur_anki.execute('''
+    SELECT count(*), sum(r.time), count(distinct r.cid)
+    FROM revlog r
+    JOIN cards c ON r.cid = c.id
+    JOIN decks d ON c.did = d.id
+    WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%독해・기사・모의고사%'
+''', (s15_ms, e15_ms))
+read15_row = cur_anki.fetchone()
+read15_cnt = read15_row[0] or 0
+read15_sec = (read15_row[1] or 0) / 1000.0
+read15_min = read15_sec / 60.0
+read15_dist = read15_row[2] or 0
+
+# Types (overall)
 cur_anki.execute('''
     SELECT type, count(*)
     FROM revlog
@@ -283,10 +309,20 @@ cur_anki.execute('''
     GROUP BY type
 ''', (s15_ms, e15_ms))
 type15_map = dict(cur_anki.fetchall())
-learn15_revs = type15_map.get(0, 0) + type15_map.get(2, 0) # 214 relearn
-revs15_done = type15_map.get(1, 0) + type15_map.get(3, 0)  # 271 review
+learn15_revs = type15_map.get(0, 0) # 343
+revs15_done = type15_map.get(1, 0)  # 273
+relearn15_revs = type15_map.get(2, 0) # 221
 
-# Decks
+# First time cards exposed
+cur_anki.execute('''
+    SELECT count(distinct r.cid)
+    FROM revlog r
+    WHERE r.id >= ? AND r.id < ?
+      AND r.cid NOT IN (SELECT cid FROM revlog WHERE id < ?)
+''', (s15_ms, e15_ms, s15_ms))
+first15_cards = cur_anki.fetchone()[0] or 0
+
+# Decks breakdown
 cur_anki.execute('''
     SELECT c.did, count(*), count(distinct c.id), sum(r.time)
     FROM revlog r
@@ -316,7 +352,7 @@ cur_db.execute('SELECT id FROM study_intervals WHERE session_date = ? AND source
 existing15_anki = cur_db.fetchone()
 anki15_note = (
     f"[2026-10-15 Anki 회독 세션] {int(t15_sec//60)}분 {round(t15_sec%60, 2)}초 "
-    f"(한끝 Voca 전범위 집중 회독: 총 {t15_cnt:,}회 실측, "
+    f"(한끝 Voca 및 N2 독해어휘 회독: 총 {t15_cnt:,}회 실측, "
     f"고유 카드 {t15_dist}장, {min15_dt.strftime('%H:%M')}~{max15_dt.strftime('%H:%M')} KST)"
 )
 
@@ -357,11 +393,12 @@ rem15_sec = round(total15_sec % 60, 2)
 
 session15_summary = (
     f"[{d15_str}] 당일 현재 누적 순수 학습시간 {whole15_mins}분 {rem15_sec}초 (약 {whole15_mins//60}시간 {whole15_mins%60}분 / {round(total15_sec/60.0, 2)}분, 진행 중). "
-    f"1) ★Anki 집중 회독 세션 {t15_cnt:,}회 실측 ({int(t15_sec//60)}분 {round(t15_sec%60, 2)}초 / {t15_sec:.2f}초, {min15_dt.strftime('%H:%M')}~{max15_dt.strftime('%H:%M')} KST 완수, 고유 카드 {t15_dist}장, 카드당 {t15_sec_per_card}초)★: "
-    f"[전체 덱 실측: {round(t15_min, 1)}분, 전량 한끝 Voca 덱] "
+    f"1) ★Anki 회독 세션 {t15_cnt:,}회 실측 ({int(t15_sec//60)}분 {round(t15_sec%60, 2)}초 / {t15_sec:.2f}초, {min15_dt.strftime('%H:%M')}~{max15_dt.strftime('%H:%M')} KST 완수, 고유 카드 {t15_dist}장)★: "
+    f"[시간 공통 반영: 총 {round(t15_min, 1)}분] [정확도·반응 지표: 한끝 Voca 기준] {voca15_cnt:,}회({round(voca15_min, 1)}분, 고유 카드 {voca15_dist}장, 카드당 {voca15_sec_per_card}초) ➔ "
+    f"Again {again15_c:,} ({again15_pct}%), Hard {hard15_c} ({round(hard15_c/voca15_cnt*100, 2)}%), "
+    f"Good {good15_c} ({round(good15_c/voca15_cnt*100, 2)}%), Easy {easy15_c} ({round(easy15_c/voca15_cnt*100, 2)}%). "
+    f"신규 단어장 암기 ➔ 독해 어휘 352회(61.0분, 44장 집중 회독). "
     f"주요 덱: {', '.join(deck15_lines[:6])}. "
-    f"학습 반응: Again {again15_c:,} ({again15_pct}%), Hard {hard15_c} ({round(hard15_c/t15_cnt*100, 2)}%), "
-    f"Good {good15_c} ({round(good15_c/t15_cnt*100, 2)}%), Easy {easy15_c} ({round(easy15_c/t15_cnt*100, 2)}%). "
     f"잔여 큐: new {new_rem:,}장, learning {learn_rem:,}장, review {rev_rem:,}장 (총 {new_rem+learn_rem+rev_rem:,}장). "
     f"잔여 {rem15_sec}초 보존."
 )
@@ -378,11 +415,11 @@ cur_db.execute('''
 payload15 = {
     'schema': 'daily_summary_v1',
     'scope': 'all_decks_time_voca_ratings',
-    'scopeLabel': '전체 덱 (시간 공통 / 한끝 Voca 전량)',
-    'answeredCards': t15_cnt,
+    'scopeLabel': '전체 덱 (시간 공통 / 정확도: 한끝 Voca 기준)',
+    'answeredCards': voca15_cnt,
     'totalAnsweredCardsAllDecks': t15_cnt,
     'studyMinutes': round(t15_min, 2),
-    'secondsPerCard': t15_sec_per_card,
+    'secondsPerCard': voca15_sec_per_card,
     'againCount': again15_c,
     'againPct': again15_pct,
     'learningReviews': learn15_revs,
@@ -397,6 +434,8 @@ payload15 = {
         'totalReviews': t15_cnt,
         'totalStudyMinutes': round(t15_min, 2),
         'distinctCards': t15_dist,
+        'readingVocabReviews': read15_cnt,
+        'readingVocabMinutes': round(read15_min, 2),
     },
     'cardsRemaining': {
         'new': new_rem,
@@ -406,7 +445,7 @@ payload15 = {
     'decks': deck15_breakdown,
     'studyDay': d15_str,
     'ankiResourceStudyDayRaw': d15_str,
-    'sourceNote': f"Anki revlog 2026-10-15 실측치 (전체 덱: {t15_cnt:,}회 {round(t15_min, 2)}분 / 정확도: 한끝 Voca 전량 {again15_pct}% Again).",
+    'sourceNote': f"Anki revlog 2026-10-15 실측치 (시간 공통: {t15_cnt:,}회 {round(t15_min, 2)}분 / 정확도: 한끝 Voca {voca15_cnt:,}회 {again15_pct}% Again).",
     'inventory': {
         'n3_unseen': 0,
         'n2_unseen': 0,
@@ -415,7 +454,7 @@ payload15 = {
         'grammar_new_today': 0,
         'grammar_reviewed_today': 0,
         'grammar_unseen': 0,
-        'new_cards_exposed_today': 0
+        'new_cards_exposed_today': first15_cards
     }
 }
 
@@ -428,7 +467,7 @@ cur_db.execute('''
         source_filename = excluded.source_filename,
         captured_at = CURRENT_TIMESTAMP,
         updated_at = CURRENT_TIMESTAMP
-''', (d15_str, '전체 덱 (시간 공통 / 한끝 Voca 전량)', json.dumps(payload15, ensure_ascii=False), f'Anki revlog snapshot {d15_str}'))
+''', (d15_str, '전체 덱 (시간 공통 / 정확도: 한끝 Voca 기준)', json.dumps(payload15, ensure_ascii=False), f'Anki revlog snapshot {d15_str}'))
 
 con_db.commit()
 
@@ -440,14 +479,10 @@ con_db.close()
 con_anki.close()
 
 print("=" * 60)
-print("[2026-10-14 Reconciled Final]")
-print(f"  - Anki: {t14_cnt:,} reviews, {t14_sec:.2f}s ({round(t14_min, 1)}m), {t14_dist} distinct cards")
-print(f"  - Quizzes: {len(q14_summaries)} sessions, {q14_sec}s ({q14_sec//60}m {q14_sec%60}s)")
-print(f"  - Total: {whole14_mins}m {rem14_sec}s (DB verified_minutes={whole14_mins})")
-print("-" * 60)
-print("[2026-10-15 Recorded Successfully]")
+print("[2026-10-15 Updated Successfully]")
 print(f"  - Anki: {t15_cnt:,} reviews, {t15_sec:.2f}s ({round(t15_min, 2)}m / {int(t15_sec//60)}m {round(t15_sec%60, 2)}s, {min15_dt.strftime('%H:%M')}~{max15_dt.strftime('%H:%M')} KST)")
 print(f"  - DB verified_minutes: {whole15_mins}m (rem: {rem15_sec}s)")
-print(f"  - Ratings: Again {again15_c} ({again15_pct}%), Hard {hard15_c}, Good {good15_c}, Easy {easy15_c}")
+print(f"  - Voca ratings: Again {again15_c} ({again15_pct}%), Hard {hard15_c}, Good {good15_c}, Easy {easy15_c}")
+print(f"  - Reading deck: {read15_cnt} reviews, {read15_min:.1f}m, {read15_dist} cards")
 print(f"  - Decks: {deck15_lines}")
 print("=" * 60)
