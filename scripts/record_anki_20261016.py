@@ -416,6 +416,22 @@ total16_sec = t16_sec + q16_sec
 whole16_mins = int(total16_sec // 60)
 rem16_sec = round(total16_sec % 60, 2)
 
+q16_summaries = []
+for src, dur, note in int16:
+    if src != 'anki':
+        m = dur // 60
+        s = dur % 60
+        t_str = f"{m}분 {s}초" if m > 0 else f"{s}초"
+        q16_summaries.append(f"{note.split(']')[0].replace('[', '')}: {t_str}")
+
+cur_db.execute('SELECT count(*), sum(total_items), sum(correct_items) FROM tests WHERE test_date = ?', (d16_str,))
+q16_test_cnt, q16_tot_items, q16_cor_items = cur_db.fetchone()
+
+q16_part_str = ""
+if q16_summaries:
+    acc_pct = round(q16_cor_items / q16_tot_items * 100, 1) if q16_tot_items else 0
+    q16_part_str = f" 2) ★실전 훈련 {len(q16_summaries)}세션 실측 ({q16_sec//60}분 {q16_sec%60}초 / {q16_sec}초, {q16_cor_items}/{q16_tot_items} 정답, {acc_pct}%)★: " + ", ".join(q16_summaries) + "."
+
 session16_summary = (
     f"[{d16_str}] 당일 현재 누적 순수 학습시간 {whole16_mins}분 {rem16_sec}초 (약 {whole16_mins//60}시간 {whole16_mins%60}분 / {round(total16_sec/60.0, 2)}분, 진행 중). "
     f"1) ★Anki 회독 세션 {t16_cnt:,}회 실측 ({int(t16_sec//60)}분 {round(t16_sec%60, 2)}초 / {t16_sec:.2f}초, {min16_dt.strftime('%H:%M')}~{max16_dt.strftime('%H:%M')} KST 완수, 고유 카드 {t16_dist}장)★: "
@@ -423,6 +439,7 @@ session16_summary = (
     f"Again {again16_c:,} ({again16_pct}%), Hard {hard16_c} ({round(hard16_c/voca16_cnt*100, 2)}%), "
     f"Good {good16_c} ({round(good16_c/voca16_cnt*100, 2)}%), Easy {easy16_c} ({round(easy16_c/voca16_cnt*100, 2)}%). "
     f"주요 덱: {', '.join(deck16_lines[:6])}. "
+    f"{q16_part_str} "
     f"잔여 큐: new {new_rem:,}장, learning {learn_rem:,}장, review {rev_rem:,}장 (총 {new_rem+learn_rem+rev_rem:,}장). "
     f"잔여 {rem16_sec}초 보존."
 )
