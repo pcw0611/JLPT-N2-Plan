@@ -6,7 +6,7 @@ import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const getDaysDiff = (targetDate: string) => Math.ceil((Date.parse(targetDate + 'T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000);
 const examDaysLeft = () => Math.max(0, getDaysDiff('2026-12-06'));
-const nextMockDaysLeft = () => Math.max(0, getDaysDiff('2026-10-18'));
+const nextMockDaysLeft = () => Math.max(0, getDaysDiff('2026-10-22'));
 
 const dateLabel = (date: string) => {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
@@ -37,7 +37,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     title: '第2回 N2 実戦模擬試験 (完了)',
     desc: '2023年12月 JLPT N2 過去問完本 102問完走 · 92/180点 (51/102問, 50.0%) 全領域足切り0件＆合格ライン突破！'
   },
-  '2026-10-18': {
+  '2026-10-22': {
     badge: '3次予定',
     type: 'upcoming-mock',
     title: '第3回 N2 実戦模擬試験 (2023年7月 過去問完本)',
@@ -158,11 +158,11 @@ export default function Home() {
           <button
             type="button"
             className="exam-chip chip-mock"
-            onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
-            title="10月18日(日) 第3回実戦模試 (カレンダーで表示)"
+            onClick={() => { setSelectedDate('2026-10-22'); setVisibleMonth('2026-10'); }}
+            title="10月22日(木) 第3回実戦模試 (カレンダーで表示)"
           >
             <span className="chip-dot pulse-amber" />
-            <span className="chip-title">10/18 第3回模試</span>
+            <span className="chip-title">10/22 第3回模試</span>
             <strong className="chip-dday">D-{mockDays}</strong>
           </button>
           <button
@@ -348,11 +348,11 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-10-18' ? 'active' : ''}`}
-                onClick={() => { setSelectedDate('2026-10-18'); setVisibleMonth('2026-10'); }}
+                className={`milestone-item is-upcoming ${selectedDate === '2026-10-22' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-10-22'); setVisibleMonth('2026-10'); }}
               >
-                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-10-18'))}</div>
-                <div className="ms-date">10/18 (日)</div>
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-10-22'))}</div>
+                <div className="ms-date">10/22 (木)</div>
                 <div className="ms-info">
                   <strong>第3回 N2 実戦模試 (2023.07)</strong>
                   <p>104問 全領域実戦 · 単語/文法成果検証 (目標 105点+)</p>
