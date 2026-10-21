@@ -19,7 +19,8 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>何度<rt>なんど</rt></ruby>も<ruby>話し合<rt>はなしあ</rt></ruby>ったあげく、<ruby>計画<rt>けいかく</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になった。"
   },
@@ -37,13 +38,14 @@
     "target_ko": "긴장한 나머지",
     "diff_point": "단순한 이유가 아니라 정도가 지나쳤다는 느낌이 있다.",
     "exam_signal": "앞부분이 강한 감정·과도한 정도인지 본다.",
-    "conn_anchor": "の",
-    "conn_type": "조사 「の」",
-    "conn_hint": "앞 단어 뒤에 명사 수식 조사 「の」가 붙어 문형과 결합합니다!",
+    "conn_anchor": "緊張の",
+    "conn_type": "명사 + 조사 「の」",
+    "conn_hint": "명사 「緊張」에 조사 「の」가 붙은 형태로 결합합니다!",
     "conn_badge": "명사+の",
     "conn_strict": false,
     "conn_chips": [
-      "★ 명사 + の"
+      "명사 + の",
+      "동사 보통형 / 사전형"
     ],
     "sentence_ja_ruby": "<ruby>緊張<rt>きんちょう</rt></ruby>のあまり、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>名前<rt>なまえ</rt></ruby>さえ<ruby>言<rt>い</rt></ruby>えなかった。"
   },
@@ -91,7 +93,8 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>契約内容<rt>けいやくないよう</rt></ruby>を<ruby>確認<rt>かくにん</rt></ruby>したうえで、<ruby>署名<rt>しょめい</rt></ruby>してください。"
   },
@@ -115,7 +118,9 @@
     "conn_badge": "이형용사",
     "conn_strict": false,
     "conn_chips": [
-      "명사 + である"
+      "동사/い형 보통형",
+      "な형 + な/である",
+      "명사 + の/である"
     ],
     "sentence_ja_ruby": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>いうえに、<ruby>駅<rt>えき</rt></ruby>からも<ruby>近<rt>ちか</rt></ruby>い。"
   },
@@ -163,7 +168,9 @@
     "conn_badge": "ない형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 사전형/ない형",
+      "い형 / な형 + な",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>忘<rt>わす</rt></ruby>れないうちに、<ruby>重要<rt>じゅうよう</rt></ruby>な<ruby>点<rt>てん</rt></ruby>をメモしておこう。"
   },
@@ -235,7 +242,8 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>したかいがあって、<ruby>試合<rt>しあい</rt></ruby>に<ruby>勝<rt>か</rt></ruby>つことができた。"
   },
@@ -259,6 +267,9 @@
     "conn_badge": "나형용사",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형/ない형",
+      "い형",
+      "な형 + な/である",
       "명사 + である"
     ],
     "sentence_ja_ruby": "<ruby>体<rt>からだ</rt></ruby>が<ruby>元気<rt>げんき</rt></ruby>なかぎり、この<ruby>仕事<rt>しごと</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けたい。"
@@ -350,12 +361,13 @@
     "diff_point": "〜とは限らない은 일반적 예외, 이 문형은 질문처럼 판단을 제시하고 직접 답한다.",
     "exam_signal": "뒤의 そうではない・必ずしも〜ない를 찾는다.",
     "conn_anchor": "嫌い",
-    "conn_type": "이형용사(イA) 기본형",
-    "conn_hint": "앞 단어 「嫌い」가 이형용사 기본형이므로 결합합니다!",
-    "conn_badge": "이형용사",
+    "conn_type": "나형용사(ナA) 어간",
+    "conn_hint": "앞 단어 「嫌い」가 な형용사(형용동사) 어간이므로 결합합니다!",
+    "conn_badge": "나형용사 어간",
     "conn_strict": false,
     "conn_chips": [
-      "이형용사"
+      "동사/い형 보통형",
+      "な형 어간 / 명사"
     ],
     "sentence_ja_ruby": "<ruby>甘<rt>あま</rt></ruby>い<ruby>物<rt>もの</rt></ruby>が<ruby>嫌<rt>きら</rt></ruby>いかというと、そういうわけではない。"
   },
@@ -421,7 +433,7 @@
     "target_ko": "걸쳐",
     "diff_point": "〜から〜まで보다 경계가 흐리고 범위 전체에 걸친 현상을 나타낸다.",
     "exam_signal": "시간·지역 두 끝점과 광범위한 현상을 찾는다.",
-    "conn_anchor": "朝",
+    "conn_anchor": "明日の朝",
     "conn_type": "명사(名詞) 직결",
     "conn_hint": "앞 단어 「朝」가 명사이므로 문형과 직접 결합합니다!",
     "conn_badge": "명사",
@@ -445,7 +457,7 @@
     "target_ko": "면에서 보면",
     "diff_point": "〜からすると는 관찰된 근거에서 추측할 때 자주 쓴다.",
     "exam_signal": "観点・立場・面이 나오면 이 문형을 우선 검토한다.",
-    "conn_anchor": "面",
+    "conn_anchor": "費用の面",
     "conn_type": "명사(名詞) 직결",
     "conn_hint": "앞 단어 「面」가 명사이므로 문형과 직접 결합합니다!",
     "conn_badge": "명사",
@@ -523,7 +535,8 @@
     "conn_badge": "이형용사",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "な형/명사 + だ"
     ],
     "sentence_ja_ruby": "<ruby>安<rt>やす</rt></ruby>いからといって、<ruby>必要<rt>ひつよう</rt></ruby>のない<ruby>物<rt>もの</rt></ruby>まで<ruby>買<rt>か</rt></ruby>うべきではない。"
   },
@@ -643,7 +656,9 @@
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "な형 + な",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>知<rt>し</rt></ruby>っているくせに、<ruby>何<rt>なに</rt></ruby>も<ruby>教<rt>おし</rt></ruby>えてくれなかった。"
   },
@@ -686,9 +701,9 @@
     "diff_point": "",
     "exam_signal": "질문인가, 강한 감탄인가?",
     "conn_anchor": "うれしかった",
-    "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「った」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "이형용사",
+    "conn_type": "이형용사(イA) 과거형(た형)",
+    "conn_hint": "앞 단어 「うれしかった」가 い형용사의 과거형이므로 감탄조사 ことか와 결합합니다!",
+    "conn_badge": "이형용사 과거형",
     "conn_strict": false,
     "conn_chips": [
       "이형용사"
@@ -733,13 +748,13 @@
     "target_ko": "니까",
     "diff_point": "",
     "exam_signal": "앞의 인물을 평소부터 잘 안다는 전제가 있는가?",
-    "conn_anchor": "の",
-    "conn_type": "조사 「の」",
-    "conn_hint": "앞 단어 뒤에 명사 수식 조사 「の」가 붙어 문형과 결합합니다!",
+    "conn_anchor": "田中さんの",
+    "conn_type": "인물 명사 + 조사 「の」",
+    "conn_hint": "인물 명사 「田中さん」에 조사 「の」가 붙은 형태로 전형적 성향을 나타냅니다!",
     "conn_badge": "명사+の",
     "conn_strict": false,
     "conn_chips": [
-      "★ 명사 + の"
+      "🔒 인물 명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>責任感<rt>せきにんかん</rt></ruby>の<ruby>強<rt>つよ</rt></ruby>い<ruby>田中<rt>たなか</rt></ruby>さんのことだから、<ruby>最後<rt>さいご</rt></ruby>までやるだろう。"
   },
@@ -854,12 +869,13 @@
     "diff_point": "〜間に보다 진행의 한가운데라는 느낌이 강하다.",
     "exam_signal": "진행 중인 행동을 방해한 사건인지 확인한다.",
     "conn_anchor": "している",
-    "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「している」가 사전형(기본형)이므로 결합합니다!",
+    "conn_type": "동사 ている형(진행형)",
+    "conn_hint": "앞 단어 「している」가 동사 진행형(ている)이므로 동작의 한창을 나타냅니다!",
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 ている형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>会議<rt>かいぎ</rt></ruby>をしている<ruby>最中<rt>さいちゅう</rt></ruby>に、<ruby>地震<rt>じしん</rt></ruby>が<ruby>起<rt>お</rt></ruby>きた。"
   },
@@ -926,9 +942,9 @@
     "diff_point": "〜しかない보다 마지못함·불가피함이 강하고 격식 있다.",
     "exam_signal": "부정형 어간과 する→せざる를 확인한다.",
     "conn_anchor": "使わ",
-    "conn_type": "Vない형(아단 어간)",
-    "conn_hint": "동사 「使う」의 아단(ない형) 어간 「使わ」 뒤에 「ざるを得ない」가 결합합니다!",
-    "conn_badge": "ない형",
+    "conn_type": "Vない형 어간(미연형)",
+    "conn_hint": "동사 ない형(使わない)에서 「ない」를 뺀 어간(使わ)에 결합합니다!",
+    "conn_badge": "ない형 어간",
     "conn_strict": false,
     "conn_chips": [
       "ない형"
@@ -1027,7 +1043,8 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>何度<rt>なんど</rt></ruby>も<ruby>話し合<rt>はなしあ</rt></ruby>った<ruby>末<rt>まつ</rt></ruby>、<ruby>計画<rt>けいかく</rt></ruby>を<ruby>延期<rt>えんき</rt></ruby>することにした。"
   },
@@ -1046,9 +1063,9 @@
     "diff_point": "〜ないで와 비슷하지만 〜ずに가 더 문어적이다.",
     "exam_signal": "두 행동 중 앞의 행동을 하지 않았는지 본다.",
     "conn_anchor": "食べ",
-    "conn_type": "Vない형(1단 어간)",
-    "conn_hint": "동사 「食べる」의 ない형 어간 「食べ」 뒤에 「ずに(~하지 않고)」가 결합합니다!",
-    "conn_badge": "ない형",
+    "conn_type": "Vない형 어간(미연형)",
+    "conn_hint": "동사 ない형(食べない)에서 「ない」를 뺀 어간(食べ)에 결합합니다!",
+    "conn_badge": "ない형 어간",
     "conn_strict": false,
     "conn_chips": [
       "ない형"
@@ -1070,9 +1087,9 @@
     "diff_point": "〜なくてもいい는 단순한 불필요, 〜ずに済む는 결과적으로 피했음을 강조한다.",
     "exam_signal": "예상한 부담이나 나쁜 일을 피하고 끝났는지 본다.",
     "conn_anchor": "行か",
-    "conn_type": "Vない형(아단 어간)",
-    "conn_hint": "동사 「行く」의 아단(ない형) 어간 「行か」 뒤에 「ずに済んだ」가 결합합니다!",
-    "conn_badge": "ない형",
+    "conn_type": "Vない형 어간(미연형)",
+    "conn_hint": "동사 ない형(行かない)에서 「ない」를 뺀 어간(行か)에 결합합니다!",
+    "conn_badge": "ない형 어간",
     "conn_strict": false,
     "conn_chips": [
       "ない형"
@@ -1094,9 +1111,9 @@
     "diff_point": "〜ざるを得ない는 외부 상황의 강제, 이것은 내적 감정·충동이다.",
     "exam_signal": "외부 의무가 아니라 감정상 참을 수 없는지 본다.",
     "conn_anchor": "笑わ",
-    "conn_type": "Vない형(아단 어간)",
-    "conn_hint": "동사 「笑う」의 아단(ない형) 어간 「笑わ」 뒤에 「ず에는いられなかった」가 결합합니다!",
-    "conn_badge": "ない형",
+    "conn_type": "Vない형 어간(미연형)",
+    "conn_hint": "동사 ない형(笑わない)에서 「ない」를 뺀 어간(笑わ)에 결합합니다!",
+    "conn_badge": "ない형 어간",
     "conn_strict": false,
     "conn_chips": [
       "ない형"
@@ -1117,9 +1134,9 @@
     "target_ko": "같지 않다",
     "diff_point": "〜そうもない・〜そうにもない도 가능성이 매우 낮다는 뜻으로 쓰인다.",
     "exam_signal": "현재 정황에 근거한 부정적 전망인지 확인한다.",
-    "conn_anchor": "くやみ",
+    "conn_anchor": "やみ",
     "conn_type": "Vます형(연용형 어간)",
-    "conn_hint": "앞 단어 「くやみ」가 동사 마스형(ます語幹) 어간이므로 결합합니다!",
+    "conn_hint": "동사 やむ(그치다)의 마스형 어간 「やみ」에 결합합니다!",
     "conn_badge": "ます형",
     "conn_strict": true,
     "conn_chips": [
@@ -1165,13 +1182,13 @@
     "target_ko": "그 나름의",
     "diff_point": "それ相応の는 기준에 걸맞음을 더 객관적·격식 있게 나타낸다.",
     "exam_signal": "앞의 수준이나 조건에 알맞은 정도를 말하는지 본다.",
-    "conn_anchor": "少なくても、",
-    "conn_type": "문맥 수식 결합",
-    "conn_hint": "역접 접속 뒤에서 뒤의 명사 「方法」를 수식하여 「그 나름의 방법」으로 이어집니다!",
-    "conn_badge": "명사",
+    "conn_anchor": "",
+    "conn_type": "명사 수식 구문 (それなりの ＋ N)",
+    "conn_hint": "「それなりの」는 뒤에 오는 명사(方法)를 수식하는 표현입니다!",
+    "conn_badge": "",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "🔒 명사 수식 (それなりの ＋ N)"
     ],
     "sentence_ja_ruby": "<ruby>経験<rt>けいけん</rt></ruby>が<ruby>少<rt>すく</rt></ruby>なくても、それなりの<ruby>方法<rt>ほうほう</rt></ruby>で<ruby>工夫<rt>くふう</rt></ruby>できる。"
   },
@@ -1195,6 +1212,7 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 た형",
       "명사 + である"
     ],
     "sentence_ja_ruby": "<ruby>約束<rt>やくそく</rt></ruby>した<ruby>以上<rt>いじょう</rt></ruby>は、<ruby>最後<rt>さいご</rt></ruby>まで<ruby>責任<rt>せきにん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つべきだ。"
@@ -1215,11 +1233,13 @@
     "exam_signal": "さすが・やはり 등 칭찬 부사가 보이면 だけあって, 기대/걱정 뒤 감정 고조는 だけに를 확인한다.",
     "conn_anchor": "作った",
     "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「作った」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "앞 단어 「作った」가 동사 과거형(た형)이므로 결합합니다!",
+    "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 + である"
+      "동사 보통형/た형",
+      "い형 보통형",
+      "나형/명사 + な/である"
     ],
     "sentence_ja_ruby": "さすがに<ruby>一流<rt>いちりゅう</rt></ruby>の<ruby>料理人<rt>りょうりにん</rt></ruby>が<ruby>作<rt>つく</rt></ruby>っただけあって、<ruby>味<rt>あじ</rt></ruby>も<ruby>見た目<rt>みため</rt></ruby>も<ruby>素晴<rt>すば</rt></ruby>らしい。"
   },
@@ -1287,11 +1307,11 @@
     "exam_signal": "시간이 다소 흘렀더라도 화자의 심리상 '얼마 안 됨'을 강조하는지 본다.",
     "conn_anchor": "食べた",
     "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「食べた」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_hint": "앞 단어 「食べた」가 동사 과거형(た형)이므로 직후 완료를 나타냅니다!",
+    "conn_badge": "た형",
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 た형 전용"
     ],
     "sentence_ja_ruby": "さっき<ruby>昼<rt>ひる</rt></ruby>ご<ruby>飯<rt>めし</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたばかりなのに、もうお<ruby>腹<rt>はら</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いた。"
   },
@@ -1315,7 +1335,8 @@
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 사전형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "この<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>るたびに、<ruby>故郷<rt>こきょう</rt></ruby>の<ruby>家族<rt>かぞく</rt></ruby>を<ruby>思い出<rt>おもいだ</rt></ruby>す。"
   },
@@ -1358,12 +1379,13 @@
     "diff_point": "ついでに는 주(본래 일)+부(곁가지 일), がてら/かねて는 이동을 수반하며 두 목적을 겸함. 접속(散歩がてら) 주의.",
     "exam_signal": "이동 중에 가볍게 처리하는 일인지, 주된 행동에 덤으로 하는지 접속 형태를 함께 본다.",
     "conn_anchor": "行く",
-    "conn_type": "Vます형(연용형 어간)",
-    "conn_hint": "앞 단어 「行く」가 동사 마스형(ます語幹) 어간이므로 바로 결합합니다!",
-    "conn_badge": "명사+の",
+    "conn_type": "V사전형(기본형)",
+    "conn_hint": "앞 단어 「行く」가 동사 사전형이므로 결합합니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "★ 명사 + の"
+      "동사 사전형 / た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>郵便局<rt>ゆうびんきょく</rt></ruby>へ<ruby>行<rt>い</rt></ruby>くついでに、コンビニで<ruby>公共<rt>こうきょう</rt></ruby><ruby>料金<rt>りょうきん</rt></ruby>を<ruby>払<rt>はら</rt></ruby>ってきた。"
   },
@@ -1381,10 +1403,10 @@
     "target_ko": "였더라",
     "diff_point": "반말 구어체이며 이미 알았지만 기억이 가물가물할 때 쓴다. 격식 있는 자리에서는 쓰지 않는다.",
     "exam_signal": "과거형 だ／た 뒤에 가볍게 되묻는 구어 대화문에서 자주 출제된다.",
-    "conn_anchor": "時から",
+    "conn_anchor": "何時から",
     "conn_type": "명사+조사 결합",
-    "conn_hint": "명사구 「何時から」 뒤에 회상·확인의 구어 표현 「だっけ」가 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "「何時から」처럼 명사+조사 뒤에 과거 확인 「だっけ」가 결합합니다!",
+    "conn_badge": "명사+조사",
     "conn_strict": false,
     "conn_chips": [
       "명사"
@@ -1406,12 +1428,12 @@
     "diff_point": "〜わけがない・〜はずがない보다 화자의 주관적 확신과 단정이 강한 구어체.",
     "exam_signal": "가능형 ます어간(解けっこない, 間に合いっこない)과 결합하여 절대 불가능을 나타내는지 본다.",
     "conn_anchor": "解け",
-    "conn_type": "Vます형(연용형 어간)",
-    "conn_hint": "앞 단어 「解け」가 동사 마스형(ます語幹) 어간이므로 바로 결합합니다!",
-    "conn_badge": "가능형",
-    "conn_strict": false,
+    "conn_type": "가능동사 ます형 어간",
+    "conn_hint": "가능동사 解ける(풀 수 있다)의 마스형 어간 「解け」에 결합합니다!",
+    "conn_badge": "ます형",
+    "conn_strict": true,
     "conn_chips": [
-      "가능형"
+      "🔒 동사 ます형 전용 (주로 가능동사ます형)"
     ],
     "sentence_ja_ruby": "こんなに<ruby>難<rt>むずか</rt></ruby>しい<ruby>問題<rt>もんだい</rt></ruby>、<ruby>子<rt>こ</rt></ruby>どもに<ruby>解<rt>と</rt></ruby>けっこない。"
   },
@@ -1455,11 +1477,12 @@
     "exam_signal": "死んだつもりで, 旅行に行ったつもりで 등 '대리 가정/다짐' 문맥을 확인한다.",
     "conn_anchor": "死んだ",
     "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「死んだ」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "사전형",
+    "conn_hint": "앞 단어 「死んだ」가 동사 た형이므로 '~셈 치고'의 의미로 결합합니다!",
+    "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 사전형 / た형",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>死<rt>し</rt></ruby>んだつもりで<ruby>必死<rt>ひっし</rt></ruby>に<ruby>勉強<rt>べんきょう</rt></ruby>すれば、きっと<ruby>合格<rt>ごうかく</rt></ruby>できる。"
   },
@@ -1477,13 +1500,14 @@
     "target_ko": "다면",
     "diff_point": "〜なら의 딱딱하고 공손한 격식체 표현. 비즈니스 경어와 자주 호응한다.",
     "exam_signal": "ご都合, ご希望, よろしい 등 정중/공식 표현과 함께 제시되는지 확인한다.",
-    "conn_anchor": "ろしい",
+    "conn_anchor": "よろしい",
     "conn_type": "이형용사(イA) 기본형",
-    "conn_hint": "앞 단어 「ろしい」가 이형용사 기본형이므로 결합합니다!",
+    "conn_hint": "앞 단어 「よろしい」가 い형용사이므로 결합합니다!",
     "conn_badge": "이형용사",
     "conn_strict": false,
     "conn_chips": [
-      "명사 + である"
+      "동사/い형 보통형 + の",
+      "명사/나형 + である"
     ],
     "sentence_ja_ruby": "ご<ruby>都合<rt>つごう</rt></ruby>がよろしいのであれば、<ruby>明日<rt>あした</rt></ruby><ruby>伺<rt>うかが</rt></ruby>いたいと<ruby>存<rt>ぞん</rt></ruby>じます。"
   },
@@ -1525,13 +1549,13 @@
     "target_ko": "아니면",
     "diff_point": "뒷문장에는 반드시 부정·불가 표현(〜できない, 〜無理だ, 〜分からない)이 온다.",
     "exam_signal": "뒷문장의 〜できない, 〜わけにはいかない, 〜かねる 등 부정문과 세트 결합하는지 확인한다.",
-    "conn_anchor": "って",
+    "conn_anchor": "もらって",
     "conn_type": "Vて형(연결형)",
-    "conn_hint": "앞 동사 「って」가 て형(연결형)이므로 문형과 직결됩니다!",
+    "conn_hint": "동사 もらう의 て형 「もらって」 뒤에 결합하여 선행 조건을 나타냅니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "<ruby>上司<rt>じょうし</rt></ruby>の<ruby>許可<rt>きょか</rt></ruby>をもらってからでないと、<ruby>契約書<rt>けいやくしょ</rt></ruby>にサインはできません。"
   },
@@ -1553,9 +1577,11 @@
     "conn_type": "Vて형(연결형)",
     "conn_hint": "앞 동사 「空いて」가 て형(연결형)이므로 문형과 직결됩니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "명사 직결"
+      "🔒 동사 て형 전용",
+      "い형 + くて",
+      "나형 + で"
     ],
     "sentence_ja_ruby": "<ruby>朝<rt>あさ</rt></ruby>から<ruby>何<rt>なに</rt></ruby>も<ruby>食<rt>た</rt></ruby>べていないので、お<ruby>腹<rt>はら</rt></ruby>が<ruby>空<rt>あ</rt></ruby>いてたまらない。"
   },
@@ -1567,19 +1593,19 @@
     "connection": "Vて形＋でも",
     "core_meaning": "일반적이지 않은 수단이나 무리를 해서라도 반드시 어떤 목적을 달성하겠다는 강한 의지이다.",
     "sentence_ja": "借金をしてでも、自分の店を持ちたい。",
-    "sentence_ja_target": "てでも",
-    "sentence_ja_blank": "借金をし（　　）、自分の店を持ちたい。",
+    "sentence_ja_target": "でも",
+    "sentence_ja_blank": "借金をして（　　）、自分の店を持ちたい。",
     "sentence_ko": "빚을 져서라도 자신의 가게를 갖고 싶다.",
     "target_ko": "서라도",
     "diff_point": "뒷문장에는 화자의 강한 희망(〜たい), 의지(〜つもりだ, 〜てみせる)가 온다.",
     "exam_signal": "借金をして, 徹夜をして, 頭を下げて 등 무리·부담 표현과 〜たい의 호응을 확인한다.",
-    "conn_anchor": "し",
+    "conn_anchor": "借金をして",
     "conn_type": "Vて형(연결형)",
-    "conn_hint": "동사 「する」의 어간 「し」 뒤에 「てでも(て형＋でも)」가 결합합니다!",
+    "conn_hint": "앞 단어 「借金をして」가 동사 て형이므로 수단·강한 의지의 でも와 결합합니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "<ruby>借金<rt>しゃっきん</rt></ruby>をしてでも、<ruby>自分<rt>じぶん</rt></ruby>の<ruby>店<rt>みせ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ちたい。"
   },
@@ -1598,12 +1624,14 @@
     "diff_point": "てたまらない가 생리적 욕구/직접적 감정이라면, てならない는 자연발생 감정(心配, 不安, 気がして)에 국한된다.",
     "exam_signal": "気がしてならない, 思えてならない, 心配でならない, 不安でならない 고정 관용 결합을 확인한다.",
     "conn_anchor": "心配",
-    "conn_type": "나형용사/명사 で",
-    "conn_hint": "감정 명사/나형용사 「心配」 뒤에 「でならない(너무 ~하다)」가 결합합니다!",
-    "conn_badge": "나형용사",
+    "conn_type": "나형용사 어간 + で",
+    "conn_hint": "な형용사 어간 「心配」에 연결 조사 で가 붙어 でならない(너무 걱정된다)로 결합합니다!",
+    "conn_badge": "나형용사 어간",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사 て형",
+      "い형 + くて",
+      "나형 + で"
     ],
     "sentence_ja_ruby": "<ruby>一人<rt>ひとり</rt></ruby>で<ruby>海外<rt>かいがい</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く<ruby>娘<rt>むすめ</rt></ruby>のことが、<ruby>心配<rt>しんぱい</rt></ruby>でならない。"
   },
@@ -1615,19 +1643,19 @@
     "connection": "Vて形＋はじめて",
     "core_meaning": "어떤 계기나 경험을 겪고 나서야 비로소 이전에는 깨닫지 못했던 소중함이나 사실을 실감함을 나타낸다.",
     "sentence_ja": "病気になってはじめて、健康のありがたさが分かった。",
-    "sentence_ja_target": "てはじめて",
-    "sentence_ja_blank": "病気になっ（　　）、健康のありがたさが分かった。",
+    "sentence_ja_target": "はじめて",
+    "sentence_ja_blank": "病気になって（　　）、健康のありがたさが分かった。",
     "sentence_ko": "병에 걸리고 나서야 비로소 건강의 소중함을 알았다.",
     "target_ko": "비로소",
     "diff_point": "단순한 시작(처음으로)이 아니라 '그 일을 겪고 나서야 비로소 깨달음/실감'의 뉘앙스이다.",
     "exam_signal": "健康のありがたさ, 親の苦労, 大切さ 등 '소중함/깨달음'을 나타내는 어휘와 호응하는지 확인한다.",
-    "conn_anchor": "なっ",
-    "conn_type": "Vて형(촉음편 어간)",
-    "conn_hint": "동사 「なる」의 촉음편 어간 「なっ」 뒤에 「てはじめて」가 결합합니다!",
+    "conn_anchor": "病気になって",
+    "conn_type": "Vて형(연결형)",
+    "conn_hint": "앞 단어 「病気になって」가 동사 て형이므로 결합하여 '~하고서야 비로소'를 나타냅니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "<ruby>病気<rt>びょうき</rt></ruby>になってはじめて、<ruby>健康<rt>けんこう</rt></ruby>のありがたさが<ruby>分<rt>わ</rt></ruby>かった。"
   },
@@ -1639,19 +1667,19 @@
     "connection": "Vて形＋ばかりはいられない／てはいられない",
     "core_meaning": "언제까지나 그 상태나 행동을 계속하고 있을 여유나 처지가 되지 않음을 나타낸다.",
     "sentence_ja": "もう大人なのだから、親に甘えてばかりはいられない。",
-    "sentence_ja_target": "てばかりはいられない",
-    "sentence_ja_blank": "もう大人なのだから、親に甘え（　　）。",
+    "sentence_ja_target": "ばかりはいられない",
+    "sentence_ja_blank": "もう大人なのだから、親に甘えて（　　）。",
     "sentence_ko": "이제 성인이니 부모님께 응석 부리고만 있을 수는 없다.",
     "target_ko": "응석 부리고만 있을 수는 없다",
     "diff_point": "단순 금지(~てはならない)가 아니라 '계속 그 상태로 머무를 여유나 상황이 아니다'라는 화자의 절박함·결의를 나타낸다.",
     "exam_signal": "いつまでも, もう, 試験が近い 등 상황의 촉박함이나 반성을 촉구하는 단서와 호응하는지 확인한다.",
-    "conn_anchor": "甘え",
-    "conn_type": "Vて형 어간",
-    "conn_hint": "동사 「甘える」의 어간 「甘え」 뒤에 「てばかりはいられない」가 결합합니다!",
+    "conn_anchor": "親に甘えて",
+    "conn_type": "Vて형(연결형)",
+    "conn_hint": "앞 단어 「甘えて」가 동사 て형이므로 결합합니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "もう<ruby>大人<rt>おとな</rt></ruby>なのだから、<ruby>親<rt>おや</rt></ruby>に<ruby>甘<rt>あま</rt></ruby>えてばかりはいられない。"
   },
@@ -1663,19 +1691,19 @@
     "connection": "Vて形＋みせる",
     "core_meaning": "1) 상대방에게 강한 결의나 의지를 증명하듯 행동함, 2) 상대방이 알 수 있도록 시범·본보기를 보임을 나타낸다.",
     "sentence_ja": "今度の試合には、絶対に勝ってみせる。",
-    "sentence_ja_target": "てみせる",
-    "sentence_ja_blank": "今度の試合には、絶対に勝っ（　　）。",
+    "sentence_ja_target": "みせる",
+    "sentence_ja_blank": "今度の試合には、絶対に勝って（　　）。",
     "sentence_ko": "이번 경기에는 반드시 이겨 보이겠다.",
     "target_ko": "이겨 보이겠다",
     "diff_point": "단순한 시도(~てみる: 해보다)와 달리 화자의 굳은 결의나 남에게 본때를 보여주겠다는 강한 다짐을 담는다.",
     "exam_signal": "必ず, 絶対に, 今度こそ 등 결의 부사 뒤에 오거나 시범 동작(やってみせる) 문맥인지 확인한다.",
-    "conn_anchor": "勝っ",
-    "conn_type": "Vて형(촉음편 어간)",
-    "conn_hint": "동사 「勝つ」의 촉음편 어간 「勝っ」 뒤에 「てみせる」가 결합합니다!",
+    "conn_anchor": "勝って",
+    "conn_type": "Vて형(연결형)",
+    "conn_hint": "동사 勝つ의 て형 「勝って」에 결합하여 강한 결의를 나타냅니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "<ruby>今度<rt>こんど</rt></ruby>の<ruby>試合<rt>しあい</rt></ruby>には、<ruby>絶対<rt>ぜったい</rt></ruby>に<ruby>勝<rt>か</rt></ruby>ってみせる。"
   },
@@ -1687,19 +1715,19 @@
     "connection": "Vて形＋も始まらない",
     "core_meaning": "지금에 와서 그런 동작이나 태도를 취해 보았자 아무런 이득이나 문제 해결이 되지 않음을 비판적으로 나타낸다.",
     "sentence_ja": "済んでしまったことを、今さら後悔しても始まらない。",
-    "sentence_ja_target": "ても始まらない",
-    "sentence_ja_blank": "済んでしまったことを、今さら後悔し（　　）。",
+    "sentence_ja_target": "始まらない",
+    "sentence_ja_blank": "済んでしまったことを、今さら後悔しても（　　）。",
     "sentence_ko": "이미 지나간 일을 이제 와서 후회해 봤자 소용없다.",
     "target_ko": "후회해 봤자 소용없다",
     "diff_point": "문자 그대로 시작되지 않는다는 뜻이 아니라 '소용없다(無駄だ), 의미 없다'는 관용적 뉘앙스이다.",
     "exam_signal": "今さら, いくら〜ても, 愚痴を言っても, 後悔しても 등 후회나 불평의 대상과 함께 쓰이는지 확인한다.",
-    "conn_anchor": "後悔し",
-    "conn_type": "Vて형 어간",
-    "conn_hint": "동사 「後悔する」의 어간 뒤에 「ても始まらない」가 결합합니다!",
-    "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_anchor": "後悔しても",
+    "conn_type": "Vても형(양보 조건)",
+    "conn_hint": "동사 後悔する의 ても형 「後悔しても」에 결합하여 소용없음을 나타냅니다!",
+    "conn_badge": "ても형",
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 ても 전용"
     ],
     "sentence_ja_ruby": "<ruby>済<rt>す</rt></ruby>んでしまったことを、<ruby>今<rt>いま</rt></ruby>さら<ruby>後悔<rt>こうかい</rt></ruby>しても<ruby>始<rt>はじ</rt></ruby>まらない。"
   },
@@ -1711,19 +1739,19 @@
     "connection": "Vて形＋やまない",
     "core_meaning": "마음속에서 우러나오는 감정이나 기원이 매우 강렬하여 멈추지 않고 계속됨을 나타내는 격식 표현이다.",
     "sentence_ja": "卒業生の皆さんの今後の活躍を願ってやまない。",
-    "sentence_ja_target": "てやまない",
-    "sentence_ja_blank": "卒業生の皆さんの今後の活躍を願っ（　　）。",
+    "sentence_ja_target": "やまない",
+    "sentence_ja_blank": "卒業生の皆さんの今後の活躍を願って（　　）。",
     "sentence_ko": "졸업생 여러분의 향후 활약을 진심으로 바라 마지않는다.",
     "target_ko": "바라 마지않는다",
     "diff_point": "심리적 지속성이 높은 특정 심리 동사(祈る, 願う, 期待する, 尊敬する, 愛する 등)에 한정되어 사용된다.",
     "exam_signal": "願って, 祈って, 期待して 등 기원·희망을 나타내는 동사와의 고정적 호응을 확인한다.",
-    "conn_anchor": "願っ",
-    "conn_type": "Vて형(촉음편 어간)",
-    "conn_hint": "동사 「願う」의 촉음편 어간 「願っ」 뒤에 「てやまない」가 결합합니다!",
+    "conn_anchor": "願って",
+    "conn_type": "Vて형(연결형)",
+    "conn_hint": "동사 願う의 て형 「願って」에 결합하여 마음속 깊은 기원을 나타냅니다!",
     "conn_badge": "て형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "て형"
+      "🔒 동사 て형 전용"
     ],
     "sentence_ja_ruby": "<ruby>卒業生<rt>そつぎょうせい</rt></ruby>の<ruby>皆<rt>みな</rt></ruby>さんの<ruby>今後<rt>こんご</rt></ruby>の<ruby>活躍<rt>かつやく</rt></ruby>を<ruby>願<rt>ねが</rt></ruby>ってやまない。"
   },
@@ -1741,7 +1769,7 @@
     "target_ko": "아름다움이란",
     "diff_point": "뒤 문장에 言葉にできない, 驚いた, 大変だった 등 극단적인 감정이나 평가가 오며 구어적 강조로 쓰인다.",
     "exam_signal": "美しさ, 寒さ, 忙しさ 등 정도를 나타내는 명사 뒤에 붙어 극단적 감탄과 이어지는지 확인한다.",
-    "conn_anchor": "見た朝日の美しさ",
+    "conn_anchor": "朝日の美しさ",
     "conn_type": "명사(名詞) 직결",
     "conn_hint": "앞 단어 「見た朝日の美しさ」가 명사이므로 문형과 직접 결합합니다!",
     "conn_badge": "명사",
@@ -1765,13 +1793,14 @@
     "target_ko": "할 수 있다고는 하지만",
     "diff_point": "앞 절의 일반적인 기대나 이미지와 달리 현실은 소박하거나 한정된 범위에 그침을 나타낸다.",
     "exam_signal": "程度だ, だけだ, 少しだけ 등 뒤 절에 범위 한정이나 소극적 평가가 오는지 확인한다.",
-    "conn_anchor": "きる",
+    "conn_anchor": "できる",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「きる」가 사전형(기본형)이므로 결합합니다!",
+    "conn_hint": "동사 できる의 사전형에 결합합니다!",
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "나형/명사 보통형"
     ],
     "sentence_ja_ruby": "<ruby>料理<rt>りょうり</rt></ruby>ができるといっても、<ruby>簡単<rt>かんたん</rt></ruby>な<ruby>卵焼<rt>たまごや</rt></ruby>きを<ruby>作<rt>つく</rt></ruby>る<ruby>程度<rt>ていど</rt></ruby>だ。"
   },
@@ -1791,11 +1820,12 @@
     "exam_signal": "思った, 予想, 計画, 説明書, 指示 등 기준이나 사전 구상 단어와의 일치를 확인한다.",
     "conn_anchor": "書いてある",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「書いてある」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사+の",
+    "conn_hint": "보조동사 ある의 사전형에 결합합니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "★ 명사 + の"
+      "동사 사전형 / た형",
+      "명사 + の / どおり"
     ],
     "sentence_ja_ruby": "<ruby>説明書<rt>せつめいしょ</rt></ruby>に<ruby>書<rt>か</rt></ruby>いてあるとおりに、<ruby>機械<rt>きかい</rt></ruby>を<ruby>組み立<rt>くみた</rt></ruby>ててください。"
   },
@@ -1807,19 +1837,19 @@
     "connection": "V의지형(よう形) ＋ と思う",
     "core_meaning": "화자의 주관적인 의지나 계획을 나타내며, 제3자의 의지는 〜と思っている를 쓴다.",
     "sentence_ja": "大学を卒業したら、留学しようと思います。",
-    "sentence_ja_target": "ようと思います",
-    "sentence_ja_blank": "大学を卒業したら、留学し（　　）。",
+    "sentence_ja_target": "と思います",
+    "sentence_ja_blank": "大学を卒業したら、留学しよう（　　）。",
     "sentence_ko": "대학을 졸업하면 유학하려고 생각합니다.",
     "target_ko": "생각합니다",
     "diff_point": "사전형+と思う(단순 추측: 갈 것이라 생각한다) vs 의지형+と思う(화자의 의지).",
     "exam_signal": "1인칭 주어의 결심, 제3자 주어 시 〜と思っている.",
-    "conn_anchor": "留学し",
-    "conn_type": "동사 의지형 어간",
-    "conn_hint": "동사 「留学する」의 어간 뒤에 의지형 결합 「ようと思う」가 이어집니다!",
+    "conn_anchor": "留学しよう",
+    "conn_type": "V의지형(의향형)",
+    "conn_hint": "동사 留学する의 의지형 「留学しよう」에 결합하여 의지를 나타냅니다!",
     "conn_badge": "의지형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "의지형"
+      "🔒 동사 의지형 전용"
     ],
     "sentence_ja_ruby": "<ruby>大学<rt>だいがく</rt></ruby>を<ruby>卒業<rt>そつぎょう</rt></ruby>したら、<ruby>留学<rt>りゅうがく</rt></ruby>しようと<ruby>思<rt>おも</rt></ruby>います。"
   },
@@ -1861,13 +1891,13 @@
     "target_ko": "참입니다",
     "diff_point": "시간 부사와 완벽 호응: 今から(Vる), 今(Vている), たった今(Vた).",
     "exam_signal": "今から〜るところ, たった今〜たところ.",
-    "conn_anchor": "ける",
+    "conn_anchor": "出かける",
     "conn_type": "V사전형(기본형)",
     "conn_hint": "앞 동사 「ける」가 사전형(기본형)이므로 결합합니다!",
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "사전형"
+      "동사 사전형 / ている형 / た형"
     ],
     "sentence_ja_ruby": "<ruby>今<rt>いま</rt></ruby>から<ruby>食事<rt>しょくじ</rt></ruby>に<ruby>出<rt>で</rt></ruby>かけるところです。"
   },
@@ -1885,13 +1915,13 @@
     "target_ko": "참에",
     "diff_point": "뒤에 주로 돌발적인 새로운 사건, 방해, 구원 등이 온다.",
     "exam_signal": "〜ところに〜電話がかかる／〜が訪ねてくる 등 돌발 행동 호응.",
-    "conn_anchor": "した",
+    "conn_anchor": "寝ようとした",
     "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「した」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "사전형",
+    "conn_hint": "앞 단어 「寝ようとした」가 동사 과거형(た형)이므로 결합합니다!",
+    "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "사전형"
+      "동사 사전형 / ている형 / た형"
     ],
     "sentence_ja_ruby": "<ruby>寝<rt>ね</rt></ruby>ようとしたところに、<ruby>友達<rt>ともだち</rt></ruby>から<ruby>電話<rt>でんわ</rt></ruby>がかかってきた。"
   },
@@ -1933,13 +1963,14 @@
     "target_ko": "있다면",
     "diff_point": "순수 가상 조건(만약 ~라면)으로 뒤에 화자의 희망, 판단, 의지문이 자주 이어진다.",
     "exam_signal": "もし, 仮に(가령) 등의 부사와 강하게 호응.",
-    "conn_anchor": "れ変われる",
-    "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「れ変われる」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_anchor": "生まれ変われる",
+    "conn_type": "가능동사 사전형",
+    "conn_hint": "가능동사 生まれ変われる(다시 태어날 수 있다)의 사전형에 결합합니다!",
+    "conn_badge": "가능형",
     "conn_strict": false,
     "conn_chips": [
-      "명사"
+      "동사/い형 보통형",
+      "나형/명사 보통형"
     ],
     "sentence_ja_ruby": "<ruby>生<rt>う</rt></ruby>まれ<ruby>変<rt>か</rt></ruby>われるとしたら、<ruby>鳥<rt>とり</rt></ruby>になって<ruby>空<rt>そら</rt></ruby>を<ruby>飛<rt>と</rt></ruby>びたい。"
   },
@@ -1959,11 +1990,11 @@
     "exam_signal": "대표(代表), 자격(資格), 취미(趣味), 역할(役割) 등의 명사 결합.",
     "conn_anchor": "留学生",
     "conn_type": "명사(名詞) 직결",
-    "conn_hint": "앞 단어 「留学生」가 명사이므로 문형과 직접 결합합니다!",
-    "conn_badge": "나형용사",
-    "conn_strict": false,
+    "conn_hint": "명사 「留学生」에 직결하여 자격·신분을 나타냅니다!",
+    "conn_badge": "명사",
+    "conn_strict": true,
     "conn_chips": [
-      "명사 직결"
+      "🔒 명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>留学生<rt>りゅうがくせい</rt></ruby>として<ruby>日本<rt>にっぽん</rt></ruby>へやって<ruby>来<rt>き</rt></ruby>た。"
   },
@@ -1983,11 +2014,11 @@
     "exam_signal": "〜によると〜とのことだ.",
     "conn_anchor": "なる",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「なる」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "ない형",
+    "conn_hint": "동사 なる의 사전형에 결합하여 전문을 전달합니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "ない형"
+      "보통형 (동사/い형/나형/명사)"
     ],
     "sentence_ja_ruby": "<ruby>天気予報<rt>てんきよほう</rt></ruby>によると、<ruby>明日<rt>あした</rt></ruby>は<ruby>大雪<rt>おおゆき</rt></ruby>になるとのことだ。"
   },
@@ -2007,11 +2038,11 @@
     "exam_signal": "まさか〜とは, 〜とは夢にも思わなかった.",
     "conn_anchor": "なる",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「なる」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사+の",
+    "conn_hint": "동사 なる의 사전형에 결합하여 놀라움·감탄을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "★ 명사 + の"
+      "보통형 (동사/い형/나형/명사)"
     ],
     "sentence_ja_ruby": "<ruby>昔<rt>むかし</rt></ruby>はおとなしかった<ruby>彼<rt>かれ</rt></ruby>が、<ruby>世界的<rt>せかいてき</rt></ruby>なピアニストになるとは<ruby>夢<rt>ゆめ</rt></ruby>にも<ruby>思<rt>おも</rt></ruby>わなかった。"
   },
@@ -2023,19 +2054,19 @@
     "connection": "Vない形 ＋ ことには / イAく・ナAで・Nで ＋ ないことには",
     "core_meaning": "선행 조건이 충족되지 않으면 후행 결과나 목적을 결코 이룰 수 없음을 강조 (뒤에 부정·불가능 호응).",
     "sentence_ja": "実際にやってみないことには、うまくいくかどうかわからない。",
-    "sentence_ja_target": "ないことには",
-    "sentence_ja_blank": "実際にやってみ（　　）、うまくいくかどうかわからない。",
+    "sentence_ja_target": "ことには",
+    "sentence_ja_blank": "実際にやってみない（　　）、うまくいくかどうかわからない。",
     "sentence_ko": "실제로 해보지 않고서는 잘될지 어떨지 알 수 없다.",
     "target_ko": "않고서는",
     "diff_point": "후항에 반드시 부정문·불가 표현(〜できない, 〜わからない)이 결합한다.",
     "exam_signal": "〜ないことには〜できない / わからない.",
-    "conn_anchor": "やってみ",
-    "conn_type": "Vない형 어간",
-    "conn_hint": "보조동사 「みる」의 어간 뒤에 「ないことには(~하지 않고는)」가 결합합니다!",
+    "conn_anchor": "やってみない",
+    "conn_type": "Vない형(부정형)",
+    "conn_hint": "동사 やってみる의 부정형 「やってみない」에 결합하여 필수 전제조건을 나타냅니다!",
     "conn_badge": "ない형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "명사 직결"
+      "🔒 동사 ない형 전용"
     ],
     "sentence_ja_ruby": "<ruby>実際<rt>じっさい</rt></ruby>にやってみないことには、うまくいくかどうかわからない。"
   },
@@ -2053,13 +2084,13 @@
     "target_ko": "없지만",
     "diff_point": "〜ことはない(~할 필요는 없다)와 반대. 이중 부정으로 소극적 긍정(사실상 할 수는 있음)을 뜻함.",
     "exam_signal": "〜ないことはないが (소극적 긍정 + 역접).",
-    "conn_anchor": "れない",
+    "conn_anchor": "食べられない",
     "conn_type": "Vない형(부정형)",
-    "conn_hint": "앞 동사 「れない」가 부정형(ない形)이므로 결합합니다!",
+    "conn_hint": "동사 食べられる의 부정형 「食べられない」에 결합하여 이중부정을 만듭니다!",
     "conn_badge": "ない형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "ない형"
+      "🔒 동사 ない형 전용"
     ],
     "sentence_ja_ruby": "<ruby>納豆<rt>なっとう</rt></ruby>は、<ruby>食<rt>た</rt></ruby>べられないことはないが、あまり<ruby>好<rt>す</rt></ruby>きではない。"
   },
@@ -2103,10 +2134,11 @@
     "exam_signal": "新事業を始めるにあたって, 開会にあたり.",
     "conn_anchor": "始める",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「始める」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "동사 始める의 사전형에 결합하여 시작 직전을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>新<rt>あたら</rt></ruby>しいプロジェクトを<ruby>始<rt>はじ</rt></ruby>めるにあたって、<ruby>関係者<rt>かんけいしゃ</rt></ruby>に<ruby>説明会<rt>せつめいかい</rt></ruby>を<ruby>開<rt>ひら</rt></ruby>いた。"
@@ -2127,10 +2159,11 @@
     "exam_signal": "ここに至っては, 被害が拡大するに至って.",
     "conn_anchor": "拡大する",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「拡大する」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "이형용사",
+    "conn_hint": "동사 拡大する의 사전형에 결합하여 중대 사태 도달을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>被害<rt>ひがい</rt></ruby>が<ruby>全国<rt>ぜんこく</rt></ruby>に<ruby>拡大<rt>かくだい</rt></ruby>するに<ruby>至<rt>いた</rt></ruby>って、<ruby>政府<rt>せいふ</rt></ruby>はようやく<ruby>対策<rt>たいさく</rt></ruby>に<ruby>乗<rt>の</rt></ruby>り<ruby>出<rt>だ</rt></ruby>した。"
@@ -2247,10 +2280,11 @@
     "exam_signal": "やっぱり〜に限る, 〜のが一番だ(동의 표현).",
     "conn_anchor": "飲む",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「飲む」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "동사 飲む의 사전형에 결합하여 최고·최선의 선택을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형 / ない형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>暑<rt>あつ</rt></ruby>い<ruby>夏<rt>なつ</rt></ruby>の<ruby>日<rt>にち</rt></ruby>は、やっぱり<ruby>冷<rt>つめ</rt></ruby>たいビールを<ruby>飲<rt>の</rt></ruby>むに<ruby>限<rt>かぎ</rt></ruby>る。"
@@ -2295,11 +2329,12 @@
     "exam_signal": "嘘に決まっている, 失敗するに決まっている.",
     "conn_anchor": "負ける",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「負ける」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "이형용사",
+    "conn_hint": "동사 負ける의 사전형에 결합하여 당연한 확신을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "나형/명사 어간 직결"
     ],
     "sentence_ja_ruby": "<ruby>練習<rt>れんしゅう</rt></ruby>をこれだけサボっていたら、<ruby>試合<rt>しあい</rt></ruby>で<ruby>負<rt>ま</rt></ruby>けるに<ruby>決<rt>き</rt></ruby>まっている。"
   },
@@ -2367,10 +2402,11 @@
     "exam_signal": "高くなるにしたがって(비례), 指示にしたがって(준수).",
     "conn_anchor": "高くなる",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「高くなる」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "동사 高くなる의 사전형에 결합하여 비례적 변화를 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>標高<rt>ひょうこう</rt></ruby>が<ruby>高<rt>たか</rt></ruby>くなるにしたがって、<ruby>気温<rt>きおん</rt></ruby>が<ruby>下<rt>さ</rt></ruby>がってきた。"
@@ -2395,7 +2431,8 @@
     "conn_badge": "명사",
     "conn_strict": false,
     "conn_chips": [
-      "명사 + である"
+      "동사/い형 보통형",
+      "명사 / な형 + である"
     ],
     "sentence_ja_ruby": "<ruby>激<rt>はげ</rt></ruby>しい<ruby>風雨<rt>ふうう</rt></ruby>にもかかわらず、<ruby>多<rt>おお</rt></ruby>くのファンが<ruby>集<rt>あつ</rt></ruby>まった。"
   },
@@ -2413,12 +2450,13 @@
     "target_ko": "것치고는",
     "diff_point": "〜わりに는 '비율 대비' 의외성, 〜にしては는 '특정 사실·기준'에 비춘 의외성 단정에 쓴다.",
     "exam_signal": "初めてにしては(처음치고는), 子どもにしては(아이치고는).",
-    "conn_anchor": "いる",
-    "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「いる」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_anchor": "住んでいる",
+    "conn_type": "동사 ている형(진행/상태)",
+    "conn_hint": "앞 단어 「住んでいる」가 동사 보통형이므로 기대와의 차이를 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 보통형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>日本<rt>にほん</rt></ruby>に10<ruby>年<rt>ねん</rt></ruby>も<ruby>住<rt>す</rt></ruby>んでいるにしては、<ruby>日本語<rt>にほんご</rt></ruby>があまり<ruby>上手<rt>じょうず</rt></ruby>ではない。"
@@ -2559,10 +2597,11 @@
     "exam_signal": "時間の経過につれて, 近づくにつれて(변화 동사 호응).",
     "conn_anchor": "近づく",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「近づく」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "동사 近づく의 사전형에 결합하여 동시적 추이를 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 사전형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>台風<rt>たいふう</rt></ruby>が<ruby>近<rt>ちか</rt></ruby>づくにつれて、<ruby>風<rt>かぜ</rt></ruby>と<ruby>雨<rt>あめ</rt></ruby>が<ruby>激<rt>はげ</rt></ruby>しくなってきた。"
@@ -2631,11 +2670,12 @@
     "exam_signal": "合格するには〜必要だ, 見るには見たが.",
     "conn_anchor": "合格する",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「合格する」가 사전형(기본형)이므로 결합합니다!",
-    "conn_badge": "명사",
+    "conn_hint": "동사 合格する의 사전형에 결합하여 목적(~하기 위해서는)을 나타냅니다!",
+    "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사"
+      "동사 사전형",
+      "명사 직결"
     ],
     "sentence_ja_ruby": "JLPT N2に<ruby>合格<rt>ごうかく</rt></ruby>するには、<ruby>毎日<rt>まいにち</rt></ruby>の<ruby>単語<rt>たんご</rt></ruby>と<ruby>文法<rt>ぶんぽう</rt></ruby>の<ruby>復習<rt>ふくしゅう</rt></ruby>が<ruby>欠<rt>か</rt></ruby>かせない。"
   },
@@ -2703,11 +2743,11 @@
     "exam_signal": "原因による(명사 수식), 人によっては〜こともある.",
     "conn_anchor": "インターネットの普及",
     "conn_type": "명사(名詞) 직결",
-    "conn_hint": "앞 단어 「インターネットの普及」가 명사이므로 문형과 직접 결합합니다!",
-    "conn_badge": "た형",
-    "conn_strict": false,
+    "conn_hint": "명사구 「インターネットの普及」에 결합하여 원인·수단을 나타냅니다!",
+    "conn_badge": "명사",
+    "conn_strict": true,
     "conn_chips": [
-      "명사 직결"
+      "🔒 명사 직결"
     ],
     "sentence_ja_ruby": "インターネットの<ruby>普及<rt>ふきゅう</rt></ruby>によって、<ruby>生活<rt>せいかつ</rt></ruby>は<ruby>劇的<rt>げきてき</rt></ruby>に<ruby>便利<rt>べんり</rt></ruby>になった。"
   },
@@ -2823,11 +2863,11 @@
     "exam_signal": "なぜなら〜からなのだ, 実は〜のだ.",
     "conn_anchor": "休んだ",
     "conn_type": "Vた형(과거·완료)",
-    "conn_hint": "앞 동사 「休んだ」가 た형(과거·완료)이므로 완료/계기 문맥과 결합합니다!",
-    "conn_badge": "사전형",
+    "conn_hint": "동사 과거형 「休んだ」에 결합하여 이유·설명을 나타냅니다!",
+    "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "보통형 (동사/い형/나형な/명사な)"
     ],
     "sentence_ja_ruby": "<ruby>昨日<rt>きのう</rt></ruby>はひどい<ruby>熱<rt>ねつ</rt></ruby>があったので、<ruby>学校<rt>がっこう</rt></ruby>を<ruby>休<rt>やす</rt></ruby>んだのだ。"
   },
@@ -2875,7 +2915,9 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 + である"
+      "동사 た형",
+      "い형 보통형",
+      "나형/명사 + である"
     ],
     "sentence_ja_ruby": "うっかり<ruby>秘密<rt>ひみつ</rt></ruby>を<ruby>話<rt>はな</rt></ruby>してしまったばかりに、<ruby>親友<rt>しんゆう</rt></ruby>の<ruby>信用<rt>しんよう</rt></ruby>を<ruby>失<rt>う</rt></ruby>った。"
   },
@@ -2942,12 +2984,12 @@
     "diff_point": "과거에 실현되지 못한 아쉬움. 회화 청해에서는 〜ばよかったのに(상대방을 탓함)로 빈출.",
     "exam_signal": "〜ばよかった, 〜なければよかったのに.",
     "conn_anchor": "持ってくれ",
-    "conn_type": "가정형(ば형) 어간",
-    "conn_hint": "동사 「持ってくれる」의 가정형 어간 뒤에 「ばよかった」가 결합합니다!",
-    "conn_badge": "ば형",
+    "conn_type": "동사 가정형(ば형) 어간",
+    "conn_hint": "동사 くれる의 가정형 어간 「くれ」 뒤에 ばよかった(~했으면 좋았을 텐데)가 결합합니다!",
+    "conn_badge": "가정형 어간",
     "conn_strict": false,
     "conn_chips": [
-      "ば형"
+      "🔒 동사 가정형(ば형) 어간"
     ],
     "sentence_ja_ruby": "こんなに<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るなら、<ruby>折<rt>お</rt></ruby>りたたみ<ruby>傘<rt>かさ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ってくればよかった。"
   },
@@ -3043,6 +3085,7 @@
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 보통형 / 사전형",
       "명사 직결"
     ],
     "sentence_ja_ruby": "<ruby>昨日<rt>きのう</rt></ruby>の<ruby>試験<rt>しけん</rt></ruby>は、<ruby>涙<rt>なみだ</rt></ruby>がこぼれそうになるほど<ruby>難<rt>むずか</rt></ruby>しかった。"
@@ -3135,11 +3178,11 @@
     "exam_signal": "〜も〜ば〜も, 質も良ければ値段も安い.",
     "conn_anchor": "眺め",
     "conn_type": "명사(名詞) 직결",
-    "conn_hint": "앞 단어 「眺め」가 명사이므로 문형과 직접 결합합니다!",
-    "conn_badge": "ば형",
+    "conn_hint": "명사 「眺め」 뒤에 もよければ(~도 좋고 ~도)가 병렬 결합합니다!",
+    "conn_badge": "명사",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "명사 + も + 가정형"
     ],
     "sentence_ja_ruby": "このホテルは<ruby>眺<rt>なが</rt></ruby>めもよければ、<ruby>料理<rt>りょうり</rt></ruby>も<ruby>素晴<rt>すば</rt></ruby>らしい。"
   },
@@ -3205,13 +3248,13 @@
     "target_ko": "아니다",
     "diff_point": "과거 회상(Vたものだ)과 도덕적 훈계(〜ものではない)가 시험에 단골 출제됨.",
     "exam_signal": "昔はよく〜たものだ, 〜ものではない(도리).",
-    "conn_anchor": "決して言う",
+    "conn_anchor": "言う",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「決して言う」가 사전형(기본형)이므로 결합합니다!",
+    "conn_hint": "동사 言う의 사전형에 결합하여 당연한 금지·충고를 나타냅니다!",
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "사전형"
+      "동사 사전형 / ない형"
     ],
     "sentence_ja_ruby": "<ruby>人<rt>にん</rt></ruby>の<ruby>悪口<rt>わるくち</rt></ruby>や<ruby>陰口<rt>かげぐち</rt></ruby>は、<ruby>決<rt>けっ</rt></ruby>して<ruby>言<rt>い</rt></ruby>うものではない。"
   },
@@ -3235,7 +3278,9 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "나형 + な",
+      "명사 + な"
     ],
     "sentence_ja_ruby": "<ruby>途中<rt>とちゅう</rt></ruby>で<ruby>事故渋滞<rt>じこじゅうたい</rt></ruby>に<ruby>巻き込<rt>まきこ</rt></ruby>まれたものだから、<ruby>遅刻<rt>ちこく</rt></ruby>してしまいました。"
   },
@@ -3283,6 +3328,9 @@
     "conn_badge": "た형",
     "conn_strict": false,
     "conn_chips": [
+      "동사 보통형 / た형",
+      "い형 보통형",
+      "나형 + な/である",
       "명사 + である"
     ],
     "sentence_ja_ruby": "<ruby>運転免許<rt>うんてんめんきょ</rt></ruby>は<ruby>取<rt>と</rt></ruby>ったものの、<ruby>一度<rt>いちど</rt></ruby>も<ruby>路上<rt>ろじょう</rt></ruby>で<ruby>運転<rt>うんてん</rt></ruby>したことがない。"
@@ -3295,19 +3343,19 @@
     "connection": "V意向形 ＋ とする / としている",
     "core_meaning": "어떤 동작이 막 시작되려는 찰나의 순간이나, 어떤 행위를 성취하려는 강한 의지적 노력을 나타냄.",
     "sentence_ja": "家を出ようとしたその時、突然電話が鳴り響いた。",
-    "sentence_ja_target": "ようとした",
-    "sentence_ja_blank": "家を出（　　）その時、突然電話が鳴り響いた。",
+    "sentence_ja_target": "とした",
+    "sentence_ja_blank": "家を出よう（　　）その時、突然電話が鳴り響いた。",
     "sentence_ko": "집을 나서려던 바로 그 순간 갑자기 전화가 울렸다.",
     "target_ko": "나서려던",
     "diff_point": "〜ようとしない는 '전혀 ~할 의지를 보이지 않는다'는 비판 표현으로 시험 단골.",
     "exam_signal": "〜ようとしたとき, 〜ようとしない.",
-    "conn_anchor": "出",
-    "conn_type": "동사 의지형 어간",
-    "conn_hint": "동사 「出る」의 어간 「出」 뒤에 의향형 결합 「ようとする」가 이어집니다!",
+    "conn_anchor": "出よう",
+    "conn_type": "V의지형(의향형)",
+    "conn_hint": "동사 出る의 의지형 「出よう」 뒤에 조사 とした(~하려던 찰나)가 결합합니다!",
     "conn_badge": "의지형",
-    "conn_strict": false,
+    "conn_strict": true,
     "conn_chips": [
-      "의지형"
+      "🔒 동사 의지형 전용"
     ],
     "sentence_ja_ruby": "<ruby>家<rt>いえ</rt></ruby>を<ruby>出<rt>で</rt></ruby>ようとしたその<ruby>時<rt>とき</rt></ruby>、<ruby>突然<rt>とつぜん</rt></ruby><ruby>電話<rt>でんわ</rt></ruby>が<ruby>鳴<rt>な</rt></ruby>り<ruby>響<rt>ひび</rt></ruby>いた。"
   },
@@ -3367,19 +3415,20 @@
     "connection": "V辞書形(무의지·가능동사)・Vない形 ＋ ように",
     "core_meaning": "바람직한 목표 상태가 실현되도록 하거나, 원치 않는 상황이 생기지 않도록 예방 조치함.",
     "sentence_ja": "大切な約束を忘れてしまわないように、スマホにメモした。",
-    "sentence_ja_target": "ないように",
-    "sentence_ja_blank": "大切な約束を忘れてしまわ（　　）、スマホにメモした。",
+    "sentence_ja_target": "ように",
+    "sentence_ja_blank": "大切な約束を忘れてしまわない（　　）、スマホにメモした。",
     "sentence_ko": "소중한 약속을 잊어버리 지 않도록 스마트폰에 메모했다.",
     "target_ko": "않도록",
     "diff_point": "〜ために는 의지동사 결합, 〜ように는 가능동사/무의지동사 결합이 핵심 시험 포인트.",
     "exam_signal": "〜ないように, 聞こえるように, 合格できるように.",
-    "conn_anchor": "忘れてしまわ",
-    "conn_type": "Vない형(아단 어간)",
-    "conn_hint": "동사 「忘れてしまう」의 아단(부정형) 어간 뒤에 「ないように」가 결합합니다!",
+    "conn_anchor": "忘れてしまわない",
+    "conn_type": "Vない형(부정형)",
+    "conn_hint": "동사 忘れてしまう의 부정형 「忘れてしまわない」에 결합하여 부정의 목적을 나타냅니다!",
     "conn_badge": "ない형",
     "conn_strict": false,
     "conn_chips": [
-      "ない형"
+      "동사 사전형 / ない형",
+      "가능형"
     ],
     "sentence_ja_ruby": "<ruby>大切<rt>たいせつ</rt></ruby>な<ruby>約束<rt>やくそく</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れてしまわないように、スマホにメモした。"
   },
@@ -3445,13 +3494,15 @@
     "target_ko": "비해서는",
     "diff_point": "비율·비교의 의외성. 〜にしては는 '특정 인물·사실 기준', 〜わりに는 '비용/노력 대비 비율'.",
     "exam_signal": "値段のわりに, 年齢のわりに, 勉強したわりに.",
-    "conn_anchor": "たくさん食べる",
+    "conn_anchor": "食べる",
     "conn_type": "V사전형(기본형)",
-    "conn_hint": "앞 동사 「たくさん食べる」가 사전형(기본형)이므로 결합합니다!",
+    "conn_hint": "동사 食べる의 사전형에 결합하여 예상 밖의 차이를 나타냅니다!",
     "conn_badge": "사전형",
     "conn_strict": false,
     "conn_chips": [
-      "명사 직결"
+      "동사/い형 보통형",
+      "나형 + な",
+      "명사 + の"
     ],
     "sentence_ja_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>甘<rt>あま</rt></ruby>いものをたくさん<ruby>食<rt>た</rt></ruby>べるわりに、<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>太<rt>ふと</rt></ruby>らない。"
   },
@@ -3997,13 +4048,13 @@
     "meaning": "마치 금방이라도 ~할 것 같은 기세로",
     "connection": "Vない형(ん) ＋ ばかり（だ／に／の） ※する→せんばかり",
     "conn_anchor": "泣き出さ",
-    "conn_badge": "ない형",
+    "conn_badge": "ない형 어간",
     "conn_strict": true,
     "conn_chips": [
       "🔒 동사 ない형 어간 + んばかり (する→せん)"
     ],
-    "conn_type": "동사 ない형 어간",
-    "conn_hint": "앞 단어 「泣き出さ」가 ない형 어간이므로 문형과 직접 결합합니다!",
+    "conn_type": "Vない형 어간(미연형)",
+    "conn_hint": "동사 泣き出す의 ない형에서 「ない」를 뺀 어간 「泣き出さ」에 결합합니다!",
     "core_meaning": "실제로 그렇게 한 것은 아니지만, 금방이라도 그렇게 될 듯한 격렬한 상태나 태도.",
     "diff_point": "『する』 동사는 반드시 『せんばかり』로 불규칙 활용함에 주의!",
     "exam_signal": "泣き出さんばかり, 飛び上がらんばかりに, 殴りかからんばかりの.",
@@ -4424,15 +4475,15 @@
     "meaning": "~인 듯한, ~한 기색 (겉모습이나 표정에서 풍김)",
     "connection": "い형 어간 / な형 어간 / Vます형 ＋ げ (よい→よさげ, ない→なさげ)",
     "conn_anchor": "言いた",
-    "conn_badge": "ます형",
+    "conn_badge": "たい형 어간",
     "conn_strict": false,
     "conn_chips": [
-      "い형/な형 어간",
-      "동사 ます형",
+      "い형/나형 어간",
+      "たい형 어간",
       "よい→よさげ / ない→なさげ"
     ],
-    "conn_type": "동사 ます형",
-    "conn_hint": "앞 단어 「言いた」가 ます형 어간이므로 문형과 직접 결합합니다!",
+    "conn_type": "たい형 어간 / い·な형 어간",
+    "conn_hint": "동사 희망조동사 たい의 어간 「言いた」에 결합하여 '~인 듯한 낌새'를 나타냅니다!",
     "core_meaning": "타인의 표정이나 태도에서 그러한 심리 상태나 기색이 엿보임을 묘사.",
     "diff_point": "『言いたげな顔』, 『自信ありげに』, 『悲しげな目』 등으로 주로 활용.",
     "exam_signal": "言いたげな, 自信ありげに, 悲しげな表情.",
@@ -4450,7 +4501,7 @@
     "meaning": "~인 체하다, 폼 잡다 (실제와 다른 겉치레)",
     "connection": "N / な형 어간 / い형 어간 ＋ ぶる",
     "conn_anchor": "親切",
-    "conn_badge": "나형용사",
+    "conn_badge": "나형용사 어간",
     "conn_strict": false,
     "conn_chips": [
       "명사 직결",
@@ -4458,7 +4509,7 @@
       "い형 어간"
     ],
     "conn_type": "나형용사 어간",
-    "conn_hint": "앞 단어 「親切」가 な형용사 어간이므로 문형과 직접 결합합니다!",
+    "conn_hint": "な형용사 어간 「親切」에 결합하여 '~인 체하다'를 나타냅니다!",
     "core_meaning": "실제 본모습은 그렇지 않으면서 남에게 잘 보이려고 겉으로 그런 체함.",
     "diff_point": "화자의 부정적·비판적 시선이 들어가 있음. 『大人ぶる』, 『親切ぶる』.",
     "exam_signal": "親切ぶる, 大人ぶる, 利口ぶる.",
@@ -4793,13 +4844,13 @@
     "meaning": "가시다 / 오시다 / 계시다 (존경어: 行く・来る・いる의 최고 격식)",
     "connection": "존경 대상(주어) ＋ おいでになる",
     "conn_anchor": "研究室に",
-    "conn_badge": "명사",
+    "conn_badge": "명사+조사",
     "conn_strict": true,
     "conn_chips": [
       "🔒 존경어 (行く・来る・いる의 최고 격식 존경 표현)"
     ],
-    "conn_type": "명사 직결",
-    "conn_hint": "앞 단어 「研究室に」가 장소 명사이므로 문형과 직접 결합합니다!",
+    "conn_type": "장소 명사 + 조사 「に」",
+    "conn_hint": "장소 명사구 「研究室に」 뒤에 최고 존경 표현 おいでになります가 결합합니다!",
     "core_meaning": "상대방이나 윗사람의 이동 또는 존재를 극진히 높여 표현함.",
     "diff_point": "『いらっしゃる』와 동의어로 문맥에 따라 가시다/오시다/계시다로 해석.",
     "exam_signal": "研究室においでになりますか, こちらにおいでください.",
