@@ -35,7 +35,11 @@ body {
   20%, 60% { transform: translateX(-8px); }
   40%, 80% { transform: translateX(8px); }
 }
+/* Slot and Anchor Layout */
 .slot-filled {
+  display: inline-block;
+  vertical-align: baseline;
+  line-height: 1.25;
   transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 @keyframes anchorBlinkPulse {
@@ -78,30 +82,58 @@ body {
   border: 2px solid #f59e0b;
   font-weight: 900;
   animation: anchorBlinkPulse 0.85s infinite ease-in-out;
-  vertical-align: middle;
+  vertical-align: baseline;
+  line-height: 1.25;
 }
 .badge-blink {
   animation: badgeBlinkPulse 0.85s infinite ease-in-out !important;
 }
+.badge-blink::after {
+  border-top-color: #fbbf24 !important;
+}
 .conn-anchor-wrapper {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
-  margin: 14px 4px 4px 4px;
+  vertical-align: baseline;
+  margin: 28px 4px 0 4px;
 }
 .conn-anchor-badge {
   position: absolute;
-  top: -24px;
+  bottom: calc(100% + 7px);
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap;
   pointer-events: none;
-  z-index: 10;
+  z-index: 20;
   user-select: none;
-  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: #020617;
+  color: #38bdf8;
+  border: 1.5px solid rgba(56, 189, 248, 0.75);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6), 0 0 10px rgba(56, 189, 248, 0.35);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.conn-anchor-badge::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 4px 4px 0 4px;
+  border-style: solid;
+  border-color: rgba(56, 189, 248, 0.85) transparent transparent transparent;
 }
 .conn-anchor {
   display: inline-block;
+  vertical-align: baseline;
+  line-height: 1.25;
 }
 </style>
 </head>
@@ -269,7 +301,7 @@ body {
 
       <!-- 1. Japanese Blank Sentence (Primary Target) -->
       <div class="py-3 px-4 rounded-xl bg-slate-950/60 border border-slate-800/80 shadow-inner">
-        <div id="qSentenceJa" class="text-xl sm:text-2xl font-black text-white leading-relaxed break-keep tracking-wide font-sans pt-3 sm:pt-4">
+        <div id="qSentenceJa" class="text-xl sm:text-2xl font-black text-white leading-loose break-keep tracking-wide font-sans pt-7 sm:pt-8 pb-3">
           <!-- Injected Japanese blank sentence -->
         </div>
       </div>
@@ -654,7 +686,7 @@ function generateQuestions(course, count) {
     // Construct Japanese blank HTML with anchor element and floating part-of-speech badge
     const rawBlank = item.sentence_ja_blank || (item.sentence_ja + ' （　　）');
     let jaBlankHtml = '';
-    const slotHtml = `<span id="blankSlot" class="slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-dashed border-amber-400 bg-amber-400/20 text-amber-300 font-black tracking-wider text-lg sm:text-xl shadow-sm">（　　）</span>`;
+    const slotHtml = `<span id="blankSlot" class="slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-dashed border-amber-400 bg-amber-400/20 text-amber-300 font-black tracking-wider shadow-sm">（　　）</span>`;
 
     if (rawBlank.includes('（　　）')) {
       const parts = rawBlank.split('（　　）');
@@ -666,7 +698,7 @@ function generateQuestions(course, count) {
       let preAnchor = before;
       let anchorHtml = '';
       const badgeDisplay = state.connBadgeVisible ? '' : 'hidden';
-      const badgeHtml = `<span id="connAnchorBadge" class="conn-anchor-badge px-2 py-0.5 rounded-full text-[11px] font-extrabold tracking-wider bg-slate-900/95 text-cyan-300 border border-cyan-400/80 shadow-[0_0_10px_rgba(34,211,238,0.4)] ${badgeDisplay}">${badge}</span>`;
+      const badgeHtml = `<span id="connAnchorBadge" class="conn-anchor-badge ${badgeDisplay}">${badge}</span>`;
 
       if (anchor && before.endsWith(anchor)) {
         preAnchor = before.slice(0, -anchor.length);
@@ -1102,7 +1134,7 @@ function checkAnswer(userAnswer) {
     // Fill blank slot with green glow
     if (slot) {
       slot.textContent = (userAnswer === q.answer) ? (q.item.sentence_ja_target || q.item.pattern) : userAnswer;
-      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-emerald-400 bg-emerald-500/30 text-emerald-300 font-black tracking-wider text-lg sm:text-xl shadow-md scale-105';
+      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-emerald-400 bg-emerald-500/30 text-emerald-300 font-black tracking-wider shadow-md scale-105';
     }
 
     // Highlight selected button green
@@ -1166,7 +1198,7 @@ function checkAnswer(userAnswer) {
     // Fill blank slot with red border
     if (slot) {
       slot.textContent = q.item.sentence_ja_target || q.item.pattern;
-      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-rose-500 bg-rose-500/30 text-rose-300 font-black tracking-wider text-lg sm:text-xl shadow-md';
+      slot.className = 'slot-filled inline-block px-3 py-0.5 mx-1.5 rounded-lg border-2 border-rose-500 bg-rose-500/30 text-rose-300 font-black tracking-wider shadow-md';
     }
 
     buttons.forEach(btn => {
