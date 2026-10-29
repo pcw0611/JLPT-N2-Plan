@@ -1,0 +1,4002 @@
+[
+  {
+    "Word": "abrogate",
+    "PartOfSpeech": "verb",
+    "Meaning": "폐지하다, 철폐하다",
+    "Example": "The supreme court voted to abrogate the controversial tariff law.",
+    "ExampleKo": "대법원은 논란이 된 관세법을 폐지하기로 결정했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "accede",
+    "PartOfSpeech": "verb",
+    "Meaning": "응하다, 동의하다",
+    "Example": "Management finally acceded to the union's demands for safer conditions.",
+    "ExampleKo": "경영진은 마침내 더 안전한 환경을 요구하는 노조의 요구에 응했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "accentuate",
+    "PartOfSpeech": "verb",
+    "Meaning": "강조하다, 두드러지게 하다",
+    "Example": "The modern lighting accentuates the architectural lines of the lobby.",
+    "ExampleKo": "현대적인 조명이 로비의 건축적 선을 돋보이게 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "acclimatize",
+    "PartOfSpeech": "verb",
+    "Meaning": "순응하다, 적응하다",
+    "Example": "New international assignees take roughly three months to acclimatize.",
+    "ExampleKo": "새로운 해외 파견자들은 적응하는 데 약 3개월이 걸립니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "accrue",
+    "PartOfSpeech": "verb",
+    "Meaning": "누적되다, 축적되다",
+    "Example": "Interest on the municipal bond accrues semi-annually.",
+    "ExampleKo": "지방채에 대한 이자는 반기마다 누적됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "adjudicate",
+    "PartOfSpeech": "verb",
+    "Meaning": "판결을 내리다, 재판하다",
+    "Example": "An independent panel was convened to adjudicate the intellectual property dispute.",
+    "ExampleKo": "지적재산권 분쟁을 판결하기 위해 독립 위원회가 소집되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "admonish",
+    "PartOfSpeech": "verb",
+    "Meaning": "권고하다, 훈계하다",
+    "Example": "The regulator admonished the bank for lax money laundering controls.",
+    "ExampleKo": "규제 당국은 허술한 자금 세탁 통제에 대해 은행에 훈계했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "advocate",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "옹호하다; 옹호자",
+    "Example": "Consumer groups advocate for stricter chemical disclosure rules.",
+    "ExampleKo": "소비자 단체들은 더 엄격한 화학물질 공개 규정을 옹호합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "alienate",
+    "PartOfSpeech": "verb",
+    "Meaning": "소외시키다, 멀어지게 하다",
+    "Example": "Abrupt price hikes alienate even the most loyal long-term subscribers.",
+    "ExampleKo": "갑작스러운 가격 인상은 가장 충성도 높은 장기 구독자마저 소외시킵니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ameliorate",
+    "PartOfSpeech": "verb",
+    "Meaning": "개선하다, 완화하다",
+    "Example": "Government subsidies helped ameliorate the severe housing shortage.",
+    "ExampleKo": "정부 보조금은 심각한 주택난을 완화하는 데 도움이 되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "amortize",
+    "PartOfSpeech": "verb",
+    "Meaning": "분할 상환하다",
+    "Example": "The corporation plans to amortize capital machinery investments over 10 years.",
+    "ExampleKo": "회사는 자본 설비 투자를 10년에 걸쳐 분할 상환할 계획입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "annex",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "합병하다; 별관",
+    "Example": "The neighboring warehouse was annexed to double refrigerated storage.",
+    "ExampleKo": "냉장 보관 용량을 두 배로 늘리기 위해 인접한 창고가 합병되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "annul",
+    "PartOfSpeech": "verb",
+    "Meaning": "무효화하다, 취소하다",
+    "Example": "A judicial tribunal annulled the non-compete clause.",
+    "ExampleKo": "사법 재판소는 경업 금지 조항을 무효화했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "appease",
+    "PartOfSpeech": "verb",
+    "Meaning": "달래다, 유화하다",
+    "Example": "The airline issued travel vouchers to appease stranded passengers.",
+    "ExampleKo": "항공사는 발이 묶인 승객들을 달래기 위해 여행 바우처를 발행했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apportion",
+    "PartOfSpeech": "verb",
+    "Meaning": "배분하다, 할당하다",
+    "Example": "State grants were apportioned based on regional economic need.",
+    "ExampleKo": "주 보조금은 지역 경제적 필요에 따라 배분되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apprise",
+    "PartOfSpeech": "verb",
+    "Meaning": "알리다, 통지하다",
+    "Example": "The ambassador apprised the foreign ministry of ongoing border talks.",
+    "ExampleKo": "대사는 외교부에 진행 중인 국경 회담에 대해 통지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "articulate",
+    "PartOfSpeech": "verb/adj",
+    "Meaning": "명확히 설명하다; 또렷한",
+    "Example": "The CEO articulated a compelling roadmap for the electric fleet.",
+    "ExampleKo": "CEO는 전기차 전환에 대한 설득력 있는 로드맵을 명확히 밝혔습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ascribe",
+    "PartOfSpeech": "verb",
+    "Meaning": "속하는 것으로 생각하다, 기인하다",
+    "Example": "The turnaround is ascribed to disciplined balance sheet management.",
+    "ExampleKo": "기업 회생은 규율 있는 재무제표 관리 덕분으로 여겨집니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "assuage",
+    "PartOfSpeech": "verb",
+    "Meaning": "누그러뜨리다, 완화하다",
+    "Example": "A public apology did little to assuage consumer outrage over privacy leaks.",
+    "ExampleKo": "공식 사과는 개인정보 유출에 대한 소비자들의 분노를 가라앉히지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "attenuate",
+    "PartOfSpeech": "verb",
+    "Meaning": "약화시키다, 희석하다",
+    "Example": "Acoustic baffling panels attenuate factory machinery noise.",
+    "ExampleKo": "흡음 패널은 공장 기계 소음을 약화시킵니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "augment",
+    "PartOfSpeech": "verb",
+    "Meaning": "늘리다, 증대하다",
+    "Example": "Contract coders were hired to augment the core engineering team.",
+    "ExampleKo": "핵심 엔지니어링 팀의 역량을 증대하기 위해 계약직 개발자들을 채용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "balk",
+    "PartOfSpeech": "verb",
+    "Meaning": "주저하다, 망설이다",
+    "Example": "Investors balked at the astronomical valuation demanded by founders.",
+    "ExampleKo": "투자자들은 창업자들이 요구한 천문학적인 기업 가치에 난색을 표했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "bolster",
+    "PartOfSpeech": "verb",
+    "Meaning": "강화하다, 북돋우다",
+    "Example": "Cash injections from institutional funds bolstered the bank's reserves.",
+    "ExampleKo": "기관 펀드의 자금 수혈은 은행의 지급준비금을 강화했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "circumvent",
+    "PartOfSpeech": "verb",
+    "Meaning": "우회하다, 피하다",
+    "Example": "Sophisticated traders used offshore shell firms to circumvent tariffs.",
+    "ExampleKo": "노련한 거래자들은 관세를 우회하기 위해 역외 페이퍼컴퍼니를 이용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "coalesce",
+    "PartOfSpeech": "verb",
+    "Meaning": "하나로 뭉치다, 결합하다",
+    "Example": "Diverse regional airlines coalesced into a nationwide discount carrier.",
+    "ExampleKo": "다양한 지역 항공사들이 하나로 뭉쳐 전국적인 저비용 항공사를 설립했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "coerce",
+    "PartOfSpeech": "verb",
+    "Meaning": "강제하다, 강요하다",
+    "Example": "Labor unions accused management of coercing workers to accept wage cuts.",
+    "ExampleKo": "노조는 경영진이 노동자들에게 임금 삭감을 강요했다고 비난했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "commingle",
+    "PartOfSpeech": "verb",
+    "Meaning": "혼합하다, 섞다",
+    "Example": "Attorneys must never commingle client retainer monies with operating funds.",
+    "ExampleKo": "변호사는 결코 고객 수임료를 운영 자금과 혼합해서는 안 됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "compensate",
+    "PartOfSpeech": "verb",
+    "Meaning": "보상하다, 변상하다",
+    "Example": "The airline compensated passengers generously for canceled flights.",
+    "ExampleKo": "항공사는 결항된 항공편에 대해 승객들에게 후하게 보상했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "concede",
+    "PartOfSpeech": "verb",
+    "Meaning": "인정하다, 양보하다",
+    "Example": "The outgoing executive conceded that rival software possessed superior speed.",
+    "ExampleKo": "퇴임하는 임원은 경쟁사 소프트웨어가 더 우수한 속도를 지녔음을 인정했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "condone",
+    "PartOfSpeech": "verb",
+    "Meaning": "용인하다, 눈감아주다",
+    "Example": "The code of conduct does not condone insider equity trading.",
+    "ExampleKo": "사내 행동강령은 내부자 주식 거래를 결코 용인하지 않습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "consecrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "바치다, 신성하게 하다",
+    "Example": "The founder consecrated his personal fortune to medical philanthropy.",
+    "ExampleKo": "창업자는 개인 재산을 의료 자선 활동에 헌정했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "consign",
+    "PartOfSpeech": "verb",
+    "Meaning": "위탁하다, 부치다",
+    "Example": "The artist consigned thirty sculptures to the premier London gallery.",
+    "ExampleKo": "그 예술가는 30점의 조각품을 런던의 일류 갤러리에 위탁 판매했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "construe",
+    "PartOfSpeech": "verb",
+    "Meaning": "해석하다, 이해하다",
+    "Example": "Silence from the board was construed as tacit approval for the merger.",
+    "ExampleKo": "이사회의 침묵은 합병에 대한 암묵적 승인으로 해석되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "contemplate",
+    "PartOfSpeech": "verb",
+    "Meaning": "심사숙고하다, 고려하다",
+    "Example": "The conglomerate is contemplating selling off unprofitable media divisions.",
+    "ExampleKo": "그 대기업은 수익성이 없는 미디어 사업부 매각을 심사숙고하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "convene",
+    "PartOfSpeech": "verb",
+    "Meaning": "소집하다, 모이다",
+    "Example": "Shareholders will convene next Thursday for the annual voting proxy.",
+    "ExampleKo": "주주들은 연례 의결권 행사를 위해 다음 주 목요일에 소집될 것입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "corroborate",
+    "PartOfSpeech": "verb",
+    "Meaning": "확증하다, 뒷받침하다",
+    "Example": "Independent lab tests corroborated the battery performance claims.",
+    "ExampleKo": "독립 실험실 테스트가 배터리 성능 주장을 뒷받침했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "counsel",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "조언하다; 변호인",
+    "Example": "External legal counsel advised against premature settlement talks.",
+    "ExampleKo": "외부 법률 고문은 섣부른 합의 협상에 대해 반대 조언을 했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "counteract",
+    "PartOfSpeech": "verb",
+    "Meaning": "대응하다, 상쇄하다",
+    "Example": "Marketing launched promotional discounts to counteract rival inroads.",
+    "ExampleKo": "마케팅팀은 경쟁사의 시장 잠식에 대응하기 위해 프로모션 할인을 시작했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "culminate",
+    "PartOfSpeech": "verb",
+    "Meaning": "절정에 이르다, 끝을 맺다",
+    "Example": "Decades of relentless research culminated in an approved gene therapy.",
+    "ExampleKo": "수십 년간의 끊임없는 연구는 승인된 유전자 치료법으로 결실을 맺었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "debilitate",
+    "PartOfSpeech": "verb",
+    "Meaning": "쇠약하게 하다, 약화시키다",
+    "Example": "Supply disruptions debilitated regional assembly lines for weeks.",
+    "ExampleKo": "공급 차질은 수주 동안 지역 조립 라인을 마비시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "decipher",
+    "PartOfSpeech": "verb",
+    "Meaning": "해독하다, 판독하다",
+    "Example": "Engineers deciphered telemetry signals sent from the orbital satellite.",
+    "ExampleKo": "엔지니어들은 궤도 위성에서 보낸 원격 측정 신호를 해독했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "delineate",
+    "PartOfSpeech": "verb",
+    "Meaning": "명확하게 기술하다, 묘사하다",
+    "Example": "The project charter clearly delineates department responsibilities.",
+    "ExampleKo": "프로젝트 헌장은 부서별 책임을 명확히 규정하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demarcate",
+    "PartOfSpeech": "verb",
+    "Meaning": "경계를 정하다, 구분하다",
+    "Example": "Yellow safety lines demarcate hazardous automated crane zones.",
+    "ExampleKo": "노란색 안전선은 위험한 자동 크레인 구역의 경계를 표시합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demolish",
+    "PartOfSpeech": "verb",
+    "Meaning": "철거하다, 무너뜨리다",
+    "Example": "Contractors demolished the obsolete boiler plant to make room for condos.",
+    "ExampleKo": "시공업체들은 아파트 부지를 확보하기 위해 노후된 보일러 공장을 철거했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deplete",
+    "PartOfSpeech": "verb",
+    "Meaning": "고갈시키다",
+    "Example": "Extensive emergency maintenance completely depleted the capital fund.",
+    "ExampleKo": "광범위한 긴급 유지보수로 인해 자본 준비금이 완전히 고갈되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deprecate",
+    "PartOfSpeech": "verb",
+    "Meaning": "비난하다, 반대하다, 중요도를 낮추다",
+    "Example": "The programming framework deprecated obsolete legacy API calls.",
+    "ExampleKo": "그 프로그래밍 프레임워크는 오래된 레거시 API 호출을 더 이상 권장하지 않습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deride",
+    "PartOfSpeech": "verb",
+    "Meaning": "조롱하다, 비웃다",
+    "Example": "Industry skeptics derided the venture before it achieved billion-dollar revenues.",
+    "ExampleKo": "업계 회의론자들은 그 벤처기업이 수십억 달러의 매출을 달성하기 전까지 비웃었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deter",
+    "PartOfSpeech": "verb",
+    "Meaning": "단념시키다, 저지하다",
+    "Example": "Strict background audits deter dishonest applicants from applying.",
+    "ExampleKo": "엄격한 신원 조사는 정직하지 못한 지원자들의 지원을 저지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deviate",
+    "PartOfSpeech": "verb",
+    "Meaning": "벗어나다, 빗나가다",
+    "Example": "Aircraft pilots must not deviate from designated holding flight patterns.",
+    "ExampleKo": "항공기 조종사는 지정된 대기 비행 경로를 벗어나서는 안 됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "diffuse",
+    "PartOfSpeech": "verb/adj",
+    "Meaning": "분산시키다; 산만한",
+    "Example": "The corporate PR campaign successfully diffused public hostility.",
+    "ExampleKo": "기업 홍보 캠페인은 대중의 적대감을 성공적으로 분산시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disburse",
+    "PartOfSpeech": "verb",
+    "Meaning": "지출하다, 지급하다",
+    "Example": "The World Bank disbursed $50 million for earthquake infrastructure repair.",
+    "ExampleKo": "세계은행은 지진 피해 인프라 복구를 위해 5천만 달러를 지급했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "discredit",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "신용을 떨어뜨리다; 불신",
+    "Example": "Fabricated audit logs discredited the accountant's defense.",
+    "ExampleKo": "조작된 감사 기록은 회계사의 변론에 대한 신빙성을 떨어뜨렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disencumber",
+    "PartOfSpeech": "verb",
+    "Meaning": "해방하다, 부담을 덜다",
+    "Example": "Divesting non-core business assets disencumbered the balance sheet.",
+    "ExampleKo": "비핵심 사업 자산을 매각함으로써 재무제표의 부담을 덜었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disgorge",
+    "PartOfSpeech": "verb",
+    "Meaning": "토해내다, 부정 이득을 반환하다",
+    "Example": "The fraudulent hedge fund was ordered to disgorge $12 million.",
+    "ExampleKo": "그 사기성 헤지펀드는 1,200만 달러의 부당 이득을 반환하라는 명령을 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disseminate",
+    "PartOfSpeech": "verb",
+    "Meaning": "보급하다, 유포하다",
+    "Example": "The research center disseminated findings via open-source journals.",
+    "ExampleKo": "연구 센터는 오픈소스 학술지를 통해 연구 결과를 보급했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dissipate",
+    "PartOfSpeech": "verb",
+    "Meaning": "소멸되다, 낭비하다",
+    "Example": "Investor enthusiasm dissipated as product delays dragged on.",
+    "ExampleKo": "제품 출시 지연이 길어지면서 투자자들의 열기도 식어버렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "distort",
+    "PartOfSpeech": "verb",
+    "Meaning": "왜곡하다",
+    "Example": "Inaccurate currency reporting distorted international earnings.",
+    "ExampleKo": "부정확한 통화 보고는 해외 순이익을 왜곡했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "divest",
+    "PartOfSpeech": "verb",
+    "Meaning": "매각하다, 처분하다",
+    "Example": "The oil giant divested its retail gasoline stations to focus on exploration.",
+    "ExampleKo": "그 석유 대기업은 탐사 사업에 집중하기 위해 소매 주유소를 매각했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "elicit",
+    "PartOfSpeech": "verb",
+    "Meaning": "이끌어내다, 유도하다",
+    "Example": "The focus group elicited critical insights about customer frustrations.",
+    "ExampleKo": "포커스 그룹 인터뷰는 고객 불만 사항에 대한 중요한 통찰을 이끌어냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "elucidate",
+    "PartOfSpeech": "verb",
+    "Meaning": "명확히 설명하다",
+    "Example": "The chief technical officer elucidated the proprietary compression algorithm.",
+    "ExampleKo": "최고기술경영자(CTO)는 자체 개발한 압축 알고리즘을 명확히 설명했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "emulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "모방하다, 따라가다",
+    "Example": "Dozens of consumer electronics upstarts attempt to emulate Apple's aesthetics.",
+    "ExampleKo": "수십 개의 전자제품 신생 기업들이 애플의 미학을 모방하려 시도합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "encompass",
+    "PartOfSpeech": "verb",
+    "Meaning": "망라하다, 포함하다",
+    "Example": "The executive development track encompasses financial, operational, and ethical curricula.",
+    "ExampleKo": "임원 육성 과정은 재무, 운영, 윤리 교육과정을 모두 망라합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "encumber",
+    "PartOfSpeech": "verb",
+    "Meaning": "지장을 주다, 저당잡히다",
+    "Example": "The factory property was heavily encumbered by liens from subcontractors.",
+    "ExampleKo": "공장 부지는 하청업체들의 유치권 설정으로 심각하게 권리 행사가 제한되어 있었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "engender",
+    "PartOfSpeech": "verb",
+    "Meaning": "낳다, 불러일으키다",
+    "Example": "Transparent pay scales engender immense workplace trust and equity.",
+    "ExampleKo": "투명한 급여 체계는 직장 내 엄청난 신뢰와 공정성을 낳습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "enjoin",
+    "PartOfSpeech": "verb",
+    "Meaning": "명령하다, 금지하다",
+    "Example": "A federal injunction enjoined the competitor from selling the patented design.",
+    "ExampleKo": "연방 법원 가처분 명령은 경쟁사가 특허받은 디자인을 판매하는 것을 금지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "entail",
+    "PartOfSpeech": "verb",
+    "Meaning": "수반하다",
+    "Example": "Building a regional cold storage network entails high upfront expenditures.",
+    "ExampleKo": "지역 냉장 보관망을 구축하는 것은 높은 초기 비용을 수반합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "epitomize",
+    "PartOfSpeech": "verb",
+    "Meaning": "완벽한 본보기가 되다",
+    "Example": "The newly opened solar-powered headquarters epitomizes green corporate architecture.",
+    "ExampleKo": "새로 문을 연 태양광 본사는 친환경 기업 건축의 완벽한 본보기를 보여줍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "eradicate",
+    "PartOfSpeech": "verb",
+    "Meaning": "근절하다, 뿌리뽑다",
+    "Example": "Automated code scanners eradicated common cross-site scripting vulnerabilities.",
+    "ExampleKo": "자동화된 코드 스캐너는 흔한 사이트 간 스크립팅 취약점을 근절했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "escalate",
+    "PartOfSpeech": "verb",
+    "Meaning": "확대되다, 악화되다",
+    "Example": "Unresolved border disputes escalated into reciprocal commercial boycotts.",
+    "ExampleKo": "해결되지 않은 국경 분쟁은 상호 상업적 보이콧으로 악화되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "evict",
+    "PartOfSpeech": "verb",
+    "Meaning": "퇴거시키다, 쫓아내다",
+    "Example": "The landlord moved to evict commercial tenants three months in arrears.",
+    "ExampleKo": "건물주는 3개월간 임대료를 체납한 상가 세입자들을 퇴거 조치했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exacerbate",
+    "PartOfSpeech": "verb",
+    "Meaning": "악화시키다",
+    "Example": "Sudden fuel price spikes exacerbated existing airline profitability woes.",
+    "ExampleKo": "갑작스러운 유가 급등은 기존 항공사들의 수익성 고민을 더욱 악화시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exculpate",
+    "PartOfSpeech": "verb",
+    "Meaning": "무죄를 입증하다, 면책하다",
+    "Example": "Forensic accounting records exculpated the chief financial officer.",
+    "ExampleKo": "법회계학적 회계 기록은 최고재무책임자(CFO)의 무죄를 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exemplify",
+    "PartOfSpeech": "verb",
+    "Meaning": "전형적인 예가 되다",
+    "Example": "Her swift climb through management exemplifies corporate meritocracy.",
+    "ExampleKo": "그녀의 신속한 임원 승진은 기업 내 능력주의의 전형적인 예를 보여줍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exonerate",
+    "PartOfSpeech": "verb",
+    "Meaning": "무죄임을 밝히다",
+    "Example": "The internal whistleblowing investigation completely exonerated the compliance officer.",
+    "ExampleKo": "사내 내부고발 조사는 준법감시인의 결백을 완전히 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "expropriate",
+    "PartOfSpeech": "verb",
+    "Meaning": "수용하다, 몰수하다",
+    "Example": "The sovereign government expropriated foreign oil concessions.",
+    "ExampleKo": "주권 정부는 외국계 석유 채굴권을 국유화 수용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "expunge",
+    "PartOfSpeech": "verb",
+    "Meaning": "삭제하다, 지우다",
+    "Example": "The court ordered credit reporting bureaus to expunge outdated default records.",
+    "ExampleKo": "법원은 신용평가기관에 오래된 채무 불이행 기록을 삭제하도록 명령했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "extirpate",
+    "PartOfSpeech": "verb",
+    "Meaning": "근절하다, 완전히 없애다",
+    "Example": "Management resolved to extirpate corrupt supplier kickback schemes.",
+    "ExampleKo": "경영진은 부패한 공급업체 리베이트 관행을 완전히 근절하기로 결의했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "extrapolate",
+    "PartOfSpeech": "verb",
+    "Meaning": "추론하다, 외삽하다",
+    "Example": "Economists extrapolated annual GDP growth from early spring retail numbers.",
+    "ExampleKo": "경제학자들은 이른 봄 소매 지표를 바탕으로 연간 GDP 성장률을 추론했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "extricate",
+    "PartOfSpeech": "verb",
+    "Meaning": "구출하다, 벗어나게 하다",
+    "Example": "Strategic refinancing extricated the retail giant from impending default.",
+    "ExampleKo": "전략적 재금융을 통해 그 유통 대기업은 임박한 디폴트 위기에서 벗어났습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fabricate",
+    "PartOfSpeech": "verb",
+    "Meaning": "조작하다, 제작하다",
+    "Example": "The rogue trader fabricated audit logs to camouflage unauthorized positions.",
+    "ExampleKo": "불법 트레이더는 무단 포지션을 감추기 위해 감사 기록을 조작했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fathom",
+    "PartOfSpeech": "verb",
+    "Meaning": "헤아리다, 이해하다",
+    "Example": "Board members could hardly fathom the scope of the embezzlement scam.",
+    "ExampleKo": "이사회 구성원들은 횡령 사기 사건의 규모를 도저히 가늠할 수 없었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "foster",
+    "PartOfSpeech": "verb",
+    "Meaning": "육성하다, 촉진하다",
+    "Example": "Cross-functional design sprints foster boundless technical creativity.",
+    "ExampleKo": "부서 간 협업 디자인 스프린트는 무한한 기술적 창의성을 육성합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "galvanize",
+    "PartOfSpeech": "verb",
+    "Meaning": "충격을 주어 활기를 띠게 하다",
+    "Example": "The shocking quarterly deficit galvanized leadership into restructuring.",
+    "ExampleKo": "충격적인 분기 적자는 경영진이 구조조정에 착수하도록 자극을 주었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "garner",
+    "PartOfSpeech": "verb",
+    "Meaning": "모으다, 얻다",
+    "Example": "The clean-tech startup garnered $100 million in venture commitments.",
+    "ExampleKo": "그 클린테크 스타트업은 1억 달러의 벤처 투자 확약을 얻어냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "harness",
+    "PartOfSpeech": "verb",
+    "Meaning": "활용하다, 동력화하다",
+    "Example": "Solar farms in Nevada harness intense desert sunlight.",
+    "ExampleKo": "네바다의 태양광 발전소는 강렬한 사막의 햇빛을 활용합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hedge",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "위험을 회피하다; 방책",
+    "Example": "Airlines routinely hedge jet kerosene futures against market spikes.",
+    "ExampleKo": "항공사들은 시장 가격 급등에 대비하여 항공유 선물을 일상적으로 헤지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "herald",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "예고하다, 알리다; 선구자",
+    "Example": "The clinical success heralds a revolutionary era in gene editing.",
+    "ExampleKo": "임상적 성공은 유전자 편집의 혁명적인 시대를 예고합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impair",
+    "PartOfSpeech": "verb",
+    "Meaning": "손상시키다, 악화시키다",
+    "Example": "Prolonged high interest rates severely impair commercial real estate values.",
+    "ExampleKo": "지속적인 고금리는 상업용 부동산 가치를 심각하게 손상시킵니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impede",
+    "PartOfSpeech": "verb",
+    "Meaning": "방해하다, 저해하다",
+    "Example": "Cumbersome regulatory red tape impedes foreign direct investment.",
+    "ExampleKo": "번거로운 규제 관료주의는 외국인 직접투자를 저해합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "indict",
+    "PartOfSpeech": "verb",
+    "Meaning": "기소하다, 고발하다",
+    "Example": "A grand jury indicted the former chief executive for insider trading.",
+    "ExampleKo": "대배심은 전 최고경영자를 내부자 거래 혐의로 기소했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "instigate",
+    "PartOfSpeech": "verb",
+    "Meaning": "부추기다, 선동하다",
+    "Example": "Competitors instigated a smear campaign across social networks.",
+    "ExampleKo": "경쟁사들은 소셜 네트워크 전반에 걸쳐 비방 캠페인을 부추겼습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "inundate",
+    "PartOfSpeech": "verb",
+    "Meaning": "쇄도하다, 감당 못하게 몰려들다",
+    "Example": "Customer support centers were inundated with calls following the outage.",
+    "ExampleKo": "서비스 중단 이후 고객지원센터에는 전화가 쇄도했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "litigate",
+    "PartOfSpeech": "verb",
+    "Meaning": "소송하다",
+    "Example": "Parties preferred arbitration over choosing to litigate in state court.",
+    "ExampleKo": "당사자들은 주 법원에서 소송을 진행하기보다 중재를 선호했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "marginalize",
+    "PartOfSpeech": "verb",
+    "Meaning": "하찮은 존재로 만들다, 배제하다",
+    "Example": "Technological shifts marginalized traditional brick-and-mortar storefronts.",
+    "ExampleKo": "기술적 변화는 전통적인 오프라인 매장들을 소외시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "mollify",
+    "PartOfSpeech": "verb",
+    "Meaning": "달래다, 진정시키다",
+    "Example": "Generous refunds failed to mollify infuriated airline customers.",
+    "ExampleKo": "후한 환불 조치도 격분한 항공사 고객들을 달래지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "nullify",
+    "PartOfSpeech": "verb",
+    "Meaning": "무효화하다",
+    "Example": "A procedural oversight nullified the international joint-venture pact.",
+    "ExampleKo": "절차상의 실수로 인해 국제 합작 투자 협약이 무효화되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "obfuscate",
+    "PartOfSpeech": "verb",
+    "Meaning": "혼란스럽게 하다, 애매하게 만들다",
+    "Example": "The convoluted prospectus attempted to obfuscate actual borrowing costs.",
+    "ExampleKo": "복잡하게 꼬인 투자 설명서는 실제 차입 비용을 모호하게 만들려 했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "obviate",
+    "PartOfSpeech": "verb",
+    "Meaning": "제거하다, 불필요하게 하다",
+    "Example": "Digital signatures obviate the cumbersome need for physical paper exchanges.",
+    "ExampleKo": "전자 서명은 번거로운 실물 서류 교환의 필요성을 없애줍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "oscillate",
+    "PartOfSpeech": "verb",
+    "Meaning": "진동하다, 요동치다",
+    "Example": "Crude oil benchmarks oscillated between $70 and $95 throughout the quarter.",
+    "ExampleKo": "원유 기준가는 분기 내내 70달러에서 95달러 사이를 오르내렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "outlaw",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "불법화하다; 무법자",
+    "Example": "The European Union outlawed single-use plastic restaurant utensils.",
+    "ExampleKo": "유럽연합은 식당의 일회용 플라스틱 식기류 사용을 불법화했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "palliative",
+    "PartOfSpeech": "adj/noun",
+    "Meaning": "임시방편의; 완화제",
+    "Example": "Slashing interest rates proved merely a palliative remedy for structural debt.",
+    "ExampleKo": "금리 인하는 구조적 부채에 대한 단순한 임시방편임이 드러났습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "permeate",
+    "PartOfSpeech": "verb",
+    "Meaning": "스며들다, 퍼지다",
+    "Example": "Safety awareness permeates every level of manufacturing hierarchy.",
+    "ExampleKo": "안전 의식은 제조 현장의 모든 직급에 깊이 스며들어 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "perpetuate",
+    "PartOfSpeech": "verb",
+    "Meaning": "영속시키다",
+    "Example": "Inadequate internal audits perpetuate payroll inefficiencies.",
+    "ExampleKo": "부실한 내부 감사는 급여 관리의 비효율성을 지속시킵니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "plummet",
+    "PartOfSpeech": "verb",
+    "Meaning": "폭락하다, 곤두박질치다",
+    "Example": "Quarterly profit margins plummeted following semiconductor shortages.",
+    "ExampleKo": "반도체 품귀 현상 이후 분기 이익 마진이 폭락했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "polarize",
+    "PartOfSpeech": "verb",
+    "Meaning": "양극화하다",
+    "Example": "The proposed executive severance bonus polarized the shareholder assembly.",
+    "ExampleKo": "제안된 임원 퇴직 보너스는 주주총회의 의견을 첨예하게 양극화시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "postulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "가정하다, 상정하다",
+    "Example": "The marketing director postulated that luxury buyers prioritize sustainability.",
+    "ExampleKo": "마케팅 이사는 명품 구매자들이 지속가능성을 최우선으로 여긴다고 가정했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "preclude",
+    "PartOfSpeech": "verb",
+    "Meaning": "배제하다, 불가능하게 하다",
+    "Example": "A non-compete clause precludes former executives from joining rivals.",
+    "ExampleKo": "경업금지 조항은 전직 임원이 경쟁사에 입사하는 것을 원천 차단합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "predispose",
+    "PartOfSpeech": "verb",
+    "Meaning": "성향을 갖게 하다",
+    "Example": "Early positive brand touchpoints predispose consumers toward future subscriptions.",
+    "ExampleKo": "초기의 긍정적인 브랜드 접점은 소비자가 향후 구독하도록 유도합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prescribe",
+    "PartOfSpeech": "verb",
+    "Meaning": "규정하다, 처방하다",
+    "Example": "The company code prescribes exact accounting procedures for bonuses.",
+    "ExampleKo": "사규는 상여금에 대한 정확한 회계 처리 절차를 규정하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prevail",
+    "PartOfSpeech": "verb",
+    "Meaning": "만연하다, 승리하다",
+    "Example": "Cooler heads prevailed during high-stakes union negotiation sessions.",
+    "ExampleKo": "중대한 노사 협상 회의 중 냉철한 이성이 결국 승리했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prognosticate",
+    "PartOfSpeech": "verb",
+    "Meaning": "예언하다, 예측하다",
+    "Example": "Wall Street strategists prognosticate a robust rally in tech equities.",
+    "ExampleKo": "월가 전략가들은 기술주 주식의 강력한 랠리를 예측하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "proliferate",
+    "PartOfSpeech": "verb",
+    "Meaning": "급증하다, 확산되다",
+    "Example": "Digital fintech solutions proliferated rapidly across emerging Asian economies.",
+    "ExampleKo": "디지털 핀테크 솔루션은 아시아 신흥 경제국 전반에 걸쳐 급속도로 확산되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "promulgate",
+    "PartOfSpeech": "verb",
+    "Meaning": "공포하다, 널리 알리다",
+    "Example": "The Department of Transportation promulgated revised commercial pilot rest rules.",
+    "ExampleKo": "교통부는 개정된 민간 항공기 조종사 휴식 규정을 공포했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "propagate",
+    "PartOfSpeech": "verb",
+    "Meaning": "전파하다, 증식시키다",
+    "Example": "Submarine fiber cables propagate gigabit optical pulses across oceans.",
+    "ExampleKo": "해저 광케이블은 대양을 가로질러 기가비트 광 신호를 전파합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "recalibrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "재조정하다",
+    "Example": "Central banks recalibrated interest rate guidance to match revised inflation.",
+    "ExampleKo": "중앙은행들은 수정된 인플레이션에 맞춰 금리 전망 지침을 재조정했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "recapitulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "요약하다",
+    "Example": "The presenter recapitulated key takeaways before opening for questions.",
+    "ExampleKo": "발표자는 질의응답을 시작하기 전에 핵심 요점을 다시 요약했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "reciprocate",
+    "PartOfSpeech": "verb",
+    "Meaning": "화답하다, 보답하다",
+    "Example": "Trade partners reciprocated by lowering import tariffs on agricultural shipments.",
+    "ExampleKo": "무역 파트너들은 농산물 선적에 대한 수입 관세를 인하함으로써 화답했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "reiterate",
+    "PartOfSpeech": "verb",
+    "Meaning": "되풀이하다, 반복하다",
+    "Example": "The CFO reiterated her absolute commitment to preserving dividend payouts.",
+    "ExampleKo": "CFO는 배당금 지급을 유지하겠다는 확고한 약속을 다시 한번 되풀이했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "remonstrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "항의하다, 이의를 제기하다",
+    "Example": "The trade coalition remonstrated against unilateral carbon border tariffs.",
+    "ExampleKo": "무역 연합은 일방적인 탄소 국경 관세에 대해 강력히 항의했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "renounce",
+    "PartOfSpeech": "verb",
+    "Meaning": "포기하다, 단념하다",
+    "Example": "The treaty obliged signatories to renounce chemical weapon proliferation.",
+    "ExampleKo": "그 조약은 서명국들에게 화학무기 확산을 포기하도록 의무화했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "repudiate",
+    "PartOfSpeech": "verb",
+    "Meaning": "부인하다, 거부하다",
+    "Example": "The incoming president repudiated bilateral accords signed by predecessors.",
+    "ExampleKo": "신임 대통령은 전임자가 체결한 양자 협정을 공식 부인하고 파기했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "salvage",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "구조하다, 회수하다; 인양",
+    "Example": "Insolvency specialists salvaged $40 million by auctioning logistics real estate.",
+    "ExampleKo": "파산 전문 관리인들은 물류 부동산 경매를 통해 4천만 달러를 회수했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "sequestrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "가압류하다, 몰수하다",
+    "Example": "Customs agents sequestrated illicit shipments of counterfeit semiconductors.",
+    "ExampleKo": "세관원들은 불법 위조 반도체 선적물을 가압류했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "simulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "모의실험하다, 흉내내다",
+    "Example": "Crash tests simulate high-velocity impact physics with immense fidelity.",
+    "ExampleKo": "충돌 테스트는 고속 충돌 물리 현상을 대단히 정밀하게 시뮬레이션합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "subjugate",
+    "PartOfSpeech": "verb",
+    "Meaning": "복종시키다, 지배하다",
+    "Example": "Monopoly carriers subjugated regional commuter routes, jacking fares.",
+    "ExampleKo": "독점 항공사들은 지역 통근 노선을 장악하고 운임을 대폭 인상했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "subpoena",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "소환장을 발부하다; 소환장",
+    "Example": "Federal prosecutors subpoenaed company executives to provide internal accounting logs.",
+    "ExampleKo": "연방 검찰은 사내 회계 장부를 제출하도록 기업 임원들에게 소환장을 발부했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "substantiate",
+    "PartOfSpeech": "verb",
+    "Meaning": "입증하다, 실증하다",
+    "Example": "The patent holder substantiated infringement allegations with lab tests.",
+    "ExampleKo": "특허권자는 실험실 분석을 통해 침해 주장을 명확히 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "surmise",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "추측하다; 추측",
+    "Example": "Analysts surmise that the surprise divestment aims to trim debt.",
+    "ExampleKo": "애널리스트들은 깜짝 자산 매각이 부채를 줄이기 위한 것으로 추측합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "thwart",
+    "PartOfSpeech": "verb",
+    "Meaning": "좌절시키다, 방해하다",
+    "Example": "Coordinated cybersecurity shields thwarted sophisticated phishing intrusions.",
+    "ExampleKo": "체계적인 사이버 보안 방어망은 정교한 피싱 침입 시도를 좌절시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "transcribe",
+    "PartOfSpeech": "verb",
+    "Meaning": "기록하다, 전사하다",
+    "Example": "Stenographers transcribe every word uttered during corporate depositions.",
+    "ExampleKo": "속기사들은 기업 증언 녹취 중 나온 모든 발언을 그대로 기록합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "truncate",
+    "PartOfSpeech": "verb",
+    "Meaning": "길이를 줄이다, 단축하다",
+    "Example": "The executive presentation was truncated due to unforeseen fire drills.",
+    "ExampleKo": "예상치 못한 소방 훈련으로 인해 임원 보고 프레젠테이션이 단축되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "underwrite",
+    "PartOfSpeech": "verb",
+    "Meaning": "인수하다, 비용을 부담하다",
+    "Example": "Investment banking syndicates underwrote the $2 billion stock offering.",
+    "ExampleKo": "투자은행 신디케이트는 20억 달러 규모의 신주 인수를 주관했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "usurp",
+    "PartOfSpeech": "verb",
+    "Meaning": "강탈하다, 찬탈하다",
+    "Example": "The minority activist fund usurped control over the board of directors.",
+    "ExampleKo": "소수파 주주행동 펀드는 이사회의 지배권을 강탈했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vacate",
+    "PartOfSpeech": "verb",
+    "Meaning": "비우다, 떠나다",
+    "Example": "Tenants must vacate the commercial premises upon lease expiration.",
+    "ExampleKo": "세입자는 임대차 계약 만료 시 상가 건물을 비워주어야 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "venerate",
+    "PartOfSpeech": "verb",
+    "Meaning": "존경하다, 숭배하다",
+    "Example": "Employees venerate the founder's visionary philanthropic philanthropy.",
+    "ExampleKo": "임직원들은 창업자의 선견지명 있는 자선 철학을 깊이 존경합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vindicate",
+    "PartOfSpeech": "verb",
+    "Meaning": "정당성을 입증하다, 무죄를 밝히다",
+    "Example": "Soaring quarterly profits vindicated the CEO's controversial acquisition.",
+    "ExampleKo": "급등한 분기 순이익은 논란이 많았던 CEO의 기업 인수가 정당했음을 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vitiate",
+    "PartOfSpeech": "verb",
+    "Meaning": "가치를 떨어뜨리다, 무효화하다",
+    "Example": "A technical fraud clause vitiates the validity of commercial warranties.",
+    "ExampleKo": "기술적 사기 조항은 상업 보증의 유효성을 무효화합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "warrant",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "보증하다, 정당화하다; 보증서",
+    "Example": "Market volatility does not warrant panic liquidation of balanced portfolios.",
+    "ExampleKo": "시장 변동성이 균형 잡힌 포트폴리오를 공포에 질려 청산하는 것을 정당화하지는 않습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aberration",
+    "PartOfSpeech": "noun",
+    "Meaning": "탈선, 일탈, 이상",
+    "Example": "The quarterly loss was described as an anomaly and an accounting aberration.",
+    "ExampleKo": "분기 손실은 일시적인 기상이변이자 회계상의 이례적인 일탈로 설명되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "abeyance",
+    "PartOfSpeech": "noun",
+    "Meaning": "중지, 보류",
+    "Example": "Contract negotiations remain in abeyance until regulatory approval.",
+    "ExampleKo": "계약 협상은 규제 승인이 날 때까지 잠정 중류 상태로 남아 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "acquiescence",
+    "PartOfSpeech": "noun",
+    "Meaning": "묵인, 순종",
+    "Example": "Tacit acquiescence from shareholders allowed the controversial merger to pass.",
+    "ExampleKo": "주주들의 암묵적인 묵인 덕분에 논란의 여지가 많았던 합병안이 통과될 수 있었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "acrimony",
+    "PartOfSpeech": "noun",
+    "Meaning": "악다구니, 신랄함, 적대감",
+    "Example": "The board dissolved in bitter acrimony following the takeover battle.",
+    "ExampleKo": "경영권 인수 분쟁 이후 이사회는 극심한 적대감 속에 해산되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "actuary",
+    "PartOfSpeech": "noun",
+    "Meaning": "보험계리사",
+    "Example": "The chief actuary recalculated life insurance risk reserves.",
+    "ExampleKo": "수석 보험계리사는 생명보험 위험 준비금을 재계산했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "adjudication",
+    "PartOfSpeech": "noun",
+    "Meaning": "재판, 판결",
+    "Example": "Formal adjudication of the patent claim will take eighteen months.",
+    "ExampleKo": "특허 청구에 대한 공식적인 판결에는 18개월이 소요될 것입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "admonition",
+    "PartOfSpeech": "noun",
+    "Meaning": "경고, 책망",
+    "Example": "The auditor's report closed with a stern admonition regarding compliance.",
+    "ExampleKo": "감사 보고서는 규정 준수에 대한 엄격한 경고로 마무리되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "affinity",
+    "PartOfSpeech": "noun",
+    "Meaning": "친밀감, 밀접한 관계",
+    "Example": "Consumers feel strong affinity toward brands championing fair trade.",
+    "ExampleKo": "소비자들은 공정무역을 옹호하는 브랜드에 강한 친밀감을 느낍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "affluence",
+    "PartOfSpeech": "noun",
+    "Meaning": "풍요, 부",
+    "Example": "Rising urban affluence stimulated robust demand for luxury retail goods.",
+    "ExampleKo": "도시 지역의 소득 증대는 명품 소매 제품에 대한 탄탄한 수요를 자극했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aftermath",
+    "PartOfSpeech": "noun",
+    "Meaning": "여파, 후유증",
+    "Example": "In the aftermath of the server outage, IT installed redundancy arrays.",
+    "ExampleKo": "서버 장애의 여파로 IT 부서는 이중화 시스템을 설치했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "alacrity",
+    "PartOfSpeech": "noun",
+    "Meaning": "민활함, 기민함",
+    "Example": "The response team handled client security alerts with astonishing alacrity.",
+    "ExampleKo": "대응팀은 놀라운 기민함으로 고객 보안 경보를 처리했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "alienation",
+    "PartOfSpeech": "noun",
+    "Meaning": "소외, 멀어짐",
+    "Example": "Poor internal communications caused employee alienation across plants.",
+    "ExampleKo": "미흡한 사내 소통은 공장 전반에 걸쳐 직원들의 소외감을 유발했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "allegation",
+    "PartOfSpeech": "noun",
+    "Meaning": "혐의, 주장",
+    "Example": "Independent auditors probed allegations of falsified emissions data.",
+    "ExampleKo": "독립 감사관들은 배출가스 데이터 조작 의혹을 철저히 조사했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ambiguity",
+    "PartOfSpeech": "noun",
+    "Meaning": "모호성",
+    "Example": "Eliminating contractual ambiguity prevents protracted courtroom disputes.",
+    "ExampleKo": "계약서상의 모호성을 제거하면 장기적인 법정 분쟁을 방지할 수 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "amortization",
+    "PartOfSpeech": "noun",
+    "Meaning": "상환, 감가상각",
+    "Example": "Goodwill amortization expenses affected third quarter GAAP profits.",
+    "ExampleKo": "영업권 상각 비용이 3분기 GAAP 기준 순이익에 영향을 미쳤습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "anachronism",
+    "PartOfSpeech": "noun",
+    "Meaning": "시대착오",
+    "Example": "Relying on paper fax machines in modern logistics is an anachronism.",
+    "ExampleKo": "현대 물류에서 종이 팩스에 의존하는 것은 시대착오적인 발상입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "animus",
+    "PartOfSpeech": "noun",
+    "Meaning": "반감, 적대감",
+    "Example": "The bitter corporate lawsuit showed evident personal animus between founders.",
+    "ExampleKo": "치열한 기업 소송은 창업자들 간의 명백한 개인적 반감을 드러냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "anomaly",
+    "PartOfSpeech": "noun",
+    "Meaning": "변칙, 이례",
+    "Example": "The unexpected dip in retail volume was an isolated statistical anomaly.",
+    "ExampleKo": "소매 거래량의 예상치 못한 감소는 단발적인 통계적 변칙이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "antiquity",
+    "PartOfSpeech": "noun",
+    "Meaning": "고대, 낡음",
+    "Example": "The warehouse equipment's antiquity necessitated total replacement.",
+    "ExampleKo": "물류창고 설비의 노후화로 인해 전면적인 교체가 불가피했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "antitrust",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "독점 금지의",
+    "Example": "Antitrust regulators blocked the proposed telecom mega-merger.",
+    "ExampleKo": "반독점 규제 당국은 제안된 대형 통신사 합병을 저지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apathy",
+    "PartOfSpeech": "noun",
+    "Meaning": "무관심, 냉담",
+    "Example": "Shareholder apathy resulted in shockingly low voter proxy turnout.",
+    "ExampleKo": "주주들의 무관심으로 인해 의결권 행사 투표율이 충격적으로 저조했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apparatus",
+    "PartOfSpeech": "noun",
+    "Meaning": "장치, 기구, 기구 체계",
+    "Example": "The sophisticated lab apparatus measures gas purity to parts-per-billion.",
+    "ExampleKo": "정밀한 실험실 장치는 기체 순도를 ppb 단위까지 측정합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apprehension",
+    "PartOfSpeech": "noun",
+    "Meaning": "불안, 우려",
+    "Example": "Market apprehension deepened as central banks raised key interest rates.",
+    "ExampleKo": "중앙은행들이 기준금리를 인상함에 따라 시장의 우려가 깊어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "approbation",
+    "PartOfSpeech": "noun",
+    "Meaning": "찬성, 인정, 승인",
+    "Example": "The board expressed enthusiastic approbation for the restructuring plan.",
+    "ExampleKo": "이사회는 구조조정 계획에 대해 열렬한 찬성과 승인을 표명했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "arbitrator",
+    "PartOfSpeech": "noun",
+    "Meaning": "중재자",
+    "Example": "The court-appointed arbitrator settled the royalties grievance amicably.",
+    "ExampleKo": "법원이 지정한 중재인은 로열티 관련 분쟁을 원만하게 해결했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "artisan",
+    "PartOfSpeech": "noun",
+    "Meaning": "장인, 숙련공",
+    "Example": "Master artisans hand-stitch leather upholstery for bespoke limousines.",
+    "ExampleKo": "숙련된 장인들이 맞춤형 리무진을 위한 가죽 시트를 수작업으로 바느질합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "assertion",
+    "PartOfSpeech": "noun",
+    "Meaning": "주장, 단언",
+    "Example": "The patent holder's assertion of infringement was dismissed for lack of proof.",
+    "ExampleKo": "특허권자의 침해 주장은 증거 부족으로 기각되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "asymmetry",
+    "PartOfSpeech": "noun",
+    "Meaning": "비대칭, 불균형",
+    "Example": "Information asymmetry gives institutional hedge funds unfair market edges.",
+    "ExampleKo": "정보의 비대칭성은 기관 헤지펀드에 불공정한 시장 우위를 제공합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "atrocity",
+    "PartOfSpeech": "noun",
+    "Meaning": "잔학 행위, 심한 악행",
+    "Example": "Regulatory fines punished corporate atrocities against local wetlands.",
+    "ExampleKo": "지역 습지를 파괴한 기업의 극악한 행위에 대해 규제 과징금이 부과되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "audacity",
+    "PartOfSpeech": "noun",
+    "Meaning": "대담함, 뻔뻔함",
+    "Example": "The executive had the audacity to ask for bonuses despite massive losses.",
+    "ExampleKo": "그 임원은 막대한 손실에도 불구하고 뻔뻔하게 보너스를 요구했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "austerity",
+    "PartOfSpeech": "noun",
+    "Meaning": "긴축, 엄격함",
+    "Example": "Fiscal austerity measures stabilized sovereign debt yields.",
+    "ExampleKo": "재정 긴축 조치로 국채 수익률이 안정되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "autocracy",
+    "PartOfSpeech": "noun",
+    "Meaning": "전제정치, 독재체제",
+    "Example": "The founder's managerial autocracy stifled junior employee initiative.",
+    "ExampleKo": "창업자의 독재적 경영 스타일은 하급 직원들의 자발적 창의성을 억눌렀습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "autonomy",
+    "PartOfSpeech": "noun",
+    "Meaning": "자율성, 자주권",
+    "Example": "Regional branches operate with wide strategic autonomy.",
+    "ExampleKo": "지역 지사들은 폭넓은 전략적 자율성을 가지고 운영됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aversion",
+    "PartOfSpeech": "noun",
+    "Meaning": "혐오, 기피",
+    "Example": "Risk aversion among conservative investors boosted gold bullion purchases.",
+    "ExampleKo": "보수적인 투자자들의 위험 기피 성향으로 골드바 매수가 급증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "backlog",
+    "PartOfSpeech": "noun",
+    "Meaning": "밀린 일, 주문 잔고",
+    "Example": "The semiconductor fabrication facility maintains an eight-month order backlog.",
+    "ExampleKo": "그 반도체 제조 시설은 8개월 치의 주문 잔고를 보유하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "barometer",
+    "PartOfSpeech": "noun",
+    "Meaning": "기압계, 척도, 지표",
+    "Example": "Packaging freight volumes serve as a reliable barometer of trade health.",
+    "ExampleKo": "포장 화물 운송량은 무역 건전성을 가늠하는 신뢰할 수 있는 척도 역할을 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "benevolence",
+    "PartOfSpeech": "noun",
+    "Meaning": "자비심, 박애",
+    "Example": "Corporate benevolence funds university scholarships for low-income youths.",
+    "ExampleKo": "기업의 자선 기금은 저소득층 청소년을 위한 대학 장학금을 지원합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "bequest",
+    "PartOfSpeech": "noun",
+    "Meaning": "유산, 유증",
+    "Example": "A multi-million dollar bequest established the medical oncology pavilion.",
+    "ExampleKo": "수백만 달러의 유산 기부를 통해 암 전문 병동이 설립되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "boon",
+    "PartOfSpeech": "noun",
+    "Meaning": "요긴한 것, 혜택",
+    "Example": "Lower ocean container freight rates were an enormous boon for exporters.",
+    "ExampleKo": "해상 컨테이너 운임 하락은 수출업체들에게 거대한 혜택이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "boycott",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "보이콧, 불매운동",
+    "Example": "Consumers initiated a nationwide boycott against unethical cosmetic brands.",
+    "ExampleKo": "소비자들은 비윤리적인 화장품 브랜드를 상대로 전국적인 불매운동을 시작했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "bureaucracy",
+    "PartOfSpeech": "noun",
+    "Meaning": "관료주의",
+    "Example": "Dismantling corporate bureaucracy accelerated green project approval by weeks.",
+    "ExampleKo": "기업 관료주의를 철폐함으로써 친환경 프로젝트 승인 기간을 수주일 앞당겼습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "caliber",
+    "PartOfSpeech": "noun",
+    "Meaning": "자질, 역량, 구경",
+    "Example": "We recruit engineers of the absolute highest intellectual caliber.",
+    "ExampleKo": "저희는 최고 수준의 지적 역량을 갖춘 엔지니어들을 채용합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "camaraderie",
+    "PartOfSpeech": "noun",
+    "Meaning": "동지애, 우정",
+    "Example": "Team-building wilderness retreats foster genuine workplace camaraderie.",
+    "ExampleKo": "야외 팀 빌딩 워크숍은 진정한 직장 내 동지애를 키워줍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "candor",
+    "PartOfSpeech": "noun",
+    "Meaning": "솔직함, 허심탄회함",
+    "Example": "The CEO addressed quarterly operational failures with refreshing candor.",
+    "ExampleKo": "CEO는 신선할 정도의 솔직함으로 분기 운영 실패에 대해 언급했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "capitalism",
+    "PartOfSpeech": "noun",
+    "Meaning": "자본주의",
+    "Example": "Free-market capitalism rewards scalable technical innovation.",
+    "ExampleKo": "자유 시장 자본주의는 확장 가능한 기술 혁신에 보답합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "capitulation",
+    "PartOfSpeech": "noun",
+    "Meaning": "굴복, 항복",
+    "Example": "Market capitulation marked the exact bottom of the multi-year bear cycle.",
+    "ExampleKo": "시장의 백기 투항은 수년간 이어진 약세장의 정확한 바닥을 알렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "caveat",
+    "PartOfSpeech": "noun",
+    "Meaning": "경고, 유의 사항",
+    "Example": "The agreement contains a caveat regarding currency exchange limits.",
+    "ExampleKo": "계약서에는 환율 변동 한도에 관한 유의 사항이 포함되어 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "cessation",
+    "PartOfSpeech": "noun",
+    "Meaning": "중지, 중단",
+    "Example": "A complete cessation of hostilities allowed cargo ships to enter ports safely.",
+    "ExampleKo": "교전 행위의 완전한 중단으로 화물선들이 안전하게 항구에 입항할 수 있었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "circumvention",
+    "PartOfSpeech": "noun",
+    "Meaning": "우회, 회피",
+    "Example": "Software updates eliminated loopholes used for licensing fee circumvention.",
+    "ExampleKo": "소프트웨어 업데이트로 라이선스 비용 회피에 사용되던 허점이 사라졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "clemency",
+    "PartOfSpeech": "noun",
+    "Meaning": "관용, 자비",
+    "Example": "Tax authorities offered clemency to firms voluntarily disclosing offshore accounts.",
+    "ExampleKo": "세무 당국은 역외 계좌를 자진 신고한 기업에 관용을 베풀었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "coalition",
+    "PartOfSpeech": "noun",
+    "Meaning": "연합체, 동맹",
+    "Example": "Retailers formed a coalition to negotiate lower merchant processing fees.",
+    "ExampleKo": "소매업체들은 가맹점 결제 수수료 인하를 협상하기 위해 연합체를 결성했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "coercion",
+    "PartOfSpeech": "noun",
+    "Meaning": "강제, 강압",
+    "Example": "The trade regulator investigated allegations of price coercion by distributors.",
+    "ExampleKo": "무역 규제 당국은 유통업체들의 가격 강압 의혹을 조사했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "collusion",
+    "PartOfSpeech": "noun",
+    "Meaning": "공모, 담합",
+    "Example": "Two petrochemical rivals were fined $80 million for illegal price collusion.",
+    "ExampleKo": "두 석유화학 경쟁사는 불법 가격 담합으로 8천만 달러의 벌금을 부과받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "commencement",
+    "PartOfSpeech": "noun",
+    "Meaning": "시작, 개시",
+    "Example": "Notice will be provided ten days prior to construction commencement.",
+    "ExampleKo": "공사 시작 10일 전에 사전 통지가 제공될 것입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "competence",
+    "PartOfSpeech": "noun",
+    "Meaning": "능력, 적격성",
+    "Example": "The committee evaluated the technical competence of bidding defense contractors.",
+    "ExampleKo": "위원회는 입찰에 참여한 방산업체들의 기술적 적격성을 평가했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "connoisseur",
+    "PartOfSpeech": "noun",
+    "Meaning": "감정가, 전문가",
+    "Example": "Art connoisseurs validated the authenticity of the Renaissance oil painting.",
+    "ExampleKo": "미술 감정가들이 르네상스 유화의 진품 여부를 확인했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "convergence",
+    "PartOfSpeech": "noun",
+    "Meaning": "융합, 수렴",
+    "Example": "The convergence of artificial intelligence and biotechnology accelerates medicine.",
+    "ExampleKo": "인공지능과 생명공학의 융합은 의학 발전을 가속화하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "criterion",
+    "PartOfSpeech": "noun",
+    "Meaning": "기준 (복수형: criteria)",
+    "Example": "Safety records are the foremost criterion for selecting construction subcontractors.",
+    "ExampleKo": "안전 기록은 건설 하청업체를 선정할 때 가장 중요한 기준입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "culmination",
+    "PartOfSpeech": "noun",
+    "Meaning": "정점, 최고조",
+    "Example": "The new drug approval was the culmination of fifteen years of clinical work.",
+    "ExampleKo": "신약 승인은 15년간의 임상 연구가 맺은 결실의 정점이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "curatorship",
+    "PartOfSpeech": "noun",
+    "Meaning": "큐레이터직, 관리직",
+    "Example": "She assumed museum curatorship after serving as chief archivist.",
+    "ExampleKo": "그녀는 수석 기록보관사로 일한 후 박물관 큐레이터직을 맡았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "custody",
+    "PartOfSpeech": "noun",
+    "Meaning": "보관, 관리, 양육권",
+    "Example": "The bank provides institutional custody services for digital assets.",
+    "ExampleKo": "그 은행은 디지털 자산에 대한 기관 수탁 보관 서비스를 제공합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dearth",
+    "PartOfSpeech": "noun",
+    "Meaning": "부족, 결핍",
+    "Example": "A critical dearth of skilled welders slowed shipyard output.",
+    "ExampleKo": "숙련된 용접공의 심각한 부족으로 조선소 생산이 지연되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "debacle",
+    "PartOfSpeech": "noun",
+    "Meaning": "대실패, 와해",
+    "Example": "The marketing debacle wiped $2 billion off the brand's valuation.",
+    "ExampleKo": "마케팅 대참사로 인해 브랜드 가치에서 20억 달러가 증발했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "debris",
+    "PartOfSpeech": "noun",
+    "Meaning": "잔해, 부스러기",
+    "Example": "Crews cleared hazardous debris from the tarmac after the storm.",
+    "ExampleKo": "작업반은 폭풍 후 활주로에서 위험한 잔해들을 치웠습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deficiency",
+    "PartOfSpeech": "noun",
+    "Meaning": "결핍, 부족",
+    "Example": "The audit exposed serious internal control deficiencies in payroll.",
+    "ExampleKo": "감사는 급여 지급 부서의 심각한 내부 통제 결함을 드러냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "delinquency",
+    "PartOfSpeech": "noun",
+    "Meaning": "체납, 연체",
+    "Example": "Mortgage loan delinquency rates fell to historic lows this year.",
+    "ExampleKo": "주택담보대출 연체율이 올해 사상 최저치로 떨어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demarcation",
+    "PartOfSpeech": "noun",
+    "Meaning": "경계 설정, 구분",
+    "Example": "Clear role demarcation prevents overlap between product and engineering.",
+    "ExampleKo": "명확한 역할 구분은 제품팀과 개발팀 간의 중복을 방지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demise",
+    "PartOfSpeech": "noun",
+    "Meaning": "종말, 사망",
+    "Example": "Slow digital adoption precipitated the historic department store's demise.",
+    "ExampleKo": "느린 디지털 전환이 그 유서 깊은 백화점의 몰락을 재촉했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demurrage",
+    "PartOfSpeech": "noun",
+    "Meaning": "체선료, 체화료",
+    "Example": "Ocean shippers paid demurrage fees for containers stuck at port.",
+    "ExampleKo": "해상 운송업체들은 항구에 발이 묶인 컨테이너에 대해 체화료를 지불했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "derivation",
+    "PartOfSpeech": "noun",
+    "Meaning": "유래, 파생",
+    "Example": "The drug's derivation from rare Amazonian plants was detailed in journals.",
+    "ExampleKo": "그 약물이 희귀한 아마존 식물에서 유래했다는 점이 학술지에 상세히 기술되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "derivative",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "파생상품; 파생적인",
+    "Example": "Trading complex credit derivatives requires sophisticated algorithmic models.",
+    "ExampleKo": "복잡한 신용 파생상품을 거래하려면 정교한 알고리즘 모델이 필요합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "designation",
+    "PartOfSpeech": "noun",
+    "Meaning": "지정, 명칭",
+    "Example": "The port secured official free trade zone designation from the treasury.",
+    "ExampleKo": "그 항구는 재무부로부터 공식 자유무역지역 지정을 확보했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "detriment",
+    "PartOfSpeech": "noun",
+    "Meaning": "손상, 손해",
+    "Example": "Overworking developers worked to the ultimate detriment of code quality.",
+    "ExampleKo": "개발자들에게 과도한 업무를 부과한 것은 결국 코드 품질에 손해를 끼쳤습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "diminution",
+    "PartOfSpeech": "noun",
+    "Meaning": "감소, 축소",
+    "Example": "The brand suffered a marked diminution in consumer prestige after product recalls.",
+    "ExampleKo": "제품 리콜 이후 그 브랜드는 소비자 평판에서 현저한 하락을 겪었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disbursement",
+    "PartOfSpeech": "noun",
+    "Meaning": "지출, 지급",
+    "Example": "Disbursement of grant funds is contingent upon meeting project milestones.",
+    "ExampleKo": "보조금 지급은 프로젝트 이정표 달성을 조건으로 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disparity",
+    "PartOfSpeech": "noun",
+    "Meaning": "격차, 불균형",
+    "Example": "The executive committee addressed wage disparity between headquarters and regional branches.",
+    "ExampleKo": "집행위원회는 본사와 지역 지사 간의 임금 격차 문제를 다루었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disposition",
+    "PartOfSpeech": "noun",
+    "Meaning": "배치, 처분, 성향",
+    "Example": "Asset disposition proceeds will be used to pay down senior bank debt.",
+    "ExampleKo": "자산 처분 수익금은 선순위 은행 부채를 상환하는 데 사용될 것입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dissolution",
+    "PartOfSpeech": "noun",
+    "Meaning": "해산, 소멸",
+    "Example": "The formal dissolution of the corporate joint venture was completed yesterday.",
+    "ExampleKo": "기업 합작 투자의 공식적인 해산이 어제 완료되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "divestiture",
+    "PartOfSpeech": "noun",
+    "Meaning": "자산 매각, 기업 분할",
+    "Example": "The antitrust court ordered the divestiture of the regional gas pipeline.",
+    "ExampleKo": "반독점 법원은 지역 가스관의 매각 분할을 명령했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "duplicity",
+    "PartOfSpeech": "noun",
+    "Meaning": "이중성, 표리부동",
+    "Example": "The executive was terminated for contractual duplicity and conflicts of interest.",
+    "ExampleKo": "그 임원은 계약상의 이중성과 이해 상충 문제로 해고되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "earmark",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "배정(액); 배정하다",
+    "Example": "The grant includes a specific earmark for solar panel installation.",
+    "ExampleKo": "그 보조금에는 태양광 패널 설치를 위해 특별히 배정된 예산이 포함되어 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "efficacy",
+    "PartOfSpeech": "noun",
+    "Meaning": "효능, 유효성",
+    "Example": "Clinical data proved the new antibiotic's exceptional therapeutic efficacy.",
+    "ExampleKo": "임상 데이터는 새 항생제의 뛰어난 치료 효능을 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "emolument",
+    "PartOfSpeech": "noun",
+    "Meaning": "보수, 봉급",
+    "Example": "Directors are entitled to reasonable emoluments for board committee work.",
+    "ExampleKo": "이사들은 이사회 위원회 활동에 대해 합당한 보수를 받을 권리가 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "encumbrance",
+    "PartOfSpeech": "noun",
+    "Meaning": "부동산 저당권, 방해물",
+    "Example": "The title search confirmed the property was free of any legal encumbrance.",
+    "ExampleKo": "소유권 조사 결과 해당 부동산에 법적 저당권이나 권리 제한이 없음이 확인되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "entity",
+    "PartOfSpeech": "noun",
+    "Meaning": "독립체, 실체, 법인",
+    "Example": "The holding company established a distinct legal entity for software patents.",
+    "ExampleKo": "지주회사는 소프트웨어 특허를 위한 별도의 법인을 설립했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "equilibrium",
+    "PartOfSpeech": "noun",
+    "Meaning": "평형, 균형 상태",
+    "Example": "Supply and demand reached equilibrium at $75 per barrel.",
+    "ExampleKo": "수요와 공급은 배럴당 75달러에서 균형 상태에 도달했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "espionage",
+    "PartOfSpeech": "noun",
+    "Meaning": "스파이 활동, 첩보",
+    "Example": "Industrial espionage safeguards were tightened around semiconductor blueprints.",
+    "ExampleKo": "반도체 설계도를 둘러싼 산업 스파이 방지 보호 조치가 강화되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "estoppel",
+    "PartOfSpeech": "noun",
+    "Meaning": "금반언 (이전 언행과 모순된 주장 금지)",
+    "Example": "Promissory estoppel prevented the landlord from rescinding the lease concessions.",
+    "ExampleKo": "금반언 원칙에 따라 임대인은 임대료 양보 조치를 철회할 수 없었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ethics",
+    "PartOfSpeech": "noun",
+    "Meaning": "윤리, 도덕",
+    "Example": "Corporate ethics codes require disclosure of all outside business interests.",
+    "ExampleKo": "기업 윤리 강령은 모든 외부 사업 이해관계의 공개를 요구합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "etiquette",
+    "PartOfSpeech": "noun",
+    "Meaning": "에티켓, 예절",
+    "Example": "Business etiquette in Tokyo emphasizes formal business card exchange.",
+    "ExampleKo": "도쿄의 비즈니스 에티켓은 정중한 명함 교환을 중시합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "eviction",
+    "PartOfSpeech": "noun",
+    "Meaning": "퇴거",
+    "Example": "Legal eviction notices were served to delinquent tenants.",
+    "ExampleKo": "연체 세입자들에게 공식적인 법적 퇴거 통지서가 전달되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exception",
+    "PartOfSpeech": "noun",
+    "Meaning": "예외",
+    "Example": "No exceptions to international travel security policies are permitted.",
+    "ExampleKo": "해외 출장 보안 규정에는 어떠한 예외도 허용되지 않습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exemption",
+    "PartOfSpeech": "noun",
+    "Meaning": "면제, 공제",
+    "Example": "Nonprofit hospitals maintain state sales and property tax exemption.",
+    "ExampleKo": "비영리 병원은 주 소비세 및 재산세 면제 혜택을 유지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "expediency",
+    "PartOfSpeech": "noun",
+    "Meaning": "편의, 방편",
+    "Example": "The decision was driven by political expediency rather than sound economics.",
+    "ExampleKo": "그 결정은 건전한 경제학적 원칙보다는 정치적 편의주의에 의해 내려졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "expiration",
+    "PartOfSpeech": "noun",
+    "Meaning": "만료, 종결",
+    "Example": "Contracts must be renewed sixty days prior to their official expiration.",
+    "ExampleKo": "계약은 공식 만료일 60일 전에 갱신되어야 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "facsimile",
+    "PartOfSpeech": "noun",
+    "Meaning": "복제품, 팩스",
+    "Example": "A digital facsimile of the original charter was framed in the boardroom.",
+    "ExampleKo": "원래 헌장의 디지털 복제품이 이사회 회의실에 액자로 걸렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fiduciary",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "수탁자; 신탁의",
+    "Example": "Corporate board members bear a strict fiduciary duty to shareholders.",
+    "ExampleKo": "기업 이사회 구성원들은 주주들에 대해 엄격한 신탁 수탁자 의무를 집니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "forbearance",
+    "PartOfSpeech": "noun",
+    "Meaning": "인내, 지불 유예",
+    "Example": "Mortgage lenders granted temporary payment forbearance to displaced workers.",
+    "ExampleKo": "주택담보대출 기관들은 실직자들에게 일시적인 원리금 상환 유예를 허용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "foreclosure",
+    "PartOfSpeech": "noun",
+    "Meaning": "압류, 담보권 실행",
+    "Example": "Subprime defaults triggered widespread residential home foreclosures.",
+    "ExampleKo": "서브프라임 모기지 채무 불이행으로 광범위한 주택 압류 사태가 발생했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fraud",
+    "PartOfSpeech": "noun",
+    "Meaning": "사기, 기만",
+    "Example": "Forensic audits revealed sophisticated accounting fraud by top executives.",
+    "ExampleKo": "포렌식 감사를 통해 최고 경영진의 정교한 회계 사기가 드러났습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "friction",
+    "PartOfSpeech": "noun",
+    "Meaning": "마찰, 불화",
+    "Example": "Reducing checkout friction increases online retail conversions significantly.",
+    "ExampleKo": "결제 단계의 마찰을 줄이면 온라인 소매 전환율이 크게 향상됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "furlough",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "일시 해고, 휴가",
+    "Example": "Airlines placed flight attendants on temporary furlough during the travel halt.",
+    "ExampleKo": "항공사들은 여행 중단 기간 동안 승무원들을 일시 해고 상태로 전환했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hegemony",
+    "PartOfSpeech": "noun",
+    "Meaning": "패권, 주도권",
+    "Example": "Silicon Valley maintains technological hegemony in generative artificial intelligence.",
+    "ExampleKo": "실리콘밸리는 생성형 인공지능 분야에서 기술적 패권을 유지하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hindrance",
+    "PartOfSpeech": "noun",
+    "Meaning": "장애, 방해물",
+    "Example": "Outdated telecommunication systems are a major hindrance to remote work.",
+    "ExampleKo": "노후된 통신 시스템은 원격 근무의 주요 장애물입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hybrid",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "혼합체; 하이브리드의",
+    "Example": "Our company adopted a hybrid schedule with three in-office days.",
+    "ExampleKo": "저희 회사는 주 3일 출근하는 하이브리드 근무제를 채택했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hypocrisy",
+    "PartOfSpeech": "noun",
+    "Meaning": "위선",
+    "Example": "Critics accused the airline of environmental hypocrisy over carbon offsets.",
+    "ExampleKo": "비평가들은 탄소 배출권 상쇄와 관련해 그 항공사의 환경적 위선을 비난했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "immunity",
+    "PartOfSpeech": "noun",
+    "Meaning": "면제, 면책",
+    "Example": "The whistleblower received legal immunity in exchange for testimonies.",
+    "ExampleKo": "내부고발자는 법정 증언을 대가로 법적 면책을 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impasse",
+    "PartOfSpeech": "noun",
+    "Meaning": "교착 상태",
+    "Example": "Union contract negotiations reached a complete impasse over pension benefits.",
+    "ExampleKo": "연금 혜택을 둘러싼 노조 계약 협상은 완전한 교착 상태에 도달했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impeachment",
+    "PartOfSpeech": "noun",
+    "Meaning": "탄핵, 비난",
+    "Example": "The director faced impeachment by the shareholder oversight committee.",
+    "ExampleKo": "그 이사는 주주 감시 위원회로부터 탄핵에 직면했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impediment",
+    "PartOfSpeech": "noun",
+    "Meaning": "장애물, 방해",
+    "Example": "A lack of local charging stations is an impediment to electric vehicle adoption.",
+    "ExampleKo": "현지 충전소 부족은 전기차 도입의 큰 장애물입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "indictment",
+    "PartOfSpeech": "noun",
+    "Meaning": "기소, 고발장",
+    "Example": "A federal grand jury returned an indictment charging securities fraud.",
+    "ExampleKo": "연방 대배심은 증권 사기 혐의로 기소장을 발부했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "infraction",
+    "PartOfSpeech": "noun",
+    "Meaning": "위반 행위",
+    "Example": "Minor safety infractions result in mandatory refresher training.",
+    "ExampleKo": "경미한 안전 규정 위반은 의무적인 재교육으로 이어집니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "injunction",
+    "PartOfSpeech": "noun",
+    "Meaning": "명령, 금지 명령",
+    "Example": "The court issued a preliminary injunction halting the factory demolition.",
+    "ExampleKo": "법원은 공장 철거를 중단시키는 예비 금지 명령을 내렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "insolvency",
+    "PartOfSpeech": "noun",
+    "Meaning": "지급 불능, 파산",
+    "Example": "Cash flow crunches forced the construction contractor into insolvency.",
+    "ExampleKo": "현금 흐름 악화로 인해 건설 시공사는 지급 불능 상태에 빠졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "integration",
+    "PartOfSpeech": "noun",
+    "Meaning": "통합",
+    "Example": "Seamless integration between CRM and accounting platforms saves staff hours.",
+    "ExampleKo": "CRM과 회계 플랫폼 간의 매끄러운 통합으로 직원들의 업무 시간이 절약됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "liaison",
+    "PartOfSpeech": "noun",
+    "Meaning": "연락 담당자, 제휴",
+    "Example": "She acts as the primary corporate liaison between engineering and sales.",
+    "ExampleKo": "그녀는 엔지니어링팀과 영업팀 사이의 주요 연락 담당자 역할을 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "lucrativeness",
+    "PartOfSpeech": "noun",
+    "Meaning": "유리함, 수익성",
+    "Example": "The lucrativeness of the government defense contract attracted nine bidders.",
+    "ExampleKo": "정부 국방 계약의 높은 수익성으로 인해 9개 입찰자가 몰렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "merger",
+    "PartOfSpeech": "noun",
+    "Meaning": "합병",
+    "Example": "The antitrust committee reviewed the proposed regional airline merger.",
+    "ExampleKo": "반독점 위원회는 제안된 지역 항공사 합병안을 검토했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "moratorium",
+    "PartOfSpeech": "noun",
+    "Meaning": "지불 유예, 활동 일시 중지",
+    "Example": "The government declared a temporary moratorium on offshore oil drilling.",
+    "ExampleKo": "정부는 해양 석유 시추에 대해 일시적인 모라토리엄을 선포했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "nexus",
+    "PartOfSpeech": "noun",
+    "Meaning": "결속, 결합, 중심",
+    "Example": "The city serves as the primary trade nexus between rail and sea freight.",
+    "ExampleKo": "그 도시는 철도와 해상 화물 간의 주요 무역 연결 중심지 역할을 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "nonfeasance",
+    "PartOfSpeech": "noun",
+    "Meaning": "채무 불이행, 태만",
+    "Example": "The director was sued for nonfeasance in failing to supervise auditing.",
+    "ExampleKo": "그 이사는 감사 감독을 소홀히 한 직무 태만 혐의로 피소되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ordinance",
+    "PartOfSpeech": "noun",
+    "Meaning": "조례, 법령",
+    "Example": "The municipal ordinance prohibits commercial deliveries after 10 p.m.",
+    "ExampleKo": "시 조례는 오후 10시 이후 상업용 배송을 금지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "paragon",
+    "PartOfSpeech": "noun",
+    "Meaning": "귀감, 모범",
+    "Example": "The company's customer-first culture is considered an industry paragon.",
+    "ExampleKo": "그 회사의 고객 최우선 문화는 업계의 귀감으로 여겨집니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "parity",
+    "PartOfSpeech": "noun",
+    "Meaning": "동등, 동격, 패리티",
+    "Example": "The national currency briefly reached parity with the US dollar.",
+    "ExampleKo": "그 나라 통화는 잠시 미국 달러와 1대 1 패리티(동일 가치)에 도달했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "penury",
+    "PartOfSpeech": "noun",
+    "Meaning": "극빈, 가난",
+    "Example": "The charity works to lift rural farm communities out of generational penury.",
+    "ExampleKo": "그 자선 단체는 농촌 공동체를 대물림되는 극빈에서 벗어나도록 돕고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "perquisite",
+    "PartOfSpeech": "noun",
+    "Meaning": "특권, 부수입 (perk)",
+    "Example": "Executive perquisites include private air travel and company cars.",
+    "ExampleKo": "임원 특전에는 전용기 이용과 회사 차량이 포함됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "petition",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "청원(서); 청원하다",
+    "Example": "Employees signed a petition requesting permanent remote work flexibility.",
+    "ExampleKo": "직원들은 영구적인 재택근무 유연성을 요구하는 청원서에 서명했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pragmatism",
+    "PartOfSpeech": "noun",
+    "Meaning": "실용주의",
+    "Example": "The chief executive approached labor disputes with calm commercial pragmatism.",
+    "ExampleKo": "최고경영자는 차분한 상업적 실용주의를 가지고 노사 분규에 접근했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "precinct",
+    "PartOfSpeech": "noun",
+    "Meaning": "구역, 관할구역",
+    "Example": "The commercial precinct features strict pedestrian-only walking zones.",
+    "ExampleKo": "그 상업 구역은 엄격한 보행자 전용 구역을 갖추고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prognosis",
+    "PartOfSpeech": "noun",
+    "Meaning": "예후, 전망",
+    "Example": "The economic prognosis suggests steady export-driven recovery.",
+    "ExampleKo": "경제 전망은 수출 주도의 안정적인 회복세를 시사합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "propensity",
+    "PartOfSpeech": "noun",
+    "Meaning": "성향, 경향",
+    "Example": "Gen-Z consumers display an increased propensity for sustainable apparel.",
+    "ExampleKo": "Z세대 소비자들은 지속 가능한 의류에 대해 높은 구매 성향을 보입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "reciprocity",
+    "PartOfSpeech": "noun",
+    "Meaning": "상호주의, 호혜",
+    "Example": "International trade agreements are grounded in absolute diplomatic reciprocity.",
+    "ExampleKo": "국제 무역 협정은 절대적인 외교적 상호주의에 기초하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "redress",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "배상, 보상, 시정",
+    "Example": "Consumers filed a class-action suit seeking financial redress for defects.",
+    "ExampleKo": "소비자들은 결함에 대한 금전적 배상을 요구하며 집단 소송을 제기했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "referendum",
+    "PartOfSpeech": "noun",
+    "Meaning": "국민투표",
+    "Example": "Voters rejected the municipal tax referendum by a wide margin.",
+    "ExampleKo": "유권자들은 시 지방세 국민투표를 큰 표 차이로 부결시켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "refurbishment",
+    "PartOfSpeech": "noun",
+    "Meaning": "재단장, 리모델링",
+    "Example": "Hotel refurbishment costs were amortized across ten operating quarters.",
+    "ExampleKo": "호텔 리모델링 비용은 10개 운영 분기에 걸쳐 분할 상환되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "regime",
+    "PartOfSpeech": "noun",
+    "Meaning": "체제, 정권",
+    "Example": "The enterprise adapted swiftly to the revised corporate tax regime.",
+    "ExampleKo": "그 기업은 개정된 법인세 체제에 신속히 적응했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "repertoire",
+    "PartOfSpeech": "noun",
+    "Meaning": "레퍼토리, 목록",
+    "Example": "The software suite offers an expansive repertoire of predictive analytics.",
+    "ExampleKo": "그 소프트웨어 패키지는 방대한 예측 분석 기능 목록을 제공합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "reprobate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "타락자; 비난하다",
+    "Example": "The rogue broker was condemned as an unprincipled financial reprobate.",
+    "ExampleKo": "그 불법 브로커는 원칙 없는 금융 사기꾼으로 규탄받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "restructuring",
+    "PartOfSpeech": "noun",
+    "Meaning": "구조조정",
+    "Example": "Operational restructuring restored the legacy airline to operating profitability.",
+    "ExampleKo": "운영 구조조정을 통해 그 전통 항공사는 영업 흑자로 돌아섰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "retaliation",
+    "PartOfSpeech": "noun",
+    "Meaning": "보복",
+    "Example": "Whistleblower protection statutes shield employees against employer retaliation.",
+    "ExampleKo": "내부고발자 보호 법령은 고용주의 보복으로부터 직원을 보호합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "revocation",
+    "PartOfSpeech": "noun",
+    "Meaning": "취소, 철회",
+    "Example": "Falsifying environmental records led to immediate license revocation.",
+    "ExampleKo": "환경 기록 조작은 즉각적인 사업 면허 취소로 이어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "rigor",
+    "PartOfSpeech": "noun",
+    "Meaning": "엄격함, 엄밀성",
+    "Example": "Academic rigor in statistical analysis distinguishes our economic forecasts.",
+    "ExampleKo": "통계 분석에서의 학문적 엄격함이 저희 경제 전망의 차별점입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "sedition",
+    "PartOfSpeech": "noun",
+    "Meaning": "선동, 반역죄",
+    "Example": "The executive was investigated for corporate sedition and sabotaging files.",
+    "ExampleKo": "그 임원은 사내 반역 행위 및 파일 사보타주 혐의로 조사를 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "segregation",
+    "PartOfSpeech": "noun",
+    "Meaning": "분리, 격리",
+    "Example": "Strict segregation of duties prevents accounting fraud in financial institutions.",
+    "ExampleKo": "엄격한 업무 분리는 금융기관의 회계 사기를 예방합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "sentiment",
+    "PartOfSpeech": "noun",
+    "Meaning": "정서, 심리",
+    "Example": "Consumer sentiment surged following steady declines in core inflation.",
+    "ExampleKo": "근원 인플레이션의 꾸준한 하락에 힘입어 소비자 심리가 급등했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "solicitation",
+    "PartOfSpeech": "noun",
+    "Meaning": "권유, 요청, 판촉",
+    "Example": "The office maintains a strict policy banning unauthorized sales solicitation.",
+    "ExampleKo": "사무실은 무단 영업 판촉을 금지하는 엄격한 규정을 유지하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "solvency",
+    "PartOfSpeech": "noun",
+    "Meaning": "지급 능력",
+    "Example": "Stress tests validated the commercial bank's long-term capital solvency.",
+    "ExampleKo": "스트레스 테스트를 통해 시중은행의 장기 자본 지급 능력이 입증되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "sovereignty",
+    "PartOfSpeech": "noun",
+    "Meaning": "주권, 자주권",
+    "Example": "Data sovereignty laws require cloud storage of citizen information locally.",
+    "ExampleKo": "데이터 주권 법률은 자국민 정보의 로컬 클라우드 저장을 의무화합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "specialization",
+    "PartOfSpeech": "noun",
+    "Meaning": "전문화, 특화",
+    "Example": "Subdivision of tasks led to profound industrial specialization.",
+    "ExampleKo": "업무 세분화는 심도 있는 산업적 전문화로 이어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "subvention",
+    "PartOfSpeech": "noun",
+    "Meaning": "보조금, 지원금",
+    "Example": "The regional university received a federal research subvention.",
+    "ExampleKo": "지역 대학은 연방 정부의 연구 보조금을 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "supersession",
+    "PartOfSpeech": "noun",
+    "Meaning": "대체, 교체",
+    "Example": "The supersession of outdated desktop terminals with mobile tablets is complete.",
+    "ExampleKo": "구형 데스크톱 단말기를 모바일 태블릿으로 대체하는 작업이 완료되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "surveillance",
+    "PartOfSpeech": "noun",
+    "Meaning": "감시, 감독",
+    "Example": "Automated digital surveillance protects high-security server vaults.",
+    "ExampleKo": "자동화된 디지털 감시 시스템이 최고 보안 등급의 서버실을 보호합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "syndicate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "기업 조합, 신디케이트",
+    "Example": "An international banking syndicate provided $1 billion in bridge loans.",
+    "ExampleKo": "국제 은행 신디케이트가 10억 달러의 브릿지론 대출을 제공했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "synergy",
+    "PartOfSpeech": "noun",
+    "Meaning": "상승효과, 시너지",
+    "Example": "The merger generated profound operational synergies across distribution channels.",
+    "ExampleKo": "합병을 통해 유통 채널 전반에 걸쳐 막대한 운영 시너지가 창출되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "title",
+    "PartOfSpeech": "noun",
+    "Meaning": "소유권, 직함",
+    "Example": "The buyer conducted a thorough property title search before closing.",
+    "ExampleKo": "매수인은 잔금을 치르기 전 철저한 부동산 소유권 조사를 실시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "toll",
+    "PartOfSpeech": "noun",
+    "Meaning": "통행료, 희생",
+    "Example": "Supply chain disruptions took a heavy financial toll on regional factories.",
+    "ExampleKo": "공급망 차질은 지역 공장들에 심각한 재정적 타격을 입혔습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "transgression",
+    "PartOfSpeech": "noun",
+    "Meaning": "위반, 위임 범죄",
+    "Example": "Insider trading is an unforgivable regulatory transgression.",
+    "ExampleKo": "내부자 거래는 결코 용서받을 수 없는 규제 위반 범죄입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ubiquity",
+    "PartOfSpeech": "noun",
+    "Meaning": "도처에 있음, 편재",
+    "Example": "The ubiquity of smartphones revolutionized mobile digital commerce.",
+    "ExampleKo": "스마트폰의 보편화는 모바일 디지털 상거래에 혁명을 일으켰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ultimatum",
+    "PartOfSpeech": "noun",
+    "Meaning": "최후통첩",
+    "Example": "Management issued an ultimatum demanding strikers return to duty by Monday.",
+    "ExampleKo": "경영진은 파업 노동자들에게 월요일까지 업무에 복귀하라는 최후통첩을 보냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "unanimity",
+    "PartOfSpeech": "noun",
+    "Meaning": "만장일치",
+    "Example": "The board adopted the strategic plan with unanimous acclaim.",
+    "ExampleKo": "이사회는 만장일치의 환호 속에 전략 계획을 채택했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "undertaking",
+    "PartOfSpeech": "noun",
+    "Meaning": "사업, 일, 약속",
+    "Example": "Constructing the continental high-speed rail network was a monumental undertaking.",
+    "ExampleKo": "대륙 횡단 고속철도망 건설은 기념비적인 대규모 사업이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "underwriter",
+    "PartOfSpeech": "noun",
+    "Meaning": "보험 인수자, 증권 인수업자",
+    "Example": "Morgan Stanley acted as lead underwriter for the initial public offering.",
+    "ExampleKo": "모건스탠리는 기업공개(IPO)의 대표 주관 증권 인수업자로 활동했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "upheaval",
+    "PartOfSpeech": "noun",
+    "Meaning": "격변, 대혼란",
+    "Example": "Geopolitical upheaval in energy markets drove unprecedented volatility.",
+    "ExampleKo": "에너지 시장의 지정학적 격변은 전례 없는 변동성을 초래했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vanguard",
+    "PartOfSpeech": "noun",
+    "Meaning": "선봉, 선두",
+    "Example": "Our firm stands at the vanguard of commercial carbon-capture engineering.",
+    "ExampleKo": "저희 회사는 상업용 탄소 포집 공학의 선봉에 서 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "velocity",
+    "PartOfSpeech": "noun",
+    "Meaning": "속도, 속력",
+    "Example": "The velocity of digital transactions accelerated after the API overhaul.",
+    "ExampleKo": "API 개편 이후 디지털 거래 처리 속도가 빨라졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "veracity",
+    "PartOfSpeech": "noun",
+    "Meaning": "진실성, 정확성",
+    "Example": "Auditors verified the veracity of balance sheet asset numbers.",
+    "ExampleKo": "감사관들은 대차대조표상 자산 수치의 정확성과 진실성을 검증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "verbatim",
+    "PartOfSpeech": "adj/adv",
+    "Meaning": "말 그대로의, 글자 그대로",
+    "Example": "Court stenographers recorded the CEO's testimony verbatim.",
+    "ExampleKo": "법원 속기사들은 CEO의 증언을 한 글자도 빠짐없이 글자 그대로 기록했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "verdict",
+    "PartOfSpeech": "noun",
+    "Meaning": "평결, 판단",
+    "Example": "The jury returned a unanimous verdict of patent infringement.",
+    "ExampleKo": "배심원단은 특허 침해에 대해 만장일치 평결을 내렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "versatility",
+    "PartOfSpeech": "noun",
+    "Meaning": "다재다능함, 다용도성",
+    "Example": "The industrial robot's versatility enables both welding and precision painting.",
+    "ExampleKo": "그 산업용 로봇의 다용도성은 용접과 정밀 도색을 모두 가능하게 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vesting",
+    "PartOfSpeech": "noun",
+    "Meaning": "권리 부여, 베스팅",
+    "Example": "Stock options are subject to a four-year graduated vesting schedule.",
+    "ExampleKo": "스톡옵션은 4개년에 걸친 점진적 권리 부여 일정의 적용을 받습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "viability",
+    "PartOfSpeech": "noun",
+    "Meaning": "실행 가능성, 생존 능력",
+    "Example": "Independent auditors validated the commercial viability of the green airline.",
+    "ExampleKo": "독립 감사관들은 친환경 항공사의 상업적 생존 능력을 입증했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vindication",
+    "PartOfSpeech": "noun",
+    "Meaning": "옹호, 입증, 변호",
+    "Example": "Surging quarterly profits provided complete vindication for the acquisition.",
+    "ExampleKo": "급증한 분기 순이익은 인수에 대한 완벽한 정당성을 입증해 주었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "vulnerability",
+    "PartOfSpeech": "noun",
+    "Meaning": "취약점, 약점",
+    "Example": "Security patches sealed zero-day vulnerabilities in the cloud portal.",
+    "ExampleKo": "보안 패치는 클라우드 포털의 제로데이 취약점을 완벽히 봉쇄했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "waiver",
+    "PartOfSpeech": "noun",
+    "Meaning": "포기(각서), 면제",
+    "Example": "Participants signed an injury liability waiver prior to the corporate race.",
+    "ExampleKo": "참가자들은 사내 체육대회 전 부상 책임 면제 각서에 서명했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "wastage",
+    "PartOfSpeech": "noun",
+    "Meaning": "낭비, 손모",
+    "Example": "Lean manufacturing protocols reduced raw copper material wastage by 40%.",
+    "ExampleKo": "린 제조 프로토콜 덕분에 구리 원자재 낭비가 40% 감소했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "windfall",
+    "PartOfSpeech": "noun",
+    "Meaning": "뜻밖의 횡재, 불로소득",
+    "Example": "The sudden surge in natural gas prices produced a massive windfall for producers.",
+    "ExampleKo": "천연가스 가격의 갑작스러운 급등은 생산자들에게 막대한 횡재를 안겨주었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "withholding",
+    "PartOfSpeech": "noun",
+    "Meaning": "원천징수",
+    "Example": "The payroll portal automatically calculates federal tax withholding amounts.",
+    "ExampleKo": "급여 포털은 연방세 원천징수 세액을 자동으로 계산합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aberrant",
+    "PartOfSpeech": "adj",
+    "Meaning": "탈선적인, 비정상적인",
+    "Example": "The audit detected aberrant billing patterns across three accounts.",
+    "ExampleKo": "감사 결과 세 계좌에서 비정상적인 결제 패턴이 감지되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "abstruse",
+    "PartOfSpeech": "adj",
+    "Meaning": "난해한, 심오한",
+    "Example": "The technical patent contains abstruse mathematical formulations.",
+    "ExampleKo": "그 기술 특허는 난해한 수학적 공식을 포함하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "acrimonious",
+    "PartOfSpeech": "adj",
+    "Meaning": "신랄한, 험악한",
+    "Example": "Contract renewal talks broke down in an acrimonious dispute.",
+    "ExampleKo": "계약 갱신 협상은 험악한 언쟁 끝에 결렬되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "adamant",
+    "PartOfSpeech": "adj",
+    "Meaning": "요지부동의, 단호한",
+    "Example": "The CEO was adamant that safety standards not be compromised.",
+    "ExampleKo": "CEO는 안전 기준이 결코 타협되어서는 안 된다고 단호히 강조했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "adroit",
+    "PartOfSpeech": "adj",
+    "Meaning": "노련한, 능숙한",
+    "Example": "Her adroit negotiation secured favorable long-term supply terms.",
+    "ExampleKo": "그녀의 노련한 협상 덕분에 유리한 장기 공급 조건을 확보했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "adverse",
+    "PartOfSpeech": "adj",
+    "Meaning": "부정적인, 불리한",
+    "Example": "Adverse currency swings reduced third-quarter net earnings by 14%.",
+    "ExampleKo": "불리한 환율 변동으로 인해 3분기 순이익이 14% 감소했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aesthetic",
+    "PartOfSpeech": "adj/noun",
+    "Meaning": "미적인; 미학",
+    "Example": "Architects balanced aesthetic appeal with structural seismic resilience.",
+    "ExampleKo": "건축가들은 미적 매력과 구조적 내진성 사이의 균형을 맞췄습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "alarming",
+    "PartOfSpeech": "adj",
+    "Meaning": "놀라운, 우려스러운",
+    "Example": "The plant reported an alarming spike in particulate emissions.",
+    "ExampleKo": "그 공장은 미세먼지 배출량의 우려스러운 급증을 보고했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "aloof",
+    "PartOfSpeech": "adj",
+    "Meaning": "냉담한, 거리를 두는",
+    "Example": "The director remained aloof from daily departmental rivalries.",
+    "ExampleKo": "부서장은 일상적인 부서 간 경쟁에 거리를 두고 냉담함을 유지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "altruistic",
+    "PartOfSpeech": "adj",
+    "Meaning": "이타적인",
+    "Example": "The enterprise established an altruistic endowment for clean water initiatives.",
+    "ExampleKo": "그 기업은 깨끗한 식수 사업을 위해 이타적인 기부 기금을 설립했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ambivalent",
+    "PartOfSpeech": "adj",
+    "Meaning": "반대 감정이 병존하는, 양면적인",
+    "Example": "Consumers remain ambivalent about purchasing fully autonomous cars.",
+    "ExampleKo": "소비자들은 완전 자율주행차 구매에 대해 여전히 양면적인 감정을 보입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ameliorative",
+    "PartOfSpeech": "adj",
+    "Meaning": "개선하는, 완화하는",
+    "Example": "The finance ministry adopted ameliorative fiscal lending policies.",
+    "ExampleKo": "재무부는 완화적인 재정 대출 정책을 채택했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "amiable",
+    "PartOfSpeech": "adj",
+    "Meaning": "붙임성 있는, 친절한",
+    "Example": "The newly appointed customer ombudsman has an amiable personality.",
+    "ExampleKo": "새로 임명된 고객 옴부즈맨은 친절하고 붙임성 있는 성품을 지녔습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ancillary",
+    "PartOfSpeech": "adj",
+    "Meaning": "보조적인, 부수적인",
+    "Example": "The resort generates massive revenues from ancillary spa services.",
+    "ExampleKo": "그 리조트는 부수적인 스파 서비스를 통해 막대한 수익을 창출합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "antithetical",
+    "PartOfSpeech": "adj",
+    "Meaning": "정반대의, 상반되는",
+    "Example": "Price fixing is antithetical to healthy fair-market competition.",
+    "ExampleKo": "가격 담합은 건강한 자유시장 경쟁에 정면으로 배치됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apposite",
+    "PartOfSpeech": "adj",
+    "Meaning": "아주 적절한, 딱 들어맞는",
+    "Example": "The consultant cited apposite case studies during the seminar.",
+    "ExampleKo": "그 컨설턴트는 세미나 도중 딱 들어맞는 적절한 사례 연구를 인용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "approbatory",
+    "PartOfSpeech": "adj",
+    "Meaning": "칭찬의, 승인의",
+    "Example": "The board gave an approbatory nod to the proposed offshore expansion.",
+    "ExampleKo": "이사회는 제안된 해외 확장에 대해 찬성의 뜻을 표했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "apt",
+    "PartOfSpeech": "adj",
+    "Meaning": "적절한, ~하기 쉬운",
+    "Example": "The presentation provided an apt summary of our logistical hurdles.",
+    "ExampleKo": "프레젠테이션은 저희 물류 난관에 대한 적절한 요약을 제공했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "arcane",
+    "PartOfSpeech": "adj",
+    "Meaning": "신비로운, 불가사의한",
+    "Example": "Navigating maritime salvage laws requires arcane legal knowledge.",
+    "ExampleKo": "해상 인양 법률을 다루는 것은 난해한 법률 전문 지식을 필요로 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ardent",
+    "PartOfSpeech": "adj",
+    "Meaning": "열렬한, 열정적인",
+    "Example": "The CEO is an ardent champion of corporate carbon neutrality.",
+    "ExampleKo": "CEO는 기업의 탄소 중립을 열렬히 지지하는 챔피언입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "artful",
+    "PartOfSpeech": "adj",
+    "Meaning": "기교 있는, 교묘한",
+    "Example": "Her artful diplomacy prevented an acrimonious trade tariff war.",
+    "ExampleKo": "그녀의 교묘한 외교술은 험악한 무역 관세 전쟁을 막아냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ascendant",
+    "PartOfSpeech": "adj",
+    "Meaning": "상승하는, 우세한",
+    "Example": "Renewable energy solutions are clearly in the ascendant over coal.",
+    "ExampleKo": "재생 에너지 솔루션은 석탄에 비해 명백히 상승세를 타고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "assiduous",
+    "PartOfSpeech": "adj",
+    "Meaning": "근면 성실한, 끈기 있는",
+    "Example": "Assiduous bookkeeping ensured a clean bill of health from auditors.",
+    "ExampleKo": "성실한 장부 기록 덕분에 감사관들로부터 깨끗한 적정 의견을 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "astute",
+    "PartOfSpeech": "adj",
+    "Meaning": "기민한, 약삭빠른",
+    "Example": "Astute commodity traders locked in fuel futures before the price spike.",
+    "ExampleKo": "기민한 원자재 트레이더들은 가격 급등 전에 연료 선물을 매수해 두었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "auspicious",
+    "PartOfSpeech": "adj",
+    "Meaning": "길조의, 상서로운",
+    "Example": "Record preorder numbers provided an auspicious debut for the sedan.",
+    "ExampleKo": "기록적인 사전 예약 수치는 그 세단의 상서로운 출발을 알렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "austere",
+    "PartOfSpeech": "adj",
+    "Meaning": "엄격한, 소박한, 긴축의",
+    "Example": "Corporate headquarters features an austere, minimalist Scandinavian design.",
+    "ExampleKo": "기업 본사는 소박하고 미니멀한 스칸디나비아풍 디자인을 선보입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "authoritative",
+    "PartOfSpeech": "adj",
+    "Meaning": "권위 있는",
+    "Example": "The medical journal published an authoritative review of mRNA vaccines.",
+    "ExampleKo": "그 의학 학술지는 mRNA 백신에 대한 권위 있는 검토 논문을 발표했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "autonomous",
+    "PartOfSpeech": "adj",
+    "Meaning": "자율적인, 자주적인",
+    "Example": "Automated delivery drones operate with autonomous navigation sensors.",
+    "ExampleKo": "자동 배송 드론은 자율 내비게이션 센서를 장착하고 운항합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "averse",
+    "PartOfSpeech": "adj",
+    "Meaning": "싫어하는, 반대하는",
+    "Example": "Conservative pension trustees are risk-averse regarding volatile tech stocks.",
+    "ExampleKo": "보수적인 연기금 수탁자들은 변동성이 큰 기술주에 대해 위험을 기피합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "avid",
+    "PartOfSpeech": "adj",
+    "Meaning": "열심인, 열렬한",
+    "Example": "Institutional funds showed avid interest in the green infrastructure bond.",
+    "ExampleKo": "기관 펀드들은 친환경 인프라 채권에 대해 열렬한 관심을 보였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "axiomatic",
+    "PartOfSpeech": "adj",
+    "Meaning": "자명한",
+    "Example": "Customer satisfaction is axiomatic to sustainable corporate prosperity.",
+    "ExampleKo": "고객 만족은 지속 가능한 기업 번영에 있어 자명한 원칙입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "bellwether",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "선도자, 길잡이; 지표가 되는",
+    "Example": "Caterpillar's quarterly performance is an industrial economy bellwether.",
+    "ExampleKo": "캐터필러의 분기 실적은 산업 경제의 풍향계 역할을 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "benign",
+    "PartOfSpeech": "adj",
+    "Meaning": "양성의, 무해한, 온화한",
+    "Example": "The interest rate adjustment had a relatively benign impact on debt.",
+    "ExampleKo": "금리 조정은 가계 부채에 상대적으로 온화하고 무해한 영향을 미쳤습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "bespoke",
+    "PartOfSpeech": "adj",
+    "Meaning": "맞춤형의, 주문 제작한",
+    "Example": "Our firm crafts bespoke enterprise software solutions for banking.",
+    "ExampleKo": "저희 회사는 금융권을 위한 맞춤형 기업 소프트웨어 솔루션을 제작합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "blatant",
+    "PartOfSpeech": "adj",
+    "Meaning": "노골적인, 뻔뻔한",
+    "Example": "Trading ahead of earnings releases was a blatant insider breach.",
+    "ExampleKo": "실적 발표 직전 매매는 노골적인 내부자 거래 위반이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "boisterous",
+    "PartOfSpeech": "adj",
+    "Meaning": "활기찬, 떠들썩한",
+    "Example": "Trading floors in Chicago were boisterous as futures hit records.",
+    "ExampleKo": "선물이 사상 최고치를 경신하자 시카고 거래소 바닥은 떠들썩했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "brevity",
+    "PartOfSpeech": "noun",
+    "Meaning": "간결함, 짧음",
+    "Example": "The CEO commended the presenter for the admirable brevity of the slides.",
+    "ExampleKo": "CEO는 슬라이드의 훌륭한 간결성에 대해 발표자를 칭찬했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "buoyant",
+    "PartOfSpeech": "adj",
+    "Meaning": "경기가 좋은, 부력이 있는",
+    "Example": "A buoyant holiday shopping quarter lifted regional department store revenues.",
+    "ExampleKo": "활황세를 띤 연말 쇼핑 시즌 덕분에 지역 백화점 매출이 상승했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "calculating",
+    "PartOfSpeech": "adj",
+    "Meaning": "타산적인, 계산적인",
+    "Example": "The acquisition was a cold, calculating corporate chess move.",
+    "ExampleKo": "그 기업 인수는 냉정하고 계산적인 기업 전략적 체스 말이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "callous",
+    "PartOfSpeech": "adj",
+    "Meaning": "냉담한, 무감각한",
+    "Example": "The mass termination via pre-recorded video call was widely deemed callous.",
+    "ExampleKo": "사전 녹화된 화상 통화를 통한 대량 해고는 대단히 냉담한 처사로 비판받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "capricious",
+    "PartOfSpeech": "adj",
+    "Meaning": "변덕스러운",
+    "Example": "Airlines struggled to navigate capricious international quarantine rules.",
+    "ExampleKo": "항공사들은 변덕스러운 국제 격리 규정을 헤쳐 나가느라 애를 먹었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "categorical",
+    "PartOfSpeech": "adj",
+    "Meaning": "단정적인, 무조건적인",
+    "Example": "Management issued a categorical denial of the hostile takeover rumors.",
+    "ExampleKo": "경영진은 적대적 M&A 루머에 대해 단호하게 전면 부인했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "circumspect",
+    "PartOfSpeech": "adj",
+    "Meaning": "신중한, 용의주도한",
+    "Example": "The legal counsel was circumspect in answering regulatory queries.",
+    "ExampleKo": "법률 고문은 규제 당국의 질문에 답변할 때 대단히 신중했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "clandestine",
+    "PartOfSpeech": "adj",
+    "Meaning": "은밀한, 비밀의",
+    "Example": "Rival executives met in clandestine hotel rooms to discuss price fixing.",
+    "ExampleKo": "경쟁사 임원들은 가격 담합을 논의하기 위해 비밀 호텔 방에서 만났습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "cogent",
+    "PartOfSpeech": "adj",
+    "Meaning": "설득력 있는, 명쾌한",
+    "Example": "She presented a cogent argument for phasing out unprofitable retail lines.",
+    "ExampleKo": "그녀는 수익성 없는 소매 라인을 정리해야 하는 설득력 있는 논거를 제시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "commodious",
+    "PartOfSpeech": "adj",
+    "Meaning": "넓은, 널찍한",
+    "Example": "The new luxury hotel suite features commodious living and meeting spaces.",
+    "ExampleKo": "새 고급 호텔 스위트룸은 널찍한 거실과 회의 공간을 갖추고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "compendious",
+    "PartOfSpeech": "adj",
+    "Meaning": "요점을 잘 추린, 간결한",
+    "Example": "The briefing book offered a compendious overview of international tax rules.",
+    "ExampleKo": "그 브리핑 책자는 국제 조세 규정에 대한 간결하고 알찬 개요를 제공했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "complaisant",
+    "PartOfSpeech": "adj",
+    "Meaning": "공손한, 남의 뜻에 잘 따르는",
+    "Example": "A complaisant board of directors failed to scrutinize executive spending.",
+    "ExampleKo": "비판 없이 순종적인 이사회는 임원들의 방만한 지출을 제대로 감시하지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "conducive",
+    "PartOfSpeech": "adj",
+    "Meaning": "도움이 되는, 기여하는",
+    "Example": "Quiet open-plan pods create an environment conducive to deep programming.",
+    "ExampleKo": "조용한 개방형 부스는 몰입 프로그래밍에 도움이 되는 환경을 조성합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "consequential",
+    "PartOfSpeech": "adj",
+    "Meaning": "중대한, 결과로 일어나는",
+    "Example": "Choosing the right enterprise software is a highly consequential decision.",
+    "ExampleKo": "올바른 기업용 소프트웨어를 선택하는 것은 매우 중대한 결정입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "consummate",
+    "PartOfSpeech": "adj/verb",
+    "Meaning": "완벽한; 완수하다",
+    "Example": "She is a consummate professional who handles international crises effortlessly.",
+    "ExampleKo": "그녀는 국제적 위기를 손쉽게 처리하는 완벽한 프로페셔널입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "contentious",
+    "PartOfSpeech": "adj",
+    "Meaning": "논쟁을 초래하는, 다투기 좋아하는",
+    "Example": "Workplace remote monitoring software remains a contentious employee issue.",
+    "ExampleKo": "직장 내 원격 모니터링 소프트웨어는 여전히 직원들 사이에 논쟁을 초래하는 문제입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "contrite",
+    "PartOfSpeech": "adj",
+    "Meaning": "뉘우치는, 통한의",
+    "Example": "The CEO sounded visibly contrite during the public data breach apology.",
+    "ExampleKo": "CEO는 데이터 유출 대국민 사과문 발표 중 눈에 띄게 뉘우치는 기색을 보였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "contumacious",
+    "PartOfSpeech": "adj",
+    "Meaning": "반항적인, 완강한",
+    "Example": "The contumacious witness was cited for contempt of corporate court proceedings.",
+    "ExampleKo": "법정 명령에 반항적인 증인은 기업 법정 모독죄로 처벌받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "copious",
+    "PartOfSpeech": "adj",
+    "Meaning": "풍부한, 엄청난",
+    "Example": "Field auditors took copious notes during factory safety inspections.",
+    "ExampleKo": "현장 감사관들은 공장 안전 점검 동안 방대한 분량의 메모를 남겼습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "corpulent",
+    "PartOfSpeech": "adj",
+    "Meaning": "뚱뚱한, 비대한",
+    "Example": "The sprawling corporate bureaucracy had grown dangerously corpulent.",
+    "ExampleKo": "방대해진 기업 관료주의는 위험할 정도로 비대해져 있었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "credible",
+    "PartOfSpeech": "adj",
+    "Meaning": "믿을 수 있는, 신뢰할 만한",
+    "Example": "Forecasters presented a credible pathway toward achieving net-zero emissions.",
+    "ExampleKo": "전망가들은 넷제로 탄소 배출을 달성하기 위한 신뢰할 수 있는 경로를 제시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "cursory",
+    "PartOfSpeech": "adj",
+    "Meaning": "대충 하는, 피상적인",
+    "Example": "A cursory inspection of the balance sheet failed to detect off-book loans.",
+    "ExampleKo": "대차대조표를 대충 훑어본 탓에 장부 외 대출금을 발견하지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "daunting",
+    "PartOfSpeech": "adj",
+    "Meaning": "벅찬, 주눅이 들게 하는",
+    "Example": "Transitioning an enterprise of 50,000 to new cloud systems is a daunting task.",
+    "ExampleKo": "5만 명 규모의 기업을 새 클라우드 시스템으로 전환하는 것은 벅찬 과제입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "de facto",
+    "PartOfSpeech": "adj/adv",
+    "Meaning": "사실상의, 실질적인",
+    "Example": "English has become the de facto working language of global boardrooms.",
+    "ExampleKo": "영어는 글로벌 이사회의 사실상의 공용 실무 언어가 되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "decisive",
+    "PartOfSpeech": "adj",
+    "Meaning": "결정적인, 결단력 있는",
+    "Example": "Decisive leadership during the pandemic prevented mass employee furloughs.",
+    "ExampleKo": "팬데믹 기간 동안의 결단력 있는 리더십 덕분에 대규모 직원 무급휴직을 막았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "decorous",
+    "PartOfSpeech": "adj",
+    "Meaning": "예의 바른, 단정한",
+    "Example": "Negotiations proceeded in a calm, decorous, and professional manner.",
+    "ExampleKo": "협상은 차분하고 예의 바르며 전문적인 방식으로 진행되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deferential",
+    "PartOfSpeech": "adj",
+    "Meaning": "경의를 표하는, 공손한",
+    "Example": "Junior analysts were deferential to the senior managing partner's advice.",
+    "ExampleKo": "주니어 애널리스트들은 시니어 매니징 파트너의 조언에 정중히 경의를 표했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deleterious",
+    "PartOfSpeech": "adj",
+    "Meaning": "해로운, 유해한",
+    "Example": "High tariffs have a deleterious effect on international manufacturing flows.",
+    "ExampleKo": "높은 관세는 국제 제조 물류 흐름에 유해한 영향을 미칩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "deliberative",
+    "PartOfSpeech": "adj",
+    "Meaning": "심의하는, 숙고하는",
+    "Example": "The senate committee conducts careful, deliberative hearings on tax codes.",
+    "ExampleKo": "상원 위원회는 세법에 대해 신중하고 심의를 거치는 청문회를 진행합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "demanding",
+    "PartOfSpeech": "adj",
+    "Meaning": "요구가 많은, 힘든",
+    "Example": "Semiconductor cleanroom environments place demanding standards on filtration.",
+    "ExampleKo": "반도체 클린룸 환경은 공기 여과에 대해 대단히 까다로운 기준을 요구합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "derisive",
+    "PartOfSpeech": "adj",
+    "Meaning": "조롱하는, 비웃는",
+    "Example": "Critics launched derisive attacks against the failed luxury metaverse launch.",
+    "ExampleKo": "비평가들은 실패한 명품 메타버스 출시에 대해 조롱 섞인 공격을 퍼부었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "desultory",
+    "PartOfSpeech": "adj",
+    "Meaning": "두서없는, 종잡을 수 없는",
+    "Example": "Desultory brainstorming failed to generate cohesive marketing ideas.",
+    "ExampleKo": "두서없는 브레인스토밍은 일관된 마케팅 아이디어를 도출해내지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "diametrical",
+    "PartOfSpeech": "adj",
+    "Meaning": "정반대의",
+    "Example": "The union and management held diametrical views on overtime wages.",
+    "ExampleKo": "노조와 사측은 연장근로 수당에 대해 정반대의 입장을 견지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "diffident",
+    "PartOfSpeech": "adj",
+    "Meaning": "자신 없는, 소심한",
+    "Example": "The young engineer was diffident about challenging the senior architect.",
+    "ExampleKo": "젊은 엔지니어는 수석 아키텍트에게 이의를 제기하는 것에 자신 없어 했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dilatory",
+    "PartOfSpeech": "adj",
+    "Meaning": "지체시키는, 미루는",
+    "Example": "The defense attorney employed dilatory courtroom tactics to buy time.",
+    "ExampleKo": "피고측 변호인은 시간을 벌기 위해 재판 지연 전술을 구사했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disingenuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "솔직하지 못한, 음흉한",
+    "Example": "Claims that price hikes were due solely to inflation were disingenuous.",
+    "ExampleKo": "가격 인상이 순전히 인플레이션 때문이라는 주장은 솔직하지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "disparate",
+    "PartOfSpeech": "adj",
+    "Meaning": "이질적인, 서로 다른",
+    "Example": "The software integrates disparate legacy accounting systems into one portal.",
+    "ExampleKo": "그 소프트웨어는 서로 다른 기존 회계 시스템들을 단일 포털로 통합합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dogmatic",
+    "PartOfSpeech": "adj",
+    "Meaning": "독단적인, 교조적인",
+    "Example": "Dogmatic adherence to outdated frameworks prevented digital innovation.",
+    "ExampleKo": "오래된 프레임워크에 대한 독단적인 고수는 디지털 혁신을 가로막았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "draconian",
+    "PartOfSpeech": "adj",
+    "Meaning": "매우 가혹한, 가중된",
+    "Example": "Regulators imposed draconian fines for recurring offshore tax evasion.",
+    "ExampleKo": "규제 당국은 상습적인 역외 탈세에 대해 가혹한 과징금을 부과했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "dubious",
+    "PartOfSpeech": "adj",
+    "Meaning": "의심스러운, 수상한",
+    "Example": "The accountant questioned the dubious consulting expenses in invoices.",
+    "ExampleKo": "회계사는 청구서에 적힌 의심스러운 컨설팅 비용에 대해 의문을 제기했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "efficacious",
+    "PartOfSpeech": "adj",
+    "Meaning": "효과가 있는, 유효한",
+    "Example": "Digital automated filing proved far more efficacious than paper mail.",
+    "ExampleKo": "전자 자동 접수는 종이 우편보다 훨씬 더 효과적인 것으로 입증되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "egregious",
+    "PartOfSpeech": "adj",
+    "Meaning": "지독한, 터무니없는",
+    "Example": "The audit uncovered an egregious misuse of corporate travel funds.",
+    "ExampleKo": "감사는 회사 출장 자금의 지독하고 터무니없는 유용을 적발했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "eloquent",
+    "PartOfSpeech": "adj",
+    "Meaning": "유창한, 웅변의",
+    "Example": "The union representative delivered an eloquent speech defending benefits.",
+    "ExampleKo": "노조 대표는 복리후생을 옹호하는 유창하고 호소력 있는 연설을 했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "elusive",
+    "PartOfSpeech": "adj",
+    "Meaning": "찾기 힘든, 잡히지 않는",
+    "Example": "Sustained operating profitability remained elusive for the startup.",
+    "ExampleKo": "지속 가능한 영업 흑자는 그 스타트업에게 여전히 손에 잡히지 않는 목표였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "empirical",
+    "PartOfSpeech": "adj",
+    "Meaning": "실증적인, 경험에 근거한",
+    "Example": "Our investment strategy relies on empirical econometric backtesting.",
+    "ExampleKo": "저희 투자 전략은 실증적인 계량경제학적 백테스팅에 의존합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "endemic",
+    "PartOfSpeech": "adj",
+    "Meaning": "고질적인, 풍토적인",
+    "Example": "Overtime abuses were once endemic across the local logistics industry.",
+    "ExampleKo": "초과근무 악용은 한때 지역 물류업계 전반에 고질적인 관행이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "enervating",
+    "PartOfSpeech": "adj",
+    "Meaning": "무기력하게 하는",
+    "Example": "Prolonged contract stalemates proved deeply enervating for team morale.",
+    "ExampleKo": "장기화된 계약 교착 상태는 팀 사기를 극도로 저하시키고 무기력하게 만들었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "enigmatic",
+    "PartOfSpeech": "adj",
+    "Meaning": "수수께끼 같은, 불가해한",
+    "Example": "The reclusive hedge fund billionaire remains an enigmatic Wall Street figure.",
+    "ExampleKo": "은둔형 헤지펀드 억만장자는 여전히 월가의 수수께끼 같은 인물로 남아 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ephemeral",
+    "PartOfSpeech": "adj",
+    "Meaning": "일시적인, 덧없는",
+    "Example": "Fad viral social media trends often yield merely ephemeral sales spikes.",
+    "ExampleKo": "반짝 유행하는 소셜 미디어 트렌드는 종종 일시적인 매출 급증만을 가져옵니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "equivocal",
+    "PartOfSpeech": "adj",
+    "Meaning": "애매모호한, 불분명한",
+    "Example": "The CFO gave an equivocal response when questioned about revenue shortfalls.",
+    "ExampleKo": "CFO는 매출 부족에 대한 질문을 받았을 때 모호한 답변을 내놓았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "erroneous",
+    "PartOfSpeech": "adj",
+    "Meaning": "잘못된, 오류가 있는",
+    "Example": "Auditors corrected erroneous calculations in the third-quarter ledger.",
+    "ExampleKo": "감사관들은 3분기 원장의 잘못된 계산을 바로잡았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "esoteric",
+    "PartOfSpeech": "adj",
+    "Meaning": "소수만 이해하는, 난해한",
+    "Example": "Securitized bond derivatives remain an esoteric financial specialty.",
+    "ExampleKo": "유동화 증권 파생상품은 여전히 소수만이 이해하는 특수 금융 분야입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "estimable",
+    "PartOfSpeech": "adj",
+    "Meaning": "존경할 만한, 평가할 수 있는",
+    "Example": "She has built an estimable reputation as an international tax arbitrator.",
+    "ExampleKo": "그녀는 국제 조세 중재인으로서 존경할 만한 명성을 쌓았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "euphemistic",
+    "PartOfSpeech": "adj",
+    "Meaning": "완곡어법의",
+    "Example": "The memo used euphemistic language like rightsizing instead of layoffs.",
+    "ExampleKo": "그 메모는 해고 대신 인력 적정화 같은 완곡한 표현을 사용했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exacting",
+    "PartOfSpeech": "adj",
+    "Meaning": "까다로운, 엄격한",
+    "Example": "Manufacturing aerospace turbines requires meeting exacting tolerances.",
+    "ExampleKo": "항공우주용 터빈을 제조하려면 엄격하고 정밀한 허용 오차를 맞춰야 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exhaustive",
+    "PartOfSpeech": "adj",
+    "Meaning": "철저한, 완전한",
+    "Example": "The forensic accounting squad conducted an exhaustive asset trace.",
+    "ExampleKo": "포렌식 회계팀은 철저하고 완전한 자산 추적 조사를 실시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "exorbitant",
+    "PartOfSpeech": "adj",
+    "Meaning": "과도한, 터무니없는",
+    "Example": "Consultants billed exorbitant fees without delivering tangible outcomes.",
+    "ExampleKo": "컨설턴트들은 뚜렷한 결과물을 내놓지 못한 채 터무니없는 수수료를 청구했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "expediently",
+    "PartOfSpeech": "adv",
+    "Meaning": "편리하게, 방편으로",
+    "Example": "The dispute was resolved expediently through private mediation.",
+    "ExampleKo": "그 분쟁은 사적 중재를 통해 신속하고 편리하게 해결되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "extraneous",
+    "PartOfSpeech": "adj",
+    "Meaning": "관련 없는, 이질적인",
+    "Example": "Prune extraneous slides from the executive presentation deck.",
+    "ExampleKo": "임원 프레젠테이션 덱에서 관련 없는 불필요한 슬라이드를 제거하십시오.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fallacious",
+    "PartOfSpeech": "adj",
+    "Meaning": "잘못된, 허위의",
+    "Example": "Arguments that price hikes eliminate debt proved entirely fallacious.",
+    "ExampleKo": "가격 인상이 부채를 해결한다는 주장은 완전히 잘못된 것으로 드러났습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fastidious",
+    "PartOfSpeech": "adj",
+    "Meaning": "세심한, 까다로운",
+    "Example": "The quality inspector is fastidious about cleanroom sterilizations.",
+    "ExampleKo": "품질 검사관은 클린룸 멸균 소독에 대해 대단히 꼼꼼하고 까다롭습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fatuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "어리석은, 얼빠진",
+    "Example": "Investing corporate reserves into volatile meme tokens was a fatuous move.",
+    "ExampleKo": "기업 준비금을 변동성 심한 밈 토큰에 투자한 것은 어리석은 행위였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "felicitous",
+    "PartOfSpeech": "adj",
+    "Meaning": "아주 적절한, 경사스러운",
+    "Example": "The corporate merger took place at a felicitous economic moment.",
+    "ExampleKo": "그 기업 합병은 대단히 시의적절하고 적절한 경제적 시점에 성사되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "flagrant",
+    "PartOfSpeech": "adj",
+    "Meaning": "명백한, 뻔뻔스러운",
+    "Example": "Bribing regional procurement officials was a flagrant statutory violation.",
+    "ExampleKo": "지역 조달 공무원에게 뇌물을 건넨 것은 명백한 법률 위반 행위였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fleeting",
+    "PartOfSpeech": "adj",
+    "Meaning": "순식간의, 덧없는",
+    "Example": "The sales bump from viral publicity proved merely fleeting.",
+    "ExampleKo": "소셜미디어 입소문으로 인한 매출 반등은 순식간에 지나간 일시적인 현상이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fortuitous",
+    "PartOfSpeech": "adj",
+    "Meaning": "우연한, 행운의",
+    "Example": "A fortuitous surge in container availability cleared the factory backlog.",
+    "ExampleKo": "컨테이너 가용성이 우연히 급증한 덕분에 공장의 밀린 주문을 해소했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fractious",
+    "PartOfSpeech": "adj",
+    "Meaning": "다루기 힘든, 성마른",
+    "Example": "Negotiations with the fractious transport union dragged into the weekend.",
+    "ExampleKo": "다루기 힘든 운송 노조와의 협상은 주말까지 길어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "frivolous",
+    "PartOfSpeech": "adj",
+    "Meaning": "하찮은, 경솔한",
+    "Example": "The judge summarily dismissed the competitor's frivolous patent lawsuit.",
+    "ExampleKo": "판사는 경쟁사의 경솔하고 터무니없는 특허 소송을 약식 기각했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "frugal",
+    "PartOfSpeech": "adj",
+    "Meaning": "절약하는, 검소한",
+    "Example": "The startup maintained frugal spending habits until reaching Series B.",
+    "ExampleKo": "그 스타트업은 시리즈 B 투자 유치 전까지 근검절약하는 지출 습관을 유지했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "fulsome",
+    "PartOfSpeech": "adj",
+    "Meaning": "지나친, 역겨울 정도로 과한",
+    "Example": "The CEO gave fulsome praise to the outgoing finance director.",
+    "ExampleKo": "CEO는 퇴임하는 재무이사에게 지나칠 정도로 과도한 칭찬을 쏟아냈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "furtive",
+    "PartOfSpeech": "adj",
+    "Meaning": "은밀한, 엉큼한",
+    "Example": "Employees noticed furtive meetings between executives and private equity buyers.",
+    "ExampleKo": "직원들은 임원들과 사모펀드 매수자들 사이의 은밀한 회동을 눈치챘습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "germane",
+    "PartOfSpeech": "adj",
+    "Meaning": "밀접한 관련이 있는",
+    "Example": "Please present only evidence that is directly germane to the breach of contract.",
+    "ExampleKo": "계약 위반과 직접적으로 밀접한 관련이 있는 증거만 제출해 주십시오.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "gratuitous",
+    "PartOfSpeech": "adj",
+    "Meaning": "불필요한, 무보수의",
+    "Example": "The report contained gratuitous attacks on competitor leadership.",
+    "ExampleKo": "그 보고서에는 경쟁사 경영진에 대한 불필요하고 근거 없는 인신공격이 포함되어 있었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "gregarious",
+    "PartOfSpeech": "adj",
+    "Meaning": "사교적인, 군집성의",
+    "Example": "Our top sales representatives are gregarious and establish quick client rapport.",
+    "ExampleKo": "저희 최고의 영업 사원들은 사교적이며 고객과의 유대감을 빠르게 형성합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "grievous",
+    "PartOfSpeech": "adj",
+    "Meaning": "극심한, 통탄할",
+    "Example": "The cyber outage inflicted grievous financial damage on small merchants.",
+    "ExampleKo": "사이버 전산 마비는 소상공인들에게 극심한 재정적 타격을 입혔습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hackneyed",
+    "PartOfSpeech": "adj",
+    "Meaning": "진부한, 낡아빠진",
+    "Example": "Avoid hackneyed marketing buzzwords when pitching institutional investors.",
+    "ExampleKo": "기관 투자자들을 대상으로 피칭할 때는 진부한 마케팅 유행어를 피하십시오.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "halcyon",
+    "PartOfSpeech": "adj",
+    "Meaning": "평온한, 화려했던",
+    "Example": "Retail executives reminisce about the halcyon days of department store dominance.",
+    "ExampleKo": "유통 임원들은 백화점이 독점적 호황을 누리던 평온하고 찬란했던 시절을 회상합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "haphazard",
+    "PartOfSpeech": "adj",
+    "Meaning": "무계획적인, 마구잡이의",
+    "Example": "The company's haphazard inventory logging led to massive write-downs.",
+    "ExampleKo": "회사의 마구잡이식 재고 관리로 인해 대규모 자산 상각이 발생했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "heinous",
+    "PartOfSpeech": "adj",
+    "Meaning": "악랄한, 극악무도한",
+    "Example": "Embezzling charity pension funds was deemed a heinous corporate crime.",
+    "ExampleKo": "자선 연금 기금을 횡령한 것은 극악무도한 기업 범죄로 규정되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "hermetic",
+    "PartOfSpeech": "adj",
+    "Meaning": "밀폐된, 난해한",
+    "Example": "Cleanrooms maintain hermetic seals to block outside particulate entry.",
+    "ExampleKo": "클린룸은 외부 미세먼지 유입을 차단하기 위해 완전 밀폐 상태를 유지합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "heuristic",
+    "PartOfSpeech": "adj",
+    "Meaning": "경험적인, 발견적인",
+    "Example": "Algorithmic traders utilize heuristic rules to optimize lightning-fast order routing.",
+    "ExampleKo": "알고리즘 트레이더들은 초고속 주문 전송을 최적화하기 위해 경험적 규칙을 활용합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "holistic",
+    "PartOfSpeech": "adj",
+    "Meaning": "전체론적인, 종합적인",
+    "Example": "The firm adopted a holistic approach to employee health and mental wellness.",
+    "ExampleKo": "회사는 직원의 신체적 건강과 정신적 웰빙에 대해 종합적인 접근법을 채택했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "homogeneous",
+    "PartOfSpeech": "adj",
+    "Meaning": "동질적인, 균일한",
+    "Example": "The global semiconductor wafer must possess an ultra-pure, homogeneous structure.",
+    "ExampleKo": "글로벌 반도체 웨이퍼는 초고순도의 균일한 결정 구조를 지녀야 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impeccable",
+    "PartOfSpeech": "adj",
+    "Meaning": "흠잡을 데 없는, 완벽한",
+    "Example": "Her presentation of the financial audit was structured with impeccable precision.",
+    "ExampleKo": "재무 감사에 대한 그녀의 발표는 흠잡을 데 없는 정밀함으로 구성되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impervious",
+    "PartOfSpeech": "adj",
+    "Meaning": "영향을 받지 않는, 불침투성의",
+    "Example": "High-grade military servers are impervious to electromagnetic pulse disruptions.",
+    "ExampleKo": "군용 특수 서버는 전자기 펄스(EMP) 공격에 전혀 영향을 받지 않습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "impetuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "성급한, 충동적인",
+    "Example": "The founder's impetuous expansion into overseas retail resulted in heavy losses.",
+    "ExampleKo": "창업자의 성급한 해외 소매업 확장은 막대한 손실로 이어졌습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "implacable",
+    "PartOfSpeech": "adj",
+    "Meaning": "완강한, 달랠 수 없는",
+    "Example": "The regulator was an implacable foe of anti-competitive monopoly mergers.",
+    "ExampleKo": "그 규제 당국자는 반경쟁적 독점 합병에 대해 타협 없는 완강한 적수였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "incisive",
+    "PartOfSpeech": "adj",
+    "Meaning": "날카로운, 예리한",
+    "Example": "Her incisive analysis dissected the competitor's vulnerable pricing model.",
+    "ExampleKo": "그녀의 예리한 분석은 경쟁사의 취약한 가격 책정 모델을 낱낱이 파헤쳤습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "incongruous",
+    "PartOfSpeech": "adj",
+    "Meaning": "어울리지 않는, 모순된",
+    "Example": "A lavish holiday gala seemed incongruous amid severe company-wide layoffs.",
+    "ExampleKo": "전사적인 대규모 감원 중에 열린 호화로운 연말 갈라 행사는 대단히 어울리지 않아 보였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "indefatigable",
+    "PartOfSpeech": "adj",
+    "Meaning": "지칠 줄 모르는",
+    "Example": "The lead negotiator was indefatigable throughout the marathon labor talks.",
+    "ExampleKo": "수석 협상가는 마라톤 노사 회담 내내 지칠 줄 모르는 끈기를 발휘했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "indigenous",
+    "PartOfSpeech": "adj",
+    "Meaning": "고유의, 원산의",
+    "Example": "The mining project respected land rights held by indigenous communities.",
+    "ExampleKo": "광산 개발 프로젝트는 원주민 공동체가 보유한 토지 권리를 존중했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "indiscriminate",
+    "PartOfSpeech": "adj",
+    "Meaning": "무차별적인, 가리지 않는",
+    "Example": "The airline suffered from indiscriminate budget cuts that compromised service.",
+    "ExampleKo": "항공사는 서비스를 저해하는 무차별적인 예산 삭감으로 고통받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ineffable",
+    "PartOfSpeech": "adj",
+    "Meaning": "말할 수 없는, 표현할 수 없는",
+    "Example": "Founders felt ineffable relief after the initial public offering rang the bell.",
+    "ExampleKo": "창업자들은 기업공개(IPO) 상장 종이 울린 후 말로 다 표현할 수 없는 안도감을 느꼈습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "inexorable",
+    "PartOfSpeech": "adj",
+    "Meaning": "거침없는, 멈출 수 없는",
+    "Example": "The inexorable transition toward electric transport disrupts oil demand.",
+    "ExampleKo": "전기 교통수단으로의 거침없는 전환은 석유 수요에 지각변동을 일으키고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "infallible",
+    "PartOfSpeech": "adj",
+    "Meaning": "결코 틀리지 않는, 완벽한",
+    "Example": "Even the most sophisticated automated trading algorithms are not infallible.",
+    "ExampleKo": "가장 정교한 자동 매매 알고리즘이라 할지라도 결코 완벽하거나 무오류일 수는 없습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ingenuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "순진한, 천진난만한",
+    "Example": "It is ingenuous to assume global suppliers will absorb all currency risks.",
+    "ExampleKo": "글로벌 공급업체가 모든 환율 위험을 흡수해 줄 것이라 믿는 것은 너무 순진한 생각입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "inimical",
+    "PartOfSpeech": "adj",
+    "Meaning": "해로운, 적대적인",
+    "Example": "Excessive bureaucratic friction is inimical to agile software innovation.",
+    "ExampleKo": "과도한 관료주의적 마찰은 기민한 소프트웨어 혁신에 해롭습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "inordinate",
+    "PartOfSpeech": "adj",
+    "Meaning": "과도한, 지나친",
+    "Example": "Developing the jet engine required an inordinate expenditure of capital.",
+    "ExampleKo": "제트 엔진 개발에는 엄청나게 과도한 자본 지출이 필요했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "insidious",
+    "PartOfSpeech": "adj",
+    "Meaning": "서서히 퍼지는, 잠행성의",
+    "Example": "Inflation creates an insidious erosion of middle-class household savings.",
+    "ExampleKo": "인플레이션은 중산층 가계 저축을 서서히 갉아먹는 잠행성 위협을 초래합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "insolvent",
+    "PartOfSpeech": "adj",
+    "Meaning": "지급 불능의, 파산한",
+    "Example": "The regional mortgage lender was declared insolvent after loan defaults.",
+    "ExampleKo": "그 지역 모기지 대출기관은 대출 부실화로 인해 지급 불능 선고를 받았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "intractable",
+    "PartOfSpeech": "adj",
+    "Meaning": "다루기 힘든, 고질적인",
+    "Example": "High container shipping rates proved an intractable problem for months.",
+    "ExampleKo": "치솟은 컨테이너 운임은 수개월 동안 다루기 힘든 고질적 난제였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "intrepid",
+    "PartOfSpeech": "adj",
+    "Meaning": "용감한, 대담한",
+    "Example": "Intrepid angel investors backed the fusion reactor concept early on.",
+    "ExampleKo": "대담한 엔젤 투자자들은 핵융합 원자로 개념에 초기에 자금을 지원했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "intrinsic",
+    "PartOfSpeech": "adj",
+    "Meaning": "고유한, 본질적인",
+    "Example": "Gold has an intrinsic appeal as a historical store of economic value.",
+    "ExampleKo": "금은 역사적인 경제적 가치 저장 수단으로서 고유한 매력을 지니고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "inveterate",
+    "PartOfSpeech": "adj",
+    "Meaning": "만성적인, 상습적인",
+    "Example": "The corporate raider is an inveterate buyer of distressed industrial debt.",
+    "ExampleKo": "그 기업 사냥꾼은 부실 산업 채권을 상습적으로 매입하는 큰손입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "invidious",
+    "PartOfSpeech": "adj",
+    "Meaning": "부당한, 남의 원한을 사는",
+    "Example": "Forced grading curves place managers in an invidious position.",
+    "ExampleKo": "강제 상대평가 등급 배분은 부서장들을 부당하고 곤란한 위치에 놓이게 만듭니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "irrevocable",
+    "PartOfSpeech": "adj",
+    "Meaning": "돌이킬 수 없는, 취소 불가능한",
+    "Example": "The wire transfer instructions became completely irrevocable upon authorization.",
+    "ExampleKo": "전신환 송금 지시서는 승인 즉시 완전히 취소 불가능한 상태가 됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "laconic",
+    "PartOfSpeech": "adj",
+    "Meaning": "간결한, 과묵한",
+    "Example": "The CEO issued a laconic statement stating simply that talks had concluded.",
+    "ExampleKo": "CEO는 협상이 타결되었다는 점만 간단히 밝힌 절제된 성명을 발표했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "laudable",
+    "PartOfSpeech": "adj",
+    "Meaning": "칭찬할 만한, 기특한",
+    "Example": "The corporate commitment to 100% recycled packaging is truly laudable.",
+    "ExampleKo": "100% 재활용 포장재를 사용하겠다는 기업의 약속은 진정 칭찬받을 만합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "limpid",
+    "PartOfSpeech": "adj",
+    "Meaning": "명쾌한, 맑은",
+    "Example": "The legal opinion provided limpid guidance on foreign direct investment.",
+    "ExampleKo": "그 법률 의견서는 외국인 직접투자에 대해 명쾌하고 명확한 지침을 제시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "lucid",
+    "PartOfSpeech": "adj",
+    "Meaning": "명쾌한, 이해하기 쉬운",
+    "Example": "The chief technical officer gave a lucid presentation on data privacy.",
+    "ExampleKo": "최고기술책임자는 데이터 프라이버시에 대해 명쾌한 프레젠테이션을 진행했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "magnanimous",
+    "PartOfSpeech": "adj",
+    "Meaning": "도량이 넓은, 너그러운",
+    "Example": "The enterprise was magnanimous in victory, waiving all court cost claims.",
+    "ExampleKo": "그 기업은 승소 후 모든 소송 비용 청구를 면제해 주는 아량을 베풀었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "malleable",
+    "PartOfSpeech": "adj",
+    "Meaning": "영향을 받기 쉬운, 가단성의",
+    "Example": "Copper alloys are malleable and ideal for electronic circuit componentry.",
+    "ExampleKo": "구리 합금은 가단성이 뛰어나 전자 회로 부품용으로 이상적입니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "mercurial",
+    "PartOfSpeech": "adj",
+    "Meaning": "변덕스러운",
+    "Example": "Traders struggled to manage portfolios amidst mercurial tech stock swings.",
+    "ExampleKo": "트레이더들은 기술주의 변덕스러운 등락 속에서 포트폴리오 관리에 애를 먹었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "munificent",
+    "PartOfSpeech": "adj",
+    "Meaning": "대단히 후한, 아낌없이 주는",
+    "Example": "The founder made a munificent gift of $100 million to cancer research.",
+    "ExampleKo": "창업자는 암 연구를 위해 1억 달러라는 파격적이고 후한 기부금을 쾌척했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "nefarious",
+    "PartOfSpeech": "adj",
+    "Meaning": "사악한, 부정한",
+    "Example": "Cybersecurity teams thwarted nefarious ransomware extortions.",
+    "ExampleKo": "사이버 보안팀은 사악한 랜섬웨어 갈취 시도를 사전에 차단했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "nuanced",
+    "PartOfSpeech": "adj",
+    "Meaning": "미묘한 차이가 있는",
+    "Example": "Effective cross-cultural negotiation requires a nuanced understanding of customs.",
+    "ExampleKo": "효과적인 다문화 협상을 위해서는 관습에 대한 미묘한 차이를 이해해야 합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "obdurate",
+    "PartOfSpeech": "adj",
+    "Meaning": "완고한, 고집 센",
+    "Example": "Management remained obdurate against union demands for pension inflation indexing.",
+    "ExampleKo": "경영진은 연금의 인플레이션 연동을 요구하는 노조 측 주장에 완강히 맞섰습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "obsequious",
+    "PartOfSpeech": "adj",
+    "Meaning": "아부하는, 비굴한",
+    "Example": "An obsequious executive inner circle failed to warn the CEO of impending failure.",
+    "ExampleKo": "아부하는 측근 임원들은 CEO에게 임박한 실패에 대해 경고하지 못했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "obstinate",
+    "PartOfSpeech": "adj",
+    "Meaning": "완고한, 다루기 힘든",
+    "Example": "Supply bottlenecks proved obstinate despite round-the-clock port shifts.",
+    "ExampleKo": "24시간 항만 교대 근무에도 불구하고 공급 병목 현상은 완강히 해소되지 않았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "onerous",
+    "PartOfSpeech": "adj",
+    "Meaning": "아주 힘든, 부담스러운",
+    "Example": "Complying with cross-border tax treaties places onerous reporting duties on startups.",
+    "ExampleKo": "다국가 조세 조약을 준수하는 것은 스타트업에 대단히 부담스러운 보고 의무를 지웁니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "opaque",
+    "PartOfSpeech": "adj",
+    "Meaning": "불투명한, 이해하기 힘든",
+    "Example": "The offshore hedge fund's opaque ownership structure alarmed bank regulators.",
+    "ExampleKo": "그 역외 헤지펀드의 불투명한 지배구조는 은행 규제 당국에 경종을 울렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "opulent",
+    "PartOfSpeech": "adj",
+    "Meaning": "호화로운, 부유한",
+    "Example": "The presidential suite showcases opulent Italian marble and handcrafted furnishings.",
+    "ExampleKo": "프레지덴셜 스위트룸은 호화로운 이탈리아 대리석과 수제 가구를 자랑합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "ostensible",
+    "PartOfSpeech": "adj",
+    "Meaning": "표면상의",
+    "Example": "The ostensible purpose of the meeting was networking, but merger terms were discussed.",
+    "ExampleKo": "그 모임의 표면적인 목적은 네트워킹이었지만, 실제로는 합병 조건이 논의되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "palpable",
+    "PartOfSpeech": "adj",
+    "Meaning": "손에 만져질 듯한, 뚜렷한",
+    "Example": "Palpable tension filled the room as directors prepared to vote on the merger.",
+    "ExampleKo": "이사들이 합병 표결을 준비하는 동안 회의실에는 손에 잡힐 듯한 긴장감이 감돌았습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "panoptic",
+    "PartOfSpeech": "adj",
+    "Meaning": "모든 것을 한눈에 보는, 전경의",
+    "Example": "The compliance software provides a panoptic view of trading operations.",
+    "ExampleKo": "그 준법 감시 소프트웨어는 모든 거래 운영을 한눈에 조망할 수 있게 해줍니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "parsimonious",
+    "PartOfSpeech": "adj",
+    "Meaning": "인색한, 극도로 절약하는",
+    "Example": "Parsimonious capital expenditure severely hampered long-term factory modernization.",
+    "ExampleKo": "극도로 인색한 자본 지출은 장기적인 공장 현대화에 심각한 걸림돌이 되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "paucity",
+    "PartOfSpeech": "noun",
+    "Meaning": "소량, 결핍, 부족",
+    "Example": "A critical paucity of qualified pediatric surgeons strained hospitals.",
+    "ExampleKo": "소아과 전문의의 심각한 부족으로 인해 병원들이 큰 어려움을 겪었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pedantic",
+    "PartOfSpeech": "adj",
+    "Meaning": "지나치게 규칙을 따지는, 현학적인",
+    "Example": "The regulator's pedantic enforcement of minor paperwork delayed the port opening.",
+    "ExampleKo": "규제 당국의 경미한 서류 양식에 대한 지나친 고집으로 항만 개항이 지연되었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pellucid",
+    "PartOfSpeech": "adj",
+    "Meaning": "명쾌한, 명료한",
+    "Example": "The executive memo offered pellucid instructions regarding severance packages.",
+    "ExampleKo": "그 임원 메모는 퇴직금 패키지에 관한 명쾌하고 명확한 지침을 제공했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "peremptory",
+    "PartOfSpeech": "adj",
+    "Meaning": "단호한, 위압적인",
+    "Example": "The CEO issued a peremptory order halting all non-essential business travel.",
+    "ExampleKo": "CEO는 모든 불필요한 출장을 전면 중단하라는 단호한 명령을 내렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "perfidious",
+    "PartOfSpeech": "adj",
+    "Meaning": "배신하는, 불성실한",
+    "Example": "Selling corporate trade secrets to a competitor was a perfidious betrayal.",
+    "ExampleKo": "기업 영업비밀을 경쟁사에 팔아넘긴 것은 배신행위였습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "perfunctory",
+    "PartOfSpeech": "adj",
+    "Meaning": "형식적인, 마지못해 하는",
+    "Example": "Security guards conducted merely perfunctory badge checks at the side entrance.",
+    "ExampleKo": "경비원들은 측면 출입구에서 단지 형식적인 출입증 검사만을 실시했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pernicious",
+    "PartOfSpeech": "adj",
+    "Meaning": "치명적인, 유해한",
+    "Example": "Unchecked corporate nepotism has a pernicious impact on company culture.",
+    "ExampleKo": "통제되지 않은 사내 족벌주의는 기업 문화에 치명적인 악영향을 미칩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "perspicacious",
+    "PartOfSpeech": "adj",
+    "Meaning": "통찰력 있는, 총명한",
+    "Example": "The perspicacious venture partner spotted the artificial intelligence boom early.",
+    "ExampleKo": "통찰력 있는 벤처 파트너는 인공지능 붐을 초기에 정확히 포착했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pervasive",
+    "PartOfSpeech": "adj",
+    "Meaning": "만연한, 구석구석 스며드는",
+    "Example": "Digital analytics tools have a pervasive presence across modern marketing.",
+    "ExampleKo": "디지털 분석 도구는 현대 마케팅 전반에 걸쳐 깊숙이 자리 잡고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "poignant",
+    "PartOfSpeech": "adj",
+    "Meaning": "가슴 아픈, 신랄한",
+    "Example": "The retiring founder gave a poignant speech reflecting on forty years in business.",
+    "ExampleKo": "퇴임하는 창업자는 사업 40년을 되돌아보며 가슴 뭉클한 연설을 했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "polemical",
+    "PartOfSpeech": "adj",
+    "Meaning": "논쟁적인, 격론을 벌이는",
+    "Example": "The editorial was a polemical critique of government renewable energy mandates.",
+    "ExampleKo": "그 사설은 정부의 재생 에너지 의무화 정책에 대한 격렬한 비판 논문이었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "portentous",
+    "PartOfSpeech": "adj",
+    "Meaning": "불길한, 전조가 되는",
+    "Example": "An inverted Treasury yield curve is viewed as a portentous recession indicator.",
+    "ExampleKo": "역전된 국채 수익률 곡선은 불길한 경기 침체의 전조 지표로 간주됩니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pragmatic",
+    "PartOfSpeech": "adj",
+    "Meaning": "실용적인",
+    "Example": "Management took a pragmatic approach, outsourcing non-core manufacturing.",
+    "ExampleKo": "경영진은 비핵심 제조 부문을 외주화하는 실용적인 접근법을 취했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "precarious",
+    "PartOfSpeech": "adj",
+    "Meaning": "위태로운, 불안정한",
+    "Example": "The supply chain remains in a precarious state due to canal shipping halts.",
+    "ExampleKo": "운하 통행 중단으로 인해 글로벌 공급망은 여전히 위태로운 상태에 머물러 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "predatory",
+    "PartOfSpeech": "adj",
+    "Meaning": "약탈적인",
+    "Example": "Regulators fined the lender for deceptive, predatory payday loan practices.",
+    "ExampleKo": "규제 당국은 기만적이고 약탈적인 고금리 대출 관행에 대해 대출업체에 벌금을 부과했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prescient",
+    "PartOfSpeech": "adj",
+    "Meaning": "선견지명이 있는",
+    "Example": "Her prescient investment in semiconductor foundries generated 500% gains.",
+    "ExampleKo": "반도체 파운드리에 대한 그녀의 선견지명 있는 투자는 500%의 수익률을 올렸습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "pristine",
+    "PartOfSpeech": "adj",
+    "Meaning": "자연 그대로의, 흠 없는",
+    "Example": "The renovated flagship store reopened in pristine condition yesterday.",
+    "ExampleKo": "새 단장한 플래그십 스토어는 어제 티 하나 없이 완벽한 상태로 재개장했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "probity",
+    "PartOfSpeech": "noun",
+    "Meaning": "청렴, 성실",
+    "Example": "The candidate's unimpeachable financial probity made her ideal for treasurer.",
+    "ExampleKo": "그 후보자의 흠잡을 데 없는 재정적 청렴성은 그녀를 재무 책임자 적임자로 만들었습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prodigious",
+    "PartOfSpeech": "adj",
+    "Meaning": "엄청난, 굉장한",
+    "Example": "The data center consumes a prodigious quantity of hydroelectric power.",
+    "ExampleKo": "그 데이터 센터는 엄청난 양의 수력 발전 전력을 소비합니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "profuse",
+    "PartOfSpeech": "adj",
+    "Meaning": "아낌없는, 풍부한",
+    "Example": "The CEO offered profuse apologies for the catastrophic service outage.",
+    "ExampleKo": "CEO는 치명적인 전산 서비스 장애에 대해 거듭 머리 숙여 사과했습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prohibitive",
+    "PartOfSpeech": "adj",
+    "Meaning": "엄두를 못 낼 정도로 비싼, 금지하는",
+    "Example": "Air freighting heavy turbine machinery incurs prohibitive logistical expenses.",
+    "ExampleKo": "무거운 터빈 기계를 항공으로 운송하는 것은 엄두도 못 낼 만큼 비싼 비용이 듭니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "prolific",
+    "PartOfSpeech": "adj",
+    "Meaning": "다작의, 다산의",
+    "Example": "The company maintains a prolific research lab patenting forty inventions a year.",
+    "ExampleKo": "그 회사는 매년 40건의 발명품 특허를 출원하는 왕성한 연구소를 운영하고 있습니다.",
+    "Tier": "3-고급"
+  },
+  {
+    "Word": "propitious",
+    "PartOfSpeech": "adj",
+    "Meaning": "좋은, 길조의",
+    "Example": "The sudden slump in commercial mortgage rates created propitious buying conditions.",
+    "ExampleKo": "상업용 모기지 금리의 급락은 대단히 유리한 부동산 매수 여건을 조성했습니다.",
+    "Tier": "3-고급"
+  }
+]

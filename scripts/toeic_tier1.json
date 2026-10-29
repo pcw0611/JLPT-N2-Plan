@@ -1,0 +1,4002 @@
+[
+  {
+    "Word": "meeting",
+    "PartOfSpeech": "noun",
+    "Meaning": "회의",
+    "Example": "The meeting will be held in Conference Room B.",
+    "ExampleKo": "회의는 B 회의실에서 열릴 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "schedule",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "일정; 일정을 잡다",
+    "Example": "Please check the schedule before confirming the appointment.",
+    "ExampleKo": "약속을 확인하기 전에 일정을 확인해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "employee",
+    "PartOfSpeech": "noun",
+    "Meaning": "직원",
+    "Example": "All employees must attend the safety training session.",
+    "ExampleKo": "모든 직원은 안전 교육에 참석해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "department",
+    "PartOfSpeech": "noun",
+    "Meaning": "부서",
+    "Example": "The marketing department is on the third floor.",
+    "ExampleKo": "마케팅 부서는 3층에 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "manager",
+    "PartOfSpeech": "noun",
+    "Meaning": "관리자, 매니저",
+    "Example": "The manager approved the budget for the project.",
+    "ExampleKo": "매니저가 프로젝트 예산을 승인했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "document",
+    "PartOfSpeech": "noun",
+    "Meaning": "서류, 문서",
+    "Example": "Please sign the document and return it by Friday.",
+    "ExampleKo": "서류에 서명하고 금요일까지 반환해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "office",
+    "PartOfSpeech": "noun",
+    "Meaning": "사무실",
+    "Example": "The new office will open next Monday.",
+    "ExampleKo": "새 사무실은 다음 주 월요일에 열립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "report",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "보고서; 보고하다",
+    "Example": "The quarterly report is due next week.",
+    "ExampleKo": "분기 보고서는 다음 주까지입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "project",
+    "PartOfSpeech": "noun",
+    "Meaning": "프로젝트, 사업",
+    "Example": "The project is expected to be completed by December.",
+    "ExampleKo": "프로젝트는 12월까지 완료될 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "company",
+    "PartOfSpeech": "noun",
+    "Meaning": "회사",
+    "Example": "The company has over 500 employees worldwide.",
+    "ExampleKo": "그 회사는 전 세계에 500명 이상의 직원이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "customer",
+    "PartOfSpeech": "noun",
+    "Meaning": "고객",
+    "Example": "Customer satisfaction is our top priority.",
+    "ExampleKo": "고객 만족이 저희의 최우선 과제입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "conference",
+    "PartOfSpeech": "noun",
+    "Meaning": "회의, 컨퍼런스",
+    "Example": "The annual conference will take place in Seoul.",
+    "ExampleKo": "연례 컨퍼런스는 서울에서 개최됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "supervisor",
+    "PartOfSpeech": "noun",
+    "Meaning": "상사, 감독관",
+    "Example": "Please consult your supervisor before making changes.",
+    "ExampleKo": "변경하기 전에 상사와 상담하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "colleague",
+    "PartOfSpeech": "noun",
+    "Meaning": "동료",
+    "Example": "I discussed the proposal with my colleague.",
+    "ExampleKo": "동료와 그 제안에 대해 논의했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "deadline",
+    "PartOfSpeech": "noun",
+    "Meaning": "마감 기한",
+    "Example": "The deadline for the application is October 31.",
+    "ExampleKo": "지원서 마감 기한은 10월 31일입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "appointment",
+    "PartOfSpeech": "noun",
+    "Meaning": "약속, 예약",
+    "Example": "I have an appointment with the dentist at 3 p.m.",
+    "ExampleKo": "오후 3시에 치과 예약이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "budget",
+    "PartOfSpeech": "noun",
+    "Meaning": "예산",
+    "Example": "The department exceeded its budget this quarter.",
+    "ExampleKo": "부서가 이번 분기 예산을 초과했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "position",
+    "PartOfSpeech": "noun",
+    "Meaning": "직위, 자리",
+    "Example": "She was promoted to the position of director.",
+    "ExampleKo": "그녀는 이사 직위로 승진했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "presentation",
+    "PartOfSpeech": "noun",
+    "Meaning": "발표, 프레젠테이션",
+    "Example": "He gave an excellent presentation on the new product.",
+    "ExampleKo": "그는 신제품에 대해 훌륭한 발표를 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "application",
+    "PartOfSpeech": "noun",
+    "Meaning": "지원서, 신청서",
+    "Example": "Please submit your application online.",
+    "ExampleKo": "지원서를 온라인으로 제출해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "agreement",
+    "PartOfSpeech": "noun",
+    "Meaning": "합의, 계약",
+    "Example": "Both parties signed the agreement yesterday.",
+    "ExampleKo": "양측이 어제 합의서에 서명했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "client",
+    "PartOfSpeech": "noun",
+    "Meaning": "고객, 의뢰인",
+    "Example": "We need to prepare a proposal for the new client.",
+    "ExampleKo": "새 고객을 위한 제안서를 준비해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "staff",
+    "PartOfSpeech": "noun",
+    "Meaning": "직원(들)",
+    "Example": "Additional staff will be hired for the holiday season.",
+    "ExampleKo": "연말 시즌을 위해 추가 직원이 고용될 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "facility",
+    "PartOfSpeech": "noun",
+    "Meaning": "시설",
+    "Example": "The new facility includes a gym and a cafeteria.",
+    "ExampleKo": "새 시설에는 체육관과 카페테리아가 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "policy",
+    "PartOfSpeech": "noun",
+    "Meaning": "정책, 방침",
+    "Example": "The company updated its return policy.",
+    "ExampleKo": "회사가 반품 정책을 업데이트했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "invoice",
+    "PartOfSpeech": "noun",
+    "Meaning": "송장, 청구서",
+    "Example": "The invoice must be paid within 30 days.",
+    "ExampleKo": "청구서는 30일 이내에 지불해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "receipt",
+    "PartOfSpeech": "noun",
+    "Meaning": "영수증",
+    "Example": "Please keep the receipt for your records.",
+    "ExampleKo": "기록을 위해 영수증을 보관해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "order",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "주문; 주문하다",
+    "Example": "We received a large order from a new client.",
+    "ExampleKo": "새 고객으로부터 대량 주문을 받았습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "training",
+    "PartOfSpeech": "noun",
+    "Meaning": "교육, 훈련",
+    "Example": "New employees must complete a week of training.",
+    "ExampleKo": "신입 직원은 일주일간의 교육을 이수해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "contract",
+    "PartOfSpeech": "noun",
+    "Meaning": "계약(서)",
+    "Example": "The contract will expire at the end of this year.",
+    "ExampleKo": "계약은 올해 말에 만료됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "submit",
+    "PartOfSpeech": "verb",
+    "Meaning": "제출하다",
+    "Example": "Please submit your expense report by the end of the day.",
+    "ExampleKo": "오늘 안으로 경비 보고서를 제출해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "approve",
+    "PartOfSpeech": "verb",
+    "Meaning": "승인하다",
+    "Example": "The board approved the construction plan.",
+    "ExampleKo": "이사회가 건설 계획을 승인했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "confirm",
+    "PartOfSpeech": "verb",
+    "Meaning": "확인하다",
+    "Example": "Can you confirm the reservation for tomorrow?",
+    "ExampleKo": "내일 예약을 확인해 주시겠어요?",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "arrange",
+    "PartOfSpeech": "verb",
+    "Meaning": "준비하다, 배치하다",
+    "Example": "I will arrange a meeting with the supplier.",
+    "ExampleKo": "공급업체와 회의를 준비하겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "attend",
+    "PartOfSpeech": "verb",
+    "Meaning": "참석하다",
+    "Example": "Over 200 people attended the seminar.",
+    "ExampleKo": "200명 이상이 세미나에 참석했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "require",
+    "PartOfSpeech": "verb",
+    "Meaning": "요구하다, 필요로 하다",
+    "Example": "This position requires at least three years of experience.",
+    "ExampleKo": "이 직위는 최소 3년의 경험이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "provide",
+    "PartOfSpeech": "verb",
+    "Meaning": "제공하다",
+    "Example": "We provide free shipping on orders over fifty dollars.",
+    "ExampleKo": "50달러 이상 주문 시 무료 배송을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "announce",
+    "PartOfSpeech": "verb",
+    "Meaning": "발표하다, 공지하다",
+    "Example": "The CEO announced the company's expansion plans.",
+    "ExampleKo": "CEO가 회사의 확장 계획을 발표했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "request",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "요청하다; 요청",
+    "Example": "She requested a transfer to the London office.",
+    "ExampleKo": "그녀는 런던 사무실로의 전근을 요청했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "recommend",
+    "PartOfSpeech": "verb",
+    "Meaning": "추천하다",
+    "Example": "I recommend arriving at least 30 minutes early.",
+    "ExampleKo": "최소 30분 일찍 도착하는 것을 추천합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "cancel",
+    "PartOfSpeech": "verb",
+    "Meaning": "취소하다",
+    "Example": "The flight was canceled due to bad weather.",
+    "ExampleKo": "악천후로 인해 항공편이 취소되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "deliver",
+    "PartOfSpeech": "verb",
+    "Meaning": "배달하다",
+    "Example": "The package will be delivered by Thursday.",
+    "ExampleKo": "소포는 목요일까지 배달됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "purchase",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "구매하다; 구매",
+    "Example": "Employees can purchase supplies from the online store.",
+    "ExampleKo": "직원들은 온라인 스토어에서 비품을 구매할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "replace",
+    "PartOfSpeech": "verb",
+    "Meaning": "교체하다",
+    "Example": "The broken printer will be replaced next week.",
+    "ExampleKo": "고장 난 프린터는 다음 주에 교체됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "review",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "검토하다; 리뷰",
+    "Example": "Please review the attached document before the meeting.",
+    "ExampleKo": "회의 전에 첨부된 문서를 검토해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "contact",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "연락하다; 연락처",
+    "Example": "Please contact us if you have any questions.",
+    "ExampleKo": "문의 사항이 있으시면 연락해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "offer",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "제안하다; 제안",
+    "Example": "The store is offering a 20 percent discount this weekend.",
+    "ExampleKo": "이번 주말에 매장에서 20% 할인을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "hire",
+    "PartOfSpeech": "verb",
+    "Meaning": "고용하다",
+    "Example": "The company plans to hire 50 new engineers.",
+    "ExampleKo": "회사는 50명의 새 엔지니어를 고용할 계획입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "improve",
+    "PartOfSpeech": "verb",
+    "Meaning": "개선하다",
+    "Example": "We need to improve our customer service.",
+    "ExampleKo": "우리는 고객 서비스를 개선해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "increase",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "증가하다; 증가",
+    "Example": "Sales increased by 15 percent compared to last year.",
+    "ExampleKo": "매출이 작년 대비 15% 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reduce",
+    "PartOfSpeech": "verb",
+    "Meaning": "줄이다",
+    "Example": "The company is trying to reduce operating costs.",
+    "ExampleKo": "회사는 운영비를 줄이려고 노력하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prepare",
+    "PartOfSpeech": "verb",
+    "Meaning": "준비하다",
+    "Example": "Please prepare a summary of the project.",
+    "ExampleKo": "프로젝트 요약을 준비해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "notify",
+    "PartOfSpeech": "verb",
+    "Meaning": "통지하다, 알리다",
+    "Example": "We will notify you of any changes to the schedule.",
+    "ExampleKo": "일정 변경 사항이 있으면 알려드리겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "operate",
+    "PartOfSpeech": "verb",
+    "Meaning": "운영하다, 작동하다",
+    "Example": "The factory operates 24 hours a day.",
+    "ExampleKo": "공장은 하루 24시간 운영됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "participate",
+    "PartOfSpeech": "verb",
+    "Meaning": "참여하다",
+    "Example": "All staff are encouraged to participate in the survey.",
+    "ExampleKo": "모든 직원이 설문 조사에 참여하도록 권장됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "maintain",
+    "PartOfSpeech": "verb",
+    "Meaning": "유지하다, 관리하다",
+    "Example": "It is important to maintain a clean workspace.",
+    "ExampleKo": "깨끗한 작업 공간을 유지하는 것이 중요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "receive",
+    "PartOfSpeech": "verb",
+    "Meaning": "받다, 수령하다",
+    "Example": "We received your payment on Monday.",
+    "ExampleKo": "월요일에 귀하의 지불을 수령했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "complete",
+    "PartOfSpeech": "verb/adj",
+    "Meaning": "완료하다; 완전한",
+    "Example": "Please complete the form and return it to reception.",
+    "ExampleKo": "양식을 작성하고 접수처에 반환해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "include",
+    "PartOfSpeech": "verb",
+    "Meaning": "포함하다",
+    "Example": "The price includes breakfast and parking.",
+    "ExampleKo": "가격에 조식과 주차가 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "discuss",
+    "PartOfSpeech": "verb",
+    "Meaning": "논의하다",
+    "Example": "We will discuss the proposal at tomorrow's meeting.",
+    "ExampleKo": "내일 회의에서 그 제안을 논의하겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "organize",
+    "PartOfSpeech": "verb",
+    "Meaning": "조직하다, 정리하다",
+    "Example": "She organized a farewell party for the retiring director.",
+    "ExampleKo": "그녀는 퇴임하는 이사를 위한 환송회를 조직했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "resolve",
+    "PartOfSpeech": "verb",
+    "Meaning": "해결하다",
+    "Example": "We need to resolve this issue before the launch.",
+    "ExampleKo": "출시 전에 이 문제를 해결해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "respond",
+    "PartOfSpeech": "verb",
+    "Meaning": "응답하다",
+    "Example": "Please respond to the email within 24 hours.",
+    "ExampleKo": "24시간 이내에 이메일에 응답해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "update",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "업데이트하다; 최신 정보",
+    "Example": "I will update you on the project status.",
+    "ExampleKo": "프로젝트 진행 상황을 알려드리겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "apply",
+    "PartOfSpeech": "verb",
+    "Meaning": "지원하다, 적용하다",
+    "Example": "She decided to apply for the marketing position.",
+    "ExampleKo": "그녀는 마케팅 직위에 지원하기로 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "assign",
+    "PartOfSpeech": "verb",
+    "Meaning": "배정하다",
+    "Example": "The task was assigned to the new intern.",
+    "ExampleKo": "그 업무는 새 인턴에게 배정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "register",
+    "PartOfSpeech": "verb",
+    "Meaning": "등록하다",
+    "Example": "Please register for the workshop by March 1.",
+    "ExampleKo": "3월 1일까지 워크숍에 등록해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "distribute",
+    "PartOfSpeech": "verb",
+    "Meaning": "배포하다, 분배하다",
+    "Example": "Flyers will be distributed at the entrance.",
+    "ExampleKo": "전단지는 입구에서 배포됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "extend",
+    "PartOfSpeech": "verb",
+    "Meaning": "연장하다",
+    "Example": "The deadline has been extended to next Friday.",
+    "ExampleKo": "마감 기한이 다음 주 금요일로 연장되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "ensure",
+    "PartOfSpeech": "verb",
+    "Meaning": "보장하다, 확실히 하다",
+    "Example": "Please ensure that all doors are locked before leaving.",
+    "ExampleKo": "떠나기 전에 모든 문이 잠겼는지 확인하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "available",
+    "PartOfSpeech": "adjective",
+    "Meaning": "이용 가능한",
+    "Example": "The conference room is available from 2 p.m.",
+    "ExampleKo": "회의실은 오후 2시부터 이용 가능합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "additional",
+    "PartOfSpeech": "adjective",
+    "Meaning": "추가의",
+    "Example": "Additional charges may apply for express delivery.",
+    "ExampleKo": "급행 배송에는 추가 요금이 부과될 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "approximately",
+    "PartOfSpeech": "adverb",
+    "Meaning": "약, 대략",
+    "Example": "The renovations will take approximately three weeks.",
+    "ExampleKo": "보수 공사는 약 3주가 소요됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "currently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "현재",
+    "Example": "We are currently reviewing your application.",
+    "ExampleKo": "현재 귀하의 지원서를 검토 중입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "recently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "최근에",
+    "Example": "The company recently opened a new branch.",
+    "ExampleKo": "회사가 최근에 새 지점을 열었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "immediately",
+    "PartOfSpeech": "adverb",
+    "Meaning": "즉시",
+    "Example": "Please contact the IT department immediately.",
+    "ExampleKo": "즉시 IT 부서에 연락하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "eligible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "자격이 있는",
+    "Example": "Employees with over five years of service are eligible for the bonus.",
+    "ExampleKo": "5년 이상 근무한 직원은 보너스를 받을 자격이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "necessary",
+    "PartOfSpeech": "adjective",
+    "Meaning": "필요한",
+    "Example": "It is necessary to bring your ID card to the event.",
+    "ExampleKo": "행사에 신분증을 가져오는 것이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "previous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "이전의",
+    "Example": "She has extensive experience from her previous position.",
+    "ExampleKo": "그녀는 이전 직위에서 풍부한 경험을 가지고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "separate",
+    "PartOfSpeech": "adjective/verb",
+    "Meaning": "별도의; 분리하다",
+    "Example": "Invoices will be sent in a separate email.",
+    "ExampleKo": "청구서는 별도의 이메일로 발송됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "significant",
+    "PartOfSpeech": "adjective",
+    "Meaning": "중요한, 상당한",
+    "Example": "There has been a significant increase in online orders.",
+    "ExampleKo": "온라인 주문이 상당히 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "temporary",
+    "PartOfSpeech": "adjective",
+    "Meaning": "임시의",
+    "Example": "A temporary office has been set up on the second floor.",
+    "ExampleKo": "2층에 임시 사무실이 마련되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "annual",
+    "PartOfSpeech": "adjective",
+    "Meaning": "연간의, 매년의",
+    "Example": "The annual company picnic is scheduled for June.",
+    "ExampleKo": "연례 회사 소풍은 6월로 예정되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "entire",
+    "PartOfSpeech": "adjective",
+    "Meaning": "전체의",
+    "Example": "The entire building will be closed for renovations.",
+    "ExampleKo": "건물 전체가 보수 공사를 위해 폐쇄됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "regarding",
+    "PartOfSpeech": "preposition",
+    "Meaning": "~에 관하여",
+    "Example": "I am writing to you regarding your recent inquiry.",
+    "ExampleKo": "최근 문의와 관련하여 연락드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "due",
+    "PartOfSpeech": "adjective",
+    "Meaning": "예정인, ~때문에",
+    "Example": "The payment is due by the end of the month.",
+    "ExampleKo": "지불은 월말까지입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prior",
+    "PartOfSpeech": "adjective",
+    "Meaning": "사전의, 이전의",
+    "Example": "Prior approval is required for overtime work.",
+    "ExampleKo": "초과 근무에는 사전 승인이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "specific",
+    "PartOfSpeech": "adjective",
+    "Meaning": "구체적인, 특정한",
+    "Example": "Please provide specific details about the incident.",
+    "ExampleKo": "그 사건에 대한 구체적인 세부 사항을 제공해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "convenient",
+    "PartOfSpeech": "adjective",
+    "Meaning": "편리한",
+    "Example": "Please let me know a convenient time for the meeting.",
+    "ExampleKo": "회의에 편리한 시간을 알려 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "effective",
+    "PartOfSpeech": "adjective",
+    "Meaning": "효과적인; 시행되는",
+    "Example": "The new policy will be effective starting April 1.",
+    "ExampleKo": "새 정책은 4월 1일부터 시행됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "frequently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "자주",
+    "Example": "This question is frequently asked by customers.",
+    "ExampleKo": "이 질문은 고객들이 자주 묻습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "successful",
+    "PartOfSpeech": "adjective",
+    "Meaning": "성공적인",
+    "Example": "The product launch was very successful.",
+    "ExampleKo": "제품 출시가 매우 성공적이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "affordable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "저렴한, 알맞은",
+    "Example": "We offer affordable rates for small businesses.",
+    "ExampleKo": "저희는 소규모 사업자에게 알맞은 요금을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "following",
+    "PartOfSpeech": "adjective",
+    "Meaning": "다음의",
+    "Example": "Please read the following instructions carefully.",
+    "ExampleKo": "다음 지침을 주의 깊게 읽어 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "responsible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "책임이 있는",
+    "Example": "She is responsible for managing the sales team.",
+    "ExampleKo": "그녀는 영업팀 관리를 담당합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "various",
+    "PartOfSpeech": "adjective",
+    "Meaning": "다양한",
+    "Example": "The hotel offers various amenities for guests.",
+    "ExampleKo": "호텔은 투숙객을 위한 다양한 편의 시설을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "potential",
+    "PartOfSpeech": "adjective/noun",
+    "Meaning": "잠재적인; 잠재력",
+    "Example": "We identified several potential clients.",
+    "ExampleKo": "몇몇 잠재적인 고객을 파악했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "regularly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "정기적으로",
+    "Example": "Equipment should be inspected regularly.",
+    "ExampleKo": "장비는 정기적으로 점검해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "originally",
+    "PartOfSpeech": "adverb",
+    "Meaning": "원래",
+    "Example": "The event was originally scheduled for March.",
+    "ExampleKo": "행사는 원래 3월로 예정되어 있었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "particularly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "특히",
+    "Example": "The feedback was particularly positive about the service.",
+    "ExampleKo": "피드백은 서비스에 대해 특히 긍정적이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "attached",
+    "PartOfSpeech": "adjective",
+    "Meaning": "첨부된",
+    "Example": "Please find the attached file for your reference.",
+    "ExampleKo": "참고하시도록 첨부 파일을 확인해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "sincerely",
+    "PartOfSpeech": "adverb",
+    "Meaning": "진심으로 (편지 끝인사)",
+    "Example": "Sincerely, John Smith, Marketing Director",
+    "ExampleKo": "진심을 담아, 존 스미스, 마케팅 이사",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inquiry",
+    "PartOfSpeech": "noun",
+    "Meaning": "문의",
+    "Example": "Thank you for your inquiry about our services.",
+    "ExampleKo": "저희 서비스에 대한 문의에 감사드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "apologize",
+    "PartOfSpeech": "verb",
+    "Meaning": "사과하다",
+    "Example": "We apologize for any inconvenience this may cause.",
+    "ExampleKo": "이로 인해 불편을 끼쳐 드려 사과합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inform",
+    "PartOfSpeech": "verb",
+    "Meaning": "알리다",
+    "Example": "We are writing to inform you of a change in our policy.",
+    "ExampleKo": "정책 변경 사항을 알려드리고자 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "address",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "주소; 다루다",
+    "Example": "The manager addressed the concerns raised by the staff.",
+    "ExampleKo": "관리자가 직원들이 제기한 우려 사항을 다루었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "mention",
+    "PartOfSpeech": "verb",
+    "Meaning": "언급하다",
+    "Example": "As mentioned in the previous email, the office will be closed.",
+    "ExampleKo": "이전 이메일에서 언급했듯이 사무실이 폐쇄됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "appreciate",
+    "PartOfSpeech": "verb",
+    "Meaning": "감사하다",
+    "Example": "We appreciate your prompt response to our request.",
+    "ExampleKo": "저희 요청에 신속히 응답해 주셔서 감사합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "enclose",
+    "PartOfSpeech": "verb",
+    "Meaning": "동봉하다",
+    "Example": "I have enclosed a copy of the contract for your review.",
+    "ExampleKo": "검토를 위해 계약서 사본을 동봉했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "forward",
+    "PartOfSpeech": "verb",
+    "Meaning": "전달하다",
+    "Example": "Please forward the email to the sales team.",
+    "ExampleKo": "영업팀에 이메일을 전달해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "notice",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "공지, 통지; 알아차리다",
+    "Example": "A notice has been posted on the bulletin board.",
+    "ExampleKo": "게시판에 공지가 게시되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "opportunity",
+    "PartOfSpeech": "noun",
+    "Meaning": "기회",
+    "Example": "This is a great opportunity for career advancement.",
+    "ExampleKo": "이것은 경력 발전을 위한 좋은 기회입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "advertisement",
+    "PartOfSpeech": "noun",
+    "Meaning": "광고",
+    "Example": "The advertisement appeared in the local newspaper.",
+    "ExampleKo": "그 광고는 지역 신문에 실렸습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "invitation",
+    "PartOfSpeech": "noun",
+    "Meaning": "초대",
+    "Example": "Thank you for the invitation to the gala dinner.",
+    "ExampleKo": "갈라 만찬 초대에 감사드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "complaint",
+    "PartOfSpeech": "noun",
+    "Meaning": "불만, 항의",
+    "Example": "We received a complaint from a customer about the delay.",
+    "ExampleKo": "고객으로부터 지연에 대한 불만을 접수했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "feedback",
+    "PartOfSpeech": "noun",
+    "Meaning": "피드백, 의견",
+    "Example": "Your feedback is important to us.",
+    "ExampleKo": "여러분의 의견은 저희에게 중요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "survey",
+    "PartOfSpeech": "noun",
+    "Meaning": "설문 조사",
+    "Example": "Please take a moment to complete our customer survey.",
+    "ExampleKo": "잠시 시간을 내어 고객 설문 조사를 완료해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "negotiate",
+    "PartOfSpeech": "verb",
+    "Meaning": "협상하다",
+    "Example": "We are negotiating the terms of the contract.",
+    "ExampleKo": "계약 조건을 협상하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "refer",
+    "PartOfSpeech": "verb",
+    "Meaning": "참조하다, 언급하다",
+    "Example": "Please refer to the user manual for more details.",
+    "ExampleKo": "자세한 내용은 사용자 매뉴얼을 참조하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "suggest",
+    "PartOfSpeech": "verb",
+    "Meaning": "제안하다",
+    "Example": "I suggest scheduling the meeting for Thursday.",
+    "ExampleKo": "목요일에 회의 일정을 잡을 것을 제안합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reservation",
+    "PartOfSpeech": "noun",
+    "Meaning": "예약",
+    "Example": "I would like to make a reservation for two nights.",
+    "ExampleKo": "2박 예약을 하고 싶습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "discount",
+    "PartOfSpeech": "noun",
+    "Meaning": "할인",
+    "Example": "Members receive a 10 percent discount on all purchases.",
+    "ExampleKo": "회원은 모든 구매에서 10% 할인을 받습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "warranty",
+    "PartOfSpeech": "noun",
+    "Meaning": "보증, 품질보증",
+    "Example": "This product comes with a two-year warranty.",
+    "ExampleKo": "이 제품에는 2년 보증이 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "refund",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "환불; 환불하다",
+    "Example": "You can request a full refund within 30 days.",
+    "ExampleKo": "30일 이내에 전액 환불을 요청할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "accommodation",
+    "PartOfSpeech": "noun",
+    "Meaning": "숙박 시설",
+    "Example": "The hotel offers comfortable accommodation at affordable prices.",
+    "ExampleKo": "호텔은 합리적인 가격의 편안한 숙박 시설을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "destination",
+    "PartOfSpeech": "noun",
+    "Meaning": "목적지",
+    "Example": "Paris is a popular destination for business conferences.",
+    "ExampleKo": "파리는 비즈니스 컨퍼런스로 인기 있는 목적지입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "departure",
+    "PartOfSpeech": "noun",
+    "Meaning": "출발",
+    "Example": "The departure time has been changed to 9 a.m.",
+    "ExampleKo": "출발 시간이 오전 9시로 변경되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "arrival",
+    "PartOfSpeech": "noun",
+    "Meaning": "도착",
+    "Example": "Please notify us of your expected arrival time.",
+    "ExampleKo": "예상 도착 시간을 알려 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fare",
+    "PartOfSpeech": "noun",
+    "Meaning": "요금 (교통)",
+    "Example": "The bus fare has increased by 10 percent this year.",
+    "ExampleKo": "올해 버스 요금이 10% 인상되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "itinerary",
+    "PartOfSpeech": "noun",
+    "Meaning": "여행 일정",
+    "Example": "I will send you the detailed itinerary for the trip.",
+    "ExampleKo": "여행에 대한 상세 일정을 보내드리겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "luggage",
+    "PartOfSpeech": "noun",
+    "Meaning": "수하물",
+    "Example": "Each passenger is allowed one piece of carry-on luggage.",
+    "ExampleKo": "각 승객은 기내 수하물 1개가 허용됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "passenger",
+    "PartOfSpeech": "noun",
+    "Meaning": "승객",
+    "Example": "Passengers are requested to board the train now.",
+    "ExampleKo": "승객 여러분은 지금 열차에 탑승해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "flight",
+    "PartOfSpeech": "noun",
+    "Meaning": "항공편",
+    "Example": "The flight to Tokyo departs at 10:30 a.m.",
+    "ExampleKo": "도쿄행 항공편은 오전 10시 30분에 출발합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "delayed",
+    "PartOfSpeech": "adjective",
+    "Meaning": "지연된",
+    "Example": "The shipment was delayed due to customs inspection.",
+    "ExampleKo": "세관 검사로 인해 배송이 지연되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fee",
+    "PartOfSpeech": "noun",
+    "Meaning": "수수료, 요금",
+    "Example": "There is no fee for cancellation if done 48 hours in advance.",
+    "ExampleKo": "48시간 전에 하면 취소 수수료가 없습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "charge",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "요금; 청구하다",
+    "Example": "There is no extra charge for weekend delivery.",
+    "ExampleKo": "주말 배송에 추가 요금은 없습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "exchange",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "교환; 교환하다",
+    "Example": "You can exchange the item within 14 days of purchase.",
+    "ExampleKo": "구매 후 14일 이내에 상품을 교환할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "coupon",
+    "PartOfSpeech": "noun",
+    "Meaning": "쿠폰",
+    "Example": "Present this coupon to receive a free dessert.",
+    "ExampleKo": "이 쿠폰을 제시하면 무료 디저트를 받으실 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "promotion",
+    "PartOfSpeech": "noun",
+    "Meaning": "승진; 판촉",
+    "Example": "She received a promotion to regional manager.",
+    "ExampleKo": "그녀는 지역 관리자로 승진했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "complimentary",
+    "PartOfSpeech": "adjective",
+    "Meaning": "무료의, 칭찬하는",
+    "Example": "Guests will receive a complimentary breakfast.",
+    "ExampleKo": "투숙객에게 무료 조식이 제공됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "brochure",
+    "PartOfSpeech": "noun",
+    "Meaning": "안내 책자",
+    "Example": "Pick up a brochure at the front desk.",
+    "ExampleKo": "프런트 데스크에서 안내 책자를 가져가세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "merchandise",
+    "PartOfSpeech": "noun",
+    "Meaning": "상품",
+    "Example": "All merchandise is on sale this weekend.",
+    "ExampleKo": "이번 주말 모든 상품이 세일 중입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inventory",
+    "PartOfSpeech": "noun",
+    "Meaning": "재고",
+    "Example": "We need to check the inventory before placing a new order.",
+    "ExampleKo": "새 주문을 하기 전에 재고를 확인해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "shipping",
+    "PartOfSpeech": "noun",
+    "Meaning": "배송",
+    "Example": "Free shipping is available for orders over 100 dollars.",
+    "ExampleKo": "100달러 이상 주문 시 무료 배송이 가능합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "catalog",
+    "PartOfSpeech": "noun",
+    "Meaning": "카탈로그",
+    "Example": "The new product catalog will be available next month.",
+    "ExampleKo": "새 제품 카탈로그가 다음 달에 나옵니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "subscribe",
+    "PartOfSpeech": "verb",
+    "Meaning": "구독하다",
+    "Example": "Subscribe to our newsletter for the latest updates.",
+    "ExampleKo": "최신 소식을 받으려면 뉴스레터를 구독하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "voucher",
+    "PartOfSpeech": "noun",
+    "Meaning": "상품권, 바우처",
+    "Example": "Each attendee will receive a 25-dollar gift voucher.",
+    "ExampleKo": "각 참석자에게 25달러 상품권이 지급됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "estimate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "견적(서); 추정하다",
+    "Example": "We will provide a free estimate for the repair.",
+    "ExampleKo": "수리에 대한 무료 견적을 제공하겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "transaction",
+    "PartOfSpeech": "noun",
+    "Meaning": "거래",
+    "Example": "All transactions are recorded in the system.",
+    "ExampleKo": "모든 거래는 시스템에 기록됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "resume",
+    "PartOfSpeech": "noun",
+    "Meaning": "이력서",
+    "Example": "Please attach your resume to the application form.",
+    "ExampleKo": "지원서에 이력서를 첨부해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "interview",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "면접; 면접하다",
+    "Example": "The job interview is scheduled for next Monday.",
+    "ExampleKo": "채용 면접은 다음 주 월요일로 예정되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "salary",
+    "PartOfSpeech": "noun",
+    "Meaning": "급여",
+    "Example": "The starting salary for this position is 50,000 dollars.",
+    "ExampleKo": "이 직위의 초봉은 50,000달러입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "qualify",
+    "PartOfSpeech": "verb",
+    "Meaning": "자격을 갖추다",
+    "Example": "Applicants must qualify by passing a written test.",
+    "ExampleKo": "지원자는 필기시험을 통과하여 자격을 갖춰야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "experience",
+    "PartOfSpeech": "noun",
+    "Meaning": "경험, 경력",
+    "Example": "Two years of experience in sales is preferred.",
+    "ExampleKo": "영업 분야 2년 경력이 선호됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "candidate",
+    "PartOfSpeech": "noun",
+    "Meaning": "후보자, 지원자",
+    "Example": "We have interviewed five candidates for the position.",
+    "ExampleKo": "해당 직위에 5명의 후보자를 면접했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "benefit",
+    "PartOfSpeech": "noun",
+    "Meaning": "혜택, 복지",
+    "Example": "The company offers excellent health benefits.",
+    "ExampleKo": "회사는 훌륭한 건강 복지를 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "retire",
+    "PartOfSpeech": "verb",
+    "Meaning": "은퇴하다",
+    "Example": "He plans to retire at the end of this year.",
+    "ExampleKo": "그는 올해 말에 은퇴할 계획입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "evaluate",
+    "PartOfSpeech": "verb",
+    "Meaning": "평가하다",
+    "Example": "We evaluate employee performance every six months.",
+    "ExampleKo": "6개월마다 직원 성과를 평가합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "recruit",
+    "PartOfSpeech": "verb",
+    "Meaning": "모집하다, 채용하다",
+    "Example": "The company is recruiting software engineers.",
+    "ExampleKo": "회사는 소프트웨어 엔지니어를 모집하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "shift",
+    "PartOfSpeech": "noun",
+    "Meaning": "교대 (근무)",
+    "Example": "The night shift starts at 10 p.m.",
+    "ExampleKo": "야간 교대 근무는 오후 10시에 시작합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "regulation",
+    "PartOfSpeech": "noun",
+    "Meaning": "규정",
+    "Example": "All employees must follow safety regulations.",
+    "ExampleKo": "모든 직원은 안전 규정을 따라야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "procedure",
+    "PartOfSpeech": "noun",
+    "Meaning": "절차",
+    "Example": "Please follow the standard procedure for returns.",
+    "ExampleKo": "반품에 대한 표준 절차를 따르세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "permit",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "허가(증); 허가하다",
+    "Example": "A parking permit is required for all employees.",
+    "ExampleKo": "모든 직원에게 주차 허가증이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "qualification",
+    "PartOfSpeech": "noun",
+    "Meaning": "자격, 자격 요건",
+    "Example": "The minimum qualification for this role is a bachelor's degree.",
+    "ExampleKo": "이 직무의 최소 자격 요건은 학사 학위입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "overtime",
+    "PartOfSpeech": "noun",
+    "Meaning": "초과 근무",
+    "Example": "Employees will be paid extra for overtime work.",
+    "ExampleKo": "초과 근무에 대해 추가 급여가 지급됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "performance",
+    "PartOfSpeech": "noun",
+    "Meaning": "성과, 실적",
+    "Example": "Her performance has improved significantly this quarter.",
+    "ExampleKo": "이번 분기에 그녀의 성과가 크게 향상되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "transfer",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "전근, 이동; 전근하다",
+    "Example": "She was transferred to the headquarters in New York.",
+    "ExampleKo": "그녀는 뉴욕 본사로 전근되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "productivity",
+    "PartOfSpeech": "noun",
+    "Meaning": "생산성",
+    "Example": "The new system has increased our productivity.",
+    "ExampleKo": "새 시스템이 우리의 생산성을 향상시켰습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "entrance",
+    "PartOfSpeech": "noun",
+    "Meaning": "입구",
+    "Example": "The main entrance is located on Oak Street.",
+    "ExampleKo": "정문은 오크 스트리트에 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "lobby",
+    "PartOfSpeech": "noun",
+    "Meaning": "로비",
+    "Example": "Please wait in the lobby until your name is called.",
+    "ExampleKo": "이름이 호명될 때까지 로비에서 기다려 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "warehouse",
+    "PartOfSpeech": "noun",
+    "Meaning": "창고",
+    "Example": "The new warehouse can store twice as much inventory.",
+    "ExampleKo": "새 창고는 두 배의 재고를 보관할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "branch",
+    "PartOfSpeech": "noun",
+    "Meaning": "지점",
+    "Example": "Our company has branches in 15 countries.",
+    "ExampleKo": "저희 회사는 15개국에 지점이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "headquarters",
+    "PartOfSpeech": "noun",
+    "Meaning": "본사",
+    "Example": "The company's headquarters is in San Francisco.",
+    "ExampleKo": "회사 본사는 샌프란시스코에 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "location",
+    "PartOfSpeech": "noun",
+    "Meaning": "위치, 장소",
+    "Example": "The new store location will be near the train station.",
+    "ExampleKo": "새 매장 위치는 기차역 근처입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "venue",
+    "PartOfSpeech": "noun",
+    "Meaning": "장소, 행사장",
+    "Example": "The venue for the awards ceremony has been confirmed.",
+    "ExampleKo": "시상식 장소가 확정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "aisle",
+    "PartOfSpeech": "noun",
+    "Meaning": "통로",
+    "Example": "Cleaning supplies are in aisle 5.",
+    "ExampleKo": "청소 용품은 5번 통로에 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "parking",
+    "PartOfSpeech": "noun",
+    "Meaning": "주차",
+    "Example": "Free parking is available behind the building.",
+    "ExampleKo": "건물 뒤편에 무료 주차가 가능합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "renovation",
+    "PartOfSpeech": "noun",
+    "Meaning": "보수, 리모델링",
+    "Example": "The building will undergo renovation starting next month.",
+    "ExampleKo": "건물은 다음 달부터 보수 공사에 들어갑니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "construction",
+    "PartOfSpeech": "noun",
+    "Meaning": "건설, 공사",
+    "Example": "Construction of the new factory will begin in March.",
+    "ExampleKo": "새 공장 건설은 3월에 시작됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "equipment",
+    "PartOfSpeech": "noun",
+    "Meaning": "장비",
+    "Example": "New office equipment has been ordered.",
+    "ExampleKo": "새 사무용 장비가 주문되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "supply",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "비품, 공급; 공급하다",
+    "Example": "Office supplies can be ordered through the intranet.",
+    "ExampleKo": "사무용품은 인트라넷을 통해 주문할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "furniture",
+    "PartOfSpeech": "noun",
+    "Meaning": "가구",
+    "Example": "New furniture will be delivered to the office this week.",
+    "ExampleKo": "이번 주에 새 가구가 사무실에 배달됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "directory",
+    "PartOfSpeech": "noun",
+    "Meaning": "명부, 안내 책자",
+    "Example": "Check the building directory for the office number.",
+    "ExampleKo": "사무실 번호는 건물 안내판에서 확인하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "cafeteria",
+    "PartOfSpeech": "noun",
+    "Meaning": "구내 식당",
+    "Example": "The cafeteria serves lunch from 11:30 to 1:30.",
+    "ExampleKo": "구내 식당은 11시 30분부터 1시 30분까지 점심을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "auditorium",
+    "PartOfSpeech": "noun",
+    "Meaning": "강당",
+    "Example": "The presentation will be held in the main auditorium.",
+    "ExampleKo": "발표는 대강당에서 열릴 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reception",
+    "PartOfSpeech": "noun",
+    "Meaning": "접수처, 환영회",
+    "Example": "Please sign in at the reception desk.",
+    "ExampleKo": "접수 데스크에서 등록해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "exhibit",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "전시(물); 전시하다",
+    "Example": "The company will exhibit its new products at the trade show.",
+    "ExampleKo": "회사는 무역 박람회에서 신제품을 전시할 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "stationery",
+    "PartOfSpeech": "noun",
+    "Meaning": "문구류",
+    "Example": "Pens and other stationery items are in the supply closet.",
+    "ExampleKo": "펜 및 기타 문구류는 비품 보관함에 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "although",
+    "PartOfSpeech": "conjunction",
+    "Meaning": "비록 ~이지만",
+    "Example": "Although the weather was bad, the event was a success.",
+    "ExampleKo": "날씨가 나빴지만 행사는 성공적이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "therefore",
+    "PartOfSpeech": "adverb",
+    "Meaning": "그러므로",
+    "Example": "The product was defective; therefore, we issued a refund.",
+    "ExampleKo": "제품이 불량이었으므로 환불을 해 드렸습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "however",
+    "PartOfSpeech": "adverb",
+    "Meaning": "그러나",
+    "Example": "The plan was good. However, the budget was too small.",
+    "ExampleKo": "계획은 좋았습니다. 그러나 예산이 너무 적었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "moreover",
+    "PartOfSpeech": "adverb",
+    "Meaning": "게다가",
+    "Example": "The hotel is affordable. Moreover, it is close to the airport.",
+    "ExampleKo": "호텔은 저렴합니다. 게다가 공항에서 가깝습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "meanwhile",
+    "PartOfSpeech": "adverb",
+    "Meaning": "그 사이에, 한편",
+    "Example": "The report is being prepared. Meanwhile, please review the data.",
+    "ExampleKo": "보고서를 준비 중입니다. 그 사이에 데이터를 검토해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "otherwise",
+    "PartOfSpeech": "adverb",
+    "Meaning": "그렇지 않으면",
+    "Example": "Submit the form by Friday; otherwise, your request will be denied.",
+    "ExampleKo": "금요일까지 양식을 제출하세요. 그렇지 않으면 요청이 거부됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "furthermore",
+    "PartOfSpeech": "adverb",
+    "Meaning": "더욱이",
+    "Example": "The location is ideal. Furthermore, the rent is reasonable.",
+    "ExampleKo": "위치가 이상적입니다. 더욱이 임대료도 합리적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "unless",
+    "PartOfSpeech": "conjunction",
+    "Meaning": "~하지 않는 한",
+    "Example": "The event will be held outdoors unless it rains.",
+    "ExampleKo": "비가 오지 않는 한 행사는 야외에서 열립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "despite",
+    "PartOfSpeech": "preposition",
+    "Meaning": "~에도 불구하고",
+    "Example": "Despite the delay, the project was completed on time.",
+    "ExampleKo": "지연에도 불구하고 프로젝트는 제때 완료되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "whereas",
+    "PartOfSpeech": "conjunction",
+    "Meaning": "~인 반면에",
+    "Example": "Sales increased in Asia, whereas they declined in Europe.",
+    "ExampleKo": "아시아에서 매출이 증가한 반면 유럽에서는 감소했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "accomplish",
+    "PartOfSpeech": "verb",
+    "Meaning": "달성하다, 이루다",
+    "Example": "The team accomplished all of its goals for the quarter.",
+    "ExampleKo": "팀은 해당 분기의 모든 목표를 달성했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "implement",
+    "PartOfSpeech": "verb",
+    "Meaning": "시행하다, 실행하다",
+    "Example": "The new system will be implemented next month.",
+    "ExampleKo": "새 시스템은 다음 달에 시행됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "determine",
+    "PartOfSpeech": "verb",
+    "Meaning": "결정하다, 판단하다",
+    "Example": "An inspection will determine the cause of the problem.",
+    "ExampleKo": "점검을 통해 문제의 원인을 판단할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "consider",
+    "PartOfSpeech": "verb",
+    "Meaning": "고려하다",
+    "Example": "Please consider the proposal carefully before deciding.",
+    "ExampleKo": "결정하기 전에 제안을 신중히 고려해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "expect",
+    "PartOfSpeech": "verb",
+    "Meaning": "예상하다, 기대하다",
+    "Example": "We expect the delivery to arrive by Friday.",
+    "ExampleKo": "배송이 금요일까지 도착할 것으로 예상합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "indicate",
+    "PartOfSpeech": "verb",
+    "Meaning": "나타내다, 표시하다",
+    "Example": "The report indicates a steady growth in sales.",
+    "ExampleKo": "보고서는 매출의 꾸준한 성장을 나타냅니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "concern",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "우려; 우려하다",
+    "Example": "Safety is a major concern at the construction site.",
+    "ExampleKo": "안전은 건설 현장에서 주요 우려 사항입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "aware",
+    "PartOfSpeech": "adjective",
+    "Meaning": "알고 있는",
+    "Example": "Employees should be aware of the new safety procedures.",
+    "ExampleKo": "직원들은 새로운 안전 절차를 인지하고 있어야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "capable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "능력 있는",
+    "Example": "She is capable of managing large teams.",
+    "ExampleKo": "그녀는 대규모 팀을 관리할 능력이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "appropriate",
+    "PartOfSpeech": "adjective",
+    "Meaning": "적절한",
+    "Example": "Please wear appropriate clothing to the business dinner.",
+    "ExampleKo": "비즈니스 만찬에 적절한 복장을 착용하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "essential",
+    "PartOfSpeech": "adjective",
+    "Meaning": "필수적인",
+    "Example": "Communication skills are essential for this role.",
+    "ExampleKo": "이 직무에는 의사소통 능력이 필수적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "familiar",
+    "PartOfSpeech": "adjective",
+    "Meaning": "익숙한",
+    "Example": "Are you familiar with the company's return policy?",
+    "ExampleKo": "회사의 반품 정책에 익숙하신가요?",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "generous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "너그러운, 후한",
+    "Example": "The company made a generous donation to the charity.",
+    "ExampleKo": "회사는 자선 단체에 넉넉한 기부를 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "outstanding",
+    "PartOfSpeech": "adjective",
+    "Meaning": "뛰어난; 미결제의",
+    "Example": "She received an award for her outstanding performance.",
+    "ExampleKo": "그녀는 뛰어난 실적으로 상을 받았습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reliable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "신뢰할 수 있는",
+    "Example": "We need a reliable supplier for raw materials.",
+    "ExampleKo": "원자재에 대한 신뢰할 수 있는 공급업체가 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "thorough",
+    "PartOfSpeech": "adjective",
+    "Meaning": "철저한",
+    "Example": "A thorough inspection of the building was conducted.",
+    "ExampleKo": "건물에 대한 철저한 점검이 실시되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "promptly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "신속히",
+    "Example": "All inquiries will be answered promptly.",
+    "ExampleKo": "모든 문의는 신속히 답변됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "accordingly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "그에 따라",
+    "Example": "Prices have risen, and salaries have been adjusted accordingly.",
+    "ExampleKo": "물가가 올랐고 급여도 그에 따라 조정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "relatively",
+    "PartOfSpeech": "adverb",
+    "Meaning": "비교적",
+    "Example": "The project was completed in a relatively short time.",
+    "ExampleKo": "프로젝트가 비교적 짧은 시간에 완료되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "certainly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "확실히, 물론",
+    "Example": "We will certainly consider your suggestion.",
+    "ExampleKo": "귀하의 제안을 확실히 고려하겠습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "extremely",
+    "PartOfSpeech": "adverb",
+    "Meaning": "극도로, 매우",
+    "Example": "We are extremely pleased with the results.",
+    "ExampleKo": "결과에 매우 만족합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "demand",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "수요; 요구하다",
+    "Example": "Demand for the product has increased sharply.",
+    "ExampleKo": "제품에 대한 수요가 급격히 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "expense",
+    "PartOfSpeech": "noun",
+    "Meaning": "비용, 경비",
+    "Example": "Travel expenses must be reported within five business days.",
+    "ExampleKo": "여행 경비는 영업일 기준 5일 이내에 보고해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "profit",
+    "PartOfSpeech": "noun",
+    "Meaning": "이익, 수익",
+    "Example": "The company reported a record profit last quarter.",
+    "ExampleKo": "회사는 지난 분기에 사상 최대 이익을 보고했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "proposal",
+    "PartOfSpeech": "noun",
+    "Meaning": "제안서",
+    "Example": "The proposal was accepted by the board of directors.",
+    "ExampleKo": "제안서가 이사회에서 승인되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inspection",
+    "PartOfSpeech": "noun",
+    "Meaning": "검사, 점검",
+    "Example": "The building passed the safety inspection.",
+    "ExampleKo": "건물이 안전 검사를 통과했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "representative",
+    "PartOfSpeech": "noun",
+    "Meaning": "대표, 담당자",
+    "Example": "A sales representative will contact you shortly.",
+    "ExampleKo": "영업 담당자가 곧 연락드릴 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "objective",
+    "PartOfSpeech": "noun",
+    "Meaning": "목표",
+    "Example": "The main objective is to increase market share by 10 percent.",
+    "ExampleKo": "주요 목표는 시장 점유율을 10% 늘리는 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "install",
+    "PartOfSpeech": "verb",
+    "Meaning": "설치하다",
+    "Example": "The new software will be installed this weekend.",
+    "ExampleKo": "새 소프트웨어가 이번 주말에 설치됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "renovate",
+    "PartOfSpeech": "verb",
+    "Meaning": "개조하다, 보수하다",
+    "Example": "The hotel lobby was recently renovated.",
+    "ExampleKo": "호텔 로비가 최근에 보수되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "launch",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "출시하다; 출시",
+    "Example": "The company will launch a new product line in spring.",
+    "ExampleKo": "회사는 봄에 새 제품 라인을 출시할 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "expand",
+    "PartOfSpeech": "verb",
+    "Meaning": "확장하다",
+    "Example": "The company plans to expand into Asian markets.",
+    "ExampleKo": "회사는 아시아 시장으로 확장할 계획입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "celebrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "축하하다",
+    "Example": "The staff gathered to celebrate the company's anniversary.",
+    "ExampleKo": "직원들이 회사 기념일을 축하하기 위해 모였습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "donate",
+    "PartOfSpeech": "verb",
+    "Meaning": "기부하다",
+    "Example": "The company donated computers to the local school.",
+    "ExampleKo": "회사가 지역 학교에 컴퓨터를 기부했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "demonstrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "시연하다, 보여주다",
+    "Example": "The engineer will demonstrate the new system at the fair.",
+    "ExampleKo": "엔지니어가 박람회에서 새 시스템을 시연할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "feature",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "특징; 특징으로 하다",
+    "Example": "The phone has several new features including a better camera.",
+    "ExampleKo": "이 전화기에는 더 나은 카메라를 포함한 여러 새 기능이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "access",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "접근; 접근하다",
+    "Example": "Employees can access the system from any location.",
+    "ExampleKo": "직원들은 어디서든 시스템에 접근할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "process",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "과정; 처리하다",
+    "Example": "Your application is being processed.",
+    "ExampleKo": "귀하의 지원서가 처리 중입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "identify",
+    "PartOfSpeech": "verb",
+    "Meaning": "확인하다, 파악하다",
+    "Example": "We need to identify the cause of the delay.",
+    "ExampleKo": "지연의 원인을 파악해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "obtain",
+    "PartOfSpeech": "verb",
+    "Meaning": "얻다, 획득하다",
+    "Example": "You can obtain a copy of the report from the office.",
+    "ExampleKo": "사무실에서 보고서 사본을 얻을 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "contain",
+    "PartOfSpeech": "verb",
+    "Meaning": "포함하다, 담고 있다",
+    "Example": "The package contains fragile items.",
+    "ExampleKo": "소포에는 깨지기 쉬운 물품이 들어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "decline",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "감소하다; 거절하다",
+    "Example": "Sales have declined by 5 percent this month.",
+    "ExampleKo": "이번 달 매출이 5% 감소했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commute",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "통근; 통근하다",
+    "Example": "His daily commute takes about 45 minutes.",
+    "ExampleKo": "그의 매일 통근 시간은 약 45분입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "upcoming",
+    "PartOfSpeech": "adjective",
+    "Meaning": "다가오는",
+    "Example": "The upcoming seminar will focus on digital marketing.",
+    "ExampleKo": "다가오는 세미나는 디지털 마케팅에 중점을 둘 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "adequate",
+    "PartOfSpeech": "adjective",
+    "Meaning": "적절한, 충분한",
+    "Example": "The training room has adequate space for 30 people.",
+    "ExampleKo": "교육실은 30명을 수용할 충분한 공간이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "pleased",
+    "PartOfSpeech": "adjective",
+    "Meaning": "기쁜, 만족한",
+    "Example": "We are pleased to announce the opening of our new store.",
+    "ExampleKo": "새 매장 개점을 알리게 되어 기쁩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "willing",
+    "PartOfSpeech": "adjective",
+    "Meaning": "기꺼이 ~하는",
+    "Example": "She is willing to work overtime if necessary.",
+    "ExampleKo": "그녀는 필요하다면 기꺼이 초과 근무를 할 의향이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "manufacturer",
+    "PartOfSpeech": "noun",
+    "Meaning": "제조업체",
+    "Example": "The manufacturer offers a money-back guarantee.",
+    "ExampleKo": "제조업체는 환불 보장을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "ingredient",
+    "PartOfSpeech": "noun",
+    "Meaning": "재료, 성분",
+    "Example": "All ingredients are listed on the product label.",
+    "ExampleKo": "모든 성분은 제품 라벨에 표시되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "agenda",
+    "PartOfSpeech": "noun",
+    "Meaning": "안건, 의제",
+    "Example": "The agenda for tomorrow's meeting has been distributed.",
+    "ExampleKo": "내일 회의 안건이 배포되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "property",
+    "PartOfSpeech": "noun",
+    "Meaning": "부동산, 재산",
+    "Example": "The company owns several properties downtown.",
+    "ExampleKo": "회사는 시내에 여러 부동산을 소유하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "board",
+    "PartOfSpeech": "noun",
+    "Meaning": "이사회, 위원회",
+    "Example": "The board of directors will meet next Tuesday.",
+    "ExampleKo": "이사회는 다음 주 화요일에 회의합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "quarter",
+    "PartOfSpeech": "noun",
+    "Meaning": "분기",
+    "Example": "Revenue increased by 8 percent in the third quarter.",
+    "ExampleKo": "3분기에 매출이 8% 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "appliance",
+    "PartOfSpeech": "noun",
+    "Meaning": "가전제품",
+    "Example": "The store sells kitchen appliances at discounted prices.",
+    "ExampleKo": "그 매장은 주방 가전제품을 할인된 가격으로 판매합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "beverage",
+    "PartOfSpeech": "noun",
+    "Meaning": "음료",
+    "Example": "Complimentary beverages will be served at the event.",
+    "ExampleKo": "행사에서 무료 음료가 제공됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "catering",
+    "PartOfSpeech": "noun",
+    "Meaning": "출장 요리, 케이터링",
+    "Example": "A catering company has been hired for the banquet.",
+    "ExampleKo": "연회를 위해 케이터링 업체가 고용되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "landscape",
+    "PartOfSpeech": "noun",
+    "Meaning": "조경, 풍경",
+    "Example": "The hotel has beautiful landscaping around the pool area.",
+    "ExampleKo": "호텔은 수영장 주변에 아름다운 조경이 되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "maintenance",
+    "PartOfSpeech": "noun",
+    "Meaning": "유지보수",
+    "Example": "The elevator will be closed for maintenance this weekend.",
+    "ExampleKo": "이번 주말 엘리베이터가 유지보수를 위해 운행을 중단합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "tenant",
+    "PartOfSpeech": "noun",
+    "Meaning": "세입자, 임차인",
+    "Example": "The tenant signed a one-year lease agreement.",
+    "ExampleKo": "세입자가 1년 임대 계약에 서명했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "utility",
+    "PartOfSpeech": "noun",
+    "Meaning": "공과금, 유틸리티",
+    "Example": "Utility costs have increased due to higher energy prices.",
+    "ExampleKo": "에너지 가격 상승으로 공과금이 올랐습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "adjacent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "인접한",
+    "Example": "The parking lot is adjacent to the office building.",
+    "ExampleKo": "주차장은 사무실 건물에 인접해 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prompt",
+    "PartOfSpeech": "adjective",
+    "Meaning": "신속한",
+    "Example": "We appreciate your prompt reply.",
+    "ExampleKo": "신속한 답변에 감사드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "patron",
+    "PartOfSpeech": "noun",
+    "Meaning": "고객, 후원자",
+    "Example": "Library patrons must return books within two weeks.",
+    "ExampleKo": "도서관 이용자는 2주 이내에 책을 반납해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "comply",
+    "PartOfSpeech": "verb",
+    "Meaning": "준수하다",
+    "Example": "All vendors must comply with safety standards.",
+    "ExampleKo": "모든 업체는 안전 기준을 준수해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "authorize",
+    "PartOfSpeech": "verb",
+    "Meaning": "허가하다, 승인하다",
+    "Example": "Only managers are authorized to approve purchases over 500 dollars.",
+    "ExampleKo": "500달러 이상 구매는 매니저만 승인할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reimburse",
+    "PartOfSpeech": "verb",
+    "Meaning": "상환하다, 환급하다",
+    "Example": "Employees will be reimbursed for travel expenses.",
+    "ExampleKo": "직원들에게 여행 경비가 환급됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "specialize",
+    "PartOfSpeech": "verb",
+    "Meaning": "전문으로 하다",
+    "Example": "Our firm specializes in corporate law.",
+    "ExampleKo": "저희 회사는 기업법을 전문으로 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "accumulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "축적하다, 모으다",
+    "Example": "Points accumulate with each purchase.",
+    "ExampleKo": "구매할 때마다 포인트가 적립됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prohibit",
+    "PartOfSpeech": "verb",
+    "Meaning": "금지하다",
+    "Example": "Photography is prohibited inside the museum.",
+    "ExampleKo": "박물관 내 사진 촬영은 금지되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fund",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "기금; 자금을 대다",
+    "Example": "The project is funded by the government.",
+    "ExampleKo": "그 프로젝트는 정부가 자금을 지원합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commend",
+    "PartOfSpeech": "verb",
+    "Meaning": "칭찬하다",
+    "Example": "The manager commended the team for their hard work.",
+    "ExampleKo": "매니저가 팀의 노력을 칭찬했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "delighted",
+    "PartOfSpeech": "adjective",
+    "Meaning": "매우 기쁜",
+    "Example": "We are delighted to welcome you to our team.",
+    "ExampleKo": "저희 팀에 오시게 되어 매우 기쁩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "banquet",
+    "PartOfSpeech": "noun",
+    "Meaning": "연회",
+    "Example": "A banquet will be held to honor the retiring employees.",
+    "ExampleKo": "퇴직 직원을 기리기 위한 연회가 열릴 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "decade",
+    "PartOfSpeech": "noun",
+    "Meaning": "10년",
+    "Example": "The company has grown significantly over the past decade.",
+    "ExampleKo": "회사는 지난 10년간 크게 성장했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "retail",
+    "PartOfSpeech": "noun/adjective",
+    "Meaning": "소매; 소매의",
+    "Example": "The retail price is lower than the original estimate.",
+    "ExampleKo": "소매 가격은 원래 견적보다 낮습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "wholesale",
+    "PartOfSpeech": "noun/adjective",
+    "Meaning": "도매; 도매의",
+    "Example": "We buy raw materials at wholesale prices.",
+    "ExampleKo": "원자재를 도매 가격으로 구입합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "deposit",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "보증금; 입금하다",
+    "Example": "A deposit of 200 dollars is required upon booking.",
+    "ExampleKo": "예약 시 200달러의 보증금이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "enroll",
+    "PartOfSpeech": "verb",
+    "Meaning": "등록하다",
+    "Example": "Employees can enroll in the wellness program online.",
+    "ExampleKo": "직원들은 온라인으로 건강 프로그램에 등록할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "postpone",
+    "PartOfSpeech": "verb",
+    "Meaning": "연기하다",
+    "Example": "The meeting has been postponed until next week.",
+    "ExampleKo": "회의가 다음 주로 연기되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "seminar",
+    "PartOfSpeech": "noun",
+    "Meaning": "세미나",
+    "Example": "A seminar on leadership will be held on Friday.",
+    "ExampleKo": "금요일에 리더십에 관한 세미나가 열립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "workshop",
+    "PartOfSpeech": "noun",
+    "Meaning": "워크숍",
+    "Example": "The workshop was attended by over 100 professionals.",
+    "ExampleKo": "워크숍에 100명 이상의 전문가가 참석했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "edition",
+    "PartOfSpeech": "noun",
+    "Meaning": "판, 호",
+    "Example": "The latest edition of the magazine features an interview with the CEO.",
+    "ExampleKo": "최신호 잡지에 CEO 인터뷰가 실렸습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "subscriber",
+    "PartOfSpeech": "noun",
+    "Meaning": "구독자",
+    "Example": "The magazine now has over 50,000 subscribers.",
+    "ExampleKo": "그 잡지는 현재 50,000명 이상의 구독자를 보유하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "initial",
+    "PartOfSpeech": "adjective",
+    "Meaning": "초기의, 처음의",
+    "Example": "The initial phase of the project has been completed.",
+    "ExampleKo": "프로젝트의 초기 단계가 완료되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "guarantee",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "보장; 보장하다",
+    "Example": "We guarantee delivery within 48 hours.",
+    "ExampleKo": "48시간 이내 배송을 보장합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inquire",
+    "PartOfSpeech": "verb",
+    "Meaning": "문의하다",
+    "Example": "Please inquire at the front desk for more information.",
+    "ExampleKo": "자세한 정보는 프런트 데스크에 문의하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "verify",
+    "PartOfSpeech": "verb",
+    "Meaning": "확인하다, 검증하다",
+    "Example": "Please verify your email address before submitting.",
+    "ExampleKo": "제출하기 전에 이메일 주소를 확인해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "modify",
+    "PartOfSpeech": "verb",
+    "Meaning": "수정하다",
+    "Example": "The design was modified based on customer feedback.",
+    "ExampleKo": "고객 피드백을 바탕으로 디자인이 수정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "aspect",
+    "PartOfSpeech": "noun",
+    "Meaning": "측면, 양상",
+    "Example": "Every aspect of the project was carefully planned.",
+    "ExampleKo": "프로젝트의 모든 측면이 세심하게 계획되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "durable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "내구성이 있는",
+    "Example": "This bag is made of durable material.",
+    "ExampleKo": "이 가방은 내구성 있는 소재로 만들어졌습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "anticipate",
+    "PartOfSpeech": "verb",
+    "Meaning": "예상하다",
+    "Example": "We anticipate a 20 percent increase in demand.",
+    "ExampleKo": "수요가 20% 증가할 것으로 예상합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "architect",
+    "PartOfSpeech": "noun",
+    "Meaning": "건축가",
+    "Example": "The architect presented the new building design.",
+    "ExampleKo": "건축가가 새 건물 디자인을 발표했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "associate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "동료; 연관짓다",
+    "Example": "Please speak with a sales associate for assistance.",
+    "ExampleKo": "도움이 필요하시면 판매 직원에게 문의하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "assume",
+    "PartOfSpeech": "verb",
+    "Meaning": "추정하다, 맡다",
+    "Example": "She will assume the role of department head in January.",
+    "ExampleKo": "그녀는 1월에 부서장 역할을 맡을 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "attempt",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "시도; 시도하다",
+    "Example": "The team made several attempts to fix the issue.",
+    "ExampleKo": "팀은 문제를 해결하기 위해 여러 차례 시도했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "brief",
+    "PartOfSpeech": "adjective",
+    "Meaning": "간략한",
+    "Example": "The manager gave a brief overview of the project.",
+    "ExampleKo": "매니저가 프로젝트에 대한 간략한 개요를 설명했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "capacity",
+    "PartOfSpeech": "noun",
+    "Meaning": "수용력, 능력",
+    "Example": "The conference room has a capacity of 50 people.",
+    "ExampleKo": "회의실은 50명을 수용할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "circumstance",
+    "PartOfSpeech": "noun",
+    "Meaning": "상황, 사정",
+    "Example": "Under the circumstances, the deadline was extended.",
+    "ExampleKo": "그 상황에서 마감 기한이 연장되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commitment",
+    "PartOfSpeech": "noun",
+    "Meaning": "헌신, 약속",
+    "Example": "Our commitment to quality is reflected in every product.",
+    "ExampleKo": "품질에 대한 저희의 헌신이 모든 제품에 반영됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "comparison",
+    "PartOfSpeech": "noun",
+    "Meaning": "비교",
+    "Example": "In comparison to last year, sales have improved.",
+    "ExampleKo": "작년과 비교하면 매출이 개선되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "compensation",
+    "PartOfSpeech": "noun",
+    "Meaning": "보상, 보수",
+    "Example": "The compensation package includes health insurance.",
+    "ExampleKo": "보수 패키지에 건강 보험이 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "competitor",
+    "PartOfSpeech": "noun",
+    "Meaning": "경쟁자",
+    "Example": "Our main competitor launched a similar product.",
+    "ExampleKo": "주요 경쟁사가 유사한 제품을 출시했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "comprehensive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "포괄적인",
+    "Example": "We offer a comprehensive training program.",
+    "ExampleKo": "저희는 포괄적인 교육 프로그램을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "consequence",
+    "PartOfSpeech": "noun",
+    "Meaning": "결과",
+    "Example": "Violating safety rules can have serious consequences.",
+    "ExampleKo": "안전 규정 위반은 심각한 결과를 초래할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "consultation",
+    "PartOfSpeech": "noun",
+    "Meaning": "상담",
+    "Example": "A free consultation is available for new customers.",
+    "ExampleKo": "신규 고객에게 무료 상담이 제공됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "contributor",
+    "PartOfSpeech": "noun",
+    "Meaning": "기여자, 기고자",
+    "Example": "She is a regular contributor to the company blog.",
+    "ExampleKo": "그녀는 회사 블로그의 정기 기고자입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "cooperation",
+    "PartOfSpeech": "noun",
+    "Meaning": "협력",
+    "Example": "Thank you for your cooperation during the renovation.",
+    "ExampleKo": "보수 공사 기간 동안 협조해 주셔서 감사합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "correspondence",
+    "PartOfSpeech": "noun",
+    "Meaning": "서신, 통신",
+    "Example": "All correspondence should be sent to the main office.",
+    "ExampleKo": "모든 서신은 본사로 보내야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "criteria",
+    "PartOfSpeech": "noun",
+    "Meaning": "기준 (복수)",
+    "Example": "The selection criteria include experience and education.",
+    "ExampleKo": "선발 기준에는 경력과 학력이 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "dedication",
+    "PartOfSpeech": "noun",
+    "Meaning": "헌신",
+    "Example": "The award recognizes her dedication to community service.",
+    "ExampleKo": "이 상은 그녀의 지역 사회 봉사에 대한 헌신을 인정합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "deficit",
+    "PartOfSpeech": "noun",
+    "Meaning": "적자, 부족",
+    "Example": "The company reported a deficit of 2 million dollars.",
+    "ExampleKo": "회사는 200만 달러의 적자를 보고했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "description",
+    "PartOfSpeech": "noun",
+    "Meaning": "설명, 묘사",
+    "Example": "A detailed job description is posted on our website.",
+    "ExampleKo": "상세한 직무 설명이 저희 웹사이트에 게시되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "domestic",
+    "PartOfSpeech": "adjective",
+    "Meaning": "국내의",
+    "Example": "Domestic sales account for 70 percent of total revenue.",
+    "ExampleKo": "국내 매출이 전체 수입의 70%를 차지합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "duplicate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "복사본; 복제하다",
+    "Example": "Please make a duplicate of the contract.",
+    "ExampleKo": "계약서 복사본을 만들어 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "economical",
+    "PartOfSpeech": "adjective",
+    "Meaning": "경제적인",
+    "Example": "This car is very economical on fuel.",
+    "ExampleKo": "이 차는 연료가 매우 경제적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "efficiently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "효율적으로",
+    "Example": "The team worked efficiently to meet the deadline.",
+    "ExampleKo": "팀은 마감에 맞추기 위해 효율적으로 일했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "eliminate",
+    "PartOfSpeech": "verb",
+    "Meaning": "제거하다",
+    "Example": "We are working to eliminate unnecessary expenses.",
+    "ExampleKo": "불필요한 비용을 제거하기 위해 노력하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "emphasize",
+    "PartOfSpeech": "verb",
+    "Meaning": "강조하다",
+    "Example": "The CEO emphasized the importance of teamwork.",
+    "ExampleKo": "CEO가 팀워크의 중요성을 강조했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "encounter",
+    "PartOfSpeech": "verb",
+    "Meaning": "마주치다, 겪다",
+    "Example": "If you encounter any problems, contact the help desk.",
+    "ExampleKo": "문제가 발생하면 헬프 데스크에 연락하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "exceed",
+    "PartOfSpeech": "verb",
+    "Meaning": "초과하다",
+    "Example": "Sales exceeded expectations for the second quarter.",
+    "ExampleKo": "2분기 매출이 기대치를 초과했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "excessive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "과도한",
+    "Example": "The project was delayed due to excessive costs.",
+    "ExampleKo": "과도한 비용으로 인해 프로젝트가 지연되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "exclusively",
+    "PartOfSpeech": "adverb",
+    "Meaning": "독점적으로, 오로지",
+    "Example": "This offer is available exclusively to members.",
+    "ExampleKo": "이 제안은 회원에게만 독점적으로 제공됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "expire",
+    "PartOfSpeech": "verb",
+    "Meaning": "만료되다",
+    "Example": "Your subscription will expire at the end of December.",
+    "ExampleKo": "구독은 12월 말에 만료됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "exposure",
+    "PartOfSpeech": "noun",
+    "Meaning": "노출",
+    "Example": "The campaign increased brand exposure significantly.",
+    "ExampleKo": "캠페인이 브랜드 노출을 크게 늘렸습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "finalize",
+    "PartOfSpeech": "verb",
+    "Meaning": "마무리하다",
+    "Example": "We need to finalize the details of the agreement.",
+    "ExampleKo": "합의 세부 사항을 마무리해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "forecast",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "예측; 예측하다",
+    "Example": "The sales forecast for next quarter looks positive.",
+    "ExampleKo": "다음 분기 매출 전망이 긍정적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "gradually",
+    "PartOfSpeech": "adverb",
+    "Meaning": "점차",
+    "Example": "The company has gradually expanded its services.",
+    "ExampleKo": "회사는 점차 서비스를 확장해 왔습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "hesitate",
+    "PartOfSpeech": "verb",
+    "Meaning": "주저하다",
+    "Example": "Do not hesitate to contact us with any questions.",
+    "ExampleKo": "궁금한 점이 있으시면 주저하지 말고 연락하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "inconvenience",
+    "PartOfSpeech": "noun",
+    "Meaning": "불편",
+    "Example": "We apologize for any inconvenience caused by the delay.",
+    "ExampleKo": "지연으로 인한 불편에 대해 사과드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "initiative",
+    "PartOfSpeech": "noun",
+    "Meaning": "계획, 주도",
+    "Example": "The company launched a new environmental initiative.",
+    "ExampleKo": "회사가 새로운 환경 계획을 시작했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "innovate",
+    "PartOfSpeech": "verb",
+    "Meaning": "혁신하다",
+    "Example": "We continually innovate to stay ahead of the competition.",
+    "ExampleKo": "경쟁에서 앞서기 위해 지속적으로 혁신합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "insight",
+    "PartOfSpeech": "noun",
+    "Meaning": "통찰(력)",
+    "Example": "The report provides valuable insights into market trends.",
+    "ExampleKo": "보고서는 시장 동향에 대한 귀중한 통찰을 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "knowledgeable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "지식이 풍부한",
+    "Example": "Our staff is knowledgeable about all of our products.",
+    "ExampleKo": "저희 직원들은 모든 제품에 대해 잘 알고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "lease",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "임대(계약); 임대하다",
+    "Example": "The lease on the office space expires in June.",
+    "ExampleKo": "사무실 공간의 임대 계약은 6월에 만료됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "liable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "책임이 있는",
+    "Example": "The manufacturer is liable for any defects.",
+    "ExampleKo": "제조업체가 모든 결함에 대해 책임이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "manner",
+    "PartOfSpeech": "noun",
+    "Meaning": "방식, 태도",
+    "Example": "The issue was resolved in a professional manner.",
+    "ExampleKo": "문제가 전문적인 방식으로 해결되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "monetary",
+    "PartOfSpeech": "adjective",
+    "Meaning": "금전의, 통화의",
+    "Example": "Employees will receive a monetary reward for their efforts.",
+    "ExampleKo": "직원들은 노력에 대한 금전적 보상을 받을 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "obligation",
+    "PartOfSpeech": "noun",
+    "Meaning": "의무",
+    "Example": "There is no obligation to purchase after the trial period.",
+    "ExampleKo": "시험 사용 기간 후 구매 의무는 없습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "occupation",
+    "PartOfSpeech": "noun",
+    "Meaning": "직업",
+    "Example": "Please state your occupation on the application form.",
+    "ExampleKo": "지원서에 직업을 기재해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "pharmaceutical",
+    "PartOfSpeech": "adjective",
+    "Meaning": "제약의",
+    "Example": "The pharmaceutical company developed a new vaccine.",
+    "ExampleKo": "제약 회사가 새 백신을 개발했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "practical",
+    "PartOfSpeech": "adjective",
+    "Meaning": "실용적인",
+    "Example": "We need a practical solution to this problem.",
+    "ExampleKo": "이 문제에 대한 실용적인 해결책이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "preference",
+    "PartOfSpeech": "noun",
+    "Meaning": "선호",
+    "Example": "Please indicate your seating preference.",
+    "ExampleKo": "좌석 선호도를 알려 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "preliminary",
+    "PartOfSpeech": "adjective",
+    "Meaning": "예비의, 사전의",
+    "Example": "The preliminary results of the survey are encouraging.",
+    "ExampleKo": "설문 조사의 예비 결과가 고무적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "priority",
+    "PartOfSpeech": "noun",
+    "Meaning": "우선순위",
+    "Example": "Customer safety is our number one priority.",
+    "ExampleKo": "고객 안전이 저희의 최우선 과제입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prospective",
+    "PartOfSpeech": "adjective",
+    "Meaning": "잠재적인, 예비의",
+    "Example": "Prospective buyers can schedule a tour of the property.",
+    "ExampleKo": "잠재적 구매자는 부동산 견학을 예약할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "pursue",
+    "PartOfSpeech": "verb",
+    "Meaning": "추구하다",
+    "Example": "She decided to pursue a career in international trade.",
+    "ExampleKo": "그녀는 국제 무역 분야에서 경력을 추구하기로 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "relevant",
+    "PartOfSpeech": "adjective",
+    "Meaning": "관련된",
+    "Example": "Only relevant documents should be included in the report.",
+    "ExampleKo": "보고서에는 관련 문서만 포함되어야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "remainder",
+    "PartOfSpeech": "noun",
+    "Meaning": "나머지",
+    "Example": "The remainder of the payment is due in 30 days.",
+    "ExampleKo": "나머지 지불금은 30일 이내에 납부해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reputation",
+    "PartOfSpeech": "noun",
+    "Meaning": "명성",
+    "Example": "The restaurant has a reputation for excellent food.",
+    "ExampleKo": "그 레스토랑은 훌륭한 음식으로 명성이 높습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "revenue",
+    "PartOfSpeech": "noun",
+    "Meaning": "수익, 매출",
+    "Example": "Total revenue increased by 12 percent this year.",
+    "ExampleKo": "올해 총 수익이 12% 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "revise",
+    "PartOfSpeech": "verb",
+    "Meaning": "수정하다",
+    "Example": "The budget was revised to include new expenses.",
+    "ExampleKo": "새 비용을 포함하도록 예산이 수정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "satisfaction",
+    "PartOfSpeech": "noun",
+    "Meaning": "만족",
+    "Example": "Customer satisfaction ratings have improved.",
+    "ExampleKo": "고객 만족도 평가가 향상되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "secure",
+    "PartOfSpeech": "verb/adjective",
+    "Meaning": "확보하다; 안전한",
+    "Example": "We secured a contract with a major retailer.",
+    "ExampleKo": "주요 소매업체와 계약을 확보했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "shortage",
+    "PartOfSpeech": "noun",
+    "Meaning": "부족",
+    "Example": "There is a shortage of skilled workers in the region.",
+    "ExampleKo": "그 지역에 숙련된 노동자가 부족합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "sole",
+    "PartOfSpeech": "adjective",
+    "Meaning": "유일한",
+    "Example": "She is the sole owner of the business.",
+    "ExampleKo": "그녀가 사업의 유일한 소유자입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "strategy",
+    "PartOfSpeech": "noun",
+    "Meaning": "전략",
+    "Example": "The company adopted a new marketing strategy.",
+    "ExampleKo": "회사가 새로운 마케팅 전략을 채택했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "sufficient",
+    "PartOfSpeech": "adjective",
+    "Meaning": "충분한",
+    "Example": "Do we have sufficient supplies for the event?",
+    "ExampleKo": "행사를 위한 충분한 비품이 있나요?",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "summary",
+    "PartOfSpeech": "noun",
+    "Meaning": "요약",
+    "Example": "A summary of the meeting minutes will be sent by email.",
+    "ExampleKo": "회의록 요약이 이메일로 발송됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "supervise",
+    "PartOfSpeech": "verb",
+    "Meaning": "감독하다",
+    "Example": "She supervises a team of 15 engineers.",
+    "ExampleKo": "그녀는 15명의 엔지니어로 구성된 팀을 감독합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "sustainable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "지속 가능한",
+    "Example": "We are committed to sustainable business practices.",
+    "ExampleKo": "저희는 지속 가능한 사업 관행에 전념합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "typically",
+    "PartOfSpeech": "adverb",
+    "Meaning": "보통, 일반적으로",
+    "Example": "Deliveries typically arrive within three business days.",
+    "ExampleKo": "배송은 보통 영업일 기준 3일 이내에 도착합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "undergo",
+    "PartOfSpeech": "verb",
+    "Meaning": "겪다, 받다",
+    "Example": "All vehicles must undergo a safety inspection.",
+    "ExampleKo": "모든 차량은 안전 검사를 받아야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "utilize",
+    "PartOfSpeech": "verb",
+    "Meaning": "활용하다",
+    "Example": "We should utilize the available resources more effectively.",
+    "ExampleKo": "이용 가능한 자원을 더 효과적으로 활용해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "valid",
+    "PartOfSpeech": "adjective",
+    "Meaning": "유효한",
+    "Example": "A valid ID is required to pick up the package.",
+    "ExampleKo": "소포를 수령하려면 유효한 신분증이 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "vendor",
+    "PartOfSpeech": "noun",
+    "Meaning": "판매업체",
+    "Example": "Several vendors will display their products at the fair.",
+    "ExampleKo": "여러 판매업체가 박람회에서 제품을 전시할 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "volunteer",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "자원봉사자; 자원하다",
+    "Example": "Volunteers are needed for the community cleanup.",
+    "ExampleKo": "지역 청소를 위한 자원봉사자가 필요합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "waive",
+    "PartOfSpeech": "verb",
+    "Meaning": "면제하다",
+    "Example": "The registration fee will be waived for early applicants.",
+    "ExampleKo": "조기 지원자에게는 등록비가 면제됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "workforce",
+    "PartOfSpeech": "noun",
+    "Meaning": "노동력, 인력",
+    "Example": "The company plans to expand its workforce by 20 percent.",
+    "ExampleKo": "회사는 인력을 20% 확대할 계획입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "yield",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "산출하다; 수익률",
+    "Example": "The investment yielded a return of 8 percent.",
+    "ExampleKo": "투자가 8%의 수익을 산출했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "abundant",
+    "PartOfSpeech": "adjective",
+    "Meaning": "풍부한",
+    "Example": "There are abundant opportunities for growth in this field.",
+    "ExampleKo": "이 분야에는 성장 기회가 풍부합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "allocate",
+    "PartOfSpeech": "verb",
+    "Meaning": "배분하다, 할당하다",
+    "Example": "Additional funds were allocated to the research department.",
+    "ExampleKo": "연구 부서에 추가 자금이 할당되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "assess",
+    "PartOfSpeech": "verb",
+    "Meaning": "평가하다",
+    "Example": "The committee will assess all proposals submitted.",
+    "ExampleKo": "위원회가 제출된 모든 제안서를 평가할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "asset",
+    "PartOfSpeech": "noun",
+    "Meaning": "자산",
+    "Example": "Experienced employees are the company's greatest asset.",
+    "ExampleKo": "경험 있는 직원이 회사의 가장 큰 자산입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "audit",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "감사; 감사하다",
+    "Example": "The annual audit will be conducted in March.",
+    "ExampleKo": "연간 감사는 3월에 실시됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "break",
+    "PartOfSpeech": "noun",
+    "Meaning": "휴식",
+    "Example": "Staff may take a 15-minute break in the morning.",
+    "ExampleKo": "직원들은 오전에 15분 휴식을 취할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "bulk",
+    "PartOfSpeech": "noun/adjective",
+    "Meaning": "대량; 대량의",
+    "Example": "Ordering in bulk saves money.",
+    "ExampleKo": "대량 주문하면 비용이 절감됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "certificate",
+    "PartOfSpeech": "noun",
+    "Meaning": "자격증, 증명서",
+    "Example": "A certificate of completion was given to all participants.",
+    "ExampleKo": "모든 참가자에게 수료증이 수여되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "coincide",
+    "PartOfSpeech": "verb",
+    "Meaning": "동시에 일어나다",
+    "Example": "The conference coincides with a major holiday.",
+    "ExampleKo": "컨퍼런스가 주요 휴일과 겹칩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "collaborate",
+    "PartOfSpeech": "verb",
+    "Meaning": "협업하다",
+    "Example": "The two companies will collaborate on the new project.",
+    "ExampleKo": "두 회사가 새 프로젝트에 협업할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commemorate",
+    "PartOfSpeech": "verb",
+    "Meaning": "기념하다",
+    "Example": "A ceremony was held to commemorate the founding of the company.",
+    "ExampleKo": "회사 설립을 기념하는 행사가 열렸습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commission",
+    "PartOfSpeech": "noun",
+    "Meaning": "수수료, 위임",
+    "Example": "Sales staff earn a commission on each sale.",
+    "ExampleKo": "영업 직원은 각 판매에서 수수료를 받습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commodity",
+    "PartOfSpeech": "noun",
+    "Meaning": "상품, 원자재",
+    "Example": "Gold is a widely traded commodity.",
+    "ExampleKo": "금은 널리 거래되는 상품입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "confidential",
+    "PartOfSpeech": "adjective",
+    "Meaning": "기밀의",
+    "Example": "Employee records are strictly confidential.",
+    "ExampleKo": "직원 기록은 엄격히 기밀입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "consecutive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "연속적인",
+    "Example": "Sales increased for the fifth consecutive quarter.",
+    "ExampleKo": "5분기 연속으로 매출이 증가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "constrain",
+    "PartOfSpeech": "verb",
+    "Meaning": "제약하다",
+    "Example": "Growth was constrained by a limited budget.",
+    "ExampleKo": "제한된 예산으로 인해 성장이 제약되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "curriculum",
+    "PartOfSpeech": "noun",
+    "Meaning": "교육 과정",
+    "Example": "The training curriculum includes both theory and practice.",
+    "ExampleKo": "교육 과정에는 이론과 실습이 모두 포함됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "designate",
+    "PartOfSpeech": "verb",
+    "Meaning": "지정하다",
+    "Example": "The area has been designated as a parking zone.",
+    "ExampleKo": "그 구역은 주차 구역으로 지정되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "dismiss",
+    "PartOfSpeech": "verb",
+    "Meaning": "해고하다, 기각하다",
+    "Example": "The complaint was dismissed due to lack of evidence.",
+    "ExampleKo": "증거 부족으로 불만이 기각되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "disruption",
+    "PartOfSpeech": "noun",
+    "Meaning": "방해, 중단",
+    "Example": "We apologize for any disruption to your service.",
+    "ExampleKo": "서비스 중단에 대해 사과드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "enthusiastic",
+    "PartOfSpeech": "adjective",
+    "Meaning": "열정적인",
+    "Example": "The audience was enthusiastic about the new product.",
+    "ExampleKo": "청중은 새 제품에 대해 열정적이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "entitle",
+    "PartOfSpeech": "verb",
+    "Meaning": "자격을 주다",
+    "Example": "Members are entitled to a free upgrade.",
+    "ExampleKo": "회원은 무료 업그레이드를 받을 자격이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "entrepreneur",
+    "PartOfSpeech": "noun",
+    "Meaning": "기업가",
+    "Example": "The young entrepreneur started the business from her garage.",
+    "ExampleKo": "젊은 기업가가 차고에서 사업을 시작했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "equivalent",
+    "PartOfSpeech": "adjective/noun",
+    "Meaning": "동등한; 등가물",
+    "Example": "The training is equivalent to a bachelor's degree.",
+    "ExampleKo": "이 교육은 학사 학위에 상응합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "formerly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "이전에",
+    "Example": "She was formerly the head of the marketing department.",
+    "ExampleKo": "그녀는 이전에 마케팅 부서장이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fragile",
+    "PartOfSpeech": "adjective",
+    "Meaning": "깨지기 쉬운",
+    "Example": "Please handle the package with care as the contents are fragile.",
+    "ExampleKo": "내용물이 깨지기 쉬우니 소포를 주의해서 다루세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "ideally",
+    "PartOfSpeech": "adverb",
+    "Meaning": "이상적으로",
+    "Example": "Ideally, we should finish the project before the holiday.",
+    "ExampleKo": "이상적으로는 휴일 전에 프로젝트를 끝내야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "impose",
+    "PartOfSpeech": "verb",
+    "Meaning": "부과하다",
+    "Example": "A new tax has been imposed on imported goods.",
+    "ExampleKo": "수입품에 새 세금이 부과되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "instruct",
+    "PartOfSpeech": "verb",
+    "Meaning": "지시하다",
+    "Example": "Staff were instructed to evacuate the building.",
+    "ExampleKo": "직원들은 건물에서 대피하라는 지시를 받았습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "interact",
+    "PartOfSpeech": "verb",
+    "Meaning": "상호작용하다",
+    "Example": "The workshop allows managers to interact with new hires.",
+    "ExampleKo": "워크숍에서 매니저와 신입 직원이 교류합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "invest",
+    "PartOfSpeech": "verb",
+    "Meaning": "투자하다",
+    "Example": "The company plans to invest in new technology.",
+    "ExampleKo": "회사는 새 기술에 투자할 계획입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "minimize",
+    "PartOfSpeech": "verb",
+    "Meaning": "최소화하다",
+    "Example": "We are taking steps to minimize disruption.",
+    "ExampleKo": "방해를 최소화하기 위한 조치를 취하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "outcome",
+    "PartOfSpeech": "noun",
+    "Meaning": "결과",
+    "Example": "The outcome of the meeting was positive.",
+    "ExampleKo": "회의 결과가 긍정적이었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "outline",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "개요; 개요를 설명하다",
+    "Example": "The manager outlined the plan for next quarter.",
+    "ExampleKo": "매니저가 다음 분기 계획의 개요를 설명했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "overview",
+    "PartOfSpeech": "noun",
+    "Meaning": "개관, 전체적 설명",
+    "Example": "The CEO gave an overview of the company's performance.",
+    "ExampleKo": "CEO가 회사 성과에 대한 전체적 설명을 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "phase",
+    "PartOfSpeech": "noun",
+    "Meaning": "단계",
+    "Example": "The first phase of the project is nearly complete.",
+    "ExampleKo": "프로젝트의 첫 번째 단계가 거의 완료되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "precise",
+    "PartOfSpeech": "adjective",
+    "Meaning": "정확한",
+    "Example": "Please give us the precise delivery date.",
+    "ExampleKo": "정확한 배달 날짜를 알려 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "presently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "현재, 곧",
+    "Example": "The manager is presently unavailable.",
+    "ExampleKo": "매니저가 현재 자리에 없습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prestigious",
+    "PartOfSpeech": "adjective",
+    "Meaning": "명망 있는",
+    "Example": "She graduated from a prestigious university.",
+    "ExampleKo": "그녀는 명문 대학교를 졸업했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "reconsider",
+    "PartOfSpeech": "verb",
+    "Meaning": "재고하다",
+    "Example": "We would like you to reconsider your decision.",
+    "ExampleKo": "결정을 재고해 주시기 바랍니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "refurbish",
+    "PartOfSpeech": "verb",
+    "Meaning": "새로 단장하다",
+    "Example": "The conference room was recently refurbished.",
+    "ExampleKo": "회의실이 최근에 새로 단장되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "relocate",
+    "PartOfSpeech": "verb",
+    "Meaning": "이전하다",
+    "Example": "The factory will relocate to a larger facility.",
+    "ExampleKo": "공장이 더 큰 시설로 이전할 예정입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "resident",
+    "PartOfSpeech": "noun",
+    "Meaning": "거주자",
+    "Example": "Local residents were invited to the town meeting.",
+    "ExampleKo": "지역 주민들이 타운 미팅에 초대되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "restriction",
+    "PartOfSpeech": "noun",
+    "Meaning": "제한",
+    "Example": "There are no age restrictions for this program.",
+    "ExampleKo": "이 프로그램에는 나이 제한이 없습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "retain",
+    "PartOfSpeech": "verb",
+    "Meaning": "유지하다, 보유하다",
+    "Example": "The company retained its top talent through competitive salaries.",
+    "ExampleKo": "회사는 경쟁력 있는 급여를 통해 우수 인재를 유지했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "spokesperson",
+    "PartOfSpeech": "noun",
+    "Meaning": "대변인",
+    "Example": "The spokesperson made an official statement to the press.",
+    "ExampleKo": "대변인이 언론에 공식 성명을 발표했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "standpoint",
+    "PartOfSpeech": "noun",
+    "Meaning": "관점",
+    "Example": "From a financial standpoint, the merger makes sense.",
+    "ExampleKo": "재정적 관점에서 합병은 합리적입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "steadily",
+    "PartOfSpeech": "adverb",
+    "Meaning": "꾸준히",
+    "Example": "Profits have been growing steadily for three years.",
+    "ExampleKo": "수익이 3년간 꾸준히 증가하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "submission",
+    "PartOfSpeech": "noun",
+    "Meaning": "제출(물)",
+    "Example": "The deadline for submissions is November 15.",
+    "ExampleKo": "제출 마감일은 11월 15일입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "subsidiary",
+    "PartOfSpeech": "noun",
+    "Meaning": "자회사",
+    "Example": "The company has subsidiaries in five countries.",
+    "ExampleKo": "회사는 5개국에 자회사를 두고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "substantial",
+    "PartOfSpeech": "adjective",
+    "Meaning": "상당한",
+    "Example": "The company made a substantial investment in research.",
+    "ExampleKo": "회사가 연구에 상당한 투자를 했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "surplus",
+    "PartOfSpeech": "noun",
+    "Meaning": "잉여, 흑자",
+    "Example": "The budget surplus allowed for new hiring.",
+    "ExampleKo": "예산 흑자 덕분에 신규 채용이 가능했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "testimonial",
+    "PartOfSpeech": "noun",
+    "Meaning": "추천서, 후기",
+    "Example": "Customer testimonials are featured on the website.",
+    "ExampleKo": "고객 후기가 웹사이트에 게시되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "undertake",
+    "PartOfSpeech": "verb",
+    "Meaning": "맡다, 착수하다",
+    "Example": "The firm will undertake a review of all contracts.",
+    "ExampleKo": "회사가 모든 계약의 검토에 착수할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "vacancy",
+    "PartOfSpeech": "noun",
+    "Meaning": "공석, 빈자리",
+    "Example": "There are currently two vacancies in the accounting department.",
+    "ExampleKo": "현재 회계 부서에 2개의 공석이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "acquaint",
+    "PartOfSpeech": "verb",
+    "Meaning": "숙지시키다",
+    "Example": "New employees should acquaint themselves with company rules.",
+    "ExampleKo": "신입 직원은 회사 규정을 숙지해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "acquisition",
+    "PartOfSpeech": "noun",
+    "Meaning": "인수, 취득",
+    "Example": "The acquisition of the smaller firm was completed last month.",
+    "ExampleKo": "소규모 회사의 인수가 지난달 완료되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "adapt",
+    "PartOfSpeech": "verb",
+    "Meaning": "적응하다",
+    "Example": "We need to adapt quickly to changes in the market.",
+    "ExampleKo": "시장 변화에 신속하게 적응해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "adopt",
+    "PartOfSpeech": "verb",
+    "Meaning": "채택하다",
+    "Example": "The company adopted a new work-from-home policy.",
+    "ExampleKo": "회사가 새 재택근무 정책을 채택했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "aim",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "목표; 목표로 하다",
+    "Example": "The company aims to double its revenue within five years.",
+    "ExampleKo": "회사는 5년 내 매출을 두 배로 늘리는 것을 목표로 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "anniversary",
+    "PartOfSpeech": "noun",
+    "Meaning": "기념일",
+    "Example": "The company is celebrating its 50th anniversary.",
+    "ExampleKo": "회사가 창립 50주년을 기념하고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "anonymous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "익명의",
+    "Example": "The survey responses are completely anonymous.",
+    "ExampleKo": "설문 응답은 완전히 익명입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "archive",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "보관소; 보관하다",
+    "Example": "Old files are stored in the company archive.",
+    "ExampleKo": "오래된 파일은 회사 보관소에 저장됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "assurance",
+    "PartOfSpeech": "noun",
+    "Meaning": "보증, 확신",
+    "Example": "We give our assurance that all data will be kept secure.",
+    "ExampleKo": "모든 데이터가 안전하게 보관될 것임을 보장합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "belongings",
+    "PartOfSpeech": "noun",
+    "Meaning": "소지품",
+    "Example": "Please keep your personal belongings with you at all times.",
+    "ExampleKo": "개인 소지품을 항상 가지고 계세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "blueprint",
+    "PartOfSpeech": "noun",
+    "Meaning": "설계도",
+    "Example": "The architect presented the blueprint for the new building.",
+    "ExampleKo": "건축가가 새 건물의 설계도를 발표했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "clarify",
+    "PartOfSpeech": "verb",
+    "Meaning": "명확히 하다",
+    "Example": "Could you clarify the payment terms in the contract?",
+    "ExampleKo": "계약서의 지불 조건을 명확히 해주시겠어요?",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commerce",
+    "PartOfSpeech": "noun",
+    "Meaning": "상업",
+    "Example": "E-commerce has grown rapidly in recent years.",
+    "ExampleKo": "전자상거래가 최근 몇 년간 급속히 성장했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "consensus",
+    "PartOfSpeech": "noun",
+    "Meaning": "합의",
+    "Example": "The committee reached a consensus on the new policy.",
+    "ExampleKo": "위원회가 새 정책에 대한 합의에 도달했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "delegate",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "위임하다; 대표",
+    "Example": "Managers should delegate tasks to team members.",
+    "ExampleKo": "매니저는 팀원에게 업무를 위임해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "demographic",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "인구 통계(의)",
+    "Example": "The campaign targets a younger demographic.",
+    "ExampleKo": "캠페인은 젊은 인구 집단을 대상으로 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "detect",
+    "PartOfSpeech": "verb",
+    "Meaning": "감지하다",
+    "Example": "The system can detect any security threats.",
+    "ExampleKo": "시스템이 모든 보안 위협을 감지할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "diploma",
+    "PartOfSpeech": "noun",
+    "Meaning": "졸업장",
+    "Example": "A diploma in business administration is preferred.",
+    "ExampleKo": "경영학 졸업장이 선호됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "drawback",
+    "PartOfSpeech": "noun",
+    "Meaning": "단점",
+    "Example": "One drawback of the plan is the high cost.",
+    "ExampleKo": "이 계획의 한 가지 단점은 높은 비용입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "duration",
+    "PartOfSpeech": "noun",
+    "Meaning": "기간",
+    "Example": "The duration of the training is three weeks.",
+    "ExampleKo": "교육 기간은 3주입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "elaborate",
+    "PartOfSpeech": "adjective/verb",
+    "Meaning": "정교한; 자세히 설명하다",
+    "Example": "Could you elaborate on your proposal?",
+    "ExampleKo": "제안에 대해 더 자세히 설명해 주시겠어요?",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "endorse",
+    "PartOfSpeech": "verb",
+    "Meaning": "보증하다, 지지하다",
+    "Example": "Several celebrities endorsed the new product.",
+    "ExampleKo": "여러 유명인이 새 제품을 지지했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "enforce",
+    "PartOfSpeech": "verb",
+    "Meaning": "시행하다, 집행하다",
+    "Example": "The new parking rules will be strictly enforced.",
+    "ExampleKo": "새 주차 규정이 엄격히 시행될 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "enhance",
+    "PartOfSpeech": "verb",
+    "Meaning": "향상시키다",
+    "Example": "New lighting was installed to enhance the workspace.",
+    "ExampleKo": "작업 공간을 향상시키기 위해 새 조명이 설치되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "evenly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "고르게, 균등하게",
+    "Example": "Tasks should be distributed evenly among team members.",
+    "ExampleKo": "업무는 팀원들에게 균등하게 분배되어야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fiscal",
+    "PartOfSpeech": "adjective",
+    "Meaning": "회계의, 재정의",
+    "Example": "The fiscal year ends in March.",
+    "ExampleKo": "회계연도는 3월에 끝납니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "fluctuate",
+    "PartOfSpeech": "verb",
+    "Meaning": "변동하다",
+    "Example": "Stock prices tend to fluctuate throughout the day.",
+    "ExampleKo": "주가는 하루 동안 변동하는 경향이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "grateful",
+    "PartOfSpeech": "adjective",
+    "Meaning": "감사하는",
+    "Example": "We are grateful for your continued support.",
+    "ExampleKo": "계속적인 지원에 감사드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "hazard",
+    "PartOfSpeech": "noun",
+    "Meaning": "위험 요소",
+    "Example": "Fire hazards must be removed from the workplace.",
+    "ExampleKo": "화재 위험 요소는 작업장에서 제거해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "hesitant",
+    "PartOfSpeech": "adjective",
+    "Meaning": "주저하는",
+    "Example": "Some investors were hesitant to commit funds.",
+    "ExampleKo": "일부 투자자들은 자금 투입을 주저했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "imply",
+    "PartOfSpeech": "verb",
+    "Meaning": "암시하다",
+    "Example": "The data implies that consumer spending is declining.",
+    "ExampleKo": "데이터는 소비자 지출이 감소하고 있음을 암시합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "incentive",
+    "PartOfSpeech": "noun",
+    "Meaning": "인센티브, 장려금",
+    "Example": "The company offers incentives for meeting sales targets.",
+    "ExampleKo": "회사는 매출 목표 달성에 대한 인센티브를 제공합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "incur",
+    "PartOfSpeech": "verb",
+    "Meaning": "초래하다, 발생시키다",
+    "Example": "Late payments may incur additional fees.",
+    "ExampleKo": "연체 지불 시 추가 수수료가 발생할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "integral",
+    "PartOfSpeech": "adjective",
+    "Meaning": "필수적인",
+    "Example": "Teamwork is an integral part of our company culture.",
+    "ExampleKo": "팀워크는 저희 기업 문화의 필수적인 부분입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "justify",
+    "PartOfSpeech": "verb",
+    "Meaning": "정당화하다",
+    "Example": "You must justify the additional expense with documentation.",
+    "ExampleKo": "추가 비용을 서류로 정당화해야 합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "markedly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "현저히",
+    "Example": "Customer complaints have decreased markedly.",
+    "ExampleKo": "고객 불만이 현저히 감소했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "mentorship",
+    "PartOfSpeech": "noun",
+    "Meaning": "멘토링",
+    "Example": "The company has a mentorship program for new employees.",
+    "ExampleKo": "회사에 신입 직원을 위한 멘토링 프로그램이 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "milestone",
+    "PartOfSpeech": "noun",
+    "Meaning": "이정표, 중요 시점",
+    "Example": "Reaching 1 million users was a major milestone.",
+    "ExampleKo": "사용자 100만 명 달성은 주요 이정표였습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "morale",
+    "PartOfSpeech": "noun",
+    "Meaning": "사기",
+    "Example": "Employee morale improved after the salary increase.",
+    "ExampleKo": "급여 인상 후 직원 사기가 향상되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "nominal",
+    "PartOfSpeech": "adjective",
+    "Meaning": "명목상의, 적은",
+    "Example": "There is a nominal fee for the service.",
+    "ExampleKo": "서비스에 소액의 수수료가 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "obligate",
+    "PartOfSpeech": "verb",
+    "Meaning": "의무를 지우다",
+    "Example": "The contract obligates both parties to fulfill their roles.",
+    "ExampleKo": "계약은 양측에 각자의 역할을 이행할 의무를 지웁니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "occasionally",
+    "PartOfSpeech": "adverb",
+    "Meaning": "가끔",
+    "Example": "The CEO occasionally visits the regional offices.",
+    "ExampleKo": "CEO는 가끔 지역 사무소를 방문합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "overwhelm",
+    "PartOfSpeech": "verb",
+    "Meaning": "압도하다",
+    "Example": "The customer service team was overwhelmed with inquiries.",
+    "ExampleKo": "고객 서비스 팀이 문의로 압도당했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "payroll",
+    "PartOfSpeech": "noun",
+    "Meaning": "급여 대장",
+    "Example": "Payroll will be processed on the 25th of each month.",
+    "ExampleKo": "급여는 매월 25일에 처리됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "pedestrian",
+    "PartOfSpeech": "noun",
+    "Meaning": "보행자",
+    "Example": "A new pedestrian crossing was added near the office.",
+    "ExampleKo": "사무실 근처에 새 횡단보도가 추가되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "plumber",
+    "PartOfSpeech": "noun",
+    "Meaning": "배관공",
+    "Example": "A plumber was called to fix the leak in the office.",
+    "ExampleKo": "사무실 누수를 수리하기 위해 배관공이 호출되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "premiere",
+    "PartOfSpeech": "noun",
+    "Meaning": "첫 공개, 초연",
+    "Example": "The product premiere attracted major media coverage.",
+    "ExampleKo": "제품 첫 공개가 주요 언론의 관심을 끌었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "prevalent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "널리 퍼진",
+    "Example": "Remote work has become more prevalent since 2020.",
+    "ExampleKo": "2020년 이후 재택근무가 더 널리 퍼졌습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "proofread",
+    "PartOfSpeech": "verb",
+    "Meaning": "교정하다",
+    "Example": "Please proofread the document before printing.",
+    "ExampleKo": "인쇄 전에 문서를 교정해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "punctual",
+    "PartOfSpeech": "adjective",
+    "Meaning": "시간을 잘 지키는",
+    "Example": "Employees are expected to be punctual.",
+    "ExampleKo": "직원들은 시간을 잘 지킬 것이 기대됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "questionnaire",
+    "PartOfSpeech": "noun",
+    "Meaning": "설문지",
+    "Example": "Please complete the questionnaire and return it.",
+    "ExampleKo": "설문지를 작성하고 반환해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "receptionist",
+    "PartOfSpeech": "noun",
+    "Meaning": "접수 담당자",
+    "Example": "The receptionist will direct you to the meeting room.",
+    "ExampleKo": "접수 담당자가 회의실로 안내해 드립니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "renew",
+    "PartOfSpeech": "verb",
+    "Meaning": "갱신하다",
+    "Example": "Please renew your membership before it expires.",
+    "ExampleKo": "만료 전에 회원권을 갱신해 주세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "respectively",
+    "PartOfSpeech": "adverb",
+    "Meaning": "각각",
+    "Example": "Tokyo and Seoul had 12 and 15 percent growth, respectively.",
+    "ExampleKo": "도쿄와 서울은 각각 12%와 15% 성장했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "scarce",
+    "PartOfSpeech": "adjective",
+    "Meaning": "부족한, 드문",
+    "Example": "Skilled workers are becoming increasingly scarce.",
+    "ExampleKo": "숙련된 노동자가 점점 부족해지고 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "scrutinize",
+    "PartOfSpeech": "verb",
+    "Meaning": "면밀히 조사하다",
+    "Example": "Auditors will scrutinize the company's financial records.",
+    "ExampleKo": "감사관이 회사의 재무 기록을 면밀히 조사할 것입니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "setback",
+    "PartOfSpeech": "noun",
+    "Meaning": "차질",
+    "Example": "The project experienced a minor setback due to bad weather.",
+    "ExampleKo": "악천후로 인해 프로젝트에 사소한 차질이 있었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "simultaneously",
+    "PartOfSpeech": "adverb",
+    "Meaning": "동시에",
+    "Example": "The product was launched simultaneously in three countries.",
+    "ExampleKo": "제품이 3개국에서 동시에 출시되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "souvenir",
+    "PartOfSpeech": "noun",
+    "Meaning": "기념품",
+    "Example": "Souvenirs are available in the gift shop on the first floor.",
+    "ExampleKo": "1층 선물 가게에서 기념품을 구입할 수 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "specification",
+    "PartOfSpeech": "noun",
+    "Meaning": "사양, 명세",
+    "Example": "The product specifications are listed on the website.",
+    "ExampleKo": "제품 사양은 웹사이트에 나와 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "sponsor",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "후원자; 후원하다",
+    "Example": "The event was sponsored by a local bank.",
+    "ExampleKo": "행사는 지역 은행이 후원했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "statistics",
+    "PartOfSpeech": "noun",
+    "Meaning": "통계",
+    "Example": "Recent statistics show a decline in unemployment.",
+    "ExampleKo": "최근 통계는 실업률 감소를 보여줍니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "stringent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "엄격한",
+    "Example": "The company has stringent quality control measures.",
+    "ExampleKo": "회사는 엄격한 품질 관리 조치를 시행합니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "surpass",
+    "PartOfSpeech": "verb",
+    "Meaning": "능가하다",
+    "Example": "Revenue surpassed expectations by 20 percent.",
+    "ExampleKo": "수익이 예상치를 20% 능가했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "toll-free",
+    "PartOfSpeech": "adjective",
+    "Meaning": "수신자 부담의",
+    "Example": "Call our toll-free number for customer support.",
+    "ExampleKo": "고객 지원을 위해 수신자 부담 번호로 전화하세요.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "turnover",
+    "PartOfSpeech": "noun",
+    "Meaning": "이직률; 매출액",
+    "Example": "Employee turnover has been high this year.",
+    "ExampleKo": "올해 직원 이직률이 높았습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "unanimous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "만장일치의",
+    "Example": "The board made a unanimous decision to approve the plan.",
+    "ExampleKo": "이사회가 만장일치로 계획을 승인했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "venture",
+    "PartOfSpeech": "noun",
+    "Meaning": "벤처, 사업",
+    "Example": "The joint venture was announced at the press conference.",
+    "ExampleKo": "합작 사업이 기자 회견에서 발표되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "worthwhile",
+    "PartOfSpeech": "adjective",
+    "Meaning": "가치 있는",
+    "Example": "The investment turned out to be very worthwhile.",
+    "ExampleKo": "투자가 매우 가치 있는 것으로 판명되었습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "attire",
+    "PartOfSpeech": "noun",
+    "Meaning": "복장, 옷",
+    "Example": "Professional business attire is required in the client area.",
+    "ExampleKo": "고객 응대 구역에서는 단정한 비즈니스 복장이 요구됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "commence",
+    "PartOfSpeech": "verb",
+    "Meaning": "시작하다",
+    "Example": "The keynote speech will commence at 9:00 a.m.",
+    "ExampleKo": "기조연설은 오전 9시에 시작됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "courteous",
+    "PartOfSpeech": "adj",
+    "Meaning": "예의 바른, 정중한",
+    "Example": "The customer service staff was always courteous and helpful.",
+    "ExampleKo": "고객 서비스 직원들은 항상 예의 바르고 친절했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "excursion",
+    "PartOfSpeech": "noun",
+    "Meaning": "소풍, 짧은 여행",
+    "Example": "The conference package includes a weekend excursion to the coast.",
+    "ExampleKo": "컨퍼런스 패키지에는 주말 해안 관광 여행이 포함되어 있습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "flier",
+    "PartOfSpeech": "noun",
+    "Meaning": "전단지",
+    "Example": "Volunteers handed out promotional fliers outside the subway station.",
+    "ExampleKo": "자원봉사자들이 지하철역 밖에서 홍보 전단지를 배포했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "hospitality",
+    "PartOfSpeech": "noun",
+    "Meaning": "환대, 친절",
+    "Example": "We thanked the hosts for their warm hospitality during our stay.",
+    "ExampleKo": "저희는 머무는 동안 베풀어 준 따뜻한 환대에 대해 주최 측에 감사했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "memorandum",
+    "PartOfSpeech": "noun",
+    "Meaning": "메모, 회람 공지",
+    "Example": "The CEO issued an urgent memorandum regarding the office relocation.",
+    "ExampleKo": "CEO는 사무실 이전에 관한 긴급 회람 공지를 발표했습니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "punctuality",
+    "PartOfSpeech": "noun",
+    "Meaning": "시간 엄수",
+    "Example": "Punctuality is considered an essential virtue at this corporation.",
+    "ExampleKo": "이 기업에서는 시간 엄수가 필수적인 미덕으로 간주됩니다.",
+    "Tier": "1-기초"
+  },
+  {
+    "Word": "refreshment",
+    "PartOfSpeech": "noun",
+    "Meaning": "다과, 음료",
+    "Example": "Light refreshments will be served after the presentation.",
+    "ExampleKo": "발표가 끝난 후 가벼운 다과가 제공될 예정입니다.",
+    "Tier": "1-기초"
+  }
+]

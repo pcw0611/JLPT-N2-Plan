@@ -1,0 +1,4002 @@
+[
+  {
+    "Word": "facilitate",
+    "PartOfSpeech": "verb",
+    "Meaning": "촉진하다, 용이하게 하다",
+    "Example": "The new software will facilitate communication between teams.",
+    "ExampleKo": "새 소프트웨어가 팀 간 의사소통을 촉진할 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "comply",
+    "PartOfSpeech": "verb",
+    "Meaning": "준수하다",
+    "Example": "All departments must comply with the new regulations.",
+    "ExampleKo": "모든 부서는 새 규정을 준수해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "consolidate",
+    "PartOfSpeech": "verb",
+    "Meaning": "통합하다",
+    "Example": "The company consolidated its three offices into one.",
+    "ExampleKo": "회사가 세 사무실을 하나로 통합했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "delegate",
+    "PartOfSpeech": "verb",
+    "Meaning": "위임하다",
+    "Example": "Good managers know when to delegate responsibilities.",
+    "ExampleKo": "좋은 관리자는 책임을 위임할 때를 압니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "devise",
+    "PartOfSpeech": "verb",
+    "Meaning": "고안하다",
+    "Example": "The team devised a plan to cut production costs.",
+    "ExampleKo": "팀이 생산 비용 절감 계획을 고안했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "dispatch",
+    "PartOfSpeech": "verb",
+    "Meaning": "발송하다, 파견하다",
+    "Example": "The parts were dispatched from the warehouse yesterday.",
+    "ExampleKo": "부품이 어제 창고에서 발송되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "diversify",
+    "PartOfSpeech": "verb",
+    "Meaning": "다양화하다",
+    "Example": "The company plans to diversify its product line.",
+    "ExampleKo": "회사는 제품 라인을 다양화할 계획입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "downturn",
+    "PartOfSpeech": "noun",
+    "Meaning": "침체, 하락",
+    "Example": "The economic downturn affected several industries.",
+    "ExampleKo": "경기 침체가 여러 산업에 영향을 미쳤습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "endorse",
+    "PartOfSpeech": "verb",
+    "Meaning": "지지하다, 추천하다",
+    "Example": "The board endorsed the CEO's strategic plan.",
+    "ExampleKo": "이사회가 CEO의 전략 계획을 지지했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "execute",
+    "PartOfSpeech": "verb",
+    "Meaning": "실행하다, 수행하다",
+    "Example": "The marketing team executed the campaign flawlessly.",
+    "ExampleKo": "마케팅 팀이 캠페인을 완벽하게 실행했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "expedite",
+    "PartOfSpeech": "verb",
+    "Meaning": "신속히 처리하다",
+    "Example": "We will expedite your order for an additional fee.",
+    "ExampleKo": "추가 요금으로 주문을 신속히 처리해 드립니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "formulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "공식화하다, 수립하다",
+    "Example": "A committee was formed to formulate new safety guidelines.",
+    "ExampleKo": "새 안전 지침을 수립하기 위해 위원회가 구성되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "implement",
+    "PartOfSpeech": "verb",
+    "Meaning": "시행하다",
+    "Example": "The policy changes were implemented across all branches.",
+    "ExampleKo": "정책 변경이 모든 지점에 시행되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inaugurate",
+    "PartOfSpeech": "verb",
+    "Meaning": "개시하다, 취임시키다",
+    "Example": "The mayor inaugurated the new community center.",
+    "ExampleKo": "시장이 새 커뮤니티 센터를 개관했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "incorporate",
+    "PartOfSpeech": "verb",
+    "Meaning": "포함시키다, 통합하다",
+    "Example": "Customer feedback was incorporated into the new design.",
+    "ExampleKo": "고객 피드백이 새 디자인에 반영되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "leverage",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "활용하다; 영향력",
+    "Example": "We can leverage our brand recognition to enter new markets.",
+    "ExampleKo": "브랜드 인지도를 활용해 새 시장에 진출할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mandate",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "의무화; 명령하다",
+    "Example": "The government mandated stricter emission standards.",
+    "ExampleKo": "정부가 더 엄격한 배출 기준을 의무화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mitigate",
+    "PartOfSpeech": "verb",
+    "Meaning": "완화하다",
+    "Example": "Steps were taken to mitigate the risk of supply shortages.",
+    "ExampleKo": "공급 부족 위험을 완화하기 위한 조치가 취해졌습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "offset",
+    "PartOfSpeech": "verb",
+    "Meaning": "상쇄하다",
+    "Example": "Higher sales offset the increase in raw material costs.",
+    "ExampleKo": "매출 증가가 원자재 비용 상승을 상쇄했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "optimize",
+    "PartOfSpeech": "verb",
+    "Meaning": "최적화하다",
+    "Example": "The team is working to optimize the production process.",
+    "ExampleKo": "팀이 생산 공정을 최적화하기 위해 노력하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "outsource",
+    "PartOfSpeech": "verb",
+    "Meaning": "외주하다",
+    "Example": "IT support has been outsourced to a third-party provider.",
+    "ExampleKo": "IT 지원이 외부 업체에 외주되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "overhaul",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "전면 점검하다; 개편",
+    "Example": "The management structure underwent a major overhaul.",
+    "ExampleKo": "경영 구조가 대대적인 개편을 겪었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "oversee",
+    "PartOfSpeech": "verb",
+    "Meaning": "감독하다",
+    "Example": "She oversees all marketing activities for the region.",
+    "ExampleKo": "그녀는 지역의 모든 마케팅 활동을 감독합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "overdue",
+    "PartOfSpeech": "adjective",
+    "Meaning": "연체된, 기한이 지난",
+    "Example": "The payment is overdue by two weeks.",
+    "ExampleKo": "결제가 2주 연체되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "oversight",
+    "PartOfSpeech": "noun",
+    "Meaning": "감독; 실수",
+    "Example": "Due to an oversight, the invoice was sent to the wrong address.",
+    "ExampleKo": "실수로 인해 청구서가 잘못된 주소로 발송되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "phase out",
+    "PartOfSpeech": "phrasal verb",
+    "Meaning": "단계적으로 폐지하다",
+    "Example": "The old model will be phased out by the end of the year.",
+    "ExampleKo": "구형 모델은 연말까지 단계적으로 폐지됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "pioneer",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "선구자; 개척하다",
+    "Example": "The company pioneered a new approach to customer service.",
+    "ExampleKo": "회사가 고객 서비스에 대한 새 접근법을 개척했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "procurement",
+    "PartOfSpeech": "noun",
+    "Meaning": "조달",
+    "Example": "The procurement department handles all purchasing.",
+    "ExampleKo": "조달 부서가 모든 구매를 처리합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ratify",
+    "PartOfSpeech": "verb",
+    "Meaning": "비준하다",
+    "Example": "The agreement was ratified by all member countries.",
+    "ExampleKo": "합의가 모든 회원국에 의해 비준되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "refine",
+    "PartOfSpeech": "verb",
+    "Meaning": "개선하다, 정제하다",
+    "Example": "The process was refined to improve efficiency.",
+    "ExampleKo": "효율성을 개선하기 위해 공정이 개선되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "revenue",
+    "PartOfSpeech": "noun",
+    "Meaning": "수익",
+    "Example": "Annual revenue exceeded 10 million dollars.",
+    "ExampleKo": "연간 수익이 1,000만 달러를 초과했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "expenditure",
+    "PartOfSpeech": "noun",
+    "Meaning": "지출",
+    "Example": "Capital expenditure was reduced by 15 percent.",
+    "ExampleKo": "자본 지출이 15% 감소했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "quarterly",
+    "PartOfSpeech": "adjective/adverb",
+    "Meaning": "분기별의; 분기마다",
+    "Example": "The quarterly report showed a 10 percent increase in profit.",
+    "ExampleKo": "분기 보고서에 이익이 10% 증가한 것으로 나타났습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "fiscal",
+    "PartOfSpeech": "adjective",
+    "Meaning": "재정의, 회계의",
+    "Example": "The fiscal year ends on December 31.",
+    "ExampleKo": "회계연도는 12월 31일에 끝납니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "depreciation",
+    "PartOfSpeech": "noun",
+    "Meaning": "감가상각",
+    "Example": "Depreciation of equipment is included in the annual report.",
+    "ExampleKo": "장비 감가상각이 연간 보고서에 포함됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "dividend",
+    "PartOfSpeech": "noun",
+    "Meaning": "배당금",
+    "Example": "Shareholders will receive a dividend of two dollars per share.",
+    "ExampleKo": "주주들은 주당 2달러의 배당금을 받을 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "equity",
+    "PartOfSpeech": "noun",
+    "Meaning": "자본, 지분",
+    "Example": "The investor acquired a 20 percent equity stake in the company.",
+    "ExampleKo": "투자자가 회사 지분의 20%를 취득했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "liability",
+    "PartOfSpeech": "noun",
+    "Meaning": "부채, 책임",
+    "Example": "Total liabilities decreased compared to last year.",
+    "ExampleKo": "총 부채가 작년 대비 감소했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "liquidate",
+    "PartOfSpeech": "verb",
+    "Meaning": "청산하다",
+    "Example": "The company was forced to liquidate its assets.",
+    "ExampleKo": "회사는 자산을 청산할 수밖에 없었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "markup",
+    "PartOfSpeech": "noun",
+    "Meaning": "마진, 가격 인상",
+    "Example": "The retail markup on the product is 40 percent.",
+    "ExampleKo": "제품의 소매 마진은 40%입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mortgage",
+    "PartOfSpeech": "noun",
+    "Meaning": "주택 담보 대출",
+    "Example": "Interest rates on mortgages have decreased this year.",
+    "ExampleKo": "올해 주택 담보 대출 이자율이 하락했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "net",
+    "PartOfSpeech": "adjective",
+    "Meaning": "순(이익)의",
+    "Example": "The company's net income rose by 8 percent.",
+    "ExampleKo": "회사의 순이익이 8% 증가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "overhead",
+    "PartOfSpeech": "noun",
+    "Meaning": "간접비",
+    "Example": "Reducing overhead costs is a key priority this year.",
+    "ExampleKo": "올해 간접비 절감이 핵심 과제입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "payable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "지불해야 할",
+    "Example": "The balance is payable within 60 days.",
+    "ExampleKo": "잔액은 60일 이내에 지불해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "receivable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "받을 수 있는 (미수금)",
+    "Example": "Accounts receivable totaled 3 million dollars.",
+    "ExampleKo": "매출 채권이 총 300만 달러에 달했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reconcile",
+    "PartOfSpeech": "verb",
+    "Meaning": "대조하다, 조정하다",
+    "Example": "Please reconcile the bank statements with the ledger.",
+    "ExampleKo": "은행 명세서와 원장을 대조해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reimburse",
+    "PartOfSpeech": "verb",
+    "Meaning": "환급하다",
+    "Example": "Staff will be reimbursed for all business-related expenses.",
+    "ExampleKo": "직원에게 모든 업무 관련 비용이 환급됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "remittance",
+    "PartOfSpeech": "noun",
+    "Meaning": "송금",
+    "Example": "Please include the invoice number with your remittance.",
+    "ExampleKo": "송금 시 청구서 번호를 포함해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "revert",
+    "PartOfSpeech": "verb",
+    "Meaning": "되돌아가다",
+    "Example": "Prices will revert to normal after the sale ends.",
+    "ExampleKo": "세일이 끝나면 가격이 정상으로 돌아갑니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "solvent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "지불 능력이 있는",
+    "Example": "Despite the downturn, the company remained solvent.",
+    "ExampleKo": "침체에도 불구하고 회사는 지불 능력을 유지했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "attrition",
+    "PartOfSpeech": "noun",
+    "Meaning": "자연 감소, 이직",
+    "Example": "The department reduced staff through natural attrition.",
+    "ExampleKo": "부서는 자연 감소를 통해 인력을 줄였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compensation",
+    "PartOfSpeech": "noun",
+    "Meaning": "보상, 보수",
+    "Example": "The compensation package includes stock options.",
+    "ExampleKo": "보수 패키지에 주식 매수 선택권이 포함됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "probation",
+    "PartOfSpeech": "noun",
+    "Meaning": "수습 기간",
+    "Example": "New employees are on probation for the first three months.",
+    "ExampleKo": "신입 직원은 처음 3개월 동안 수습 기간입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "tenure",
+    "PartOfSpeech": "noun",
+    "Meaning": "재직 기간",
+    "Example": "During his tenure, the company doubled in size.",
+    "ExampleKo": "그의 재직 기간 동안 회사 규모가 두 배로 커졌습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "appraisal",
+    "PartOfSpeech": "noun",
+    "Meaning": "평가, 감정",
+    "Example": "Annual performance appraisals begin next week.",
+    "ExampleKo": "연간 성과 평가가 다음 주에 시작됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "absenteeism",
+    "PartOfSpeech": "noun",
+    "Meaning": "결근",
+    "Example": "High absenteeism has affected team productivity.",
+    "ExampleKo": "높은 결근율이 팀 생산성에 영향을 미쳤습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "apprentice",
+    "PartOfSpeech": "noun",
+    "Meaning": "견습생",
+    "Example": "The apprentice is learning from experienced engineers.",
+    "ExampleKo": "견습생이 경험 많은 엔지니어에게 배우고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "commendation",
+    "PartOfSpeech": "noun",
+    "Meaning": "표창",
+    "Example": "She received a commendation for her outstanding work.",
+    "ExampleKo": "그녀는 뛰어난 업무에 대해 표창을 받았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "credential",
+    "PartOfSpeech": "noun",
+    "Meaning": "자격 증명서",
+    "Example": "Please present your credentials at the entrance.",
+    "ExampleKo": "입구에서 자격 증명서를 제시해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "demotion",
+    "PartOfSpeech": "noun",
+    "Meaning": "강등",
+    "Example": "The demotion was a result of poor performance reviews.",
+    "ExampleKo": "강등은 낮은 성과 평가의 결과였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "eligible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "자격이 있는",
+    "Example": "Only full-time workers are eligible for the pension plan.",
+    "ExampleKo": "정규직 직원만 연금 제도에 가입할 자격이 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exempt",
+    "PartOfSpeech": "adjective/verb",
+    "Meaning": "면제된; 면제하다",
+    "Example": "Senior managers are exempt from the overtime policy.",
+    "ExampleKo": "고위 관리자는 초과 근무 정책에서 면제됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "grievance",
+    "PartOfSpeech": "noun",
+    "Meaning": "불만, 고충",
+    "Example": "Employees can file a grievance through the HR portal.",
+    "ExampleKo": "직원들은 HR 포털을 통해 고충을 접수할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "harassment",
+    "PartOfSpeech": "noun",
+    "Meaning": "괴롭힘",
+    "Example": "The company has a zero-tolerance policy on harassment.",
+    "ExampleKo": "회사는 괴롭힘에 대해 무관용 원칙을 적용합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "induction",
+    "PartOfSpeech": "noun",
+    "Meaning": "입문 교육",
+    "Example": "The induction program lasts for two days.",
+    "ExampleKo": "입문 교육 프로그램은 이틀간 진행됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "layoff",
+    "PartOfSpeech": "noun",
+    "Meaning": "해고, 감원",
+    "Example": "The company announced layoffs affecting 200 workers.",
+    "ExampleKo": "회사가 200명의 근로자에 영향을 미치는 감원을 발표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "nepotism",
+    "PartOfSpeech": "noun",
+    "Meaning": "연고주의",
+    "Example": "The hiring policy was criticized for nepotism.",
+    "ExampleKo": "채용 정책이 연고주의로 비판받았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "onboard",
+    "PartOfSpeech": "verb",
+    "Meaning": "(신입을) 교육하다",
+    "Example": "HR is responsible for onboarding all new hires.",
+    "ExampleKo": "HR이 모든 신규 채용자의 온보딩을 담당합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "redundancy",
+    "PartOfSpeech": "noun",
+    "Meaning": "잉여 인력, 정리 해고",
+    "Example": "Staff were offered voluntary redundancy packages.",
+    "ExampleKo": "직원들에게 자발적 정리 해고 패키지가 제공되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "remuneration",
+    "PartOfSpeech": "noun",
+    "Meaning": "보수",
+    "Example": "Remuneration for this role is highly competitive.",
+    "ExampleKo": "이 직무의 보수는 매우 경쟁력이 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "resign",
+    "PartOfSpeech": "verb",
+    "Meaning": "사직하다",
+    "Example": "She resigned from her position as CFO last month.",
+    "ExampleKo": "그녀는 지난달 CFO 직위를 사직했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "severance",
+    "PartOfSpeech": "noun",
+    "Meaning": "퇴직금",
+    "Example": "Employees who are laid off will receive severance pay.",
+    "ExampleKo": "해고된 직원은 퇴직금을 받게 됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subordinate",
+    "PartOfSpeech": "noun/adj",
+    "Meaning": "부하 직원; 하위의",
+    "Example": "Managers should communicate clearly with subordinates.",
+    "ExampleKo": "관리자는 부하 직원과 명확하게 소통해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "campaign",
+    "PartOfSpeech": "noun",
+    "Meaning": "캠페인",
+    "Example": "The advertising campaign ran for three months.",
+    "ExampleKo": "광고 캠페인이 3개월간 진행되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "demographic",
+    "PartOfSpeech": "noun",
+    "Meaning": "인구 통계",
+    "Example": "The product targets the 25-to-34 demographic.",
+    "ExampleKo": "제품은 25~34세 인구 집단을 대상으로 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "franchise",
+    "PartOfSpeech": "noun",
+    "Meaning": "가맹점, 프랜차이즈",
+    "Example": "The restaurant chain has 500 franchise locations.",
+    "ExampleKo": "레스토랑 체인은 500개의 가맹점이 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "incentive",
+    "PartOfSpeech": "noun",
+    "Meaning": "인센티브",
+    "Example": "Sales staff receive incentives for exceeding targets.",
+    "ExampleKo": "영업 직원은 목표 초과 달성 시 인센티브를 받습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "lucrative",
+    "PartOfSpeech": "adjective",
+    "Meaning": "수익성 있는",
+    "Example": "The contract proved to be very lucrative.",
+    "ExampleKo": "그 계약은 매우 수익성이 높은 것으로 입증되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "market share",
+    "PartOfSpeech": "noun",
+    "Meaning": "시장 점유율",
+    "Example": "The company's market share grew to 25 percent.",
+    "ExampleKo": "회사의 시장 점유율이 25%로 성장했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "niche",
+    "PartOfSpeech": "noun",
+    "Meaning": "틈새 시장",
+    "Example": "The firm found a profitable niche in organic cosmetics.",
+    "ExampleKo": "회사는 유기농 화장품에서 수익성 있는 틈새 시장을 발견했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "outperform",
+    "PartOfSpeech": "verb",
+    "Meaning": "능가하다",
+    "Example": "Our brand outperformed all competitors last quarter.",
+    "ExampleKo": "저희 브랜드가 지난 분기에 모든 경쟁사를 능가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "penetrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "침투하다",
+    "Example": "The company is trying to penetrate the Asian market.",
+    "ExampleKo": "회사는 아시아 시장에 침투하려고 노력하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rebate",
+    "PartOfSpeech": "noun",
+    "Meaning": "환급, 리베이트",
+    "Example": "Customers can receive a 50-dollar mail-in rebate.",
+    "ExampleKo": "고객은 우편 환급으로 50달러를 받을 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "saturate",
+    "PartOfSpeech": "verb",
+    "Meaning": "포화시키다",
+    "Example": "The domestic market is already saturated.",
+    "ExampleKo": "국내 시장은 이미 포화 상태입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "solicit",
+    "PartOfSpeech": "verb",
+    "Meaning": "요청하다, 구하다",
+    "Example": "The company solicited bids from several contractors.",
+    "ExampleKo": "회사가 여러 계약업체에 입찰을 요청했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "testimonial",
+    "PartOfSpeech": "noun",
+    "Meaning": "추천 후기",
+    "Example": "The website features client testimonials.",
+    "ExampleKo": "웹사이트에 고객 추천 후기가 게시되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "trademark",
+    "PartOfSpeech": "noun",
+    "Meaning": "상표",
+    "Example": "The logo is a registered trademark of the company.",
+    "ExampleKo": "로고는 회사의 등록 상표입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "viable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "실행 가능한",
+    "Example": "We need to find a commercially viable solution.",
+    "ExampleKo": "상업적으로 실행 가능한 해결책을 찾아야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "branding",
+    "PartOfSpeech": "noun",
+    "Meaning": "브랜딩",
+    "Example": "The new branding strategy focuses on younger consumers.",
+    "ExampleKo": "새 브랜딩 전략은 젊은 소비자에 초점을 맞춥니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "conversion",
+    "PartOfSpeech": "noun",
+    "Meaning": "전환(율)",
+    "Example": "The website's conversion rate improved by 3 percent.",
+    "ExampleKo": "웹사이트의 전환율이 3% 개선되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "segment",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "부문; 분할하다",
+    "Example": "The market was segmented by age and income level.",
+    "ExampleKo": "시장이 연령과 소득 수준으로 세분화되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "undercut",
+    "PartOfSpeech": "verb",
+    "Meaning": "(가격을) 낮추다",
+    "Example": "A rival firm undercut our prices by 15 percent.",
+    "ExampleKo": "경쟁사가 우리 가격보다 15% 낮게 책정했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "assemble",
+    "PartOfSpeech": "verb",
+    "Meaning": "조립하다",
+    "Example": "The parts are assembled at the factory in Mexico.",
+    "ExampleKo": "부품은 멕시코 공장에서 조립됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "bottleneck",
+    "PartOfSpeech": "noun",
+    "Meaning": "병목 현상",
+    "Example": "The approval process has become a bottleneck.",
+    "ExampleKo": "승인 절차가 병목 현상이 되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "capacity",
+    "PartOfSpeech": "noun",
+    "Meaning": "생산 능력",
+    "Example": "The plant is operating at full capacity.",
+    "ExampleKo": "공장이 최대 생산 능력으로 운영 중입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "component",
+    "PartOfSpeech": "noun",
+    "Meaning": "부품",
+    "Example": "Key components are sourced from local suppliers.",
+    "ExampleKo": "주요 부품은 현지 공급업체에서 조달됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "defect",
+    "PartOfSpeech": "noun",
+    "Meaning": "결함",
+    "Example": "The batch was recalled due to a manufacturing defect.",
+    "ExampleKo": "제조 결함으로 인해 해당 배치가 리콜되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "freight",
+    "PartOfSpeech": "noun",
+    "Meaning": "화물, 운송",
+    "Example": "Freight costs have increased due to fuel prices.",
+    "ExampleKo": "연료 가격으로 인해 운송비가 증가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "logistic",
+    "PartOfSpeech": "adjective",
+    "Meaning": "물류의",
+    "Example": "The logistic challenges were addressed by the new system.",
+    "ExampleKo": "새 시스템이 물류 문제를 해결했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "malfunction",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "고장; 고장나다",
+    "Example": "A software malfunction caused a two-hour delay.",
+    "ExampleKo": "소프트웨어 고장으로 2시간 지연이 발생했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prototype",
+    "PartOfSpeech": "noun",
+    "Meaning": "시제품",
+    "Example": "The prototype will be ready for testing next month.",
+    "ExampleKo": "시제품이 다음 달 테스트를 위해 준비됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "replenish",
+    "PartOfSpeech": "verb",
+    "Meaning": "보충하다",
+    "Example": "We need to replenish our stock before the holiday rush.",
+    "ExampleKo": "연말 성수기 전에 재고를 보충해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "shipment",
+    "PartOfSpeech": "noun",
+    "Meaning": "선적, 배송",
+    "Example": "The shipment arrived at the port yesterday.",
+    "ExampleKo": "선적물이 어제 항구에 도착했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "specification",
+    "PartOfSpeech": "noun",
+    "Meaning": "사양",
+    "Example": "The product meets all technical specifications.",
+    "ExampleKo": "제품은 모든 기술 사양을 충족합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "streamline",
+    "PartOfSpeech": "verb",
+    "Meaning": "효율화하다",
+    "Example": "We streamlined the ordering process to save time.",
+    "ExampleKo": "시간을 절약하기 위해 주문 절차를 효율화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subcontractor",
+    "PartOfSpeech": "noun",
+    "Meaning": "하청업체",
+    "Example": "A subcontractor was hired for the electrical work.",
+    "ExampleKo": "전기 작업을 위해 하청업체가 고용되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "threshold",
+    "PartOfSpeech": "noun",
+    "Meaning": "기준점, 한계",
+    "Example": "Sales have surpassed the 1 million unit threshold.",
+    "ExampleKo": "판매가 100만 대 기준점을 넘었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "turnaround",
+    "PartOfSpeech": "noun",
+    "Meaning": "처리 시간; 전환",
+    "Example": "The turnaround time for repairs is 48 hours.",
+    "ExampleKo": "수리 처리 시간은 48시간입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "utilization",
+    "PartOfSpeech": "noun",
+    "Meaning": "활용도",
+    "Example": "Factory utilization increased to 90 percent.",
+    "ExampleKo": "공장 가동률이 90%로 증가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "vendor",
+    "PartOfSpeech": "noun",
+    "Meaning": "판매업체, 공급업체",
+    "Example": "The vendor delivered the materials ahead of schedule.",
+    "ExampleKo": "판매업체가 일정보다 앞서 자재를 납품했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "withstand",
+    "PartOfSpeech": "verb",
+    "Meaning": "견디다",
+    "Example": "The building was designed to withstand earthquakes.",
+    "ExampleKo": "건물은 지진을 견딜 수 있도록 설계되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "yield",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "산출량; 산출하다",
+    "Example": "This year's crop yield was higher than expected.",
+    "ExampleKo": "올해 농작물 산출량이 예상보다 높았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "amendment",
+    "PartOfSpeech": "noun",
+    "Meaning": "수정, 개정",
+    "Example": "An amendment to the contract was proposed by the client.",
+    "ExampleKo": "고객이 계약 수정을 제안했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "binding",
+    "PartOfSpeech": "adjective",
+    "Meaning": "구속력 있는",
+    "Example": "This agreement is legally binding for both parties.",
+    "ExampleKo": "이 합의는 양측에 법적 구속력이 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "breach",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "위반; 위반하다",
+    "Example": "The supplier was found in breach of the contract.",
+    "ExampleKo": "공급업체가 계약을 위반한 것으로 확인되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "clause",
+    "PartOfSpeech": "noun",
+    "Meaning": "조항",
+    "Example": "Please review the termination clause carefully.",
+    "ExampleKo": "해지 조항을 주의 깊게 검토해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "confidentiality",
+    "PartOfSpeech": "noun",
+    "Meaning": "기밀 유지",
+    "Example": "Employees must sign a confidentiality agreement.",
+    "ExampleKo": "직원들은 기밀 유지 계약서에 서명해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "consent",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "동의; 동의하다",
+    "Example": "Written consent is required before sharing personal data.",
+    "ExampleKo": "개인 정보 공유 전 서면 동의가 필요합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "dispute",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "분쟁; 다투다",
+    "Example": "The dispute was resolved through mediation.",
+    "ExampleKo": "분쟁은 중재를 통해 해결되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "enforce",
+    "PartOfSpeech": "verb",
+    "Meaning": "시행하다",
+    "Example": "The regulation will be strictly enforced from January.",
+    "ExampleKo": "규정이 1월부터 엄격히 시행됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "indemnify",
+    "PartOfSpeech": "verb",
+    "Meaning": "배상하다, 면책하다",
+    "Example": "The contractor must indemnify the client against losses.",
+    "ExampleKo": "계약자는 손실에 대해 고객에게 배상해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "infringement",
+    "PartOfSpeech": "noun",
+    "Meaning": "침해",
+    "Example": "The lawsuit involved a patent infringement claim.",
+    "ExampleKo": "소송은 특허 침해 주장과 관련되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "litigation",
+    "PartOfSpeech": "noun",
+    "Meaning": "소송",
+    "Example": "The matter was settled without litigation.",
+    "ExampleKo": "그 문제는 소송 없이 해결되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mediator",
+    "PartOfSpeech": "noun",
+    "Meaning": "중재자",
+    "Example": "A mediator was brought in to resolve the dispute.",
+    "ExampleKo": "분쟁 해결을 위해 중재자가 투입되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "null and void",
+    "PartOfSpeech": "phrase",
+    "Meaning": "무효인",
+    "Example": "The contract was declared null and void.",
+    "ExampleKo": "계약이 무효로 선언되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "patent",
+    "PartOfSpeech": "noun",
+    "Meaning": "특허",
+    "Example": "The company filed a patent for the new technology.",
+    "ExampleKo": "회사가 새 기술에 대한 특허를 출원했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "penalty",
+    "PartOfSpeech": "noun",
+    "Meaning": "벌금, 위약금",
+    "Example": "Late delivery will result in a 5 percent penalty.",
+    "ExampleKo": "납기 지연 시 5%의 위약금이 부과됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "plaintiff",
+    "PartOfSpeech": "noun",
+    "Meaning": "원고",
+    "Example": "The plaintiff filed the lawsuit in federal court.",
+    "ExampleKo": "원고가 연방 법원에 소송을 제기했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "statute",
+    "PartOfSpeech": "noun",
+    "Meaning": "법규, 법령",
+    "Example": "The statute requires companies to disclose financial data.",
+    "ExampleKo": "법규에 따라 기업은 재무 데이터를 공개해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stipulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "규정하다, 명시하다",
+    "Example": "The contract stipulates a delivery date of March 15.",
+    "ExampleKo": "계약에 3월 15일이 납기일로 명시되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "void",
+    "PartOfSpeech": "adjective",
+    "Meaning": "무효의",
+    "Example": "The warranty is void if the product is modified.",
+    "ExampleKo": "제품이 개조되면 보증이 무효가 됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "bandwidth",
+    "PartOfSpeech": "noun",
+    "Meaning": "대역폭",
+    "Example": "The server's bandwidth was upgraded to handle more traffic.",
+    "ExampleKo": "더 많은 트래픽을 처리하기 위해 서버 대역폭이 업그레이드되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compatibility",
+    "PartOfSpeech": "noun",
+    "Meaning": "호환성",
+    "Example": "The software was tested for compatibility with older systems.",
+    "ExampleKo": "소프트웨어가 구형 시스템과의 호환성을 테스트했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "configure",
+    "PartOfSpeech": "verb",
+    "Meaning": "구성하다, 설정하다",
+    "Example": "The IT team will configure the new servers this weekend.",
+    "ExampleKo": "IT 팀이 이번 주말에 새 서버를 구성할 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "cybersecurity",
+    "PartOfSpeech": "noun",
+    "Meaning": "사이버 보안",
+    "Example": "Cybersecurity training is mandatory for all employees.",
+    "ExampleKo": "사이버 보안 교육은 모든 직원에게 필수입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "database",
+    "PartOfSpeech": "noun",
+    "Meaning": "데이터베이스",
+    "Example": "All customer records are stored in a secure database.",
+    "ExampleKo": "모든 고객 기록이 안전한 데이터베이스에 저장됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "debug",
+    "PartOfSpeech": "verb",
+    "Meaning": "오류를 수정하다",
+    "Example": "The developer spent hours debugging the application.",
+    "ExampleKo": "개발자가 애플리케이션 오류 수정에 몇 시간을 보냈습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "deploy",
+    "PartOfSpeech": "verb",
+    "Meaning": "배포하다, 배치하다",
+    "Example": "The new software will be deployed company-wide in January.",
+    "ExampleKo": "새 소프트웨어가 1월에 전사적으로 배포됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "encrypt",
+    "PartOfSpeech": "verb",
+    "Meaning": "암호화하다",
+    "Example": "All sensitive data must be encrypted before transmission.",
+    "ExampleKo": "모든 민감한 데이터는 전송 전에 암호화해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "interface",
+    "PartOfSpeech": "noun",
+    "Meaning": "인터페이스",
+    "Example": "The user interface has been redesigned for ease of use.",
+    "ExampleKo": "사용 편의성을 위해 사용자 인터페이스가 재설계되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "migrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "이전하다, 이주하다",
+    "Example": "We plan to migrate all data to the cloud by December.",
+    "ExampleKo": "12월까지 모든 데이터를 클라우드로 이전할 계획입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "scalable",
+    "PartOfSpeech": "adjective",
+    "Meaning": "확장 가능한",
+    "Example": "The platform is designed to be scalable as the business grows.",
+    "ExampleKo": "플랫폼은 사업 성장에 맞춰 확장 가능하도록 설계되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "upgrade",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "업그레이드; 업그레이드하다",
+    "Example": "The system upgrade will be completed over the weekend.",
+    "ExampleKo": "시스템 업그레이드가 주말 동안 완료됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "feasible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "실현 가능한",
+    "Example": "The committee determined that the plan was feasible.",
+    "ExampleKo": "위원회가 계획이 실현 가능하다고 판단했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prevalent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "널리 퍼진",
+    "Example": "Remote work is increasingly prevalent in the industry.",
+    "ExampleKo": "재택근무가 업계에서 점점 더 널리 퍼지고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "tentative",
+    "PartOfSpeech": "adjective",
+    "Meaning": "잠정적인",
+    "Example": "The tentative start date is set for March 1.",
+    "ExampleKo": "잠정적인 시작일은 3월 1일로 설정되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rigorous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "엄격한, 철저한",
+    "Example": "All products undergo rigorous quality testing.",
+    "ExampleKo": "모든 제품은 철저한 품질 테스트를 거칩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inadvertently",
+    "PartOfSpeech": "adverb",
+    "Meaning": "부주의하게",
+    "Example": "The email was inadvertently sent to the wrong recipient.",
+    "ExampleKo": "이메일이 부주의하게 잘못된 수신자에게 발송되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "predominantly",
+    "PartOfSpeech": "adverb",
+    "Meaning": "주로",
+    "Example": "The workforce is predominantly composed of local residents.",
+    "ExampleKo": "인력은 주로 지역 주민으로 구성되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "contingent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "~에 달린, 조건부의",
+    "Example": "The offer is contingent upon passing a background check.",
+    "ExampleKo": "제안은 신원 조회 통과를 조건으로 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "discretion",
+    "PartOfSpeech": "noun",
+    "Meaning": "재량",
+    "Example": "Bonuses are awarded at the manager's discretion.",
+    "ExampleKo": "보너스는 매니저의 재량에 따라 지급됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "imminent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "임박한",
+    "Example": "An announcement about the merger is imminent.",
+    "ExampleKo": "합병에 대한 발표가 임박했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "indefinitely",
+    "PartOfSpeech": "adverb",
+    "Meaning": "무기한으로",
+    "Example": "The project has been postponed indefinitely.",
+    "ExampleKo": "프로젝트가 무기한 연기되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "meticulous",
+    "PartOfSpeech": "adjective",
+    "Meaning": "꼼꼼한",
+    "Example": "The accountant is meticulous with financial records.",
+    "ExampleKo": "회계사가 재무 기록에 꼼꼼합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "paramount",
+    "PartOfSpeech": "adjective",
+    "Meaning": "최고의, 가장 중요한",
+    "Example": "Employee safety is of paramount importance.",
+    "ExampleKo": "직원 안전이 가장 중요합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "pertinent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "적절한, 관련 있는",
+    "Example": "Please include all pertinent information in your report.",
+    "ExampleKo": "보고서에 모든 관련 정보를 포함해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prerequisite",
+    "PartOfSpeech": "noun",
+    "Meaning": "전제 조건",
+    "Example": "A bachelor's degree is a prerequisite for this position.",
+    "ExampleKo": "이 직위의 전제 조건은 학사 학위입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "proficient",
+    "PartOfSpeech": "adjective",
+    "Meaning": "능숙한",
+    "Example": "Applicants must be proficient in Microsoft Office.",
+    "ExampleKo": "지원자는 Microsoft Office에 능숙해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prominent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "저명한, 눈에 띄는",
+    "Example": "She is a prominent figure in the tech industry.",
+    "ExampleKo": "그녀는 기술 산업에서 저명한 인물입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "provisional",
+    "PartOfSpeech": "adjective",
+    "Meaning": "잠정적인",
+    "Example": "A provisional agreement was reached pending final approval.",
+    "ExampleKo": "최종 승인 전까지 잠정 합의가 이루어졌습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "proximity",
+    "PartOfSpeech": "noun",
+    "Meaning": "근접",
+    "Example": "The hotel's proximity to the airport is a major advantage.",
+    "ExampleKo": "호텔이 공항에 가까운 것이 큰 장점입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "receptive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "수용적인",
+    "Example": "The management team was receptive to new ideas.",
+    "ExampleKo": "경영진이 새 아이디어에 수용적이었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "renowned",
+    "PartOfSpeech": "adjective",
+    "Meaning": "유명한",
+    "Example": "The speaker is a renowned expert in digital marketing.",
+    "ExampleKo": "연사는 디지털 마케팅 분야의 유명한 전문가입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "retrospect",
+    "PartOfSpeech": "noun",
+    "Meaning": "회고",
+    "Example": "In retrospect, we should have started the project sooner.",
+    "ExampleKo": "돌이켜 보면 프로젝트를 더 일찍 시작했어야 했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subsequent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "이후의",
+    "Example": "Subsequent meetings will be held every Monday.",
+    "ExampleKo": "이후 회의는 매주 월요일에 개최됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "substantial",
+    "PartOfSpeech": "adjective",
+    "Meaning": "상당한",
+    "Example": "The company saw a substantial increase in online sales.",
+    "ExampleKo": "회사는 온라인 판매에서 상당한 증가를 보였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "successive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "연속적인",
+    "Example": "Revenue grew for five successive quarters.",
+    "ExampleKo": "5분기 연속으로 수익이 성장했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "unprecedented",
+    "PartOfSpeech": "adjective",
+    "Meaning": "전례 없는",
+    "Example": "The company achieved unprecedented growth this year.",
+    "ExampleKo": "회사는 올해 전례 없는 성장을 달성했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "virtually",
+    "PartOfSpeech": "adverb",
+    "Meaning": "사실상",
+    "Example": "The new process has virtually eliminated errors.",
+    "ExampleKo": "새 프로세스가 사실상 오류를 없앴습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "volatile",
+    "PartOfSpeech": "adjective",
+    "Meaning": "변동이 심한",
+    "Example": "The stock market has been extremely volatile this month.",
+    "ExampleKo": "이번 달 주식 시장이 매우 변동이 심했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "comprehensive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "포괄적인",
+    "Example": "A comprehensive review of the project was conducted.",
+    "ExampleKo": "프로젝트에 대한 포괄적인 검토가 실시되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "accumulate",
+    "PartOfSpeech": "verb",
+    "Meaning": "축적하다",
+    "Example": "The company has accumulated significant reserves.",
+    "ExampleKo": "회사가 상당한 적립금을 축적했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "benchmark",
+    "PartOfSpeech": "noun",
+    "Meaning": "기준점",
+    "Example": "The study set a new benchmark for the industry.",
+    "ExampleKo": "그 연구가 업계의 새로운 기준점을 세웠습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "catastrophe",
+    "PartOfSpeech": "noun",
+    "Meaning": "대재앙",
+    "Example": "Emergency plans were activated to prevent a catastrophe.",
+    "ExampleKo": "대재앙을 방지하기 위해 비상 계획이 가동되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "collaborate",
+    "PartOfSpeech": "verb",
+    "Meaning": "협업하다",
+    "Example": "Multiple departments collaborated on the product launch.",
+    "ExampleKo": "여러 부서가 제품 출시에 협업했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "complement",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "보완하다; 보완물",
+    "Example": "The new hire's skills complement those of the existing team.",
+    "ExampleKo": "신규 직원의 기술이 기존 팀의 기술을 보완합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "concur",
+    "PartOfSpeech": "verb",
+    "Meaning": "동의하다",
+    "Example": "The committee concurred with the auditor's findings.",
+    "ExampleKo": "위원회가 감사관의 조사 결과에 동의했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "conform",
+    "PartOfSpeech": "verb",
+    "Meaning": "따르다, 일치하다",
+    "Example": "All products must conform to international standards.",
+    "ExampleKo": "모든 제품은 국제 표준에 부합해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "constraint",
+    "PartOfSpeech": "noun",
+    "Meaning": "제약",
+    "Example": "Budget constraints limited the scope of the project.",
+    "ExampleKo": "예산 제약이 프로젝트 범위를 제한했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "contingency",
+    "PartOfSpeech": "noun",
+    "Meaning": "비상 사태, 우발 상황",
+    "Example": "A contingency plan was prepared in case of delays.",
+    "ExampleKo": "지연에 대비한 비상 계획이 준비되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "curtail",
+    "PartOfSpeech": "verb",
+    "Meaning": "축소하다",
+    "Example": "Business travel was curtailed to reduce expenses.",
+    "ExampleKo": "비용 절감을 위해 출장이 축소되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "defer",
+    "PartOfSpeech": "verb",
+    "Meaning": "연기하다, 미루다",
+    "Example": "The decision was deferred until the next board meeting.",
+    "ExampleKo": "결정이 다음 이사회까지 연기되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "deteriorate",
+    "PartOfSpeech": "verb",
+    "Meaning": "악화되다",
+    "Example": "Working conditions deteriorated after the budget cuts.",
+    "ExampleKo": "예산 삭감 후 근무 조건이 악화되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "disclose",
+    "PartOfSpeech": "verb",
+    "Meaning": "공개하다",
+    "Example": "Companies must disclose financial information annually.",
+    "ExampleKo": "기업은 재무 정보를 매년 공개해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "endeavor",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "노력; 노력하다",
+    "Example": "We endeavor to provide the best customer service.",
+    "ExampleKo": "최고의 고객 서비스를 제공하기 위해 노력합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "envisage",
+    "PartOfSpeech": "verb",
+    "Meaning": "예상하다, 상상하다",
+    "Example": "We envisage completing the project by the end of Q2.",
+    "ExampleKo": "2분기 말까지 프로젝트를 완료할 것으로 예상합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "fluctuation",
+    "PartOfSpeech": "noun",
+    "Meaning": "변동",
+    "Example": "Currency fluctuations affected international sales.",
+    "ExampleKo": "환율 변동이 해외 매출에 영향을 미쳤습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "jeopardize",
+    "PartOfSpeech": "verb",
+    "Meaning": "위태롭게 하다",
+    "Example": "The delay could jeopardize the entire project.",
+    "ExampleKo": "지연이 전체 프로젝트를 위태롭게 할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "lapse",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "경과, 만료; 소멸하다",
+    "Example": "The insurance policy lapsed due to nonpayment.",
+    "ExampleKo": "미납으로 보험 계약이 소멸되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mandatory",
+    "PartOfSpeech": "adjective",
+    "Meaning": "의무적인",
+    "Example": "Attendance at the safety briefing is mandatory.",
+    "ExampleKo": "안전 브리핑 참석은 의무입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "plausible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "그럴듯한",
+    "Example": "The explanation sounded plausible to the investigators.",
+    "ExampleKo": "설명이 조사관들에게 그럴듯하게 들렸습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "proactive",
+    "PartOfSpeech": "adjective",
+    "Meaning": "능동적인, 선제적인",
+    "Example": "We need to be proactive in addressing customer concerns.",
+    "ExampleKo": "고객 우려 사항을 선제적으로 해결해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "scrutiny",
+    "PartOfSpeech": "noun",
+    "Meaning": "면밀한 조사",
+    "Example": "The company's finances came under public scrutiny.",
+    "ExampleKo": "회사의 재무가 대중의 면밀한 조사를 받았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stagnant",
+    "PartOfSpeech": "adjective",
+    "Meaning": "정체된",
+    "Example": "Sales have been stagnant for the past two quarters.",
+    "ExampleKo": "지난 2분기 동안 매출이 정체되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "susceptible",
+    "PartOfSpeech": "adjective",
+    "Meaning": "영향을 받기 쉬운",
+    "Example": "Older systems are more susceptible to cyberattacks.",
+    "ExampleKo": "구형 시스템은 사이버 공격에 더 취약합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "transparent",
+    "PartOfSpeech": "adjective",
+    "Meaning": "투명한",
+    "Example": "The company aims to be more transparent in its reporting.",
+    "ExampleKo": "회사는 보고에 있어 더 투명해지는 것을 목표로 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "appraise",
+    "PartOfSpeech": "verb",
+    "Meaning": "평가하다, 감정하다",
+    "Example": "The manager appraised the team's quarterly performance.",
+    "ExampleKo": "팀장은 팀의 분기 실적을 평가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "authenticate",
+    "PartOfSpeech": "verb",
+    "Meaning": "인증하다, 진짜임을 증명하다",
+    "Example": "Please authenticate your account before logging in.",
+    "ExampleKo": "로그인하기 전에 계정을 인증해 주세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "commence",
+    "PartOfSpeech": "verb",
+    "Meaning": "시작되다, 시작하다",
+    "Example": "The opening ceremony will commence promptly at 10 a.m.",
+    "ExampleKo": "개회식은 오전 10시 정각에 시작됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compromise",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "타협하다; 절충안",
+    "Example": "Both sides reached a compromise after hours of negotiation.",
+    "ExampleKo": "양측은 수시간의 협상 끝에 절충안에 도달했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "coordinate",
+    "PartOfSpeech": "verb",
+    "Meaning": "조율하다, 조정하다",
+    "Example": "She coordinates schedules between departments.",
+    "ExampleKo": "그녀는 부서 간 일정을 조율합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "deliberate",
+    "PartOfSpeech": "verb/adj",
+    "Meaning": "숙고하다; 신중한",
+    "Example": "The committee deliberated on the proposal for two days.",
+    "ExampleKo": "위원회는 그 제안에 대해 이틀 동안 숙고했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "discern",
+    "PartOfSpeech": "verb",
+    "Meaning": "식별하다, 알아차리다",
+    "Example": "It is difficult to discern market shifts without recent data.",
+    "ExampleKo": "최근 데이터 없이는 시장 변화를 식별하기 어렵습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "disregard",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "무시하다, 묵살하다; 무시",
+    "Example": "Please disregard the previous notification if already paid.",
+    "ExampleKo": "이미 납부하셨다면 이전 통지서는 무시해 주십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "distinguish",
+    "PartOfSpeech": "verb",
+    "Meaning": "구별하다, 특징짓다",
+    "Example": "Superior build quality distinguishes our brand from rivals.",
+    "ExampleKo": "우수한 제품 완성도가 우리 브랜드를 경쟁사와 차별화합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "generate",
+    "PartOfSpeech": "verb",
+    "Meaning": "창출하다, 생성하다",
+    "Example": "The promotional campaign generated substantial revenue.",
+    "ExampleKo": "프로모션 캠페인이 상당한 매출을 창출했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "initiate",
+    "PartOfSpeech": "verb",
+    "Meaning": "착수하다, 개시하다",
+    "Example": "Management initiated a comprehensive internal audit.",
+    "ExampleKo": "경영진이 종합적인 내부 감사를 시작했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inspect",
+    "PartOfSpeech": "verb",
+    "Meaning": "점검하다, 사찰하다",
+    "Example": "Technicians inspected the heating units prior to winter.",
+    "ExampleKo": "기사들이 겨울 전에 난방 설비를 점검했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "institute",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "도입하다, 설립하다; 기관",
+    "Example": "The company instituted flexible work arrangements last month.",
+    "ExampleKo": "회사는 지난달 유연 근무제를 도입했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "integrate",
+    "PartOfSpeech": "verb",
+    "Meaning": "통합시키다",
+    "Example": "The platform integrates payment processing with inventory tracking.",
+    "ExampleKo": "이 플랫폼은 결제 처리와 재고 추적을 통합합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "intervene",
+    "PartOfSpeech": "verb",
+    "Meaning": "개입하다, 중재하다",
+    "Example": "The HR manager intervened to resolve the dispute peacefully.",
+    "ExampleKo": "인사부장이 평화로운 분쟁 해결을 위해 중재에 나섰습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "investigate",
+    "PartOfSpeech": "verb",
+    "Meaning": "조사하다, 수사하다",
+    "Example": "Auditors investigated discrepancies in travel receipts.",
+    "ExampleKo": "감사관들이 출장 영수증의 불일치 사항을 조사했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "maximize",
+    "PartOfSpeech": "verb",
+    "Meaning": "극대화하다",
+    "Example": "We redesigned workflows to maximize factory throughput.",
+    "ExampleKo": "공장 처리량을 극대화하기 위해 업무 흐름을 재설계했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "monitor",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "감시하다, 관찰하다; 모니터",
+    "Example": "Engineers monitor server performance around the clock.",
+    "ExampleKo": "엔지니어들은 24시간 내내 서버 성능을 모니터링합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "motivate",
+    "PartOfSpeech": "verb",
+    "Meaning": "동기를 부여하다",
+    "Example": "Performance-based bonuses motivate employees to exceed goals.",
+    "ExampleKo": "성과급은 직원들이 목표를 초과 달성하도록 동기를 부여합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "nominate",
+    "PartOfSpeech": "verb",
+    "Meaning": "지명하다, 추천하다",
+    "Example": "Peers nominated Ms. Davis for the Employee of the Year award.",
+    "ExampleKo": "동료들이 데이비스 씨를 올해의 직원상 후보로 추천했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "originate",
+    "PartOfSpeech": "verb",
+    "Meaning": "기원하다, 비롯되다",
+    "Example": "Many successful tech initiatives originate from internal hackathons.",
+    "ExampleKo": "많은 성공적인 기술 사업이 사내 해커톤에서 비롯됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "persist",
+    "PartOfSpeech": "verb",
+    "Meaning": "지속되다, 고집하다",
+    "Example": "Supply chain constraints persisted through the fourth quarter.",
+    "ExampleKo": "공급망 제약이 4분기 내내 지속되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prioritize",
+    "PartOfSpeech": "verb",
+    "Meaning": "우선순위를 매기다",
+    "Example": "Project managers must prioritize critical-path deliverables.",
+    "ExampleKo": "프로젝트 관리자는 핵심 경로상의 인도물에 우선순위를 두어야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "proceed",
+    "PartOfSpeech": "verb",
+    "Meaning": "진행되다, 나아가다",
+    "Example": "The restructuring plan will proceed according to schedule.",
+    "ExampleKo": "구조조정 계획은 일정에 맞춰 진행될 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "promote",
+    "PartOfSpeech": "verb",
+    "Meaning": "승진시키다, 홍보하다",
+    "Example": "The campaign effectively promoted the energy-efficient lineup.",
+    "ExampleKo": "그 캠페인은 에너지 효율 제품군을 효과적으로 홍보했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "prosper",
+    "PartOfSpeech": "verb",
+    "Meaning": "번영하다, 번창하다",
+    "Example": "E-commerce retailers prospered during the holiday quarter.",
+    "ExampleKo": "연말 휴가철 분기에 전자상거래 소매업체들이 번창했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rectify",
+    "PartOfSpeech": "verb",
+    "Meaning": "시정하다, 바로잡다",
+    "Example": "Customer support acted swiftly to rectify the billing mistake.",
+    "ExampleKo": "고객센터는 결제 오류를 바로잡기 위해 신속히 조치했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reinforce",
+    "PartOfSpeech": "verb",
+    "Meaning": "강화하다, 보강하다",
+    "Example": "The executive memo reinforced safety compliance rules.",
+    "ExampleKo": "경영진 메모는 안전 준수 규정을 다시금 강화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "relinquish",
+    "PartOfSpeech": "verb",
+    "Meaning": "양도하다, 포기하다",
+    "Example": "The founder relinquished his voting rights after the buyout.",
+    "ExampleKo": "창업자는 인수 후 자신의 의결권을 양도했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "remedy",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "바로잡다; 해결책",
+    "Example": "Management took decisive actions to remedy inventory bottlenecks.",
+    "ExampleKo": "경영진은 재고 병목 현상을 해결하기 위해 결단력 있게 행동했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reproduce",
+    "PartOfSpeech": "verb",
+    "Meaning": "재현하다, 복제하다",
+    "Example": "QA engineers could not reproduce the reported glitch.",
+    "ExampleKo": "품질보증 엔지니어들은 보고된 오류를 재현할 수 없었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rescind",
+    "PartOfSpeech": "verb",
+    "Meaning": "철회하다, 폐지하다",
+    "Example": "The board rescinded the takeover bid amid regulatory scrutiny.",
+    "ExampleKo": "이사회는 규제 당국의 조사 속에 인수 입찰을 철회했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reserve",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "예약하다, 보유하다; 비축량",
+    "Example": "Please reserve three seats for the visiting delegation.",
+    "ExampleKo": "방문 대표단을 위해 좌석 3자리를 예약해 주십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "restructure",
+    "PartOfSpeech": "verb",
+    "Meaning": "개편하다, 구조조정하다",
+    "Example": "The bank restructured its loan portfolio to mitigate default risks.",
+    "ExampleKo": "은행은 채무불이행 위험을 줄이기 위해 대출 포트폴리오를 재편했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "retrieve",
+    "PartOfSpeech": "verb",
+    "Meaning": "검색하다, 회수하다",
+    "Example": "The archived email was retrieved from corporate cloud storage.",
+    "ExampleKo": "보관 처리된 이메일이 회사 클라우드 저장소에서 검색되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "standardize",
+    "PartOfSpeech": "verb",
+    "Meaning": "표준화하다",
+    "Example": "Global operations standardized customer onboarding procedures.",
+    "ExampleKo": "글로벌 사업부는 고객 온보딩 절차를 표준화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subsidize",
+    "PartOfSpeech": "verb",
+    "Meaning": "보조금을 지급하다",
+    "Example": "The regional government subsidizes solar panel installation.",
+    "ExampleKo": "지방 정부는 태양광 패널 설치에 보조금을 지급합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "supersede",
+    "PartOfSpeech": "verb",
+    "Meaning": "대체하다, 대신하다",
+    "Example": "The revised handbook supersedes all previous employee guidelines.",
+    "ExampleKo": "개정된 핸드북은 이전의 모든 직원 안내 지침을 대체합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "supplement",
+    "PartOfSpeech": "verb/noun",
+    "Meaning": "보충하다; 추가물",
+    "Example": "Freelancers were hired to supplement internal design resources.",
+    "ExampleKo": "사내 디자인 역량을 보충하기 위해 프리랜서들이 고용되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "terminate",
+    "PartOfSpeech": "verb",
+    "Meaning": "종료하다, 해지하다",
+    "Example": "Failure to deliver parts within 30 days will terminate the agreement.",
+    "ExampleKo": "30일 내 부품 미인도 시 계약이 종료됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "validate",
+    "PartOfSpeech": "verb",
+    "Meaning": "입증하다, 유효하게 하다",
+    "Example": "The clinical trial validated the product's efficacy.",
+    "ExampleKo": "임상 시험을 통해 제품의 효능이 입증되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "withhold",
+    "PartOfSpeech": "verb",
+    "Meaning": "보류하다, 원천징수하다",
+    "Example": "Employers withhold federal and state taxes from each paycheck.",
+    "ExampleKo": "고용주는 매 급여에서 연방세와 주세를 원천징수합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "adjournment",
+    "PartOfSpeech": "noun",
+    "Meaning": "휴회, 연기",
+    "Example": "The chairman proposed a brief adjournment until 2 p.m.",
+    "ExampleKo": "의장은 오후 2시까지의 짧은 휴회를 제안했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "alliance",
+    "PartOfSpeech": "noun",
+    "Meaning": "제휴, 동맹",
+    "Example": "The airline formed a strategic alliance with international carriers.",
+    "ExampleKo": "그 항공사는 외국계 항공사들과 전략적 제휴를 맺었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "allocation",
+    "PartOfSpeech": "noun",
+    "Meaning": "할당, 배분",
+    "Example": "Resource allocation for digital marketing increased substantially.",
+    "ExampleKo": "디지털 마케팅을 위한 자원 배분이 대폭 증가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "amenity",
+    "PartOfSpeech": "noun",
+    "Meaning": "편의시설",
+    "Example": "Hotels with complimentary fitness amenities attract business travelers.",
+    "ExampleKo": "무료 피트니스 편의시설을 갖춘 호텔은 출장객을 끌어모읍니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "annuity",
+    "PartOfSpeech": "noun",
+    "Meaning": "연금",
+    "Example": "Employees can convert retirement savings into a lifelong annuity.",
+    "ExampleKo": "직원들은 퇴직 저축을 평생 연금으로 전환할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "arbitration",
+    "PartOfSpeech": "noun",
+    "Meaning": "중재",
+    "Example": "The commercial conflict was submitted to international arbitration.",
+    "ExampleKo": "상업적 분쟁은 국제 중재에 회부되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "arrears",
+    "PartOfSpeech": "noun",
+    "Meaning": "체납금, 연체",
+    "Example": "Tenants in arrears will receive formal eviction warnings.",
+    "ExampleKo": "임대료를 연체한 세입자는 공식적인 퇴거 경고를 받게 됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "aspiration",
+    "PartOfSpeech": "noun",
+    "Meaning": "포부, 열망",
+    "Example": "The startup harbors global market leadership aspirations.",
+    "ExampleKo": "그 스타트업은 글로벌 시장 선도에 대한 포부를 품고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "authenticity",
+    "PartOfSpeech": "noun",
+    "Meaning": "진정성, 진짜임",
+    "Example": "Specialists verified the authenticity of the vintage watches.",
+    "ExampleKo": "전문가들이 빈티지 시계의 진품 여부를 확인했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "authorization",
+    "PartOfSpeech": "noun",
+    "Meaning": "승인, 허가",
+    "Example": "Purchases over $5,000 require vice-presidential authorization.",
+    "ExampleKo": "5천 달러 이상의 구매는 부사장 승인이 필요합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "bailout",
+    "PartOfSpeech": "noun",
+    "Meaning": "구제금융",
+    "Example": "The airline secured a government bailout during the fuel crisis.",
+    "ExampleKo": "그 항공사는 유류 파동 기간 동안 정부 구제금융을 확보했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "bankruptcy",
+    "PartOfSpeech": "noun",
+    "Meaning": "파산",
+    "Example": "Rising debt obligations forced the retailer into bankruptcy.",
+    "ExampleKo": "늘어나는 부채 부담으로 인해 그 소매업체는 파산에 직면했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "beneficiary",
+    "PartOfSpeech": "noun",
+    "Meaning": "수혜자, 수령인",
+    "Example": "Designate the primary beneficiary on your corporate life insurance policy.",
+    "ExampleKo": "회사 생명보험 증권에 주 수혜자를 지정하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "brokerage",
+    "PartOfSpeech": "noun",
+    "Meaning": "중개업, 중개 수수료",
+    "Example": "Online brokerage firms lowered trading commissions to zero.",
+    "ExampleKo": "온라인 증권 중개사들은 매매 수수료를 무료화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "catalyst",
+    "PartOfSpeech": "noun",
+    "Meaning": "촉매제, 계기",
+    "Example": "The CEO's keynote served as a catalyst for tech innovation.",
+    "ExampleKo": "CEO의 기조연설은 기술 혁신의 촉매제 역할을 했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "chronology",
+    "PartOfSpeech": "noun",
+    "Meaning": "연대기, 발생 순서",
+    "Example": "The incident report established a minute-by-minute chronology.",
+    "ExampleKo": "사고 보고서에는 분 단위의 발생 순서가 기록되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "circulation",
+    "PartOfSpeech": "noun",
+    "Meaning": "발행 부수, 유통",
+    "Example": "The financial weekly maintains a daily circulation of 200,000.",
+    "ExampleKo": "그 경제 주간지는 일일 20만 부의 발행 부수를 유지하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "collateral",
+    "PartOfSpeech": "noun",
+    "Meaning": "담보",
+    "Example": "Real estate assets were pledged as loan collateral.",
+    "ExampleKo": "부동산 자산이 대출 담보로 제공되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compliance",
+    "PartOfSpeech": "noun",
+    "Meaning": "준수, 순응",
+    "Example": "The enterprise maintains strict compliance with labor safety laws.",
+    "ExampleKo": "그 기업은 노동 안전 법규를 엄격하게 준수하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "concession",
+    "PartOfSpeech": "noun",
+    "Meaning": "양보, 영업권",
+    "Example": "The union made wage concessions in exchange for job security guarantees.",
+    "ExampleKo": "노조는 고용 안정 보장을 대가로 임금 양보를 수용했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "conglomerate",
+    "PartOfSpeech": "noun",
+    "Meaning": "복합 대기업",
+    "Example": "The multinational conglomerate operates across energy, telecommunications, and retail.",
+    "ExampleKo": "그 다국적 대기업은 에너지, 통신, 소매 전반에 걸쳐 사업을 운영합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "consortium",
+    "PartOfSpeech": "noun",
+    "Meaning": "컨소시엄, 공동 연합체",
+    "Example": "An international consortium submitted a winning bid for the high-speed rail line.",
+    "ExampleKo": "국제 컨소시엄이 고속철도 노선 수주에 성공했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "continuity",
+    "PartOfSpeech": "noun",
+    "Meaning": "연속성, 지속성",
+    "Example": "The disaster recovery plan ensures business continuity after power outages.",
+    "ExampleKo": "재해 복구 계획은 정전 후에도 비즈니스 연속성을 보장합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "credibility",
+    "PartOfSpeech": "noun",
+    "Meaning": "신뢰성",
+    "Example": "Delivering on financial targets strengthened corporate credibility.",
+    "ExampleKo": "재무 목표를 달성함으로써 기업의 신뢰성이 강화되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "curtailment",
+    "PartOfSpeech": "noun",
+    "Meaning": "삭감, 단축",
+    "Example": "Production curtailment stabilized wholesale lumber prices.",
+    "ExampleKo": "생산 감축으로 도매 목재 가격이 안정되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "default",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "채무 불이행; 체납하다",
+    "Example": "The borrower defaulted on the second mortgage installment.",
+    "ExampleKo": "차주는 2차 주택담보대출 분할 납입금을 체납했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "defection",
+    "PartOfSpeech": "noun",
+    "Meaning": "탈당, 이탈",
+    "Example": "Customer defection decreased after the rewards program revamp.",
+    "ExampleKo": "리워드 프로그램 개편 후 고객 이탈이 감소했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "derivatives",
+    "PartOfSpeech": "noun",
+    "Meaning": "파생상품",
+    "Example": "Hedging against commodity swings through financial derivatives.",
+    "ExampleKo": "금융 파생상품을 통해 원자재 가격 변동에 대해 위험을 분산합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "diligence",
+    "PartOfSpeech": "noun",
+    "Meaning": "근면, 성실",
+    "Example": "Auditors performed thorough due diligence before approving the purchase.",
+    "ExampleKo": "감사관들은 구매 승인 전 철저한 실사를 수행했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "disclaimer",
+    "PartOfSpeech": "noun",
+    "Meaning": "면책 조항",
+    "Example": "Read the legal disclaimer at the bottom of the prospectus.",
+    "ExampleKo": "투자 설명서 하단의 법적 면책 조항을 읽어보십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "discrepancy",
+    "PartOfSpeech": "noun",
+    "Meaning": "불일치, 차이",
+    "Example": "The audit uncovered an unexplained discrepancy in ledger records.",
+    "ExampleKo": "감사 결과 원장 기록에서 설명되지 않는 불일치가 발견되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "downsizing",
+    "PartOfSpeech": "noun",
+    "Meaning": "인력 감축, 기구 축소",
+    "Example": "The bank announced department downsizing to trim operational overhead.",
+    "ExampleKo": "은행은 운영 간접비를 줄이기 위해 부서 감축을 발표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "eligibility",
+    "PartOfSpeech": "noun",
+    "Meaning": "자격, 적격성",
+    "Example": "Confirm your benefit eligibility with human resources.",
+    "ExampleKo": "인사부에서 복리후생 수혜 자격을 확인하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "endorsement",
+    "PartOfSpeech": "noun",
+    "Meaning": "지지, 보증, 광고 모델 계약",
+    "Example": "Celebrity endorsements bolstered sneaker sales by 40%.",
+    "ExampleKo": "유명인 광고 계약이 운동화 매출을 40% 끌어올렸습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "enterprise",
+    "PartOfSpeech": "noun",
+    "Meaning": "기업, 사업",
+    "Example": "Our software powers enterprise solutions across 50 countries.",
+    "ExampleKo": "당사 소프트웨어는 50개국에 걸쳐 기업용 솔루션을 구동합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "escrow",
+    "PartOfSpeech": "noun",
+    "Meaning": "에스크로, 조건부 날인 증서",
+    "Example": "Funds will remain in escrow until property titles transfer.",
+    "ExampleKo": "소유권이 이전될 때까지 자금은 에스크로 계좌에 보관됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "expertise",
+    "PartOfSpeech": "noun",
+    "Meaning": "전문 지식, 전문성",
+    "Example": "Consultants brought specialized expertise in supply chain logistics.",
+    "ExampleKo": "컨설턴트들은 공급망 물류 분야의 전문 지식을 제공했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "feasibility",
+    "PartOfSpeech": "noun",
+    "Meaning": "실현 가능성",
+    "Example": "A feasibility study confirmed the subway extension is viable.",
+    "ExampleKo": "타당성 조사 결과 지하철 연장 노선의 실현 가능성이 확인되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "hierarchy",
+    "PartOfSpeech": "noun",
+    "Meaning": "위계, 계층 구조",
+    "Example": "Flattening the corporate hierarchy accelerated decision-making.",
+    "ExampleKo": "기업의 위계 구조를 수평화함으로써 의사결정을 가속화했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "indemnity",
+    "PartOfSpeech": "noun",
+    "Meaning": "배상, 보상",
+    "Example": "The insurance agreement includes indemnity against fire damages.",
+    "ExampleKo": "보험 계약에는 화재 손해에 대한 배상 책임이 포함되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inflation",
+    "PartOfSpeech": "noun",
+    "Meaning": "물가 상승, 인플레이션",
+    "Example": "Central banks raised rates to tame runaway consumer inflation.",
+    "ExampleKo": "중앙은행들은 치솟는 소비자 물가 상승을 억제하기 위해 금리를 인상했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "infrastructure",
+    "PartOfSpeech": "noun",
+    "Meaning": "사회기반시설, 인프라",
+    "Example": "Government grants funded modern broadband infrastructure upgrades.",
+    "ExampleKo": "정부 보조금이 현대적인 초고속 통신망 인프라 업그레이드를 지원했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "innovation",
+    "PartOfSpeech": "noun",
+    "Meaning": "혁신",
+    "Example": "Continuous product innovation keeps consumer demand robust.",
+    "ExampleKo": "지속적인 제품 혁신은 소비자의 탄탄한 수요를 유지시킵니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "installment",
+    "PartOfSpeech": "noun",
+    "Meaning": "할부금, 분할 납입",
+    "Example": "Pay for your home appliance in twelve interest-free installments.",
+    "ExampleKo": "무이자 12개월 할부로 가전제품 대금을 결제하세요.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "integrity",
+    "PartOfSpeech": "noun",
+    "Meaning": "청렴, 정직, 온전함",
+    "Example": "Financial institutions demand unimpeachable ethical integrity.",
+    "ExampleKo": "금융기관은 흠잡을 데 없는 윤리적 청렴성을 요구합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "jurisdiction",
+    "PartOfSpeech": "noun",
+    "Meaning": "관할권, 사법권",
+    "Example": "The contract is subject to the exclusive jurisdiction of London courts.",
+    "ExampleKo": "이 계약은 런던 법원의 전속 관할에 속합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "legislation",
+    "PartOfSpeech": "noun",
+    "Meaning": "법률, 입법",
+    "Example": "Stricter data privacy legislation takes effect next quarter.",
+    "ExampleKo": "더 엄격해진 개인정보 보호 법률이 다음 분기에 발효됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "liquidity",
+    "PartOfSpeech": "noun",
+    "Meaning": "유동성",
+    "Example": "Maintaining adequate liquidity protects firms during market shocks.",
+    "ExampleKo": "적절한 유동성 유지는 시장 충격 시 기업을 보호합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "logistics",
+    "PartOfSpeech": "noun",
+    "Meaning": "물류, 수송",
+    "Example": "Third-party logistics partners handle shipping and storage.",
+    "ExampleKo": "제3자 물류 파트너가 운송과 보관을 전담합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "margin",
+    "PartOfSpeech": "noun",
+    "Meaning": "수익 마진, 여백",
+    "Example": "Operating profit margins expanded to 18% after automation.",
+    "ExampleKo": "자동화 도입 후 영업이익 마진이 18%로 확대되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mediation",
+    "PartOfSpeech": "noun",
+    "Meaning": "중재, 조정",
+    "Example": "Commercial mediation resolved disputes without resorting to litigation.",
+    "ExampleKo": "상사 중재를 통해 소송에 의존하지 않고 분쟁을 해결했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "monopoly",
+    "PartOfSpeech": "noun",
+    "Meaning": "독점",
+    "Example": "Antitrust regulators investigated whether the merger creates a monopoly.",
+    "ExampleKo": "반독점 규제 당국은 이번 합병이 독점을 초래하는지 조사했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "negotiation",
+    "PartOfSpeech": "noun",
+    "Meaning": "협상",
+    "Example": "Bilateral trade negotiations entered their concluding round.",
+    "ExampleKo": "양자 간 무역 협상이 최종 라운드에 돌입했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "omission",
+    "PartOfSpeech": "noun",
+    "Meaning": "누락, 생략",
+    "Example": "The corrected prospectus amended errors and accidental omissions.",
+    "ExampleKo": "수정된 투자 설명서는 오류와 우발적 누락을 바로잡았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "orientation",
+    "PartOfSpeech": "noun",
+    "Meaning": "오리엔테이션, 방향",
+    "Example": "The two-day orientation familiarizes hires with firm policies.",
+    "ExampleKo": "이틀간의 신입 교육은 신규 입사자들에게 회사 정책을 익히게 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "outlay",
+    "PartOfSpeech": "noun",
+    "Meaning": "지출, 경비",
+    "Example": "Initial capital outlay for manufacturing plants is considerable.",
+    "ExampleKo": "제조 공장 건립을 위한 초기 자본 지출은 상당합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "outsourcing",
+    "PartOfSpeech": "noun",
+    "Meaning": "외주, 아웃소싱",
+    "Example": "Offshore software development outsourcing lowered programming overhead.",
+    "ExampleKo": "해외 소프트웨어 개발 아웃소싱으로 프로그래밍 비용을 절감했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "portfolio",
+    "PartOfSpeech": "noun",
+    "Meaning": "포트폴리오, 투자 목록",
+    "Example": "Diversifying your investment portfolio dampens market volatility.",
+    "ExampleKo": "투자 포트폴리오를 다각화하면 시장 변동성을 완화할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "precaution",
+    "PartOfSpeech": "noun",
+    "Meaning": "예방책, 조심",
+    "Example": "Workers follow mandatory safety precautions in chemical storage bays.",
+    "ExampleKo": "작업자들은 화학물질 보관 구역에서 필수 안전 예방 수칙을 따릅니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "predecessor",
+    "PartOfSpeech": "noun",
+    "Meaning": "전임자, 이전 모델",
+    "Example": "The new smartphone processor is twice as fast as its predecessor.",
+    "ExampleKo": "새 스마트폰 프로세서는 이전 모델보다 두 배 빠릅니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "protocol",
+    "PartOfSpeech": "noun",
+    "Meaning": "규약, 절차",
+    "Example": "Strict sanitation protocols remain in place at food handling sites.",
+    "ExampleKo": "식품 취급 현장에는 엄격한 위생 규약이 계속 유지되고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "quorum",
+    "PartOfSpeech": "noun",
+    "Meaning": "정족수",
+    "Example": "The committee could not vote because members failed to reach a quorum.",
+    "ExampleKo": "정족수가 미달되어 위원회는 표결을 진행할 수 없었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rebound",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "반등, 회복; 반등하다",
+    "Example": "Asian stock markets staged a robust afternoon rebound.",
+    "ExampleKo": "아시아 주식 시장은 오후 들어 강한 반등세를 보였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "recession",
+    "PartOfSpeech": "noun",
+    "Meaning": "경기 후퇴, 침체",
+    "Example": "Central banks cut interest rates to avert an economic recession.",
+    "ExampleKo": "중앙은행들은 경기 침체를 막기 위해 금리를 인하했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reimbursement",
+    "PartOfSpeech": "noun",
+    "Meaning": "상환, 환급",
+    "Example": "Submit hotel receipts to obtain business expense reimbursement.",
+    "ExampleKo": "출장 경비 환급을 받으려면 호텔 영수증을 제출하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "requisition",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "요청서, 청구서; 징발하다",
+    "Example": "Submit a procurement requisition for replacement lab supplies.",
+    "ExampleKo": "실험실 교체용 비품에 대해 구매 요청서를 제출하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "resolution",
+    "PartOfSpeech": "noun",
+    "Meaning": "해결, 결의안",
+    "Example": "The shareholders passed a resolution approving the dividend hike.",
+    "ExampleKo": "주주들은 배당금 인상을 승인하는 결의안을 통과시켰습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "sanction",
+    "PartOfSpeech": "noun/verb",
+    "Meaning": "제재, 인가; 제재하다",
+    "Example": "Economic sanctions restricted technological exports to the rogue state.",
+    "ExampleKo": "경제 제재로 인해 불량 국가에 대한 기술 수출이 제한되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "scarcity",
+    "PartOfSpeech": "noun",
+    "Meaning": "부족, 결핍",
+    "Example": "Microchip scarcity hampered automotive assembly lines worldwide.",
+    "ExampleKo": "마이크로칩 품귀 현상은 전 세계 자동차 조립 라인에 차질을 빚었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "shareholder",
+    "PartOfSpeech": "noun",
+    "Meaning": "주주",
+    "Example": "Institutional shareholders demanded board representation.",
+    "ExampleKo": "기관 주주들은 이사회 진출을 요구했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "speculation",
+    "PartOfSpeech": "noun",
+    "Meaning": "추측, 투기",
+    "Example": "Market speculation drove up crude oil futures by 4%.",
+    "ExampleKo": "시장 투기 세력으로 인해 원유 선물이 4% 상승했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stagnation",
+    "PartOfSpeech": "noun",
+    "Meaning": "정체, 침체",
+    "Example": "Prolonged wage stagnation eroded middle-class purchasing power.",
+    "ExampleKo": "오랜 임금 정체로 인해 중산층의 구매력이 저하되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stakeholder",
+    "PartOfSpeech": "noun",
+    "Meaning": "이해관계자",
+    "Example": "All key stakeholders met to finalize the environmental policy.",
+    "ExampleKo": "모든 주요 이해관계자들이 환경 정책을 확정하기 위해 모였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stimulus",
+    "PartOfSpeech": "noun",
+    "Meaning": "자극책, 부양책",
+    "Example": "The government rolled out an economic stimulus package of $50 billion.",
+    "ExampleKo": "정부는 500억 달러 규모의 경기 부양책을 발표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "stipulation",
+    "PartOfSpeech": "noun",
+    "Meaning": "조건, 규정",
+    "Example": "The contract contains clear stipulations regarding delivery delays.",
+    "ExampleKo": "계약서에는 납품 지연에 관한 명확한 조항이 포함되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subsidy",
+    "PartOfSpeech": "noun",
+    "Meaning": "보조금, 장려금",
+    "Example": "Agricultural subsidies support family-owned organic farms.",
+    "ExampleKo": "농업 보조금은 가족 경영 유기농 농가를 지원합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "tariff",
+    "PartOfSpeech": "noun",
+    "Meaning": "관세",
+    "Example": "Import tariffs on foreign steel rose by 10%.",
+    "ExampleKo": "외국산 철강에 대한 수입 관세가 10% 인상되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "telecommuting",
+    "PartOfSpeech": "noun",
+    "Meaning": "재택근무",
+    "Example": "Telecommuting policies boosted worker morale and lowered rent.",
+    "ExampleKo": "재택근무 정책은 직원 사기를 북돋우고 임대료 비용을 절감시켰습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "traction",
+    "PartOfSpeech": "noun",
+    "Meaning": "견인력, 대중적 인기",
+    "Example": "The new software app is gaining immense traction among developers.",
+    "ExampleKo": "새 소프트웨어 앱이 개발자들 사이에서 큰 인기를 얻고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "trajectory",
+    "PartOfSpeech": "noun",
+    "Meaning": "궤적, 성장 경로",
+    "Example": "Analysts praised the enterprise's rapid quarterly growth trajectory.",
+    "ExampleKo": "애널리스트들은 그 기업의 가파른 분기별 성장 경로를 칭찬했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "understatement",
+    "PartOfSpeech": "noun",
+    "Meaning": "절제된 표현, 축소 진술",
+    "Example": "To call this fiscal year profitable is an extreme understatement.",
+    "ExampleKo": "이번 회계연도가 수익성이 높았다고 말하는 것은 대단한 축소 표현입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "validity",
+    "PartOfSpeech": "noun",
+    "Meaning": "유효성, 타당성",
+    "Example": "The passport must maintain six months of validity beyond travel dates.",
+    "ExampleKo": "여권은 출국일 기준 6개월 이상의 유효 기간이 남아 있어야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "valuation",
+    "PartOfSpeech": "noun",
+    "Meaning": "평가 가치, 감정",
+    "Example": "The tech unicorn reached a staggering $10 billion market valuation.",
+    "ExampleKo": "그 테크 유니콘 기업은 무려 100억 달러의 시장 평가 가치에 도달했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "variance",
+    "PartOfSpeech": "noun",
+    "Meaning": "차이, 불일치",
+    "Example": "Cost variances between budget and actual outlays were analyzed.",
+    "ExampleKo": "예산과 실제 지출 간의 비용 차이가 분석되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "volatility",
+    "PartOfSpeech": "noun",
+    "Meaning": "변동성",
+    "Example": "Hedging instruments protect against commodity price volatility.",
+    "ExampleKo": "위험 회피 수단은 원자재 가격 변동성으로부터 보호해 줍니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "accessible",
+    "PartOfSpeech": "adj",
+    "Meaning": "접근하기 쉬운, 이용 가능한",
+    "Example": "The downtown clinic is easily accessible by public subway.",
+    "ExampleKo": "시내 클리닉은 대중교통 지하철로 쉽게 접근할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "accommodating",
+    "PartOfSpeech": "adj",
+    "Meaning": "친절한, 호의적인",
+    "Example": "The hotel concierge was remarkably accommodating to our group.",
+    "ExampleKo": "호텔 안내원은 저희 일행에게 매우 친절하고 호의적이었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "accurate",
+    "PartOfSpeech": "adj",
+    "Meaning": "정확한, 정밀한",
+    "Example": "Please provide accurate measurements before placing the furniture order.",
+    "ExampleKo": "가구 주문을 넣기 전에 정확한 치수를 제공해 주십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "advantageous",
+    "PartOfSpeech": "adj",
+    "Meaning": "유리한, 유익한",
+    "Example": "Entering the Asian market early proved highly advantageous.",
+    "ExampleKo": "아시아 시장에 조기 진출한 것은 대단히 유리한 것으로 판명되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ambiguous",
+    "PartOfSpeech": "adj",
+    "Meaning": "모호한, 불분명한",
+    "Example": "Avoid ambiguous wording when drafting legal contracts.",
+    "ExampleKo": "법적 계약서를 작성할 때는 모호한 표현을 피하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "amenable",
+    "PartOfSpeech": "adj",
+    "Meaning": "순응하는, 잘 받아들이는",
+    "Example": "The director is amenable to adjusting the project timeline.",
+    "ExampleKo": "이사님은 프로젝트 일정을 조정하는 것에 긍정적이십니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ample",
+    "PartOfSpeech": "adj",
+    "Meaning": "충분한, 풍부한",
+    "Example": "The convention hall provides ample space for 500 attendees.",
+    "ExampleKo": "컨벤션 홀은 500명의 참가자를 위한 충분한 공간을 제공합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "applicable",
+    "PartOfSpeech": "adj",
+    "Meaning": "적용 가능한, 해당되는",
+    "Example": "Review all applicable safety regulations before operating machinery.",
+    "ExampleKo": "기계를 작동하기 전에 모든 해당 안전 규정을 검토하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "apprehensive",
+    "PartOfSpeech": "adj",
+    "Meaning": "불안해하는, 염려하는",
+    "Example": "Investors were apprehensive about the abrupt leadership change.",
+    "ExampleKo": "투자자들은 갑작스러운 경영진 교체에 대해 불안해했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "approachable",
+    "PartOfSpeech": "adj",
+    "Meaning": "다가가기 쉬운, 친근한",
+    "Example": "Our department head is approachable and welcomes junior feedback.",
+    "ExampleKo": "저희 부서장님은 친근하시며 후배들의 피드백을 환영합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "arbitrary",
+    "PartOfSpeech": "adj",
+    "Meaning": "임의의, 제멋대로인",
+    "Example": "Pricing adjustments must be based on data, not arbitrary guesses.",
+    "ExampleKo": "가격 조정은 임의의 추측이 아니라 데이터에 근거해야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "arduous",
+    "PartOfSpeech": "adj",
+    "Meaning": "몹시 힘든, 고된",
+    "Example": "Reorganizing global supply lines was an arduous two-year task.",
+    "ExampleKo": "글로벌 공급 라인을 재편하는 것은 2년에 걸친 고된 작업이었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "attentive",
+    "PartOfSpeech": "adj",
+    "Meaning": "주의를 기울이는, 세심한",
+    "Example": "The cabin crew was exceptionally attentive to passenger comfort.",
+    "ExampleKo": "승무원들은 승객의 안락함에 대단히 세심하게 주의를 기울였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "authentic",
+    "PartOfSpeech": "adj",
+    "Meaning": "진정한, 진짜의",
+    "Example": "The restaurant uses authentic spices imported directly from Italy.",
+    "ExampleKo": "그 레스토랑은 이탈리아에서 직수입한 정통 향신료를 사용합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "beneficial",
+    "PartOfSpeech": "adj",
+    "Meaning": "유익한, 이로운",
+    "Example": "Regular team retreats are beneficial for cross-functional synergy.",
+    "ExampleKo": "정기적인 팀 워크숍은 부서 간 협업 시너지에 유익합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "cautious",
+    "PartOfSpeech": "adj",
+    "Meaning": "조심스러운, 신중한",
+    "Example": "Management maintains a cautious outlook for next quarter's sales.",
+    "ExampleKo": "경영진은 다음 분기 매출에 대해 신중한 전망을 유지하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "chronic",
+    "PartOfSpeech": "adj",
+    "Meaning": "만성적인, 장기간의",
+    "Example": "Automation resolved chronic staffing shortages in the warehouse.",
+    "ExampleKo": "자동화로 물류창고의 만성적인 인력 부족 문제가 해결되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "coherent",
+    "PartOfSpeech": "adj",
+    "Meaning": "일관성 있는, 논리 정연한",
+    "Example": "The keynote presentation offered a coherent vision for the firm.",
+    "ExampleKo": "기조연설은 기업을 위한 일관되고 논리적인 비전을 제시했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "coincidental",
+    "PartOfSpeech": "adj",
+    "Meaning": "우연의 일치인",
+    "Example": "The simultaneous product launches were purely coincidental.",
+    "ExampleKo": "동시에 이루어진 신제품 출시는 순전히 우연의 일치였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "commensurate",
+    "PartOfSpeech": "adj",
+    "Meaning": "비례하는, 상응하는",
+    "Example": "Compensation will be commensurate with candidate experience.",
+    "ExampleKo": "급여는 지원자의 경력에 상응하여 책정될 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "comparable",
+    "PartOfSpeech": "adj",
+    "Meaning": "비슷한, 비교할 만한",
+    "Example": "Our subscription fees are comparable to leading competitors.",
+    "ExampleKo": "당사의 구독료는 주요 경쟁사들과 비슷한 수준입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compatible",
+    "PartOfSpeech": "adj",
+    "Meaning": "호환되는, 양립할 수 있는",
+    "Example": "The mobile app is fully compatible with both iOS and Android.",
+    "ExampleKo": "모바일 앱은 iOS 및 Android와 모두 완벽히 호환됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compelling",
+    "PartOfSpeech": "adj",
+    "Meaning": "설득력 있는, 강력한",
+    "Example": "She presented a compelling business case for entering Brazil.",
+    "ExampleKo": "그녀는 브라질 시장 진출을 위한 강력하고 설득력 있는 사업 계획을 발표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "competent",
+    "PartOfSpeech": "adj",
+    "Meaning": "유능한, 자격을 갖춘",
+    "Example": "The factory hired competent technicians to operate CNC mills.",
+    "ExampleKo": "공장은 CNC 밀링 머신을 가동하기 위해 유능한 기술자들을 채용했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "concise",
+    "PartOfSpeech": "adj",
+    "Meaning": "간결한, 축약된",
+    "Example": "Keep your executive summaries concise and focused on ROI.",
+    "ExampleKo": "경영진 요약 보고서는 간결하게 작성하고 투자수익률에 집중하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "considerable",
+    "PartOfSpeech": "adj",
+    "Meaning": "상당한, 많은",
+    "Example": "The factory expansion required a considerable capital commitment.",
+    "ExampleKo": "공장 확장에는 상당한 자본 투입이 필요했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "consistent",
+    "PartOfSpeech": "adj",
+    "Meaning": "일관된, 지속적인",
+    "Example": "Delivering consistent product quality builds customer loyalty.",
+    "ExampleKo": "일관된 제품 품질을 제공하는 것은 고객 충성도를 높입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "conspicuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "눈에 띄는, 돋보이는",
+    "Example": "The warning sign was placed in a conspicuous area near the entry.",
+    "ExampleKo": "경고 표지판은 입구 근처의 눈에 잘 띄는 곳에 배치되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "contemporary",
+    "PartOfSpeech": "adj",
+    "Meaning": "현대의, 동시대의",
+    "Example": "The newly opened lobby showcases contemporary Scandinavian decor.",
+    "ExampleKo": "새로 개장한 로비는 현대적인 스칸디나비아풍 인테리어를 선보입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "continuous",
+    "PartOfSpeech": "adj",
+    "Meaning": "연속적인, 끊임없는",
+    "Example": "Continuous software updates enhance cybersecurity defenses.",
+    "ExampleKo": "지속적인 소프트웨어 업데이트는 사이버 보안 방어력을 강화합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "crucial",
+    "PartOfSpeech": "adj",
+    "Meaning": "중대한, 결정적인",
+    "Example": "Meeting tomorrow's deadline is crucial for retaining this client.",
+    "ExampleKo": "내일 마감일을 맞추는 것은 이 고객사를 유지하는 데 결정적입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "cumbersome",
+    "PartOfSpeech": "adj",
+    "Meaning": "다루기 힘든, 번거로운",
+    "Example": "The legacy paper reimbursement procedure was slow and cumbersome.",
+    "ExampleKo": "기존의 종이 영수증 환급 절차는 느리고 번거로웠습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "customary",
+    "PartOfSpeech": "adj",
+    "Meaning": "관례적인, 습관적인",
+    "Example": "It is customary to leave a 15% tip at American restaurants.",
+    "ExampleKo": "미국 식당에서는 15%의 팁을 남기는 것이 관례입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "defective",
+    "PartOfSpeech": "adj",
+    "Meaning": "결함이 있는",
+    "Example": "Return any defective merchandise for a full immediate refund.",
+    "ExampleKo": "결함이 있는 상품은 즉시 전액 환불을 위해 반품하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "definitive",
+    "PartOfSpeech": "adj",
+    "Meaning": "최종적인, 확정적인",
+    "Example": "The committee published a definitive report on renewable energy.",
+    "ExampleKo": "위원회는 재생 에너지에 관한 최종 확정 보고서를 발간했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "delinquent",
+    "PartOfSpeech": "adj",
+    "Meaning": "연체된, 의무 불이행의",
+    "Example": "A late fee applies to all delinquent credit card balances.",
+    "ExampleKo": "모든 연체된 신용카드 잔액에는 연체료가 부과됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "dependable",
+    "PartOfSpeech": "adj",
+    "Meaning": "신뢰할 수 있는, 믿음직한",
+    "Example": "We need a dependable supplier of high-grade copper wires.",
+    "ExampleKo": "저희는 고급 구리선을 공급해 줄 믿을 수 있는 업체가 필요합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "desirable",
+    "PartOfSpeech": "adj",
+    "Meaning": "바람직한, 호감 가는",
+    "Example": "Fluency in Mandarin is highly desirable for this overseas post.",
+    "ExampleKo": "이 해외 보직에는 유창한 중국어 구사력이 대단히 바람직합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "detrimental",
+    "PartOfSpeech": "adj",
+    "Meaning": "해로운, 유해한",
+    "Example": "Unaddressed workplace conflict is detrimental to team morale.",
+    "ExampleKo": "방치된 직장 내 갈등은 팀 사기에 해롭습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "devoted",
+    "PartOfSpeech": "adj",
+    "Meaning": "헌신적인, 충실한",
+    "Example": "She has been a devoted employee of the clinic for 25 years.",
+    "ExampleKo": "그녀는 25년 동안 그 병원의 헌신적인 직원으로 일해 왔습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "diligent",
+    "PartOfSpeech": "adj",
+    "Meaning": "부지런한, 근면한",
+    "Example": "Diligent proofreading caught three critical calculation errors.",
+    "ExampleKo": "부지런한 교정 작업을 통해 세 가지 치명적인 계산 실수를 잡아냈습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "discrete",
+    "PartOfSpeech": "adj",
+    "Meaning": "별개의, 분리된",
+    "Example": "The manufacturing system breaks production into four discrete steps.",
+    "ExampleKo": "제조 시스템은 생산을 4개의 별개 단계로 분할합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "distinguished",
+    "PartOfSpeech": "adj",
+    "Meaning": "저명한, 뛰어난",
+    "Example": "A distinguished panel of economists debated inflation trends.",
+    "ExampleKo": "저명한 경제학자 패널이 인플레이션 추세에 대해 토론했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "diverse",
+    "PartOfSpeech": "adj",
+    "Meaning": "다양한",
+    "Example": "Our agency represents a diverse group of international clients.",
+    "ExampleKo": "저희 대행사는 다양한 글로벌 고객군을 대리합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "drastic",
+    "PartOfSpeech": "adj",
+    "Meaning": "과감한, 극단적인",
+    "Example": "The board implemented drastic budget cuts across all branches.",
+    "ExampleKo": "이사회는 모든 지사에 걸쳐 과감한 예산 삭감을 단행했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "eager",
+    "PartOfSpeech": "adj",
+    "Meaning": "열망하는, 열심인",
+    "Example": "Recent college graduates are eager to join our marketing team.",
+    "ExampleKo": "최근 대학 졸업생들은 저희 마케팅 팀에 입사하기를 열망하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "efficient",
+    "PartOfSpeech": "adj",
+    "Meaning": "효율적인, 능률적인",
+    "Example": "Solar-powered warehouses are environmentally and cost efficient.",
+    "ExampleKo": "태양광 물류창고는 환경적으로나 비용적으로 효율적입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "eminent",
+    "PartOfSpeech": "adj",
+    "Meaning": "저명한, 탁월한",
+    "Example": "The symposium will feature lectures by eminent neuroscientists.",
+    "ExampleKo": "심포지엄에서는 저명한 뇌과학자들의 강연이 진행될 예정입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "equitable",
+    "PartOfSpeech": "adj",
+    "Meaning": "공평한, 공정한",
+    "Example": "The committee established equitable commission rates for agents.",
+    "ExampleKo": "위원회는 대리점들을 위해 공평한 수수료율을 수립했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ethical",
+    "PartOfSpeech": "adj",
+    "Meaning": "윤리적인, 도덕적인",
+    "Example": "The company insists on ethical sourcing of all coffee beans.",
+    "ExampleKo": "회사는 모든 원두의 윤리적인 조달을 고집합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exceptional",
+    "PartOfSpeech": "adj",
+    "Meaning": "우수한, 특출난",
+    "Example": "Quarterly bonuses reward employees showing exceptional dedication.",
+    "ExampleKo": "분기 보너스는 특출난 헌신을 보인 직원들에게 지급됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exemplary",
+    "PartOfSpeech": "adj",
+    "Meaning": "모범적인, 본보기가 되는",
+    "Example": "She was promoted following exemplary customer satisfaction ratings.",
+    "ExampleKo": "그녀는 모범적인 고객 만족도 평가에 힘입어 승진했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "expedient",
+    "PartOfSpeech": "adj",
+    "Meaning": "편리한, 방편의",
+    "Example": "Outsourcing coding proved an expedient solution to launch faster.",
+    "ExampleKo": "코딩 외주는 더 빠른 출시를 위한 편리한 방편임이 입증되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "explicit",
+    "PartOfSpeech": "adj",
+    "Meaning": "명백한, 노골적인",
+    "Example": "The contract contains explicit clauses regarding patent ownership.",
+    "ExampleKo": "계약서에는 특허 소유권에 관한 명백한 조항이 포함되어 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exponential",
+    "PartOfSpeech": "adj",
+    "Meaning": "기하급수적인",
+    "Example": "The software app experienced exponential user acquisition growth.",
+    "ExampleKo": "그 소프트웨어 앱은 기하급수적인 신규 사용자 증가를 경험했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "extensive",
+    "PartOfSpeech": "adj",
+    "Meaning": "광범위한, 포괄적인",
+    "Example": "The firm conducted extensive research into customer habits.",
+    "ExampleKo": "그 기업은 고객 소비 습관에 대해 광범위한 조사를 수행했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "flawless",
+    "PartOfSpeech": "adj",
+    "Meaning": "흠 없는, 완벽한",
+    "Example": "Catering and staging for the product reveal were flawless.",
+    "ExampleKo": "신제품 공개 행사의 케이터링과 무대 연출은 완벽했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "flexible",
+    "PartOfSpeech": "adj",
+    "Meaning": "유연한, 융통성 있는",
+    "Example": "Employees appreciate flexible working hours and telecommuting.",
+    "ExampleKo": "직원들은 유연한 근무 시간과 재택근무를 긍정적으로 평가합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "formidable",
+    "PartOfSpeech": "adj",
+    "Meaning": "만만치 않은, 어마어마한",
+    "Example": "The rival startup has become a formidable industry competitor.",
+    "ExampleKo": "그 라이벌 스타트업은 만만치 않은 업계 경쟁자로 부상했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "fruitful",
+    "PartOfSpeech": "adj",
+    "Meaning": "생산적인, 결실 있는",
+    "Example": "Yesterday's bilateral summit produced fruitful cooperation pacts.",
+    "ExampleKo": "어제의 양자 정상회담은 결실 있는 협력 협정을 이끌어냈습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "fundamental",
+    "PartOfSpeech": "adj",
+    "Meaning": "근본적인, 핵심적인",
+    "Example": "Sound fiscal discipline is fundamental to long-term solvency.",
+    "ExampleKo": "건전한 재정 규율은 장기적인 지급 능력에 근본적입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "genuine",
+    "PartOfSpeech": "adj",
+    "Meaning": "진짜의, 진심 어린",
+    "Example": "The manager expressed genuine gratitude for the team's long hours.",
+    "ExampleKo": "팀장은 팀의 야근 노력에 대해 진심 어린 감사를 표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "gradual",
+    "PartOfSpeech": "adj",
+    "Meaning": "점진적인, 완만한",
+    "Example": "Analysts observed a gradual recovery in housing sales volume.",
+    "ExampleKo": "애널리스트들은 주택 매매량의 점진적인 회복세를 관찰했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "imperative",
+    "PartOfSpeech": "adj",
+    "Meaning": "반드시 필요한, 긴급한",
+    "Example": "It is imperative that safety alarms be tested every Monday.",
+    "ExampleKo": "매주 월요일마다 안전 경보기를 점검하는 것은 절대적으로 필수적입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "implicit",
+    "PartOfSpeech": "adj",
+    "Meaning": "암묵적인, 내포된",
+    "Example": "An implicit understanding existed between the partner firms.",
+    "ExampleKo": "협력 기업들 사이에는 암묵적인 합의가 존재했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inadvertent",
+    "PartOfSpeech": "adj",
+    "Meaning": "우발적인, 의도치 않은",
+    "Example": "The accounting glitch was an inadvertent typographical error.",
+    "ExampleKo": "회계 오류는 의도치 않은 오타에 의한 것이었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "incompetent",
+    "PartOfSpeech": "adj",
+    "Meaning": "무능한, 자격 미달의",
+    "Example": "The contractor was terminated for being incompetent and late.",
+    "ExampleKo": "그 시공업체는 무능하고 일정을 지키지 못해 계약 해지되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "incurred",
+    "PartOfSpeech": "adj",
+    "Meaning": "발생한, 초래된",
+    "Example": "All expenses incurred during official travel will be reimbursed.",
+    "ExampleKo": "공무 출장 중 발생한 모든 경비는 환급 처리됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "indispensable",
+    "PartOfSpeech": "adj",
+    "Meaning": "없어서는 안 될, 필수적인",
+    "Example": "Cloud servers have become indispensable for remote operations.",
+    "ExampleKo": "클라우드 서버는 원격 업무 운영에 없어서는 안 될 존재가 되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inevitable",
+    "PartOfSpeech": "adj",
+    "Meaning": "불가피한, 필연적인",
+    "Example": "Higher retail prices were an inevitable result of import tariffs.",
+    "ExampleKo": "수입 관세 부과로 인한 소비자 가격 인상은 불가피한 결과였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ingenious",
+    "PartOfSpeech": "adj",
+    "Meaning": "기발한, 독창적인",
+    "Example": "Engineers devised an ingenious cooling mechanism for the servers.",
+    "ExampleKo": "엔지니어들은 서버를 위한 기발한 냉각 메커니즘을 고안해냈습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "inherent",
+    "PartOfSpeech": "adj",
+    "Meaning": "내재된, 고유한",
+    "Example": "High returns balance the inherent risks of early-stage investing.",
+    "ExampleKo": "높은 수익률은 초기 단계 투자의 내재적 위험을 상쇄합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "innovative",
+    "PartOfSpeech": "adj",
+    "Meaning": "혁신적인",
+    "Example": "The electric car maker introduced innovative battery recycling.",
+    "ExampleKo": "그 전기차 제조업체는 혁신적인 배터리 재활용 기술을 도입했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "insightful",
+    "PartOfSpeech": "adj",
+    "Meaning": "통찰력 있는",
+    "Example": "The market research analyst presented an insightful trend forecast.",
+    "ExampleKo": "시장 조사 애널리스트는 통찰력 있는 트렌드 전망을 발표했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "interim",
+    "PartOfSpeech": "adj/noun",
+    "Meaning": "임시의; 중간 시간",
+    "Example": "The board appointed an interim CEO while conducting a global search.",
+    "ExampleKo": "이사회는 글로벌 인재 영입을 진행하는 동안 임시 CEO를 선임했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "intricate",
+    "PartOfSpeech": "adj",
+    "Meaning": "복잡한, 정교한",
+    "Example": "Swiss watch manufacturing involves intricate micro-gears.",
+    "ExampleKo": "스위스 시계 제조는 정교하고 복잡한 미세 기어를 포함합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "invaluable",
+    "PartOfSpeech": "adj",
+    "Meaning": "매우 귀중한, 값을 매길 수 없는",
+    "Example": "Senior mentor guidance proved invaluable to new associates.",
+    "ExampleKo": "선배 멘토의 조언은 신입 사원들에게 대단히 귀중한 것으로 입증되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "judicious",
+    "PartOfSpeech": "adj",
+    "Meaning": "현명한, 신중한",
+    "Example": "Judicious cash allocation helped the firm navigate the credit crunch.",
+    "ExampleKo": "신중한 현금 배분 덕분에 회사는 신용 경색을 헤쳐 나갈 수 있었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "marginal",
+    "PartOfSpeech": "adj",
+    "Meaning": "미미한, 한계의",
+    "Example": "The new campaign produced only a marginal bump in newsletter signups.",
+    "ExampleKo": "새 캠페인은 뉴스레터 가입자 수에서 미미한 증가만을 가져왔습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "moderate",
+    "PartOfSpeech": "adj/verb",
+    "Meaning": "완만한, 보통의; 완화하다",
+    "Example": "Economists anticipate moderate GDP growth over the coming year.",
+    "ExampleKo": "경제학자들은 내년 한 해 동안 완만한 GDP 성장을 예상합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mutual",
+    "PartOfSpeech": "adj",
+    "Meaning": "상호 간의, 공통의",
+    "Example": "The partnership was terminated by mutual consent.",
+    "ExampleKo": "그 파트너십은 상호 합의에 의해 종료되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "negligible",
+    "PartOfSpeech": "adj",
+    "Meaning": "무시해도 될 정도의, 하찮은",
+    "Example": "The price difference between the two suppliers is negligible.",
+    "ExampleKo": "두 공급업체 간의 가격 차이는 무시해도 될 정도로 미미합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "notable",
+    "PartOfSpeech": "adj",
+    "Meaning": "주목할 만한, 유명한",
+    "Example": "The enterprise made notable strides in carbon emissions reduction.",
+    "ExampleKo": "그 기업은 탄소 배출 감축 부문에서 주목할 만한 진전을 이루었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "novel",
+    "PartOfSpeech": "adj/noun",
+    "Meaning": "새로운, 신기한; 소설",
+    "Example": "Scientists patented a novel technique for synthesizing semiconductors.",
+    "ExampleKo": "과학자들은 반도체를 합성하는 새로운 기법에 대해 특허를 받았습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "obsolete",
+    "PartOfSpeech": "adj",
+    "Meaning": "구식의, 쓸모없게 된",
+    "Example": "Floppy disks have been completely obsolete for decades.",
+    "ExampleKo": "플로피 디스크는 수십 년 전부터 완전히 구식이 되어 사라졌습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "optimal",
+    "PartOfSpeech": "adj",
+    "Meaning": "최적의",
+    "Example": "Engineers fine-tuned turbine settings to achieve optimal output.",
+    "ExampleKo": "엔지니어들은 최적의 출력을 달성하기 위해 터빈 설정을 미세 조정했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "outgoing",
+    "PartOfSpeech": "adj",
+    "Meaning": "외향적인, 떠나는",
+    "Example": "The outgoing marketing director welcomed her successor warmly.",
+    "ExampleKo": "퇴임하는 마케팅 이사는 후임자를 따뜻하게 맞이했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "partial",
+    "PartOfSpeech": "adj",
+    "Meaning": "부분적인, 편파적인",
+    "Example": "The warranty covers full parts replacement and partial labor costs.",
+    "ExampleKo": "보증은 전면 부품 교체와 부분적인 인건비를 보장합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "perceptive",
+    "PartOfSpeech": "adj",
+    "Meaning": "지각력 있는, 통찰력 있는",
+    "Example": "The consultant offered perceptive observations on team dynamics.",
+    "ExampleKo": "그 컨설턴트는 팀 역학 관계에 대해 통찰력 있는 관찰을 제시했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "periodic",
+    "PartOfSpeech": "adj",
+    "Meaning": "주기적인, 정기적인",
+    "Example": "Conduct periodic backups to shield databases against ransomware.",
+    "ExampleKo": "랜섬웨어로부터 데이터베이스를 보호하기 위해 주기적인 백업을 실시하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "permanent",
+    "PartOfSpeech": "adj",
+    "Meaning": "영구적인, 정규직의",
+    "Example": "Contract workers may apply for permanent full-time positions.",
+    "ExampleKo": "계약직 근로자는 정규직 전일제 포지션에 지원할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "permissible",
+    "PartOfSpeech": "adj",
+    "Meaning": "허용되는",
+    "Example": "Expenses up to $100 for client meals are permissible without prior sign-off.",
+    "ExampleKo": "고객 접대비로 100달러까지는 사전 승인 없이 지출이 허용됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "premature",
+    "PartOfSpeech": "adj",
+    "Meaning": "시기상조의, 조급한",
+    "Example": "Declaring victory over inflation is dangerously premature.",
+    "ExampleKo": "인플레이션과의 싸움에서 승리를 선언하는 것은 위험할 정도로 시기상조입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "redundant",
+    "PartOfSpeech": "adj",
+    "Meaning": "불필요한, 중복되는, 해고된",
+    "Example": "Cloud storage rendered local tape backups redundant.",
+    "ExampleKo": "클라우드 저장소 도입으로 로컬 테이프 백업은 불필요하게 되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reluctant",
+    "PartOfSpeech": "adj",
+    "Meaning": "꺼리는, 주저하는",
+    "Example": "Retailers were reluctant to raise prices despite surging freight.",
+    "ExampleKo": "소매업체들은 치솟는 화물 운임에도 불구하고 가격 인상을 주저했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "remarkable",
+    "PartOfSpeech": "adj",
+    "Meaning": "주목할 만한, 놀라운",
+    "Example": "The turnaround plan produced remarkable financial gains within months.",
+    "ExampleKo": "경영 정상화 계획은 수개월 만에 놀라운 재무 성과를 거두었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "resilient",
+    "PartOfSpeech": "adj",
+    "Meaning": "회복력 있는, 탄력적인",
+    "Example": "Our diversified business model proved remarkably resilient.",
+    "ExampleKo": "저희의 다각화된 사업 모델은 놀라울 정도로 탄력적인 회복력을 입증했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rigid",
+    "PartOfSpeech": "adj",
+    "Meaning": "엄격한, 융통성 없는",
+    "Example": "Rigid bureaucratic hierarchies stifle creative product development.",
+    "ExampleKo": "경직된 관료주의적 위계질서는 창의적인 제품 개발을 저해합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "salient",
+    "PartOfSpeech": "adj",
+    "Meaning": "핵심적인, 가장 두드러진",
+    "Example": "The summary highlights the salient points of the audit report.",
+    "ExampleKo": "요약본은 감사 보고서의 핵심적이고 두드러진 요점을 강조합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "satisfactory",
+    "PartOfSpeech": "adj",
+    "Meaning": "만족스러운, 충분한",
+    "Example": "The inspected shipment arrived in completely satisfactory condition.",
+    "ExampleKo": "검수된 선적물은 완전히 만족스러운 상태로 도착했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "scrupulous",
+    "PartOfSpeech": "adj",
+    "Meaning": "양심적인, 꼼꼼한",
+    "Example": "Accountants paid scrupulous attention to tax deduction rules.",
+    "ExampleKo": "회계사들은 세금 공제 규정에 꼼꼼한 주의를 기울였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "seamless",
+    "PartOfSpeech": "adj",
+    "Meaning": "매끄러운, 끊김 없는",
+    "Example": "The migration to the new cloud enterprise system was completely seamless.",
+    "ExampleKo": "새로운 클라우드 기업 시스템으로의 이전은 완전히 매끄러웠습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "subtle",
+    "PartOfSpeech": "adj",
+    "Meaning": "미묘한, 섬세한",
+    "Example": "Designers made subtle typography tweaks to improve app readability.",
+    "ExampleKo": "디자이너들은 앱 가독성을 높이기 위해 서체에 미묘한 변화를 주었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "urgent",
+    "PartOfSpeech": "adj",
+    "Meaning": "긴급한",
+    "Example": "The CEO called an urgent press briefing regarding the data breach.",
+    "ExampleKo": "CEO는 데이터 유출 사고와 관련하여 긴급 기자회견을 소집했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "versatile",
+    "PartOfSpeech": "adj",
+    "Meaning": "다재다능한, 다용도의",
+    "Example": "The versatile industrial tablet operates reliably in wet outdoor conditions.",
+    "ExampleKo": "다용도 산업용 태블릿은 습한 야외 환경에서도 안정적으로 작동합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "vigorous",
+    "PartOfSpeech": "adj",
+    "Meaning": "활발한, 격렬한",
+    "Example": "Vigorous competition in smartphone sectors drives lower prices.",
+    "ExampleKo": "스마트폰 분야의 활발한 경쟁은 가격 인하를 견인합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "vulnerable",
+    "PartOfSpeech": "adj",
+    "Meaning": "취약한, 상처받기 쉬운",
+    "Example": "Unpatched operating software leaves networks vulnerable to cyber attacks.",
+    "ExampleKo": "패치되지 않은 운영 소프트웨어는 네트워크를 사이버 공격에 취약하게 만듭니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "adversely",
+    "PartOfSpeech": "adv",
+    "Meaning": "불리하게, 부정적으로",
+    "Example": "Supply chain delays adversely affected our quarterly revenue.",
+    "ExampleKo": "공급망 지연은 당사의 분기 매출에 부정적인 영향을 미쳤습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "allegedly",
+    "PartOfSpeech": "adv",
+    "Meaning": "주장하는 바에 따르면, 전해진 바에 의하면",
+    "Example": "The company allegedly concealed audit findings from regulators.",
+    "ExampleKo": "회사가 규제 당국으로부터 감사 결과를 은폐했다는 주장이 제기되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "altogether",
+    "PartOfSpeech": "adv",
+    "Meaning": "완전히, 전적으로",
+    "Example": "The airline decided to discontinue meal service altogether on short flights.",
+    "ExampleKo": "그 항공사는 단거리 노선에서 기내식 제공을 완전히 중단하기로 결정했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "anonymously",
+    "PartOfSpeech": "adv",
+    "Meaning": "익명으로",
+    "Example": "Whistleblowers can submit violation tips anonymously online.",
+    "ExampleKo": "내부고발자는 위반 제보를 온라인으로 익명 제출할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "apparently",
+    "PartOfSpeech": "adv",
+    "Meaning": "겉보기에, 분명히",
+    "Example": "The shipment was apparently misrouted to the Chicago sorting center.",
+    "ExampleKo": "화물이 겉보기에 시카고 분류 센터로 잘못 발송된 것으로 보입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "arguably",
+    "PartOfSpeech": "adv",
+    "Meaning": "단언컨대, 거의 틀림없이",
+    "Example": "This is arguably the most fuel-efficient delivery vehicle on the market.",
+    "ExampleKo": "이것은 단언컨대 시장에서 가장 연비가 좋은 배송 차량입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "authentically",
+    "PartOfSpeech": "adv",
+    "Meaning": "진정으로, 진짜답게",
+    "Example": "The marketing campaign authentically connected with urban youth.",
+    "ExampleKo": "그 마케팅 캠페인은 도시 청년층과 진정성 있게 연결되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "barely",
+    "PartOfSpeech": "adv",
+    "Meaning": "간신히, 가까스로",
+    "Example": "We barely met the filing deadline before the state office closed.",
+    "ExampleKo": "저희는 주 정부 청사가 문을 닫기 직전에 가까스로 서류 제출 마감일을 맞췄습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "chronically",
+    "PartOfSpeech": "adv",
+    "Meaning": "만성적으로",
+    "Example": "The municipal airport has been chronically congested for years.",
+    "ExampleKo": "그 시립 공항은 수년간 만성적으로 혼잡을 겪어 왔습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "collaboratively",
+    "PartOfSpeech": "adv",
+    "Meaning": "협력하여",
+    "Example": "Engineers and designers worked collaboratively to craft the interface.",
+    "ExampleKo": "엔지니어들과 디자이너들은 협력하여 인터페이스를 제작했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "comparatively",
+    "PartOfSpeech": "adv",
+    "Meaning": "비교적, 상대적으로",
+    "Example": "Electric delivery trucks have comparatively low maintenance costs.",
+    "ExampleKo": "전기 배송 트럭은 상대적으로 유지보수 비용이 적게 듭니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "compatibly",
+    "PartOfSpeech": "adv",
+    "Meaning": "호환되게, 양립하여",
+    "Example": "Ensure all components run compatibly within the cloud framework.",
+    "ExampleKo": "모든 구성 요소가 클라우드 프레임워크 내에서 호환되어 실행되도록 하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "competently",
+    "PartOfSpeech": "adv",
+    "Meaning": "유능하게, 능숙하게",
+    "Example": "The junior project manager handled the crisis competently.",
+    "ExampleKo": "주니어 프로젝트 관리자는 위기를 유능하게 수습했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "comprehensively",
+    "PartOfSpeech": "adv",
+    "Meaning": "포괄적으로, 철저히",
+    "Example": "The handbook explains corporate benefits comprehensively.",
+    "ExampleKo": "그 편람은 기업의 복리후생 제도를 포괄적으로 설명하고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "concurrently",
+    "PartOfSpeech": "adv",
+    "Meaning": "동시에",
+    "Example": "Two high-priority software patches were deployed concurrently.",
+    "ExampleKo": "두 개의 최우선 소프트웨어 패치가 동시에 배포되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "conspicuously",
+    "PartOfSpeech": "adv",
+    "Meaning": "눈에 띄게, 두드러지게",
+    "Example": "Exit routes must be conspicuously marked on every floor.",
+    "ExampleKo": "비상구 경로는 각 층마다 눈에 띄게 표시되어야 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "continually",
+    "PartOfSpeech": "adv",
+    "Meaning": "계속해서, 끊임없이",
+    "Example": "Developers continually iterate on customer suggestions.",
+    "ExampleKo": "개발자들은 고객 제안 사항을 바탕으로 계속해서 제품을 개선합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "customarily",
+    "PartOfSpeech": "adv",
+    "Meaning": "관례적으로, 통상적으로",
+    "Example": "Board elections are customarily held during the second quarter.",
+    "ExampleKo": "이사회 선거는 관례적으로 2분기 중에 개최됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "decisively",
+    "PartOfSpeech": "adv",
+    "Meaning": "결단력 있게, 단호하게",
+    "Example": "The board acted decisively to replace underperforming management.",
+    "ExampleKo": "이사회는 실적이 저조한 경영진을 교체하기 위해 단호하게 조치했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "definitely",
+    "PartOfSpeech": "adv",
+    "Meaning": "분명히, 틀림없이",
+    "Example": "Automation will definitely decrease human manufacturing error.",
+    "ExampleKo": "자동화는 인간에 의한 제조 실수를 분명히 줄여줄 것입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "deliberately",
+    "PartOfSpeech": "adv",
+    "Meaning": "의도적으로, 신중하게",
+    "Example": "The firm deliberately slowed hiring to manage operating margins.",
+    "ExampleKo": "그 기업은 영업이익률을 관리하기 위해 의도적으로 채용 속도를 늦췄습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "diligently",
+    "PartOfSpeech": "adv",
+    "Meaning": "부지런히, 성실하게",
+    "Example": "The compliance auditor worked diligently through the weekend.",
+    "ExampleKo": "규정 준수 감사관은 주말 내내 성실하게 근무했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "directly",
+    "PartOfSpeech": "adv",
+    "Meaning": "직접, 곧바로",
+    "Example": "Direct all customer inquiries directly to the tier-two helpdesk.",
+    "ExampleKo": "모든 고객 문의는 2차 헬프데스크로 곧바로 전달해 주십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "discreetly",
+    "PartOfSpeech": "adv",
+    "Meaning": "신중하게, 조심스럽게",
+    "Example": "HR handled the executive transition discreetly to prevent panic.",
+    "ExampleKo": "인사부는 혼란을 방지하기 위해 임원 교체를 신중하게 처리했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "drastically",
+    "PartOfSpeech": "adv",
+    "Meaning": "과감하게, 급격하게",
+    "Example": "Energy consumption dropped drastically after solar array installation.",
+    "ExampleKo": "태양광 집열판 설치 후 에너지 소비량이 급격하게 감소했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "effectively",
+    "PartOfSpeech": "adv",
+    "Meaning": "효과적으로, 실질적으로",
+    "Example": "The new workflow effectively halved project completion turnaround.",
+    "ExampleKo": "새로운 업무 흐름은 프로젝트 완료 소요 시간을 실질적으로 절반으로 줄였습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "elaborately",
+    "PartOfSpeech": "adv",
+    "Meaning": "정교하게, 공들여",
+    "Example": "The exhibition booth was elaborately decorated to mirror a cafe.",
+    "ExampleKo": "전시 부스는 카페를 재현하기 위해 정교하게 꾸며졌습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "eminently",
+    "PartOfSpeech": "adv",
+    "Meaning": "대단히, 현저하게",
+    "Example": "She is an eminently qualified candidate for the director position.",
+    "ExampleKo": "그녀는 이사직에 대단히 자격을 갖춘 적임자입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "entirely",
+    "PartOfSpeech": "adv",
+    "Meaning": "전적으로, 완전히",
+    "Example": "The plant operates entirely on hydro-electric power.",
+    "ExampleKo": "그 공장은 전적으로 수력 발전에 의존하여 가동됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "equitably",
+    "PartOfSpeech": "adv",
+    "Meaning": "공평하게",
+    "Example": "Annual bonus pools were distributed equitably across departments.",
+    "ExampleKo": "연간 보너스 재원은 부서 전반에 걸쳐 공평하게 분배되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "essentially",
+    "PartOfSpeech": "adv",
+    "Meaning": "본질적으로, 기본적으로",
+    "Example": "The revised policy is essentially identical to last year's draft.",
+    "ExampleKo": "개정된 정책은 본질적으로 작년 초안과 동일합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "evidently",
+    "PartOfSpeech": "adv",
+    "Meaning": "분명히, 눈에 띄게",
+    "Example": "The advertising push was evidently successful, doubling web visits.",
+    "ExampleKo": "광고 캠페인은 분명히 성공적이었으며, 웹사이트 방문자 수를 두 배로 늘렸습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exceptionally",
+    "PartOfSpeech": "adv",
+    "Meaning": "특출나게, 예외적으로",
+    "Example": "The laptop processor runs exceptionally cool under heavy load.",
+    "ExampleKo": "그 노트북 프로세서는 고부하 작업 중에도 특출나게 낮은 온도를 유지합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "explicitly",
+    "PartOfSpeech": "adv",
+    "Meaning": "명시적으로, 명백하게",
+    "Example": "The warranty explicitly excludes damage caused by water immersion.",
+    "ExampleKo": "보증서에는 침수로 인한 손상은 명시적으로 제외된다고 적혀 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "exponentially",
+    "PartOfSpeech": "adv",
+    "Meaning": "기하급수적으로",
+    "Example": "Cloud storage demands have grown exponentially over five years.",
+    "ExampleKo": "클라우드 저장소 수요는 5년에 걸쳐 기하급수적으로 증가했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "extensively",
+    "PartOfSpeech": "adv",
+    "Meaning": "광범위하게, 널리",
+    "Example": "The new medication was tested extensively across five countries.",
+    "ExampleKo": "새 약품은 5개국에 걸쳐 광범위하게 임상 테스트를 거쳤습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "firmly",
+    "PartOfSpeech": "adv",
+    "Meaning": "확고하게, 단호히",
+    "Example": "Management firmly believes in cultivating internal employee leadership.",
+    "ExampleKo": "경영진은 사내 직원의 리더십을 육성하는 것을 확고하게 신뢰합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "formally",
+    "PartOfSpeech": "adv",
+    "Meaning": "공식적으로, 격식 있게",
+    "Example": "The international merger was formally announced at the stock exchange.",
+    "ExampleKo": "국제 합병은 증권거래소에서 공식적으로 발표되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "fundamentally",
+    "PartOfSpeech": "adv",
+    "Meaning": "근본적으로",
+    "Example": "Artificial intelligence fundamentally transformed our data analysis.",
+    "ExampleKo": "인공지능은 당사의 데이터 분석 방식을 근본적으로 변화시켰습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "hardly",
+    "PartOfSpeech": "adv",
+    "Meaning": "거의 ~않다",
+    "Example": "We could hardly keep up with the unexpected surge in orders.",
+    "ExampleKo": "저희는 예상치 못한 주문 급증을 거의 따라잡기 힘들었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "highly",
+    "PartOfSpeech": "adv",
+    "Meaning": "대단히, 매우",
+    "Example": "The cloud management software comes highly recommended by auditors.",
+    "ExampleKo": "그 클라우드 관리 소프트웨어는 감사관들에 의해 대단히 추천받고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "immensely",
+    "PartOfSpeech": "adv",
+    "Meaning": "엄청나게, 대단히",
+    "Example": "Her previous logistics experience helped the startup immensely.",
+    "ExampleKo": "그녀의 이전 물류 경험은 스타트업에 엄청난 도움이 되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "increasingly",
+    "PartOfSpeech": "adv",
+    "Meaning": "점점 더, 갈수록",
+    "Example": "Online security has become an increasingly urgent priority.",
+    "ExampleKo": "온라인 보안은 갈수록 더욱 시급한 최우선 과제가 되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "initially",
+    "PartOfSpeech": "adv",
+    "Meaning": "처음에는, 초기에",
+    "Example": "The team was initially skeptical of transitioning to agile sprints.",
+    "ExampleKo": "팀은 처음에는 애자일 스프린트로 전환하는 것에 회의적이었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "instantly",
+    "PartOfSpeech": "adv",
+    "Meaning": "즉각, 즉시",
+    "Example": "Subscribers can access digital editions instantly upon publication.",
+    "ExampleKo": "구독자들은 출간 즉시 디지털 판에 접속할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "invariably",
+    "PartOfSpeech": "adv",
+    "Meaning": "변함없이, 언제나",
+    "Example": "Friday afternoon meetings invariably run longer than anticipated.",
+    "ExampleKo": "금요일 오후 회의는 변함없이 예상보다 길어지곤 합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "mutually",
+    "PartOfSpeech": "adv",
+    "Meaning": "상호 간에, 서로",
+    "Example": "Both firms signed a mutually advantageous distribution agreement.",
+    "ExampleKo": "두 회사는 상호 유리한 유통 계약에 서명했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "notably",
+    "PartOfSpeech": "adv",
+    "Meaning": "특히, 현저하게",
+    "Example": "Several regional branches, notably Chicago, beat their sales goals.",
+    "ExampleKo": "몇몇 지역 지사들, 특히 시카고 지사는 판매 목표를 초과 달성했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "officially",
+    "PartOfSpeech": "adv",
+    "Meaning": "공식적으로",
+    "Example": "The new high-speed rail corridor officially opens this Friday.",
+    "ExampleKo": "새로운 고속철도 노선은 이번 주 금요일에 공식 개통합니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "ordinarily",
+    "PartOfSpeech": "adv",
+    "Meaning": "보통, 대체로",
+    "Example": "Travel reimbursements are processed within five business days ordinarily.",
+    "ExampleKo": "출장비 환급은 통상적으로 5 영업일 이내에 처리됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "overwhelmingly",
+    "PartOfSpeech": "adv",
+    "Meaning": "압도적으로",
+    "Example": "Stockholders overwhelmingly supported the green energy initiative.",
+    "ExampleKo": "주주들은 친환경 에너지 추진안을 압도적으로 지지했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "periodically",
+    "PartOfSpeech": "adv",
+    "Meaning": "주기적으로, 정기적으로",
+    "Example": "Security keys are periodically refreshed to thwart cyber intruders.",
+    "ExampleKo": "사이버 침입자를 차단하기 위해 보안 키는 주기적으로 갱신됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "permanently",
+    "PartOfSpeech": "adv",
+    "Meaning": "영구적으로",
+    "Example": "The downtown satellite branch will be closed permanently in March.",
+    "ExampleKo": "시내 위성 지사는 3월에 영구 폐쇄될 예정입니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "potentially",
+    "PartOfSpeech": "adv",
+    "Meaning": "잠재적으로, 어쩌면",
+    "Example": "The patent litigation could potentially cost the firm millions.",
+    "ExampleKo": "그 특허 소송은 잠재적으로 기업에 수백만 달러의 비용을 치르게 할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "previously",
+    "PartOfSpeech": "adv",
+    "Meaning": "이전에, 미리",
+    "Example": "She previously served as senior vice president of supply chain.",
+    "ExampleKo": "그녀는 이전에 공급망 담당 수석 부사장을 역임했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "primarily",
+    "PartOfSpeech": "adv",
+    "Meaning": "주로, 기본적으로",
+    "Example": "Revenue growth was driven primarily by overseas enterprise software sales.",
+    "ExampleKo": "매출 성장은 주로 해외 기업용 소프트웨어 판매에 의해 견인되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "properly",
+    "PartOfSpeech": "adv",
+    "Meaning": "제대로, 적절하게",
+    "Example": "Ensure all chemical containers are sealed and properly labeled.",
+    "ExampleKo": "모든 화학물질 용기가 밀봉되고 제대로 라벨이 부착되었는지 확인하십시오.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "rapidly",
+    "PartOfSpeech": "adv",
+    "Meaning": "급속히, 빠르게",
+    "Example": "Digital payment adoption expanded rapidly among small business merchants.",
+    "ExampleKo": "소상공인들 사이에서 디지털 결제 도입이 급속히 확산되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "readily",
+    "PartOfSpeech": "adv",
+    "Meaning": "손쉽게, 기꺼이",
+    "Example": "Spare replacement filters are readily available at retail hardware stores.",
+    "ExampleKo": "교체용 예비 필터는 철물 소매점에서 손쉽게 구할 수 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "reluctantly",
+    "PartOfSpeech": "adv",
+    "Meaning": "마지못해, 꺼려하며",
+    "Example": "The council reluctantly accepted the tax assessment increase.",
+    "ExampleKo": "시의회는 마지못해 세금 평가액 인상을 수용했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "remarkably",
+    "PartOfSpeech": "adv",
+    "Meaning": "놀랍게도, 두드러지게",
+    "Example": "The factory operated remarkably smoothly despite supply chain headwinds.",
+    "ExampleKo": "공장은 공급망 역풍에도 불구하고 놀라울 정도로 순조롭게 가동되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "repeatedly",
+    "PartOfSpeech": "adv",
+    "Meaning": "반복적으로, 거듭",
+    "Example": "Technicians repeatedly tested the elevator emergency brake cables.",
+    "ExampleKo": "기술자들은 엘리베이터 비상 브레이크 케이블을 거듭 테스트했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "routinely",
+    "PartOfSpeech": "adv",
+    "Meaning": "일상적으로, 판에 박힌 듯",
+    "Example": "All incoming email attachments are routinely scanned for trojans.",
+    "ExampleKo": "수신되는 모든 이메일 첨부파일은 일상적으로 악성코드 검사를 받습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "scrupulously",
+    "PartOfSpeech": "adv",
+    "Meaning": "꼼꼼하게, 양심적으로",
+    "Example": "The research team scrupulously tracked every statistical anomaly.",
+    "ExampleKo": "연구팀은 모든 통계적 이상 징후를 꼼꼼하게 추적했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "seamlessly",
+    "PartOfSpeech": "adv",
+    "Meaning": "매끄럽게, 빈틈없이",
+    "Example": "The upgraded database integrated seamlessly with the analytics suite.",
+    "ExampleKo": "업그레이드된 데이터베이스는 분석 프로그램과 매끄럽게 연동되었습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "sharply",
+    "PartOfSpeech": "adv",
+    "Meaning": "날카롭게, 급격하게",
+    "Example": "Corporate earnings dropped sharply following the sudden currency devaluation.",
+    "ExampleKo": "갑작스러운 통화 가치 하락 이후 기업 순이익이 급격하게 감소했습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "significantly",
+    "PartOfSpeech": "adv",
+    "Meaning": "상당히, 의미 있게",
+    "Example": "The new robotic arms significantly improved warehouse sorting accuracy.",
+    "ExampleKo": "새 로봇 팔은 물류창고의 분류 정확도를 상당히 향상시켰습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "specifically",
+    "PartOfSpeech": "adv",
+    "Meaning": "구체적으로, 명확히",
+    "Example": "The contract specifically assigns copyright ownership to the publisher.",
+    "ExampleKo": "계약서는 저작권 소유권을 출판사에 명확히 귀속시키고 있습니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "strictly",
+    "PartOfSpeech": "adv",
+    "Meaning": "엄격히, 오로지",
+    "Example": "Visitors are strictly prohibited from photographing lab prototypes.",
+    "ExampleKo": "방문객은 실험실 시제품을 촬영하는 것이 엄격히 금지됩니다.",
+    "Tier": "2-중급"
+  },
+  {
+    "Word": "substantially",
+    "PartOfSpeech": "adv",
+    "Meaning": "상당히, 실질적으로",
+    "Example": "Switching to LED fixtures substantially decreased monthly electric bills.",
+    "ExampleKo": "LED 조명으로 교체한 후 월간 전기 요금이 상당히 줄어들었습니다.",
+    "Tier": "2-중급"
+  }
+]
