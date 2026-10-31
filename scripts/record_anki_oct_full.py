@@ -61,10 +61,11 @@ days = [
     '2026-10-28',
     '2026-10-29',
     '2026-10-30',
+    '2026-10-31',
 ]
 
 for d_str in days:
-    is_today = (d_str == '2026-10-30')
+    is_today = (d_str == '2026-10-31')
     status_label = "진행 중" if is_today else "마감"
     y, m, d = map(int, d_str.split('-'))
     s_dt = datetime(y, m, d, 4, 0, 0, tzinfo=KST)
@@ -306,4 +307,4 @@ assert not con_db.execute('PRAGMA foreign_key_check').fetchall()
 con_db.close()
 con_anki.close()
 
-print(f"Successfully recorded all {len(days)} days from 2026-10-20 to 2026-10-30 in database!")
+print(f"Successfully recorded all {len(days)} days from 2026-10-20 to 2026-10-31 in database!")

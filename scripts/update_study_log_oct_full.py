@@ -47,7 +47,7 @@ for d_str, payload_str in rows:
     y, m, d = map(int, d_str.split('-'))
     target_dt = datetime(y, m, d, tzinfo=KST)
     d_day = (EXAM_DATE - target_dt).days
-    is_today = (d_str == '2026-10-30')
+    is_today = (d_str == '2026-10-31')
     status_label = "진행 중" if is_today else "마감"
 
     s_dt = datetime(y, m, d, 4, 0, 0, tzinfo=KST)
@@ -131,4 +131,4 @@ else:
     updated_content = content + "\n\n" + full_new_content + "\n"
 
 LOG_FILE.write_text(updated_content, encoding='utf-8')
-print("Successfully updated JLPT_STUDY_LOG.md with all entries from 2026-10-20 to 2026-10-30!")
+print("Successfully updated JLPT_STUDY_LOG.md with all entries from 2026-10-20 to 2026-10-31!")
