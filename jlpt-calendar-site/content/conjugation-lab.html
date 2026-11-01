@@ -1,0 +1,153 @@
+<div id="katsuyo-lab">
+<style>
+#katsuyo-lab{color:var(--foreground);display:grid;gap:calc(var(--font-size-base)*1);overflow-wrap:anywhere}
+#katsuyo-lab [hidden]{display:none!important}
+#katsuyo-lab .stack{display:grid;gap:calc(var(--font-size-base)*.75)}
+#katsuyo-lab .space{margin-top:calc(var(--font-size-base)*.75)}
+#katsuyo-lab .change{background:var(--accent);color:var(--accent-foreground);text-decoration:underline;text-underline-offset:.2em}
+#katsuyo-lab .step{border-left:2px solid var(--border);padding-left:calc(var(--font-size-base)*1)}
+#katsuyo-lab .answers{display:grid;gap:calc(var(--font-size-base)*.5)}
+#katsuyo-lab .review{border-top:1px solid var(--border);padding-top:calc(var(--font-size-base)*1)}
+#katsuyo-lab .focus{font-weight:500}
+</style>
+<h2>활용형 실험실</h2>
+<div id="kl-menu" class="viz-controls" aria-label="학습 모드">
+<button class="btn" data-mode="map" aria-pressed="true">활용 지도</button>
+<button class="btn" data-mode="chain" aria-pressed="false">문장 분해기</button>
+<button class="btn" data-mode="train" aria-pressed="false">적용 훈련</button>
+</div>
+<section id="kl-map" class="stack">
+<div class="viz-controls">
+<label class="form-label">품사<select id="kl-kind" class="form-select"><option value="verb">동사</option><option value="adjective">형용사·명사</option></select></label>
+<label class="form-label">단어<select id="kl-word" class="form-select"></select></label>
+<label class="form-check"><input id="kl-help" type="checkbox" class="form-check-input" checked><span class="form-check-label">한국어 설명·읽기</span></label>
+</div>
+<div id="kl-group"></div>
+<div id="kl-forms" class="viz-controls" aria-label="활용 선택"></div>
+<div id="kl-transform" class="stack" aria-live="polite"></div>
+<details><summary>기억할 규칙 펼치기</summary><div id="kl-rules" class="stack space"></div></details>
+</section>
+<section id="kl-chain" class="stack" hidden>
+<label class="form-label">분해할 표현<select id="kl-expression" class="form-select"></select></label>
+<div id="kl-chain-view" class="stack" aria-live="polite"></div>
+<div class="viz-controls"><button id="kl-back-step" class="btn">이전 단계</button><button id="kl-next-step" class="btn btn-primary">다음 단계</button></div>
+</section>
+<section id="kl-train" class="stack" hidden lang="ja">
+<div id="kl-intro" class="stack"><h3>活用・接続トレーニング</h3><p>自作問題・全24問・時間制限なし。最もよいものを一つ選んでください。「分からない」も選べます。</p><p>開始後は学習画面に戻れません。採点は提出後です。</p><button id="kl-start" class="btn btn-primary">開始する</button></div>
+<div id="kl-exam" class="stack" hidden>
+<div class="viz-row"><span id="kl-position"></span><span id="kl-type"></span><span id="kl-clock" class="tabular-nums">00:00</span></div>
+<p id="kl-prompt"></p><h3 id="kl-question"></h3>
+<form id="kl-options" class="answers"></form>
+<div class="viz-controls"><button id="kl-prev" class="btn">前へ</button><button id="kl-next" class="btn">次へ</button><button id="kl-clear" class="btn">選択を解除</button><button id="kl-submit" class="btn btn-primary">提出する</button></div>
+<div id="kl-confirm" class="stack" hidden><p id="kl-confirm-text"></p><div class="viz-controls"><button id="kl-confirm-yes" class="btn btn-primary">提出して採点する</button><button id="kl-confirm-no" class="btn">戻る</button></div></div>
+</div>
+<div id="kl-results" class="stack" hidden lang="ko" aria-live="polite"></div>
+</section>
+<script>
+(()=>{
+const root=document.getElementById('katsuyo-lab'),$=s=>root.querySelector('#kl-'+s);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const readings={勉強:'べんきょう',図書館:'としょかん',説明:'せつめい',準備:'じゅんび',練習:'れんしゅう',先生:'せんせい',学生:'がくせい',会社:'かいしゃ',会議:'かいぎ',予定:'よてい',意味:'いみ',毎日:'まいにち',明日:'あした',昨日:'きのう',今日:'きょう',全部:'ぜんぶ',宿題:'しゅくだい',資料:'しりょう',名前:'なまえ',部屋:'へや',静か:'しずか',元気:'げんき',大切:'たいせつ',高い:'たかい',高く:'たかく',高かっ:'たかかっ',良い:'よい',良く:'よく',良かっ:'よかっ',書:'か',読:'よ',話:'はな',聞:'き',待:'ま',買:'か',帰:'かえ',入:'はい',走:'はし',泳:'およ',遊:'あそ',死:'し',行:'い',食:'た',見:'み',起:'お',借:'か',来:'く',使:'つか',会:'あ',雨:'あめ',降:'ふ',母:'はは',子供:'こども',弟:'おとうと',私:'わたし',彼:'かれ',本:'ほん',忘:'わす',怒:'おこ',困:'こま',休:'やす',仕事:'しごと',家:'いえ',終:'お',時間:'じかん',持:'も',外:'そと',人:'ひと',無理:'むり',新し:'あたらし',早:'はや',遅:'おそ',毎朝:'まいあさ',水:'みず',飲:'の',薬:'くすり',必要:'ひつよう',参加:'さんか',約束:'やくそく',病院:'びょういん',医者:'いしゃ',忙し:'いそがし',少し:'すこし',安:'やす',音楽:'おんがく',聞こえ:'きこえ',歩:'ある'};
+Object.assign(readings,{使役:'しえき',可能:'かのう',過去:'かこ',否定:'ひてい',一つ:'ひとつ',経験:'けいけん',文:'ぶん',最も:'もっとも',近い:'ちかい',多く:'おおく',内容:'ないよう',合う:'あう',努力:'どりょく',今:'いま',財布:'さいふ',形:'けい',選:'えら',限:'かぎ',残:'のこ'});
+const readingKeys=Object.keys(readings).sort((a,b)=>b.length-a.length);
+function ruby(s){let out='',i=0;while(i<s.length){let k=readingKeys.find(k=>s.startsWith(k,i));if(k){out+=`<ruby>${esc(k)}<rt>${readings[k]}</rt></ruby>`;i+=k.length}else out+=esc(s[i++])}return out}
+const verbs=[
+['書く','かく','쓰다',1],['読む','よむ','읽다',1],['話す','はなす','말하다',1],['聞く','きく','듣다',1],['待つ','まつ','기다리다',1],['買う','かう','사다',1],['帰る','かえる','돌아가다',1],['入る','はいる','들어가다',1],['走る','はしる','달리다',1],['泳ぐ','およぐ','헤엄치다',1],['遊ぶ','あそぶ','놀다',1],['死ぬ','しぬ','죽다',1],['行く','いく','가다',1],['食べる','たべる','먹다',2],['見る','みる','보다',2],['起きる','おきる','일어나다',2],['借りる','かりる','빌리다',2],['する','する','하다',3],['来る','くる','오다',3],['勉強する','べんきょうする','공부하다',3],['ある','ある','있다',1]
+].map(([w,r,ko,g])=>({w,r,ko,g}));
+const adjectives=[{w:'高い',r:'たかい',ko:'비싸다·높다',g:'i'},{w:'いい',r:'いい',ko:'좋다',g:'ii'},{w:'静か',r:'しずか',ko:'조용하다',g:'na'},{w:'元気',r:'げんき',ko:'건강하다·활기차다',g:'na'},{w:'学生',r:'がくせい',ko:'학생',g:'noun'}];
+const verbForms=[['nai','ない형','부정'],['masu','ます형','정중'],['te','て형','연결'],['ta','た형','과거'],['ba','ば형','조건'],['potential','가능형','할 수 있다'],['passive','수동형','행위를 받다'],['causative','사역형','시키다·하게 하다'],['cp','사역수동형','시킴을 받다'],['volitional','의지형','하자·해야지']];
+const adjForms=[['plain','기본형','서술'],['nai','부정','~지 않다·아니다'],['ta','과거','~었다·였다'],['nakatta','과거 부정','~지 않았다·아니었다'],['te','연결','~고·~해서'],['ba','조건','~면'],['noun','명사 수식','~한 명사']];
+const aRow={'う':'わ','く':'か','ぐ':'が','す':'さ','つ':'た','ぬ':'な','ぶ':'ば','む':'ま','る':'ら'},iRow={'う':'い','く':'き','ぐ':'ぎ','す':'し','つ':'ち','ぬ':'に','ぶ':'び','む':'み','る':'り'},eRow={'う':'え','く':'け','ぐ':'げ','す':'せ','つ':'て','ぬ':'ね','ぶ':'べ','む':'め','る':'れ'},oRow={'う':'お','く':'こ','ぐ':'ご','す':'そ','つ':'と','ぬ':'の','ぶ':'ぼ','む':'も','る':'ろ'};
+function conjugate(v,f){const w=v.w,s=w.slice(0,-1),l=w.slice(-1);if(f==='plain')return w;
+if(v.g===3){let p=w.endsWith('する')?w.slice(0,-2):'';return w==='来る'?{nai:'来ない',masu:'来ます',te:'来て',ta:'来た',ba:'来れば',potential:'来られる',passive:'来られる',causative:'来させる',cp:'来させられる',volitional:'来よう'}[f]:p+{nai:'しない',masu:'します',te:'して',ta:'した',ba:'すれば',potential:'できる',passive:'される',causative:'させる',cp:'させられる',volitional:'しよう'}[f]}
+if(v.g===2)return s+{nai:'ない',masu:'ます',te:'て',ta:'た',ba:'れば',potential:'られる',passive:'られる',causative:'させる',cp:'させられる',volitional:'よう'}[f];
+if(f==='nai')return w==='ある'?'ない':s+aRow[l]+'ない';if(f==='masu')return s+iRow[l]+'ます';if(f==='ba')return s+eRow[l]+'ば';if(f==='potential')return s+eRow[l]+'る';if(f==='passive')return s+aRow[l]+'れる';if(f==='causative')return s+aRow[l]+'せる';if(f==='cp')return s+aRow[l]+'せられる';if(f==='volitional')return s+oRow[l]+'う';
+const t=w==='行く'?'って':({'う':'って','つ':'って','る':'って','む':'んで','ぶ':'んで','ぬ':'んで','く':'いて','ぐ':'いで','す':'して'}[l]);return s+(f==='ta'?t.replace('て','た').replace('で','だ'):t)}
+function adj(v,f){let s=v.g==='ii'?'よ':v.w.slice(0,-1);if(v.g==='i'||v.g==='ii')return {plain:v.w,nai:s+'くない',ta:s+'かった',nakatta:s+'くなかった',te:s+'くて',ba:s+'ければ',noun:v.w+'本'}[f];return v.w+{plain:'だ',nai:'ではない',ta:'だった',nakatta:'ではなかった',te:'で',ba:'なら',noun:v.g==='na'?(v.w==='静か'?'な部屋':'な人'):'の本'}[f]}
+function rules(v,f){if(typeof v.g==='string')return (v.g==='i'||v.g==='ii')?'い형용사: 마지막 い를 빼고 くない / かった / くて / ければ. いい는 いいです·いい本처럼 기본형을 쓸 때 외에는 よくない·よかった처럼 よい 계열로 바뀐다.':'な형용사·명사: 서술은 だ, 부정은 ではない, 과거는 だった, 연결은 で. 명사 앞에서는 な형용사에 な, 명사에 の. 이 화면의 なら는 조건 표현이며, であれば도 가능하다.';
+if(v.g===3)return v.w==='来る'?'불규칙: 来る(くる) → 来ない(こない)・来ます(きます)・来て(きて)・来た(きた)・来れば(くれば)・来られる(こられる). 한자는 같아도 읽기가 바뀐다.':'する 계열은 통째로 기억: しない・します・して・した・すれば・できる・される・させる・させられる・しよう.';
+if(v.g===2)return '2그룹(一段): 마지막 る를 빼고 붙인다. 食べ＋ない / ます / て / た / れば / られる / させる. 가능과 수동은 모두 ～られる라서 문맥으로 구별한다.';
+return ({nai:'1그룹: 끝소리를 あ단으로 바꾸고 ない. う는 わない. ある의 부정은 예외로 ない.',masu:'1그룹: 끝소리를 い단으로 바꾸고 ます. ます 앞부분은 ～ながら・～に行く 같은 표현에도 쓰인다.',te:'1그룹 て형: う・つ・る→って / む・ぶ・ぬ→んで / く→いて / ぐ→いで / す→して. 行く만 行って.',ta:'た형은 て형의 て→た, で→だ. 書いて→書いた, 読んで→読んだ. 行く는 行った.',ba:'1그룹: 끝소리를 え단으로 바꾸고 ば. 書けば・読めば. 조건 표현은 ば 외에 たら・なら・と도 있으므로 문맥을 확인한다.',potential:'1그룹: え단＋る. 書ける・読める. 수동의 あ단＋れる와 구별한다.',passive:'1그룹: あ단＋れる. 書かれる・読まれる. 누가 행위를 받는지 조사와 문맥을 확인한다.',causative:'1그룹: あ단＋せる. 書かせる・読ませる. 시키는 사람과 실제 행동하는 사람을 구별한다.',cp:'정식 사역수동형: あ단＋せられる. 読ませられる는 読まされる로 줄기도 한다. す로 끝나는 話す는 話させられる를 쓴다.',volitional:'1그룹: お단＋う. 書こう・読もう. 2그룹은 る를 빼고 よう.'})[f]}
+const chains=[
+{name:'書かなければならない',steps:[['書く','쓰다','기본 동사'],['書かない','쓰지 않다','1그룹: く → か＋ない'],['書かなければ','쓰지 않으면','ない의 마지막 い → ければ'],['書かなければならない','써야 한다','부정 조건＋ならない → 의무']],note:'書かなくてもいい는 쓰지 않아도 된다. 의무와 허용을 구별한다.'},
+{name:'読んでしまった',steps:[['読む','읽다','기본 동사'],['読んで','읽고','む → んで'],['読んでしまう','다 읽다·읽어 버리다','て형＋しまう: 완료, 문맥에 따라 아쉬움'],['読んでしまった','다 읽었다·읽어 버렸다','뒤의 しまう를 과거형으로 바꾼다']],note:'しまった가 항상 후회를 뜻하지는 않는다. 全部처럼 완료를 나타내는 문맥도 확인한다.'},
+{name:'食べられなかった',steps:[['食べる','먹다','2그룹 동사'],['食べられる','먹을 수 있다 / 먹히다','る를 빼고 られる. 이 단계만으로 가능·수동을 확정할 수 없다.'],['食べられない','먹을 수 없다 / 먹히지 않는다','食べられる를 2그룹처럼 활용'],['食べられなかった','먹을 수 없었다 / 먹히지 않았다','ない → なかった']],note:'私は忙しくて食べられなかった에서는 가능. 私のケーキは弟に食べられた에서는 수동. 같은 형태의 존경 용법도 있어 문맥이 필요하다.'},
+{name:'読ませられた',steps:[['読む','읽다','기본 동사'],['読ませる','읽게 하다','1그룹 사역: む → ま＋せる'],['読ませられる','읽도록 시킴을 받다','사역형의 る → られる'],['読ませられた','읽도록 시킴을 받았다','사역수동형의 る → た']],note:'読まされた로 줄기도 한다. 시키는 사람은 に, 실제로 읽은 사람은 は로 표시될 수 있다.'},
+{name:'書くようにしている',steps:[['書く','쓰다','기본 동사'],['書くようにする','쓰도록 하다·노력하다','동사 사전형＋ようにする'],['書くようにしている','쓰려고 평소에 노력하고 있다','する → している: 지속적 실천']],note:'書けるようになる는 쓸 수 있게 되다. 노력·습관인 ようにする와 변화인 ようになる를 구별한다.'},
+{name:'読んだことがある',steps:[['読む','읽다','기본 동사'],['読んだ','읽었다','む → んだ'],['読んだことがある','읽은 적이 있다','た형＋ことがある: 경험']],note:'読むことがある는 읽는 일이 있다(가끔). た형과 사전형의 차이가 의미를 바꾼다.'},
+{name:'読みながら',steps:[['読む','읽다','기본 동사'],['読みます','읽습니다','む → み＋ます'],['読み','읽기 / 읽는 동작','ます를 뺀 연결 부분'],['読みながら','읽으면서','ます를 뺀 형태＋ながら: 같은 주체의 동시 동작']],note:'読んでながら가 아니다. て형과 ます를 뺀 형태를 구별한다.'},
+{name:'高くなかった',steps:[['高い','비싸다·높다','い형용사'],['高くない','비싸지 않다·높지 않다','い → くない'],['高くなかった','비싸지 않았다·높지 않았다','ない → なかった']],note:'高いではない 대신 高くない. 정중한 표현은 高くありません도 가능하다.'},
+{name:'静かだったので',steps:[['静か','조용함','な형용사 어간'],['静かだった','조용했다','과거 서술: だった'],['静かだったので','조용했기 때문에','과거 보통형＋ので']],note:'현재는 静かなので. な형용사·명사 현재형은 ので 앞에 な를 쓴다. 静かだので는 틀리다.'},
+{name:'学生ではなかった',steps:[['学生','학생','명사'],['学生ではない','학생이 아니다','명사＋ではない'],['学生ではなかった','학생이 아니었다','ない → なかった']],note:'명사 수식은 学生の本. な형용사 수식은 静かな部屋. 같은 접속으로 처리하지 않는다.'}
+];
+// 자체 제작 학습용: 형태 변환은 비공식 기초훈련, 접속·의미는 문법형식 판단 연습.
+const questions=[];
+function q(id,type,sub,prompt,text,options,answer,ko,rule,trap,diff,example){questions.push({id,type,sub,prompt,text,options,answer,ko,rule,trap,diff,example})}
+q('f1','form','1그룹 음편','「書く」の「て形」を選んでください。','書く → （　）',['書いて','書って','書きて','書んで'],'書いて','쓰다 → 쓰고·써서','く → いて. 書く → 書いて.','書って는 う・つ・る의 규칙을 잘못 적용한 형태.','行く만 예외로 行って.','名前を書いてください。 / 이름을 써 주세요.');
+q('f2','form','1그룹 음편','「読む」の「た形」を選んでください。','読む → （　）',['読んだ','読みた','読った','読いた'],'読んだ','읽다 → 읽었다','む → んで → んだ.','읽기의 ます형 読みます와 た형을 혼합하지 않는다.','て형 読んで / 과거 読んだ.','昨日、本を読んだ。 / 어제 책을 읽었다.');
+q('f3','form','る로 끝나는 1그룹','「帰る」の「ない形」を選んでください。','帰る → （　）',['帰らない','帰ない','帰りない','帰れない'],'帰らない','돌아가다 → 돌아가지 않는다','帰る는 1그룹. る → ら＋ない.','帰れない는 돌아갈 수 없다라는 가능 부정.','食べる는 2그룹이라 食べない.','今日は家に帰らない。 / 오늘은 집에 돌아가지 않는다.');
+q('f4','form','예외 음편','「行く」の「て形」を選んでください。','行く → （　）',['行って','行いて','行きて','行んで'],'行って','가다 → 가고·가서','行く는 く→いて 규칙의 예외. 行って.','일반적인 く 규칙으로 만든 行いて는 틀리다.','書く→書いて / 行く→行って.','図書館に行って、本を借りる。 / 도서관에 가서 책을 빌린다.');
+q('f5','form','가능·수동 구별','「話す」の「可能形」を選んでください。','話す → （　）',['話せる','話される','話させる','話そう'],'話せる','말하다 → 말할 수 있다','1그룹 가능: え단＋る → 話せる.','話される는 수동·존경, 話させる는 사역.','가능 せる / 수동 される / 사역 させる.','少し話せる。 / 조금 말할 수 있다.');
+q('f6','form','2그룹 사역','「食べる」の「使役形」を選んでください。','食べる → （　）',['食べさせる','食べられる','食べれる','食べせる'],'食べさせる','먹다 → 먹게 하다','2그룹: る를 빼고 させる.','1그룹의 せる만 붙이면 食べせる라는 잘못된 형태.','食べられる는 가능·수동·존경. 시험용 기본 가능형은 ら를 유지한다.','母は子供にケーキを食べさせた。 / 어머니는 아이에게 케이크를 먹게 했다.');
+q('f7','form','いい의 예외 활용','「いい」の過去の形を選んでください。','いい → （　）',['よかった','いかった','いいだった','よいだった'],'よかった','좋다 → 좋았다','いい의 활용은 よい 계열: よかった.','い를 기계적으로 떼면 いかった가 되어 틀린다.','부정 よくない / 연결 よくて.','この本はよかった。 / 이 책은 좋았다.');
+q('f8','form','な형용사 과거 부정','「静かだ」の過去の否定を選んでください。','静かだ → （　）',['静かではなかった','静かくなかった','静かではない','静かだった'],'静かではなかった','조용하다 → 조용하지 않았다','な형용사＋ではなかった.','静かくなかった는 い형용사 규칙을 잘못 쓴 형태.','현재 부정 ではない / 과거 부정 ではなかった.','昨日の部屋は静かではなかった。 / 어제 방은 조용하지 않았다.');
+q('c1','connect','경험의 た형','（　）に入るものを一つ選んでください。','私はこの本を（　）ことがある。意味は「この本を読んだ経験がある」である。',['読んだ','読む','読んで','読み'],'読んだ','나는 이 책을 읽은 적이 있다.','경험: た형＋ことがある.','読むことがある도 문법적으로 가능하지만 가끔 읽는다는 뜻이라 제시된 경험의 의미와 다르다.','た형＋ことがある=경험 / 사전형＋ことがある=가끔 일어남.','この薬を飲んだことがある。 / 이 약을 먹어 본 적이 있다.');
+q('c2','connect','동시 동작의 ます어간','（　）に入るものを一つ選んでください。','私は音楽を（　）ながら歩いた。',['聞き','聞く','聞いて','聞いた'],'聞き','나는 음악을 들으면서 걸었다.','동시 동작: ます를 뺀 형태＋ながら. 聞きます→聞き.','て형 聞いて를 붙이지 않는다.','てから는 ~한 후에로 순서, ながら는 동시.','本を読みながら待つ。 / 책을 읽으면서 기다린다.');
+q('c3','connect','의무 표현의 부정 연결','（　）に入るものを一つ選んでください。','明日までに資料を（　）なければならない。',['書か','書き','書く','書いて'],'書か','내일까지 자료를 써야 한다.','書かない→書かなければならない. 빈칸 뒤에 なければ가 있으므로 書か를 넣는다.','빈칸 뒤의 형태까지 확인해야 한다. ない 전체를 또 넣지 않는다.','書かなくてもいい는 쓰지 않아도 된다.','毎日、薬を飲まなければならない。 / 매일 약을 먹어야 한다.');
+q('c4','connect','な형용사＋ので','（　）に入るものを一つ選んでください。','この部屋は静か（　）ので、勉強しやすい。',['な','だ','の','に'],'な','이 방은 조용해서 공부하기 편하다.','현재 な형용사＋な＋ので.','静かだので는 틀리다.','静かだから / 静かなので. 원인을 나타내는 표현에 따라 접속이 다르다.','今日は元気なので、外に行く。 / 오늘은 건강해서 밖에 간다.');
+q('c5','connect','명사 수식','（　）に入るものを一つ選んでください。','これは学生（　）本です。',['の','な','だ','に'],'の','이것은 학생의 책입니다.','명사＋の＋명사.','명사와 な형용사의 수식 형태를 섞지 않는다.','学生の本 / 静かな部屋.','先生の本を読む。 / 선생님의 책을 읽는다.');
+q('c6','connect','ようにする 접속','（　）に入るものを一つ選んでください。','毎日、本を（　）ようにしている。',['読む','読み','読んで','読め'],'読む','매일 책을 읽으려고 노력하고 있다.','사전형·ない형＋ようにする. 여기서는 読む.','ます를 뺀 読み나 て형을 직접 연결하지 않는다.','読むようにする=실천 노력 / 読めるようになる=능력 변화.','毎日、早く起きるようにしている。 / 매일 일찍 일어나려고 노력하고 있다.');
+q('c7','connect','て형＋しまう','（　）に入るものを一つ選んでください。','この本は昨日、全部（　）しまった。',['読んで','読む','読み','読んだ'],'読んで','이 책은 어제 전부 읽어 버렸다.','て형＋しまう. 과거는 뒤의 しまう→しまった에서 표현한다.','読んだしまった처럼 앞뒤에 과거형을 중복 연결하지 않는다.','全部 문맥에서는 완료가 중심. しまう가 언제나 후회는 아니다.','宿題を全部してしまった。 / 숙제를 전부 끝내 버렸다.');
+q('c8','connect','형용사 연결','（　）に入るものを一つ選んでください。','この本は安（　）、いい本だ。',['くて','いで','かったで','くだ'],'くて','이 책은 싸고 좋은 책이다.','い형용사 연결: い→くて. 安い→安くて.','な형용사 연결 で를 い형용사에 그대로 붙이지 않는다.','安くて / 静かで.','この部屋は静かで、いい。 / 이 방은 조용해서 좋다.');
+q('m1','meaning','가능 부정 과거','文の意味として、最も近いものを選んでください。','私は昨日、忙しくて本を読めなかった。',['本を読むことができなかった。','本を読む必要がなかった。','本を読むことをやめた。','本を読ませられた。'],'本を読むことができなかった。','나는 어제 바빠서 책을 읽을 수 없었다.','読む→読める→読めない→読めなかった. 가능＋부정＋과거.','읽지 않았다와 읽을 수 없었다는 다르다.','読まなかった=읽지 않았다 / 読めなかった=읽을 수 없었다.','昨日は外に行けなかった。 / 어제는 밖에 갈 수 없었다.');
+q('m2','meaning','수동의 행위자','文の意味として、最も近いものを選んでください。','私のケーキは弟に食べられた。',['弟が私のケーキを食べた。','私が弟のケーキを食べた。','弟はケーキを食べることができなかった。','私は弟にケーキを食べさせた。'],'弟が私のケーキを食べた。','내 케이크는 남동생에게 먹혔다.','이 문장의 食べられた는 수동. 弟に가 행위자를 표시한다.','られる라는 모양만 보고 가능이라고 단정하지 않는다.','私はケーキを食べられる에서는 가능 해석이 자연스럽다.','この本は多くの人に読まれている。 / 이 책은 많은 사람에게 읽히고 있다.');
+q('m3','meaning','사역의 행동 주체','文の内容と合うものを選んでください。','先生は学生に本を読ませた。',['本を読んだのは学生だ。','本を読んだのは先生だけだ。','学生は本を読むことができなかった。','学生は先生に本を読ませた。'],'本を読んだのは学生だ。','선생님은 학생에게 책을 읽게 했다.','先生=시키는 사람 / 学生=실제로 읽는 사람.','주어와 실제 행동 주체가 같다고 가정하지 않는다.','読まれた=읽혔다 / 読ませた=읽게 했다.','母は子供に水を飲ませた。 / 어머니는 아이에게 물을 마시게 했다.');
+q('m4','meaning','사역수동의 행동 주체','文の内容と合うものを選んでください。','私は先生に本を読ませられた。',['先生が私に本を読むようにさせた。','私が先生に本を読むようにさせた。','先生が私の本を読んだ。','私は本を読むことができなかった。'],'先生が私に本を読むようにさせた。','나는 선생님에게 책을 읽도록 시킴을 받았다.','読む→読ませる→読ませられる→読ませられた. 실제로 읽은 사람은 私.','先生に를 보고 선생님이 읽었다고 해석하지 않는다.','読まされた는 흔한 축약형. 모든 동사에 같은 축약을 적용하지 않는다.','私は母に薬を飲まされた。 / 나는 어머니가 시켜 약을 먹었다.');
+q('m5','meaning','의무와 허용','文の意味として、最も近いものを選んでください。','明日は会社に行かなくてもいい。',['明日は会社に行く必要がない。','明日は会社に行ってはいけない。','明日は会社に行かなければならない。','明日は会社に行くことができない。'],'明日は会社に行く必要がない。','내일은 회사에 가지 않아도 된다.','ない형의 い→くて＋もいい: ~하지 않아도 된다.','가지 않아도 된다를 가면 안 된다로 해석하지 않는다.','なくてもいい=불필요·허용 / てはいけない=금지 / なければならない=의무.','全部読まなくてもいい。 / 전부 읽지 않아도 된다.');
+q('m6','meaning','의도와 변화','文の意味として、最も近いものを選んでください。','私は毎朝、早く起きるようにしている。',['毎朝、早く起きるように努力している。','毎朝、早く起きることができなくなった。','昨日だけ早く起きた。','毎朝、母を早く起こしている。'],'毎朝、早く起きるように努力している。','나는 매일 아침 일찍 일어나려고 노력하고 있다.','사전형＋ようにしている: 평소 의식해서 실천함.','ようになる의 변화 의미와 혼동하지 않는다.','起きられるようになった=일어날 수 있게 되었다.','毎日、本を読むようにしている。 / 매일 책을 읽으려고 노력하고 있다.');
+q('m7','meaning','일반 부정과 가능 부정','文の意味として、最も近いものを選んでください。','私は昨日、本を読まなかった。',['昨日、私は本を読むことをしなかった。','昨日、私は本を読むことができなかったという意味に限る。','昨日、私は本を読ませられた。','昨日、私は本を読み終わった。'],'昨日、私は本を読むことをしなかった。','나는 어제 책을 읽지 않았다.','読む→読まない→読まなかった. 행위를 하지 않았다는 진술.','하지 않음만으로 능력이나 여건이 없었다고 단정할 수 없다.','読めなかった는 불가능을 나타내지만 読まなかった는 그 이유를 확정하지 않는다.','昨日は会社に行かなかった。 / 어제는 회사에 가지 않았다.');
+q('m8','meaning','완료와 후회','文の意味として、最も近いものを選んでください。','宿題は全部してしまったので、今は休んでいる。',['宿題が全部終わったので、休んでいる。','宿題はまだ全部残っている。','宿題をすることができなかった。','宿題をしてはいけないので、休んでいる。'],'宿題が全部終わったので、休んでいる。','숙제는 전부 끝냈기 때문에 지금은 쉬고 있다.','て형＋しまう는 완료를 나타낼 수 있다. 여기서는 全部와 休んでいる가 완료 해석을 뒷받침한다.','しまった를 무조건 실수·후회로 번역하지 않는다.','財布を忘れてしまった 같은 문맥에서는 아쉬움·유감이 드러난다.','この本は全部読んでしまった。 / 이 책은 전부 읽어 버렸다.');
+const typeNames={form:'형태 변환',connect:'문형 접속',meaning:'의미 해석'},typeJa={form:'活用・基礎練習',connect:'接続・文法形式',meaning:'意味・文法理解'};
+const shuffle=a=>{let b=a.slice();for(let i=b.length-1;i>0;i--){let j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]]}return b};
+let state={version:1,mode:'map',kind:'verb',word:0,form:'nai',help:true,chain:0,step:0,exam:null};let tick;
+function persist(){const e=state.exam;const mc={content:'활용형 실험실',mode:state.mode,selectedWord:(state.kind==='verb'?verbs:adjectives)[state.word]?.w,...(e?.done?{result:summary(e)}:{})};try{window.openai?.setWidgetState?.({modelContent:mc,privateContent:state})?.catch(()=>{})}catch{}}
+function useSaved(s){const x=s?.privateContent;if(x?.version!==1)return;state={...state,...x};if(!['map','chain','train'].includes(state.mode))state.mode='map';if(state.exam&&!Array.isArray(state.exam.order))state.exam=null;if(state.exam&&!state.exam.done)state.mode='train'}
+useSaved(window.openai?.widgetState);
+function mode(m){if(state.exam&&!state.exam.done&&m!=='train')return;state.mode=m;paintMode();persist()}
+function paintMode(){root.querySelector('#kl-menu').setAttribute('aria-label',state.exam&&!state.exam.done?'学習モード':'학습 모드');for(const m of ['map','chain','train'])$(m).hidden=state.mode!==m;root.querySelectorAll('[data-mode]').forEach(b=>{b.setAttribute('aria-pressed',b.dataset.mode===state.mode?'true':'false');b.disabled=!!(state.exam&&!state.exam.done&&b.dataset.mode!=='train');b.textContent=state.exam&&!state.exam.done?{map:'活用表',chain:'表現の分解',train:'トレーニング'}[b.dataset.mode]:{map:'활용 지도',chain:'문장 분해기',train:'적용 훈련'}[b.dataset.mode]});root.querySelector('h2').textContent=state.exam&&!state.exam.done?'活用トレーニング':'활용형 실험실'}
+root.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>mode(b.dataset.mode));
+function mapRender(){const list=state.kind==='verb'?verbs:adjectives;state.word=Math.min(Math.max(state.word,0),list.length-1);const v=list[state.word],forms=state.kind==='verb'?(v.w==='ある'?verbForms.slice(0,5):verbForms):adjForms;if(!forms.some(f=>f[0]===state.form))state.form=forms[0][0];$('kind').value=state.kind;$('help').checked=state.help;$('word').innerHTML=list.map((v,i)=>`<option value="${i}">${v.w}${state.help?' · '+v.r+' · '+v.ko:''}</option>`).join('');$('word').value=state.word;
+const group=state.kind==='verb'?`${v.g}グループ${v.g===1?'（五段）':v.g===2?'（一段）':'（不規則）'}`:({i:'い形容詞',ii:'い形容詞・例外',na:'な形容詞',noun:'名詞'}[v.g]);$('group').textContent=group+(state.help&&['帰る','入る','走る'].includes(v.w)?' · る로 끝나지만 1그룹':'');
+$('forms').innerHTML=forms.map(f=>`<button class="btn" data-form="${f[0]}" aria-pressed="${f[0]===state.form}">${state.help?f[1]:f[0]==='plain'?'基本形':f[0]==='noun'?'名詞修飾':state.kind==='verb'?{nai:'ない形',masu:'ます形',te:'て形',ta:'た形',ba:'ば形',potential:'可能形',passive:'受身形',causative:'使役形',cp:'使役受身形',volitional:'意向形'}[f[0]]:{nai:'否定',ta:'過去',nakatta:'過去否定',te:'接続',ba:'条件'}[f[0]]}</button>`).join('');
+let result=state.kind==='verb'?conjugate(v,state.form):adj(v,state.form);let same=0;while(same<Math.min(v.w.length,result.length)&&v.w[same]===result[same])same++;const show=state.help?ruby:esc;
+$('transform').innerHTML=`<div class="viz-row"><h3>${show(v.w)}</h3><span>→</span><h3>${show(result.slice(0,same))}<span class="change">${show(result.slice(same))}</span></h3></div>${state.help?`<p>${esc(v.ko)} → ${esc(forms.find(f=>f[0]===state.form)[2])}</p><p>${esc(rules(v,state.form))}</p>`:''}${state.help&&v.w==='来る'?'<p>읽기: '+({nai:'こない',masu:'きます',te:'きて',ta:'きた',ba:'くれば',potential:'こられる',passive:'こられる',causative:'こさせる',cp:'こさせられる',volitional:'こよう'}[state.form])+'</p>':''}${state.help&&v.w==='ある'?'<p>ある는 뜻에 맞는 형태를 골라 쓴다. 이 지도는 형태 규칙을 보여 주며, 가능·수동·사역처럼 단독으로 자연스럽게 쓰이지 않는 형태도 있다. 존재의 가능성은 문맥에 따라 あり得る 등으로 표현한다.</p>':''}`;
+// 来의 읽기는 활용에 따라 달라져, 위 결과에는 별도 읽기를 제공한다.
+if(v.w==='来る')$('transform').querySelectorAll('ruby').forEach(el=>el.replaceWith(el.firstChild));
+$('rules').innerHTML=state.kind==='verb'?'<p>① 먼저 그룹: 1그룹 / 2그룹 / する・来る.</p><p>② 1그룹은 끝소리를 이동: あ단=ない·수동·사역, い단=ます, え단=ば·가능, お단=의지.</p><p>③ て·た는 별도 묶음: うつる→って / むぶぬ→んで / く→いて / ぐ→いで / す→して. 行く는 行って.</p><p>④ 변형된 동사도 다시 활용: 読める→読めない→読めなかった.</p>':'<p>い형용사: 高い→高くない・高かった・高くて. いい→よくない・よかった.</p><p>な형용사: 静かだ→静かではない・静かだった・静かで. 명사 앞 静かな部屋.</p><p>명사: 学生だ→学生ではない・学生だった・学生で. 명사 앞 学生の本.</p>';
+$('forms').querySelectorAll('button').forEach(b=>b.onclick=()=>{state.form=b.dataset.form;mapRender();persist()})}
+$('kind').onchange=e=>{state.kind=e.target.value;state.word=0;state.form=state.kind==='verb'?'nai':'plain';mapRender();persist()};$('word').onchange=e=>{state.word=Number(e.target.value);mapRender();persist()};$('help').onchange=e=>{state.help=e.target.checked;mapRender();persist()};
+function chainRender(){const c=chains[state.chain]||chains[0];state.step=Math.min(state.step,c.steps.length-1);$('expression').innerHTML=chains.map((c,i)=>`<option value="${i}">${c.name}</option>`).join('');$('expression').value=state.chain;$('chain-view').innerHTML=c.steps.slice(0,state.step+1).map((s,i)=>`<div class="step stack"><span class="text-small">${i+1} / ${c.steps.length}</span><h3>${ruby(s[0])}</h3><p>${esc(s[1])}</p><p>${esc(s[2])}</p></div>`).join('')+(state.step===c.steps.length-1?`<p>${esc(c.note)}</p>`:'');$('back-step').disabled=state.step===0;$('next-step').disabled=state.step===c.steps.length-1}
+$('expression').onchange=e=>{state.chain=Number(e.target.value);state.step=0;chainRender();persist()};$('back-step').onclick=()=>{state.step--;chainRender();persist()};$('next-step').onclick=()=>{state.step++;chainRender();persist()};
+const fmt=ms=>{const s=Math.floor(ms/1000);return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`};
+const questionById=id=>questions.find(q=>q.id===id);
+function touch(){const e=state.exam;if(e&&!e.done){let now=Date.now();e.times[e.index]+=(now-e.entered);e.entered=now}}
+function start(){let order=['form','connect','meaning'].flatMap(t=>shuffle(questions.filter(q=>q.type===t)).map(q=>q.id));let correctPos=shuffle(Array.from({length:24},(_,i)=>i%4));let options={};order.forEach((id,i)=>{let q=questionById(id),a=shuffle(q.options.filter(v=>v!==q.answer));a.splice(correctPos[i],0,q.answer);options[id]=a});state.exam={order,options,answers:{},times:Array(24).fill(0),index:0,started:Date.now(),entered:Date.now(),done:false,confirm:false};state.mode='train';paintMode();examRender();persist()}
+function examRender(){let e=state.exam;$('intro').hidden=!!e;$('exam').hidden=!e||e.done;$('results').hidden=!e?.done;clearInterval(tick);if(!e)return;if(e.done){resultRender();return}let q=questionById(e.order[e.index]);$('position').textContent=`第${e.index+1}問 / ${e.order.length}問`;$('type').textContent=typeJa[q.type];$('clock').textContent=fmt(Date.now()-e.started);$('prompt').textContent=q.prompt;$('question').textContent=q.text;$('options').innerHTML=e.options[q.id].concat('分からない').map((c,i)=>`<label class="form-check"><input class="form-check-input" type="radio" name="kl-answer" value="${i===4?'unknown':i}" ${e.answers[q.id]===(i===4?'unknown':c)?'checked':''}><span class="form-check-label">${i===4?'':(i+1)+'. '}${esc(c)}</span></label>`).join('');$('prev').disabled=e.index===0;$('next').disabled=e.index===23;$('confirm').hidden=!e.confirm;$('confirm-text').textContent=`未回答は${e.order.filter(id=>!e.answers[id]).length}問です。提出後は変更できません。`;
+for(const id of ['prev','next','clear','submit'])$(id).disabled=e.confirm||(id==='prev'&&e.index===0)||(id==='next'&&e.index===23);$('options').querySelectorAll('input').forEach(x=>x.disabled=e.confirm);tick=setInterval(()=>{$('clock').textContent=fmt(Date.now()-e.started)},500)}
+$('start').onclick=start;$('options').onsubmit=e=>e.preventDefault();$('options').onchange=ev=>{let e=state.exam;if(!e||e.done||e.confirm)return;let id=e.order[e.index];e.answers[id]=ev.target.value==='unknown'?'unknown':e.options[id][Number(ev.target.value)];touch();persist()};
+for(const [id,delta] of [['prev',-1],['next',1]])$(id).onclick=()=>{let e=state.exam;if(!e||e.done||e.confirm)return;touch();e.index+=delta;examRender();persist()};$('clear').onclick=()=>{let e=state.exam;if(!e||e.done||e.confirm)return;touch();delete e.answers[e.order[e.index]];examRender();persist()};$('submit').onclick=()=>{if(state.exam.done)return;touch();state.exam.confirm=true;examRender();persist()};$('confirm-no').onclick=()=>{state.exam.confirm=false;examRender();persist()};
+function day(offset=0){const base=new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());let d=new Date(base+'T12:00:00+09:00');d.setUTCDate(d.getUTCDate()+offset);return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(d)}
+function status(q,e){let a=e.answers[q.id];return a===undefined?'unanswered':a==='unknown'?'unknown':a===q.answer?'correct':'wrong'}
+function summary(e){let groups={};for(let t of ['form','connect','meaning']){let qs=e.order.map(questionById).filter(q=>q.type===t);groups[t]={correct:qs.filter(q=>status(q,e)==='correct').length,total:qs.length,seconds:Math.round(qs.reduce((s,q)=>s+e.times[e.order.indexOf(q.id)],0)/1000)}}return {correct:e.order.filter(id=>status(questionById(id),e)==='correct').length,total:e.order.length,seconds:Math.floor(e.elapsed/1000),elapsed_ms:e.elapsed,groups}}
+function payload(){let e=state.exam;return {test_id:'conjugation-lab-v1',attempt_id:e.attemptId,source_class:'자체 제작',note:'형태 변환 8문항은 비공식 기초훈련. 문형 접속·의미 해석은 문법 연습. 공식 점수 환산 금지.',date:e.date,...summary(e),review_dates:e.reviewDates,attempts:e.order.map((id,i)=>{let q=questionById(id);return {id,type:q.type,subtype:q.sub,prompt:q.prompt,question:q.text,options:e.options[id],selected:e.answers[id]??null,correct:q.answer,state:status(q,e),seconds:Math.round(e.times[i]/1000),review_dates:['wrong','unknown'].includes(status(q,e))?e.reviewDates:[]}})}}
+$('confirm-yes').onclick=()=>{let e=state.exam;if(e.done)return;touch();e.done=true;e.confirm=false;e.elapsed=Date.now()-e.started;e.date=day();e.reviewDates=[1,3,7].map(n=>({interval:'D+'+n,date:day(n)}));e.attemptId='kl-'+e.started;clearInterval(tick);paintMode();examRender();persist()};
+function resultRender(){let e=state.exam,s=summary(e),counts={correct:0,wrong:0,unknown:0,unanswered:0};e.order.forEach(id=>counts[status(questionById(id),e)]++);$('results').innerHTML=`<h3>${s.correct} / ${s.total} · ${(s.correct/s.total*100).toFixed(1)}% · ${fmt(e.elapsed)}</h3><p>자체 제작 연습 · 오답 ${counts.wrong} · 分からない ${counts.unknown} · 미응답 ${counts.unanswered}</p><div class="table-responsive"><table class="table"><thead><tr><th>구분</th><th>정답률</th><th>평균 시간</th></tr></thead><tbody>${Object.entries(s.groups).map(([t,g])=>`<tr><td>${typeNames[t]}${t==='form'?' (비공식 기초)':''}</td><td>${g.correct}/${g.total} · ${(g.correct/g.total*100).toFixed(0)}%</td><td>${(g.seconds/g.total).toFixed(1)}초</td></tr>`).join('')}</tbody></table></div><div class="viz-controls"><button id="kl-copy" class="btn btn-primary">기록용 결과 펼치기</button><button id="kl-retry" class="btn">새 순서로 다시 풀기</button></div><div id="kl-export" hidden><label class="form-label">아래 결과를 복사해서 채팅에 보내면 학습 기록에 반영할 수 있어요.<textarea id="kl-payload" class="form-control" readonly rows="7"></textarea></label></div><p>학습 원장에는 아직 기록하지 않았어요. 재도전은 같은 문항이므로 독립적인 실력 측정과 구분해요.</p>`;
+let halves=[e.order.slice(0,12),e.order.slice(12)];let p=document.createElement('p');p.textContent=halves.map((ids,i)=>`${i===0?'전반':'후반'} ${ids.filter(id=>status(questionById(id),e)==='correct').length}/12 · 평균 ${(ids.reduce((a,id)=>a+e.times[e.order.indexOf(id)],0)/12000).toFixed(1)}초`).join(' / ');$('results').append(p);
+e.order.forEach((id,i)=>{let q=questionById(id),st=status(q,e),sec=document.createElement('details');sec.className='review';let dates=['wrong','unknown'].includes(st)?e.reviewDates.map(x=>x.interval+' '+x.date).join(' · '):st==='unanswered'?'미응답: 복습 완료로 처리하지 않음':'새 복습 일정 없음';sec.innerHTML=`<summary>${i+1}. ${{correct:'정답',wrong:'오답',unknown:'分からない',unanswered:'미응답'}[st]} · ${q.sub} · ${Math.round(e.times[i]/1000)}초</summary><div class="stack space"><p class="focus">문법 → ${q.type==='form'?'활용 기초훈련(비공식)':'문법형식 판단 연습'} → ${q.sub}</p><p>${ruby(q.prompt)}<br>${ruby(q.text)}</p><p>번역: ${esc(q.ko)}</p><p>내 선택: ${e.answers[id]==='unknown'?'分からない':ruby(e.answers[id]??'미응답')}<br>정답: ${ruby(q.answer)}</p><p>접속·의미: ${ruby(q.rule)}</p><p>함정: ${ruby(q.trap)}</p><p>유사 표현 차이: ${ruby(q.diff)}</p><p>추가 예문: ${ruby(q.example)}</p><p>다음 풀이: ${q.type==='form'?'그룹을 확인하고 끝소리를 바꾼 뒤 예외인지 확인한다.':q.type==='connect'?'빈칸 뒤 표현을 먼저 보고 필요한 접속을 정한 뒤 문장 전체를 읽는다.':'기본 동사를 찾고 가능·수동·사역과 부정·과거를 분리한 뒤 조사로 행동 주체를 확인한다.'}</p><p>제출 전 체크: ${q.type==='meaning'?'누가 실제로 행동했는가? 부정·과거를 빠뜨리지 않았는가?':'빈칸 앞뒤를 합쳐 실제 형태가 맞는가?'}</p><p>다음 복습: ${dates}</p></div>`;$('results').append(sec)});
+$('copy').onclick=()=>{$('export').hidden=false;$('payload').value='이 활용형 훈련의 실제 제출 결과를 중복 없이 기록해줘. 오답·모름만 새 D+1·D+3·D+7 복습으로 관리하고 기존 복습 사슬은 보존해줘. 미응답은 완료로 처리하지 말고, 타이머만 학습시간으로 반영해줘.\n'+JSON.stringify(payload(),null,2);$('payload').focus();$('payload').select()};$('retry').onclick=()=>{state.exam=null;examRender();persist()}}
+function renderAll(){mapRender();chainRender();paintMode();examRender()}
+window.addEventListener('openai:set_globals',ev=>{if(ev.detail?.globals?.widgetState){useSaved(ev.detail.globals.widgetState);renderAll()}});
+renderAll();
+})();
+</script>
+</div>

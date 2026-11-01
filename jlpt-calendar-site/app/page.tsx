@@ -6,7 +6,8 @@ import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
 const getDaysDiff = (targetDate: string) => Math.ceil((Date.parse(targetDate + 'T00:00:00+09:00') - Date.parse(getSeoulDate() + 'T00:00:00+09:00')) / 86400000);
 const examDaysLeft = () => Math.max(0, getDaysDiff('2026-12-06'));
-const nextMockDaysLeft = () => Math.max(0, getDaysDiff('2026-10-22'));
+const nextMockDate = () => Object.keys(SPECIAL_DATES).sort().find(date => date >= getSeoulDate() && SPECIAL_DATES[date].type === 'upcoming-mock');
+const nextMockDaysLeft = () => { const date = nextMockDate(); return date ? Math.max(0, getDaysDiff(date)) : 0; };
 
 const dateLabel = (date: string) => {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date);
@@ -37,7 +38,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     title: '第2回 N2 実戦模擬試験 (完了)',
     desc: '2023年12月 JLPT N2 過去問完本 102問完走 · 92/180点 (51/102問, 50.0%) 全領域足切り0件＆合格ライン突破！'
   },
-  '2026-10-22': {
+  '2026-11-08': {
     badge: '3次予定',
     type: 'upcoming-mock',
     title: '第3回 N2 実戦模擬試験 (2023年7月 過去問完本)',
@@ -46,7 +47,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     linkUrl: '/exams/past-exams-portal.html',
     linkText: '📋 2023.07 기출 분석 및 출제 경향 확인 ➔'
   },
-  '2026-11-01': {
+  '2026-11-15': {
     badge: '4次予定',
     type: 'upcoming-mock',
     title: '第4回 N2 実戦模擬試験 (2022年12月 過去問完本)',
@@ -55,7 +56,7 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     linkUrl: '/exams/past-exams-portal.html',
     linkText: '📋 2022.12 기출 분석 및 출제 경향 확인 ➔'
   },
-  '2026-11-15': {
+  '2026-11-22': {
     badge: '5次予定',
     type: 'upcoming-mock',
     title: '第5回 N2 実戦模擬試験 (2022年7月 過去問完本)',
@@ -125,6 +126,7 @@ export default function Home() {
     return () => { mounted = false; };
   }, []);
 
+  const upcomingMock = nextMockDate();
   const latest = reports.at(-1);
   const selected = reports.find(r => r.date === selectedDate);
   const selectedSpecial = SPECIAL_DATES[selectedDate];
@@ -155,16 +157,16 @@ export default function Home() {
           <h1 className="brand-title">学習カレンダー</h1>
         </div>
         <div className="exam-chips-group">
-          <button
+          {upcomingMock && <button
             type="button"
             className="exam-chip chip-mock"
-            onClick={() => { setSelectedDate('2026-10-22'); setVisibleMonth('2026-10'); }}
-            title="10月22日(木) 第3回実戦模試 (カレンダーで表示)"
+            onClick={() => { setSelectedDate(upcomingMock); setVisibleMonth(upcomingMock.slice(0, 7)); }}
+            title={`${dateLabel(upcomingMock)} ${SPECIAL_DATES[upcomingMock].title} (カレンダーで表示)`}
           >
             <span className="chip-dot pulse-amber" />
-            <span className="chip-title">10/22 第3回模試</span>
+            <span className="chip-title">{Number(upcomingMock.slice(5, 7))}/{Number(upcomingMock.slice(8, 10))} {SPECIAL_DATES[upcomingMock].title.match(/^第\d+回/)?.[0]}模試</span>
             <strong className="chip-dday">D-{mockDays}</strong>
-          </button>
+          </button>}
           <button
             type="button"
             className="exam-chip chip-exam"
@@ -191,6 +193,11 @@ export default function Home() {
           <div className="hub-group">
             <span className="hub-group-label">⚡ 活用特訓</span>
             <div className="hub-links">
+              <a className="hub-btn hub-btn-emerald" href="/learn/conjugation.html" aria-label="활용형 학습실 열기">
+                <span className="hub-icon" aria-hidden="true">🌱</span>
+                <span className="hub-text">활용형 학습실</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
               <a className="hub-btn hub-btn-amber" href="/exams/verb-speedrun-100.html" aria-label="動詞活用 SPEED RUN 100 練習を開く">
                 <span className="hub-icon" aria-hidden="true">⚡</span>
                 <span className="hub-text">動詞活用 SPEED RUN</span>
@@ -348,26 +355,14 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-10-22' ? 'active' : ''}`}
-                onClick={() => { setSelectedDate('2026-10-22'); setVisibleMonth('2026-10'); }}
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-08' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-08'); setVisibleMonth('2026-11'); }}
               >
-                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-10-22'))}</div>
-                <div className="ms-date">10/22 (木)</div>
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-08'))}</div>
+                <div className="ms-date">11/8 (日)</div>
                 <div className="ms-info">
                   <strong>第3回 N2 実戦模試 (2023.07)</strong>
                   <p>104問 全領域実戦 · 単語/文法成果検証 (目標 105点+)</p>
-                </div>
-              </button>
-              <button
-                type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-11-01' ? 'active' : ''}`}
-                onClick={() => { setSelectedDate('2026-11-01'); setVisibleMonth('2026-11'); }}
-              >
-                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-01'))}</div>
-                <div className="ms-date">11/1 (日)</div>
-                <div className="ms-info">
-                  <strong>第4回 N2 実戦模試 (2022.12)</strong>
-                  <p>104問 全領域実戦 · 難関文法/聴解即時応答点検</p>
                 </div>
               </button>
               <button
@@ -377,6 +372,18 @@ export default function Home() {
               >
                 <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-15'))}</div>
                 <div className="ms-date">11/15 (日)</div>
+                <div className="ms-info">
+                  <strong>第4回 N2 実戦模試 (2022.12)</strong>
+                  <p>104問 全領域実戦 · 難関文法/聴解即時応答点検</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-22' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-22'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-22'))}</div>
+                <div className="ms-date">11/22 (日)</div>
                 <div className="ms-info">
                   <strong>第5回 N2 実戦模試 (2022.07)</strong>
                   <p>104問 全領域実戦 · 110点防衛線確立 (目標 115点+)</p>
