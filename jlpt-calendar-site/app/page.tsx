@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import { activityKind, activityLabels, activityIcons } from '../lib/activity-kind.mjs';
 import { type DailyReport, domainLabel, formatAccuracy, formatClock, formatStudy, orderedDomains, orderedTypes, sourceLabel } from '../lib/reports';
 
 const getSeoulDate = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Asia/Seoul', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
@@ -23,6 +24,8 @@ interface SpecialDateInfo {
   subDesc?: string;
   linkText?: string;
   linkUrl?: string;
+  resultSummary?: string;
+  resultDetail?: string;
 }
 
 const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
@@ -39,40 +42,50 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     desc: '2023年12月 JLPT N2 過去問完本 102問完走 · 92/180点 (51/102問, 50.0%) 全領域足切り0件＆合格ライン突破！'
   },
   '2026-11-08': {
-    badge: '3次予定',
-    type: 'upcoming-mock',
-    title: '第3回 N2 実戦模擬試験 (2023年7月 過去問完本)',
-    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 実戦規格',
+    badge: '3次完了',
+    type: 'completed-mock',
+    title: '第3回 N2 実戦模擬試験 (2023年7月・完了)',
+    desc: '正答49/101問 (48.5%) · 非公式参考得点86.6/180点 · 所要時間146分45秒',
+    resultSummary: '非公式参考得点: 86.6 / 180点（JLPT公式尺度得点・合否判定ではありません）',
+    resultDetail: '言語知識26/51問・30.6点 / 読解10/20問・30.0点 / 聴解13/30問・26.0点。誤答52・不明0・未回答0。復習: 11/9・11/11・11/15。',
     subDesc: '10월 단어 전권 완독 및 N2 문법 예문 복습 성과 중간 점검 (목표: 105점+ 돌파)',
-    linkUrl: '/exams/past-exams-portal.html',
-    linkText: '📋 2023.07 기출 분석 및 출제 경향 확인 ➔'
+    linkUrl: '/exams/n2-past-exam-202307-mock.html',
+    linkText: '📘 第3回 模試問題・解説 (101問) を開く ➔'
+  },
+  '2026-11-11': {
+    badge: '追加模試',
+    type: 'upcoming-mock',
+    title: '追加 N2 実戦模試 (2021年12月)',
+    desc: '11月11日（水）· 時間配分・新しい文脈での文法・長い聴解を確認',
+    subDesc: '2021年12月の未受験問題を使用予定。開始時刻は未定。11/8のD+3復習は別枠で実施予定。'
   },
   '2026-11-15': {
-    badge: '4次予定',
+    badge: '教本1回',
     type: 'upcoming-mock',
-    title: '第4回 N2 実戦模擬試験 (2022年12月 過去問完本)',
-    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 実戦規格',
-    subDesc: '고난도 문법 호응 및 청해 즉시응답 방어율 집중 점검 (목표: 110점 안정권)',
-    linkUrl: '/exams/past-exams-portal.html',
-    linkText: '📋 2022.12 기출 분석 및 출제 경향 확인 ➔'
+    title: 'JLPT 한권으로 끝내기 · 実戦模試 第1回',
+    desc: '所持する問題集の実戦模試 第1回を全領域受験',
+    subDesc: '時間配分と弱点補強の成果を確認 開始時刻は未定。'
   },
   '2026-11-22': {
-    badge: '5次予定',
+    badge: '教本2回',
     type: 'upcoming-mock',
-    title: '第5回 N2 実戦模擬試験 (2022年7月 過去問完本)',
-    desc: '言語知識・読解 72問 (105分) ＋ 聴解 32問 (50分) · 計104問 실전규격',
-    subDesc: '전 영역 과락 위험 제로 및 110점 방어선 공고화 (목표: 115점+ 고득점 도전)',
-    linkUrl: '/exams/past-exams-portal.html',
-    linkText: '📋 2022.07 기출 분석 및 출제 경향 확인 ➔'
+    title: 'JLPT 한권으로 끝내기 · 実戦模試 第2回',
+    desc: '所持する問題集の実戦模試 第2回を全領域受験',
+    subDesc: '文法・聴解の改善と正答根拠を確認 開始時刻は未定。'
   },
   '2026-11-29': {
-    badge: '最終模試',
+    badge: '教本3回',
     type: 'upcoming-mock',
-    title: '第6回 N2 ファイナル実戦リハーサル (D-7)',
-    desc: '본시험 1주일 전 최종 실전 리허설 · 실제 시험 시간표 100% 동일 적용 104문항 완본',
-    subDesc: '실전 시간 배분, 마킹 루틴, 멘탈 및 컨디션 최종 점검',
-    linkUrl: '/exams/past-exams-portal.html',
-    linkText: '📋 최종 실전 리허설 가이드 ➔'
+    title: 'JLPT 한권으로 끝내기 · 実戦模試 第3回',
+    desc: '所持する問題集の実戦模試 第3回を全領域受験',
+    subDesc: '本番1週間前の全領域リハーサル 開始時刻は未定。'
+  },
+  '2026-12-03': {
+    badge: '教本4回',
+    type: 'upcoming-mock',
+    title: 'JLPT 한권으로 끝내기 · 実戦模試 第4回',
+    desc: '所持する問題集の実戦模試 第4回を全領域受験',
+    subDesc: '本番3日前の最終リハーサル。12/4は誤答確認、12/5は軽い復習。 開始時刻は未定。'
   },
   '2026-12-06': {
     badge: '🎯 本番',
@@ -164,7 +177,7 @@ export default function Home() {
             title={`${dateLabel(upcomingMock)} ${SPECIAL_DATES[upcomingMock].title} (カレンダーで表示)`}
           >
             <span className="chip-dot pulse-amber" />
-            <span className="chip-title">{Number(upcomingMock.slice(5, 7))}/{Number(upcomingMock.slice(8, 10))} {SPECIAL_DATES[upcomingMock].title.match(/^第\d+回/)?.[0]}模試</span>
+            <span className="chip-title">{Number(upcomingMock.slice(5, 7))}/{Number(upcomingMock.slice(8, 10))} {SPECIAL_DATES[upcomingMock].title.match(/^第\d+回/)?.[0] || '追加'}模試</span>
             <strong className="chip-dday">D-{mockDays}</strong>
           </button>}
           <button
@@ -355,14 +368,26 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-11-08' ? 'active' : ''}`}
+                className={`milestone-item is-completed ${selectedDate === '2026-11-08' ? 'active' : ''}`}
                 onClick={() => { setSelectedDate('2026-11-08'); setVisibleMonth('2026-11'); }}
               >
-                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-08'))}</div>
+                <div className="ms-badge done">完了</div>
                 <div className="ms-date">11/8 (日)</div>
                 <div className="ms-info">
                   <strong>第3回 N2 実戦模試 (2023.07)</strong>
-                  <p>104問 全領域実戦 · 単語/文法成果検証 (目標 105点+)</p>
+                  <p>非公式参考86.6 / 180点 (49/101問 · 48.5%)</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-11' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-11'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-11'))}</div>
+                <div className="ms-date">11/11 (水)</div>
+                <div className="ms-info">
+                  <strong>追加 N2 実戦模試 (2021.12)</strong>
+                  <p>時間配分・文法・長い聴解を確認 · 開始時刻は未定</p>
                 </div>
               </button>
               <button
@@ -373,8 +398,8 @@ export default function Home() {
                 <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-15'))}</div>
                 <div className="ms-date">11/15 (日)</div>
                 <div className="ms-info">
-                  <strong>第4回 N2 実戦模試 (2022.12)</strong>
-                  <p>104問 全領域実戦 · 難関文法/聴解即時応答点検</p>
+                  <strong>JLPT 한권으로 끝내기 · 実戦模試 第1回</strong>
+                  <p>時間配分と弱点補強の成果を確認</p>
                 </div>
               </button>
               <button
@@ -385,8 +410,8 @@ export default function Home() {
                 <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-22'))}</div>
                 <div className="ms-date">11/22 (日)</div>
                 <div className="ms-info">
-                  <strong>第5回 N2 実戦模試 (2022.07)</strong>
-                  <p>104問 全領域実戦 · 110点防衛線確立 (目標 115点+)</p>
+                  <strong>JLPT 한권으로 끝내기 · 実戦模試 第2回</strong>
+                  <p>文法・聴解の改善と正答根拠を確認</p>
                 </div>
               </button>
               <button
@@ -397,8 +422,18 @@ export default function Home() {
                 <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-29'))}</div>
                 <div className="ms-date">11/29 (日)</div>
                 <div className="ms-info">
-                  <strong>第6回 ファイナルリハーサル</strong>
-                  <p>本番1週間前 · 時間配分＆実戦メンタル最終点検</p>
+                  <strong>JLPT 한권으로 끝내기 · 実戦模試 第3回</strong>
+                  <p>本番1週間前の全領域リハーサル</p>
+                </div>
+              </button>
+              <button type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-12-03' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-12-03'); setVisibleMonth('2026-12'); }}>
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-12-03'))}</div>
+                <div className="ms-date">12/3 (木)</div>
+                <div className="ms-info">
+                  <strong>JLPT 한권으로 끝내기 · 実戦模試 第4回</strong>
+                  <p>本番3日前 · 最終リハーサル・時間配分の確認</p>
                 </div>
               </button>
               <button
@@ -441,23 +476,23 @@ export default function Home() {
               {selectedSpecial.type === 'completed-mock' && (
                 <div className="callout-meta">
                   <span className="meta-highlight">
-                    {selectedDate === '2026-09-30'
+                    {selectedSpecial.resultSummary ?? (selectedDate === '2026-09-30'
                       ? '実戦換算得点: 92 / 180点 (合格基準90点突破！全領域足切り0件)'
-                      : '実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)'}
+                      : '実戦換算得点: 119 / 180点 (合格基準90点 & 目標110点突破！)')}
                   </span>
                   <span className="meta-sub">
-                    {selectedDate === '2026-09-30'
+                    {selectedSpecial.resultDetail ?? (selectedDate === '2026-09-30'
                       ? '正答 51/102問 (50.0%) · 所要時間 146分28秒 (言語知識 29点 · 読解 37点 · 聴解 26点)'
-                      : '正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)'}
+                      : '正答 71/107問 (66.4%) · 所要時間 115分36秒 (読解 76.2% · 聴解 75.0% 全領域過落なし)')}
                   </span>
                   <div style={{ marginTop: '10px' }}>
                     <a
-                      href={selectedDate === '2026-09-30' ? "/exams/n2-past-exam-202312-mock.html" : "/exams/n2-midterm-mock-exam-20260920.html"}
+                      href={selectedSpecial.linkUrl ?? (selectedDate === '2026-09-30' ? "/exams/n2-past-exam-202312-mock.html" : "/exams/n2-midterm-mock-exam-20260920.html")}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mock-exam-link-btn"
                     >
-                      {selectedDate === '2026-09-30' ? "📘 第2回 模試問題・解説 (102問) を開く ➔" : "📘 第1回 模試問題・解説 (107問) を開く ➔"}
+                      {selectedSpecial.linkText ?? (selectedDate === '2026-09-30' ? "📘 第2回 模試問題・解説 (102問) を開く ➔" : "📘 第1回 模試問題・解説 (107問) を開く ➔")}
                     </a>
                   </div>
                 </div>
@@ -657,9 +692,10 @@ export default function Home() {
             <div style={{ overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '10px', paddingRight: '4px', flex: 1 }}>
               {selected.activityHistory && selected.activityHistory.length > 0 ? (
                 selected.activityHistory.map((item, idx) => {
-                  const isAnki = item.source === 'anki';
-                  const isQuiz = item.source === 'quiz';
-                  const isExam = item.source === 'exam';
+                  const kind = activityKind(item);
+                  const isAnki = kind === 'anki';
+                  const isQuiz = ['speed', 'quiz', 'typing'].includes(kind);
+                  const isExam = kind === 'exam' || kind === 'review';
                   const badgeStyle = isAnki
                     ? { background: 'rgba(74, 222, 128, 0.15)', borderColor: 'rgba(74, 222, 128, 0.35)', color: '#86efac' }
                     : isQuiz
@@ -668,8 +704,8 @@ export default function Home() {
                     ? { background: 'rgba(167, 139, 250, 0.15)', borderColor: 'rgba(167, 139, 250, 0.35)', color: '#c4b5fd' }
                     : { background: 'rgba(251, 191, 36, 0.15)', borderColor: 'rgba(251, 191, 36, 0.35)', color: '#fde047' };
 
-                  const icon = isAnki ? '🎴' : isQuiz ? '⚡' : isExam ? '📝' : '📚';
-                  const label = isAnki ? 'Anki 복습' : isQuiz ? 'SPEED RUN / 퀴즈' : isExam ? '실전모의고사' : '학습 세션';
+                  const icon = activityIcons[kind];
+                  const label = activityLabels[kind];
 
                   return (
                     <div

@@ -11,6 +11,11 @@ with open(DATASET_PATH, 'r', encoding='utf-8') as f:
     items = json.load(f)
 
 json_str = json.dumps(items, ensure_ascii=False)
+weekly = json.loads((ROOT / 'scripts/n2_grammar_weekly.json').read_text(encoding='utf-8'))
+weekly_str = json.dumps(weekly, ensure_ascii=False, separators=(',', ':'))
+
+# The maintained runtime handles the lobby selection; sources stay inline/offline.
+daily_runtime = 'const WEEKLY_SENTENCES = ' + weekly_str + ';\n' + (ROOT / 'scripts/grammar_weekly_selector.js').read_text(encoding='utf-8')
 
 def update_html_file(file_path: Path):
     content = file_path.read_text(encoding='utf-8')
@@ -25,7 +30,17 @@ def update_html_file(file_path: Path):
     if idx_next == -1:
         raise ValueError(f"Could not find 'class SoundEngine' in {file_path}")
 
-    new_content = content[:idx_start] + 'const ALL_PATTERNS = ' + json_str + ';\n\n' + content[idx_next:]
+    new_content = content[:idx_start] + 'const ALL_PATTERNS = ' + json_str + ';\n' + daily_runtime + '\n' + content[idx_next:]
+    tts_start = '// BEGIN GRAMMAR TTS'
+    tts_end = '// END GRAMMAR TTS'
+    tts_code = tts_start + '\n' + (ROOT / 'scripts/grammar_tts_runtime.js').read_text(encoding='utf-8') + '\n' + tts_end + '\n'
+    if tts_start in new_content:
+        a = new_content.index(tts_start)
+        b = new_content.index(tts_end, a) + len(tts_end)
+        new_content = new_content[:a] + tts_code.rstrip() + new_content[b:]
+    else:
+        a = new_content.index('const SYNONYM_GROUPS')
+        new_content = new_content[:a] + tts_code + '\n' + new_content[a:]
     file_path.write_text(new_content, encoding='utf-8')
     print(f"Updated {file_path} (len: {len(new_content)} bytes)")
 

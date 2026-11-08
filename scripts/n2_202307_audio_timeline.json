@@ -1,0 +1,286 @@
+{
+  "source": "User supplied Nghe N2 T7-2023 Bản chuẩn Yuuki Bui.mp3",
+  "durationSeconds": 2254.5,
+  "sourceVerification": "faster_whisper tiny CPU int8 beam_size3 vad_filter=True local cached model; ASR is not an auditory verification",
+  "items": [
+    {
+      "id": 72,
+      "problemNo": "問題1",
+      "itemNo": 1,
+      "startSeconds": 3.38,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 110.62
+    },
+    {
+      "id": 73,
+      "problemNo": "問題1",
+      "itemNo": 2,
+      "startSeconds": 110.62,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 186.9
+    },
+    {
+      "id": 74,
+      "problemNo": "問題1",
+      "itemNo": 3,
+      "startSeconds": 186.9,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 282.98
+    },
+    {
+      "id": 75,
+      "problemNo": "問題1",
+      "itemNo": 4,
+      "startSeconds": 282.98,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 381.19
+    },
+    {
+      "id": 76,
+      "problemNo": "問題1",
+      "itemNo": 5,
+      "startSeconds": 381.19,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 444.28
+    },
+    {
+      "id": 77,
+      "problemNo": "問題2",
+      "itemNo": 1,
+      "startSeconds": 444.28,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 576.31
+    },
+    {
+      "id": 78,
+      "problemNo": "問題2",
+      "itemNo": 2,
+      "startSeconds": 576.31,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 700.15
+    },
+    {
+      "id": 79,
+      "problemNo": "問題2",
+      "itemNo": 3,
+      "startSeconds": 700.15,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 828.12
+    },
+    {
+      "id": 80,
+      "problemNo": "問題2",
+      "itemNo": 4,
+      "startSeconds": 828.12,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 951.66
+    },
+    {
+      "id": 81,
+      "problemNo": "問題2",
+      "itemNo": 5,
+      "startSeconds": 951.66,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1051.35
+    },
+    {
+      "id": 82,
+      "problemNo": "問題2",
+      "itemNo": 6,
+      "startSeconds": 1051.35,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1158.36
+    },
+    {
+      "id": 83,
+      "problemNo": "問題3",
+      "itemNo": 1,
+      "startSeconds": 1158.36,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1251.61
+    },
+    {
+      "id": 84,
+      "problemNo": "問題3",
+      "itemNo": 2,
+      "startSeconds": 1251.61,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1333.35
+    },
+    {
+      "id": 85,
+      "problemNo": "問題3",
+      "itemNo": 3,
+      "startSeconds": 1333.35,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1452.74
+    },
+    {
+      "id": 86,
+      "problemNo": "問題3",
+      "itemNo": 4,
+      "startSeconds": 1452.74,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1538.01
+    },
+    {
+      "id": 87,
+      "problemNo": "問題3",
+      "itemNo": 5,
+      "startSeconds": 1538.01,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1640.65
+    },
+    {
+      "id": 88,
+      "problemNo": "問題4",
+      "itemNo": 1,
+      "startSeconds": 1640.65,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1671.42
+    },
+    {
+      "id": 89,
+      "problemNo": "問題4",
+      "itemNo": 2,
+      "startSeconds": 1671.42,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1704.92
+    },
+    {
+      "id": 90,
+      "problemNo": "問題4",
+      "itemNo": 3,
+      "startSeconds": 1704.92,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1734.9
+    },
+    {
+      "id": 91,
+      "problemNo": "問題4",
+      "itemNo": 4,
+      "startSeconds": 1734.9,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1766.98
+    },
+    {
+      "id": 92,
+      "problemNo": "問題4",
+      "itemNo": 5,
+      "startSeconds": 1766.98,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1795.94
+    },
+    {
+      "id": 93,
+      "problemNo": "問題4",
+      "itemNo": 6,
+      "startSeconds": 1795.94,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1826.49
+    },
+    {
+      "id": 94,
+      "problemNo": "問題4",
+      "itemNo": 7,
+      "startSeconds": 1826.49,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1857.64
+    },
+    {
+      "id": 95,
+      "problemNo": "問題4",
+      "itemNo": 8,
+      "startSeconds": 1857.64,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1890.33
+    },
+    {
+      "id": 96,
+      "problemNo": "問題4",
+      "itemNo": 9,
+      "startSeconds": 1890.33,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1923.03
+    },
+    {
+      "id": 97,
+      "problemNo": "問題4",
+      "itemNo": 10,
+      "startSeconds": 1923.03,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 1953.85
+    },
+    {
+      "id": 99,
+      "problemNo": "問題5",
+      "itemNo": 1,
+      "startSeconds": 1953.85,
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 2100.78
+    },
+    {
+      "id": 100,
+      "problemNo": "問題5",
+      "itemNo": "2-1",
+      "startSeconds": 2100.78,
+      "questionSeconds": 2217.94,
+      "sharedAudioGroup": "問題5-2",
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 2237.35
+    },
+    {
+      "id": 101,
+      "problemNo": "問題5",
+      "itemNo": "2-2",
+      "startSeconds": 2100.78,
+      "questionSeconds": 2237.35,
+      "sharedAudioGroup": "問題5-2",
+      "verification": "local_asr_candidate_not_listening_verified",
+      "nextBoundarySeconds": 2254.5
+    }
+  ],
+  "missingItems": [
+    {
+      "id": 98,
+      "problemNo": "問題4",
+      "itemNo": 11,
+      "scriptOpening": "この子供用のなぞなぞの本",
+      "reason": "Full recording ASR transitions from problem4 item10 to museum science class problem5 without this script item."
+    }
+  ],
+  "issues": [
+    "Full recording begins with item1 at approximately3.38s; no opening instructions/examples were identified in ASR.",
+    "Problem4 item11 appears absent. Do not silently synthesize, fabricate a timestamp, or mark as wrong."
+  ],
+  "blocks": [
+    {
+      "problemNo": "問題1",
+      "startSeconds": 0,
+      "endSeconds": 444.28
+    },
+    {
+      "problemNo": "問題2",
+      "startSeconds": 444.28,
+      "endSeconds": 1158.36
+    },
+    {
+      "problemNo": "問題3",
+      "startSeconds": 1158.36,
+      "endSeconds": 1640.65
+    },
+    {
+      "problemNo": "問題4",
+      "startSeconds": 1640.65,
+      "endSeconds": 1953.85
+    },
+    {
+      "problemNo": "問題5",
+      "startSeconds": 1953.85,
+      "endSeconds": 2254.5
+    }
+  ],
+  "resolvedIssues": [
+    "Problem4 item1 supplementary PDF key1 corrected to2 based on independent reading,provided audio ASR,and Ningbo school answer2; see listening dataset sourceNotes."
+  ]
+}

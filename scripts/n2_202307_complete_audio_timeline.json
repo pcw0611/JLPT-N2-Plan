@@ -1,0 +1,381 @@
+{
+  "sourceUrl": "https://www.youtube.com/watch?v=akPmket15m0",
+  "sourceTitle": "Choukai JLPT N2 7/2023 (Question and Answer) — Ánh sensei",
+  "audioKind": "recorded_speech_not_TTS",
+  "provenance": "Third-party published recording labeled July2023N2; no claim of official-host distribution.",
+  "licenseEvidence": "Root observed YouTube expanded-description CC-BY reuse-permitted label and creative_commons link.",
+  "analysisAudioPath": "tmp/exam202307/youtube-akPmket15m0.webm",
+  "analysisVideoPath": "tmp/exam202307/youtube-akPmket15m0-video.mp4",
+  "fullAudioDurationSeconds": 2588.223875,
+  "testPlaybackStartSeconds": 0,
+  "testPlaybackEndSeconds": 2533.0,
+  "firstAnswerScreenSeconds": 2533.033333,
+  "finalQuestionSpeechEndSeconds": 2524.072021,
+  "observedFinalResponseSilenceSeconds": 8.961312,
+  "endEvidence": {
+    "frameRate": 30,
+    "lastQuestionFrameSeconds": 2533.0,
+    "firstAnswerFrameSeconds": 2533.033333,
+    "image": "tmp/exam202307/video-answer-transition.png",
+    "method": "ffmpeg scene>0.015 in2520–2550 window gives pts13.033333; adjacentframes visually inspected.",
+    "speechEndDetection": "silencedetect noise=-45dB:d=0.2: silence2524.072021–2572.881292, thenoutro."
+  },
+  "directions": [
+    {
+      "problemNo": "general",
+      "startSeconds": 11.7,
+      "endSeconds": 46.84
+    },
+    {
+      "problemNo": "問題1",
+      "startSeconds": 46.84,
+      "endSeconds": 72.22
+    },
+    {
+      "problemNo": "問題2",
+      "startSeconds": 524.54,
+      "endSeconds": 556.69
+    },
+    {
+      "problemNo": "問題3",
+      "startSeconds": 1277.32,
+      "endSeconds": 1316.4
+    },
+    {
+      "problemNo": "問題4",
+      "startSeconds": 1798.53,
+      "endSeconds": 1829.28
+    },
+    {
+      "problemNo": "問題5",
+      "startSeconds": 2167.09,
+      "endSeconds": 2211.86
+    },
+    {
+      "problemNo": "問題5-2",
+      "startSeconds": 2355.92,
+      "endSeconds": 2382.06
+    }
+  ],
+  "examples": "No practice example between initial問題1directions anditem1. No examples added. 問題5 explicitly says no practice.",
+  "verificationNotes": [
+    "All30 question/topic entries match existing listening dataset, including recovered問題4-11.",
+    "Full cached tiny ASR:727segments, tmp/exam202307/youtube-akPmket15m0-transcript.json. Lastquestions andproblem3 directions refined with wordtimestamps.",
+    "Raw ASR problem3 heading1246.38 includes leading silence; wordtimestamps locate1277.32.",
+    "Answerboard visuallychecked; audio cutoff2533.0 preserves actual recorded answerpause without invented countdown.",
+    "Dialogue/choices compared usingASR andtopic reading; not full manual auditory verification."
+  ],
+  "items": [
+    {
+      "id": 72,
+      "problemNo": "問題1",
+      "itemNo": 1,
+      "startSeconds": 72.22,
+      "nextBoundarySeconds": 179.36,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "留学生・オリエンテーション・勉強の工夫",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 73,
+      "problemNo": "問題1",
+      "itemNo": 2,
+      "startSeconds": 179.36,
+      "nextBoundarySeconds": 268.2,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "農家・アルバイト・雑草",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 74,
+      "problemNo": "問題1",
+      "itemNo": 3,
+      "startSeconds": 268.2,
+      "nextBoundarySeconds": 363.6,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "ビジネスセミナー・振込先確認",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 75,
+      "problemNo": "問題1",
+      "itemNo": 4,
+      "startSeconds": 363.6,
+      "nextBoundarySeconds": 461.9,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "カフェ照明・素材変更",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 76,
+      "problemNo": "問題1",
+      "itemNo": 5,
+      "startSeconds": 461.9,
+      "nextBoundarySeconds": 556.69,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "説明会準備・封筒",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 77,
+      "problemNo": "問題2",
+      "itemNo": 1,
+      "startSeconds": 556.69,
+      "nextBoundarySeconds": 676.56,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "林業イベント・山の作業",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 78,
+      "problemNo": "問題2",
+      "itemNo": 2,
+      "startSeconds": 676.56,
+      "nextBoundarySeconds": 800.24,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "パン屋・ホームページ",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 79,
+      "problemNo": "問題2",
+      "itemNo": 3,
+      "startSeconds": 800.24,
+      "nextBoundarySeconds": 928.29,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "保護者・学校の手伝い",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 80,
+      "problemNo": "問題2",
+      "itemNo": 4,
+      "startSeconds": 928.29,
+      "nextBoundarySeconds": 1051.86,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "着物・帯や小物",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 81,
+      "problemNo": "問題2",
+      "itemNo": 5,
+      "startSeconds": 1051.86,
+      "nextBoundarySeconds": 1151.46,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "健康維持・ウォーキングコンテスト",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 82,
+      "problemNo": "問題2",
+      "itemNo": 6,
+      "startSeconds": 1151.46,
+      "nextBoundarySeconds": 1316.4,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "海の計測・国際協力",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 83,
+      "problemNo": "問題3",
+      "itemNo": 1,
+      "startSeconds": 1316.4,
+      "nextBoundarySeconds": 1409.73,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "環境イベント・ボランティア募集",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 84,
+      "problemNo": "問題3",
+      "itemNo": 2,
+      "startSeconds": 1409.73,
+      "nextBoundarySeconds": 1491.44,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "夏の体調不良の原因",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 85,
+      "problemNo": "問題3",
+      "itemNo": 3,
+      "startSeconds": 1491.44,
+      "nextBoundarySeconds": 1610.8,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "宇宙飛行士・無重力",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 86,
+      "problemNo": "問題3",
+      "itemNo": 4,
+      "startSeconds": 1610.8,
+      "nextBoundarySeconds": 1696.03,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "学校創立100周年・寄付",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 87,
+      "problemNo": "問題3",
+      "itemNo": 5,
+      "startSeconds": 1696.03,
+      "nextBoundarySeconds": 1829.28,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "カラス・鳴き声の意味",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 88,
+      "problemNo": "問題4",
+      "itemNo": 1,
+      "startSeconds": 1829.28,
+      "nextBoundarySeconds": 1859.95,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "皿・色はともかく使いやすい",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 89,
+      "problemNo": "問題4",
+      "itemNo": 2,
+      "startSeconds": 1859.95,
+      "nextBoundarySeconds": 1893.54,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "企画・諦めることはない",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 90,
+      "problemNo": "問題4",
+      "itemNo": 3,
+      "startSeconds": 1893.54,
+      "nextBoundarySeconds": 1923.49,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "一人暮らし・野菜不足",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 91,
+      "problemNo": "問題4",
+      "itemNo": 4,
+      "startSeconds": 1923.49,
+      "nextBoundarySeconds": 1955.62,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "歌手・忘れられつつある",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 92,
+      "problemNo": "問題4",
+      "itemNo": 5,
+      "startSeconds": 1955.62,
+      "nextBoundarySeconds": 1984.58,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "退職・後悔",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 93,
+      "problemNo": "問題4",
+      "itemNo": 6,
+      "startSeconds": 1984.58,
+      "nextBoundarySeconds": 2015.12,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "花見・あいにくの天気",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 94,
+      "problemNo": "問題4",
+      "itemNo": 7,
+      "startSeconds": 2015.12,
+      "nextBoundarySeconds": 2046.3,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "上司に意見を言えない",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 95,
+      "problemNo": "問題4",
+      "itemNo": 8,
+      "startSeconds": 2046.3,
+      "nextBoundarySeconds": 2078.94,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "骨折・入院せずに済む",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 96,
+      "problemNo": "問題4",
+      "itemNo": 9,
+      "startSeconds": 2078.94,
+      "nextBoundarySeconds": 2111.71,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "お菓子・知りつつやめられない",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 97,
+      "problemNo": "問題4",
+      "itemNo": 10,
+      "startSeconds": 2111.71,
+      "nextBoundarySeconds": 2144.26,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "イベント・予想より多い",
+      "matchesExistingQuestionText": true
+    },
+    {
+      "id": 98,
+      "problemNo": "問題4",
+      "itemNo": 11,
+      "startSeconds": 2144.26,
+      "nextBoundarySeconds": 2183.62,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "子供用なぞなぞ・半分も解ければいい方",
+      "matchesExistingQuestionText": true,
+      "notes": "Recovered item11: this recording contains full prompt and three responses2145.70–2167.09. Raw tiny ASR misreads its spoken label as10; source script and sequence identify11."
+    },
+    {
+      "id": 99,
+      "problemNo": "問題5",
+      "itemNo": 1,
+      "startSeconds": 2183.62,
+      "nextBoundarySeconds": 2355.92,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "科学教室・子供が工作を選ぶ",
+      "matchesExistingQuestionText": true,
+      "contentStartSeconds": 2211.86,
+      "sectionDirectionsStartSeconds": 2167.09
+    },
+    {
+      "id": 100,
+      "problemNo": "問題5",
+      "itemNo": "2-1",
+      "startSeconds": 2355.92,
+      "nextBoundarySeconds": 2518.48,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "映画祭・男子は白い雲",
+      "matchesExistingQuestionText": true,
+      "sharedAudioGroup": "problem5-item2",
+      "commonConversationStartSeconds": 2382.06,
+      "questionStartSeconds": 2499.44,
+      "questionSpeechEndSeconds": 2504.878021
+    },
+    {
+      "id": 101,
+      "problemNo": "問題5",
+      "itemNo": "2-2",
+      "startSeconds": 2518.48,
+      "nextBoundarySeconds": 2533.0,
+      "verification": "local_cached_tiny_asr_and_transcript_topic_comparison",
+      "matchingTopic": "映画祭・女子は美しい一日",
+      "matchesExistingQuestionText": true,
+      "sharedAudioGroup": "problem5-item2",
+      "commonConversationStartSeconds": 2382.06,
+      "questionStartSeconds": 2518.48,
+      "questionSpeechEndSeconds": 2524.072021
+    }
+  ]
+}

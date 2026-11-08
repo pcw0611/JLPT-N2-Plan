@@ -2,6 +2,7 @@ import { env } from 'cloudflare:workers';
 import { getDb } from '../../../db';
 import { examSubmissions } from '../../../db/schema';
 import { desc, gt } from 'drizzle-orm';
+import { normalizeGrammarResult, normalizeGrammarRow } from '../../../lib/grammar-result.mjs';
 
 let tableEnsured = false;
 async function ensureSubmissionsTable() {
@@ -35,7 +36,7 @@ export async function POST(request: Request) {
   try {
     await ensureSubmissionsTable();
 
-    const body = await request.json() as Record<string, any>;
+    const body = normalizeGrammarResult(await request.json()) as Record<string, any>;
     const examType = String(body.examType || 'exam');
     const title = String(body.title || 'JLPT Training');
     const course = body.course ? String(body.course) : null;
@@ -108,7 +109,7 @@ export async function GET(request: Request) {
 
     return Response.json({
       ok: true,
-      submissions: rows,
+      submissions: rows.map(normalizeGrammarRow),
     });
   } catch (err: any) {
     console.error('Get exam submissions error:', err);

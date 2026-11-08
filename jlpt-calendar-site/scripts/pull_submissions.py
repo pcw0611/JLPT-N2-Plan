@@ -12,6 +12,7 @@ import socket
 import urllib.request
 from pathlib import Path
 from datetime import datetime
+from past_exam_import import get_past_exam_payload, insert_past_exam_attempts
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -58,6 +59,46 @@ def fetch_submissions(secret):
         print(f"  [경고] 온라인 제출 데이터 조회 실패 ({type(e).__name__}): {e}")
     return []
 
+
+def submission_details(submission):
+    """New payloads preserve unknown/unanswered and full attempts; legacy stays compatible."""
+    try:
+        payload = json.loads(submission.get('payload_json') or '{}')
+    except (TypeError, ValueError):
+        payload = {}
+    if not isinstance(payload, dict):
+        payload = {}
+    details = payload.get('details')
+    if not isinstance(details, dict):
+        details = {}
+    def count(value):
+        try:
+            return max(0, int(value or 0))
+        except (ValueError, TypeError):
+            return 0
+    return {
+        'unknown': count(payload.get('unknownCount', details.get('unknown_items'))),
+        'unanswered': count(payload.get('unansweredCount', details.get('unanswered_items'))),
+        'guided': details.get('memory_timing') == 'guided_practice',
+        'notes': json.dumps({'submitted_result': payload}, ensure_ascii=False) if details.get('test_id') == 'n2-grammar-speedrun-v2' else None,
+        'attempts': details.get('attempts', []) if details.get('test_id') == 'n2-grammar-speedrun-v2' else [],
+    }
+
+
+def insert_grammar_attempts(cursor, test_id, attempts):
+    """Import actual v2 submissions only; this does not create or finish review queues."""
+    for attempt in attempts:
+        if not isinstance(attempt, dict) or attempt.get('status') not in ('correct', 'wrong', 'unknown', 'unanswered'):
+            raise ValueError('Invalid submitted grammar attempt')
+        cursor.execute('''
+            INSERT INTO question_attempts
+                (test_id, item_no, item_type_id, level_label, response_state,
+                 response_seconds, selected_text, correct_text)
+            VALUES (?, ?, 'grammar_form', 'N2 대비 접속 연습', ?, ?, ?, ?)
+        ''', (test_id, int(attempt['item_no']), attempt['status'],
+              int(attempt.get('response_seconds') or 0), attempt.get('selected_text'),
+              attempt.get('correct_text')))
+
 def sync_submissions():
     secret = get_sync_secret()
     if not secret:
@@ -100,7 +141,9 @@ def sync_submissions():
             s = sec % 60
             time_str = f"{m}분 {s}초" if m > 0 else f"{s}초"
 
-            source_class = "공식 모의고사" if "模試" in title else "자체 제작"
+            past_payload = get_past_exam_payload(sub)
+            source_class = "기출 자료 기반 개인 모의고사" if past_payload else ("공식 모의고사" if "模試" in title else "자체 제작")
+            detail = submission_details(sub)
 
             # 1. Insert into tests table
             cursor.execute("""
@@ -118,13 +161,17 @@ def sync_submissions():
                 "선택형",
                 total,
                 correct,
-                0,
-                0,
+                detail['unknown'],
+                detail['unanswered'],
                 sec,
                 None,
                 0.3,
-                f"[온라인 자동 제출] 코스: {course}, 정답률: {accuracy}%"
+                json.dumps({'submitted_result': past_payload}, ensure_ascii=False) if past_payload else (detail['notes'] or f"[온라인 자동 제출] 코스: {course}, 정답률: {accuracy}%")
             ))
+
+            insert_grammar_attempts(cursor, test_id, detail['attempts'])
+            if past_payload:
+                insert_past_exam_attempts(cursor, test_id, date, past_payload)
 
             # 2. Insert into study_intervals table
             note_text = f"[{date} {title}] {time_str} (코스: {course}, 정답: {correct}/{total}, 정답률: {accuracy}%)"

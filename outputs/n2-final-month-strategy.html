@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>N2 마지막 4주 — 학습 진단과 실행 계획</title>
+<style>
+:root{--bg:#f2f0e9;--paper:#fffef9;--ink:#202c2a;--muted:#586660;--line:#d7ddd4;--green:#245b49;--soft:#e6eee5;--warm:#f4e6ca;--red:#8b4637}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,'Malgun Gothic',sans-serif}button{font:inherit;cursor:pointer}header,main,footer{max-width:1060px;margin:auto;padding:32px}header{padding-top:56px}.kicker{color:var(--green);font-size:13px;letter-spacing:.14em;font-weight:700}h1{font-size:clamp(30px,5vw,48px);line-height:1.3;letter-spacing:-.05em;margin:14px 0}h2{font-size:25px;letter-spacing:-.03em;margin:0 0 18px}h3{font-size:19px;margin:0 0 10px}p{margin:8px 0 16px}.lead{font-size:19px;max-width:850px}.muted,small{color:var(--muted)}nav{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}nav button,.print{border:1px solid var(--line);border-radius:24px;padding:9px 18px;background:var(--paper);color:var(--ink)}nav button[aria-selected=true]{background:var(--green);color:white;border-color:var(--green)}main{padding-top:0}.panel{display:none}.panel.active{display:block}.box{padding:26px;border-radius:18px;background:var(--paper);margin:0 0 20px;border:1px solid var(--line)}.emphasis{background:var(--green);color:#fff}.emphasis .muted{color:#d5e3d6}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.grid>.box{margin:0}.tag{display:inline-block;font-size:12px;border-radius:6px;padding:3px 9px;background:var(--soft);color:var(--green);margin-bottom:10px}.warn{background:var(--warm)}.row{display:grid;grid-template-columns:120px 1fr 85px;gap:12px;align-items:center;margin:13px 0}.track{height:10px;background:var(--soft);border-radius:9px;overflow:hidden}.fill{height:100%;background:var(--green);border-radius:9px}.num{font-variant-numeric:tabular-nums;text-align:right}table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--muted);font-size:13px}ul,ol{padding-left:23px}li{margin-bottom:9px}.note{border-left:3px solid var(--green);padding:8px 18px;color:var(--muted)}.step{display:grid;grid-template-columns:45px 1fr;gap:10px;margin:18px 0}.step>span{font-size:24px;color:var(--green);font-weight:700}details{border-top:1px solid var(--line);padding:15px 0}summary{cursor:pointer;font-weight:700}details p{margin:12px 0}.table-wrap{overflow-x:auto}.check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line)}input{margin-top:9px;accent-color:var(--green);width:17px;height:17px}footer{font-size:13px;color:var(--muted);padding-top:0}.print{float:right;font-size:13px}.pill{display:inline-block;margin-right:8px;font-size:13px;color:var(--green);font-weight:700}
+@media(max-width:680px){header,main,footer{padding:22px}.grid{grid-template-columns:1fr}.box{padding:21px}.row{grid-template-columns:86px 1fr 65px;font-size:14px}th,td{padding:10px 7px}.lead{font-size:17px}.print{float:none;margin-bottom:15px}}
+@media print{body{background:white;font-size:11pt}header,main,footer{max-width:none;padding:12px 0}nav,.print{display:none}.panel{display:block!important}.box{break-inside:avoid;border-radius:0;margin-bottom:14px;padding:16px}.grid{display:block}.grid>.box{margin-bottom:14px}.emphasis{background:white;color:var(--ink)}.emphasis .muted{color:var(--muted)}details>*{display:block}h1{font-size:28pt}h2{font-size:19pt}.panel{break-before:page}.panel:first-child{break-before:auto}}
+</style>
+</head>
+<body>
+<header>
+<button class="print" onclick="window.print()">인쇄 / PDF로 저장</button>
+<div class="kicker">PERSONAL STUDY REVIEW · 2026.11.08</div>
+<h1>남은 4주,<br>아는 것을 점수로 만드는 시간.</h1>
+<p class="lead">내 판단은 이렇다. 학습을 지속하는 힘은 있다. 하지만 <strong>익숙한 문제에서 확인한 지식이 새로운 실전 문장과 긴 음성에서 안정적으로 작동하지 않는다.</strong> 지금은 이 간극을 줄이는 데 시간을 써야 한다.</p>
+<p class="muted">목표: 12월 6일 N2 · 120점은 도전 목표. 현재 자료로 달성 확률을 수치화할 수는 없다.</p>
+<nav role="tablist" aria-label="학습 전략 보기">
+<button role="tab" id="tab-diagnosis" aria-controls="diagnosis" aria-selected="true" data-tab="diagnosis">① 무엇이 부족한가</button>
+<button role="tab" id="tab-routine" aria-controls="routine" aria-selected="false" data-tab="routine">② 매일 어떻게 할까</button>
+<button role="tab" id="tab-weeks" aria-controls="weeks" aria-selected="false" data-tab="weeks">③ 시험일까지의 흐름</button>
+<button role="tab" id="tab-evidence" aria-controls="evidence" aria-selected="false" data-tab="evidence">④ 판단의 근거·한계</button>
+</nav>
+</header>
+<main>
+<section class="panel active" id="diagnosis" role="tabpanel" aria-labelledby="tab-diagnosis">
+<div class="box emphasis"><h2>가장 큰 문제: 실전 적용의 불안정성</h2><p>문법 반복 퀴즈에서는 90% 안팎의 기록이 있지만, 최근 두 종합시험의 문법은 모두 9/21이다. 청해도 두 시험 모두 13/30이다. <strong>공부를 했다는 확인과 새 문제를 풀 수 있다는 확인 사이에 간격이 있다.</strong></p><p class="muted">‘답만 외웠다’고 단정하는 것은 아니다. 문제의 익숙함, 선택지 구성, 시간 제한, 기존 퀴즈 오류가 함께 영향을 줄 수 있다.</p></div>
+<div class="box"><span class="tag">보완 순위 1 · 반복 근거가 가장 뚜렷함</span><h2>문법·배열: 문장 구조를 끝까지 조립하기</h2><p>형식 판단은 9/20 → 9/30 → 이번 시험에서 6/12 → 7/12 → 5/12. 배열은 1/5 → 2/5 → 1/5다. 강의를 다시 전부 듣기보다, 새 문장에서 조사·수식 범위·앞뒤 호응을 잡는 훈련이 먼저다.</p><div class="note"><strong>바꿀 행동</strong> · 정답을 고르고 끝내지 말고, 배열은 네 조각을 전부 연결한다. 문법은 가장 헷갈린 두 선택지를 비교하고 나머지가 안 되는 이유를 설명한다.</div></div>
+<div class="box"><span class="tag">보완 순위 2 · 원인 분류부터</span><h2>청해: 긴 발화에서 조건과 결론 지키기</h2><div class="grid"><div><h3>즉시응답</h3><p>9/30 <strong>4/11</strong> → 이번 <strong>8/11</strong><br><small>짧은 응답에서 긍정적인 변화</small></p></div><div><h3>나머지 청해</h3><p>9/30 <strong>9/19</strong> → 이번 <strong>5/19</strong><br><small>긴 발화는 우선 보완 대상</small></p></div></div><p>대본을 보면 아는 내용인지부터 확인하자. 대본도 이해가 안 되면 어휘·구문, 대본은 이해되는데 못 들었으면 소리 인식, 각각 들었지만 답을 놓쳤으면 조건·결론 유지가 문제일 수 있다.</p><div class="note"><strong>바꿀 행동</strong> · ‘누구 / 해야 할 일 / 바뀐 조건 / 최종 결정’만 짧게 메모한다. 음성을 문장마다 번역하려다 다음 발화를 놓치는지도 관찰한다.</div></div>
+<div class="box"><span class="tag">보완 순위 3 · 다음 시험부터 바로 교정</span><h2>독해: 장문까지 읽을 시간을 확보하기</h2><p>장문을 거의 읽지 못했다는 회고가 있어 이번 0/3은 장문 이해력의 깨끗한 측정이 아니다. 하지만 단문 3/5·중문 4/8도 있으므로 시간 운영과 근거 판별을 함께 연습해야 한다.</p><p><strong>장문을 읽으면 전부 맞았을 것이라는 계산도 하지 않는다.</strong> 시간을 확보한 새 지문에서 실제로 확인해야 한다.</p><div class="note"><strong>바꿀 행동</strong> · 필기 시작 후 45분에는 독해로 진입하는 것을 첫 가설로 둔다. 장문을 마지막에 남기지 않고, 문제를 넘기는 기준을 세운다.</div></div>
+<div class="box"><span class="tag">보완 순위 4 · 매일 짧고 정확하게</span><h2>어휘: 읽기·뜻에서 용법·표기로 확장하기</h2><p>이번 어휘는 17/30. 용법은 세 시험에서 2/5 → 3/5 → 2/5다. 아는 뜻을 재확인하는 시간 일부를 실제 결합·비슷한 단어·한자 표기를 구별하는 데 쓰자.</p><p><strong>예:</strong> 단어 뜻 한 줄 → 자주 붙는 말 한 쌍 → 비슷하지만 바꿔 쓸 수 없는 말 한 쌍.</p></div>
+</section>
+<section class="panel" id="routine" role="tabpanel" aria-labelledby="tab-routine">
+<div class="box emphasis"><h2>내 추천: 순공부 5시간 + 보완 1시간</h2><p>하루 6시간을 채우는 것보다 매일 새 문제의 약점을 확인하고 고치는 과정이 중요하다. 휴식·식사는 따로 두고, 마지막 1시간은 그날 가장 약한 영역에 쓴다.</p></div>
+<div class="box"><h2>일반 학습일의 기본 구성</h2><div class="table-wrap"><table><thead><tr><th>순서</th><th>시간</th><th>할 일</th><th>남겨야 할 결과</th></tr></thead><tbody>
+<tr><td>청해</td><td>75분</td><td>처음 듣는 긴 청해 → 대본 분석 → 재청취</td><td>오답 원인과 놓친 발화</td></tr>
+<tr><td>문법·배열</td><td>75분</td><td>새 문맥 선택형 + 완성 문장 구조 확인</td><td>정답·오답을 가르는 근거</td></tr>
+<tr><td>독해</td><td>90분</td><td>시간제 풀이 45분 + 근거 분석 45분</td><td>지문별 시간·정답 근거·못 읽은 부분</td></tr>
+<tr><td>어휘·Anki</td><td>40분</td><td>만기·취약 카드 + 오늘의 용법·표기</td><td>헷갈리는 결합과 한자</td></tr>
+<tr><td>지연 재확인</td><td>20분</td><td>며칠 전 약점을 새 문장에서 확인</td><td>처음 보는 문제의 정오</td></tr>
+<tr><td>선택 보완</td><td>60분</td><td>그날 가장 약했던 한 영역</td><td>같은 오류를 줄일 한 가지 행동</td></tr>
+</tbody></table></div><p class="muted">Anki 40분은 초기 시간 예산이다. 필수 복습이 넘치면 부담을 점검하되, 카드를 완료한 척하거나 무작정 모두 미루지는 않는다. 집중이 무너지면 추가 1시간은 줄여도 된다.</p></div>
+<div class="grid"><div class="box"><h3>오답 하나를 끝내는 순서</h3><ol><li>처음 보는 문제로 답을 고른다.</li><li>왜 그 답을 골랐는지 한 줄 남긴다.</li><li>원문·대본에서 정답의 근거를 찾는다.</li><li>선택한 오답이 틀리는 지점을 찾는다.</li><li>다음날 또는 며칠 뒤 새 문제로 확인한다.</li></ol><p class="muted">같은 문제를 다시 맞히는 것은 복습 성과. 새 문제에 적용하는 것은 실전 성과.</p></div><div class="box warn"><h3>줄여야 할 공부</h3><ul><li>익숙한 퀴즈를 높은 점수가 나올 때까지 반복하기</li><li>해설을 읽고 이해됐다는 느낌으로 끝내기</li><li>문법 강의를 처음부터 전부 다시 듣기</li><li>밀린 복습 큐를 개수만 보고 한꺼번에 처리하기</li><li>모의고사를 본 뒤 분석 없이 다음 시험으로 넘어가기</li></ul></div></div>
+<div class="box" style="margin-top:20px"><h2>필기 105분: 첫 운영안</h2><p><span class="pill">어휘 20분</span><span class="pill">문법 25분</span><span class="pill">독해 55분</span><span class="pill">점검 5분</span></p><p>독해 예산: 정보검색 7분 · 장문 12분 · 통합 8분 · 단문 10분 · 중문 18분. 정보검색을 먼저 풀어도 좋지만, 장문은 바로 다음이나 독해 중간에 배치해 시간을 보호한다.</p><p>어휘는 한 문제에 40~45초가 지나도 근거가 없으면 표시하고 이동. 문법은 약 1분, 배열은 약 90초를 넘겨 진전이 없으면 이동한다. 정답을 아는 문제에까지 이 시간을 쓸 필요는 없다.</p><p class="muted">공식 유형별 제한시간이 아닌 초기 훈련안이다. 11/11의 실제 구간별 시간으로 조정한다. 지문별 독해 실력이 확인되면 순서도 바꿀 수 있다.</p></div>
+<div class="box"><h2>오늘 끝내기 전, 세 가지만 확인</h2><label class="check"><input type="checkbox"><span>새 문제에서 가장 많이 틀린 이유를 한 가지 찾았다.</span></label><label class="check"><input type="checkbox"><span>정답 근거를 원문 또는 대본에서 직접 확인했다.</span></label><label class="check"><input type="checkbox"><span>내일 바꿀 풀이 행동을 한 문장으로 정했다.</span></label><small>체크는 이 화면의 확인용이며 학습 기록에 저장되지 않는다.</small></div>
+</section>
+<section class="panel" id="weeks" role="tabpanel" aria-labelledby="tab-weeks">
+<div class="box"><h2>시험 횟수보다 시험 사이의 교정이 중요하다</h2><p>확정한 일정은 유지하되, 나는 전 영역 모의고사를 추가로 더 늘리지 않겠다. 다음 시험 전에 이전 시험의 반복 오류를 고칠 시간이 필요하다.</p></div>
+<div class="box"><div class="step"><span>01</span><div><h3>11/9–11/14 · 시간 손실과 오답 원인 찾기</h3><p>이번 시험 오답을 지식·구문·청취·시간으로 나눈다. 11/11 새 기출에서는 독해 진입 시간과 장문을 실제로 읽었는지 기록한다. 3일 만의 큰 점수 상승보다 운영 개선이 우선이다.</p><span class="tag">11/11 · 2021년 12월 기출 예정</span></div></div>
+<div class="step"><span>02</span><div><h3>11/15–11/21 · 반복 약점 집중 교정</h3><p>교재 1회 후 가장 많이 틀리는 두 유형에 보완 시간을 쓴다. ‘대본을 보면 이해되는가’, ‘시간이 있으면 근거를 찾는가’를 확인해 원인을 더 좁힌다.</p><span class="tag">11/15 · 한권으로 끝내기 1회</span></div></div>
+<div class="step"><span>03</span><div><h3>11/22–11/28 · 개선이 새 문제에서도 유지되는지 확인</h3><p>교재 2회에서 필기 시간과 문법·긴 청해 성적을 함께 본다. 여전히 절반 안팎이라면 자료를 늘리기보다 틀리는 이유를 다시 점검한다. 유효한 표본이 쌓이면 목표와 훈련 비중을 조정한다.</p><span class="tag">11/22 · 한권으로 끝내기 2회</span></div></div>
+<div class="step"><span>04</span><div><h3>11/29–12/5 · 풀이 순서와 컨디션 확정</h3><p>새로운 공부법을 벌이지 않는다. 12/3 시험도 기존 순서대로 풀고, 12/4에는 반복 약점만 정리한다. 12/5는 가볍게 확인하고 준비물·이동·수면을 챙긴다.</p><span class="tag">11/29 · 교재 3회</span> <span class="tag">12/3 · 교재 4회</span></div></div></div>
+<div class="box emphasis"><h2>모의고사 날에는 시험과 분석이 그날 공부다</h2><p>약 2시간 반의 시험 뒤에는 쉬고, 90~120분 동안 주요 오답을 분석한다. 6시간 일반 루틴을 추가로 전부 수행할 필요는 없다. 나머지 분석은 다음날 이어간다.</p></div>
+<div class="box"><h2>점수보다 먼저 볼 네 가지</h2><ol><li><strong>전 지문 접근:</strong> 장문을 거의 못 읽는 문제가 해결됐는가?</li><li><strong>새 문맥 적용:</strong> 처음 보는 문법·배열에서 근거 있는 정답이 늘었는가?</li><li><strong>긴 청해:</strong> 최종 행동·대상·조건 변경을 덜 놓치는가?</li><li><strong>유지:</strong> 며칠 지나도 같은 약점을 새 문제에서 구별하는가?</li></ol><p>120점 목표를 판단할 때는 이 변화와 여러 시험의 영역별 결과를 함께 본다. 자체 참고점수 한 번으로 합격 안정권이나 120점 가능성을 확정하지 않는다.</p></div>
+</section>
+<section class="panel" id="evidence" role="tabpanel" aria-labelledby="tab-evidence">
+<div class="box"><h2>기록에서 확인한 결과</h2><div class="table-wrap"><table><thead><tr><th>응시일</th><th>어휘</th><th>문법</th><th>독해</th><th>청해</th></tr></thead><tbody><tr><td>9/20</td><td>21/32</td><td>10/22</td><td>16/21</td><td>24/32</td></tr><tr><td>9/30</td><td>16/30</td><td>9/21</td><td>13/21</td><td>13/30</td></tr><tr><td>11/8</td><td>17/30</td><td>9/21</td><td>10/20</td><td>13/30</td></tr></tbody></table></div><p class="muted">9/20 청해는 TTS 구현 기록이 있어 원음 시험과 동등하게 비교하지 않았다. 시험별 난이도·문항 구성이 다르므로 세 결과를 단순한 실력 하락 곡선으로 읽지 않는다.</p></div>
+<div class="box"><h2>습관에 대한 내 평가</h2><p><strong>유지할 것:</strong> Anki를 꾸준히 진행하는 습관, 문법 전 범위에 이미 노출된 경험, 시험 후 원인을 돌아보는 태도.</p><p><strong>바꿀 것:</strong> 반복 훈련의 높은 점수보다 새 문장·음원에서의 근거와 시간으로 학습의 성과를 판단하기.</p><p>기록된 일평균 시간은 9월 약 261분 → 10월 약 136분 → 11/1~7 약 51분이다. 최근 7일 활동 내역은 Anki 중심이다. 다만 미수집 퀴즈와 기록 밖 공부가 있을 수 있어 실제 학습량 전부라고 보지는 않는다.</p></div>
+<div class="box"><h2>내가 확신하는 것과 아직 모르는 것</h2><details open><summary>근거가 비교적 강한 판단</summary><p>배열·문법형식은 세 종합시험에 반복 약점이 나타난다. 최근 두 시험의 원음 청해 총 정답 수는 같고, 이번에는 즉시응답에 비해 나머지 유형이 약했다. 사용자 회고상 이번 장문은 시간 부족의 영향을 크게 받았다.</p></details><details open><summary>추가로 확인해야 할 것</summary><p>독해에 실제로 진입한 시각, 어떤 유형에서 시간이 가장 많이 새었는지, 긴 청해 오답의 구체 원인, Anki 밖 학습시간, 충분한 시간을 준 새 장문의 이해력. 이 자료가 없으므로 집중력·기억력·성실성 문제로 단정하지 않았다.</p></details><details><summary>기록·문제 품질의 한계</summary><p>문법 퀴즈에 복수 정답·접속 설명 오류가 있었던 감사 기록이 있다. 복습 큐의 대기 행은 미복습 문항 수와 같지 않으며 완료 반영 누락도 가능하다. 이번 정보검색은 제출상1/2로, 전부 정답이라는 회고와 다르다. 통합독해2/2도 두 문항만으로 안정된 강점이라 단정하지 않는다.</p></details><details><summary>점수와 목표</summary><p>이번86.6/180은 영역별 정답률로 계산한 비공식 참고점수다. 과거119·92도 공식 점수 통지가 아니다. ‘현재86.6에서120까지 정확히33.4점 올리면 된다’는 계산은 실력 예측에 사용하지 않는다. 목표120점은 유지할 수 있지만, 도달 가능성을 정량적으로 보증할 자료는 없다.</p></details></div>
+</section>
+</main>
+<footer>근거: 프로젝트 학습 DB · 학습 로그 · 문항 감사 기록 · 이번 시험 결과 및 응시 회고. 2026-11-08 기준 개인 진단. 이 문서의 루틴과 시간 예산은 추천안이며 수행 완료 기록이 아니다.</footer>
+<script>
+const tabs=Array.from(document.querySelectorAll('[data-tab]'));
+function activate(id){tabs.forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===id)));document.querySelectorAll('.panel').forEach(p=>p.classList.toggle('active',p.id===id));}
+tabs.forEach(b=>b.addEventListener('click',()=>activate(b.dataset.tab)));
+document.querySelector('[role=tablist]').addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;e.preventDefault();const i=tabs.indexOf(document.activeElement);const b=tabs[(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length];b.focus();activate(b.dataset.tab);});
+</script>
+</body></html>

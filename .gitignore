@@ -9,6 +9,7 @@ tmp/
 *.mp3
 *.wav
 *.ogg
+!jlpt-calendar-site/public/exams/assets/n2-202307-recording.mp3
 .env
 .env.*
 .sync-secret

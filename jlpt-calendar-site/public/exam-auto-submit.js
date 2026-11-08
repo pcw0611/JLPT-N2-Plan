@@ -69,7 +69,8 @@
     const m = Math.floor(sec / 60);
     const s = sec % 60;
     const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
-    const scoreStr = `${data.correctCount}/${data.totalQuestions}`;
+    const scoreTotal = Number.isFinite(data.answeredQuestions) ? data.answeredQuestions : data.totalQuestions;
+    const scoreStr = `${data.correctCount}/${scoreTotal}${data.unansweredCount ? `, 미응답 ${data.unansweredCount}` : ''}${data.unattemptedCount ? `, 미진행 ${data.unattemptedCount}` : ''}`;
     const accStr = `${data.accuracy}%`;
 
     try {

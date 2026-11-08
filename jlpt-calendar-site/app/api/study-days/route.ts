@@ -1,6 +1,7 @@
 import { asc } from 'drizzle-orm';
 import { getDb } from '../../../db';
 import { dailyReports, examSubmissions } from '../../../db/schema';
+import { normalizeGrammarRow } from '../../../lib/grammar-result.mjs';
 
 export async function GET() {
   const rows = await getDb().select().from(dailyReports).orderBy(asc(dailyReports.date));
@@ -14,7 +15,8 @@ export async function GET() {
   // Real-time merge of pending online exam submissions from Cloudflare D1
   try {
     const submissions = await getDb().select().from(examSubmissions).orderBy(asc(examSubmissions.id));
-    for (const sub of submissions) {
+    for (const original of submissions) {
+      const sub = normalizeGrammarRow(original);
       if (!sub || !sub.date) continue;
       if (sub.title && sub.title.includes('검증 테스트')) continue;
 
