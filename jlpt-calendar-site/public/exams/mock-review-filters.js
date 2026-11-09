@@ -1,4 +1,18 @@
 /* One filter scope for browsing and starting a review. Existing storage IDs stay intact. */
+function formatReviewPassage(value) {
+  const source=String(value||'').replace(/\r\n?/g,'\n');
+  // Inline references stay in the text; only a note beginning on its own line is split off.
+  const boundary=source.search(/(?:^|\n|<br\s*\/?>)\s*[（(]\s*注\s*[0-9０-９]+\s*[)）]/i);
+  const body=(boundary<0?source:source.slice(0,boundary)).trim();
+  const notes=boundary<0?'':source.slice(boundary).replace(/^(?:\s|<br\s*\/?>)+/i,'').trim();
+  const bodyHtml=/<(?:p|div|table|ul|ol|section)\b/i.test(body)
+    ? body
+    : body.split(/\n+|(?:<br\s*\/?>\s*){2,}/i).filter(part=>part.trim()).map(part=>`<p>${part}</p>`).join('');
+  const rows=notes?notes.split(/\n+|<br\s*\/?>/i).filter(part=>part.trim()):[];
+  return `<div class="review-passage-body">${bodyHtml}</div>`+(rows.length
+    ? `<aside class="review-passage-notes" aria-label="語句の注釈"><div class="review-notes-heading">注釈</div><div class="review-passage-notes-content">${rows.map(row=>`<div class="review-note">${row}</div>`).join('')}</div></aside>`
+    : '');
+}
 function withoutRuby(value) {
   return String(value || '').replace(/<rt\b[^>]*>[\s\S]*?<\/rt>/gi, '').replace(/<\/?(?:ruby|rp)\b[^>]*>/gi, '');
 }

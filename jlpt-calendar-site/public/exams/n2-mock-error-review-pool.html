@@ -1551,7 +1551,7 @@
     // Passage box
     const passageBox = $('qPassageBox');
     if (q.passage_text && q.passage_text.trim()) {
-      passageBox.innerHTML = q.passage_text;
+      passageBox.innerHTML = formatReviewPassage(q.passage_text);
       passageBox.classList.remove('hidden');
     } else {
       passageBox.classList.add('hidden');

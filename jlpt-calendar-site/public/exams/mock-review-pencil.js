@@ -178,9 +178,9 @@ window.addEventListener('DOMContentLoaded', () => {
     attach($('qQuestionSentence'),q.id,'question');
     const passage=$('qPassageBox');
     if(!passage.classList.contains('hidden')) {
-      const content=document.createElement('div');
-      while(passage.firstChild)content.appendChild(passage.firstChild);
-      passage.appendChild(content);attach(content,q.id,'passage');
+      // Do not stretch strokes saved against the old single-block layout over new paragraphs.
+      attach(passage.querySelector('.review-passage-body'),q.id,'passage-body-v2');
+      attach(passage.querySelector('.review-passage-notes-content'),q.id,'passage-notes-v2');
     }
     [...$('choicesContainer').children].forEach((choice,i)=>attach(choice,q.id,'choice-'+(i+1)));
     if(!$('instantFeedbackBox').classList.contains('hidden'))attach($('instantExplanationContent'),q.id,'exam-explanation');
