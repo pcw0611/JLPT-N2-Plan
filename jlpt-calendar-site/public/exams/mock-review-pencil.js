@@ -3,10 +3,11 @@ window.addEventListener('DOMContentLoaded', () => {
   const NS='http://www.w3.org/2000/svg';
   const PREFIX='jlpt-n2-pencil-v1:';
   const surfaces=new Map();
-  let enabled=false, drawing=null, swallowClick=false;
+  let enabled=false, mode='pencil', drawing=null, swallowClick=false;
+  const history=[];
   const tools=document.createElement('div');
   tools.className='pencil-tools';
-  tools.innerHTML='<button type="button" id="pencilToggle" aria-pressed="false" title="H：鉛筆 ON / OFF">✎ 鉛筆 OFF <kbd>H</kbd></button><button type="button" id="pencilUndo" aria-label="最後の線を戻す (Ctrl+Z)" title="最後の線を戻す (Ctrl+Z)">↶</button><span id="pencilSaveState" role="status" aria-live="polite"></span>';
+  tools.innerHTML='<button type="button" id="pencilToggle" aria-pressed="false" title="H：鉛筆 ON / OFF">✎ 鉛筆 OFF <kbd>H</kbd></button><button type="button" id="eraserToggle" aria-pressed="false" title="E：消しゴム ON / OFF">⌫ 消しゴム OFF <kbd>E</kbd></button><button type="button" id="pencilUndo" aria-label="最後の操作を戻す (Ctrl+Z)" title="最後の操作を戻す (Ctrl+Z)">↶</button><span id="pencilSaveState" role="status" aria-live="polite"></span>';
   document.body.appendChild(tools);
   const toggle=$('pencilToggle'),notice=$('pencilSaveState');
   function load(key) {
@@ -36,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
   function redraw(surface) {
     surface.svg.setAttribute('viewBox',`0 0 ${surface.host.clientWidth||1} ${surface.host.clientHeight||1}`);
     surface.svg.replaceChildren(...surface.strokes.map(s=>line(surface,s)));
-    if(drawing?.surface===surface)surface.svg.appendChild(line(surface,drawing.stroke));
+    if(drawing?.surface===surface&&drawing.mode==='pencil')surface.svg.appendChild(line(surface,drawing.stroke));
   }
   function point(surface,e) {
     const r=surface.svg.getBoundingClientRect();
@@ -44,21 +45,42 @@ window.addEventListener('DOMContentLoaded', () => {
   }
   function finish(cancel=false) {
     if(!drawing)return;
-    const {surface,stroke,pointer}=drawing;
+    const {surface,stroke,pointer,mode:gestureMode,removed}=drawing;
     drawing=null;
-    if(!cancel){surface.strokes=load(surface.key);surface.strokes.push(stroke);save(surface);}
+    const before=load(surface.key);
+    surface.strokes=before;
+    if(!cancel){
+      surface.strokes=gestureMode==='pencil'?[...before,stroke]:before.filter(s=>!removed.has(JSON.stringify(s)));
+      if(JSON.stringify(before)!==JSON.stringify(surface.strokes)){
+        history.push({key:surface.key,before,after:surface.strokes});
+        if(history.length>100)history.shift();
+        save(surface);
+      }
+    }
     redraw(surface);
     if(surface.svg.hasPointerCapture(pointer))surface.svg.releasePointerCapture(pointer);
   }
-  function setEnabled(value) {
-    finish();enabled=value;
-    document.body.classList.toggle('pencil-on',value);
-    toggle.setAttribute('aria-pressed',String(value));
-    toggle.innerHTML=`✎ 鉛筆 ${value?'ON':'OFF'} <kbd>H</kbd>`;
-    if(notice.dataset.error!=='true')notice.textContent=value?'黒鉛筆 · Ctrl+Zで戻す':'';
+  function setTool(value) {
+    finish();enabled=!!value;if(value)mode=value;
+    document.body.classList.toggle('pencil-on',enabled);
+    document.body.classList.toggle('eraser-on',enabled&&mode==='eraser');
+    const pencil=enabled&&mode==='pencil',eraser=enabled&&mode==='eraser';
+    toggle.setAttribute('aria-pressed',String(pencil));
+    toggle.innerHTML=`✎ 鉛筆 ${pencil?'ON':'OFF'} <kbd>H</kbd>`;
+    $('eraserToggle').setAttribute('aria-pressed',String(eraser));
+    $('eraserToggle').innerHTML=`⌫ 消しゴム ${eraser?'ON':'OFF'} <kbd>E</kbd>`;
+    if(notice.dataset.error!=='true')notice.textContent=enabled?(eraser?'触れた線を消す · Ctrl+Zで戻す':'黒鉛筆 · Ctrl+Zで戻す'):'';
   }
   function undo() {
     if(drawing){finish(true);return;}
+    const visible=[...surfaces.values()].filter(s=>s.host.isConnected&&s.host.getClientRects().length);
+    for(let i=history.length-1;i>=0;i--){
+      const action=history[i],surface=visible.find(s=>s.key===action.key);
+      if(!surface)continue;
+      history.splice(i,1);
+      if(JSON.stringify(load(surface.key))!==JSON.stringify(action.after))continue;
+      surface.strokes=action.before;save(surface);redraw(surface);return;
+    }
     let latest=null;
     for(const surface of surfaces.values()) {
       if(!surface.host.isConnected||!surface.host.getClientRects().length)continue;
@@ -68,7 +90,8 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     if(latest){latest.strokes.pop();save(latest);redraw(latest);}
   }
-  toggle.onclick=()=>setEnabled(!enabled);
+  toggle.onclick=()=>setTool(enabled&&mode==='pencil'?null:'pencil');
+  $('eraserToggle').onclick=()=>setTool(enabled&&mode==='eraser'?null:'eraser');
   $('pencilUndo').onclick=undo;
   document.addEventListener('pointerdown',()=>{if(!drawing)swallowClick=false;},true);
   document.addEventListener('click',e=>{
@@ -76,13 +99,45 @@ window.addEventListener('DOMContentLoaded', () => {
   },true);
   window.addEventListener('keydown',e=>{
     if(e.isComposing||e.target.closest?.('input,textarea,select,[contenteditable]:not([contenteditable="false"])'))return;
-    if(e.code==='KeyH'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!e.shiftKey){e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)setEnabled(!enabled);return;}
+    if(['KeyH','KeyE'].includes(e.code)&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!e.shiftKey){
+      e.preventDefault();e.stopImmediatePropagation();
+      const requested=e.code==='KeyH'?'pencil':'eraser';
+      if(!e.repeat)setTool(enabled&&mode===requested?null:requested);return;
+    }
     if(enabled&&(e.ctrlKey||e.metaKey)&&e.code==='KeyZ'&&!e.shiftKey&&!e.altKey){e.preventDefault();e.stopImmediatePropagation();if(!e.repeat)undo();return;}
     // Writing must not mark an answer or move to a new question accidentally.
     if(enabled&&!$('screenExam').classList.contains('hidden')&&[' ','Enter','1','2','3','4','5','0','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();e.stopImmediatePropagation();}
   },true);
   window.addEventListener('blur',()=>finish());
   const resize=new ResizeObserver(entries=>{for(const entry of entries){const surface=surfaces.get(entry.target);if(surface)redraw(surface);}});
+  function pointSegment(p,a,b){
+    const dx=b[0]-a[0],dy=b[1]-a[1];
+    const t=Math.max(0,Math.min(1,((p[0]-a[0])*dx+(p[1]-a[1])*dy)/(dx*dx+dy*dy||1)));
+    return Math.hypot(p[0]-a[0]-t*dx,p[1]-a[1]-t*dy);
+  }
+  function segmentDistance(a,b,c,d){
+    const cross=(p,q,r)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);
+    if(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0)return 0;
+    return Math.min(pointSegment(a,c,d),pointSegment(b,c,d),pointSegment(c,a,b),pointSegment(d,a,b));
+  }
+  function eraseAt(surface,from,to){
+    const pixels=p=>[p[0]*surface.host.clientWidth,p[1]*surface.host.clientHeight];
+    const a=pixels(from),b=pixels(to);
+    surface.strokes=surface.strokes.filter(stroke=>{
+      const points=stroke.points.map(pixels);
+      const hit=points.length===1?pointSegment(points[0],a,b)<=10:points.slice(1).some((p,i)=>segmentDistance(a,b,points[i],p)<=10);
+      if(hit)drawing.removed.add(JSON.stringify(stroke));
+      return !hit;
+    });
+  }
+  function move(e){
+    const surface=drawing.surface,p=point(surface,e);
+    if(drawing.mode==='eraser'){eraseAt(surface,drawing.last,p);drawing.last=p;}
+    else {
+      const prev=drawing.stroke.points.at(-1);
+      if(Math.hypot((p[0]-prev[0])*surface.host.clientWidth,(p[1]-prev[1])*surface.host.clientHeight)>.7)drawing.stroke.points.push(p);
+    }
+  }
   function attach(host,qid,region) {
     if(!host)return;
     const old=surfaces.get(host);
@@ -98,20 +153,20 @@ window.addEventListener('DOMContentLoaded', () => {
     svg.addEventListener('pointerdown',e=>{
       if(!enabled||e.button!==0)return;
       e.preventDefault();e.stopPropagation();swallowClick=true;
-      drawing={surface,pointer:e.pointerId,stroke:{points:[point(surface,e)],at:Date.now()}};
+      const p=point(surface,e);
+      surface.strokes=load(surface.key);
+      drawing={surface,pointer:e.pointerId,mode,last:p,removed:new Set(),stroke:{points:[p],at:Date.now()}};
+      if(mode==='eraser')eraseAt(surface,p,p);
       svg.setPointerCapture(e.pointerId);redraw(surface);
     });
     svg.addEventListener('pointermove',e=>{
       if(!drawing||drawing.surface!==surface||drawing.pointer!==e.pointerId)return;
       e.preventDefault();e.stopPropagation();
       const events=e.getCoalescedEvents?.()||[];
-      for(const sample of events.length?events:[e]) {
-        const p=point(surface,sample),prev=drawing.stroke.points.at(-1);
-        if(Math.hypot((p[0]-prev[0])*host.clientWidth,(p[1]-prev[1])*host.clientHeight)>.7)drawing.stroke.points.push(p);
-      }
+      for(const sample of events.length?events:[e])move(sample);
       redraw(surface);
     });
-    svg.addEventListener('pointerup',e=>{if(drawing?.pointer===e.pointerId){e.preventDefault();e.stopPropagation();finish();}});
+    svg.addEventListener('pointerup',e=>{if(drawing?.pointer===e.pointerId){e.preventDefault();e.stopPropagation();move(e);finish();}});
     svg.addEventListener('pointercancel',()=>finish(true));
     svg.addEventListener('lostpointercapture',()=>{if(drawing?.surface===surface)finish();});
   }
