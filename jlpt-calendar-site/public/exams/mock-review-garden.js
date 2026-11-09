@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
     <section class="garden-hero"><div><span class="garden-eyebrow">오늘의 한 걸음</span><h2 id="gardenHeadline"></h2><p id="gardenSessionInfo"></p></div><div id="gardenStartSlot"></div></section>
     <div class="garden-toolbar"><div class="garden-tabs" aria-label="복습 상태 필터"><button data-garden-filter="unresolved">미해결 <span></span></button><button data-garden-filter="due">복습일 도래 <span></span></button><button data-garden-filter="all">전체 <span></span></button><button data-garden-filter="mastered">맞힘 <span></span></button></div><button id="gardenLatest" class="garden-quiet">최근 시험만 보기</button></div>
     <details class="garden-settings"><summary>범위·분량 설정 <span id="gardenSettingsSummary"></span></summary><div id="gardenScopeSlot"></div><div class="garden-options"><label>한 번에 풀 문항<select id="gardenLimit"><option value="10">10문항</option><option value="20">20문항</option><option value="30">30문항</option><option value="all">전체</option></select></label><label>해설 표시<select id="gardenFeedback"><option value="instant">한 문항씩 즉시 확인</option><option value="batch">모두 푼 뒤 확인</option></select></label></div><div class="garden-search-slot" id="gardenSearchSlot"></div><button class="garden-quiet" id="gardenResetFilters">필터 초기화</button></details>
-    <div class="garden-workspace"><section class="garden-map"><div class="garden-map-heading"><h2>나의 오답 잔디밭</h2><span id="gardenProgress"></span></div><div class="garden-progress"><div id="gardenProgressFill"></div></div><p class="garden-hint">드래그로 여러 칸 선택 → 위에서 복습 시작. 다시 누르거나 빈 곳을 누르면 해제됩니다.</p><div id="gardenCells"></div><div class="garden-legend">${Object.entries(labels).map(([key,label])=>`<span><i class="garden-swatch garden-${key}"></i>${label}</span>`).join('')}</div><p class="garden-footnote">초록은 이 브라우저에서 맞힌 기록입니다. D+7 졸업 판정과는 별개입니다.</p></section><aside class="garden-detail"><div class="garden-detail-top"><span>선택한 문항</span><button id="gardenCloseDetail" class="garden-quiet" aria-label="문항 상세 닫기">닫기 ×</button></div><div id="gardenDetailSlot"></div><p id="gardenEmptyDetail">궁금한 칸을 선택해 보세요.<br>문제와 복습 기록이 여기에 표시됩니다.</p></aside></div>
+    <div class="garden-workspace"><section class="garden-map"><div class="garden-map-heading"><h2>나의 오답 잔디밭</h2><span id="gardenProgress"></span></div><div class="garden-progress"><div id="gardenProgressFill"></div></div><p class="garden-hint">드래그로 여러 칸 선택 → Space로 복습 시작. 다시 누르거나 빈 곳을 누르면 해제됩니다.</p><div id="gardenCells"></div><div class="garden-legend">${Object.entries(labels).map(([key,label])=>`<span><i class="garden-swatch garden-${key}"></i>${label}</span>`).join('')}</div><p class="garden-footnote">초록은 이 브라우저에서 맞힌 기록입니다. D+7 졸업 판정과는 별개입니다.</p></section><aside class="garden-detail"><div class="garden-detail-top"><span>선택한 문항</span><button id="gardenCloseDetail" class="garden-quiet" aria-label="문항 상세 닫기">닫기 ×</button></div><div id="gardenDetailSlot"></div><p id="gardenEmptyDetail">궁금한 칸을 선택해 보세요.<br>문제와 복습 기록이 여기에 표시됩니다.</p></aside></div>
     <footer class="garden-footer"><span>복습 상태는 이 브라우저에 저장됩니다. 기기 간 자동 공유되지 않습니다.</span><details><summary>기록 관리</summary><div id="gardenResetSlot"></div></details></footer>`;
   lobby.appendChild(garden);
   $('gardenStartSlot').appendChild($('btnStartExam'));
@@ -39,6 +39,21 @@ window.addEventListener('DOMContentLoaded', () => {
     batchIds.clear(); paintSelection();
     startSessionWithPool(pool);
   };
+  // Consume the whole start keystroke so it cannot become a first-question answer.
+  let startSpaceHeld=false;
+  window.addEventListener('keydown',e=>{
+    if(e.code!=='Space' && e.key!==' ')return;
+    if(startSpaceHeld){e.preventDefault();e.stopImmediatePropagation();return;}
+    if(e.repeat || e.isComposing || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey || lobby.classList.contains('hidden') || !batchIds.size || drag)return;
+    if(e.target.closest?.('input,textarea,select,[contenteditable]:not([contenteditable="false"]),summary,a,button:not(.garden-cell):not(#btnStartExam)'))return;
+    e.preventDefault();e.stopImmediatePropagation();startSpaceHeld=true;
+    $('btnStartExam').click();
+  },true);
+  window.addEventListener('keyup',e=>{
+    if(!startSpaceHeld || (e.code!=='Space' && e.key!==' '))return;
+    e.preventDefault();e.stopImmediatePropagation();startSpaceHeld=false;
+  },true);
+  window.addEventListener('blur',()=>{startSpaceHeld=false;});
   function paintSelection() {
     for(const cell of garden.querySelectorAll('[data-question-id]')) {
       const selected=batchIds.has(cell.dataset.questionId);

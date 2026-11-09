@@ -24,3 +24,9 @@
 기존 Sites 프로젝트 ID, 공개 범위, 두 호스팅 주소를 유지. Cloudflare 버전 `5a6035e1-a598-4ed9-aa0d-87edc34c89b0`. Sites 최종 버전/배포 상태는 아래에 후속 기록.
 
 - Sites 버전 31, 소스 커밋 `0d5f213971fd4af2be928a39cef6820e5accfaba`, 배포 `appgdep_6af1506bb16c8191b7d7f9c5c2f7c743` succeeded. 기존 Sites 공개 URL에서 139칸과 유형/시험 열 표시를 브라우저로 확인. 스크린샷: `outputs/review-garden-final.jpg`.
+
+## Space 시작 단축키 추가
+- 로비에서 문항을 선택한 뒤 Space를 누르면 기존 시작 버튼과 같은 동작으로 선택 문항 학습을 시작. 입력창·설정·다른 버튼 조작, 조합키, IME 입력, 드래그 중에는 시작하지 않음.
+- 시작 키의 keydown/keyup 및 길게 누르기를 소비하여 첫 문제의 모름 답안이나 다음 문항 이동으로 흘러가지 않도록 처리.
+- 인앱 브라우저에서 2문항 선택 후 Space로 Q1/2 시작, OMR 0/2(첫 문항 미응답) 확인. 검색창 Space 입력 시 로비 유지·공백 입력 확인. 실제 답안 제출·학습 기록 전송은 하지 않음.
+- 배포: Sites 버전 32 succeeded, Cloudflare 버전 `8cf8a79f-6771-4323-b5e6-07a6195ab395`. 공개 Sites에서도 Space 시작 Q1/2·OMR 0/2 확인.
