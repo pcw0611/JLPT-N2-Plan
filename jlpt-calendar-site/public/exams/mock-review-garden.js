@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const marquee=document.createElement('div');
   marquee.className='garden-marquee'; marquee.hidden=true;
   document.body.appendChild(marquee);
-  garden.addEventListener('pointerdown',()=>{suppressClick=false;},true);
+  document.addEventListener('pointerdown',()=>{suppressClick=false;},true);
   garden.querySelector('.garden-map').addEventListener('pointerdown',e=>{
     if(e.button!==0)return;
     suppressClick=false;
@@ -82,7 +82,8 @@ window.addEventListener('DOMContentLoaded', () => {
     suppressClick=drag.active;drag=null;marquee.hidden=true;
   });
   window.addEventListener('pointercancel',()=>{if(drag){batchIds=drag.before;drag=null;marquee.hidden=true;paintSelection();}});
-  garden.addEventListener('click',e=>{
+  document.addEventListener('click',e=>{
+    if(lobby.classList.contains('hidden'))return;
     if(suppressClick){suppressClick=false;e.stopPropagation();e.preventDefault();return;}
     // Settings, links, detail actions and the existing start button keep their own behavior.
     if(!e.target.closest('button,input,select,summary,a,.garden-detail,.garden-settings')) {
