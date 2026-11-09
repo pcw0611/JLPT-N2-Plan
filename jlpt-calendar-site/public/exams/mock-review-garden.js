@@ -130,6 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
       // A previous correct answer is useful history; it is not proof of D+7 mastery.
       const badge=$('ankiQuestionList').querySelector('.rounded-full');
       if(badge) badge.textContent=labels[getQuestionSrsStatus(q).status];
+      window.dispatchEvent(new CustomEvent('jlpt-review-detail',{detail:{questionId:q.id}}));
     } else $('ankiQuestionList').replaceChildren();
   }
   $('gardenCloseDetail').onclick=()=>{

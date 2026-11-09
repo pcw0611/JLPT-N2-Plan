@@ -2026,7 +2026,7 @@
       const userChoiceStr = userAns ? (userAns === 5 ? '分からない (모름)' : `${userAns}번: ${q.choices[userAns - 1] || ''}`) : '(미응답)';
 
       return `
-        <div class="jlpt-paper rounded-xl p-5 sm:p-6 space-y-4 bg-white border-t-4 ${isCorrect ? 'border-t-emerald-500' : (isUnknown ? 'border-t-amber-500' : 'border-t-rose-500')}">
+        <div data-pencil-question="${q.id}" class="jlpt-paper rounded-xl p-5 sm:p-6 space-y-4 bg-white border-t-4 ${isCorrect ? 'border-t-emerald-500' : (isUnknown ? 'border-t-amber-500' : 'border-t-rose-500')}">
           
           <!-- Card Header -->
           <div class="flex items-center justify-between pb-2 border-b border-neutral-200 font-sans text-xs">
@@ -2067,5 +2067,7 @@
 <script src="/exams/mock-review-filters.js"></script>
 <link rel="stylesheet" href="/exams/mock-review-garden.css">
 <script src="/exams/mock-review-garden.js"></script>
+<link rel="stylesheet" href="/exams/mock-review-pencil.css">
+<script src="/exams/mock-review-pencil.js"></script>
 </body>
 </html>
