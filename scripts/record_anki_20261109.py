@@ -118,13 +118,13 @@ for d_str, is_today in days:
     read_min = read_sec / 60.0
     read_dist = read_row[2] or 0
 
-    # 2023.07 N2 모의고사 어휘 deck
+    # 모의고사 어휘 decks (1회차, 2회차, 2023.07 등)
     cur_anki.execute('''
         SELECT count(*), sum(r.time), count(distinct r.cid)
         FROM revlog r
         JOIN cards c ON r.cid = c.id
         JOIN decks d ON c.did = d.id
-        WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%모의고사 어휘%'
+        WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%모의고사%' AND d.name NOT LIKE '%독해%'
     ''', (s_ms, e_ms))
     mock_row = cur_anki.fetchone()
     mock_cnt = mock_row[0] or 0
@@ -267,7 +267,7 @@ for d_str, is_today in days:
             f"[시간 공통 반영: 총 {round(t_min, 1)}분] [정확도·반응 지표: 한끝 Voca 기준] {v_cnt:,}회({round(v_min, 1)}분, 고유 카드 {v_dist}장, 카드당 {v_sec_per_card}초) ➔ "
             f"Again {v_again:,} ({v_again_pct}%), Hard {v_hard} ({round(v_hard/v_cnt*100, 2) if v_cnt else 0}%), "
             f"Good {v_good} ({round(v_good/v_cnt*100, 2) if v_cnt else 0}%), Easy {v_easy} ({round(v_easy/v_cnt*100, 2) if v_cnt else 0}%){extra_str}. "
-            f"주요 덱: {', '.join(deck_lines[:6])}. "
+            f"주요 덱: {', '.join(deck_lines[:8])}. "
             f"잔여 큐: new {new_rem:,}장, learning {learn_rem:,}장, review {rev_rem:,}장 (총 {new_rem+learn_rem+rev_rem:,}장). "
             f"잔여 {rem_sec}초 보존."
         )
