@@ -8,6 +8,13 @@ window.addEventListener('DOMContentLoaded', () => {
   let drag = null;
   let suppressClick = false;
   const typeNames={'漢字読み':'한자읽기','表記':'한자표기','語形成':'단어형성','文脈規定':'문맥규정','言い換え類義':'유의표현','用法':'용법','文の文法1':'문법형식','文の文法2':'문장배열','文章の文法':'글의 문법','短文読解':'단문','中文読解':'중문','情報検索':'정보검색','統合理解（読解）':'통합이해','主張理解':'주장이해','課題理解':'과제이해','ポイント理解':'포인트이해','概要理解':'개요이해','即時応答':'즉시응답','統合理解（聴解）':'통합이해'};
+  // Official N2 problem order; source exams may first contain different error types.
+  const typeOrder = {
+    '어휘':['漢字読み','表記','語形成','文脈規定','言い換え類義','用法'],
+    '문법':['文の文法1','文の文法2','文章の文法'],
+    '독해':['短文読解','中文読解','統合理解（読解）','主張理解','情報検索'],
+    '청해':['課題理解','ポイント理解','概要理解','即時応答','統合理解（聴解）']
+  };
   const labels = {new:'신규',due:'복습일 도래',lapsed:'재도전',learning:'복습 대기',mastered:'맞힘'};
   for (const child of [...lobby.children]) child.style.display = 'none';
   lobby.classList.add('garden-lobby');
@@ -148,7 +155,9 @@ window.addEventListener('DOMContentLoaded', () => {
     board.style.setProperty('--garden-exams',exams.length||1);
     $('gardenCells').innerHTML=groups.map(domain=>{
       const qs=scoped.filter(q=>reviewDomain(q)===domain);
-      const types=[...new Set(qs.map(q=>q.type_label))];
+      const order=typeOrder[domain]||[];
+      const rank=type=>order.includes(type)?order.indexOf(type):order.length;
+      const types=[...new Set(qs.map(q=>q.type_label))].sort((a,b)=>rank(a)-rank(b));
       return `<section class="garden-group"><h3 class="garden-group-label"><span>${domain}</span><span>${qs.length}문항</span></h3><div class="garden-exam-head"><span>유형</span>${exams.map(src=>`<span title="${escapeHtml(src)}">${escapeHtml(examNames[src]||src)}</span>`).join('')}</div>${types.map(type=>`<div class="garden-type-row"><span class="garden-type-label" title="${escapeHtml(type)}">${escapeHtml(typeNames[type]||type)}</span>${exams.map(src=>`<div class="garden-exam-column" aria-label="${escapeHtml(src)} · ${escapeHtml(typeNames[type]||type)}"><div class="garden-grid">${qs.filter(q=>q.type_label===type&&q.exam_src===src).map(q=>{
         const srs=getQuestionSrsStatus(q);
         const due=!!state.srsData[q.id]?.nextReviewDate && state.srsData[q.id].nextReviewDate<=getTodayStr();

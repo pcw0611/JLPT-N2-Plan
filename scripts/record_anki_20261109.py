@@ -118,6 +118,20 @@ for d_str, is_today in days:
     read_min = read_sec / 60.0
     read_dist = read_row[2] or 0
 
+    # 2023.07 N2 모의고사 어휘 deck
+    cur_anki.execute('''
+        SELECT count(*), sum(r.time), count(distinct r.cid)
+        FROM revlog r
+        JOIN cards c ON r.cid = c.id
+        JOIN decks d ON c.did = d.id
+        WHERE r.id >= ? AND r.id < ? AND d.name LIKE '%모의고사 어휘%'
+    ''', (s_ms, e_ms))
+    mock_row = cur_anki.fetchone()
+    mock_cnt = mock_row[0] or 0
+    mock_sec = (mock_row[1] or 0) / 1000.0
+    mock_min = mock_sec / 60.0
+    mock_dist = mock_row[2] or 0
+
     # N1 Sampler deck (15 실생활・N1 고급어휘 맛보기)
     cur_anki.execute('''
         SELECT count(*), sum(r.time), count(distinct r.cid)
@@ -220,6 +234,8 @@ for d_str, is_today in days:
     rem_sec = round(day_total_sec % 60, 2)
 
     extra_parts = []
+    if mock_cnt > 0:
+        extra_parts.append(f"모의고사어휘 ➔ {mock_cnt}회({round(mock_min, 1)}분, {mock_dist}장)")
     if samp_cnt > 0:
         extra_parts.append(f"N1고급어휘맛보기 ➔ {samp_cnt}회({round(samp_min, 1)}분, {samp_dist}장)")
     if read_cnt > 0:
@@ -289,6 +305,8 @@ for d_str, is_today in days:
             'distinctCards': t_dist,
             'readingVocabReviews': read_cnt,
             'readingVocabMinutes': round(read_min, 2),
+            'mockVocabReviews': mock_cnt,
+            'mockVocabMinutes': round(mock_min, 2),
             'toeicReviews': toeic_cnt,
             'toeicMinutes': round(toeic_min, 2)
         },
