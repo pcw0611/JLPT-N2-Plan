@@ -8,7 +8,7 @@ def get_past_exam_payload(submission):
     except (TypeError,ValueError):
         return None
     details=payload.get('details',{}) if isinstance(payload,dict) else {}
-    if details.get('test_id')!='n2-past-202307':return None
+    if details.get('test_id') not in ('n2-past-202307','n2-past-202112'):return None
     if payload.get('examType')!='past_exam' or details.get('termination_reason')!='submitted':
         raise ValueError('Past exam has not been submitted')
     attempts=details.get('attempts',[])

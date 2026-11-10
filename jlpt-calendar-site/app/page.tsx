@@ -56,8 +56,9 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     badge: '追加模試',
     type: 'upcoming-mock',
     title: '追加 N2 実戦模試 (2021年12月)',
+    linkUrl: '/exams/n2-past-exam-202112-mock.html',
     desc: '11月11日（水）· 時間配分・新しい文脈での文法・長い聴解を確認',
-    subDesc: '2021年12月の未受験問題を使用予定。開始時刻は未定。11/8のD+3復習は別枠で実施予定。'
+    subDesc: '2021年12月の未受験問題101問。問題・録音を用意済み。開始時刻は未定。11/8のD+3復習は別枠で実施予定。'
   },
   '2026-11-15': {
     badge: '教本1回',
