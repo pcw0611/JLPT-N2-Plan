@@ -1,4 +1,5 @@
 import taxonomy from './report-taxonomy.json';
+import { formatStudyTime } from './study-time.mjs';
 
 export type Probability = { low: number; high: number; projected: number };
 export type Domain = { key: string; label: string; low: number | null; high: number | null; grade: string | null };
@@ -55,5 +56,5 @@ export function orderedTypes(rows: TypeMetric[]): TypeMetric[] {
 }
 export const formatAccuracy = (row?: Pick<Counts, 'correct' | 'total'>) => !row?.total ? '未実施' : `${row.correct}/${row.total} (${Math.round(row.correct / row.total * 100)}%)`;
 export const formatClock = (seconds: number | null) => seconds === null ? '未計測' : `${Math.floor(seconds / 60)}:${String(Math.floor(seconds % 60)).padStart(2, '0')}`;
-export const formatStudy = (minutes: number) => `${Math.floor(minutes / 60)}時間${Math.floor(minutes % 60)}分`;
+export const formatStudy = (minutes: number) => formatStudyTime(minutes);
 export const sourceLabel = (source: string) => ({self_made:'自作',self_made_tts:'自作・TTS',official:'公式',official_mock:'公式模試',textbook:'教材'}[source] ?? source);

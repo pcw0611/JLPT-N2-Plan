@@ -1,4 +1,5 @@
 /* One filter scope for browsing and starting a review. Existing storage IDs stay intact. */
+const latestReviewExam = ALL_ERROR_QUESTIONS.at(-1)?.exam_src || '';
 function formatReviewPassage(value) {
   const source=String(value||'').replace(/\r\n?/g,'\n');
   // Inline references stay in the text; only a note beginning on its own line is split off.
@@ -64,12 +65,12 @@ window.addEventListener('DOMContentLoaded', () => {
   panel.innerHTML = `<h2>어떤 오답을 복습할까요?</h2>
     <p>시험과 유형을 선택하면 아래 목록과 출제 범위가 함께 바뀝니다.</p>
     <div class="scope-grid">
-      <label>시험<select id="scopeExam"><option value="">모든 시험 · 139문항</option></select></label>
+      <label>시험<select id="scopeExam"><option value="">모든 시험 · ${ALL_ERROR_QUESTIONS.length}문항</option></select></label>
       <label>영역<select id="scopeDomain"><option value="">모든 영역</option><option>어휘</option><option>문법</option><option>독해</option><option>청해</option></select></label>
       <label>세부 유형<select id="scopeType"><option value="">모든 유형</option></select></label>
       <label>복습 상태<select id="scopeStatus"><option value="unresolved">아직 맞히지 못한 문항</option><option value="all">모든 문항 (맞힌 문제 포함)</option><option value="new">신규</option><option value="due">복습일 도래</option><option value="lapsed">오답·모름 재도전</option><option value="mastered">맞힌 문항</option><option value="learning">복습 대기</option></select></label>
     </div>
-    <div class="scope-actions"><button id="scopeLatest">이번 시험 오답 52문항</button><button id="scopeReset">필터 초기화</button><button id="scopeBrowse">문항 목록 보기 ↓</button><strong id="scopeSummary" role="status" aria-live="polite"></strong></div>
+    <div class="scope-actions"><button id="scopeLatest">최근 시험 오답 ${ALL_ERROR_QUESTIONS.filter(q=>q.exam_src===latestReviewExam).length}문항</button><button id="scopeReset">필터 초기화</button><button id="scopeBrowse">문항 목록 보기 ↓</button><strong id="scopeSummary" role="status" aria-live="polite"></strong></div>
     <p class="scope-note">맞힌 문제는 삭제하지 않고 기본 출제에서 제외합니다. 원 시험의 선택 답·오답 날짜는 역사 기록으로 유지됩니다. 복습 상태는 이 브라우저에 저장되며 기기 간 자동 공유되지 않습니다.</p>`;
   const style = document.createElement('style');
   style.textContent = `#reviewScope{padding:24px;background:#fff;border:1px solid #cbd5ce;border-radius:16px;color:#172d25;font:15px/1.7 system-ui,sans-serif}#reviewScope h2{font-size:22px;font-weight:750;margin:0 0 8px}#reviewScope p{margin:6px 0 18px}.scope-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.scope-grid label{font-weight:650}.scope-grid select{display:block;width:100%;padding:11px;margin-top:6px;border:1px solid #aebdb4;border-radius:8px;background:#fff;color:#172d25;font:inherit}.scope-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}.scope-actions button{border:1px solid #b9c8bf;background:#edf4ee;color:#174932;padding:9px 13px;border-radius:8px;cursor:pointer}.scope-actions button:first-child{background:#21583e;color:#fff}.scope-note{font-size:12px;color:#53665b}#courseList,.anki-filter-pill{display:none!important}#ankiQuestionList{max-height:580px}.dark-theme #reviewScope{background:#17251e;color:#eef5ef}.dark-theme #reviewScope p{color:#c5d6ca}@media(max-width:520px){.scope-grid{grid-template-columns:1fr}#reviewScope{padding:18px}}`;
@@ -78,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const header = lobby.querySelector('.jlpt-header-box');
   header.insertAdjacentElement('afterend', panel);
   header.querySelector('h1').textContent = '모의고사 오답 복습';
-  header.querySelector('p').textContent = '3개 시험 · 139문항. 범위를 고르고, 문항을 살펴보거나 바로 복습하세요.';
+  header.querySelector('p').textContent = `${new Set(ALL_ERROR_QUESTIONS.map(q=>q.exam_src)).size}개 시험 · ${ALL_ERROR_QUESTIONS.length}문항. 범위를 고르고, 문항을 살펴보거나 바로 복습하세요.`;
   // Old course presets are replaced with the shared scope. Their engine remains compatible.
   $('courseList').parentElement.style.display = 'none';
   const exclude = $('chkExcludeMastered');
@@ -110,7 +111,7 @@ window.addEventListener('DOMContentLoaded', () => {
   $('scopeExam').onchange = $('scopeDomain').onchange = () => { types(); refresh(); };
   $('scopeType').onchange = refresh;
   $('scopeStatus').onchange = () => { state.ankiFilter=$('scopeStatus').value; refresh(); };
-  $('scopeLatest').onclick = () => { $('scopeExam').value='2023年7月 本試験資料'; $('scopeDomain').value=''; $('scopeStatus').value='unresolved';state.ankiFilter='unresolved';state.ankiSearchQuery='';$('ankiSearchInput').value='';syncReviewStorage();types();refresh(); };
+  $('scopeLatest').onclick = () => { $('scopeExam').value=latestReviewExam; $('scopeDomain').value=''; $('scopeStatus').value='unresolved';state.ankiFilter='unresolved';state.ankiSearchQuery='';$('ankiSearchInput').value='';syncReviewStorage();types();refresh(); };
   $('scopeReset').onclick = () => { $('scopeExam').value='';$('scopeDomain').value='';$('scopeStatus').value='unresolved';state.ankiFilter='unresolved';state.ankiSearchQuery='';$('ankiSearchInput').value='';types();refresh(); };
   $('scopeBrowse').onclick = () => $('ankiPoolSection').scrollIntoView({behavior:'smooth'});
   function startSelected() {

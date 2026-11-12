@@ -1,0 +1,1426 @@
+{
+  "count": 100,
+  "duplicatePrompts": 0,
+  "duplicateChoices": 0,
+  "source": "original practice; no official-paper transcription",
+  "exclusions": [
+    12,
+    23,
+    30,
+    31,
+    37,
+    46,
+    56,
+    63,
+    64,
+    81
+  ],
+  "revisedSources": [
+    43,
+    73,
+    88,
+    89
+  ],
+  "items": [
+    {
+      "id": 1,
+      "sourceNo": 1,
+      "full": "この調査は全員の協力を得ることなしには実施できない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "協力を得る → 동사절＋こと → ことなしには＋불가능의 순서다."
+    },
+    {
+      "id": 2,
+      "sourceNo": 2,
+      "full": "この商品の良さは使ってみないことには実感できないものだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "使ってみる의 부정형 みない → ことには → 実感できないものだ를 묶는다."
+    },
+    {
+      "id": 3,
+      "sourceNo": 3,
+      "full": "この仕事を引き受けた以上は責任を持ってやり遂げるべきだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "引き受けた以上は → 責任を持って → やり遂げるべきだ의 세 덩어리다."
+    },
+    {
+      "id": 4,
+      "sourceNo": 4,
+      "full": "代表に選ばれたからには期待に応えないわけにはいかない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "選ばれたからには → 期待に応える → 応えないわけにはいかない다."
+    },
+    {
+      "id": 5,
+      "sourceNo": 5,
+      "full": "担当者には結果が分かり次第、連絡することになっている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "동사 연용형 分かり＋次第 → 連絡することに＋なっている를 묶는다."
+    },
+    {
+      "id": 6,
+      "sourceNo": 6,
+      "full": "彼は経験が豊富な一方で、新しいやり方を受け入れようとしない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "豊富な一方で → やり方を受け入れる → 의지형＋ようとしない를 연결한다."
+    },
+    {
+      "id": 7,
+      "sourceNo": 7,
+      "full": "この仕事は責任が重い反面、成功したときの喜びも大きい。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "重い反面 → 成功したときの喜び → 喜びも大きい다."
+    },
+    {
+      "id": 8,
+      "sourceNo": 8,
+      "full": "十分な準備をしたにもかかわらず、予定していた成果を上げられなかった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "準備をしたにもかかわらず → 予定していた成果を → 上げられなかった다."
+    },
+    {
+      "id": 9,
+      "sourceNo": 9,
+      "full": "子供向けとはいうものの、大人でも解くのが難しい問題だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "とはいうものの → 大人でも解くのが難しい → 難しい問題だ다."
+    },
+    {
+      "id": 10,
+      "sourceNo": 10,
+      "full": "一度失敗したからといって、挑戦そのものをやめる必要はない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "失敗したからといって → 挑戦そのものをやめる → やめる必要はない다."
+    },
+    {
+      "id": 11,
+      "sourceNo": 11,
+      "full": "この施設は学生に限らず、地域の人も利用できるようになっている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "学生に限らず → 人も利用できる → ようになっている다."
+    },
+    {
+      "id": 12,
+      "sourceNo": 13,
+      "full": "今回の募集は年齢を問わず、応募することができるそうだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "年齢を問わず → 応募することができる → できるそうだ의 전문이다."
+    },
+    {
+      "id": 13,
+      "sourceNo": 14,
+      "full": "申し込みは今日を限りに締め切ることになったので、急いでください。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "今日を限りに → 締め切ることになった → ので急いでください다."
+    },
+    {
+      "id": 14,
+      "sourceNo": 15,
+      "full": "この地域では夏に限らず一年を通して観光客が訪れる。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "夏に限らず → 一年を通して → 観光客が訪れる다."
+    },
+    {
+      "id": 15,
+      "sourceNo": 16,
+      "full": "人口が増えるにつれて、住宅の需要も高まってきた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "増えるにつれて → 需要も高まって → てきた의 누적 변화다."
+    },
+    {
+      "id": 16,
+      "sourceNo": 17,
+      "full": "経験を積むにしたがって、仕事の面白さが分かるようになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "積むにしたがって → 面白さが分かる → ようになった다."
+    },
+    {
+      "id": 17,
+      "sourceNo": 18,
+      "full": "利用者の増加に伴って、設備を拡張する必要が出てきた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "増加に伴って → 設備を拡張する → 必要が出てきた다."
+    },
+    {
+      "id": 18,
+      "sourceNo": 19,
+      "full": "資料を調べれば調べるほど、疑問が深まるばかりだった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "調べれば調べるほど → 疑問が深まる → ばかりだった다."
+    },
+    {
+      "id": 19,
+      "sourceNo": 20,
+      "full": "景気が回復するにつれて、採用人数を増やす企業が目立つようになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "回復するにつれて → 人数を増やす企業 → 企業が目立つようになった다."
+    },
+    {
+      "id": 20,
+      "sourceNo": 21,
+      "full": "彼が黙っているのは反対しているというわけではない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "反対しているという → わけではない를 한 덩어리로 만든다."
+    },
+    {
+      "id": 21,
+      "sourceNo": 22,
+      "full": "値段が高ければ品質も良いとは限らない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "品質も良い → 良いとは限らない의 부분 부정이다."
+    },
+    {
+      "id": 22,
+      "sourceNo": 24,
+      "full": "少し練習しただけで上達するというものではない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "上達するという → ものではない의 일반화 부정이다."
+    },
+    {
+      "id": 23,
+      "sourceNo": 25,
+      "full": "彼女があれほど怒るのも事情を聞いてみれば分からないでもない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "事情を聞いてみれば → 分からないでもない다."
+    },
+    {
+      "id": 24,
+      "sourceNo": 26,
+      "full": "担当者が不在のため、私だけでは判断しかねる状況です。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "私だけでは判断し → 연용형＋かねる → 状況です다."
+    },
+    {
+      "id": 25,
+      "sourceNo": 27,
+      "full": "確認を怠ると、重大な事故を引き起こしかねないので注意が必要だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "事故を引き起こし → 연용형＋かねない → ので注意が必要だ다."
+    },
+    {
+      "id": 26,
+      "sourceNo": 28,
+      "full": "連絡先を知らないのだから、本人に確かめようがない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "本人に確かめる → 의지형 구성 確かめよう＋がない다."
+    },
+    {
+      "id": 27,
+      "sourceNo": 29,
+      "full": "この作業は初心者でも手順さえ守ればできないことはない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "手順さえ守れば → できないことはない의 제한적 가능이다."
+    },
+    {
+      "id": 28,
+      "sourceNo": 32,
+      "full": "熱があっても、締め切りまでに仕上げざるを得ない仕事がある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "仕上げざるを得ない → 仕事がある다."
+    },
+    {
+      "id": 29,
+      "sourceNo": 33,
+      "full": "二度と同じ失敗を繰り返すまいと心に誓った。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "繰り返すまい → と인용 → 心に誓った다."
+    },
+    {
+      "id": 30,
+      "sourceNo": 34,
+      "full": "事情を知らなかったとはいえ、相手に謝らずにはいられなかった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "知らなかったとはいえ → 相手に謝る → 謝らずにはいられなかった다."
+    },
+    {
+      "id": 31,
+      "sourceNo": 35,
+      "full": "努力している姿を見ると、応援せずにはいられないというのが本音だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "応援せずにはいられない → というのが本音だ다."
+    },
+    {
+      "id": 32,
+      "sourceNo": 36,
+      "full": "友人に誘われたのをきっかけに、写真を撮るようになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "誘われたのをきっかけに → 写真を撮る → ようになった다."
+    },
+    {
+      "id": 33,
+      "sourceNo": 38,
+      "full": "この店を訪れて以来、ここの味が忘れられなくなった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "訪れて以来 → 味が忘れられない → 忘れられなくなった다."
+    },
+    {
+      "id": 34,
+      "sourceNo": 39,
+      "full": "失敗を重ねた末に、自分に合った方法を見つけることができた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "重ねた末に → 自分に合った方法を → 見つけることができた다."
+    },
+    {
+      "id": 35,
+      "sourceNo": 40,
+      "full": "何度も検討したあげく、計画を白紙に戻すことになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "検討したあげく → 計画を白紙に戻す → ことになった다."
+    },
+    {
+      "id": 36,
+      "sourceNo": 41,
+      "full": "資料を読んでいるうちに、疑問点がはっきりしてきた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "読んでいるうちに → 疑問点がはっきりする → てきた다."
+    },
+    {
+      "id": 37,
+      "sourceNo": 42,
+      "full": "忘れないうちに記録しておくことが大切だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "忘れないうちに → 記録しておく → ことが大切だ다."
+    },
+    {
+      "id": 38,
+      "sourceNo": 43,
+      "full": "出発しようとしたところに、友人から電話がかかってきた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "しようとしたところに → 友人から電話が → かかってきた다."
+    },
+    {
+      "id": 39,
+      "sourceNo": 44,
+      "full": "一度引き受けた以上、最後まで責任を持つつもりだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "引き受けた以上 → 最後まで責任を持つ → つもりだ다."
+    },
+    {
+      "id": 40,
+      "sourceNo": 45,
+      "full": "この建物は修理を重ねながら使い続けられてきた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "修理を重ねながら → 使い続けられて → きた다."
+    },
+    {
+      "id": 41,
+      "sourceNo": 47,
+      "full": "詳しい説明を聞いた上で、参加するかどうかを決めたい。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "聞いた上で → 参加するかどうかを → 決めたい다."
+    },
+    {
+      "id": 42,
+      "sourceNo": 48,
+      "full": "こちらで確認してからでないと、回答することはできません。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "確認してからでないと → 回答することはできません 순서다."
+    },
+    {
+      "id": 43,
+      "sourceNo": 49,
+      "full": "この実験は安全性を確認した上で実施することが求められている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "安全性を確認した上で → 実施することが → 求められている 순서다."
+    },
+    {
+      "id": 44,
+      "sourceNo": 50,
+      "full": "帰国するに先立って、必要な書類をそろえておくつもりだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "帰国するに先立って → 書類をそろえておく → つもりだ다."
+    },
+    {
+      "id": 45,
+      "sourceNo": 51,
+      "full": "彼が長年かけて集めた資料の一部が公開された。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "長年かけて集めた → 資料の一部が → 公開された 순서다."
+    },
+    {
+      "id": 46,
+      "sourceNo": 52,
+      "full": "私がこの会社を選んだ理由の一つは研修制度が充実していることだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "会社を選んだ理由 → 理由の一つは → ことだ의 설명 구조다."
+    },
+    {
+      "id": 47,
+      "sourceNo": 53,
+      "full": "本日ご紹介するのは、海外で高く評価されている技術を応用して作られた製品です。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "評価されている技術を → 応用して作られた製品です다."
+    },
+    {
+      "id": 48,
+      "sourceNo": 54,
+      "full": "住民が安心して暮らせる町を作ることが私たちの目標だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "安心して暮らせる町を → 作ることが → 目標だ다."
+    },
+    {
+      "id": 49,
+      "sourceNo": 55,
+      "full": "今回集めた意見を参考にして作成した案について説明します。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "意見を参考にして → 作成した案 → 案について説明します다."
+    },
+    {
+      "id": 50,
+      "sourceNo": 57,
+      "full": "子供には自分で考えさせることが大切だと言われている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "考えさせることが → 大切だと → 言われている 순서다."
+    },
+    {
+      "id": 51,
+      "sourceNo": 58,
+      "full": "会議では思っていた以上に厳しい意見を聞かされて、考え直さざるを得なかった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "意見を聞かされて → 考え直さざるを得なかった다."
+    },
+    {
+      "id": 52,
+      "sourceNo": 59,
+      "full": "新しい制度によって、利用者は複雑な手続きをせずに済むようになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "手続きをせずに済む → ようになった다."
+    },
+    {
+      "id": 53,
+      "sourceNo": 60,
+      "full": "突然の変更で、担当者は説明に追われることになった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "説明に追われる → ことになった 순서다."
+    },
+    {
+      "id": 54,
+      "sourceNo": 61,
+      "full": "この件について詳しく説明していただけるとありがたいのですが。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "説明していただけると → ありがたいのですが를 묶는다."
+    },
+    {
+      "id": 55,
+      "sourceNo": 62,
+      "full": "お忙しいところ恐縮ですが、内容をご確認の上、ご返信くださいますようお願いいたします。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "ご確認の上 → ご返信くださいますようお願いいたします다."
+    },
+    {
+      "id": 56,
+      "sourceNo": 65,
+      "full": "明日の説明会には、私も参加させていただくことになっております。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "参加させていただく → ことになっております다."
+    },
+    {
+      "id": 57,
+      "sourceNo": 66,
+      "full": "この店は値段のわりに料理の質が高いと評判だ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "値段のわりに → 料理の質が高い → と評判 순서다."
+    },
+    {
+      "id": 58,
+      "sourceNo": 67,
+      "full": "初めて作ったにしては、よくできていると褒められた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "初めて作ったにしては → よくできていると → 褒められた다."
+    },
+    {
+      "id": 59,
+      "sourceNo": 68,
+      "full": "今回の結果は、予想に反して良かったということだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "予想に反して → 良かったということだ다."
+    },
+    {
+      "id": 60,
+      "sourceNo": 69,
+      "full": "この仕事は資格の有無よりも、経験があるかどうかが重視される。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "経験がある → あるかどうかが → 重視される다."
+    },
+    {
+      "id": 61,
+      "sourceNo": 70,
+      "full": "以前と比べると、料金が高くなっただけでなく、手続きも複雑になった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "料金が高くなっただけでなく → 手続きも複雑になった다."
+    },
+    {
+      "id": 62,
+      "sourceNo": 71,
+      "full": "予算が足りないことから、計画の一部を変更せざるを得なくなった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "足りないことから → 計画の一部を変更せざるを → 得なくなった다."
+    },
+    {
+      "id": 63,
+      "sourceNo": 72,
+      "full": "丁寧に説明してくれたおかげで、難しい内容も理解することができた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "説明してくれたおかげで → 内容も理解することができた다."
+    },
+    {
+      "id": 64,
+      "sourceNo": 73,
+      "full": "確認を怠ったばかりに、多くの人に迷惑をかけてしまった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "怠ったばかりに → 人に迷惑をかける → てしまった다."
+    },
+    {
+      "id": 65,
+      "sourceNo": 74,
+      "full": "利用者からの意見を受けて、受付時間を延長することが決まった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "意見を受けて → 時間を延長することが → 決まった 순서다."
+    },
+    {
+      "id": 66,
+      "sourceNo": 75,
+      "full": "試験が近づいたせいか、落ち着いて眠れない日が続いている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "近づいたせいか → 落ち着いて眠れない日 → 日が続いている 순서다."
+    },
+    {
+      "id": 67,
+      "sourceNo": 76,
+      "full": "専門家の立場から見ると、この説明には問題があると言わざるを得ない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "立場から見ると → 説明には問題があると → 言わざるを得ない 순서다."
+    },
+    {
+      "id": 68,
+      "sourceNo": 77,
+      "full": "本人にしてみれば、当然のことをしたにすぎない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "本人にしてみれば → 当然のことをした → にすぎない 순서다."
+    },
+    {
+      "id": 69,
+      "sourceNo": 78,
+      "full": "子供にとって、遊びは楽しみであると同時に、学びの機会でもある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "楽しみであると同時に → 学びの機会でもある 순서다."
+    },
+    {
+      "id": 70,
+      "sourceNo": 79,
+      "full": "彼は責任者であるにもかかわらず、事情を説明しようとしなかった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "責任者であるにもかかわらず → 事情を説明しようとしなかった다."
+    },
+    {
+      "id": 71,
+      "sourceNo": 80,
+      "full": "この結果から考えると、別の方法を検討する必要がありそうだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "結果から考えると → 方法を検討する → 必要がありそう 순서다."
+    },
+    {
+      "id": 72,
+      "sourceNo": 82,
+      "full": "昨日は疲れのあまり、電気も消さずに寝てしまった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "疲れのあまり → 電気も消さずに → 寝てしまった다."
+    },
+    {
+      "id": 73,
+      "sourceNo": 83,
+      "full": "優勝できるとは思っていなかったので、うれしくてたまらないというのが今の気持ちだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "うれしくてたまらない → というのが今の気持ちだ다."
+    },
+    {
+      "id": 74,
+      "sourceNo": 84,
+      "full": "会議が長引いたため、昼食を取るどころではない状況だった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "昼食を取るどころではない → 状況だった다."
+    },
+    {
+      "id": 75,
+      "sourceNo": 85,
+      "full": "彼は謝るどころか、自分の方が被害者だと主張した。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "謝るどころか → 自分の方が被害者だと → 主張した다."
+    },
+    {
+      "id": 76,
+      "sourceNo": 86,
+      "full": "担当者の話によると、工事は来月始まるとのことだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "話によると → 工事は来月始まる → とのことだ다."
+    },
+    {
+      "id": 77,
+      "sourceNo": 87,
+      "full": "連絡がないところを見ると、まだ決まっていないのだろう。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "ところを見ると → まだ決まっていない → のだろう 순서다."
+    },
+    {
+      "id": 78,
+      "sourceNo": 88,
+      "full": "資料が机の上に残っていることからすると、彼はまだ内容を確認していないようだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "残っていることからすると → 内容を確認していないよう 순서다."
+    },
+    {
+      "id": 79,
+      "sourceNo": 89,
+      "full": "これほど練習したのだから、失敗するはずがないと思っていた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "失敗するはずがない → と思っていた 순서다."
+    },
+    {
+      "id": 80,
+      "sourceNo": 90,
+      "full": "話し方からして、彼が経験豊富な指導者であることは間違いない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "経験豊富な指導者である → ことは間違いない 순서다."
+    },
+    {
+      "id": 81,
+      "sourceNo": 91,
+      "full": "説明を聞くまで、その制度が何を目的として作られたのか分からなかった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "何を目的として → 作られたのか → 分からなかった다."
+    },
+    {
+      "id": 82,
+      "sourceNo": 92,
+      "full": "問題なのは、計画を実行するかどうかではなく、どう実行するかだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "実行するかどうかではなく → どう実行するかだ다."
+    },
+    {
+      "id": 83,
+      "sourceNo": 93,
+      "full": "会議で決めるべきなのは、予算をどのように配分するかということだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "どのように配分するか → ということだ다."
+    },
+    {
+      "id": 84,
+      "sourceNo": 94,
+      "full": "彼が何も言わずに帰ってしまったのは、急用ができたからだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "帰ってしまったのは → 急用ができたからだ다."
+    },
+    {
+      "id": 85,
+      "sourceNo": 95,
+      "full": "必要なのは知識を増やすことよりも、それを使って考えることだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "増やすことよりも → それを使って考えることだ다."
+    },
+    {
+      "id": 86,
+      "sourceNo": 96,
+      "full": "彼は忙しいふりをして、面倒な仕事を避けている。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "忙しいふりをして → 仕事を避けている 순서다."
+    },
+    {
+      "id": 87,
+      "sourceNo": 97,
+      "full": "窓を開けっぱなしにしていたせいで、部屋が冷えてしまった。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "開けっぱなしにしていた → せいで部屋が冷えた다."
+    },
+    {
+      "id": 88,
+      "sourceNo": 98,
+      "full": "まだ完成していないので、書きかけの原稿を保存しておいた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "書きかけの原稿を → 保存しておいた 순서다."
+    },
+    {
+      "id": 89,
+      "sourceNo": 99,
+      "full": "会場に着くか着かないかのうちに、雨が降り出した。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "着くか着かないかのうちに → 雨が降り出した 순서다."
+    },
+    {
+      "id": 90,
+      "sourceNo": 100,
+      "full": "資料に目を通したつもりだったが、大事な点を見落としていた。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "目を通したつもりだったが → 点を見落としていた 순서다."
+    },
+    {
+      "id": 91,
+      "sourceNo": 101,
+      "full": "予算の範囲内でできる限りの対策を講じる必要がある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "できる限りの対策を → 講じる必要がある 순서다."
+    },
+    {
+      "id": 92,
+      "sourceNo": 102,
+      "full": "正式に決定したわけではないにしても、準備を進めておくべきだ。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "決定したわけではないにしても → 準備を進めておくべき 순서다."
+    },
+    {
+      "id": 93,
+      "sourceNo": 103,
+      "full": "資料を提出するにあたっては、記載内容に誤りがないか確認してください。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "提出するにあたっては → 記載内容に誤りがないか → 確認してください다."
+    },
+    {
+      "id": 94,
+      "sourceNo": 104,
+      "full": "利用者の希望に応じて内容を変更することも可能です。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "希望に応じて → 内容を変更することも → 可能です다."
+    },
+    {
+      "id": 95,
+      "sourceNo": 105,
+      "full": "この計画は成功するかどうかにかかわらず、挑戦する価値がある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "成功するかどうかにかかわらず → 挑戦する価値がある 순서다."
+    },
+    {
+      "id": 96,
+      "sourceNo": 106,
+      "full": "人の意見を聞くということは、自分の考えを捨てるという意味ではない。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "聞くということは → 自分の考えを捨てるという意味ではない 순서다."
+    },
+    {
+      "id": 97,
+      "sourceNo": 107,
+      "full": "便利さばかりを追求すると、失うものもあるのではないだろうか。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "失うものもある → のではないだろうか의 완곡한 문제 제기다."
+    },
+    {
+      "id": 98,
+      "sourceNo": 108,
+      "full": "失敗を恐れるあまり、何も行動できなくなることがある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "恐れるあまり → 何も行動できなくなる → ことがある 순서다."
+    },
+    {
+      "id": 99,
+      "sourceNo": 109,
+      "full": "経験から学ぶためには、結果だけでなく、そこに至るまでの過程にも目を向ける必要がある。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "だけでなく → 至るまでの過程にも → 目を向ける必要がある 순서다."
+    },
+    {
+      "id": 100,
+      "sourceNo": 110,
+      "full": "学んだ表現は実際に使ってこそ、自分のものになるのだと思う。",
+      "canonicalOrder": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "starSlot": 3,
+      "answerStableId": 2,
+      "reason": "使ってこそ → 自分のものになる → のだと思う다."
+    }
+  ]
+}

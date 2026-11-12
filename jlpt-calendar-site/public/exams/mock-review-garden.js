@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const garden = document.createElement('div');
   garden.id = 'reviewGarden';
   garden.innerHTML = `
-    <header class="garden-heading"><div><span class="garden-eyebrow">JLPT N2 · REVIEW GARDEN</span><h1>오답을 하나씩, 초록으로.</h1><p>작은 칸 하나가 오답 한 문항입니다.</p></div><span class="garden-total">3개 시험 · ${ALL_ERROR_QUESTIONS.length}문항</span></header>
+    <header class="garden-heading"><div><span class="garden-eyebrow">JLPT N2 · REVIEW GARDEN</span><h1>오답을 하나씩, 초록으로.</h1><p>작은 칸 하나가 오답 한 문항입니다.</p></div><span class="garden-total">${new Set(ALL_ERROR_QUESTIONS.map(q=>q.exam_src)).size}개 시험 · ${ALL_ERROR_QUESTIONS.length}문항</span></header>
     <section class="garden-hero"><div><span class="garden-eyebrow">오늘의 한 걸음</span><h2 id="gardenHeadline"></h2><p id="gardenSessionInfo"></p></div><div id="gardenStartSlot"></div></section>
     <div class="garden-toolbar"><div class="garden-tabs" aria-label="복습 상태 필터"><button data-garden-filter="unresolved">미해결 <span></span></button><button data-garden-filter="due">복습일 도래 <span></span></button><button data-garden-filter="all">전체 <span></span></button><button data-garden-filter="mastered">맞힘 <span></span></button></div><button id="gardenLatest" class="garden-quiet">최근 시험만 보기</button></div>
     <details class="garden-settings"><summary>범위·분량 설정 <span id="gardenSettingsSummary"></span></summary><div id="gardenScopeSlot"></div><div class="garden-options"><label>한 번에 풀 문항<select id="gardenLimit"><option value="10">10문항</option><option value="20">20문항</option><option value="30">30문항</option><option value="all">전체</option></select></label><label>해설 표시<select id="gardenFeedback"><option value="instant">한 문항씩 즉시 확인</option><option value="batch">모두 푼 뒤 확인</option></select></label></div><div class="garden-search-slot" id="gardenSearchSlot"></div><button class="garden-quiet" id="gardenResetFilters">필터 초기화</button></details>
@@ -151,7 +151,7 @@ window.addEventListener('DOMContentLoaded', () => {
     batchIds=new Set([...batchIds].filter(id=>scoped.some(q=>q.id===id)));
     const groups=['어휘','문법','독해','청해'].filter(domain=>scoped.some(q=>reviewDomain(q)===domain));
     const exams=[...new Set(scoped.map(q=>q.exam_src))];
-    const examNames={'公式問題集 第2集':'공식 2집','2023年12月 本試験':'2023.12','2023年7月 本試験資料':'2023.07'};
+    const examNames={'公式問題集 第2集':'공식 2집','2023年12月 本試験':'2023.12','2023年7月 本試験資料':'2023.07','2021年12月 本試験資料':'2021.12'};
     board.style.setProperty('--garden-exams',exams.length||1);
     $('gardenCells').innerHTML=groups.map(domain=>{
       const qs=scoped.filter(q=>reviewDomain(q)===domain);
@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', () => {
       b.querySelector('span').textContent=counts[b.dataset.gardenFilter];
       b.setAttribute('aria-pressed',String(state.ankiFilter===b.dataset.gardenFilter));
     }
-    $('gardenLatest').textContent=$('scopeExam').value==='2023年7月 本試験資料'?'최근 시험 선택됨':'최근 시험만 보기';
+    $('gardenLatest').textContent=$('scopeExam').value===latestReviewExam?'최근 시험 선택됨':'최근 시험만 보기';
     paintSelection();
   };
   updateAnkiDeckUI();

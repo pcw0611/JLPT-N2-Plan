@@ -13,6 +13,7 @@ import urllib.request
 from pathlib import Path
 from datetime import datetime
 from past_exam_import import get_past_exam_payload, insert_past_exam_attempts
+from composition_import import get_composition_payload, insert_composition_attempts
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -142,6 +143,7 @@ def sync_submissions():
             time_str = f"{m}분 {s}초" if m > 0 else f"{s}초"
 
             past_payload = get_past_exam_payload(sub)
+            composition_payload = get_composition_payload(sub)
             source_class = "기출 자료 기반 개인 모의고사" if past_payload else ("공식 모의고사" if "模試" in title else "자체 제작")
             detail = submission_details(sub)
 
@@ -166,12 +168,14 @@ def sync_submissions():
                 sec,
                 None,
                 0.3,
-                json.dumps({'submitted_result': past_payload}, ensure_ascii=False) if past_payload else (detail['notes'] or f"[온라인 자동 제출] 코스: {course}, 정답률: {accuracy}%")
+                json.dumps({'submitted_result': past_payload or composition_payload}, ensure_ascii=False) if (past_payload or composition_payload) else (detail['notes'] or f"[온라인 자동 제출] 코스: {course}, 정답률: {accuracy}%")
             ))
 
             insert_grammar_attempts(cursor, test_id, detail['attempts'])
             if past_payload:
                 insert_past_exam_attempts(cursor, test_id, date, past_payload)
+            if composition_payload:
+                insert_composition_attempts(cursor, test_id, date, composition_payload)
 
             # 2. Insert into study_intervals table
             note_text = f"[{date} {title}] {time_str} (코스: {course}, 정답: {correct}/{total}, 정답률: {accuracy}%)"

@@ -2,6 +2,7 @@ import { asc } from 'drizzle-orm';
 import { getDb } from '../../../db';
 import { dailyReports, examSubmissions } from '../../../db/schema';
 import { normalizeGrammarRow } from '../../../lib/grammar-result.mjs';
+import { addStudySeconds } from '../../../lib/study-time.mjs';
 
 export async function GET() {
   const rows = await getDb().select().from(dailyReports).orderBy(asc(dailyReports.date));
@@ -53,7 +54,6 @@ export async function GET() {
         const m = Math.floor(sec / 60);
         const s = sec % 60;
         const timeStr = m > 0 ? `${m}분 ${s}초` : `${s}초`;
-        const addMin = Math.round(sec / 60);
 
         if (!day.tests) {
           day.tests = { count: 0, correct: 0, total: 0, wrong: 0, unknown: 0, elapsedSeconds: 0 };
@@ -63,7 +63,7 @@ export async function GET() {
         day.tests.correct = (day.tests.correct || 0) + Number(sub.correctCount || 0);
         day.tests.wrong = (day.tests.wrong || 0) + Number(sub.wrongCount || 0);
         day.tests.elapsedSeconds = (day.tests.elapsedSeconds || 0) + sec;
-        day.studyMinutes = (day.studyMinutes || 0) + addMin;
+        day.studyMinutes = addStudySeconds(day.studyMinutes,sec);
 
         if (!day.testDetails) day.testDetails = [];
         day.testDetails.push({

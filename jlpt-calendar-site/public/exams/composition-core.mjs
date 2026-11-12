@@ -12,6 +12,19 @@ export function statusOf(item,today=day()){
   if((item.reviewDates||[]).some(d=>d<=today))return 'due';
   return item.last.status;
 }
+// Pick the session pool by learning need, then makeRun shuffles its presentation.
+export function prioritizeIds(ids,items,limit=10,today=day(),random=Math.random){
+  const priority=id=>{
+    const item=items[id],due=(item?.reviewDates||[]).filter(d=>d<=today).sort()[0];
+    if(due)return [0,due];
+    if(['wrong','unknown'].includes(item?.last.status))return [1,item.last.date||''];
+    return item?[3,'']:[2,''];
+  };
+  return shuffle([...new Set(ids)],random).sort((a,b)=>{const x=priority(a),y=priority(b);return x[0]-y[0]||x[1].localeCompare(y[1]);}).slice(0,limit);
+}
+export function intersectingIds(cells,rect){
+  return cells.filter(b=>b.right>rect.left&&b.left<rect.right&&b.bottom>rect.top&&b.top<rect.bottom).map(b=>b.id);
+}
 export function grade(run,questions,date=day()){
   const lookup=new Map(questions.map(q=>[q.id,q]));
   const attempts=run.order.map(id=>{const q=lookup.get(id),v=run.answers[id];

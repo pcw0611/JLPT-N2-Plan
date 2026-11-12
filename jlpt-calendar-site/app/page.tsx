@@ -53,12 +53,14 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     linkText: '📘 第3回 模試問題・解説 (101問) を開く ➔'
   },
   '2026-11-11': {
-    badge: '追加模試',
-    type: 'upcoming-mock',
-    title: '追加 N2 実戦模試 (2021年12月)',
+    badge: '模試完了',
+    type: 'completed-mock',
+    title: '追加 N2 実戦模試 (2021.12)',
     linkUrl: '/exams/n2-past-exam-202112-mock.html',
-    desc: '11月11日（水）· 時間配分・新しい文脈での文法・長い聴解を確認',
-    subDesc: '2021年12月の未受験問題101問。問題・録音を用意済み。開始時刻は未定。11/8のD+3復習は別枠で実施予定。'
+    linkText: '📘 追加模試の問題・解説 (101問) を開く ➔',
+    desc: '非公式参考99.5 / 180点 (58/101問 · 57.4%)',
+    resultSummary: '所要時間147分51秒 · 誤答43問・不明0問・未回答0問',
+    resultDetail: '言語知識31/51問・36.5点 / 読解9/20問・27.0点 / 聴解18/30問・36.0点。復習: 11/12・11/14・11/18。'
   },
   '2026-11-15': {
     badge: '教本1回',
@@ -67,12 +69,30 @@ const SPECIAL_DATES: Record<string, SpecialDateInfo> = {
     desc: '所持する問題集の実戦模試 第1回を全領域受験',
     subDesc: '時間配分と弱点補強の成果を確認 開始時刻は未定。'
   },
+  '2026-11-18': {
+    badge: '追加模試',
+    type: 'upcoming-mock',
+    title: '追加 N2 実戦模試 (2025.12)',
+    desc: '全領域を受験し、読解の時間配分と文の組み立てを確認',
+    subDesc: '開始時刻は未定。外部の非公式練習資料を使用。11/11模試の復習も実施。',
+    linkUrl: 'https://testjlpt.com/en/jlpt-n2-test-202512/',
+    linkText: '2025年12月の練習ページを開く（外部）'
+  },
   '2026-11-22': {
     badge: '教本2回',
     type: 'upcoming-mock',
     title: 'JLPT 한권으로 끝내기 · 実戦模試 第2回',
     desc: '所持する問題集の実戦模試 第2回を全領域受験',
     subDesc: '文法・聴解の改善と正答根拠を確認 開始時刻は未定。'
+  },
+  '2026-11-25': {
+    badge: '追加模試',
+    type: 'upcoming-mock',
+    title: '追加 N2 実戦模試 (2026.07)',
+    desc: '直近の回で読解・文法・聴解の改善を確認',
+    subDesc: '開始時刻は未定。外部の非公式練習資料を使用。11/18模試の復習も実施。',
+    linkUrl: 'https://okjlpt.com/zh-Hans/try/e40d5afd-a7d3-4a5b-b9dc-bf4d6d3ce66d',
+    linkText: '2026年7月の練習ページを開く（外部）'
   },
   '2026-11-29': {
     badge: '教本3回',
@@ -117,6 +137,11 @@ export default function Home() {
 
   useEffect(() => {
     let mounted = true;
+    let refreshing = false;
+    let initial = true;
+    const refresh = () => {
+    if (!mounted || document.hidden || refreshing) return;
+    refreshing = true;
     fetch('/api/study-days', { cache: 'no-store' })
       .then(response => response.ok ? response.json() : Promise.reject(new Error('load failed')))
       .then(data => {
@@ -127,17 +152,36 @@ export default function Home() {
           .slice()
           .sort((a: DailyReport, b: DailyReport) => a.date.localeCompare(b.date));
         if (!mounted) return;
+        setLoadError(false);
         setDaysLeft(examDaysLeft());
         setMockDays(nextMockDaysLeft());
         setReports(days);
+        if (initial) {
         const today = getSeoulDate();
         const initialDate = days.some(r => r.date === today) ? today : days.at(-1)?.date ?? today;
         setSelectedDate(initialDate);
         setVisibleMonth(initialDate.slice(0, 7));
+        initial = false;
+        }
       })
       .catch(() => { if (mounted) setLoadError(true); })
-      .finally(() => { if (mounted) setLoading(false); });
-    return () => { mounted = false; };
+      .finally(() => { refreshing = false; if (mounted) setLoading(false); });
+    };
+    const onStorage = (event: StorageEvent) => { if (event.key === 'jlpt-exam-recorded') refresh(); };
+    refresh();
+    window.addEventListener('focus',refresh);
+    window.addEventListener('pageshow',refresh);
+    document.addEventListener('visibilitychange',refresh);
+    window.addEventListener('storage',onStorage);
+    const interval = window.setInterval(refresh,30000);
+    return () => {
+      mounted = false;
+      window.clearInterval(interval);
+      window.removeEventListener('focus',refresh);
+      window.removeEventListener('pageshow',refresh);
+      document.removeEventListener('visibilitychange',refresh);
+      window.removeEventListener('storage',onStorage);
+    };
   }, []);
 
   const upcomingMock = nextMockDate();
@@ -232,6 +276,11 @@ export default function Home() {
               <a className="hub-btn hub-btn-emerald" href="/exams/n2-grammar-speedrun.html" aria-label="N2 文法 SPEED RUN 문형 저격 퀴즈 열기">
                 <span className="hub-icon" aria-hidden="true">🎯</span>
                 <span className="hub-text">N2 文法 SPEED RUN</span>
+                <span className="hub-arrow" aria-hidden="true">→</span>
+              </a>
+              <a className="hub-btn hub-btn-emerald" href="/exams/n2-sentence-composition-100.html" aria-label="N2 문장배열 100문제 학습 열기">
+                <span className="hub-icon" aria-hidden="true">🌱</span>
+                <span className="hub-text">N2 文の組み立て 100</span>
                 <span className="hub-arrow" aria-hidden="true">→</span>
               </a>
               <a className="hub-btn hub-btn-emerald" href="/exams/n2-grammar-puzzle.html" aria-label="N2 文法 接続パズル 블록 조립 퀴즈 열기">
@@ -381,14 +430,14 @@ export default function Home() {
               </button>
               <button
                 type="button"
-                className={`milestone-item is-upcoming ${selectedDate === '2026-11-11' ? 'active' : ''}`}
+                className={`milestone-item is-completed ${selectedDate === '2026-11-11' ? 'active' : ''}`}
                 onClick={() => { setSelectedDate('2026-11-11'); setVisibleMonth('2026-11'); }}
               >
-                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-11'))}</div>
+                <div className="ms-badge done">完了</div>
                 <div className="ms-date">11/11 (水)</div>
                 <div className="ms-info">
-                  <strong>追加 N2 実戦模試 (2021.12)</strong>
-                  <p>時間配分・文法・長い聴解を確認 · 開始時刻は未定</p>
+                  <strong>{SPECIAL_DATES['2026-11-11'].title}</strong>
+                  <p>{SPECIAL_DATES['2026-11-11'].desc}</p>
                 </div>
               </button>
               <button
@@ -405,6 +454,18 @@ export default function Home() {
               </button>
               <button
                 type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-18' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-18'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-18'))}</div>
+                <div className="ms-date">11/18 (水)</div>
+                <div className="ms-info">
+                  <strong>{SPECIAL_DATES['2026-11-18'].title}</strong>
+                  <p>{SPECIAL_DATES['2026-11-18'].desc}</p>
+                </div>
+              </button>
+              <button
+                type="button"
                 className={`milestone-item is-upcoming ${selectedDate === '2026-11-22' ? 'active' : ''}`}
                 onClick={() => { setSelectedDate('2026-11-22'); setVisibleMonth('2026-11'); }}
               >
@@ -413,6 +474,18 @@ export default function Home() {
                 <div className="ms-info">
                   <strong>JLPT 한권으로 끝내기 · 実戦模試 第2回</strong>
                   <p>文法・聴解の改善と正答根拠を確認</p>
+                </div>
+              </button>
+              <button
+                type="button"
+                className={`milestone-item is-upcoming ${selectedDate === '2026-11-25' ? 'active' : ''}`}
+                onClick={() => { setSelectedDate('2026-11-25'); setVisibleMonth('2026-11'); }}
+              >
+                <div className="ms-badge upcoming">D-{Math.max(0, getDaysDiff('2026-11-25'))}</div>
+                <div className="ms-date">11/25 (水)</div>
+                <div className="ms-info">
+                  <strong>{SPECIAL_DATES['2026-11-25'].title}</strong>
+                  <p>{SPECIAL_DATES['2026-11-25'].desc}</p>
                 </div>
               </button>
               <button

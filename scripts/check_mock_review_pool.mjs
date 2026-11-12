@@ -11,9 +11,17 @@ const context=vm.createContext({document,window:{addEventListener(){},scrollTo()
 scripts.forEach(s=>vm.runInContext(s,context));
 vm.runInContext(fs.readFileSync('jlpt-calendar-site/public/exams/mock-review-filters.js','utf8'),context);
 const run=s=>vm.runInContext(s,context);
-assert.equal(run('ALL_ERROR_QUESTIONS.length'),139);
-assert.equal(run('new Set(ALL_ERROR_QUESTIONS.map(q=>q.id)).size'),139);
+assert.equal(run('ALL_ERROR_QUESTIONS.length'),182);
+assert.equal(run('new Set(ALL_ERROR_QUESTIONS.map(q=>q.id)).size'),182);
 assert.equal(run("ALL_ERROR_QUESTIONS.filter(q=>q.id.startsWith('err-202307-')).length"),52);
+assert.equal(run('latestReviewExam'),'2021年12月 本試験資料');
+document.getElementById('scopeExam').value='2021年12月 本試験資料';
+assert.equal(run('getFilteredAnkiQuestions().length'),43);
+for(const [domain,n] of [['어휘',9],['문법',11],['독해',11],['청해',12]]){
+ document.getElementById('scopeDomain').value=domain;
+ assert.equal(run('getFilteredAnkiQuestions().length'),n);
+}
+document.getElementById('scopeDomain').value='';
 for (const q of run('ALL_ERROR_QUESTIONS')) {
  assert.ok(q.correct_num>=1&&q.correct_num<=q.choices.length);
  if(q.is_listening)assert.ok(fs.existsSync('jlpt-calendar-site/public/exams/audio_clips/'+q.audio_file),q.id);
@@ -39,7 +47,7 @@ assert.equal(document.getElementById('resUnknownCount').textContent,1);
 assert.match(document.getElementById('resSubtitle').innerHTML,/未回答: 1問/);
 assert.match(document.getElementById('resFraction').textContent,/1 \/ 4/);
 assert.equal(run('Object.keys(state.srsData).length'),3);
-console.log('PASS:139 IDs,52 actual errors,all local audio,combined filters,empty search,answer lock,batch navigation,unanswered preservation,duplicate grading');
+console.log('PASS: 182 IDs, 43 December 2021 errors, 52 July 2023 errors, local audio, filters, answer locking, navigation and grading');
 
 run("state.ankiFilter='unresolved'");assert.equal(run("getFilteredAnkiQuestions().length"),3);
 run("state.ankiFilter='all'");assert.equal(run("getFilteredAnkiQuestions().length"),4);
