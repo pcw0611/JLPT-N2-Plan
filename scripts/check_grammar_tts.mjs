@@ -7,13 +7,19 @@ const code=html.slice(html.indexOf('const ALL_PATTERNS = ['),html.indexOf('class
   html.slice(html.indexOf('const state = {'),html.lastIndexOf('</script>'));
 const jp={name:'Japanese local',lang:'ja-JP',localService:true};
 const en={name:'English',lang:'en-US'};
-function setup(initialVoices=[en,jp]) {
+function setup(initialVoices=[en,jp], set='tuesday') {
   let voices=initialVoices;const spoken=[],saved=[],nodes=new Map(),events={},timers=new Map(),prefs=new Map();let nextTimer=1,cancels=0;
   const statuses=[{textContent:''},{textContent:''},{textContent:''}];
   const node=id=>{if(!nodes.has(id)){const c=new Set();nodes.set(id,{style:{},dataset:{},textContent:'',innerHTML:'',focus(){},querySelectorAll(){return []},classList:{add(...a){a.forEach(x=>c.add(x))},remove(...a){a.forEach(x=>c.delete(x))},contains(x){return c.has(x)},toggle(x,on){on?c.add(x):c.delete(x)}}});}return nodes.get(id);};
   class Utterance{constructor(text){this.text=text;}}
   const synth={getVoices(){return voices},cancel(){cancels++},addEventListener(name,fn){events[name]=fn},speak(u){spoken.push(u);u.onstart?.();}};
-  const box={Date,Intl,URL,URLSearchParams,console,location:{search:'?set=tuesday',href:'https://example.test/quiz'},history:{replaceState(){}},
+  const recordings=[];
+  class AudioMock {
+    constructor(url){this.url=url;recordings.push(this);}
+    play(){this.onplaying?.();return Promise.resolve();}
+    pause(){this.paused=true;}
+  }
+  const box={Audio:AudioMock,Date,Intl,URL,URLSearchParams,console,location:{search:'?set='+set,href:'https://example.test/quiz'},history:{replaceState(){}},
     document:{getElementById:node,querySelectorAll(selector){return selector==='[data-tts-status]'?statuses:[]},addEventListener(){}},
     window:{speechSynthesis:synth,SpeechSynthesisUtterance:Utterance,addEventListener(name,fn){events[name]=fn},autoSubmitExamResult(p){saved.push(p)}},
     localStorage:{getItem(k){return prefs.get(k)??null},setItem(k,v){prefs.set(k,v)}},
@@ -21,7 +27,7 @@ function setup(initialVoices=[en,jp]) {
     setTimeout(fn,ms){const id=nextTimer++;timers.set(id,{fn,ms});return id},clearTimeout(id){timers.delete(id)}};
   vm.createContext(box);vm.runInContext(code+'\nglobalThis.api={grammarTts,state,generateQuestions,startSessionWithQuestions,checkAnswer,advanceNext,pauseSession,resumeSession,requestEndSession,cancelEndSession,finishGame};',box);
   const api=box.api;api.grammarTts.init();
-  return {api,spoken,saved,prefs,statuses,events,timers,setVoices(v){voices=v},unsupported(){delete box.window.speechSynthesis},get cancels(){return cancels}};
+  return {api,spoken,recordings,saved,prefs,statuses,events,timers,setVoices(v){voices=v},unsupported(){delete box.window.speechSynthesis},get cancels(){return cancels}};
 }
 {
   const e=setup(),{api,spoken}=e,t=api.grammarTts;
@@ -59,4 +65,24 @@ function setup(initialVoices=[en,jp]) {
 }
 const e=setup();const banks=JSON.parse(fs.readFileSync(new URL('./n2_grammar_weekly.json',import.meta.url),'utf8')).banks;
 for(const b of banks)for(const row of b.items){const s=e.api.grammarTts.reading(row);assert(s.length>0);assert(!/<ruby>|<rt>|[가-힣]/.test(s));}
+{
+  const {api,spoken,recordings,events}=setup([jp],'sunday');
+  const t=api.grammarTts;
+  t.sundayRecordings['n2-grammar-001']='001-elio.mp3';
+  api.state.questions=api.generateQuestions('all',200).filter(q=>q.item.id==='n2-grammar-001');
+  api.startSessionWithQuestions();
+  const replay = {code:'KeyR', preventDefault(){}};
+  events.keydown(replay);assert.equal(recordings.length,0,'No recorded answer before reveal');
+  api.checkAnswer(api.state.questions[0].answer);
+  assert.match(recordings.at(-1).url,/sunday-20261103\/001-elio\.mp3$/);
+  assert.equal(spoken.length,0,'Prefer the matching recorded sentence');
+  events.keydown({...replay,ctrlKey:true});assert.equal(recordings.length,1);
+  events.keydown(replay);
+  assert.equal(recordings.length,2,'R replays the revealed answer');
+  assert(recordings[0].paused,'Replay cancels the earlier clip');
+  const last=recordings.at(-1);
+  last.onerror();
+  assert(last.paused,'Audio failure releases the recorded clip');
+  assert.equal(spoken.at(-1).text,t.reading(api.state.questions[0].item));
+}
 console.log('PASS: post-answer-only TTS; correct/wrong/unknown; sample, replay/slow/auto preference; cancellation, late voices, missing Japanese, blocked audio; 1400 reading texts. No DB writes.');
